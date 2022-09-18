@@ -39,7 +39,7 @@ This tutorial is a follow-up to the 'Single-cell RNA-seq: Case Study' (find it [
 
 In this tutorial we will perform trajectory analysis using [monocle3](https://cole-trapnell-lab.github.io/monocle3/). You can find out more about the theory behind trajectory analysis here /slides/. We have already analysed the trajectory of our sample using ScanPy toolkit in another tutorial: [Trajectory Analysis using Python (Jupyter Notebook) in Galaxy](https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/scrna-case_JUPYTER-trajectories/tutorial.html). However, trajectory analysis is quite sensitive and some methods work better for specific datasets. Now you can go through the same steps but using a different method to compare the results, usability and the final outcome! Sounds exciting, let’s dive into that! 
 
-***tip: using tutorial mode***
+{% snippet faqs/galaxy/tutorial_mode.md %}
 
 ## Get data
 We still work on data from a mouse dataset of fetal growth restriction [Bacon et al. 2018](https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/scrna-JUPYTER-trajectories/tutorial.html#Bacon2018) (see the study in Single Cell Expression Atlas [here](https://www.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6945/results/tsne) and the project submission [here](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6945/)), making this case study even more comprehensive. 
@@ -290,7 +290,7 @@ Now we will perform the same steps, but for gene IDs. But gene IDs are currently
 >
 {: .hands_on}
 
-{% icon trophy %} Finally! We have prepared all the files to pass them onto the Monocle3 workflow!
+{% icon congratulations %} Finally! We have prepared all the files to pass them onto the Monocle3 workflow!
 
 # Monocle3 workflow
 
@@ -542,7 +542,21 @@ If we compare the annotated cell types and the clusters that were just formed, w
 > ![Hemoglobin](../../images/scrna-casestudy-monocle/hb.png "Hemoglobin across clusters - comparision between Scanpy and Monocle")
 {: .question}
 
+## Top marker genes 
+
 Here we used a priori knowledge regarding the marker genes. If we wanted to approach this problem in an unsupervised manner, we could use Monocle to tell us what would be the top marker genes in each group of cells. This is very useful if we don’t know the type of the cells in a specific cluster and we want to identify it, based on common marker genes. Or when we want to find other marker genes than those currently known.
+
+> ### {% icon question %} Questions
+>
+> If I cluster cells that are not annotated, can I assign clusters to cell type based on gene expression using Monocle3?
+>
+> > ### {% icon solution %} Solution
+> >
+> > Of course you can! That’s the point of clustering and gene expression analysis. However currently this function hasn’t been turned into a Galaxy tool yet, so in order to do so, you have to use the piece of code in R which performs this annotation. 
+> >
+> {: .solution}
+>
+{: .question}
 
 > ### {% icon hands_on %} Hands-on: Top marker genes
 >
@@ -554,16 +568,20 @@ Here we used a priori knowledge regarding the marker genes. If we wanted to appr
 >
 {: .hands_on}
 
-**analysis**
+The table output is quite self-explanatory and it's useful to get details about the top marker genes in each cluster. Another output visually presents what how different genes are expressed across all the clusters, which is a good overiew of gene expression over the whole sample. 
+
+![top_markers](../../images/scrna-casestudy-monocle/top_markers.jpg "Identification of the genes most specifically expressed in groups of cells.")
 
 > ### {% icon question %} Questions
 >
-> If I cluster cells that are not annotated, can I assign clusters to cell type based on gene expression using Monocle3?
+> What genes are the most specifically expressed in DP-M1?
 >
 > > ### {% icon solution %} Solution
 > >
-> > Of course you can! That’s the point of clustering and gene expression analysis. However currently this function hasn’t been turned into a Galaxy tool yet, so in order to do so, you have to use the piece of code in R which performs this annotation. 
+> > By looking at the table, you might give the 5 top gene IDs expressed in DP-M1. To save you some time and make the analysis more readable, we converted the gene IDs to gene names and they are as follows: Rps17, Rpl41, Rps26, Rps29, Rps28. They are all ribosomal! 
+> > The pdf output also indicates other specifically expressed genes, such as Hmgb2, Pclaf, Rpl13, Rps19, Ybx1, Ncl, Hsp90ab1, Npm1. 
 > >
+> > Every time when you want to explore what might be the function of a particular cluster or why it branches out from the trajectory, then checking the top markers for that cluster is really helpful and allows you to draw biological conclusions. Thank you Maths! 
 > {: .solution}
 >
 {: .question}
@@ -585,13 +603,17 @@ We’re getting closer and closer! The next step is to learn the trajectory grap
 >
 {: .hands_on}
 
-**analysis**
+As you can see, the learned trajectory path is just a line connecting the clusters. However, there are some important points to understand here. 
+> If the resolution of the clusters is high, then the trajectory path will be very meticulous, strongly branched and curved. There's a danger here that we might start seeing things that don't really exist.
+> You can set an option to learn a single tree structure for all the partitions or use the partitions calculated when clustering and identify disjoint graphs in each. To make the right decision, you have to understand how/if the partitions are related and what would make more biolgical sense. In our case, we were only interested in a big partition containing all the cells and we ignored the small 'dot' classified as another partition. Hence, we didn't want to make connections between those partitions via trajectory path. 
+> There are many trajectory patterns: linear, cycle, bifurcation, tree and so on. Those patterns might correspond to various biological processes: transition events for different phases, cell cycle, cell differentiation. Therefore, branching points are quite important on the trajectory path. You can always plot them, checking the right box in {% tool Monocle3 plotCells %}.
+
 
 ![learned graph](../../images/scrna-casestudy-monocle/learned_trajectory.png "Learned trajectory path")
 
 ## Pseudotime analysis
 
-Finally it's time to see our cells in pseudotime! We already learned trajectory, now we only have to order cells along it. Monocle3 requires information where to start ordering the cells, so we need to provide it with this information. We annotated early T-cells as double negative (DN), so those will be our root cells! 
+Finally it's time to see our cells in pseudotime! We have already learned trajectory, now we only have to order cells along it. Monocle3 requires information where to start ordering the cells, so we need to provide it with this information. We annotated early T-cells as double negative (DN), so those will be our root cells! 
 
 > ### {% icon details %} Details: Pseudotime
 > 
@@ -612,14 +634,26 @@ Finally it's time to see our cells in pseudotime! We already learned trajectory,
 >    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 orderCells** {% icon tool %}
 > 3. Rename {% icon galaxy-pencil %} the output: `Pseudotime plot`
 >
->    > ### {% icon tip %} Other ways to specify the root cells
->    >
->    > 
->    {: .tip}
->
 {: .hands_on}
 
-**analysis**
+> ### {% icon tip %} Other ways to specify the root cells
+>
+> The method to specify the root cells shown above is not the only one available in Galaxy! However, it is probably the most intuitive one.
+> 1. **Annotated cell type as root cells**
+>    -  fill *(--cell-phenotype)* with the colname (heading) where the cell types are stored
+>    -  fill *(--root-type)* with the name of the cell type that you want to start ordering from
+> 2. **Cell ID as root cell**
+>    -  fill *(--root-cells)* with the cell ID that you want to start ordering from
+> 3. **Starting principal points**
+>    -  fill *(--root-pr-nodes)* with the root_pr_node (you can plot them in the same way as branch points) that corresponds to the root cells 
+{: .tip}
+
+Now we can see how all those things that we were working on come together to give a final pseudotime trajectory analysis. DN cells gently switching to DP-M which change into DP-L to finally become mature T-cells. Isn't it beautiful? But wait, don't be too enthusiastic - why on earth DP-M1 group branches out? We didn't expect that... 
+>
+By using the gene expression plots we made sure that `Itm2a` gene is not expressed in the DP-M1 cluster, so it is not mature T-cells. Interestingly, also genes `Cd8b1, Cd8a, Cd4` are not expressed in DP-M1 as significantly as in other DP-M clusters. We also checked top markers for DP-M1 and discovered that most of them are just ribosomal. Those cells might be maturing, but we’re not certain why they don’t go into the Itm2a group, so maybe there’s a trajectory we don’t know about? 
+> 
+There are a lot of such questions in bioinformatics and we're always get excited when we try to answer them, hoping that we will be able to make a groundbreaking discovery. However, with analysing scRNA-seq data, it's almost like you need to know about 75% of your data and make sure your analysis shows that, for you to then identify the 25% new information. Additionally, pseudotime analysis crucially depends on choosing the right analysis and parameter values, as we showed for example with initial dimentionality reduction during pre-processing. It also requires a understanding of the underlying biology (we have to choose the root cells, for instance, or recognise when certain cell arrangements don't make sense). The mysterious branching of DP-M1 is a great example how cautious you must be during scRNA-seq data analysis (particularly trajectory analysis) and check it with the biological knowledge - this branching might be just a misleading algorithm's anomaly or something new, still undiscovered! 
+
 
 ![pseudotime](../../images/scrna-casestudy-monocle/pseudotime.png "Trajectory analysis - pseudotime")
 
@@ -636,6 +670,6 @@ Once the trajectory has been inferred, you might want to return to the gene expr
 # Conclusion
 {:.no_toc}
 
-{% icon trophy %} Well done, you’ve made it to the end! You might want to consult your results with this [control history](), or check out the [full workflow]() for this tutorial. I also split this workflow into two separate workflows: [preparing the input files for Monocle3, starting from AnnData](), and [Monocle3 only workflow](). You can use them to accelerate analysis of your own data, paying attention to the requirements of the input data, mentioned in this tutorial.
+{% icon congratulations %} Well done, you’ve made it to the end! You might want to consult your results with this [control history](), or check out the [full workflow]() for this tutorial. I also split this workflow into two separate workflows: [preparing the input files for Monocle3, starting from AnnData](), and [Monocle3 only workflow](). You can use them to accelerate analysis of your own data, paying attention to the requirements of the input data, mentioned in this tutorial.
 
 In this tutorial, you moved from technical processing to biological exploration. By analysing real data - both the exciting and the messy! - you have, hopefully, experienced what it’s like to analyse and question a dataset, potentially without clear cut-offs or clear answers. If you were working in a group, you each analysed the data in different ways, and most likely found similar insights. One of the biggest problems in analysing scRNA-seq is the lack of a clearly defined pathway or parameters. You have to make the best call you can as you move through your analysis, and ultimately, when in doubt, try it multiple ways and see what happens!
