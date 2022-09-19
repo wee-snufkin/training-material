@@ -7,12 +7,21 @@ priority: 5
 zenodo_link: 'https://zenodo.org/record/7078524'
 
 questions:
-
+- How to prepare input files for Monocle starting from AnnData object?
+- How can I infer lineage relationships between clusters, without a time series?
+- What trajectory analysis can tell us?
 objectives:
+- Understand which opertions to perform on AnnData object to obtain files needed for Monocle
+- Follow the Monocle3 workflow and choose the right parameter values
+- Compare output from Scanpy and Monocle
+- Interpet trajectory analysis results
 
 time_estimation: 1H
 
 key_points:
+- You should understand your data to be able to extract relevant information for further analysis.
+- Trajectory analysis is highly dependent on the parameter values you choose, as such ‘inferred relationships’ are a bigger mathematical leap. Therefore, you should always check if the output makes biological sense before processing to the next step.
+- Comparing the output of two different methods applied on the same dataset might be useful to confirm the results, ensure that the findings are reliable and even sometimes find a new piece of information.
 
 requirements:
 -
@@ -22,6 +31,7 @@ requirements:
         - scrna-case_alevin
         - scrna-case_alevin-combine-datasets
         - scrna-case_basic-pipeline
+        - scrna-case_JUPYTER-trajectories
 tags:
 - single-cell
 - trajectory-analysis
@@ -578,7 +588,7 @@ The table output is quite self-explanatory and it's useful to get details about 
 >
 > > ### {% icon solution %} Solution
 > >
-> > By looking at the table, you might give the 5 top gene IDs expressed in DP-M1. To save you some time and make the analysis more readable, we converted the gene IDs to gene names and they are as follows: Rps17, Rpl41, Rps26, Rps29, Rps28. They are all ribosomal! 
+> > By looking at the table, you might give the 5 top gene IDs expressed in DP-M1. To save you some time and make the analysis more readable, we converted the gene IDs to gene names and they are as follows: Rps17, Rpl41, Rps26, Rps29, Rps28. They are all ribosomal! This might be a housekeeping background, this might be cell cycle related, this might be biological, or all three. 
 > > The pdf output also indicates other specifically expressed genes, such as Hmgb2, Pclaf, Rpl13, Rps19, Ybx1, Ncl, Hsp90ab1, Npm1. 
 > >
 > > Every time when you want to explore what might be the function of a particular cluster or why it branches out from the trajectory, then checking the top markers for that cluster is really helpful and allows you to draw biological conclusions. Thank you Maths! 
@@ -670,6 +680,8 @@ Once the trajectory has been inferred, you might want to return to the gene expr
 # Conclusion
 {:.no_toc}
 
-{% icon congratulations %} Well done, you’ve made it to the end! You might want to consult your results with this [control history](), or check out the [full workflow]() for this tutorial. I also split this workflow into two separate workflows: [preparing the input files for Monocle3, starting from AnnData](), and [Monocle3 only workflow](). You can use them to accelerate analysis of your own data, paying attention to the requirements of the input data, mentioned in this tutorial.
+{% icon congratulations %} Well done, you’ve made it to the end! You might want to consult your results with this [control history](https://humancellatlas.usegalaxy.eu/u/j.jakiela/h/monoce3-tutorial-workflow), or check out the [full workflow](https://humancellatlas.usegalaxy.eu/u/j.jakiela/w/copy-of-anndata-to-monocle-right-1) for this tutorial. I also split this workflow into two separate workflows: [preparing the input files for Monocle3, starting from AnnData](https://humancellatlas.usegalaxy.eu/u/j.jakiela/w/copy-of-trajectory-analysis-using-monocle3), and [Monocle3 only workflow](https://humancellatlas.usegalaxy.eu/u/j.jakiela/w/copy-of-trajectory-analysis-using-monocle3-1). You can use them to accelerate analysis of your own data, paying attention to the requirements of the input data, mentioned in this tutorial.
 
-In this tutorial, you moved from technical processing to biological exploration. By analysing real data - both the exciting and the messy! - you have, hopefully, experienced what it’s like to analyse and question a dataset, potentially without clear cut-offs or clear answers. If you were working in a group, you each analysed the data in different ways, and most likely found similar insights. One of the biggest problems in analysing scRNA-seq is the lack of a clearly defined pathway or parameters. You have to make the best call you can as you move through your analysis, and ultimately, when in doubt, try it multiple ways and see what happens!
+![pseudotime](../../images/scrna-casestudy-monocle/workflow.jpg "Full workflow for this tutorial.")
+
+If you're following the Case Study tutorials from the beginning, you have already experienced what it’s like to analyse and question a dataset, potentially without clear cut-offs or clear answers. You now know that trajectory analysis is even more sensitive to parameter values, so it's often trying to find the best set of values that would give the most reasonable results and go in accordance with biology. Moreover, not all trajectory analysis methods are designed to infer all kinds of biological processes - due to the fact that they use different algorithms, some would work better for analysing your sample. Since Monocle is quite widely used for trajectory analysis, it might be a good practice to compare its results with other methods. The more evidence you have to confirm your findings, the more confident you can be about their reliability!
