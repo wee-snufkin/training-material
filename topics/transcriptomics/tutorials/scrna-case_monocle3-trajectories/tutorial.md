@@ -57,7 +57,7 @@ In this tutorial we will perform trajectory analysis using [monocle3](https://co
 
 
 ## Get data
-We still work on data from a mouse dataset of fetal growth restriction {% cite Bacon2018 %} (see [the study in Single Cell Expression Atlas](https://www.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6945/results/tsne) and [the project submission](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6945/)), making this case study even more comprehensive. 
+We will continue to work on the case study data from a mouse model of fetal growth restriction {% cite Bacon2018 %} (see [the study in Single Cell Expression Atlas](https://www.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6945/results/tsne) and [the project submission](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6945/)). 
 Monocle3 works great with annotated data, so we will make use of our annotated AnnData object, generated in the previous [tutorial]({% link topics/transcriptomics/tutorials/scrna-case_basic-pipeline/tutorial.md %}). So you see - all the hard work of processing data was not in vain! We will also need a ‘clean’ expression matrix, extracted from the AnnData object just before we started the processing.
 You can find both datasets in this [input history](https://humancellatlas.usegalaxy.eu/u/j.jakiela/h/monocle3-input-files) or download from Zenodo below.  
 
@@ -72,8 +72,6 @@ You can find both datasets in this [input history](https://humancellatlas.usegal
 >    ```
 >
 >    {% snippet faqs/galaxy/datasets_import_via_link.md %}
->
->    {% snippet faqs/galaxy/datasets_import_from_data_library.md %}
 >
 > 3. Check that the datatype is `h5ad`
 >
@@ -94,15 +92,15 @@ You can find both datasets in this [input history](https://humancellatlas.usegal
 
 ## Extracting annotations
 
- As we want to use Monocle for the trajectory analysis, we will have to feed it with cell metadata, gene annotation and expression matrix files (in theory expression matrix alone could do, but then we wouldn’t have all those useful annotations that we were working on so hard!). In order to get those files, we will extract the gene and cell annotations from our AnnData object. 
+To run Monocle, we need cell metadata, gene metadata, and an expression matrix file of genes by cells. (In theory, the expression matrix alone could do, but then we wouldn’t have all those useful annotations that we worked on so hard in the previous tutorials!). In order to get these files, we will extract the gene and cell annotations from our AnnData object. 
 
  > ### {% icon question %} Questions
 >
-> How many lines do you expect to be in gene annotations and cell metadata files?
+> How many lines do you expect to be in the gene and cell metadata files?
 >
 > > ### {% icon solution %} Solution
 > >
-> > If you click on the step with uploaded annotated AnnData file, you will see on a small preview that this object has 8605 observations and 15395 variables, so we expect to get a cell metadata file with 8605 lines and gene annotations file with 15395 lines (without headers of course!).
+> > If you click on the step with uploaded annotated AnnData file, you will see on a small preview that this object has 8605 observations and 15395 variables, so we expect to get a cell metadata file with 8605 lines and gene metadata file with 15395 lines (without headers of course!).
 > >
 > {: .solution}
 >
@@ -124,12 +122,12 @@ You can find both datasets in this [input history](https://humancellatlas.usegal
 >
 {: .hands_on}
 
-Quick and easy, isn’t it? However, there are some minor changes that we have to make to our files first. 
+Quick and easy, isn’t it? However, we need to make some minor changes before we can input these files into the Monocle toolsuite. 
 
 ## Cell metadata
-Our current dataset is not just T-cells: as you might remember from the last tutorial, we identified a cluster of macrophages as well. This might be a problem, because the trajectory algorithm will try to find relationships between all the cells (even if they are not necessarily related!), and not only the T-cells that we are interested in. We need to remove those unwanted cell types to make the analysis more biologically relevant.
+Our current dataset is not just T-cells: as you might remember from the last tutorial, we identified a cluster of macrophages as well. This might be a problem, because the trajectory algorithm will try to find relationships between all the cells (even if they are not necessarily related!), rather than only the T-cells that we are interested in. We need to remove those unwanted cell types to make the analysis more accurate.
 
-Manipulate AnnData tool allows you to filter observations or variables and that would be the easiest way to do it! However, we have to think ahead. As we want to use Monocle later on, we will have to provide it with cell metadata, gene annotation and expression matrix files anyway. This is why we extract the annotations first, make changes to them and finally we adjust the expression matrix to the filtered annotations. In that way, we’ll end up with three separate files, ready to be passed onto Monocle3.
+The Manipulate AnnData tool allows you to filter observations or variables, and that would be the most obvious way to remove those cells. However, given that we don't need an AnnData object, it's a lot quicker to edit a table rather than manipulate an AnnData object. Ultimately, we need cell metadata, gene metadata and expression matrix files that have macrophages remove, and that have the correct metadata that Monocle looks for. With some table manipulation, we’ll end up with three separate files, ready to be passed onto Monocle3.
 
  > ### {% icon question %} Questions
 >
@@ -138,6 +136,7 @@ Manipulate AnnData tool allows you to filter observations or variables and that 
 > > ### {% icon solution %} Solution
 > >
 > > We have already extracted the cell annotations file - in one of the columns you can find the information about cell type, assigned to each cell. 
+> > ![Example cell annotations](../../images/scrna-casestudy-monocle/example_cell_annotations.png)
 > >
 > {: .solution}
 >
