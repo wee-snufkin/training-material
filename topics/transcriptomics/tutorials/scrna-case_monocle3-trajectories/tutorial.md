@@ -136,7 +136,7 @@ The Manipulate AnnData tool allows you to filter observations or variables, and 
 > > ### {% icon solution %} Solution
 > >
 > > We have already extracted the cell annotations file - in one of the columns you can find the information about cell type, assigned to each cell. 
-> > ![Example cell annotations](../../images/scrna-casestudy-monocle/example_cell_annotations.png)
+> > ![Cell annotations along the top, n_genes, n_counts, louvain, cell_type with a cell barcode and subsequent metadata as each row](../../images/scrna-casestudy-monocle/example_cell_annotations.png "Example cell annotations")
 > >
 > {: .solution}
 >
@@ -170,7 +170,7 @@ Click on `Extracted cell annotations (obs)` file to see a small preview window. 
 {: .hands_on}
 
 ## Gene annotations
-Sometimes certain functionalities require specific indication where the data should be taken from. In case of Monocle3, to allow further genes analysis using one of its functions, it is essential that the names of the genes are stored in a column called ‘gene_short_name’. Therefore, we need to check what is the name of that column in our dataset. 
+Sometimes certain functionalities require a specific indication of where the data should be taken from. Monocle3 tools expect that the genes column is named ‘gene_short_name’. Let's check what the name of that column is in our dataset currently. 
 
 > ### {% icon question %} Questions
 >
@@ -181,12 +181,13 @@ Sometimes certain functionalities require specific indication where the data sho
 > >
 > > 1. Our extracted gene annotations file! Either by clicking on the eye icon {% icon solution %} or having a look at the small preview window. 
 > > 2. In our dataset the gene names are stored in a column called ‘Symbol’ - we need to change that!
+> > ![The dataset in the history has a preview window showing the columns of the extracted gene annotation with each gene as a row and the metadata - index, ID, symbol - as the column names](/workspace/training-material/topics/transcriptomics/images/scrna-casestudy-monocle/window_in_history.png "Preview window in the history")
 > >
 > {: .solution}
 >
 {: .question}
 
-Let’s click on the `Extracted gene annotations (var)` file to see a small preview. We can see that the gene names are in the third column with a header ‘Symbol’. Keep that in mind - we’ll use that in a second!
+Let’s click on the `Extracted gene annotations (var)` file to see a small preview. We can see that the gene names are in the third column with a header `Symbol`. Keep that in mind - we’ll use that in a second!
 
 > ### {% icon hands_on %} Hands-on: Changing the colname
 >
