@@ -198,15 +198,18 @@ Let’s click on the `Extracted gene annotations (var)` file to see a small prev
 >        - {% icon param-repeat %} *"Insert Check"*
 >            - *"Find Regex"*: `Symbol`
 >            - *"Replacement"*: `gene_short_name`
+> 2. Check that the datatype is `h5ad`
+>
+>    {% snippet faqs/galaxy/datasets_change_datatype.md datatype="tabular" %}
 >     - Voila! That’s the gene input for Monocle! Just a quick rename...
-> 2. **Rename** {% icon galaxy-pencil %} the output: `Genes input data for Monocle3`
+> 3. **Rename** {% icon galaxy-pencil %} the output: `Genes input data for Monocle3`
 >
 {: .hands_on}
 
 ## Expression matrix
-Last, but not least! I would even dare to say that last, but the most important! Actually the expression matrix contains all the values representing expression level of a particular gene in a cell. This is why in theory the expression matrix is the only input file required by Monocle3 - without annotation files the CDS data can still be generated - in fact it will be quite bare, but at least it could be processed. 
+Last, but not least! And in fact, the most important! The expression matrix contains all the values representing the expression level of a particular gene in a cell. This is why in theory the expression matrix is the only input file required by Monocle3. Without annotation files the CDS data can still be generated - it will be quite bare and rather unhelpful for interpretation, but at it's possible to process. 
 
-So, the values in the expression matrix are just some numbers. But do you remember that we have already done some processing such as normalisation and calculation of principal components on AnnData in the previous tutorial? That affected our expression matrix. Preprocessing is one of the steps in the Monocle3 workflow, so we want to make sure that the calculations are done on a ‘clean’ expression matrix. If we apply too many operations on our raw data, it will be too ‘deformed’ to be reliable. The point of the analysis is to use algorithms that make the enormous amount of data understandable in order to draw meaningful conclusions in accordance with biology. 
+So, the values in the expression matrix are just numbers. But do you remember that we have already done some processing such as normalisation and the calculation of principal components in the AnnData object in the previous tutorial? That affected our expression matrix. Preprocessing is one of the steps in the Monocle3 workflow, so we want to make sure that the calculations are done on a ‘clean’ expression matrix. If we apply too many operations on our raw data, it will be too ‘deformed’ to be reliable. The point of the analysis is to use algorithms that make the enormous amount of data understandable in order to draw meaningful conclusions in accordance with biology. 
 
 So how do we do that?
 > ### {% icon question %} Questions
@@ -225,7 +228,7 @@ So how do we do that?
 >
 {: .question}
 
-As you can see, there are way more genes and cells in the unprocessed AnnData file, so the expression matrix is much bigger than we need it to be. If the genes and cells we prepared for Monocle3 are not the same as in the expression matrix, Monocle3 will crash. Therefore, we have to filter that big, clean matrix and adjust it to our already prepared genes and cells files. But first, let’s extract this matrix from the unprocessed AnnData object. 
+As you can see, there are way more genes and cells in the unprocessed AnnData file, so the expression matrix is much bigger than we need it to be. If the genes and cells we prepared for Monocle3 are not the same as in the expression matrix, Monocle3 will crash. Therefore, we have to filter that big, clean matrix and adjust it to our already prepared genes and cells files. But first, let’s extract the matrix from the unprocessed AnnData object. 
 
 > ### {% icon hands_on %} Hands-on: Extracting matrix
 >
@@ -236,7 +239,7 @@ As you can see, there are way more genes and cells in the unprocessed AnnData fi
 >
 {: .hands_on}
 
-If you have a look at the preview of `Unprocessed expression matrix`, you’ll see that the first column contains the cell barcodes, while the first row - the gene IDs. We would like to keep only the values corresponding to the cells and genes that are included in `Cells input data for Monocle3` and `Genes input data for Monocle3`. How do we do it? First, we compare the cell barcodes from `Cells input data for Monocle3` to those in `Unprocessed expression matrix` and ask Galaxy to keep the values of the matrix for which the barcodes in both files are the same. Then, we’ll do the same for gene IDs. So we have to cut the first columns from `Cells input data for Monocle3` and `Genes input data for Monocle3` to be able to compare those columns side by side with the matrix file.
+If you have a look at the preview of `Unprocessed expression matrix`, you’ll see that the first column contains the cell barcodes, while the first row - the gene IDs. We would like to keep only the values corresponding to the cells and genes that are included in `Cells input data for Monocle3` and `Genes input data for Monocle3`. How do we do it? First, we compare the cell barcodes from `Cells input data for Monocle3` to those in `Unprocessed expression matrix` and ask Galaxy to keep the values of the matrix for which the barcodes in both files are the same. Then, we’ll do the same for gene IDs. We will cut the first columns from `Cells input data for Monocle3` and `Genes input data for Monocle3` to be able to compare those columns side by side with the matrix file.
 
 > ### {% icon hands_on %} Hands-on: Cutting out the columns
 >
@@ -255,9 +258,9 @@ If you have a look at the preview of `Unprocessed expression matrix`, you’ll s
 >
 > 1. {% tool [Join two Datasets](join1) %} with the following parameters:
 >    - {% icon param-file %} *"Join"*: `Cells IDs` 
->    - *"using column"*: `c1`
+>    - *"using column"*: `c1`or `Column: 1`
 >    - {% icon param-file %} *"with"*: `Unprocessed expression matrix`
->    - *"and column"*: `c1`
+>    - *"and column"*: `c1`or `Column: 1`
 >    - *"Keep lines of first input that do not join with second input"*: `Yes`
 >    - *"Keep lines of first input that are incomplete"*: `Yes`
 >    - *"Fill empty columns"*: `No`
@@ -266,7 +269,7 @@ If you have a look at the preview of `Unprocessed expression matrix`, you’ll s
 >
 {: .hands_on}
 
-Look at the preview of the output file. First of all, you can see that there are 8570 lines (8569 cells) instead of 31178 cells that were present in the matrix. That’s exactly what we wanted to achieve - now we have information for the T-cells that we had filtered. However, the step that we have already performed left us with the matrix whose first and second columns are the same - let’s get rid of one of those! 
+Look at the preview of the output file. First of all, you can see that there are 8570 lines (8569 cells) instead of 31178 cells that were present in the matrix. That’s exactly what we wanted to achieve - now we have raw information for the T-cells that we have filtered. However, the step that we have already performed left us with the matrix whose first and second columns are the same - let’s get rid of one of those! 
 
 > ### {% icon hands_on %} Hands-on: Remove duplicate column (cells IDs)
 >
@@ -279,7 +282,7 @@ Look at the preview of the output file. First of all, you can see that there are
 >
 {: .hands_on}
 
-Now we will perform the same steps, but for gene IDs. But gene IDs are currently in the first row, so we need to transpose the matrix, and from there we can repeat the same steps as above, but for gene IDs of course. 
+Now we will perform the same steps, but for gene IDs. But gene IDs are currently in the first row, so we need to transpose the matrix, and from there we can repeat the same steps as above for Gene IDs. 
 
 > ### {% icon hands_on %} Hands-on: Filter matrix by gene IDs
 >
@@ -288,9 +291,9 @@ Now we will perform the same steps, but for gene IDs. But gene IDs are currently
 >    - The matrix is now ready to be filtered by gene IDs!
 > 2. {% tool [Join two Datasets](join1) %} with the following parameters:
 >    - {% icon param-file %} *"Join"*: `Genes IDs`
->    - *"using column"*: `c1`
+>    - *"using column"*: `c1` or `Column: 1`
 >    - {% icon param-file %} *"with"*: output of **Transpose** {% icon tool %}
->    - *"and column"*: `c1`
+>    - *"and column"*: `c1` or `Column: 1`
 >    - *"Keep lines of first input that do not join with second input"*: `Yes`
 >    - *"Keep lines of first input that are incomplete"*: `Yes`
 >    - *"Fill empty columns"*: `No`
@@ -309,18 +312,18 @@ Now we will perform the same steps, but for gene IDs. But gene IDs are currently
 
 # Monocle3 workflow
 
-What will happen with those files that we have been preparing so far? Well, Monocle3 turns the expression matrix, cell and gene annotations into an object called cell_data_set (CDS), which holds single-cell expression data. 
+Monocle3 turns the expression matrix, cell and gene annotations into an object called cell_data_set (CDS), which holds single-cell expression data. 
 
 > ### {% icon details %} Details: Input files
 > 
-> That’s what [Monocle3 documentation](https://cole-trapnell-lab.github.io/monocle3/docs/starting/) says about the required three input files:
->    - expression_matrix, a numeric matrix of expression values, where rows are genes, and columns are cells. Must have the same number of columns as the cell_metadata has rows and the same number of rows as the gene_metadata has rows.
->    - cell_metadata, a data frame, where rows are cells, and columns are cell attributes (such as cell type, culture condition, day captured, etc.)
->    - gene_metadata, a data frame, where rows are features (e.g. genes), and columns are gene attributes, such as biotype, gc content, etc. One of its columns should be named "gene_short_name", which represents the gene symbol or simple name (generally used for plotting) for each gene.
+> Here is what [Monocle3 documentation](https://cole-trapnell-lab.github.io/monocle3/docs/starting/) says about the required three input files:
+>    - **expression_matrix**, a numeric matrix of expression values, where rows are genes, and columns are cells. Must have the same number of columns as the cell_metadata has rows and the same number of rows as the gene_metadata has rows.
+>    - **cell_metadata**, a data frame, where rows are cells, and columns are cell attributes (such as cell type, culture condition, day captured, etc.)
+>    - **gene_metadata**, a data frame, where rows are features (e.g. genes), and columns are gene attributes, such as biotype, gc content, etc. One of its columns should be named "gene_short_name", which represents the gene symbol or simple name (generally used for plotting) for each gene.
 >
 {: .details}
 
-Here’s how the Monocle3 workflow looks like:
+The Monocle3 workflow looks like the following, which should seem pretty similar to what you've done throughout the case study.
 
 ![Monocle workflow](../../images/scrna-casestudy-monocle/monocle3_new_workflow.png "Workflow provided by Monocle3 documentation")
 
