@@ -189,11 +189,11 @@ Sometimes certain functionalities require a specific indication of where the dat
 
 Let’s click on the `Extracted gene annotations (var)` file to see a small preview. We can see that the gene names are in the third column with a header `Symbol`. Keep that in mind - we’ll use that in a second!
 
-> ### {% icon hands_on %} Hands-on: Changing the colname
+> ### {% icon hands_on %} Hands-on: Changing the column name
 >
 > 1. {% tool [Column Regex Find And Replace](toolshed.g2.bx.psu.edu/repos/galaxyp/regex_find_replace/regexColumn1/1.0.2) %} with the following parameters:
 >    - {% icon param-file %} *"Select cells from"*: `Extracted gene annotations (var)` 
->    - *"using column"*: `c3`
+>    - *"using column"*: `c3` or `Column: 3`
 >    - In *"Check"*:
 >        - {% icon param-repeat %} *"Insert Check"*
 >            - *"Find Regex"*: `Symbol`
