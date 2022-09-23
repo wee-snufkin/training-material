@@ -7,21 +7,21 @@ priority: 5
 zenodo_link: 'https://zenodo.org/record/7078524'
 
 questions:
-- How to prepare input files for Monocle starting from AnnData object?
+- How can I prepare input files for Monocle starting from an AnnData object?
 - How can I infer lineage relationships between clusters, without a time series?
-- What trajectory analysis can tell us?
+- What can trajectory analysis tell us?
 objectives:
-- Understand which opertions to perform on AnnData object to obtain files needed for Monocle
+- Identify which operations to perform on an AnnData object to obtain the files needed for Monocle
 - Follow the Monocle3 workflow and choose the right parameter values
-- Compare output from Scanpy and Monocle
+- Compare the outputs from Scanpy and Monocle
 - Interpet trajectory analysis results
 
 time_estimation: 1H
 
 key_points:
-- You should understand your data to be able to extract relevant information for further analysis.
-- Trajectory analysis is highly dependent on the parameter values you choose, as such ‘inferred relationships’ are a bigger mathematical leap. Therefore, you should always check if the output makes biological sense before processing to the next step.
-- Comparing the output of two different methods applied on the same dataset might be useful to confirm the results, ensure that the findings are reliable and even sometimes find a new piece of information.
+- You should understand your data object sufficiently to be able to extract relevant information for further analysis.
+- Trajectory analysis is highly dependent on the parameter values you choose, as such ‘inferred relationships’ are a bigger mathematical leap. Therefore, you should always check if the output makes biological sense before proceeding to the next step.
+- Comparing the output of two different methods applied on the same dataset might be useful to confirm the results, to ensure that the findings are reliable and even sometimes to find a new piece of information.
 
 requirements:
 -
@@ -49,11 +49,12 @@ contributions:
 
 # Introduction
 
-This tutorial is a follow-up to the ['Single-cell RNA-seq: Case Study']({% link topics/transcriptomics/index.md %}), we will use the same sample from the previous tutorials. If you haven’t done them yet, it’s highly recommended that you go through them to get an idea how to [prepare a single cell matrix]({% link topics/transcriptomics/tutorials/scrna-case_alevin/tutorial.md %}), [combine datasets]({% link topics/transcriptomics/tutorials/scrna-case_alevin-combine-datasets/tutorial.md %}) or [filter, plot and process scRNA-seq data]({% link topics/transcriptomics/tutorials/scrna-case_basic-pipeline/tutorial.md %}) to get the data in the form we’ll be working on today.
+This tutorial is a follow-up to the ['Single-cell RNA-seq: Case Study']({% link topics/transcriptomics/index.md %}). We will use the same sample from the previous tutorials. If you haven’t done them yet, it’s highly recommended that you go through them to get an idea how to [prepare a single cell matrix]({% link topics/transcriptomics/tutorials/scrna-case_alevin/tutorial.md %}), [combine datasets]({% link topics/transcriptomics/tutorials/scrna-case_alevin-combine-datasets/tutorial.md %}) and [filter, plot and process scRNA-seq data]({% link topics/transcriptomics/tutorials/scrna-case_basic-pipeline/tutorial.md %}) to get the data in the form we’ll be working on today.
 
-In this tutorial we will perform trajectory analysis using [monocle3](https://cole-trapnell-lab.github.io/monocle3/). You can find out more about the theory behind trajectory analysis here /slides/. We have already analysed the trajectory of our sample using ScanPy toolkit in another tutorial: [Trajectory Analysis using Python (Jupyter Notebook) in Galaxy]({% link topics/transcriptomics/tutorials/scrna-case_JUPYTER-trajectories/tutorial.md %}). However, trajectory analysis is quite sensitive and some methods work better for specific datasets. Now you can go through the same steps but using a different method to compare the results, usability and the final outcome! Sounds exciting, let’s dive into that! 
+In this tutorial we will perform trajectory analysis using [monocle3](https://cole-trapnell-lab.github.io/monocle3/). You can find out more about the theory behind trajectory analysis here [slides]({% link topics/transcriptomics/tutorials/scrna-case_monocle3-trajectories/slides.html %}). We have already analysed the trajectory of our sample using the ScanPy toolkit in another tutorial: [Trajectory Analysis using Python (Jupyter Notebook) in Galaxy]({% link topics/transcriptomics/tutorials/scrna-case_JUPYTER-trajectories/tutorial.md %}). However, trajectory analysis is quite sensitive and some methods work better for specific datasets. In this tutorial, you will perform the same steps but using a different method for inferring trajectories. You will then compare the results, usability and outcomes! Sounds exciting, let’s dive into that! 
 
 {% snippet faqs/galaxy/tutorial_mode.md %}
+
 
 ## Get data
 We still work on data from a mouse dataset of fetal growth restriction {% cite Bacon2018 %} (see [the study in Single Cell Expression Atlas](https://www.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6945/results/tsne) and [the project submission](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6945/)), making this case study even more comprehensive. 
