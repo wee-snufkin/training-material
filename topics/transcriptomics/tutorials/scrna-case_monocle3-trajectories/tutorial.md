@@ -317,9 +317,9 @@ Monocle3 turns the expression matrix, cell and gene annotations into an object c
 > ### {% icon details %} Details: Input files
 > 
 > Here is what [Monocle3 documentation](https://cole-trapnell-lab.github.io/monocle3/docs/starting/) says about the required three input files:
->    - **expression_matrix**, a numeric matrix of expression values, where rows are genes, and columns are cells. Must have the same number of columns as the cell_metadata has rows and the same number of rows as the gene_metadata has rows.
->    - **cell_metadata**, a data frame, where rows are cells, and columns are cell attributes (such as cell type, culture condition, day captured, etc.)
->    - **gene_metadata**, a data frame, where rows are features (e.g. genes), and columns are gene attributes, such as biotype, gc content, etc. One of its columns should be named "gene_short_name", which represents the gene symbol or simple name (generally used for plotting) for each gene.
+>    - **expression_matrix**: a numeric matrix of expression values, where rows are genes, and columns are cells. Must have the same number of columns as the cell_metadata has rows and the same number of rows as the gene_metadata has rows.
+>    - **cell_metadata**: a data frame, where rows are cells, and columns are cell attributes (such as cell type, culture condition, day captured, etc.)
+>    - **gene_metadata**: a data frame, where rows are features (e.g. genes), and columns are gene attributes, such as biotype, gc content, etc. One of its columns should be named "gene_short_name", which represents the gene symbol or simple name (generally used for plotting) for each gene.
 >
 {: .details}
 
@@ -352,14 +352,15 @@ We will follow those steps and see how it all works in practice.
 > > ### {% icon solution %} Solution
 > >
 > > Just click on the performed step - on the preview you’ll see that the dimensions are 15395 x 8569 - so exactly as we predicted genes x cells! 
+> > ![The dataset preview shows class: cell_data_set, dim: 15395 8569](../../images/scrna-casestudy-monocle/monocle_dimensions.png "Monocle Object Dimensions")
 > >
 > {: .solution}
 {: .question}
 
 ## Pre-processing
 
-In Galaxy, there are currently 2 methods of initial dimensionality reduction which is included in the pre-processing step: principal component analysis (PCA) and latent semantic indexing (LSI). 
-However, PCA is more commonly used, and it also allows us to perform further steps on CDS object, so we’ll use this method. There is one parameter here that has a great impact on how our analysis will look like, namely - the `dimensionality of the initially reduced space`. After many trials and errors, we were finally able to find the value that gave the best results. You can have a look at the image below to see how different values affect the outcome.
+In Galaxy, there are currently 2 methods of initial dimensionality reduction included in the pre-processing step: principal component analysis (PCA) and latent semantic indexing (LSI). 
+Given that PCA is more commonly used, and it allows us to perform further steps on the CDS object, we’ll use this method. There is one parameter here that has a great impact on how our analysis will look - the `dimensionality of the initially reduced space`. This is a highly subjective choice - you will want to test a lot of different parameters on your dataset. After much trial and error, we were able to find the value that made the most sense biologically. Have a look at the image below to see how different values affect the outcomes.
 
 ![Preprocessing num-dim](../../images/scrna-casestudy-monocle/num_dim.png "Different outputs depending on the number of dimensions that the space was reduced to during pre-processing.")
 
@@ -384,9 +385,9 @@ However, PCA is more commonly used, and it also allows us to perform further ste
 
 ##  Dimensionality reduction
 
-Now it’s time for the proper dimensionality reduction so that instead of the initial thousands of dimensions, we can get only 2 and hence plot all the cells on one 2D graph. Again, there are several algorithms to do that: UMAP, tSNE, PCA and LSI (only possible when preprocess_method is set to 'LSI'), but due to the same reasons as above, we’ll use UMAP (most common + allows further operations + best results). But I’ll let you see how the output from other algorithms look to convince you that **UMAP** is indeed the best in this case. Of course it might happen that by choosing different pre-processing values, tSNE or PCA plots would look better, so don't be afriad to play around the parameters and test them!
+Now it’s time for the proper dimensionality reduction, to turn the original thousands of dimensions (genes), into a 2-dimensional graph. There are several algorithms to do this: UMAP, tSNE, PCA and LSI (only possible when preprocess_method is set to `LSI`), but due to the same reasons as above, we’ll use UMAP (most common + allows further operations + best results). But I’ll let you see how the outputs from the other algorithms look to convince you that **UMAP** is indeed the best for this dataset. Of course, it's possible that by choosing different pre-processing values, tSNE or PCA plots would look better, so don't be afraid to play around with the parameters and test them!
 
-![dim red](../../images/scrna-casestudy-monocle/dim_red_methods.png "The preview of alignment of cell types depending on the algorithm of dimentionality reduction that was chosen: UMAP, tSNE, PCA, LSI. The methods were applied to the output of the PCA-preprocessed data (except LSI method which was called on LSI-preprocessed data). LSI failed in forming distinct cell groups, PCA managed to cluster cells according to their types but tSNE did it more precisely. However, UMAP gave the best results, not only showing distinct cell type groups, but also ordering them nicely.")
+![dim red](../../images/scrna-casestudy-monocle/dim_red_methods.png "The preview of alignment of cell types depending on the algorithm of dimentionality reduction that was chosen: UMAP, tSNE, PCA, LSI. The methods were applied to the output of the PCA-preprocessed data (except LSI method which was called on LSI-preprocessed data). LSI failed in forming distinct cell groups, PCA managed to cluster cells according to their types but tSNE did it more precisely. However, UMAP gave the best results, not only showing distinct cell type groups, but also ordering them in a way that makes sense biologically - DN to T-mat.")
 
 > ### {% icon hands_on %} Hands-on: Dimensionality reduction
 >
@@ -397,15 +398,16 @@ Now it’s time for the proper dimensionality reduction so that instead of the i
 
 ## Plotting
  
-Alright, now let's have a look at our output! Above you got a sneak peek of how the plot would look like, but now you’ll generate them on your own! 
+Alright, now let's have a look at our output! Above you got a sneak peek of how the plot would look, but now you’ll generate the plots on your own! 
 
-Thanks to the fact that we provided Monocle3 with annotated data, we can now color the cells by any attribute that was in the cell metadata file! So, similarly to the previous tutorial, we’ll color them by cell type, genotype, batch and sex. At least for now. 
+Thanks to the fact that we provided Monocle3 with annotated data, we can now color the cells by any attribute that was in the cell metadata file! Similarly to the previous tutorial, we’ll color them by cell type, genotype, batch and sex. At least for now... 
 
 > ### {% icon hands_on %} Hands-on: Plotting
 >
 > 1. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 reduceDim** {% icon tool %}
 >    - *"The cell attribute (e.g. the column of pData(cds)) to map to each cell's color, or one of {cluster, partition, pseudotime}."*: `cell_type`
+>    - *"If set, display the cell group names directly on the plot. Otherwise include a color legend on the side of the plot."*: {% icon history-share %} `No`
 > 2. Rename {% icon galaxy-pencil %} the output: `Cell type plot`
 >
 > 3. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
@@ -428,7 +430,7 @@ Thanks to the fact that we provided Monocle3 with annotated data, we can now col
 >
 {: .hands_on}
 
-[Previous tutorial]({% link topics/transcriptomics/tutorials/scrna-case_basic-pipeline/tutorial.md %}) discussed in detail the biological interpretation of data, so we will quickly go through similar analysis to see if the results are consistent and if we can draw any new conclusions. 
+The [Previous tutorial]({% link topics/transcriptomics/tutorials/scrna-case_basic-pipeline/tutorial.md %}) discussed in detail the biological interpretation of data, so we will quickly go through similar analysis to see if the results are consistent and if we can draw any new conclusions. 
 
 As a reminder, here's the comparision between cell type annotation done in the other tutorial using Scanpy, and the output from the previous step of this tutorial. The main difference is that Scanpy was used to identify the cell types and assign them to clusters. That data was then passed on to Force-Directed + PAGA algorithms to infer trajectory, and then the arrangement of the cell groups changed a bit. In Monocle, trajectory analysis will be based on the clustering you see now. Therefore, the fact that on the Monocle plot we clearly see DN cells on one side of the graph and T-mat on the other, going through DP cells, looks promising. But there is DP-M1 group that suspiciously branches out... Let's investigate that and wait until the trajectory is inferred!
 
