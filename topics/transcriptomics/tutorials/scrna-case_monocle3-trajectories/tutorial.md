@@ -432,7 +432,7 @@ Thanks to the fact that we provided Monocle3 with annotated data, we can now col
 
 The [Previous tutorial]({% link topics/transcriptomics/tutorials/scrna-case_basic-pipeline/tutorial.md %}) discussed in detail the biological interpretation of data, so we will quickly go through similar analysis to see if the results are consistent and if we can draw any new conclusions. 
 
-As a reminder, here's the comparision between cell type annotation done in the other tutorial using Scanpy, and the output from the previous step of this tutorial. The main difference is that Scanpy was used to identify the cell types and assign them to clusters. That data was then passed on to Force-Directed + PAGA algorithms to infer trajectory, and then the arrangement of the cell groups changed a bit. In Monocle, trajectory analysis will be based on the clustering you see now. Therefore, the fact that on the Monocle plot we clearly see DN cells on one side of the graph and T-mat on the other, going through DP cells, looks promising. But there is DP-M1 group that suspiciously branches out... Let's investigate that and wait until the trajectory is inferred!
+As a reminder, here's the comparision between cell type annotation done in the other tutorial using Scanpy, and the output from the previous step of this Monocle tutorial. The main difference is that Scanpy was used to identify the cell types and assign them to clusters. That data was then passed on to Force-Directed + PAGA algorithms to infer trajectory, and then the arrangement of the cell groups changed a bit. In Monocle, trajectory analysis will be based on the clustering you see now. Therefore, the fact that on the Monocle plot we clearly see DN cells on one side of the graph and T-mat on the other, going through DP cells, looks promising. But there is DP-M1 group that suspiciously branches out... Let's investigate that and wait until the trajectory is inferred!
 
 ![scanpy vs monocle](../../images/scrna-casestudy-monocle/scanpy_monocle.png "Cell type annotation in Scanpy and Monocle.")
 
@@ -442,20 +442,20 @@ As a reminder, here's the comparision between cell type annotation done in the o
 >
 > > ### {% icon solution %} Solution
 > >
-> > Indeed, that's what we see in our graph! But look closer, there is something more! Additionally, we also discovered that the vast majority of DP-M1 is only wildtype cells! That's interesting, isn't it?
+> > Indeed, that's what we see in our graph! But look closer, there is something more...Additionally, we also discovered that the vast majority of DP-M1 is only wildtype cells. That's interesting, isn't it?
 > >
 > {: .solution}
 {: .question}
 
 > ### {% icon question %} Question - Batch effect
-> Again, can we confirm the previous findings that DP-L looks to be mainly comprised of N705?
+> Can we confirm the previous findings that DP-L looks to be mainly comprised of N705?
 > ![batch](../../images/scrna-casestudy-monocle/batch_1.png "Checking for batch effect")
 >
 > > ### {% icon solution %} Solution
 > >
-> > Both DP-L and DP-M1 seem to consist mostly of N705 and N706. There might be indeed a bit of batch effect, so you could consider using batch correction on this dataset (you can easily do it in R, using monocle3 library!). However, if look on the other clusters, where there is batch mixing, we can still assess this biologically even without batch correction. Additionally, we will also look at the confounding effect of sex.
+> > Both DP-L and DP-M1 seem to consist mostly of N705 and N706. There might be indeed a bit of batch effect, so you could consider using batch correction on this dataset. In the absence of batch correction, we will focus on those clusters where there is batch mixing for biological interpretation. Finally, we will look at the confounding effect of sex.
 > > ![sex](../../images/scrna-casestudy-monocle/sex_1.png "Sex distribution across the sample")
-> >  Look at this - there are also no female cells in DP-L and DP-M1. The one female sample was one of the mere three knockout samples - seems to be distributed in the same areas as the knockout samples at large, so luckily, this doesn’t seem to be a confounding factor and we can still learn from our data.
+> >  There are also no female cells in DP-L and DP-M1. The one female sample - which is one of the mere three knockout samples - seems to be distributed in the same areas as the knockout samples at large. Luckily, this doesn’t seem to be a confounding factor and we can still learn from our data.
 > >
 > {: .solution}
 {: .question}
