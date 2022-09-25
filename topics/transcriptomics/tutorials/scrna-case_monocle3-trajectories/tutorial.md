@@ -462,17 +462,17 @@ As a reminder, here's the comparision between cell type annotation done in the o
 
 ## Clustering
 
-Don't get confused - we haven't clustered our cells yet, for now we have only plotted them based on cell type annotation. Now it's time to create clusters, which - ideally - would cover the same areas as cell types. It would mean that clustering in Scanpy during previous tutorial to assign the cell types is consistent with Monocle clustering. 
+Don't get confused - we haven't clustered our cells yet, for now we have only plotted them based on cell type annotation. Now it's time to create clusters, which - in an ideal world where all computation picks up the exact biological phenomenons - would yield the same areas as the clusters determined by the Scanpy algorithms. Is this the case here? Do Monocle and Scanpy identify the same clusters?
 >
-Before inferring the trajectory, we have to group cells into clusters. Monocle uses a technique called [community detection](https://doi.org/10.1038/s41598-019-41695-z)  to group cells. This approach was introduced by [Levine et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4508757/) as part of the phenoGraph algorithm. 
+Monocle uses a technique called [community detection](https://doi.org/10.1038/s41598-019-41695-z) to group cells. This approach was introduced by [Levine et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4508757/) as part of the phenoGraph algorithm. 
 >
 Monocle also divides the cells into larger, more well separated groups called partitions, using a statistical test from [Alex Wolf et al](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1663-x), introduced as part of their [PAGA](https://github.com/theislab/paga) algorithm.
 
 > ### {% icon details %} Details: Clusters vs partitions
 > 
-> Clusters are particularly useful while trying to assign cells to a certain type, because they are based on the similarity in gene expression. While inferring the trajectory, we will be analysing the relationships between clusters.
+> Clusters are particularly useful while trying to assign cells to a certain type, because they are based on the similarity in gene expression. The relationships between different clusters are analysed to identify possible trajectories.
 >
-> Partitions are larger groups of cells, usually containing several clusters. Trajectory inference is performed only within one partition, so it is essential that all the cells that we want to analyse in pseudotime belong to the same partition. 
+> Partitions, meanwhile, are larger groups of cells that usually contain several clusters. Trajectory inference is performed only within one partition, so it is essential that all the cells that we want to analyse in pseudotime belong to the same partition. 
 >
 {: .details}
 
