@@ -462,7 +462,7 @@ As a reminder, here's the comparision between cell type annotation done in the o
 
 ## Clustering
 
-Don't get confused - we haven't clustered our cells yet, for now we have only plotted them based on cell type annotation. Now it's time for creating clusters, which - ideally - would cover the same areas as cell types. It would mean that clustering in Scanpy during previous tutorial to assign the cell types is consistent with Monocle clustering. 
+Don't get confused - we haven't clustered our cells yet, for now we have only plotted them based on cell type annotation. Now it's time to create clusters, which - ideally - would cover the same areas as cell types. It would mean that clustering in Scanpy during previous tutorial to assign the cell types is consistent with Monocle clustering. 
 >
 Before inferring the trajectory, we have to group cells into clusters. Monocle uses a technique called [community detection](https://doi.org/10.1038/s41598-019-41695-z)  to group cells. This approach was introduced by [Levine et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4508757/) as part of the phenoGraph algorithm. 
 >
