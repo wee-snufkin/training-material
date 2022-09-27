@@ -5,22 +5,29 @@ logo: "GTN"
 title: "Trajectory analysis"
 questions:
   - "What is trajectory analysis?"
-  - "What are the methods of trajectory inference and trajectories patterns?"
-  - "How are the decisions about the trajectory made?"
+  - "What are the main methods of trajectory inference?"
+  - "How are the decisions about the trajectory analysis made?"
   - "What to take into account when choosing the method for your data?" 
 objectives:
-  - "Becoming familiar with the methods of trajectory inference"
-  - "Learning how the decisions are made by the algorithms"
-  - "Being able to choose the method appropriate for specific data"
-  - "Insight into methods available in Galaxy"
+  - "Become familiar with the methods of trajectory inference"
+  - "Learn how the algorithms produce outputs"
+  - "Be able to choose the method appropriate for your specific data"
+  - "Gain insight into methods currently available in Galaxy"
 
 subtopic: writing
 key_points:
-  - "Trajectory analysis in pseudotime is a powerful way to get insight into differentiation and development of cells."
+  - "Trajectory analysis in pseudotime is a powerful way to get insight into the differentiation and development of cells."
   - "There are multiple methods and algorithms used in trajectory analysis and depending on the dataset, some might work better than others."
   - "Trajectory analysis is quite sensitive and thus you should always check if the output makes biological sense."
 contributors:
   - wee-snufkin
+requirements:
+  -
+    type: "internal"
+    topic_name: transcriptomics
+    tutorials:
+        - scrna-intro
+
 ---
 
 ### What is trajectory analysis?
@@ -64,7 +71,7 @@ TI allows studying how cells evolve from one cell state to another, and subseque
 .footnote[[Deconinck et al. Recent advances in trajectory inference from single-cell omics data](https://doi.org/10.1016/j.coisb.2021.05.005.)]
 --
 
-- Try to find stable cell states in the data and afterward connect these states to form a trajectory and map the cells to the formed graph structure 
+- Tries to find stable cell states in the data, then connect these states to form a trajectory and map the cells to the formed graph structure 
 
 --
 
