@@ -89,7 +89,7 @@ TI allows studying how cells evolve from one cell state to another, and subseque
 .footnote[[Deconinck et al. Recent advances in trajectory inference from single-cell omics data](https://doi.org/10.1016/j.coisb.2021.05.005.)]
 --
 
-- Construct a graph representation of the cells and either use graph decomposition to reveal connected and disconnected components, or graph diffusion or traversal methods to construct the trajectory topology
+- Constructs a graph representation of the cells and either uses graph decomposition to reveal connected and disconnected components, or graph diffusion or traversal methods to construct the trajectory topology
 
 --
 
@@ -107,11 +107,11 @@ TI allows studying how cells evolve from one cell state to another, and subseque
 .footnote[[Deconinck et al. Recent advances in trajectory inference from single-cell omics data](https://doi.org/10.1016/j.coisb.2021.05.005.)]
 --
 
-- Based on the assumption that data lie on a low-dimentional manifold embedded in a higher-dimentional space
+- Assumes that data lays on a low-dimentional manifold embedded in a higher-dimentional space
 
 --
 
-- Using principal curves and graphs to obtain smooth trajectories
+- Uses principal curves and graphs to obtain smooth trajectories
 
 --
 
@@ -143,7 +143,7 @@ TI allows studying how cells evolve from one cell state to another, and subseque
 ### Assumptions
 --
 
-- It would be quite difficult to analyse the sample every several seconds to see how the cells are changing. Therefore, we assume that snapshot data encompass all naïve, intermediate, and mature cell states with sufficient sampling coverage to allow the reconstruction of differentiation trajectories.    
+- It would be quite difficult to analyse a sample every few seconds to see how the cells are changing. Therefore, we assume that snapshot data encompass all naïve, intermediate, and mature cell states with sufficient sampling coverage to allow the reconstruction of differentiation trajectories.    
 [Sagar and Grün, 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7115822/)
 
 --
@@ -152,7 +152,7 @@ TI allows studying how cells evolve from one cell state to another, and subseque
 [Deconinck et al., 2021](https://doi.org/10.1016/j.coisb.2021.05.005)
 
 ---
-### Why not all TI methods are designed to infer all kinds of biological processes?
+### Why different TI methods are designed to infer different kinds of biological processes?
 --
 
 Look at the pipeline presented by [Robrecht Cannoodt et al., 2016](https://onlinelibrary.wiley.com/doi/10.1002/eji.201646347)
@@ -208,7 +208,7 @@ To help you evaluate which method would work best for your data, check out this 
   
 - Gives an idea about the topology you expect and the priors you can feed the method with, as well as expected cell types and potential contaminants  
 
-- You need to know about 75% of your data and make sure your analysis shows that, for you to then identify the 25% new information  
+- You need to know about 75% of your data and verify that your analysis shows that, before you can then identify the 25% new information  
 
 - Trajectory analysis is quite a sensitive method, so always check if the obtained computational results make biological sense!
 
@@ -300,7 +300,7 @@ Cells can differentiate or develop in various way, so they may exhibit different
 ---
 ### When analysing your data, consider the following: **Supervised and unsupervised learning**
 
-If you know which cells are root cells, you should enter this inforamtion to the method to make the computations more precise. However, some methods use unsupervised algorithms, so you will get a trajectory based on the tools they use and topology they can infer.    
+If you know which cells are root cells, you should enter this information to the method to make the computations more precise. However, some methods use unsupervised algorithms, so you will get a trajectory based on the tools they use and topology they can infer.    
 
 --
 
@@ -318,9 +318,10 @@ Slingshot, SCORPIUS, Angle, MST, Waterfall, TSCAN, SLICE, pCreode, SCUBA, RaceID
 
 - Other possible inputs: 
  - Raw (FASTQ); 
- - MMformat (output of 10x); 
- - EBI-SCXA; 
- - AnnData   
+ - Cellxgene matrix; 
+ - Matrix, genes & barcodes tables; 
+ - AnnData  
+ - RDS 
    
 --
 
@@ -407,7 +408,7 @@ It doesn't directly affect your analysis, however do bear in mind that calculati
 
 --
 
-- An initial clustering is followed by an outlier identification based on a backgorund model of combined technical and biological variability in single-cell RNA-seq data obtained by quantification with unique molecular identifiers   
+- An initial clustering is followed by an outlier identification based on a background model of combined technical and biological variability in single-cell RNA-seq data obtained by quantification with unique molecular identifiers   
 
 --
 
@@ -423,7 +424,7 @@ It doesn't directly affect your analysis, however do bear in mind that calculati
 
 --
 
-- Orders cells by learning an explicit principal graph from the single cell genomics data with advanced machine learning techniques (Reversed Graph Embedding), which robustly and accurately resolves complicated biological processes  
+- Orders cells by learning an explicit principal graph from the single cell transcriptomics data with advanced machine learning techniques (Reversed Graph Embedding), which robustly and accurately resolves complicated biological processes  
 
 --
 
