@@ -181,7 +181,7 @@ Sometimes certain functionalities require a specific indication of where the dat
 > >
 > > 1. Our extracted gene annotations file! Either by clicking on the eye icon {% icon solution %} or having a look at the small preview window. 
 > > 2. In our dataset the gene names are stored in a column called ‘Symbol’ - we need to change that!
-> > ![The dataset in the history has a preview window showing the columns of the extracted gene annotation with each gene as a row and the metadata - index, ID, symbol - as the column names](/workspace/training-material/topics/transcriptomics/images/scrna-casestudy-monocle/window_in_history.png "Preview window in the history")
+> > ![The dataset in the history has a preview window showing the columns of the extracted gene annotation with each gene as a row and the metadata - index, ID, symbol - as the column names](../../images/scrna-casestudy-monocle/window_in_history.png "Preview window in the history")
 > >
 > {: .solution}
 >
