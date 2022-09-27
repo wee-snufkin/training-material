@@ -43,6 +43,8 @@ contributions:
   editing:
     - hexylena
     - nomadscientist
+  testing:
+    - nomadscientist
   funding:
     - epsrc-training-grant
 ---
@@ -506,13 +508,15 @@ Monocle also divides the cells into larger, more well separated groups called pa
 {: .tip}
 > ### {% icon tip %} If the granularity of clusters does not make sense...
 >
-> If you are not satisfied with the results of the standard igraph louvain clustering algorithm, you may set the `resolution` of clustering, which specifies the granularity of the clustering. 
-> ![clustering resolution](../../images/scrna-casestudy-monocle/clusters_resolution.png "Different granularity of clusters based on the algorithm and resolution used.")
+>
+> When using standard igraph louvain clustering, the value of `resolution` parameter is by default set to `NULL`, which means that it is determined automatically. If you are not satisfied with the results of the standard igraph louvain clustering, you may set the `resolution` value manually, and thus specify the granularity of the clustering. 
+> ![clustering resolution](../../images/scrna-casestudy-monocle/clusters_resolution.png "Different granularity of clusters based on the resolution set automatically and manually.")
 {: .tip}
 
 > ### {% icon warning %} Ambiguous clusters!
-> Standard igraph louvain clustering algorithm works in a way that it sometimes returns slightly different outputs. To ensure that your clusters are reproducible, you might want to use the `resolution` parameter. In case of our data, the resolution value of 0.00015 gave the same results as the best output of igraph louvain clustering, and ensured reproducibility. 
-> ![igraph louvain clustering](../../images/scrna-casestudy-monocle/igraph.png "Standard igraph louvain clustering algorithm giving different results despite the same input.")
+> As mentioned above, standard igraph louvain clustering determines the resolution automatically, unless the specific value is provided by the user. Therefore, it sometimes returns slightly different outputs. To ensure that your clusters are reproducible, you might want to pass a certain value to the `resolution` parameter. In case of our data, the resolution value of 0.00015 gave the same results as the best output of igraph louvain clustering, and ensured reproducibility. 
+> ![igraph louvain clustering](../../images/scrna-casestudy-monocle/igraph.png "Standard igraph louvain clustering giving different results despite the same input becasue of the automatic determination of resolution vaule.")
+>
 > 
 {: .warning}
 
@@ -562,7 +566,9 @@ If we compare the annotated cell types and the clusters that were just formed, w
 > ### {% icon tip %} Purity of the sample - Hba-a1 gene
 >
 > The Hba-a1 gene creates hemoglobin which is found in red blood cells. This is highly expressed in a tiny bit of the middle DP cluster. Interestingly, it forms a a clearly visible, distinct, little branch. Hemoglobin should NOT be found in T-cells. However, if you remember, the gene was found to be expressed in the previous Scanpy tutorial (see the image below). That marker appeared throughout the entire sample in low numbers, suggesting some background contamination of red blood cell debris in the cell samples during library generation. Unlike Scanpy, Monocle algorithms allowed us to gather the cells expressing that gene into a distinct group! That's great!
-> ![Hemoglobin](../../images/scrna-casestudy-monocle/hb.png "Hemoglobin across clusters - comparision between Scanpy and Monocle")
+>
+> ![Hemoglobin](../../images/scrna-casestudy-monocle/hb.png "Hemoglobin across clusters - comparision between Monocle and Scanpy")
+>
 {: .question}
 
 ## Top marker genes 
@@ -671,8 +677,12 @@ Finally, it's time to see our cells in pseudotime! We have already learned a tra
 >    -  fill *(--root-type)* with the name of the cell type that you want to start ordering from
 > 2. **Cell ID as root cell**
 >    -  fill *(--root-cells)* with the cell ID that you want to start ordering from
-> 3. **Starting principal points**
->    -  fill *(--root-pr-nodes)* with the root_pr_node (you can plot them in the same way as branch points) that corresponds to the root cells 
+> {% comment %} 
+>   3. **Starting principal points**
+>     - repeat the plotting step, find the parameter *label_principal_points* and set its value to {% icon history-share %} `Yes`
+>     - have a look at the plot and note which principal point best corresponds to the root cells
+>     - fill *(--root-pr-nodes)* with the noted value from *label_principal_points* 
+> {% endcomment %}
 {: .tip}
 
 Now we can see how all our hard work has come together to give a final pseudotime trajectory analysis. DN cells gently switching to DP-M which change into DP-L to finally become mature T-cells. Isn't it beautiful? But wait, don't be too enthusiastic - why on earth DP-M1 group branches out? We didn't expect that... What could that mean?
