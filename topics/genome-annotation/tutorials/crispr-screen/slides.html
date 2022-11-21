@@ -31,6 +31,9 @@
     <meta property="og:title" content="Galaxy Training: Introduction to CRISPR screen analysis" />
     <meta property="og:description" content="Genome annotation is a multi-level process that includes ..." />
     <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
+    <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/genome-annotation/tutorials/crispr-screen/slides.html" />
+
     <script type="application/ld+json">
       
 
@@ -42,23 +45,6 @@
     "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
     "@type": "CreativeWork"
   },
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "audience": {
     "@type": "EducationalAudience",
     "educationalRole": "Students"
@@ -74,7 +60,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "1970-01-01 00:00:10 +0000",
+  "dateModified": "2022-03-10 08:46:04 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Introduction to CRISPR screen analysis",
   "interactivityType": "mixed",
@@ -100,18 +86,35 @@
     "url": "https://galaxyproject.org/teach/gtn/"
   },
   "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Genome Annotation",
     "description": "Genome annotation is a multi-level process that includes prediction of protein-coding\ngenes, as well as other functional genome units such as structural RNAs, tRNAs,\nsmall RNAs, pseudogenes, control regions, direct and inverted repeats, insertion\nsequences, transposons and other mobile elements.\n",
-    "url": "https://training.galaxyproject.org//training-material/topics/genome-annotation/"
+    "url": "https://training.galaxyproject.org/training-material/topics/genome-annotation/"
   },
   "learningResourceType": "slides",
   "name": "Slides for 'Introduction to CRISPR screen analysis' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/genome-annotation/tutorials/crispr-screen/slides.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/genome-annotation/tutorials/crispr-screen/slides.html",
   "timeRequired": "PT5M",
   "keywords": "genome-annotation",
-  "description": "The questions this  addresses are:\n - What is CRISPR?\n - What is a CRISPR screen?\n - How is a guide RNA library created?\n - What is the difference between a negative and positive screen?\n - How to analyse CRISPR screen data?\n\n\\nThe objectives are:\n - Describe what CRISPR screen data is\n - Outline how CRISPR screen data is generated and analysed\n\n",
+  "description": "The questions this  addresses are:\n - What is CRISPR?\n - What is a CRISPR screen?\n - How is a guide RNA library created?\n - What is the difference between a negative and positive screen?\n - How to analyse CRISPR screen data?\n\n\nThe objectives are:\n - Describe what CRISPR screen data is\n - Outline how CRISPR screen data is generated and analysed\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -121,7 +124,7 @@
     {
       "@context": "http://schema.org",
       "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
       "name": "Introduction to Galaxy Analyses",
       "description": "Introduction to Galaxy Analyses",
       "provider": {
@@ -225,7 +228,7 @@
       "@type": "CreativeWork",
       "name": "Genome Annotation",
       "description": "Genome annotation is a multi-level process that includes prediction of protein-coding\ngenes, as well as other functional genome units such as structural RNAs, tRNAs,\nsmall RNAs, pseudogenes, control regions, direct and inverted repeats, insertion\nsequences, transposons and other mobile elements.\n",
-      "url": "https://training.galaxyproject.org//training-material/topics/genome-annotation/"
+      "url": "https://training.galaxyproject.org/training-material/topics/genome-annotation/"
     }
   ]
 }
@@ -260,6 +263,7 @@ class: center, middle, inverse
 
 # Introduction to CRISPR screen analysis
 
+
 <div markdown="0">
 
 	<div class="contributors-line">
@@ -277,12 +281,26 @@ class: center, middle, inverse
 </div>
 
 
-<div class="footnote" style="bottom: 5.5em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: Mar 10, 2022</div>
+<!-- modified date -->
+<div class="footnote" style="bottom: 8em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: </div>
 
-<div class="footnote" style="bottom: 4em;"><a href="/training-material/videos/watch.html?v=/genome-annotation/tutorials/crispr-screen/slides"><i class="far fa-play-circle" aria-hidden="true"></i><span class="visually-hidden">video-slides</span> View video slides for this lecture</a></div>
 
-<div class="footnote" style="bottom: 2.5em;"><i class="fas fa-file-alt" aria-hidden="true"></i><span class="visually-hidden">text-document</span><a href="slides-plain.html"> Plain-text slides</a></div>
-<div class="footnote" style="bottom: 1em;"><strong>Tip: </strong>press <kbd>P</kbd> to view the presenter notes</div>
+<!-- other slide formats (video and plain-text) -->
+<div class="footnote" style="bottom: 6em;">
+
+  <i class="far fa-play-circle" aria-hidden="true"></i><span class="visually-hidden">video-slides</span> <a href="/training-material/videos/watch.html?v=/genome-annotation/tutorials/crispr-screen/slides">Video slides</a> |
+
+
+  <i class="fas fa-file-alt" aria-hidden="true"></i><span class="visually-hidden">text-document</span><a href="slides-plain.html"> Plain-text slides</a>
+</div>
+
+
+<!-- usage tips -->
+<div class="footnote" style="bottom: 2em;">
+    <strong>Tip: </strong>press <kbd>P</kbd> to view the presenter notes
+    | <i class="fa fa-arrows" aria-hidden="true"></i><span class="visually-hidden">arrow-keys</span> Use arrow keys to move between slides
+
+</div>
 
 ???
 Presenter notes contain extra information which might be useful if you intend to use these slides for teaching.

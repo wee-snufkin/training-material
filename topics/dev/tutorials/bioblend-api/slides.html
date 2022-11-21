@@ -31,6 +31,9 @@
     <meta property="og:title" content="Galaxy Training: Scripting Galaxy using the API and BioBlend" />
     <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute..." />
     <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
+    <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html" />
+
     <script type="application/ld+json">
       
 
@@ -42,23 +45,6 @@
     "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
     "@type": "CreativeWork"
   },
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "audience": {
     "@type": "EducationalAudience",
     "educationalRole": "Students"
@@ -74,7 +60,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "1970-01-01 00:00:18 +0000",
+  "dateModified": "2022-07-14 01:30:28 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Scripting Galaxy using the API and BioBlend",
   "interactivityType": "mixed",
@@ -100,15 +86,32 @@
     "url": "https://galaxyproject.org/teach/gtn/"
   },
   "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Development in Galaxy",
     "description": "Galaxy is an open-source project. Everyone can contribute to its development with core Galaxy development, integration of softwares in Galaxy environment, ...",
-    "url": "https://training.galaxyproject.org//training-material/topics/dev/"
+    "url": "https://training.galaxyproject.org/training-material/topics/dev/"
   },
   "learningResourceType": "slides",
   "name": "Slides for 'Scripting Galaxy using the API and BioBlend' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/dev/tutorials/bioblend-api/slides.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html",
   "timeRequired": "PT2H",
   "keywords": "dev",
   "description": "The questions this  addresses are:\n - What is a REST API?\n - How to interact with Galaxy programmatically?\n - Why and when should I use BioBlend?\n\n",
@@ -305,7 +308,7 @@
       "@type": "CreativeWork",
       "name": "Development in Galaxy",
       "description": "Galaxy is an open-source project. Everyone can contribute to its development with core Galaxy development, integration of softwares in Galaxy environment, ...",
-      "url": "https://training.galaxyproject.org//training-material/topics/dev/"
+      "url": "https://training.galaxyproject.org/training-material/topics/dev/"
     }
   ]
 }
@@ -340,6 +343,7 @@ class: center, middle, inverse
 
 # Scripting Galaxy using the API and BioBlend
 
+
 <div markdown="0">
 
 	<div class="contributors-line">
@@ -352,7 +356,7 @@ class: center, middle, inverse
 
 
 
-<a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="https://avatars.githubusercontent.com/nsoranzo?s=27" alt="Avatar">Nicola Soranzo</a>
+<a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=27" alt="Avatar">Nicola Soranzo</a>
 
 
 
@@ -365,12 +369,26 @@ class: center, middle, inverse
 </div>
 
 
-<div class="footnote" style="bottom: 5.5em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: Jun 18, 2022</div>
+<!-- modified date -->
+<div class="footnote" style="bottom: 8em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: </div>
 
-<div class="footnote" style="bottom: 4em;"><a href="/training-material/videos/watch.html?v=/dev/tutorials/bioblend-api/slides"><i class="far fa-play-circle" aria-hidden="true"></i><span class="visually-hidden">video-slides</span> View video slides for this lecture</a></div>
 
-<div class="footnote" style="bottom: 2.5em;"><i class="fas fa-file-alt" aria-hidden="true"></i><span class="visually-hidden">text-document</span><a href="slides-plain.html"> Plain-text slides</a></div>
-<div class="footnote" style="bottom: 1em;"><strong>Tip: </strong>press <kbd>P</kbd> to view the presenter notes</div>
+<!-- other slide formats (video and plain-text) -->
+<div class="footnote" style="bottom: 6em;">
+
+  <i class="far fa-play-circle" aria-hidden="true"></i><span class="visually-hidden">video-slides</span> <a href="/training-material/videos/watch.html?v=/dev/tutorials/bioblend-api/slides">Video slides</a> |
+
+
+  <i class="fas fa-file-alt" aria-hidden="true"></i><span class="visually-hidden">text-document</span><a href="slides-plain.html"> Plain-text slides</a>
+</div>
+
+
+<!-- usage tips -->
+<div class="footnote" style="bottom: 2em;">
+    <strong>Tip: </strong>press <kbd>P</kbd> to view the presenter notes
+    | <i class="fa fa-arrows" aria-hidden="true"></i><span class="visually-hidden">arrow-keys</span> Use arrow keys to move between slides
+
+</div>
 
 ???
 Presenter notes contain extra information which might be useful if you intend to use these slides for teaching.
@@ -743,28 +761,6 @@ Before diving into this slide deck, we recommend you to have a look at:
 
 ---
 
-## Tutorials - part 1
-
-We have prepared
-[some tutorials](https://github.com/nsoranzo/bioblend-tutorial/) as Jupyter
-notebooks, which can be executed online with Binder at
-https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/main
-
-Walk-throughs:
-- `galaxy_api_histories.ipynb`: interact with histories using the **Galaxy API**
-- `bioblend_histories.ipynb`: interact with histories using **BioBlend**
-
-Exercises:
-- `ex1_galaxy_api.ipynb`: launch a workflow using the **Galaxy API**
-- `ex1_bioblend.ipynb`: launch a workflow using **BioBlend**
-
-???
-
-- Now it's a good time to try the Galaxy API and BioBlend!
-- Follow the instructions on the slide to access the tutorials and exercises.
-
----
-
 ## BioBlend limitations
 
 - Python-only (but separate *blend4j* and *blend4php* exist)
@@ -800,25 +796,6 @@ Exercises:
 - When using this interface, methods will return objects encapsulating the dictionaries returned by the Galaxy API.
 - The user can then invoke further methods on these objects, for example the download method for a Dataset object.
 - Only a subset of BioBlend is available through the object interface, but most of the common user functionalities are included.
-
----
-
-## Tutorials - part 2
-
-More [Jupyter notebooks](https://github.com/nsoranzo/bioblend-tutorial/) which
-can be executed online with Binder at
-https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/main
-
-Walk-throughs:
-- `bioblend.objects_histories.ipynb`: interact with histories using **BioBlend.objects**
-
-Exercises:
-- `ex1_bioblend.objects.ipynb`: launch a workflow using **BioBlend.objects**
-
-???
-
-- Now you can try BioBlend objects and see how it compares with BioBlend.
-- Follow the instructions on the slide to access the tutorials and exercises.
 
 ---
 
@@ -873,7 +850,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 
 
 
-<a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="https://avatars.githubusercontent.com/nsoranzo?s=27" alt="Avatar">Nicola Soranzo</a>
+<a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=27" alt="Avatar">Nicola Soranzo</a>
 
 
 

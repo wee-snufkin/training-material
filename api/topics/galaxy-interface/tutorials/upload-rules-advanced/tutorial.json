@@ -30,6 +30,9 @@
       "name": "John Chilton",
       "email": "jmchilton@gmail.com",
       "joined": "2017-09",
+      "twitter": "jmchilton",
+      "gitter": "jmchilton",
+      "orcid": "0000-0002-6794-0756",
       "id": "jmchilton",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/jmchilton.json"
     },
@@ -46,7 +49,6 @@
     }
   ],
   "subtopic": "upload",
-  "last_modified_at": "28-Sep-21",
   "url": "/topics/galaxy-interface/tutorials/upload-rules-advanced/tutorial.html",
   "topic_name": "galaxy-interface",
   "tutorial_name": "upload-rules-advanced"

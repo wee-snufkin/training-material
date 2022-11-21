@@ -39,11 +39,12 @@
       "email": "simon.gladman@unimelb.edu.au",
       "joined": "2017-09",
       "elixir_node": "au",
+      "orcid": "0000-0002-6100-4385",
       "id": "slugger70",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/slugger70.json"
     }
   ],
-  "last_modified_at": "28-May-21",
+  "subtopic": "prokaryote",
   "url": "/topics/genome-annotation/tutorials/annotation-with-prokka/tutorial.html",
   "topic_name": "genome-annotation",
   "tutorial_name": "annotation-with-prokka"

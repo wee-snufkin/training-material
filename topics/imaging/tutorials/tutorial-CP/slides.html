@@ -31,6 +31,9 @@
     <meta property="og:title" content="Galaxy Training: Nucleoli Segmentation <br> & <br> Feature Extraction <br>..." />
     <meta property="og:description" content="Image analysis using Galaxy" />
     <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
+    <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/imaging/tutorials/tutorial-CP/slides.html" />
+
     <script type="application/ld+json">
       
 
@@ -42,23 +45,6 @@
     "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
     "@type": "CreativeWork"
   },
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "audience": {
     "@type": "EducationalAudience",
     "educationalRole": "Students"
@@ -74,7 +60,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "1970-01-01 00:00:10 +0000",
+  "dateModified": "2021-07-10 15:55:16 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Nucleoli Segmentation <br> & <br> Feature Extraction <br> using CellProfiler",
   "interactivityType": "mixed",
@@ -100,18 +86,35 @@
     "url": "https://galaxyproject.org/teach/gtn/"
   },
   "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Imaging",
     "description": "Image analysis using Galaxy",
-    "url": "https://training.galaxyproject.org//training-material/topics/imaging/"
+    "url": "https://training.galaxyproject.org/training-material/topics/imaging/"
   },
   "learningResourceType": "slides",
   "name": "Slides for 'Nucleoli Segmentation <br> & <br> Feature Extraction <br> using CellProfiler' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/imaging/tutorials/tutorial-CP/slides.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/imaging/tutorials/tutorial-CP/slides.html",
   "timeRequired": "PT4H",
   "keywords": "imaging",
-  "description": "The questions this  addresses are:\n - How do I run an image analysis pipeline on public data using CellProfiler?\n - How do I analyse the DNA channel of fluorescence siRNA screens?\n - How do I download public image data into my history?\n - How do I segment and label cell nuclei?\n - How do I segment nucleoli (as the absence of DNA)?\n - How do I combine nuclei and nucleoli into one segmentation mask?\n - How do I extract the background of an image?\n - How do I relate the nucleoli to their parent nucleus?\n - How do I measure the image and object features?\n - How do I measure the image quality?\n\n\\nThe objectives are:\n - How to download images from a public image repository.\n - How to segment cell nuclei using CellProfiler in Galaxy.\n - How to segment cell nucleoli using CellProfiler in Galaxy.\n - How to extract features for images, nuclei and nucleoli.\n\n",
+  "description": "The questions this  addresses are:\n - How do I run an image analysis pipeline on public data using CellProfiler?\n - How do I analyse the DNA channel of fluorescence siRNA screens?\n - How do I download public image data into my history?\n - How do I segment and label cell nuclei?\n - How do I segment nucleoli (as the absence of DNA)?\n - How do I combine nuclei and nucleoli into one segmentation mask?\n - How do I extract the background of an image?\n - How do I relate the nucleoli to their parent nucleus?\n - How do I measure the image and object features?\n - How do I measure the image quality?\n\n\nThe objectives are:\n - How to download images from a public image repository.\n - How to segment cell nuclei using CellProfiler in Galaxy.\n - How to segment cell nucleoli using CellProfiler in Galaxy.\n - How to extract features for images, nuclei and nucleoli.\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -121,7 +124,7 @@
     {
       "@context": "http://schema.org",
       "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
       "name": "Introduction to Galaxy Analyses",
       "description": "Introduction to Galaxy Analyses",
       "provider": {
@@ -152,7 +155,9 @@
           "name": "Galaxy Training Network",
           "url": "https://galaxyproject.org/teach/gtn/"
         }
-      ]
+      ],
+      "identifier": "https://orcid.org/0000-0002-5862-6132",
+      "orcid": "https://orcid.org/0000-0002-5862-6132"
     }
   ],
   "contributor": [
@@ -175,7 +180,9 @@
           "name": "Galaxy Training Network",
           "url": "https://galaxyproject.org/teach/gtn/"
         }
-      ]
+      ],
+      "identifier": "https://orcid.org/0000-0002-5862-6132",
+      "orcid": "https://orcid.org/0000-0002-5862-6132"
     }
   ],
   "about": [
@@ -183,7 +190,7 @@
       "@type": "CreativeWork",
       "name": "Imaging",
       "description": "Image analysis using Galaxy",
-      "url": "https://training.galaxyproject.org//training-material/topics/imaging/"
+      "url": "https://training.galaxyproject.org/training-material/topics/imaging/"
     }
   ]
 }
@@ -218,11 +225,12 @@ class: center, middle, inverse
 
 # Nucleoli Segmentation <br> & <br> Feature Extraction <br> using CellProfiler
 
+
 <div markdown="0">
 
 	<div class="contributors-line">
 		Authors: 
-<a href="/training-material/hall-of-fame/beatrizserrano/" class="contributor-badge contributor-beatrizserrano"><img src="https://avatars.githubusercontent.com/beatrizserrano?s=27" alt="Avatar">Beatriz Serrano-Solano</a>
+<a href="/training-material/hall-of-fame/beatrizserrano/" class="contributor-badge contributor-beatrizserrano"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/beatrizserrano?s=27" alt="Avatar">Beatriz Serrano-Solano</a>
 
 
 
@@ -231,10 +239,24 @@ class: center, middle, inverse
 </div>
 
 
-<div class="footnote" style="bottom: 4 em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: Jul 10, 2021</div>
+<!-- modified date -->
+<div class="footnote" style="bottom: 8em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: </div>
 
-<div class="footnote" style="bottom: 2.5em;"><i class="fas fa-file-alt" aria-hidden="true"></i><span class="visually-hidden">text-document</span><a href="slides-plain.html"> Plain-text slides</a></div>
-<div class="footnote" style="bottom: 1em;"><strong>Tip: </strong>press <kbd>P</kbd> to view the presenter notes</div>
+
+<!-- other slide formats (video and plain-text) -->
+<div class="footnote" style="bottom: 6em;">
+
+
+  <i class="fas fa-file-alt" aria-hidden="true"></i><span class="visually-hidden">text-document</span><a href="slides-plain.html"> Plain-text slides</a>
+</div>
+
+
+<!-- usage tips -->
+<div class="footnote" style="bottom: 2em;">
+    <strong>Tip: </strong>press <kbd>P</kbd> to view the presenter notes
+    | <i class="fa fa-arrows" aria-hidden="true"></i><span class="visually-hidden">arrow-keys</span> Use arrow keys to move between slides
+
+</div>
 
 ???
 Presenter notes contain extra information which might be useful if you intend to use these slides for teaching.
@@ -461,7 +483,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 
 	<div class="contributors-line">
 		Authors: 
-<a href="/training-material/hall-of-fame/beatrizserrano/" class="contributor-badge contributor-beatrizserrano"><img src="https://avatars.githubusercontent.com/beatrizserrano?s=27" alt="Avatar">Beatriz Serrano-Solano</a>
+<a href="/training-material/hall-of-fame/beatrizserrano/" class="contributor-badge contributor-beatrizserrano"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/beatrizserrano?s=27" alt="Avatar">Beatriz Serrano-Solano</a>
 
 
 
