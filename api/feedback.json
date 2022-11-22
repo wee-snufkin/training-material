@@ -22229,5 +22229,16 @@
     "topic": "Sequence analysis",
     "month": "2022-11",
     "date": "2022-11-21"
+  },
+  {
+    "": "2866",
+    "note": "5",
+    "pro": null,
+    "con": null,
+    "anonymous": null,
+    "tutorial": "NGS data logistics",
+    "topic": "Introduction to Galaxy Analyses",
+    "month": "2022-11",
+    "date": "2022-11-22"
   }
 ]
