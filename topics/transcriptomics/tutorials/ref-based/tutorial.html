@@ -24,7 +24,7 @@
 <meta name="DC.type" content="text" />
 <meta name="DC.title" content="Reference-based RNA-Seq data analysis" />
 <meta name="DC.publisher" content="Galaxy Training Network" />
-<meta name="DC.date" content="2022-11-28 10:10:13 +0000" />
+<meta name="DC.date" content="2023-01-23 14:28:11 +0000" />
 <meta name="DC.creator" content="Bérénice Batut" />
 <meta name="DC.creator" content="Mallory Freeberg" />
 <meta name="DC.creator" content="Mo Heydarian" />
@@ -121,9 +121,11 @@
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
         </a>
         
+        
         <a class="dropdown-item" href="/training-material/topics/transcriptomics/faqs/" title="Check our FAQs for the Transcriptomics topic">
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
         </a>
+        
         
         <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
             <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
@@ -286,7 +288,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2022-11-28 10:10:13 +0000",
+  "dateModified": "2023-01-23 14:28:11 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Reference-based RNA-Seq data analysis",
   "interactivityType": "mixed",
@@ -977,8 +979,6 @@
                 
                     
                         
-                    
-                        
                             
                             <li> Quality Control:
                             
@@ -995,7 +995,15 @@
                     
                         
                     
+                        
+                    
+                        
+                    
                 
+                    
+                        
+                    
+                        
                     
                         
                             
@@ -1010,8 +1018,6 @@
                                 
                             
                             </li>
-                        
-                    
                         
                     
                         
@@ -1050,17 +1056,13 @@
         <div id="supporting-materials"><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials:</strong></div>
         <ul class="supporting_material">
             
-                <li class="btn btn-default supporting_material"><a href="/training-material/topics/transcriptomics/slides/introduction.html" title="Topic Overview slides">
-                    <i class="fab fa-slideshare" aria-hidden="true"></i> Topic Overview slides
-                </a></li>
-            
 
             
                 <li class="btn btn-default supporting_material">
 
 
 <a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/4541751">
-    <i class="far fa-copy" aria-hidden="true"></i> Datasets
+    <i class="far fa-copy" aria-hidden="true"></i>&nbsp;Datasets
 </a>
 
 </li>
@@ -1071,7 +1073,7 @@
 
 
     <a class="btn btn-default topic-icon" href="/training-material/topics/transcriptomics/tutorials/ref-based/workflows/" title="Workflows" alt="Reference-based RNA-Seq data analysis workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i> Workflows
+        <i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Workflows
     </a>
 
 </li>
@@ -1273,6 +1275,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
@@ -1326,7 +1330,7 @@
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Nov 28, 2022 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 23, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
@@ -1414,7 +1418,7 @@
       <p>Create a new history for this <span class="notranslate">RNA</span>-Seq exercise</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
+      <blockquote class="tip">   <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>   <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>   <ol>   <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>   <li>Select the option <strong>Create New</strong> from the menu</li> </ol> </blockquote>
     </li>
     <li>Import the FASTQ file pairs from <a href="https://zenodo.org/record/4541751">Zenodo</a> or a data library:
       <ul>
@@ -1429,9 +1433,9 @@ https://zenodo.org/record/4541751/files/GSM461180_2.fastqsanger
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-importing-via-links" class="box-title"><button type="button" aria-controls="tip-importing-via-links-contents" aria-expanded="true" aria-label="Toggle tip box: Importing via links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li><strong>Close</strong> the window</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-importing-via-links" class="box-title"><button type="button" aria-controls="tip-importing-via-links-contents" aria-expanded="true" aria-label="Toggle tip box: Importing via links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>   </li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-importing-data-from-a-data-library" class="box-title"><button type="button" aria-controls="tip-importing-data-from-a-data-library-contents" aria-expanded="true" aria-label="Toggle tip box: Importing data from a data library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>  <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>  <li>Navigate to the correct folder as indicated by your instructor</li>  <li>Select the desired files</li>  <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>  <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>  <li>Click on <strong>Import</strong></li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-importing-data-from-a-data-library" class="box-title"><button type="button" aria-controls="tip-importing-data-from-a-data-library-contents" aria-expanded="true" aria-label="Toggle tip box: Importing data from a data library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>   <ul>   <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>   <li>Navigate to  the correct folder as indicated by your instructor</li>   <li>Select the desired files</li>   <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>   <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>   <li>Click on <strong>Import</strong></li> </ul> </blockquote>
 
       <blockquote class="comment">
         <div id="comment" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
@@ -1452,13 +1456,13 @@ https://zenodo.org/record/4541751/files/GSM461180_2_subsampled.fastqsanger
       <p>Check that the datatype is <code class="language-plaintext highlighter-rouge">fastqsanger</code> (e.g. <strong>not</strong> <code class="language-plaintext highlighter-rouge">fastq</code>). If it is not, please change the datatype to <code class="language-plaintext highlighter-rouge">fastqsanger</code>.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-changing-the-datatype" class="box-title"><button type="button" aria-controls="tip-changing-the-datatype-contents" aria-expanded="true" aria-label="Toggle tip box: Changing the datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">fastqsanger</code>    <ul>      <li>tip: you can start typing the datatype into the field to filter the dropdown menu</li>    </ul>  </li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-changing-the-datatype" class="box-title"><button type="button" aria-controls="tip-changing-the-datatype-contents" aria-expanded="true" aria-label="Toggle tip box: Changing the datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>   <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>   <li>Select <code class="language-plaintext highlighter-rouge">fastqsanger</code>     <ul>       <li>tip: you can start typing the datatype into the field to filter the dropdown menu</li>     </ul>   </li>   <li>Click the <strong>Save</strong> button</li> </ul> </blockquote>
     </li>
     <li>
       <p>Create a paired collection named <code class="language-plaintext highlighter-rouge">2 PE fastqs</code>, rename your pairs with the sample name followed by the attributes: <code class="language-plaintext highlighter-rouge">GSM461177_untreat_paired</code> and <code class="language-plaintext highlighter-rouge">GSM461180_treat_paired</code>.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-creating-a-paired-collection" class="box-title"><button type="button" aria-controls="tip-creating-a-paired-collection-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a paired collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a paired collection<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="/training-material/topics/galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>  <li>Check all the datasets in your history you would like to include</li>  <li>    <p>Click <strong>For all selected..</strong> and choose <strong>Build List of Dataset Pairs</strong></p>  </li>  <li>Change the text of <em>unpaired forward</em> to a common selector for the forward <span class="notranslate">reads</span></li>  <li>Change the text of <em>unpaired reverse</em> to a common selector for the reverse <span class="notranslate">reads</span></li>  <li>Click <strong>Pair these datasets</strong> for each valid <em>forward</em> and <em>reverse</em> pair.</li>  <li>Enter a name for your collection</li>  <li>Click <strong>Create List</strong> to build your collection</li>  <li>Click on the checkmark icon at the top of your history again</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-creating-a-paired-collection" class="box-title"><button type="button" aria-controls="tip-creating-a-paired-collection-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a paired collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a paired collection<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="/training-material/topics/galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>   <li>Check all the datasets in your history you would like to include</li>   <li>     <p>Click <strong>For all selected..</strong> and choose <strong>Build List of Dataset Pairs</strong></p>   </li>   <li>Change the text of <em>unpaired forward</em> to a common selector for the forward <span class="notranslate">reads</span></li>   <li>Change the text of <em>unpaired reverse</em> to a common selector for the reverse <span class="notranslate">reads</span></li>   <li>Click <strong>Pair these datasets</strong> for each valid <em>forward</em> and <em>reverse</em> pair.</li>   <li>Enter a name for your collection</li>   <li>Click <strong>Create List</strong> to build your collection</li>   <li>Click on the checkmark icon at the top of your history again</li> </ul> </blockquote>
     </li>
   </ol>
 
@@ -1514,7 +1518,7 @@ We will first need to transform our the list of pairs to a simple list.</p>
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-selecting-a-dataset-collection-as-input" class="box-title"><button type="button" aria-controls="tip-selecting-a-dataset-collection-as-input-contents" aria-expanded="true" aria-label="Toggle tip box: Selecting a dataset collection as input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a dataset collection as input<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ol>  <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in front of the input parameter you want to supply the collection to.</li>  <li>Select the collection you want to use from the list</li></ol></blockquote>
+      <blockquote class="tip">   <div id="tip-selecting-a-dataset-collection-as-input" class="box-title"><button type="button" aria-controls="tip-selecting-a-dataset-collection-as-input-contents" aria-expanded="true" aria-label="Toggle tip box: Selecting a dataset collection as input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a dataset collection as input<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ol>   <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in  front of the input parameter you want to supply the collection to.</li>   <li>Select the collection you want to use from the list</li> </ol> </blockquote>
     </li>
     <li>
       <p>Inspect the webpage output of <strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> for the <code class="language-plaintext highlighter-rouge">GSM461177_untreat_paired</code> sample (forward and reverse)</p>
@@ -2777,7 +2781,7 @@ The numbers are comparable between unstranded and reverse stranded because reall
             <p>Results for <code class="language-plaintext highlighter-rouge">GSM461177_untreat_paired</code>:</p>
 
             <!--SNIPPET-->
-            <blockquote class="comment">  <div id="comment-results-may-vary" class="box-title" aria-label="comment box: Results may vary"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Results may vary</div>  <p>Your results may be slightly different from the ones presented in this tutorial due to differing versions of tools, reference data, exte<span class="notranslate">rna</span>l databases, or because of stochastic processes in the algorithms.</p></blockquote>
+            <blockquote class="comment">   <div id="comment-results-may-vary" class="box-title" aria-label="comment box: Results may vary"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Results may vary</div>   <p>Your results may be slightly different from the ones presented in this tutorial due to differing versions of tools, reference data, exte<span class="notranslate">rna</span>l databases, or because of stochastic processes in the algorithms.</p> </blockquote>
 
             <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is PairEnd Data
 Fraction of <span class="notranslate">reads</span> failed to determine: 0.0963
@@ -3061,7 +3065,7 @@ Fraction of <span class="notranslate">reads</span> explained by "1+-,1-+,2++,2--
           <p>This will only work with version 0.1.2 or above</p>
 
           <!--SNIPPET-->
-          <blockquote class="tip">  <div id="tip-changing-the-tool-version" class="box-title"><button type="button" aria-controls="tip-changing-the-tool-version-contents" aria-expanded="true" aria-label="Toggle tip box: Changing the tool version"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the tool version<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>Tools are frequently updated to new versions. Your <span class="notranslate">Galaxy</span> may have multiple versions of the same tool available. By default, you will be shown the latest version of the tool.</p>  <p><strong>Switching to a different version</strong> of a tool:</p>  <ul>  <li>Open the tool</li>  <li>Click on the <i class="fas fa-cubes" aria-hidden="true"></i><span class="visually-hidden">tool-versions</span> versions logo at the <strong>top right</strong></li>  <li>Select the desired version from the dropdown list</li></ul></blockquote>
+          <blockquote class="tip">   <div id="tip-changing-the-tool-version" class="box-title"><button type="button" aria-controls="tip-changing-the-tool-version-contents" aria-expanded="true" aria-label="Toggle tip box: Changing the tool version"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the tool version<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Tools are frequently updated to new versions. Your <span class="notranslate">Galaxy</span> may have multiple versions of the same tool available. By default, you will be shown the latest version of the tool.</p>   <p><strong>Switching to a different version</strong> of a tool:</p>   <ul>   <li>Open the tool</li>   <li>Click on the <i class="fas fa-cubes" aria-hidden="true"></i><span class="visually-hidden">tool-versions</span> versions logo at the <strong>top right</strong></li>   <li>Select the desired version from the dropdown list</li> </ul> </blockquote>
 
         </blockquote>
       </li>
@@ -3223,7 +3227,7 @@ https://zenodo.org/record/4541751/files/GSM461182_untreat_single.counts
       <p>Create a collection list with all these counts that you label <code class="language-plaintext highlighter-rouge">all counts</code>. Rename each item so it only has the GSM id, the treatment and the library, for example, <code class="language-plaintext highlighter-rouge">GSM461176_untreat_single</code>.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-creating-a-dataset-collection" class="box-title"><button type="button" aria-controls="tip-creating-a-dataset-collection-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a dataset collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a dataset collection<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="/training-material/topics/galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>  <li>Check all the datasets in your history you would like to include</li>  <li>    <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>    <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>  </li>  <li>Enter a name for your collection</li>  <li>Click <strong>Create List</strong> to build your collection</li>  <li>Click on the checkmark icon at the top of your history again</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-creating-a-dataset-collection" class="box-title"><button type="button" aria-controls="tip-creating-a-dataset-collection-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a dataset collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a dataset collection<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="/training-material/topics/galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>   <li>Check all the datasets in your history you would like to include</li>   <li>     <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>     <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>   </li>   <li>Enter a name for your collection</li>   <li>Click <strong>Create List</strong> to build your collection</li>   <li>Click on the checkmark icon at the top of your history again</li> </ul> </blockquote>
     </li>
   </ol>
 
@@ -4091,7 +4095,7 @@ Finally the header was removed from the featureCounts tables available on Zenodo
       <p>Change the datatype to <code class="language-plaintext highlighter-rouge">tabular</code></p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-changing-the-datatype-1" class="box-title"><button type="button" aria-controls="tip-changing-the-datatype-1-contents" aria-expanded="true" aria-label="Toggle tip box: Changing the datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">tabular</code>    <ul>      <li>tip: you can start typing the datatype into the field to filter the dropdown menu</li>    </ul>  </li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-changing-the-datatype-1" class="box-title"><button type="button" aria-controls="tip-changing-the-datatype-1-contents" aria-expanded="true" aria-label="Toggle tip box: Changing the datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>   <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>   <li>Select <code class="language-plaintext highlighter-rouge">tabular</code>     <ul>       <li>tip: you can start typing the datatype into the field to filter the dropdown menu</li>     </ul>   </li>   <li>Click the <strong>Save</strong> button</li> </ul> </blockquote>
     </li>
     <li><span class="tool" data-tool="__TAG_FROM_FILE__" title="Tested with __TAG_FROM_FILE__"><strong>Tag elements</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <strong>TAG_FROM_FILE</strong></span></span>
       <ul>
@@ -4486,7 +4490,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-creating-a-new-file" class="box-title"><button type="button" aria-controls="tip-creating-a-new-file-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new file"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new file<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Open the <span class="notranslate">Galaxy</span> Upload Manager</li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the file contents into the text field</p>  </li>  <li>    <p>Change the dataset name from “New File” to <code class="language-plaintext highlighter-rouge">header</code></p>  </li>  <li>    <p>Change <strong>Type</strong> from “Auto-detect” to <code class="language-plaintext highlighter-rouge">tabular</code></p>  </li>  <li>Press <strong>Start</strong> and <strong>Close</strong> the window</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-creating-a-new-file" class="box-title"><button type="button" aria-controls="tip-creating-a-new-file-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new file"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new file<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Open the <span class="notranslate">Galaxy</span> Upload Manager</li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the file contents into the text field</p>   </li>   <li>     <p>Change the dataset name from “New File” to <code class="language-plaintext highlighter-rouge">header</code></p>   </li>   <li>     <p>Change <strong>Type</strong> from “Auto-detect” to <code class="language-plaintext highlighter-rouge">tabular</code></p>   </li>   <li>Press <strong>Start</strong> and <strong>Close</strong> the window</li> </ul> </blockquote>
     </li>
     <li><span class="tool" data-tool="cat1" title="Tested with cat1"><strong>Concatenate datasets</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: cat1</span></span>  to add this header line to the <strong>Annotate</strong> output:
       <ul>
@@ -4761,10 +4765,22 @@ correction for the variability due to the 2nd factor. In our current case, treat
   <div id="hands-on-prepare-the-first-dataset-for-goseq" class="box-title" aria-label="hands-on box: Prepare the first dataset for goseq"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Prepare the first dataset for goseq</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/1.6" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/1.6"><strong>Compute</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/1.6</span></span>  an <span class="notranslate">expression</span> on every row with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.0" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.0"><strong>Compute</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.0</span></span>  on rows with the following parameters:
       <ul>
-        <li><em>“Add <span class="notranslate">expression</span>”</em>: <code class="language-plaintext highlighter-rouge">bool(c7&lt;0.05)</code></li>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“as a new column to”</em>: the <code class="language-plaintext highlighter-rouge">DESeq2 result file</code> (output of <strong>DESeq2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input file”</em>: the <code class="language-plaintext highlighter-rouge">DESeq2 result file</code> (output of <strong>DESeq2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li>In <em>“<span class="notranslate">Expression</span>s”</em>:
+          <ul>
+            <li><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">param-text</span> <em>“Add <span class="notranslate">expression</span>”</em>: <code class="language-plaintext highlighter-rouge">bool(float(c7)&lt;0.05)</code></li>
+            <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Mode of the operation?”</em>: <code class="language-plaintext highlighter-rouge">Append</code></li>
+          </ul>
+        </li>
+        <li>Under <em>“Error handling”</em>:
+          <ul>
+            <li><i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">param-toggle</span> <em>“Autodetect column types”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
+            <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“If an <span class="notranslate">expression</span> cannot be computed for a row”</em>: <code class="language-plaintext highlighter-rouge">Fill in a replacement value</code></li>
+            <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Replacement value”</em>: <code class="language-plaintext highlighter-rouge">False</code></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><span class="tool" data-tool="Cut1" title="Tested with Cut1"><strong>Cut</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Cut1</span></span>  columns from a table with the following parameters:
@@ -4797,7 +4813,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
         <p>Copy the feature length collection previously generated by <strong>featureCounts</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> into this history</p>
 
         <!--SNIPPET-->
-        <blockquote class="tip">  <div id="tip-copy-a-dataset-between-histories" class="box-title"><button type="button" aria-controls="tip-copy-a-dataset-between-histories-contents" aria-expanded="true" aria-label="Toggle tip box: Copy a dataset between histories"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Copy a dataset between histories<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>There 3 ways to copy datasets between histories</p>  <ol>  <li>    <p>From the original history</p>    <ol>      <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>      <li>Click on <strong>Copy Dataset</strong></li>      <li>        <p>Select the desired files</p>      </li>      <li>        <p>Give a relevant name to the “New history”</p>      </li>      <li>Click on the new history name in the green box that have just appear to switch to this history</li>    </ol>  </li>  <li>    <p>From the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong></p>    <ol>      <li>Click on <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong> on the top right</li>      <li>Switch to the history in which the dataset should be copied</li>      <li>Drag the dataset to copy from its original history</li>      <li>Drop it in the target history</li>    </ol>  </li>  <li>    <p>From the target history</p>    <ol>      <li>Click on <strong>User</strong> in the top bar</li>      <li>Click on <strong>Datasets</strong></li>      <li>Search for the dataset to copy</li>      <li>Click on it</li>      <li>Click on <strong>Copy to History</strong></li>    </ol>  </li></ol></blockquote>
+        <blockquote class="tip">   <div id="tip-copy-a-dataset-between-histories" class="box-title"><button type="button" aria-controls="tip-copy-a-dataset-between-histories-contents" aria-expanded="true" aria-label="Toggle tip box: Copy a dataset between histories"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Copy a dataset between histories<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>There 3 ways to copy datasets between histories</p>   <ol>   <li>     <p>From the original history</p>     <ol>       <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>       <li>Click on <strong>Copy Dataset</strong></li>       <li>         <p>Select the desired files</p>       </li>       <li>         <p>Give a relevant name to the “New history”</p>       </li>       <li>Click on the new history name in the green box that have just appear to switch to this history</li>     </ol>   </li>   <li>     <p>From the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong></p>     <ol>       <li>Click on <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong> on the top right</li>       <li>Switch to the history in which the dataset should be copied</li>       <li>Drag the dataset to copy from its original history</li>       <li>Drop it in the target history</li>     </ol>   </li>   <li>     <p>From the target history</p>     <ol>       <li>Click on <strong>User</strong> in the top bar</li>       <li>Click on <strong>Datasets</strong></li>       <li>Search for the dataset to copy</li>       <li>Click on it</li>       <li>Click on <strong>Copy to History</strong></li>     </ol>   </li> </ol> </blockquote>
       </li>
       <li>
         <p><span class="tool" data-tool="__EXTRACT_DATASET__" title="Tested with __EXTRACT_DATASET__"><strong>Extract Dataset</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <strong>EXTRACT_DATASET</strong></span></span>  with:</p>
@@ -4816,7 +4832,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
         <p>Copy the output of <strong>Gene length and GC content</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<code class="language-plaintext highlighter-rouge">Gene length</code>) into this history</p>
 
         <!--SNIPPET-->
-        <blockquote class="tip">  <div id="tip-copy-a-dataset-between-histories-1" class="box-title"><button type="button" aria-controls="tip-copy-a-dataset-between-histories-1-contents" aria-expanded="true" aria-label="Toggle tip box: Copy a dataset between histories"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Copy a dataset between histories<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>There 3 ways to copy datasets between histories</p>  <ol>  <li>    <p>From the original history</p>    <ol>      <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>      <li>Click on <strong>Copy Dataset</strong></li>      <li>        <p>Select the desired files</p>      </li>      <li>        <p>Give a relevant name to the “New history”</p>      </li>      <li>Click on the new history name in the green box that have just appear to switch to this history</li>    </ol>  </li>  <li>    <p>From the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong></p>    <ol>      <li>Click on <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong> on the top right</li>      <li>Switch to the history in which the dataset should be copied</li>      <li>Drag the dataset to copy from its original history</li>      <li>Drop it in the target history</li>    </ol>  </li>  <li>    <p>From the target history</p>    <ol>      <li>Click on <strong>User</strong> in the top bar</li>      <li>Click on <strong>Datasets</strong></li>      <li>Search for the dataset to copy</li>      <li>Click on it</li>      <li>Click on <strong>Copy to History</strong></li>    </ol>  </li></ol></blockquote>
+        <blockquote class="tip">   <div id="tip-copy-a-dataset-between-histories-1" class="box-title"><button type="button" aria-controls="tip-copy-a-dataset-between-histories-1-contents" aria-expanded="true" aria-label="Toggle tip box: Copy a dataset between histories"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Copy a dataset between histories<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>There 3 ways to copy datasets between histories</p>   <ol>   <li>     <p>From the original history</p>     <ol>       <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>       <li>Click on <strong>Copy Dataset</strong></li>       <li>         <p>Select the desired files</p>       </li>       <li>         <p>Give a relevant name to the “New history”</p>       </li>       <li>Click on the new history name in the green box that have just appear to switch to this history</li>     </ol>   </li>   <li>     <p>From the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong></p>     <ol>       <li>Click on <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> <strong>View all histories</strong> on the top right</li>       <li>Switch to the history in which the dataset should be copied</li>       <li>Drag the dataset to copy from its original history</li>       <li>Drop it in the target history</li>     </ol>   </li>   <li>     <p>From the target history</p>     <ol>       <li>Click on <strong>User</strong> in the top bar</li>       <li>Click on <strong>Datasets</strong></li>       <li>Search for the dataset to copy</li>       <li>Click on it</li>       <li>Click on <strong>Copy to History</strong></li>     </ol>   </li> </ol> </blockquote>
       </li>
     </ol>
   </div>
@@ -5236,19 +5252,21 @@ day = ""
 url = "\url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/tutorial.html}",
 note = "[Online; accessed TODAY]"
 }
-@article{Batut_2018,
-    doi = {10.1016/j.cels.2018.05.012},
-    url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
-    year = 2018,
-    month = {jun},
-    publisher = {Elsevier {BV}},
-    volume = {6},
-    number = {6},
-    pages = {752--758.e1},
-    author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
-    title = {Community-Driven Data Analysis Training for Biology},
-    journal = {Cell Systems}
-}</code>
+@article{Hiltemann_2023,
+	doi = {10.1371/journal.pcbi.1010752},
+	url = {https://doi.org/10.1371%2Fjournal.pcbi.1010752},
+	year = 2023,
+	month = {jan},
+	publisher = {Public Library of Science ({PLoS})},
+	volume = {19},
+	number = {1},
+	pages = {e1010752},
+	author = {Saskia Hiltemann and Helena Rasche and Simon Gladman and Hans-Rudolf Hotz and Delphine Larivi{\`{e}}re and Daniel Blankenberg and Pratik D. Jagtap and Thomas Wollmann and Anthony Bretaudeau and Nadia Gou{\'{e}} and Timothy J. Griffin and Coline Royaux and Yvan Le Bras and Subina Mehta and Anna Syme and Frederik Coppens and Bert Droesbeke and Nicola Soranzo and Wendi Bacon and Fotis Psomopoulos and Crist{\'{o}}bal Gallardo-Alba and John Davis and Melanie Christine Föll and Matthias Fahrner and Maria A. Doyle and Beatriz Serrano-Solano and Anne Claire Fouilloux and Peter van Heusden and Wolfgang Maier and Dave Clements and Florian Heyl and Björn Grüning and B{\'{e}}r{\'{e}}nice Batut and},
+	editor = {Francis Ouellette},
+	title = {Galaxy Training: A powerful framework for teaching!},
+	journal = {PLoS Comput Biol} Computational Biology}
+}
+</code>
                    </pre></div></div>
                    </p>
                 </blockquote>
@@ -5292,30 +5310,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                         
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                             
                             <li> Visualization of RNA-Seq results with heatmap2:
                             
@@ -5333,23 +5327,31 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                     
                         
                     
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                 
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                     
                         
                     
@@ -5387,7 +5389,31 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                     
                         
                     
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                 
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                     
                         
                     
@@ -5405,14 +5431,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                                 
                             
                             </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
                         
                     
                         

@@ -24,7 +24,7 @@
 <meta name="DC.type" content="text" />
 <meta name="DC.title" content="Metaproteomics tutorial" />
 <meta name="DC.publisher" content="Galaxy Training Network" />
-<meta name="DC.date" content="2022-10-18 14:23:35 +0000" />
+<meta name="DC.date" content="2023-01-24 14:22:01 +0000" />
 <meta name="DC.creator" content="Timothy J. Griffin" />
 <meta name="DC.creator" content="Pratik Jagtap" />
 <meta name="DC.creator" content="James Johnson" />
@@ -116,9 +116,11 @@
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
         </a>
         
+        
         <a class="dropdown-item" href="/training-material/topics/proteomics/faqs/" title="Check our FAQs for the Proteomics topic">
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
         </a>
+        
         
         <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
             <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
@@ -281,7 +283,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2022-10-18 14:23:35 +0000",
+  "dateModified": "2023-01-24 14:22:01 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Metaproteomics tutorial",
   "interactivityType": "mixed",
@@ -662,17 +664,13 @@
         <div id="supporting-materials"><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials:</strong></div>
         <ul class="supporting_material">
             
-                <li class="btn btn-default supporting_material"><a href="/training-material/topics/proteomics/slides/introduction.html" title="Topic Overview slides">
-                    <i class="fab fa-slideshare" aria-hidden="true"></i> Topic Overview slides
-                </a></li>
-            
 
             
                 <li class="btn btn-default supporting_material">
 
 
 <a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://doi.org/10.5281/zenodo.839701">
-    <i class="far fa-copy" aria-hidden="true"></i> Datasets
+    <i class="far fa-copy" aria-hidden="true"></i>&nbsp;Datasets
 </a>
 
 </li>
@@ -683,19 +681,12 @@
 
 
     <a class="btn btn-default topic-icon" href="/training-material/topics/proteomics/tutorials/metaproteomics/workflows/" title="Workflows" alt="Metaproteomics tutorial workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i> Workflows
+        <i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Workflows
     </a>
 
 </li>
             
 
-            
-                <li class="btn btn-default supporting_material">
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/proteomics/tutorials/metaproteomics/tours/" title="Galaxy interactive tour" >
-    <i class="fas fa-magic" aria-hidden="true"></i> Tours
-</a>
-
-</li>
             
 
             
@@ -884,6 +875,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
@@ -937,7 +930,7 @@
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 18, 2022 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 24, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
@@ -965,7 +958,7 @@ at a given point in time. It has the potential to unravel the mechanistic detail
 the host / environment by analyzing the functional dynamics of the microbiome.</p>
 
 <p>In this tutorial, we will analyze a sample of sea water that was collected in August of 2013 from the Bering
-Strait chlorophyll maximum layer (7m depth, 65° 43.44″ N, 168° 57.42″ W). The data were originally published in <a href="https://www.ncbi.nlm.nih.gov/pubmed/27396978">May et al., 2016</a>.</p>
+Strait chlorophyll maximum layer (7m depth, 65° 43.44″ N, 168° 57.42″ W). The data were originally published in <span class="citation"><a href="#May_2016">May <i>et al.</i> 2016</a></span>.</p>
 
 <blockquote class="agenda">
   <div id="agenda" class="box-title" aria-label="agenda box: ">Agenda</div>
@@ -1011,15 +1004,15 @@ Strait chlorophyll maximum layer (7m depth, 65° 43.44″ N, 168° 57.42″ W). 
       <p>Create a new history and name it something meaningful (e.g. <em>Metaproteomics tutorial</em>)</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
+      <blockquote class="tip">   <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>   <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>   <ol>   <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>   <li>Select the option <strong>Create New</strong> from the menu</li> </ol> </blockquote>
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-renaming-a-history" class="box-title"><button type="button" aria-controls="tip-renaming-a-history-contents" aria-expanded="true" aria-label="Toggle tip box: Renaming a history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ol>  <li>Click on <strong>Unnamed history</strong> (or the current name of the history) (<strong>Click to rename history</strong>) at the top of your history panel</li>  <li>Type the new name</li>  <li>Press <kbd>Enter</kbd></li></ol></blockquote>
+      <blockquote class="tip">   <div id="tip-renaming-a-history" class="box-title"><button type="button" aria-controls="tip-renaming-a-history-contents" aria-expanded="true" aria-label="Toggle tip box: Renaming a history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ol>   <li>Click on <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> (<strong>Edit</strong>) next to the history name (which by default is “Unnamed history”)</li>   <li>Type the new name</li>   <li>Click on <strong>Save</strong></li> </ol>   <p>If you do not have the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> (<strong>Edit</strong>) next to the history name:</p>   <ol>   <li>Click on <strong>Unnamed history</strong> (or the current name of the history) (<strong>Click to rename history</strong>) at the top of your history panel</li>   <li>Type the new name</li>   <li>Press <kbd>Enter</kbd></li> </ol> </blockquote>
     </li>
     <li>
       <p>Import the three MGF MS/MS files and the FASTA sequence file from Zenodo.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-importing-via-links" class="box-title"><button type="button" aria-controls="tip-importing-via-links-contents" aria-expanded="true" aria-label="Toggle tip box: Importing via links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li><strong>Close</strong> the window</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-importing-via-links" class="box-title"><button type="button" aria-controls="tip-importing-via-links-contents" aria-expanded="true" aria-label="Toggle tip box: Importing via links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>   </li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/839701/files/2016_Jan_12_QE2_45.mgf
 https://zenodo.org/record/839701/files/2016_Jan_12_QE2_46.mgf
 https://zenodo.org/record/839701/files/2016_Jan_12_QE2_47.mgf
@@ -1040,7 +1033,7 @@ https://zenodo.org/record/839701/files/Gene_Ontology_Terms.tabular
       <p>Build a <strong>Dataset list</strong> for the three MGF files</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-creating-a-dataset-collection" class="box-title"><button type="button" aria-controls="tip-creating-a-dataset-collection-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a dataset collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a dataset collection<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="/training-material/topics/galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>  <li>Check all the datasets in your history you would like to include</li>  <li>    <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>    <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>  </li>  <li>Enter a name for your collection</li>  <li>Click <strong>Create List</strong> to build your collection</li>  <li>Click on the checkmark icon at the top of your history again</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-creating-a-dataset-collection" class="box-title"><button type="button" aria-controls="tip-creating-a-dataset-collection-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a dataset collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a dataset collection<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="/training-material/topics/galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>   <li>Check all the datasets in your history you would like to include</li>   <li>     <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>     <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>   </li>   <li>Enter a name for your collection</li>   <li>Click <strong>Create List</strong> to build your collection</li>   <li>Click on the checkmark icon at the top of your history again</li> </ul> </blockquote>
     </li>
   </ol>
 
@@ -1059,7 +1052,7 @@ https://zenodo.org/record/839701/files/Gene_Ontology_Terms.tabular
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-importing-a-workflow" class="box-title"><button type="button" aria-controls="tip-importing-a-workflow-contents" aria-expanded="true" aria-label="Toggle tip box: Importing a workflow"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing a <span class="notranslate">workflow</span><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>  <li>Click on the upload icon <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> at the top-right of the screen</li>  <li>Provide your <span class="notranslate">workflow</span>    <ul>      <li>Option 1: Paste the URL of the <span class="notranslate">workflow</span> into the box labelled <em>“Archived <span class="notranslate">Workflow</span> URL”</em></li>      <li>Option 2: Upload the <span class="notranslate">workflow</span> file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>    </ul>  </li>  <li>Click the <strong>Import <span class="notranslate">workflow</span></strong> button</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-importing-a-workflow" class="box-title"><button type="button" aria-controls="tip-importing-a-workflow-contents" aria-expanded="true" aria-label="Toggle tip box: Importing a workflow"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing a <span class="notranslate">workflow</span><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>   <li>Click on the upload icon <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> at the top-right of the screen</li>   <li>Provide your <span class="notranslate">workflow</span>     <ul>       <li>Option 1: Paste the URL of the <span class="notranslate">workflow</span> into the box labelled <em>“Archived <span class="notranslate">Workflow</span> URL”</em></li>       <li>Option 2: Upload the <span class="notranslate">workflow</span> file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>     </ul>   </li>   <li>Click the <strong>Import <span class="notranslate">workflow</span></strong> button</li> </ul> </blockquote>
     </li>
     <li>Run <strong><span class="notranslate">Workflow</span></strong> <i class="fas fa-share-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span></span> using the following parameters:
       <ul>
@@ -1070,7 +1063,7 @@ https://zenodo.org/record/839701/files/Gene_Ontology_Terms.tabular
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-running-a-workflow" class="box-title"><button type="button" aria-controls="tip-running-a-workflow-contents" aria-expanded="true" aria-label="Toggle tip box: Running a workflow"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Running a <span class="notranslate">workflow</span><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <ul>  <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>  <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>  <li>Configure the <span class="notranslate">workflow</span> as needed</li>  <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>  <li>You may have to refresh your history to see the queued jobs</li></ul></blockquote>
+      <blockquote class="tip">   <div id="tip-running-a-workflow" class="box-title"><button type="button" aria-controls="tip-running-a-workflow-contents" aria-expanded="true" aria-label="Toggle tip box: Running a workflow"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Running a <span class="notranslate">workflow</span><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>   <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>   <li>Configure the <span class="notranslate">workflow</span> as needed</li>   <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>   <li>You may have to refresh your history to see the queued jobs</li> </ul> </blockquote>
     </li>
   </ol>
 
@@ -1081,7 +1074,7 @@ https://zenodo.org/record/839701/files/Gene_Ontology_Terms.tabular
 <h2 id="match-peptide-sequences">Match peptide sequences</h2>
 
 <p>The search database labelled <code class="language-plaintext highlighter-rouge">FASTA_Bering_Strait_Trimmed_metapeptides_cRAP.FASTA</code> is the input database that
-will be used to match MS/MS to peptide sequences via a sequence database search. It is a small excerpt of the original database, which was constructed based on a metagenomic screening of the sea water samples (see <a href="https://www.ncbi.nlm.nih.gov/pubmed/27396978">May et al. (2016)</a>). The full original database can be accessed from <a href="https://noble.gs.washington.edu/proj/metapeptide/data/metapeptides_BSt.fasta">here</a>. The contaminant database (cRAP) was merged with the original database.</p>
+will be used to match MS/MS to peptide sequences via a sequence database search. It is a small excerpt of the original database, which was constructed based on a metagenomic screening of the sea water samples (see <span class="citation"><a href="#May_2016">May <i>et al.</i> 2016</a></span>). The full original database <a href="https://noble.gs.washington.edu/proj/metapeptide/data/metapeptides_BSt.fasta">is available online</a>. The contaminant database (cRAP) was merged with the original database.</p>
 
 <p>For this, the sequence database-searching program called <a href="https://compomics.github.io/projects/searchgui.html">SearchGUI</a> will be used.
 The created dataset collection of the three <em>MGF files</em> in the history is used as the MS/MS input.</p>
@@ -1162,7 +1155,7 @@ generating PSMs from MS/MS data. For the purpose of this tutorial, <strong>X!Tan
         <li>leave everything else as default</li>
       </ul>
     </li>
-    <li>Click <strong>Execute</strong>.</li>
+    <li>Click <strong>Run Tool</strong>.</li>
   </ol>
 
 </blockquote>
@@ -1222,7 +1215,7 @@ used by both SearchGUI and PeptideShaker in the analysis. This can be downloaded
 <span class="notranslate">Galaxy</span> instance to your local computer in a text file if desired.</p>
       </blockquote>
     </li>
-    <li>Click <strong>Execute</strong> and inspect the resulting files after they turned green with the <strong>View data</strong> icon:
+    <li>Click <strong>Run Tool</strong> and inspect the resulting files after they turned green with the <strong>View data</strong> icon:
  <img src="../../images/view_data_icon.png" alt="View data button. " loading="lazy" /></li>
   </ol>
 
@@ -1365,7 +1358,7 @@ ORDER BY sequence
       </ul>
     </li>
     <li>
-      <p>Click <strong>Execute</strong> and inspect the query results file after it turned green. If everything went well, it should look similiar:</p>
+      <p>Click <strong>Run Tool</strong> and inspect the query results file after it turned green. If everything went well, it should look similiar:</p>
 
       <figure id="figure-2"><img src="../../images/query_tabular_1.png" alt="Query Tabular output showing the peptides. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Query Tabular output</figcaption></figure>
     </li>
@@ -1402,7 +1395,7 @@ ORDER BY sequence
       </ul>
     </li>
     <li>
-      <p>Click <strong>Execute</strong>. The resulting file should have two columns, one with the distinct peptides, the other with the count number of PSMs.</p>
+      <p>Click <strong>Run Tool</strong>. The resulting file should have two columns, one with the distinct peptides, the other with the count number of PSMs.</p>
     </li>
   </ol>
 
@@ -1429,7 +1422,7 @@ We do a taxonomy analysis using the UniPept pept2lca function to return the taxo
       </ul>
     </li>
     <li>
-      <p>Click <strong>Execute</strong>. The history should grow by two files. View each to see the difference.</p>
+      <p>Click <strong>Run Tool</strong>. The history should grow by two files. View each to see the difference.</p>
 
       <blockquote class="comment">
         <div id="comment-6" class="box-title" aria-label="comment box: "><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment</div>
@@ -1547,7 +1540,7 @@ ORDER BY PSMs desc, 'DISTINCT PEPTIDES' desc
       </ul>
     </li>
     <li>
-      <p>Click <strong>Execute</strong> and inspect the query results file after it turned green:</p>
+      <p>Click <strong>Run Tool</strong> and inspect the query results file after it turned green:</p>
 
       <figure id="figure-4"><img src="../../images/metaproteomics_summary.png" alt="Query Tabular output showing gene, PSMs and distinct peptides. " loading="lazy" /><figcaption><span class="figcaption-prefix">Figure 4:</span> Query Tabular output</figcaption></figure>
     </li>
@@ -1634,11 +1627,11 @@ This might be handy if the automatic detection of the filetype didn’t work out
 <blockquote class="details">
   <div id="details-creating-your-own-gene-ontology-list" class="box-title"><button type="button" aria-controls="details-creating-your-own-gene-ontology-list-contents" aria-expanded="true" aria-label="Toggle details box: Creating your own Gene Ontology list"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Details: Creating your own Gene Ontology list<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
-  <p>The latest Gene Ontology can be downloaded <a href="http://geneontology.org/page/download-ontology">here</a> as a text file in the <code class="language-plaintext highlighter-rouge">OBO</code> format.
+  <p>The latest Gene Ontology can be downloaded <a href="http://geneontology.org/page/download-ontology">the GO website</a> as a text file in the <code class="language-plaintext highlighter-rouge">OBO</code> format.
 <code class="language-plaintext highlighter-rouge">OBO</code> files are human-readable (in addition to machine-readable) and can be opened in any text editor. They contain more information than just the name and aspect.</p>
 
   <p>In order to receive a file like we use in the tutorial for your own analysis, different tools are available to extract information from <code class="language-plaintext highlighter-rouge">OBO</code> files,
-one of them being <a href="https://doi.org/10.1093/bioinformatics/btn042">ONTO-PERL</a>.
+one of them being ONTO-PERL (<span class="citation"><a href="#Antezana_2008">Antezana <i>et al.</i> 2008</a></span>).
 An example file with all GO terms from 08.07.2017 named <code class="language-plaintext highlighter-rouge">Gene_Ontology_Terms_full_07.08.2017.tabular</code> can be found on the <a href="https://doi.org/10.5281/zenodo.839701">Zenodo repository</a> of this tutorial as well.
 You could also upload the Gene Ontology Terms by copying this link on to the Upload Data - Paste/Fetch data <code class="language-plaintext highlighter-rouge">https://zenodo.org/record/839701/files/Gene_Ontology_Terms_full_07.08.2017.tabular</code></p>
 
@@ -1667,7 +1660,7 @@ for each protein.</p>
       </ul>
     </li>
     <li>
-      <p>Click <strong>Execute</strong>.</p>
+      <p>Click <strong>Run Tool</strong>.</p>
     </li>
     <li>
       <p>inspect the result:</p>
@@ -1888,7 +1881,7 @@ ORDER BY sequence
       </ul>
     </li>
     <li>
-      <p>Click <strong>Execute</strong>.</p>
+      <p>Click <strong>Run Tool</strong>.</p>
     </li>
   </ol>
 
@@ -1925,7 +1918,7 @@ ORDER BY  bering_peptides desc,bering_psms desc
         </li>
       </ul>
     </li>
-    <li>Click <strong>Execute</strong>.</li>
+    <li>Click <strong>Run Tool</strong>.</li>
     <li>Repeat these steps two times by replacing <code class="language-plaintext highlighter-rouge">molecular_function</code> in the fifth row of the SQL query by <code class="language-plaintext highlighter-rouge">biological_process</code> and <code class="language-plaintext highlighter-rouge">cellular_component</code>.</li>
   </ol>
 
@@ -1988,6 +1981,10 @@ ORDER BY  bering_peptides desc,bering_psms desc
                 
 
 
+                
+                <h1 id="bibliography">References</h1>
+                <ol class="bibliography"><li id="Antezana_2008">Antezana, E., M. Egana, B. D. Baets, M. Kuiper, and V. Mironov, 2008 <b>ONTO-PERL: An API for supporting the development and analysis of bio-ontologies</b>. Bioinformatics 24: 885–887. <a href="https://doi.org/10.1093/bioinformatics/btn042">10.1093/bioinformatics/btn042</a></li>
+<li id="May_2016">May, D. H., E. Timmins-Schiffman, M. P. Mikan, H. R. Harvey, E. Borenstein <i>et al.</i>, 2016 <b>An Alignment-Free “Metapeptide” Strategy for Metaproteomic Characterization of Microbiome Samples Using Shotgun Metagenomic Sequencing</b>. Journal of Proteome Research 15: 2697–2705. <a href="https://doi.org/10.1021/acs.jproteome.6b00239">10.1021/acs.jproteome.6b00239</a></li></ol>
                 
 
                 
@@ -2060,19 +2057,21 @@ day = ""
 url = "\url{https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaproteomics/tutorial.html}",
 note = "[Online; accessed TODAY]"
 }
-@article{Batut_2018,
-    doi = {10.1016/j.cels.2018.05.012},
-    url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
-    year = 2018,
-    month = {jun},
-    publisher = {Elsevier {BV}},
-    volume = {6},
-    number = {6},
-    pages = {752--758.e1},
-    author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
-    title = {Community-Driven Data Analysis Training for Biology},
-    journal = {Cell Systems}
-}</code>
+@article{Hiltemann_2023,
+	doi = {10.1371/journal.pcbi.1010752},
+	url = {https://doi.org/10.1371%2Fjournal.pcbi.1010752},
+	year = 2023,
+	month = {jan},
+	publisher = {Public Library of Science ({PLoS})},
+	volume = {19},
+	number = {1},
+	pages = {e1010752},
+	author = {Saskia Hiltemann and Helena Rasche and Simon Gladman and Hans-Rudolf Hotz and Delphine Larivi{\`{e}}re and Daniel Blankenberg and Pratik D. Jagtap and Thomas Wollmann and Anthony Bretaudeau and Nadia Gou{\'{e}} and Timothy J. Griffin and Coline Royaux and Yvan Le Bras and Subina Mehta and Anna Syme and Frederik Coppens and Bert Droesbeke and Nicola Soranzo and Wendi Bacon and Fotis Psomopoulos and Crist{\'{o}}bal Gallardo-Alba and John Davis and Melanie Christine Föll and Matthias Fahrner and Maria A. Doyle and Beatriz Serrano-Solano and Anne Claire Fouilloux and Peter van Heusden and Wolfgang Maier and Dave Clements and Florian Heyl and Björn Grüning and B{\'{e}}r{\'{e}}nice Batut and},
+	editor = {Francis Ouellette},
+	title = {Galaxy Training: A powerful framework for teaching!},
+	journal = {PLoS Comput Biol} Computational Biology}
+}
+</code>
                    </pre></div></div>
                    </p>
                 </blockquote>

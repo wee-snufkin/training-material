@@ -71,6 +71,14 @@
       "url": "/topics/evolution/tutorials/mtb_transmission/tutorial.html",
       "topic_name": "evolution",
       "tutorial_name": "mtb_transmission",
+      "id": "evolution/mtb_transmission",
+      "video_library": {
+        "tutorial": null,
+        "slides": null,
+        "demo": null,
+        "both": null,
+        "session": null
+      },
       "hands_on": true,
       "slides": false,
       "workflows": [
@@ -169,6 +177,14 @@
       "url": "/topics/evolution/tutorials/mtb_phylogeny/tutorial.html",
       "topic_name": "evolution",
       "tutorial_name": "mtb_phylogeny",
+      "id": "evolution/mtb_phylogeny",
+      "video_library": {
+        "tutorial": null,
+        "slides": null,
+        "demo": null,
+        "both": null,
+        "session": null
+      },
       "hands_on": true,
       "slides": false,
       "workflows": [

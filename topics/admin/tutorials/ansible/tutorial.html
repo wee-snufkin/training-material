@@ -113,9 +113,11 @@
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
         </a>
         
+        
         <a class="dropdown-item" href="/training-material/topics/admin/faqs/" title="Check our FAQs for the Galaxy Server administration topic">
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
         </a>
+        
         
         <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
             <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
@@ -651,7 +653,7 @@
 </blockquote>
 
 <!--SNIPPET-->
-<blockquote class="tip">  <div id="tip-operating-system-compatibility" class="box-title"><button type="button" aria-controls="tip-operating-system-compatibility-contents" aria-expanded="true" aria-label="Toggle tip box: Operating system compatibility"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Operating system compatibility<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>These Ansible roles and training materials were last tested on Centos 7 and Ubuntu 18.04, but will probably work on other RHEL and Debian variants.</p>  <p>The roles that are used in these training are currently used by <code class="language-plaintext highlighter-rouge">use<span class="notranslate">galaxy</span>.*</code>, and other, servers in maintaining their infrastructure. (<a href="https://github.com/galaxyproject/infrastructure-playbook/">US</a>, <a href="https://github.com/usegalaxy-eu/infrastructure-playbook">EU</a>, both are running CentOS 7)</p>  <p>If you have an issue running these trainings on your OS flavour, please report <a href="https://github.com/galaxyproject/training-material/issues/new">the issue</a> in the training material and we can see if it is possible to solve.</p></blockquote>
+<blockquote class="tip">   <div id="tip-operating-system-compatibility" class="box-title"><button type="button" aria-controls="tip-operating-system-compatibility-contents" aria-expanded="true" aria-label="Toggle tip box: Operating system compatibility"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Operating system compatibility<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>These Ansible roles and training materials were last tested on Centos 7 and Ubuntu 18.04, but will probably work on other RHEL and Debian variants.</p>   <p>The roles that are used in these training are currently used by <code class="language-plaintext highlighter-rouge">use<span class="notranslate">galaxy</span>.*</code>, and other, servers in maintaining their infrastructure. (<a href="https://github.com/galaxyproject/infrastructure-playbook/">US</a>, <a href="https://github.com/usegalaxy-eu/infrastructure-playbook">EU</a>, both are running CentOS 7)</p>   <p>If you have an issue running these trainings on your OS flavour, please report <a href="https://github.com/galaxyproject/training-material/issues/new">the issue</a> in the training material and we can see if it is possible to solve.</p> </blockquote>
 
 <h1 id="what-is-ansible">What is Ansible?</h1>
 
@@ -1235,7 +1237,7 @@ to show how a person using <code class="language-plaintext highlighter-rouge">my
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-variable-connection" class="box-title"><button type="button" aria-controls="tip-variable-connection-contents" aria-expanded="true" aria-label="Toggle tip box: Variable connection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Variable connection<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>When the playbook runs, as part of the setup, it collects any variables that are set. For a playbook affecting a group of hosts named <code class="language-plaintext highlighter-rouge">my_hosts</code>, it checks many different places for variables, including “group_vars/my_hosts.yml”. If there are variables there, they’re added to the collection of current variables. It also checks “group_vars/all.yml” (for the built-in host group <code class="language-plaintext highlighter-rouge">all</code>). There is a precedence order, but then these variables are available for roles and tasks to consume.</p></blockquote>
+      <blockquote class="tip">   <div id="tip-variable-connection" class="box-title"><button type="button" aria-controls="tip-variable-connection-contents" aria-expanded="true" aria-label="Toggle tip box: Variable connection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Variable connection<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>When the playbook runs, as part of the setup, it collects any variables that are set. For a playbook affecting a group of hosts named <code class="language-plaintext highlighter-rouge">my_hosts</code>, it checks many different places for variables, including “group_vars/my_hosts.yml”. If there are variables there, they’re added to the collection of current variables. It also checks “group_vars/all.yml” (for the built-in host group <code class="language-plaintext highlighter-rouge">all</code>). There is a precedence order, but then these variables are available for roles and tasks to consume.</p> </blockquote>
     </li>
     <li>
       <p>Run the playbook again, but imagine you are worried about this change, and supply the <code class="language-plaintext highlighter-rouge">--check --diff</code> flag to see what changes are made before committing to make them.</p>
@@ -1247,7 +1249,7 @@ to show how a person using <code class="language-plaintext highlighter-rouge">my
       </blockquote>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-what-if-you-forget-diff" class="box-title"><button type="button" aria-controls="tip-what-if-you-forget-diff-contents" aria-expanded="true" aria-label="Toggle tip box: What if you forget `--diff`?"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: What if you forget `--diff`?<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>If you forget to use <code class="language-plaintext highlighter-rouge">--diff</code>, it is not easy to see what has changed. Some modules like the <code class="language-plaintext highlighter-rouge">copy</code> and <code class="language-plaintext highlighter-rouge">template</code> modules have a <code class="language-plaintext highlighter-rouge">backup</code> option. If you set this option, then it will keep a backup copy next to the destination file.</p>  <p>However, most modules do not have such an option, so if you want to know what changes, always use <code class="language-plaintext highlighter-rouge">--diff</code>.</p></blockquote>
+      <blockquote class="tip">   <div id="tip-what-if-you-forget-diff" class="box-title"><button type="button" aria-controls="tip-what-if-you-forget-diff-contents" aria-expanded="true" aria-label="Toggle tip box: What if you forget `--diff`?"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: What if you forget `--diff`?<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If you forget to use <code class="language-plaintext highlighter-rouge">--diff</code>, it is not easy to see what has changed. Some modules like the <code class="language-plaintext highlighter-rouge">copy</code> and <code class="language-plaintext highlighter-rouge">template</code> modules have a <code class="language-plaintext highlighter-rouge">backup</code> option. If you set this option, then it will keep a backup copy next to the destination file.</p>   <p>However, most modules do not have such an option, so if you want to know what changes, always use <code class="language-plaintext highlighter-rouge">--diff</code>.</p> </blockquote>
 
       <blockquote class="code-out">
         <div id="code-out-1" class="box-title" aria-label="code-out box: "><i class="fas fa-laptop-code" aria-hidden="true"></i><span class="visually-hidden"></span> Output</div>
@@ -1403,7 +1405,7 @@ The solution to this is to set <code class="language-plaintext highlighter-rouge
 <p>Sometimes a role will accomplish 95% of what you need to do, but not everything. Once you have installed the role with <code class="language-plaintext highlighter-rouge">ansible-<span class="notranslate">galaxy</span> install</code>, you can edit it locally to make any changes. In an ideal world you would contribute this back, but this is not always a high priority. Many projects copy roles directly into their repositories, e.g. <a href="https://github.com/galaxyproject/infrastructure-playbook/tree/master/roles"><span class="notranslate">galaxy</span>project</a> and <a href="https://github.com/usegalaxy-eu/infrastructure-playbook/tree/master/roles">use<span class="notranslate">galaxy</span>.eu</a></p>
 
 <!--SNIPPET-->
-<blockquote class="tip">  <div id="tip-how-do-i-know-what-i-can-do-with-a-role-what-variables-are-available" class="box-title"><button type="button" aria-controls="tip-how-do-i-know-what-i-can-do-with-a-role-what-variables-are-available-contents" aria-expanded="true" aria-label="Toggle tip box: How do I know what I can do with a role? What variables are available?"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: How do I know what I can do with a role? What variables are available?<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>You don’t. There is no standard way for reporting this, but well written roles by trusted authors (e.g. geerlingguy, <span class="notranslate">galaxy</span>project) do it properly and write all of the variables in the README file of the repository. We try to pick sensible roles for you in this course, but, in real life it may not be that simple.</p>  <p>So, definitely check there first, but if they aren’t there, then you’ll need to read through <code class="language-plaintext highlighter-rouge">defaults/</code> and <code class="language-plaintext highlighter-rouge">tasks/</code> and <code class="language-plaintext highlighter-rouge">templates/</code> to figure out what the role does and how you can control and modify it to accomplish your goals.</p></blockquote>
+<blockquote class="tip">   <div id="tip-how-do-i-know-what-i-can-do-with-a-role-what-variables-are-available" class="box-title"><button type="button" aria-controls="tip-how-do-i-know-what-i-can-do-with-a-role-what-variables-are-available-contents" aria-expanded="true" aria-label="Toggle tip box: How do I know what I can do with a role? What variables are available?"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: How do I know what I can do with a role? What variables are available?<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>You don’t. There is no standard way for reporting this, but well written roles by trusted authors (e.g. geerlingguy, <span class="notranslate">galaxy</span>project) do it properly and write all of the variables in the README file of the repository. We try to pick sensible roles for you in this course, but, in real life it may not be that simple.</p>   <p>So, definitely check there first, but if they aren’t there, then you’ll need to read through <code class="language-plaintext highlighter-rouge">defaults/</code> and <code class="language-plaintext highlighter-rouge">tasks/</code> and <code class="language-plaintext highlighter-rouge">templates/</code> to figure out what the role does and how you can control and modify it to accomplish your goals.</p> </blockquote>
 
 <h1 id="ansible-vault">Ansible Vault</h1>
 
@@ -1684,19 +1686,21 @@ day = ""
 url = "\url{https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html}",
 note = "[Online; accessed TODAY]"
 }
-@article{Batut_2018,
-    doi = {10.1016/j.cels.2018.05.012},
-    url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
-    year = 2018,
-    month = {jun},
-    publisher = {Elsevier {BV}},
-    volume = {6},
-    number = {6},
-    pages = {752--758.e1},
-    author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
-    title = {Community-Driven Data Analysis Training for Biology},
-    journal = {Cell Systems}
-}</code>
+@article{Hiltemann_2023,
+	doi = {10.1371/journal.pcbi.1010752},
+	url = {https://doi.org/10.1371%2Fjournal.pcbi.1010752},
+	year = 2023,
+	month = {jan},
+	publisher = {Public Library of Science ({PLoS})},
+	volume = {19},
+	number = {1},
+	pages = {e1010752},
+	author = {Saskia Hiltemann and Helena Rasche and Simon Gladman and Hans-Rudolf Hotz and Delphine Larivi{\`{e}}re and Daniel Blankenberg and Pratik D. Jagtap and Thomas Wollmann and Anthony Bretaudeau and Nadia Gou{\'{e}} and Timothy J. Griffin and Coline Royaux and Yvan Le Bras and Subina Mehta and Anna Syme and Frederik Coppens and Bert Droesbeke and Nicola Soranzo and Wendi Bacon and Fotis Psomopoulos and Crist{\'{o}}bal Gallardo-Alba and John Davis and Melanie Christine Föll and Matthias Fahrner and Maria A. Doyle and Beatriz Serrano-Solano and Anne Claire Fouilloux and Peter van Heusden and Wolfgang Maier and Dave Clements and Florian Heyl and Björn Grüning and B{\'{e}}r{\'{e}}nice Batut and},
+	editor = {Francis Ouellette},
+	title = {Galaxy Training: A powerful framework for teaching!},
+	journal = {PLoS Comput Biol} Computational Biology}
+}
+</code>
                    </pre></div></div>
                    </p>
                 </blockquote>

@@ -24,7 +24,7 @@
 <meta name="DC.type" content="text" />
 <meta name="DC.title" content="Peptide and Protein ID using SearchGUI and PeptideShaker" />
 <meta name="DC.publisher" content="Galaxy Training Network" />
-<meta name="DC.date" content="2022-10-18 14:23:35 +0000" />
+<meta name="DC.date" content="2023-01-24 13:14:34 +0000" />
 <meta name="DC.creator" content="Florian Christoph Sigloch" />
 <meta name="DC.creator" content="Björn Grüning" />
 
@@ -113,9 +113,11 @@
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
         </a>
         
+        
         <a class="dropdown-item" href="/training-material/topics/proteomics/faqs/" title="Check our FAQs for the Proteomics topic">
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
         </a>
+        
         
         <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
             <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
@@ -278,7 +280,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2022-10-18 14:23:35 +0000",
+  "dateModified": "2023-01-24 13:14:34 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Peptide and Protein ID using SearchGUI and PeptideShaker",
   "interactivityType": "mixed",
@@ -548,17 +550,13 @@
         <div id="supporting-materials"><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials:</strong></div>
         <ul class="supporting_material">
             
-                <li class="btn btn-default supporting_material"><a href="/training-material/topics/proteomics/slides/introduction.html" title="Topic Overview slides">
-                    <i class="fab fa-slideshare" aria-hidden="true"></i> Topic Overview slides
-                </a></li>
-            
 
             
                 <li class="btn btn-default supporting_material">
 
 
 <a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/546301">
-    <i class="far fa-copy" aria-hidden="true"></i> Datasets
+    <i class="far fa-copy" aria-hidden="true"></i>&nbsp;Datasets
 </a>
 
 </li>
@@ -569,19 +567,12 @@
 
 
     <a class="btn btn-default topic-icon" href="/training-material/topics/proteomics/tutorials/protein-id-sg-ps/workflows/" title="Workflows" alt="Peptide and Protein ID using SearchGUI and PeptideShaker workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i> Workflows
+        <i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Workflows
     </a>
 
 </li>
             
 
-            
-                <li class="btn btn-default supporting_material">
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/proteomics/tutorials/protein-id-sg-ps/tours/" title="Galaxy interactive tour" >
-    <i class="fas fa-magic" aria-hidden="true"></i> Tours
-</a>
-
-</li>
             
 
             
@@ -746,6 +737,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
@@ -795,7 +788,7 @@
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 18, 2022 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 24, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
@@ -864,7 +857,7 @@ Machine vendors offer algorithms to extract peaks from profile raw data. This is
 If your data were generated on a low resolution mass spectrometer, use <strong><em>PeakPickerWavelet</em></strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> instead.</p>
 
 <blockquote class="notranslate hands_on">
-  <div id="hands-on-hands-on-file-conversion-and-peak-picking" class="box-title" aria-label="hands-on box: Hands-On: File Conversion and Peak Picking"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Hands-On: File Conversion and Peak Picking</div>
+  <div id="hands-on-file-conversion-and-peak-picking" class="box-title" aria-label="hands-on box: File Conversion and Peak Picking"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: File Conversion and Peak Picking</div>
 
   <p>We provide the <a href="https://zenodo.org/record/796184">input data</a> in the original <code class="language-plaintext highlighter-rouge">raw</code> format and also already converted to <code class="language-plaintext highlighter-rouge">MGF</code> and <code class="language-plaintext highlighter-rouge">mzML</code> file formats. If <strong><em>msconvert</em></strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> does not run on your <span class="notranslate">Galaxy</span> instance, please download the preconverted <code class="language-plaintext highlighter-rouge">mzML</code> as an input.</p>
 
@@ -873,7 +866,7 @@ If your data were generated on a low resolution mass spectrometer, use <strong><
       <p>Create a new history for this Peptide and Protein ID exercise.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
+      <blockquote class="tip">   <div id="tip-creating-a-new-history" class="box-title"><button type="button" aria-controls="tip-creating-a-new-history-contents" aria-expanded="true" aria-label="Toggle tip box: Creating a new history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>   <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>   <ol>   <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>   <li>Select the option <strong>Create New</strong> from the menu</li> </ol> </blockquote>
     </li>
     <li>Load the example dataset into your history from Zenodo: <a href="https://zenodo.org/record/892005/files/qExactive01819.raw">raw</a> <a href="https://zenodo.org/record/892005/files/qExactive01819_profile.mzml">mzML</a></li>
     <li>Rename the dataset to something meaningful.</li>
@@ -884,7 +877,7 @@ If your data were generated on a low resolution mass spectrometer, use <strong><
 
   <blockquote class="comment">
     <div id="comment-local-use-of-msconvert" class="box-title" aria-label="comment box: Local Use of MSConvert"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden"></span> Comment: Local Use of MSConvert</div>
-    <p>The vendor libraries used by msconvert are only licensed for Windows systems and are therefore rarely implemented in <span class="notranslate">Galaxy</span> instances. If <strong><em>msconvert</em></strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> is not available in your <span class="notranslate">Galaxy</span> instance, please install the software on a Windows computer and run the conversion locally. You can find a detailed description of the necessary steps <a href="https://compomics.com/bioinformatics-for-proteomics/identification/">here</a> (“Peak List Generation”). Afterwards, upload the resulting mzML file to your <span class="notranslate">Galaxy</span> history.</p>
+    <p>The vendor libraries used by msconvert are only licensed for Windows systems and are therefore rarely implemented in <span class="notranslate">Galaxy</span> instances. If <strong><em>msconvert</em></strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> is not available in your <span class="notranslate">Galaxy</span> instance, please install the software on a Windows computer and run the conversion locally. You can find <a href="https://compomics.com/bioinformatics-for-proteomics/identification/">a detailed description of the necessary steps</a> (“Peak List Generation”). Afterwards, upload the resulting mzML file to your <span class="notranslate">Galaxy</span> history.</p>
   </blockquote>
 </blockquote>
 
@@ -896,10 +889,10 @@ If your data were generated on a low resolution mass spectrometer, use <strong><
 <p>In bottom-up proteomics, it is necessary to combine the identified peptides to proteins. This is not a trivial task, as proteins are redundant in most eukaryotic organisms. Thus, not every peptide can be assigned to only one protein. Luckily, the <strong><em>Peptide Shaker</em></strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> already takes care of protein inference and even gives us some information on validity of the protein identifications. We will discuss validation in a <a href="#evaluation-of-peptide-and-protein-ids">later step</a> of this tutorial.</p>
 
 <blockquote class="notranslate hands_on">
-  <div id="hands-on-hands-on-peptide-and-protein-identification" class="box-title" aria-label="hands-on box: Hands-On: Peptide and Protein Identification"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Hands-On: Peptide and Protein Identification</div>
+  <div id="hands-on-peptide-and-protein-identification" class="box-title" aria-label="hands-on box: Peptide and Protein Identification"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Peptide and Protein Identification</div>
 
   <ol>
-    <li>Copy the prepared protein database from the tutorial <a href="../database-handling/tutorial.html">Database Handling</a> into your current history by using the multiple history view or upload the ready-made database from this <a href="https://zenodo.org/record/892005/files/Human_database_%28cRAP_and_Mycoplasma_added%29.fasta">link</a>.</li>
+    <li>Copy the prepared protein database from the tutorial <a href="../database-handling/tutorial.html">Database Handling</a> into your current history by using the multiple history view or upload the <a href="https://zenodo.org/record/892005/files/Human_database_%28cRAP_and_Mycoplasma_added%29.fasta">ready-made database from Zenodo</a>.</li>
     <li>Open <strong><em>Search GUI</em></strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to search the mgf file against the protein database. In the <strong><code class="language-plaintext highlighter-rouge">Search Engine Options</code></strong> select <code class="language-plaintext highlighter-rouge">X!Tandem</code> and <code class="language-plaintext highlighter-rouge">MS-GF+</code>. In the <strong><code class="language-plaintext highlighter-rouge">Protein Modification Options</code></strong> add the <strong><code class="language-plaintext highlighter-rouge">Fixed Modifications</code></strong>: <code class="language-plaintext highlighter-rouge">Carbamidomethylation of C</code> and the <strong><code class="language-plaintext highlighter-rouge">Variable Modifications</code></strong>: <code class="language-plaintext highlighter-rouge">Oxidation of M</code>.</li>
     <li>Run <strong><em>Peptide Shaker</em></strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the Search GUI output. Enable the following outputs: <code class="language-plaintext highlighter-rouge">Zip File for import to Desktop App</code>, <code class="language-plaintext highlighter-rouge">mzidentML File</code>, <code class="language-plaintext highlighter-rouge">PSM Report</code>, <code class="language-plaintext highlighter-rouge">Peptide Report</code>, <code class="language-plaintext highlighter-rouge">Protein Report</code>.</li>
   </ol>
@@ -942,7 +935,7 @@ The <code class="language-plaintext highlighter-rouge">Certificate of Analysis</
 <p>The FASTA database used for the peptide to spectrum matching contained some entries that were not expected to stem from the HeLa cell lysate, but are common contaminations in LC-MS/MS samples. The main reason to add those is to avoid misidentification of the spectra to other proteins. However, it also enables you to check for contaminations in your samples. <strong>CAVE:</strong> in human samples, many proteins that are common contaminants may also stem from the real sample. The real source of such human proteins might require advanced investigation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div id="hands-on-hands-on-analysis-of-contaminants" class="box-title" aria-label="hands-on box: Hands-On: Analysis of Contaminants"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Hands-On: Analysis of Contaminants</div>
+  <div id="hands-on-analysis-of-contaminants" class="box-title" aria-label="hands-on box: Analysis of Contaminants"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Analysis of Contaminants</div>
 
   <ol>
     <li>Run <strong><em>Select</em></strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the Peptide Shaker Protein Report to select all lines that match the pattern “CONTAMINANT”.</li>
@@ -981,7 +974,7 @@ False positives are expected to be randomly assigned to peptides in the FASTA da
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div id="hands-on-hands-on-evaluation-of-peptide-and-protein-ids" class="box-title" aria-label="hands-on box: Hands-On: Evaluation of Peptide and Protein IDs"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Hands-On: Evaluation of Peptide and Protein IDs</div>
+  <div id="hands-on-evaluation-of-peptide-and-protein-ids" class="box-title" aria-label="hands-on box: Evaluation of Peptide and Protein IDs"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Evaluation of Peptide and Protein IDs</div>
 
   <ol>
     <li>Remove all “Doubtful” proteins from your protein list by running <strong><em>Select</em></strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the Peptide Shaker Protein Report. Select only those lines that <strong>do not</strong> match the pattern “Doubtful”.</li>
@@ -1006,7 +999,7 @@ False positives are expected to be randomly assigned to peptides in the FASTA da
 
 <h1 id="premade-workflow">Premade <span class="notranslate">Workflow</span></h1>
 
-<p>A premade <span class="notranslate">workflow</span> for this tutorial can be found <a href="workflows/wf_proteinID_SG_PS.ga">here</a></p>
+<p><a href="workflows/wf_proteinID_SG_PS.ga">A premade <span class="notranslate">workflow</span> for this tutorial is available</a></p>
 
 <h1 id="further-reading">Further Reading</h1>
 
@@ -1119,19 +1112,21 @@ day = ""
 url = "\url{https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/protein-id-sg-ps/tutorial.html}",
 note = "[Online; accessed TODAY]"
 }
-@article{Batut_2018,
-    doi = {10.1016/j.cels.2018.05.012},
-    url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
-    year = 2018,
-    month = {jun},
-    publisher = {Elsevier {BV}},
-    volume = {6},
-    number = {6},
-    pages = {752--758.e1},
-    author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
-    title = {Community-Driven Data Analysis Training for Biology},
-    journal = {Cell Systems}
-}</code>
+@article{Hiltemann_2023,
+	doi = {10.1371/journal.pcbi.1010752},
+	url = {https://doi.org/10.1371%2Fjournal.pcbi.1010752},
+	year = 2023,
+	month = {jan},
+	publisher = {Public Library of Science ({PLoS})},
+	volume = {19},
+	number = {1},
+	pages = {e1010752},
+	author = {Saskia Hiltemann and Helena Rasche and Simon Gladman and Hans-Rudolf Hotz and Delphine Larivi{\`{e}}re and Daniel Blankenberg and Pratik D. Jagtap and Thomas Wollmann and Anthony Bretaudeau and Nadia Gou{\'{e}} and Timothy J. Griffin and Coline Royaux and Yvan Le Bras and Subina Mehta and Anna Syme and Frederik Coppens and Bert Droesbeke and Nicola Soranzo and Wendi Bacon and Fotis Psomopoulos and Crist{\'{o}}bal Gallardo-Alba and John Davis and Melanie Christine Föll and Matthias Fahrner and Maria A. Doyle and Beatriz Serrano-Solano and Anne Claire Fouilloux and Peter van Heusden and Wolfgang Maier and Dave Clements and Florian Heyl and Björn Grüning and B{\'{e}}r{\'{e}}nice Batut and},
+	editor = {Francis Ouellette},
+	title = {Galaxy Training: A powerful framework for teaching!},
+	journal = {PLoS Comput Biol} Computational Biology}
+}
+</code>
                    </pre></div></div>
                    </p>
                 </blockquote>
