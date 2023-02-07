@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
-        <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml" />
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/dev/tutorials/core-contributing/tutorial.html" />
@@ -32,230 +31,15 @@
         
         
         
-        
         <meta name="description" content="Galaxy is an open-source project. Everyone can contribute..." />
         <meta property="og:site_name" content="Galaxy Training Network" />
         <meta property="og:title" content="Galaxy Training: Contributing a New Feature to Galaxy Core" />
         <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute..." />
         <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
 
-    </head>
-    <body data-spy="scroll" data-target="#toc">
-        <header>
-    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
-        <div class="container">
-            <a class="navbar-brand" href="/training-material/">
-                <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
-                Galaxy Training!
-            </a>
-
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="top-navbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        
-                        <a class="nav-link" href="/training-material/topics/dev" title="Go back to list of tutorials">
-                            <i class="far fa-folder" aria-hidden="true"></i> Development in Galaxy
-                        </a>
-                        
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
-                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            
-                              <strong class="dropdown-header">Automatic Translations</strong>
-            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
-                            Français
-                            </a>
-                            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
-                            日本語
-                            </a>
-                            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
-                            Español
-                            </a>
-                            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
-                            Português
-                            </a>
-                            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
-                            العربية
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url" title="">
-                            And more!
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
-        <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
-    </a>
-    <div class="dropdown-menu dropdown-menu-right">
-        <!-- disable Tess for now
-        <form method="get" action="https://tess.elixir-europe.org/materials">
-            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
-            <input type="hidden" value="Galaxy Training" name="content_provider">
-            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
-        </form>
-        -->
-
-        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQs">
-           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
-        </a>
         
-        
-        <a class="dropdown-item" href="/training-material/topics/dev/faqs/" title="Check our FAQs for the Development in Galaxy topic">
-           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
-        </a>
-        
-        
-        <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
-            <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
-        </a>
-        <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Discuss on gitter">
-           <i class="fab fa-gitter" aria-hidden="true"></i><span class="visually-hidden">gitter</span> Discuss on Gitter
-        </a>
-    </div>
-</li>
-
-
-                    <li class="nav-item dropdown">
-    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Extras">
-        <i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">galaxy-star</span> Extras
-    </a>
-    <div class="dropdown-menu dropdown-menu-right">
-
-        
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/dev/tutorials/core-contributing/tutorial.md" title="Edit on GitHub">
-          <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
-        </a>
-
-        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this repository">
-            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN statistics
-        </a>
-
-        <a class="dropdown-item" href="https://plausible.galaxyproject.eu/training.galaxyproject.org?period=12mo&page=/training-material/topics/dev/tutorials/core-contributing/tutorial.html" title="Show view statistics of this page">
-            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
-        </a>
-
-        <!-- link to feedback -->
-        
+        <script type="application/ld+json">
             
-            
-                <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
-                    <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
-                </a>
-            
-        
-
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Theme
-            </div>
-
-            <div id="theme-selector" data-toggle="buttons">
-                <label data-value="default" class="btn btn-secondary">
-                    <input type="radio" name="options" id="default" autocomplete="off"> Default
-                </label>
-                <label data-value="night" class="btn btn-secondary">
-                    <input type="radio" name="options" id="night" autocomplete="off"> Night
-                </label>
-                <label data-value="midnight" class="btn btn-secondary">
-                    <input type="radio" name="options" id="midnight" autocomplete="off"> Midnight
-                </label>
-                <label data-value="rainbow" class="btn btn-secondary">
-                    <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
-                </label>
-                <label data-value="progress" class="btn btn-secondary">
-                    <input type="radio" name="options" id="progress" autocomplete="off">🏳️‍🌈
-                </label>
-                <label data-value="halloween" class="btn btn-secondary">
-                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
-                </label>
-                <label data-value="straya" class="btn btn-secondary">
-                    <input type="radio" name="options" id="downunder" autocomplete="off"> 🇦🇺
-                </label>
-            </div>
-
-        </div>
-
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
-            </div>
-
-            <div id="archive-selector">
-            
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/dev/tutorials/core-contributing/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
-            
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/dev/tutorials/core-contributing/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
-            
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/dev/tutorials/core-contributing/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
-            
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
-            </div>
-
-        </div>
-
-    </div>
-</li>
-
-
-                    <!-- Search bar-->
-                    <li class="nav-item">
-                      <div id="navbarSupportedContent" role="search">
-                        <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
-                          <i class="fas fa-search nav-link" aria-hidden="true"></i>
-                          <div class="md-form mb-2">
-                            <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
-                          </div>
-                        </form>
-                      </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-        <div class="container main-content" role="main">
-        
-
-
-
-
-
-
-
-
-
-
-
-<!-- Gitter -->
-
-
-
-
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/dev'
-  };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
-<script type="application/ld+json">
-    
 
 
 {
@@ -492,7 +276,210 @@
     }
   ]
 }
+        </script>
+        
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <header>
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
+        <div class="container">
+            <a class="navbar-brand" href="/training-material/">
+                <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
+                Galaxy Training!
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="top-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="/training-material/topics/dev" title="Go back to list of tutorials">
+                            <i class="far fa-folder" aria-hidden="true"></i> Development in Galaxy
+                        </a>
+                        
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
+                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                              <strong class="dropdown-header">Automatic Translations</strong>
+            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
+                            Français
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
+                            日本語
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
+                            Español
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
+                            Português
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url">
+                            العربية
+                            </a>
+                            
+                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/core-contributing/tutorial.html&edit-text=&act=url" title="">
+                            And more!
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
+        <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <!-- disable Tess for now
+        <form method="get" action="https://tess.elixir-europe.org/materials">
+            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
+            <input type="hidden" value="Galaxy Training" name="content_provider">
+            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
+        </form>
+        -->
+
+        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQs">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
+        </a>
+        
+        
+        <a class="dropdown-item" href="/training-material/topics/dev/faqs/" title="Check our FAQs for the Development in Galaxy topic">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
+        </a>
+        
+        
+        <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
+            <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
+        </a>
+        <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Discuss on gitter">
+           <i class="fab fa-gitter" aria-hidden="true"></i><span class="visually-hidden">gitter</span> Discuss on Gitter
+        </a>
+    </div>
+</li>
+
+
+                    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Extras">
+        <i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">galaxy-star</span> Extras
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+
+        
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/dev/tutorials/core-contributing/tutorial.md" title="Edit on GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+        </a>
+
+        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this repository">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN statistics
+        </a>
+
+        <a class="dropdown-item" href="https://plausible.galaxyproject.eu/training.galaxyproject.org?period=12mo&page=/training-material/topics/dev/tutorials/core-contributing/tutorial.html" title="Show view statistics of this page">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
+        </a>
+
+        <!-- link to feedback -->
+        
+            
+            
+                <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
+                    <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
+                </a>
+            
+        
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Theme
+            </div>
+
+            <div id="theme-selector" data-toggle="buttons">
+                    <button class="btn" data-theme="default">Default</button>
+                    <button class="btn" data-theme="night">Night</button>
+                    <button class="btn" data-theme="midnight">Midnight</button>
+                    <button class="btn" data-theme="rainbow">Rainbow</button>
+                    <button class="btn" data-theme="blm">✊🏿</button>
+                    <button class="btn" data-theme="progress" >🏳️‍🌈</button>
+                    <button class="btn" data-theme="halloween">🎃</button>
+                    <button class="btn" data-theme="straya">🇦🇺</button>
+            </div>
+
+        </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
+            </div>
+
+            <div id="archive-selector">
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/dev/tutorials/core-contributing/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/dev/tutorials/core-contributing/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/dev/tutorials/core-contributing/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+            </div>
+
+        </div>
+
+    </div>
+</li>
+
+
+                    <!-- Search bar-->
+                    <li class="nav-item">
+                      <div id="navbarSupportedContent" role="search">
+                        <!-- Search form -->
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                          <i class="fas fa-search nav-link" aria-hidden="true"></i>
+                          <div class="md-form mb-2">
+                            <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
+                          </div>
+                        </form>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+        <div class="container main-content" role="main">
+        
+
+
+
+
+
+
+
+
+
+
+
+<!-- Gitter -->
+
+
+
+
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+  room: 'galaxyproject/dev'
+  };
 </script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <section class="tutorial topic-dev">
     <h1 data-toc-skip>Contributing a New Feature to Galaxy Core</h1>
@@ -800,7 +787,7 @@
 <h1 id="forking-galaxy">Forking <span class="notranslate">Galaxy</span></h1>
 
 <!--SNIPPET-->
-<blockquote class="tip">   <div id="tip-how-to-contribute-to-galaxy" class="box-title"><button type="button" aria-controls="tip-how-to-contribute-to-galaxy-contents" aria-expanded="true" aria-label="Toggle tip box: How to Contribute to Galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: How to Contribute to <span class="notranslate">Galaxy</span><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>To contribute to <span class="notranslate">galaxy</span>, a GitHub account is required. Changes are proposed via a <a href="https://docs.github.com/en/github/collaborating-with-pull-requests">pull request</a>. This allows the project maintainers to review the changes and suggest improvements.</p>   <p>The general steps are as follows:</p>   <ol>   <li>Fork the <span class="notranslate">Galaxy</span> repository</li>   <li>Clone your fork</li>   <li>Make changes in a new branch</li>   <li>Commit your changes, push branch to your fork</li>   <li>Open a pull request for this branch in the <span class="notranslate">upstream</span> <span class="notranslate">Galaxy</span> repository</li> </ol>   <blockquote class="details">   <details-title>Git, Github, and <span class="notranslate">Galaxy</span> Core</details-title>   <p>For a lot more information about Git branching and managing a repository on Github,  see the <a href="/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html">Contributing with GitHub via command-line</a> tutorial.</p>   <p>The <a href="/training-material/topics/dev/tutorials/architecture/slides.html"><span class="notranslate">Galaxy</span> Core Architecture slides</a> have a lot of important <span class="notranslate">Galaxy</span> core-related information related to branches,  project management, and contributing to <span class="notranslate">Galaxy</span> - under the Project Management section of the slides.</p> </blockquote> </blockquote>
+<blockquote class="tip">   <div id="tip-how-to-contribute-to-galaxy" class="box-title"><button type="button" aria-controls="tip-how-to-contribute-to-galaxy-contents" aria-expanded="true" aria-label="Toggle tip box: How to Contribute to Galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: How to Contribute to <span class="notranslate">Galaxy</span><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>To contribute to <span class="notranslate">galaxy</span>, a GitHub account is required. Changes are proposed via a <a href="https://docs.github.com/en/github/collaborating-with-pull-requests">pull request</a>. This allows the project maintainers to review the changes and suggest improvements.</p>   <p>The general steps are as follows:</p>   <ol>   <li>Fork the <span class="notranslate">Galaxy</span> repository</li>   <li>Clone your fork</li>   <li>Make changes in a new branch</li>   <li>Commit your changes, push branch to your fork</li>   <li>Open a pull request for this branch in the <span class="notranslate">upstream</span> <span class="notranslate">Galaxy</span> repository</li> </ol>   <blockquote class="details">   <div id="details-git-github-and-span-class-quot-notranslate-quot-galaxy-span-core" class="box-title"><button type="button" aria-controls="details-git-github-and-span-class-quot-notranslate-quot-galaxy-span-core-contents" aria-expanded="true" aria-label="Toggle details box: Git, Github, and <span class=&quot;notranslate&quot;>Galaxy</span> Core"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Details: Git, Github, and <span class=&quot;notranslate&quot;>Galaxy</span> Core<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>For a lot more information about Git branching and managing a repository on Github,  see the <a href="/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html">Contributing with GitHub via command-line</a> tutorial.</p>   <p>The <a href="/training-material/topics/dev/tutorials/architecture/slides.html"><span class="notranslate">Galaxy</span> Core Architecture slides</a> have a lot of important <span class="notranslate">Galaxy</span> core-related information related to branches,  project management, and contributing to <span class="notranslate">Galaxy</span> - under the Project Management section of the slides.</p> </blockquote> </blockquote>
 
 <blockquote class="notranslate hands_on">
   <div id="hands-on-setup-your-local-galaxy-instance" class="box-title" aria-label="hands-on box: Setup your local Galaxy instance"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Setup your local <span class="notranslate">Galaxy</span> instance</div>
@@ -976,7 +963,7 @@ for the first time):</p>
 <p>Now modify <code class="language-plaintext highlighter-rouge">lib/<span class="notranslate">galaxy</span>/model/__init__.py</code> to add a model class called <code class="language-plaintext highlighter-rouge">UserFavoriteExtension</code> as described above.</p>
 
 <blockquote class="solution">
-  <solution-title>``lib/<span class="notranslate">galaxy</span>/model/__init__.py``</solution-title>
+  <div id="solution-lib-span-class-quot-notranslate-quot-galaxy-span-model-init-py" class="box-title"><button type="button" aria-controls="solution-lib-span-class-quot-notranslate-quot-galaxy-span-model-init-py-contents" aria-expanded="true" aria-label="Toggle solution box: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>/model/__init__.py``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>/model/__init__.py``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">lib/<span class="notranslate">galaxy</span>/model/__init__.py</code>:</p>
 
@@ -1048,7 +1035,7 @@ Also, while you didn’t have to specify the datatype of the <code class="langua
 do that here.</p>
 
 <blockquote class="solution">
-  <solution-title>``...alembic/versions_gxy/2ad8047d652e_add_user_favorite_extentions_table.py``</solution-title>
+  <div id="solution-alembic-versions-gxy-2ad8047d652e-add-user-favorite-extentions-table-py" class="box-title"><button type="button" aria-controls="solution-alembic-versions-gxy-2ad8047d652e-add-user-favorite-extentions-table-py-contents" aria-expanded="true" aria-label="Toggle solution box: ``...alembic/versions_gxy/2ad8047d652e_add_user_favorite_extentions_table.py``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``...alembic/versions_gxy/2ad8047d652e_add_user_favorite_extentions_table.py``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to revision template:</p>
 
@@ -1183,7 +1170,7 @@ for the current user.</p>
 </ul>
 
 <blockquote class="solution">
-  <solution-title>``lib/<span class="notranslate">galaxy</span>_test/api/test_users.py``</solution-title>
+  <div id="solution-lib-span-class-quot-notranslate-quot-galaxy-span-test-api-test-users-py" class="box-title"><button type="button" aria-controls="solution-lib-span-class-quot-notranslate-quot-galaxy-span-test-api-test-users-py-contents" aria-expanded="true" aria-label="Toggle solution box: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>_test/api/test_users.py``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>_test/api/test_users.py``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">lib/<span class="notranslate">galaxy</span>_test/api/test_users.py</code>:</p>
 
@@ -1256,7 +1243,7 @@ an API implementation of the endpoints we just outlined.</p>
 </ul>
 
 <blockquote class="solution">
-  <solution-title>``lib/<span class="notranslate">galaxy</span>/webapps/<span class="notranslate">galaxy</span>/api/user_favorites.py``</solution-title>
+  <div id="solution-lib-span-class-quot-notranslate-quot-galaxy-span-webapps-span-class-quot-notranslate-quot-galaxy-span-api-user-favorites-py" class="box-title"><button type="button" aria-controls="solution-lib-span-class-quot-notranslate-quot-galaxy-span-webapps-span-class-quot-notranslate-quot-galaxy-span-api-user-favorites-py-contents" aria-expanded="true" aria-label="Toggle solution box: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>/webapps/<span class=&quot;notranslate&quot;>galaxy</span>/api/user_favorites.py``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>/webapps/<span class=&quot;notranslate&quot;>galaxy</span>/api/user_favorites.py``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">lib/<span class="notranslate">galaxy</span>/webapps/<span class="notranslate">galaxy</span>/api/user_favorites.py</code>:</p>
 
@@ -1335,7 +1322,7 @@ an API implementation of the endpoints we just outlined.</p>
 </blockquote>
 
 <blockquote class="solution">
-  <solution-title>``lib/<span class="notranslate">galaxy</span>/managers/users.py``</solution-title>
+  <div id="solution-lib-span-class-quot-notranslate-quot-galaxy-span-managers-users-py" class="box-title"><button type="button" aria-controls="solution-lib-span-class-quot-notranslate-quot-galaxy-span-managers-users-py-contents" aria-expanded="true" aria-label="Toggle solution box: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>/managers/users.py``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>/managers/users.py``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">lib/<span class="notranslate">galaxy</span>/managers/users.py</code>:</p>
 
@@ -1393,7 +1380,7 @@ favorite extensions in the UI. This URL needs to be registered as a client route
 <p>Add <code class="language-plaintext highlighter-rouge">/user/favorite/extensions</code> as a route for the client in <code class="language-plaintext highlighter-rouge">buildapp.py</code>.</p>
 
 <blockquote class="solution">
-  <solution-title>``lib/<span class="notranslate">galaxy</span>/webapps/<span class="notranslate">galaxy</span>/buildapp.py``</solution-title>
+  <div id="solution-lib-span-class-quot-notranslate-quot-galaxy-span-webapps-span-class-quot-notranslate-quot-galaxy-span-buildapp-py" class="box-title"><button type="button" aria-controls="solution-lib-span-class-quot-notranslate-quot-galaxy-span-webapps-span-class-quot-notranslate-quot-galaxy-span-buildapp-py-contents" aria-expanded="true" aria-label="Toggle solution box: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>/webapps/<span class=&quot;notranslate&quot;>galaxy</span>/buildapp.py``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``lib/<span class=&quot;notranslate&quot;>galaxy</span>/webapps/<span class=&quot;notranslate&quot;>galaxy</span>/buildapp.py``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">lib/<span class="notranslate">galaxy</span>/webapps/<span class="notranslate">galaxy</span>/buildapp.py</code>:</p>
 
@@ -1420,7 +1407,7 @@ contains the “model” data describing the masthead. Add a link to the route
 we described above to <code class="language-plaintext highlighter-rouge">menu.js</code> with an entry titled “Favorite Extensions”.</p>
 
 <blockquote class="solution">
-  <solution-title>``client/src/layout/menu.js``</solution-title>
+  <div id="solution-client-src-layout-menu-js" class="box-title"><button type="button" aria-controls="solution-client-src-layout-menu-js-contents" aria-expanded="true" aria-label="Toggle solution box: ``client/src/layout/menu.js``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``client/src/layout/menu.js``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">client/src/layout/menu.js</code>:</p>
 
@@ -1454,7 +1441,7 @@ added above in <code class="language-plaintext highlighter-rouge">buildapp.py</c
 <code class="language-plaintext highlighter-rouge">FavoriteExtensions</code>.</p>
 
 <blockquote class="solution">
-  <solution-title>``client/src/entry/analysis/router.js``</solution-title>
+  <div id="solution-client-src-entry-analysis-router-js" class="box-title"><button type="button" aria-controls="solution-client-src-entry-analysis-router-js-contents" aria-expanded="true" aria-label="Toggle solution box: ``client/src/entry/analysis/router.js``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``client/src/entry/analysis/router.js``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">client/src/entry/analysis/router.js</code>:</p>
 
@@ -1491,7 +1478,7 @@ and the API entry points we implemented earlier and renders an editable list of
 extensions based on it.</p>
 
 <blockquote class="solution">
-  <solution-title>``client/src/components/User/FavoriteExtensions/List.test.js``</solution-title>
+  <div id="solution-client-src-components-user-favoriteextensions-list-test-js" class="box-title"><button type="button" aria-controls="solution-client-src-components-user-favoriteextensions-list-test-js-contents" aria-expanded="true" aria-label="Toggle solution box: ``client/src/components/User/FavoriteExtensions/List.test.js``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``client/src/components/User/FavoriteExtensions/List.test.js``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">client/src/components/User/FavoriteExtensions/List.test.js</code>:</p>
 
@@ -1608,7 +1595,7 @@ individual components make sense before continuing though.</p>
 <code class="language-plaintext highlighter-rouge">List.vue</code> that fullfills the contract described by the unit test.</p>
 
 <blockquote class="solution">
-  <solution-title>``client/src/components/User/FavoriteExtensions/List.vue``</solution-title>
+  <div id="solution-client-src-components-user-favoriteextensions-list-vue" class="box-title"><button type="button" aria-controls="solution-client-src-components-user-favoriteextensions-list-vue-contents" aria-expanded="true" aria-label="Toggle solution box: ``client/src/components/User/FavoriteExtensions/List.vue``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``client/src/components/User/FavoriteExtensions/List.vue``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">client/src/components/User/FavoriteExtensions/List.vue</code>:</p>
 
@@ -1705,7 +1692,7 @@ component from the analysis router above by importing it from
 <code class="language-plaintext highlighter-rouge">FavoriteExtensions</code>.</p>
 
 <blockquote class="solution">
-  <solution-title>``client/src/components/User/FavoriteExtensions/index.js``</solution-title>
+  <div id="solution-client-src-components-user-favoriteextensions-index-js" class="box-title"><button type="button" aria-controls="solution-client-src-components-user-favoriteextensions-index-js-contents" aria-expanded="true" aria-label="Toggle solution box: ``client/src/components/User/FavoriteExtensions/index.js``"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution: ``client/src/components/User/FavoriteExtensions/index.js``<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Possible changes to file <code class="language-plaintext highlighter-rouge">client/src/components/User/FavoriteExtensions/index.js</code>:</p>
 
@@ -1872,8 +1859,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
         <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
-
         <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
         <script type="text/javascript">
         var snippets=document.querySelectorAll('div.highlight');

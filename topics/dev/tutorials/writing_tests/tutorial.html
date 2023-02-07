@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
-        <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml" />
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/dev/tutorials/writing_tests/tutorial.html" />
@@ -32,230 +31,15 @@
         
         
         
-        
         <meta name="description" content="Galaxy is an open-source project. Everyone can contribute..." />
         <meta property="og:site_name" content="Galaxy Training Network" />
         <meta property="og:title" content="Galaxy Training: Writing Automated Tests for Galaxy" />
         <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute..." />
         <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
 
-    </head>
-    <body data-spy="scroll" data-target="#toc">
-        <header>
-    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
-        <div class="container">
-            <a class="navbar-brand" href="/training-material/">
-                <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
-                Galaxy Training!
-            </a>
-
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="top-navbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        
-                        <a class="nav-link" href="/training-material/topics/dev" title="Go back to list of tutorials">
-                            <i class="far fa-folder" aria-hidden="true"></i> Development in Galaxy
-                        </a>
-                        
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
-                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            
-                              <strong class="dropdown-header">Automatic Translations</strong>
-            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
-                            Français
-                            </a>
-                            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
-                            日本語
-                            </a>
-                            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
-                            Español
-                            </a>
-                            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
-                            Português
-                            </a>
-                            
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
-                            العربية
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url" title="">
-                            And more!
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
-        <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
-    </a>
-    <div class="dropdown-menu dropdown-menu-right">
-        <!-- disable Tess for now
-        <form method="get" action="https://tess.elixir-europe.org/materials">
-            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
-            <input type="hidden" value="Galaxy Training" name="content_provider">
-            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
-        </form>
-        -->
-
-        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQs">
-           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
-        </a>
         
-        
-        <a class="dropdown-item" href="/training-material/topics/dev/faqs/" title="Check our FAQs for the Development in Galaxy topic">
-           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
-        </a>
-        
-        
-        <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
-            <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
-        </a>
-        <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Discuss on gitter">
-           <i class="fab fa-gitter" aria-hidden="true"></i><span class="visually-hidden">gitter</span> Discuss on Gitter
-        </a>
-    </div>
-</li>
-
-
-                    <li class="nav-item dropdown">
-    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Extras">
-        <i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">galaxy-star</span> Extras
-    </a>
-    <div class="dropdown-menu dropdown-menu-right">
-
-        
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/dev/tutorials/writing_tests/tutorial.md" title="Edit on GitHub">
-          <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
-        </a>
-
-        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this repository">
-            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN statistics
-        </a>
-
-        <a class="dropdown-item" href="https://plausible.galaxyproject.eu/training.galaxyproject.org?period=12mo&page=/training-material/topics/dev/tutorials/writing_tests/tutorial.html" title="Show view statistics of this page">
-            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
-        </a>
-
-        <!-- link to feedback -->
-        
+        <script type="application/ld+json">
             
-            
-                <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
-                    <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
-                </a>
-            
-        
-
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Theme
-            </div>
-
-            <div id="theme-selector" data-toggle="buttons">
-                <label data-value="default" class="btn btn-secondary">
-                    <input type="radio" name="options" id="default" autocomplete="off"> Default
-                </label>
-                <label data-value="night" class="btn btn-secondary">
-                    <input type="radio" name="options" id="night" autocomplete="off"> Night
-                </label>
-                <label data-value="midnight" class="btn btn-secondary">
-                    <input type="radio" name="options" id="midnight" autocomplete="off"> Midnight
-                </label>
-                <label data-value="rainbow" class="btn btn-secondary">
-                    <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
-                </label>
-                <label data-value="progress" class="btn btn-secondary">
-                    <input type="radio" name="options" id="progress" autocomplete="off">🏳️‍🌈
-                </label>
-                <label data-value="halloween" class="btn btn-secondary">
-                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
-                </label>
-                <label data-value="straya" class="btn btn-secondary">
-                    <input type="radio" name="options" id="downunder" autocomplete="off"> 🇦🇺
-                </label>
-            </div>
-
-        </div>
-
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
-            </div>
-
-            <div id="archive-selector">
-            
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/dev/tutorials/writing_tests/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
-            
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/dev/tutorials/writing_tests/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
-            
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/dev/tutorials/writing_tests/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
-            
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
-            </div>
-
-        </div>
-
-    </div>
-</li>
-
-
-                    <!-- Search bar-->
-                    <li class="nav-item">
-                      <div id="navbarSupportedContent" role="search">
-                        <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
-                          <i class="fas fa-search nav-link" aria-hidden="true"></i>
-                          <div class="md-form mb-2">
-                            <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
-                          </div>
-                        </form>
-                      </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-        <div class="container main-content" role="main">
-        
-
-
-
-
-
-
-
-
-
-
-
-<!-- Gitter -->
-
-
-
-
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/dev'
-  };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
-<script type="application/ld+json">
-    
 
 
 {
@@ -465,7 +249,210 @@
     }
   ]
 }
+        </script>
+        
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <header>
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
+        <div class="container">
+            <a class="navbar-brand" href="/training-material/">
+                <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
+                Galaxy Training!
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="top-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="/training-material/topics/dev" title="Go back to list of tutorials">
+                            <i class="far fa-folder" aria-hidden="true"></i> Development in Galaxy
+                        </a>
+                        
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
+                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                              <strong class="dropdown-header">Automatic Translations</strong>
+            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
+                            Français
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
+                            日本語
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
+                            Español
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
+                            Português
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url">
+                            العربية
+                            </a>
+                            
+                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/dev/tutorials/writing_tests/tutorial.html&edit-text=&act=url" title="">
+                            And more!
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
+        <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <!-- disable Tess for now
+        <form method="get" action="https://tess.elixir-europe.org/materials">
+            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
+            <input type="hidden" value="Galaxy Training" name="content_provider">
+            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
+        </form>
+        -->
+
+        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQs">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
+        </a>
+        
+        
+        <a class="dropdown-item" href="/training-material/topics/dev/faqs/" title="Check our FAQs for the Development in Galaxy topic">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
+        </a>
+        
+        
+        <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
+            <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
+        </a>
+        <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Discuss on gitter">
+           <i class="fab fa-gitter" aria-hidden="true"></i><span class="visually-hidden">gitter</span> Discuss on Gitter
+        </a>
+    </div>
+</li>
+
+
+                    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Extras">
+        <i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">galaxy-star</span> Extras
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+
+        
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/dev/tutorials/writing_tests/tutorial.md" title="Edit on GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+        </a>
+
+        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this repository">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN statistics
+        </a>
+
+        <a class="dropdown-item" href="https://plausible.galaxyproject.eu/training.galaxyproject.org?period=12mo&page=/training-material/topics/dev/tutorials/writing_tests/tutorial.html" title="Show view statistics of this page">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
+        </a>
+
+        <!-- link to feedback -->
+        
+            
+            
+                <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
+                    <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
+                </a>
+            
+        
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Theme
+            </div>
+
+            <div id="theme-selector" data-toggle="buttons">
+                    <button class="btn" data-theme="default">Default</button>
+                    <button class="btn" data-theme="night">Night</button>
+                    <button class="btn" data-theme="midnight">Midnight</button>
+                    <button class="btn" data-theme="rainbow">Rainbow</button>
+                    <button class="btn" data-theme="blm">✊🏿</button>
+                    <button class="btn" data-theme="progress" >🏳️‍🌈</button>
+                    <button class="btn" data-theme="halloween">🎃</button>
+                    <button class="btn" data-theme="straya">🇦🇺</button>
+            </div>
+
+        </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
+            </div>
+
+            <div id="archive-selector">
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/dev/tutorials/writing_tests/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/dev/tutorials/writing_tests/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/dev/tutorials/writing_tests/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+            </div>
+
+        </div>
+
+    </div>
+</li>
+
+
+                    <!-- Search bar-->
+                    <li class="nav-item">
+                      <div id="navbarSupportedContent" role="search">
+                        <!-- Search form -->
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                          <i class="fas fa-search nav-link" aria-hidden="true"></i>
+                          <div class="md-form mb-2">
+                            <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
+                          </div>
+                        </form>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+        <div class="container main-content" role="main">
+        
+
+
+
+
+
+
+
+
+
+
+
+<!-- Gitter -->
+
+
+
+
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+  room: 'galaxyproject/dev'
+  };
 </script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <section class="tutorial topic-dev">
     <h1 data-toc-skip>Writing Automated Tests for Galaxy</h1>
@@ -735,7 +722,7 @@
 <h1 id="local-development-environment-setup">Local development environment setup</h1>
 
 <!--SNIPPET-->
-<blockquote class="tip">   <div id="tip-how-to-contribute-to-galaxy" class="box-title"><button type="button" aria-controls="tip-how-to-contribute-to-galaxy-contents" aria-expanded="true" aria-label="Toggle tip box: How to Contribute to Galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: How to Contribute to <span class="notranslate">Galaxy</span><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>To contribute to <span class="notranslate">galaxy</span>, a GitHub account is required. Changes are proposed via a <a href="https://docs.github.com/en/github/collaborating-with-pull-requests">pull request</a>. This allows the project maintainers to review the changes and suggest improvements.</p>   <p>The general steps are as follows:</p>   <ol>   <li>Fork the <span class="notranslate">Galaxy</span> repository</li>   <li>Clone your fork</li>   <li>Make changes in a new branch</li>   <li>Commit your changes, push branch to your fork</li>   <li>Open a pull request for this branch in the <span class="notranslate">upstream</span> <span class="notranslate">Galaxy</span> repository</li> </ol>   <blockquote class="details">   <details-title>Git, Github, and <span class="notranslate">Galaxy</span> Core</details-title>   <p>For a lot more information about Git branching and managing a repository on Github,  see the <a href="/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html">Contributing with GitHub via command-line</a> tutorial.</p>   <p>The <a href="/training-material/topics/dev/tutorials/architecture/slides.html"><span class="notranslate">Galaxy</span> Core Architecture slides</a> have a lot of important <span class="notranslate">Galaxy</span> core-related information related to branches,  project management, and contributing to <span class="notranslate">Galaxy</span> - under the Project Management section of the slides.</p> </blockquote> </blockquote>
+<blockquote class="tip">   <div id="tip-how-to-contribute-to-galaxy" class="box-title"><button type="button" aria-controls="tip-how-to-contribute-to-galaxy-contents" aria-expanded="true" aria-label="Toggle tip box: How to Contribute to Galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: How to Contribute to <span class="notranslate">Galaxy</span><span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>To contribute to <span class="notranslate">galaxy</span>, a GitHub account is required. Changes are proposed via a <a href="https://docs.github.com/en/github/collaborating-with-pull-requests">pull request</a>. This allows the project maintainers to review the changes and suggest improvements.</p>   <p>The general steps are as follows:</p>   <ol>   <li>Fork the <span class="notranslate">Galaxy</span> repository</li>   <li>Clone your fork</li>   <li>Make changes in a new branch</li>   <li>Commit your changes, push branch to your fork</li>   <li>Open a pull request for this branch in the <span class="notranslate">upstream</span> <span class="notranslate">Galaxy</span> repository</li> </ol>   <blockquote class="details">   <div id="details-git-github-and-span-class-quot-notranslate-quot-galaxy-span-core" class="box-title"><button type="button" aria-controls="details-git-github-and-span-class-quot-notranslate-quot-galaxy-span-core-contents" aria-expanded="true" aria-label="Toggle details box: Git, Github, and <span class=&quot;notranslate&quot;>Galaxy</span> Core"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Details: Git, Github, and <span class=&quot;notranslate&quot;>Galaxy</span> Core<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>   <p>For a lot more information about Git branching and managing a repository on Github,  see the <a href="/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html">Contributing with GitHub via command-line</a> tutorial.</p>   <p>The <a href="/training-material/topics/dev/tutorials/architecture/slides.html"><span class="notranslate">Galaxy</span> Core Architecture slides</a> have a lot of important <span class="notranslate">Galaxy</span> core-related information related to branches,  project management, and contributing to <span class="notranslate">Galaxy</span> - under the Project Management section of the slides.</p> </blockquote> </blockquote>
 
 <blockquote class="notranslate hands_on">
   <div id="hands-on-setup-your-local-galaxy-instance" class="box-title" aria-label="hands-on box: Setup your local Galaxy instance"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Setup your local <span class="notranslate">Galaxy</span> instance</div>
@@ -830,7 +817,7 @@
 <p>If your test fails, one way to debug it is to insert a <code class="language-plaintext highlighter-rouge">breakpoint()</code> statement into the body of the test (right after the call to <code class="language-plaintext highlighter-rouge">_get</code> would be a logical spot), and then use <a href="https://docs.python.org/3/library/pdb.html">pdb</a>, Python’s interactive debugger, to explore the response at runtime with the test paused (see <a href="/training-material/topics/dev/tutorials/debugging/tutorial.html">Debugging <span class="notranslate">Galaxy</span></a> for more details on using pdb to debug <span class="notranslate">Galaxy</span>).</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution" class="box-title"><button type="button" aria-controls="solution-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Example of a basic API test.</p>
 
@@ -888,7 +875,7 @@
 <p>The response will return the Role object, so testing it is straightforward.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-1" class="box-title"><button type="button" aria-controls="solution-1-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>API test for creating an object.</p>
 
@@ -955,7 +942,7 @@
 <p>We could generate our own unique name, but we can also simply use an existing method used across <span class="notranslate">Galaxy</span>’s tests: <code class="language-plaintext highlighter-rouge">get_random_name()</code> (we need to add an import and override the <code class="language-plaintext highlighter-rouge">setUp</code> method for that: see the solution code). Now we have a test we can safely run together with our old test (or with any number of other tests that create role objects).</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-2" class="box-title"><button type="button" aria-controls="solution-2-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Alte<span class="notranslate">rna</span>tive test for creating an object. Note the <code class="language-plaintext highlighter-rouge">setUp</code> method and the new import.</p>
 
@@ -1016,7 +1003,7 @@
 <p>The question is, how do we create the datasets and the histories (and all their respective dependencies?). One way would be to use the API for each such object. However, that would result in a barely readable test function which would mostly consist of setup code. Instead, we want our tests to be simple and understandable at a glance, and contain as little infrastructure code as possible. Enter dataset populators! This is one of many abstractions available to you that make it much easier to write tests that otherwise would have required nontrivial setup.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-3" class="box-title"><button type="button" aria-controls="solution-3-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Using populators.</p>
 
@@ -1045,7 +1032,7 @@
 <p>And we are done! Here’s the final version of the code we added to this testing module.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-4" class="box-title"><button type="button" aria-controls="solution-4-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Final code.</p>
 
@@ -1141,7 +1128,7 @@
 <p>We’ll start with the <code class="language-plaintext highlighter-rouge">parse_bytesize</code> function. Look at the code of the function and identify the logic that, you think, needs testing. Essentially, you want to ensure that any combination of valid input produces the expected output. Next, add a few tests. (see <a href="https://docs.pytest.org/en/7.1.x/how-to/assert.html">https://docs.pytest.org/en/7.1.x/how-to/assert.html</a> for examples)</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-5" class="box-title"><button type="button" aria-controls="solution-5-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Example of tests for the <code class="language-plaintext highlighter-rouge">parse_bytesize</code> function:</p>
 
@@ -1177,7 +1164,7 @@
 <p>Now let’s add a test that verifies that invalid input raises an error, as expected.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-6" class="box-title"><button type="button" aria-controls="solution-6-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Example of a test verifying a raised exception. Make sure you add the <code class="language-plaintext highlighter-rouge">pytest</code> import.</p>
 
@@ -1200,7 +1187,7 @@
 <p>Let’s move on to the <code class="language-plaintext highlighter-rouge">to_unit</code> method of the <code class="language-plaintext highlighter-rouge">ByteSize</code>class. Just like you did for the previous function, add a few tests that verify that valid input produces expected output, and invalid input raises an error.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-7" class="box-title"><button type="button" aria-controls="solution-7-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Example of tests for the <code class="language-plaintext highlighter-rouge">ByteSize.to_unit</code> method:</p>
 
@@ -1243,7 +1230,7 @@
 <p>Let’s start by factoring out the ByteSize object creation into a fixture (see <a href="https://docs.pytest.org/en/7.1.x/how-to/fixtures.html">https://docs.pytest.org/en/7.1.x/how-to/fixtures.html</a>). In this particular case moving this code into a fixture might be unnecessary, however, it provides an example of an approach that is very useful in more complex scenarios and is heavily used in <span class="notranslate">Galaxy</span>’s testing code.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-8" class="box-title"><button type="button" aria-controls="solution-8-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Factoring out code into a fixture: we declare a fixture using pytest’s built-in <code class="language-plaintext highlighter-rouge">fixture</code> decorator,
 and then simply pass it as an argument to our tests.</p>
@@ -1289,7 +1276,7 @@ and then simply pass it as an argument to our tests.</p>
 <p>Finally, our <code class="language-plaintext highlighter-rouge">test_bytesize_to_unit</code> test has a lot of assert statements of the same form. We can do better! Let’s use pytest’s test parametrization feature (see <a href="https://docs.pytest.org/en/7.1.x/how-to/parametrize.html">https://docs.pytest.org/en/7.1.x/how-to/parametrize.html</a>) to eliminate this redundancy. Again, as with the fixture example, this particular case would be fine without this feature. However, sometime you want to run the same test function on hundreds of different input combinations, in which case this feature is invaluable (e.g. <span class="notranslate">Galaxy</span>’s tool tests, or integration tests for configuration settings).</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-9" class="box-title"><button type="button" aria-controls="solution-9-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Example of parametrizing a test. Replace the previous version of <code class="language-plaintext highlighter-rouge">test_bytesize_to_unit</code> with the
 following. Note that the test function takes 2 additional arguments.</p>
@@ -1335,7 +1322,7 @@ following. Note that the test function takes 2 additional arguments.</p>
 <p>First, let’s test the case when the function returns early - when the email argument is the empty string or when its value is the same as the value of the <code class="language-plaintext highlighter-rouge">email</code> attribute of the provided User object. The first case is trivial, but the next one requires a User object. However, if we think about it, we only care about that user having a given string as its <code class="language-plaintext highlighter-rouge">email</code> attribute. So let’s use a “test double” - a stand-in empty object, and give it an <code class="language-plaintext highlighter-rouge">email</code> attribute. We’ll call it <code class="language-plaintext highlighter-rouge">MockUser</code> (strictly speaking, it’s a stub, and <a href="https://martinfowler.com/articles/mocksArentStubs.html">“mocks aren’t stubs”</a>, but we’ll follow the naming convention often used in <span class="notranslate">Galaxy</span>). We can pass <code class="language-plaintext highlighter-rouge">None</code> as the transaction object in both cases.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-10" class="box-title"><button type="button" aria-controls="solution-10-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Example of replacing an object with a test double:</p>
 
@@ -1383,7 +1370,7 @@ following. Note that the test function takes 2 additional arguments.</p>
 <p>For this, we need to factor out the code that calls the database into its own function - then we can override that function for our test. So let’s modify <code class="language-plaintext highlighter-rouge">lib/<span class="notranslate">galaxy</span>/security/validate_user_input.py</code>.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-11" class="box-title"><button type="button" aria-controls="solution-11-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Factoring out the database call.</p>
 
@@ -1471,7 +1458,7 @@ following. Note that the test function takes 2 additional arguments.</p>
 <p>Now we can use pytest’s “monkeypatch” built-in fixture to replace that function with a stub method and then use it to return <code class="language-plaintext highlighter-rouge">True</code> or <code class="language-plaintext highlighter-rouge">False</code> to test both cases. (see <a href="https://docs.pytest.org/en/7.1.x/how-to/monkeypatch.html?highlight=monkeypatch">https://docs.pytest.org/en/7.1.x/how-to/monkeypatch.html?highlight=monkeypatch</a> for more details).</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-12" class="box-title"><button type="button" aria-controls="solution-12-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Monkeypatching the factored out function. Note the added import.</p>
 
@@ -1497,7 +1484,7 @@ following. Note that the test function takes 2 additional arguments.</p>
 <p>How would you fix this problem?</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-13" class="box-title"><button type="button" aria-controls="solution-13-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Factor out the logic for obtaining both lists:</p>
   <ol>
@@ -1553,7 +1540,7 @@ local variables.</li>
 <p>Run the tests. They still fail. That’s because we haven’t replaced the new functions with a mock for our test. Try to do that - it’s the same approach as we used for monkeypatching the <code class="language-plaintext highlighter-rouge">check_for_existing_email</code> function. Note that both lists should be <code class="language-plaintext highlighter-rouge">None</code> to be ignored.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-14" class="box-title"><button type="button" aria-controls="solution-14-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Monkeypatch the email lists: return <code class="language-plaintext highlighter-rouge">None</code> for both, then override as needed:</p>
 
@@ -1578,7 +1565,7 @@ local variables.</li>
 <p>Now that our tests pass, it’s time to test the last bit of logic: the allowlist and the blocklist. Our first step is to add a simple test to verify that if the allow-list is not empty, only emails with allowed domain names will be validated.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-15" class="box-title"><button type="button" aria-controls="solution-15-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>First take on testing the allowlist.</p>
 
@@ -1598,7 +1585,7 @@ local variables.</li>
 <p>However, again, we are getting a lot of duplication from our monkeypatching code, and there are more tests to come. Time to move some of it into fixtures; <strong>leave only the code that is specific to the test</strong>.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-16" class="box-title"><button type="button" aria-controls="solution-16-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Factor out all common monkeypatching into fixtures. Note the <code class="language-plaintext highlighter-rouge">pytest</code> import.</p>
 
@@ -1658,7 +1645,7 @@ local variables.</li>
 <p>Before we add more tests, let’s reformat our code to group all the tests that target the <code class="language-plaintext highlighter-rouge">validate_email</code> function in one class. Keep in mind that each test gets its own instance of the class - so you cannot share instance state across tests. However, grouping related tests makes the testing module easier to navigate (there are more benefits; see <a href="https://docs.pytest.org/en/7.1.x/getting-started.html#group-multiple-tests-in-a-class">https://docs.pytest.org/en/7.1.x/getting-started.html#group-multiple-tests-in-a-class</a>).</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-17" class="box-title"><button type="button" aria-controls="solution-17-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Group related tests in one class. Note that you need to add <code class="language-plaintext highlighter-rouge">self</code> as the first
 argument to each test function. You also need to add <code class="language-plaintext highlighter-rouge">self</code> to the call to <code class="language-plaintext highlighter-rouge">MockUser()</code>. Leave
@@ -1703,7 +1690,7 @@ the fixtures outside the class body, so that they can be reused by other test co
 <p>Now we have all the infrastructure in place. We need to add 2 more tests. First, you may notice that if the allowlist is not empty, the blocklist is ignored. Let’s write a test to verify this.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-18" class="box-title"><button type="button" aria-controls="solution-18-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Testing ignoring the blocklist.</p>
 
@@ -1724,7 +1711,7 @@ the fixtures outside the class body, so that they can be reused by other test co
 <p>Finally, let’s test the blocklist.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-19" class="box-title"><button type="button" aria-controls="solution-19-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Testing the blocklist.</p>
 
@@ -1740,7 +1727,7 @@ the fixtures outside the class body, so that they can be reused by other test co
 <p>And we are done! Here’s the final version of the code we’ve added to this testing module.</p>
 
 <blockquote class="solution">
-  <solution-title></solution-title>
+  <div id="solution-20" class="box-title"><button type="button" aria-controls="solution-20-contents" aria-expanded="true" aria-label="Toggle solution box: "><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"></span> Solution<span role="button" class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Final code listing (excluding the 2 added imports).</p>
 
@@ -1973,8 +1960,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
         <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
-
         <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
         <script type="text/javascript">
         var snippets=document.querySelectorAll('div.highlight');
