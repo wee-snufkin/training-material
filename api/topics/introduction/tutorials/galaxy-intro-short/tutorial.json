@@ -14,7 +14,8 @@
     "Learn how to use a tool",
     "Learn how to view results",
     "Learn how to view histories",
-    "Learn how to extract and run a workflow"
+    "Learn how to extract and run a workflow",
+    "Learn how to share a history"
   ],
   "time_estimation": "40m",
   "key_points": [
@@ -43,6 +44,7 @@
   "url": "/topics/introduction/tutorials/galaxy-intro-short/tutorial.html",
   "topic_name": "introduction",
   "tutorial_name": "galaxy-intro-short",
+  "dir": "topics/introduction/tutorials/galaxy-intro-short",
   "contributors": [
     {
       "name": "Anna Syme",

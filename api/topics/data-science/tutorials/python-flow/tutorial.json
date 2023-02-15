@@ -62,12 +62,14 @@
   ],
   "priority": 5,
   "notebook": {
-    "language": "python"
+    "language": "python",
+    "pyolite": true
   },
   "tags": [
     "jupyter-notebook"
   ],
   "url": "/topics/data-science/tutorials/python-flow/tutorial.html",
   "topic_name": "data-science",
-  "tutorial_name": "python-flow"
+  "tutorial_name": "python-flow",
+  "dir": "topics/data-science/tutorials/python-flow"
 }
