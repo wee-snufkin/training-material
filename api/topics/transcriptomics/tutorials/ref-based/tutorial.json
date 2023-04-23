@@ -111,19 +111,6 @@
   "slides": false,
   "workflows": [
     {
-      "workflow": "qc-mapping-counting-paired-and-single.ga",
-      "tests": false,
-      "url": "https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/workflows/qc-mapping-counting-paired-and-single.ga",
-      "path": "topics/transcriptomics/tutorials/ref-based/workflows/qc-mapping-counting-paired-and-single.ga",
-      "wfid": "transcriptomics-ref-based",
-      "wfname": "qc-mapping-counting-paired-and-single",
-      "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting-paired-and-single",
-      "license": null,
-      "creators": [
-
-      ]
-    },
-    {
       "workflow": "deg-analysis.ga",
       "tests": true,
       "url": "https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/workflows/deg-analysis.ga",
@@ -131,6 +118,19 @@
       "wfid": "transcriptomics-ref-based",
       "wfname": "deg-analysis",
       "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/deg-analysis",
+      "license": null,
+      "creators": [
+
+      ]
+    },
+    {
+      "workflow": "qc-mapping-counting-paired-and-single.ga",
+      "tests": false,
+      "url": "https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/workflows/qc-mapping-counting-paired-and-single.ga",
+      "path": "topics/transcriptomics/tutorials/ref-based/workflows/qc-mapping-counting-paired-and-single.ga",
+      "wfid": "transcriptomics-ref-based",
+      "wfname": "qc-mapping-counting-paired-and-single",
+      "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting-paired-and-single",
       "license": null,
       "creators": [
 
@@ -212,6 +212,13 @@
       "orcid": "0000-0001-9852-1987",
       "joined": "2017-09",
       "elixir_node": "de",
+      "contact_for_training": true,
+      "location": {
+        "country": "FR",
+        "lat": 45.77,
+        "lon": 3.08
+      },
+      "fediverse": "https://piaille.fr/@bebatut",
       "id": "bebatut",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -292,6 +299,12 @@
       "orcid": "0000-0002-1964-4960",
       "joined": "2019-08",
       "elixir_node": "ch",
+      "contact_for_training": true,
+      "location": {
+        "country": "CH",
+        "lat": 46.52,
+        "lon": 6.56
+      },
       "id": "lldelisle",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/lldelisle.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/lldelisle/"
@@ -304,13 +317,16 @@
       "gitter": "hexylena",
       "joined": "2017-09",
       "elixir_node": "nl",
+      "fediverse": "https://galaxians.garden/hexylena",
+      "contact_for_training": false,
+      "location": {
+        "country": "NL",
+        "lat": 51.91,
+        "lon": 4.46
+      },
       "id": "hexylena",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
     }
-  ],
-  "urls": {
-    "hands_on": "https://training.galaxyproject.org/training-material/api/topics//transcriptomics/tutorials/ref-based/tutorial.json",
-    "slides": "https://training.galaxyproject.org/training-material/api/topics//transcriptomics/tutorials/ref-based/tutorial.json"
-  }
+  ]
 }
