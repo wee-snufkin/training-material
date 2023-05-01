@@ -1,30 +1,31 @@
 ---
 layout: tutorial_hands_on
 
-title: 'Trajectory Analysis using Monocle3 '
+title: 'Inferring Trajectories using Monocle3 (R)'
 subtopic: single-cell-CS
-priority: 5
-zenodo_link: 'https://zenodo.org/record/7078524'
-
-redirect_from:
-- /topics/transcriptomics/tutorials/scrna-case_monocle3-trajectories/tutorial
+priority: 6
+zenodo_link: 'https://zenodo.org/record/7455590'
 
 questions:
-- How can I prepare input files for Monocle starting from an AnnData object?
-- How can I infer lineage relationships between clusters, without a time series?
-- What can trajectory analysis tell us?
-objectives:
-- Identify which operations to perform on an AnnData object to obtain the files needed for Monocle
-- Follow the Monocle3 workflow and choose the right parameter values
-- Compare the outputs from Scanpy and Monocle
-- Interpet trajectory analysis results
+- How do I perform a trajectory analysis using Monocle3 in R?
+- What should I do when Galaxy's Monocle tools are not enough?
+- How do I assign cell types to the clusters?
+- How do I infer lineage relationships between clusters, without a time series?
+- How do I perform batch correction and differential expression analysis in Monocle?
 
-time_estimation: 2H
+objectives:
+- Identify which operations are necessary to transform an AnnData object into the files needed for Monocle
+- Describe the Monocle3 functions in R
+- Recognise steps that can be performed in R, but not with current Galaxy tools
+- Repeat the Monocle3 workflow and choose appropriate parameter values
+- Compare the outputs from Scanpy, Monocle in Galaxy and Monocle in R
+- Describe differential expression analysis methods
+
+time_estimation: 3H
 
 key_points:
-- You should understand your data object sufficiently to be able to extract relevant information for further analysis.
-- Trajectory analysis is highly dependent on the parameter values you choose, as such ‘inferred relationships’ are a bigger mathematical leap. Therefore, you should always check if the output makes biological sense before proceeding to the next step.
-- Comparing the output of two different methods applied on the same dataset might be useful to confirm the results, to ensure that the findings are reliable and even sometimes to find a new piece of information.
+- Monocle3 in R gives more flexibility when it comes to differential expression analysis and plotting, but Galaxy offers great reproducibility and ease of analysis.
+- Comparing the output of several different methods applied on the same dataset might be useful to confirm the results, to ensure that the findings are reliable and even sometimes to find a new piece of information.
 
 requirements:
 -
@@ -34,458 +35,322 @@ requirements:
         - scrna-case_alevin
         - scrna-case_alevin-combine-datasets
         - scrna-case_basic-pipeline
-        - scrna-case_JUPYTER-trajectories
+
+
 tags:
 - single-cell
-- 10x
+- trajectory-analysis
 - paper-replication
-- transcriptomics
 
 contributions:
   authorship:
     - wee-snufkin
   editing:
     - hexylena
-    - nomadscientist
-  testing:
+    - pavanvidem
     - nomadscientist
   funding:
-    - epsrc-training-grant
+    - eosc-life
+
+notebook:
+  language: r
+  snippet: topics/single-cell/tutorials/scrna-case_monocle3-rstudio/preamble.md
 ---
 
-# Introduction
+## Setting up the environment and file upload
+Once the installation is done, we should load the needed packages into our notebook. Navigate back to your `notebook`. If you are using our prepopulated notebook, you can follow the tutorial from there. Otherwise, input the following into your fresh notebook.
 
-This tutorial is a follow-up to the ['Single-cell RNA-seq: Case Study']({% link topics/single-cell/index.md %}). We will use the same sample from the previous tutorials. If you haven’t done them yet, it’s highly recommended that you go through them to get an idea how to [prepare a single cell matrix]({% link topics/single-cell/tutorials/scrna-case_alevin/tutorial.md %}), [combine datasets]({% link topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.md %}) and [filter, plot and process scRNA-seq data]({% link topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.md %}) to get the data in the form we’ll be working on today.
+```r
+install.packages("Rcpp")    # needed for reduce_dimension to avoid AnnoyAngular error; library(Rcpp) might work as well depending on the version
+```
 
-In this tutorial we will perform trajectory analysis using [monocle3](https://cole-trapnell-lab.github.io/monocle3/). You can find out more about the theory behind trajectory analysis in our [slide deck]({% link topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides.html %}). We have already analysed the trajectory of our sample using the ScanPy toolkit in another tutorial: [Trajectory Analysis using Python (Jupyter Notebook) in Galaxy]({% link topics/single-cell/tutorials/scrna-case_JUPYTER-trajectories/tutorial.md %}). However, trajectory analysis is quite sensitive and some methods work better for specific datasets. In this tutorial, you will perform the same steps but using a different method for inferring trajectories. You will then compare the results, usability and outcomes! Sounds exciting, let’s dive into that!
+```r
+library(monocle3)
+library(biomaRt)
+library(magrittr)     # needed for %>%
+library(viridisLite)
+```
 
-{% snippet faqs/galaxy/tutorial_mode.md %}
+```r
+install.packages("anndata")
+```
 
+Alright, the libraries are here - so now let's get our AnnData file.
 
-## Get data
-We will continue to work on the case study data from a mouse model of fetal growth restriction {% cite Bacon2018 %} (see [the study in Single Cell Expression Atlas](https://www.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6945/results/tsne) and [the project submission](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6945/)).
-Monocle3 works great with annotated data, so we will make use of our annotated AnnData object, generated in the previous [tutorial]({% link topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.md %}). So you see - all the hard work of processing data was not in vain! We will also need a ‘clean’ expression matrix, extracted from the AnnData object just before we started the processing.
-You have two options for uploading these datasets. Importing via history is often faster.
+## Upload, view and modify the files
 
-> <hands-on-title>Option 1: Data upload - Import history</hands-on-title>
->
-> 1. Import history from: [input history](https://humancellatlas.usegalaxy.eu/u/j.jakiela/h/monocle3-input-files)
->
->
->    {% snippet faqs/galaxy/histories_import.md %}
->
-> 2. **Rename** {% icon galaxy-pencil %} the the history to your name of choice.
->
-{: .hands_on}
+We can download the file into Jupyter notebook also using a Zendo link. The first argument is the download link and the second one is the name under which the downloaded file is saved:
+```r
+download.file('https://zenodo.org/record/7455590/files/AnnData_filtered.h5ad', 'AnnData.h5ad')
+```
+Then we have to read in this h5ad file:
+```r
+ann <- anndata::read_h5ad('AnnData.h5ad')
+```
+Now we store all the information we need in AnnData object. However, Monocle uses *cell_data_set class* to hold expression data, which requires three input files: `expression_matrix`, `cell_metadata` and `gene_metadata`. Therefore, we have to somehow 'transfer' that information from our AnnData object to Monocle's cell_data_set (cds). AnnData stores a data matrix `X` together with annotations of observations `obs` and variables `var`, so we can extract those parameters and use them for further analysis.
 
-><hands-on-title>Option 2: Data upload - Add to history</hands-on-title>
->
-> 1. Create a new history for this tutorial
-> 2. Import the AnnData object from [Zenodo]({{ page.zenodo_link }})
->
->    ```
->    {{ page.zenodo_link }}/files/AnnData_before_processing.h5ad
->    {{ page.zenodo_link }}/files/Annotated_AnnData.h5ad
->    ```
->
->    {% snippet faqs/galaxy/datasets_import_via_link.md %}
->
-> 3. Check that the datatype is `h5ad`
->
->    {% snippet faqs/galaxy/datasets_change_datatype.md datatype="h5ad" %}
->
-{: .hands_on}
+```r
+expression_matrix <- ann$X
+cell_metadata <- ann$obs
+gene_metadata <- ann$var
+```
 
-> <agenda-title></agenda-title>
+> <tip-title>Uploading files from your computer is also an option!</tip-title>
 >
-> In this tutorial, we will cover:
+> If you already have files containing the expression matrix, genes and cells metadata, you can upload them to JupyLab and generate a cds file from them instaed. For example, if you first downloaded the files from Galaxy, your files will have the `.tabular` extension. In this case, we will use the `read.delim()` function to read them in. In this function, the first argument is the file path - in our case, the files are in the same folder as the notebook, so the file path is the same as the file name. You can always check that by right-clicking on the file and choosing `Copy path`. The second argument, `row.names=1` takes the column number of the data file from which to take the row names.
+> ```r
+> # read in the files
+> cell_metadata <- read.delim('cells.tabular', row.names=1)
+> gene_metadata <- read.delim('genes.tabular', row.names=1)
+> expression_matrix <- read.delim('expression.tabular', row.names=1)
+> ```
 >
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Preparing the input files
-
-## Extracting annotations
-
-To run Monocle, we need cell metadata, gene metadata, and an expression matrix file of genes by cells. (In theory, the expression matrix alone could do, but then we wouldn’t have all those useful annotations that we worked on so hard in the previous tutorials!). In order to get these files, we will extract the gene and cell annotations from our AnnData object.
-
- > <question-title></question-title>
->
-> How many lines do you expect to be in the gene and cell metadata files?
->
-> > <solution-title></solution-title>
+> > <question-title></question-title>
 > >
-> > If you click on the step with uploaded annotated AnnData file, you will see on a small preview that this object has 8605 observations and 15395 variables, so we expect to get a cell metadata file with 8605 lines and gene metadata file with 15395 lines (without headers of course!).
+> > Why should we set `row.names=1`?
 > >
-> {: .solution}
+> > > <solution-title></solution-title>
+> > >
+> > > This allows us to ensure that the expression value matrix has the same number of columns as the `cell_metadata` has rows and the same number of rows as the `gene_metadata` has rows. Importantly, the row names of the `cell_metadata` object should match the column names of the expression matrix and the row names of the `gene_metadata` object should match the row names of the expression matrix.
+> > >
+> > {: .solution}
+> {: .question}
 >
-{: .question}
+{: .tip}
 
-> <hands-on-title>Extracting annotations</hands-on-title>
->
-> 1. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Annotated data matrix"*: `Annotated_AnnData`
->    - *"What to inspect?"*: `Key-indexed observations annotation (obs)`
-> 2. Rename {% icon galaxy-pencil %} the observations annotation `Extracted cell annotations (obs)`
->
-> 3. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Annotated data matrix"*: `Annotated_AnnData`
->    - *"What to inspect?"*: `Key-indexed annotation of variables/features (var)`
->
-> 4. Rename {% icon galaxy-pencil %} the annotation of variables `Extracted gene annotations (var)`
->
->
-{: .hands_on}
 
-Quick and easy, isn’t it? However, we need to make some minor changes before we can input these files into the Monocle toolsuite.
-
-## Cell metadata
-Our current dataset is not just T-cells: as you might remember from the last tutorial, we identified a cluster of macrophages as well. This might be a problem, because the trajectory algorithm will try to find relationships between all the cells (even if they are not necessarily related!), rather than only the T-cells that we are interested in. We need to remove those unwanted cell types to make the analysis more accurate.
-
-The Manipulate AnnData tool allows you to filter observations or variables, and that would be the most obvious way to remove those cells. However, given that we don't need an AnnData object, it's a lot quicker to edit a table rather than manipulate an AnnData object. Ultimately, we need cell metadata, gene metadata and expression matrix files that have macrophages removed, and that have the correct metadata that Monocle looks for. With some table manipulation, we’ll end up with three separate files, ready to be passed onto Monocle3.
-
- > <question-title></question-title>
+><tip-title>Reading in the files for RStudio users</tip-title>
 >
-> Where is the information about cell types stored?
+> If you are working in RStudio Cloud, you have to click on ‘Upload’ button in the right bottom window toolbar and choose already downloaded data files to upload. You should now see all three files in this window. You might want to rename the files to make their names shorter.
 >
-> > <solution-title></solution-title>
-> >
-> > We have already extracted the cell annotations file - in one of the columns you can find the information about cell type, assigned to each cell.
-> > ![Cell annotations along the top, n_genes, n_counts, louvain, cell_type with a cell barcode and subsequent metadata as each row](../../images/scrna-casestudy-monocle/example_cell_annotations.png "Example cell annotations")
-> >
-> {: .solution}
+> ![Screenshot of Files tab in RStudio, highlighting 'Upload' and 'Rename' buttons and listing three uploaded and renamed files: 'cell_metadata', 'gene_metadata', 'expression_matrix'.](../../images/scrna-casestudy-monocle/r_files_tab.png "The view of the Files tab with uploaded files and highlighted relevant buttons.")
 >
-{: .question}
+> If you are using RStudio Galaxy tool, you can get data directly from your history by running:
+> ```
+># get the files from Galaxy history
+>file.copy(gx_get(2), "cell_metadata")
+>file.copy(gx_get(3), "gene_metadata")
+>file.copy(gx_get(4), "expression_matrix")
+>```
+>The number in the brackets corresponds to the dataset number in your history, so make sure you put the right number for the corresponding file. We can specify the name of the fetched files in the quotation marks, as shown above. All three files should appear in the Files tab window.
+>
+> If you are using RStudio locally, then you don’t have to bother about uploading the files – just run `file.choose()` and choose the corresponding file which you want to get path to:
+>```
+># get the file path
+>cells_path <- file.choose()
+>genes_path <- file.choose()
+>expression_path <- file.choose()
+>```
+> You should now see the new variables in the Environment tab window.
+>
+{: .tip}
 
-Click on `Extracted cell annotations (obs)` file to see a small preview window. This shows you that the column containing the cell types has number 22.  We’ll need that to filter out unwanted cell types!
 
-> <warning-title>Check the column number!</warning-title>
-> If you are working on a different dataset, the number of the ‘cell_type’ column might be different, so make sure you check it on a preview and use the correct number!
-{: .warning}
+According to the [Monocle3 documentation](https://cole-trapnell-lab.github.io/monocle3/docs/starting/), the `expression_matrix` should have genes as rows and cells as columns. Let's check if that's the case here.
+```r
+head(expression_matrix,c(5, 5))           # preview the content of the file by calling its the first 5 rows by 5 columns
+```
+We can see that in our matrix rows are cells and genes are columns, so we have to transpose the matrix simply using function `t()`. But before doing so, we will change its type from dataframe to matrix - this is Monocle's requirement to generate cell_data_set afterwards.
+```r
+expression_matrix <- as.matrix(expression_matrix)   # change the type to matrix
+expression_matrix <- t(expression_matrix)           # transpose the matrix
+```
+Another condition we have to satisfy is that one of the columns of the `gene_metadata` should be named "gene_short_name", which represents the gene symbol for each gene. Some functions won't work without that. Do we have such a column? Let's check.
+```r
+head(gene_metadata)             # preview the top ten rows of the file to check the name of the column containing gene symbols
+```
 
-> <hands-on-title>Filter out macrophages</hands-on-title>
->
-> 1. {% tool [Filter](Filter1) %} with the following parameters:
->    - {% icon param-file %} *"Filter"*: `Extracted cell annotations (obs)`
->    - *"With following condition"*: `c22!='Macrophages'`
->    - *"Number of header lines to skip"*: `1`
->    - That’s it - our cell annotation file is ready for Monocle! Let’s rename it accordingly.
-> 2. **Rename** {% icon galaxy-pencil %} the output: `Cells input data for Monocle3`
->
->    > <details-title>Parameters</details-title>
->    >
->    > - `c22` means column no. 22 - that's the column with cell types, and it will be filtered for the macrophages
->    > - `!=` means 'not equal to' - we want to keep the cell types which ARE NOT macrophages
->    {: .details}
->
->    > <tip-title>Other unwanted cell types</tip-title>
->    >
->    > It might happen that during clustering you’ll find another cell type that you want to get rid of for the trajectory analysis. Then simply re-run this tool on already filtered file and change ‘Macrophages’ to another unwanted cell type.
->    {: .tip}
-{: .hands_on}
+The second column indeed contains gene symbols, but is called "Symbol" instead of "gene_short_name". That can be easily changed by a simple assignment, as long as we know the number of the column that we want to modify. In our case the gene symbols are stored in column 2. We can access the column names by `colnames()`.
+```r
+colnames(gene_metadata)[2] <- 'gene_short_name'     # change the column name
+colnames(gene_metadata)                             # see the changes
+```
 
-## Gene annotations
-Sometimes certain functionalities require a specific indication of where the data should be taken from. Monocle3 tools expect that the genes column is named ‘gene_short_name’. Let's check what the name of that column is in our dataset currently.
+## Generating CDS object
+Now let’s store our files in one object – the `cell_data_set`. This is the main class used by Monocle to hold single cell expression data. The class is derived from the Bioconductor SingleCellExperiment class. Similar to Python's AnnData, the cell_data_set stores a data matrix together with annotations of observations and variables. There are three ways of creating CDS object in monocle:
+-	Using ```new_cell_data_set() ``` function with three data frames as arguments (not their paths!): expression matrix (can also be a sparseMatrix), cell metadata and gene metadata
+-	Using ```load_cellranger_data() ``` function providing the path to the folder containing 10X Genomics Cell Ranger output files. This function takes an argument `umi_cutoff` that determines how many reads a cell must have to be included
+-	Using ```load_mm_data() ``` function providing the paths to matrix file and two metadata files (features and cell information).
 
-> <question-title></question-title>
->
-> 1. Where can you check the header of a column containing genes names?
-> 2. What is the name of this column?
->
-> > <solution-title></solution-title>
-> >
-> > 1. Our extracted gene annotations file! Either by clicking on the eye icon {% icon solution %} or having a look at the small preview window.
-> > 2. In our dataset the gene names are stored in a column called ‘Symbol’ - we need to change that!
-> > ![The dataset in the history has a preview window showing the columns of the extracted gene annotation with each gene as a row and the metadata - index, ID, symbol - as the column names](../../images/scrna-casestudy-monocle/window_in_history.png "Preview window in the history")
-> >
-> {: .solution}
->
-{: .question}
+In this tutorial we will use the first option:
+```r
+# create CDS object
+cds <- new_cell_data_set(expression_matrix, cell_metadata, gene_metadata)
+```
+We are now ready to process our data!
 
-Let’s click on the `Extracted gene annotations (var)` file to see a small preview. We can see that the gene names are in the third column with a header `Symbol`. Keep that in mind - we’ll use that in a second!
-
-> <hands-on-title>Changing the column name</hands-on-title>
+> <details-title>Format conversion</details-title>
 >
-> 1. {% tool [Column Regex Find And Replace](toolshed.g2.bx.psu.edu/repos/galaxyp/regex_find_replace/regexColumn1/1.0.2) %} with the following parameters:
->    - {% icon param-file %} *"Select cells from"*: `Extracted gene annotations (var)`
->    - *"using column"*: `c3` or `Column: 3`
->    - In *"Check"*:
->        - {% icon param-repeat %} *"Insert Check"*
->            - *"Find Regex"*: `Symbol`
->            - *"Replacement"*: `gene_short_name`
-> 2. Check that the datatype is `tabular`
->
->    {% snippet faqs/galaxy/datasets_change_datatype.md datatype="tabular" %}
->     - Voila! That’s the gene input for Monocle! Just a quick rename...
-> 3. **Rename** {% icon galaxy-pencil %} the output: `Genes input data for Monocle3`
->
-{: .hands_on}
-
-## Expression matrix
-Last, but not least! And in fact, the most important! The expression matrix contains all the values representing the expression level of a particular gene in a cell. This is why in theory the expression matrix is the only input file required by Monocle3. Without annotation files the CDS data can still be generated - it will be quite bare and rather unhelpful for interpretation, but it's possible to process.
-
-So, the values in the expression matrix are just numbers. But do you remember that we have already done some processing such as normalisation and the calculation of principal components in the AnnData object in the previous tutorial? That affected our expression matrix. Preprocessing is one of the steps in the Monocle3 workflow, so we want to make sure that the calculations are done on a ‘clean’ expression matrix. If we apply too many operations on our raw data, it will be too ‘deformed’ to be reliable. The point of the analysis is to use algorithms that make the enormous amount of data understandable in order to draw meaningful conclusions in accordance with biology.
-
-So how do we do that?
-> <question-title></question-title>
->
-> 1. How many cells and genes are there in the `Anndata_before_processing` file?
-> 2. How many lines are there in `Cells input data for Monocle3`?
-> 3. How many lines are there in `Genes input data for Monocle3`?
->
-> > <solution-title></solution-title>
-> > You can answer all the questions just by clicking on the given file and looking at the preview window.
-> > 1. [n_obs x n_vars] = 31178 x 35734, so there are 31178 cells and 35734 genes.
-> > 2. 8570 lines, including a header, which makes 8569 cells.
-> > 3. 15396 lines, including a header, which makes 15395 genes.
-> >
-> {: .solution}
->
-{: .question}
-
-As you can see, there are way more genes and cells in the unprocessed AnnData file, so the expression matrix is much bigger than we need it to be. If the genes and cells we prepared for Monocle3 are not the same as in the expression matrix, Monocle3 will crash. Therefore, we have to filter that big, clean matrix and adjust it to our already prepared genes and cells files. But first, let’s extract the matrix from the unprocessed AnnData object.
-
-> <hands-on-title>Extracting matrix</hands-on-title>
->
-> 1. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Annotated data matrix"*: `AnnData_before_processing`
->    - *"What to inspect?"*: `The full data matrix`
-> 2. **Rename** {% icon galaxy-pencil %} the output: `Unprocessed expression matrix`
->
-{: .hands_on}
-
-If you have a look at the preview of `Unprocessed expression matrix`, you’ll see that the first column contains the cell barcodes, while the first row - the gene IDs. We would like to keep only the values corresponding to the cells and genes that are included in `Cells input data for Monocle3` and `Genes input data for Monocle3`. How do we do it? First, we compare the cell barcodes from `Cells input data for Monocle3` to those in `Unprocessed expression matrix` and ask Galaxy to keep the values of the matrix for which the barcodes in both files are the same. Then, we’ll do the same for gene IDs. We will cut the first columns from `Cells input data for Monocle3` and `Genes input data for Monocle3` to be able to compare those columns side by side with the matrix file.
-
-> <hands-on-title>Cutting out the columns</hands-on-title>
->
-> 1. {% tool [Cut](Cut1) %} with the following parameters:
->    - *"Cut columns"*: `c1`
->    - {% icon param-file %} *"From"*: `Cells input data for Monocle3`
-> 2. **Rename** {% icon galaxy-pencil %} the output: `Cells IDs`
-> 3. {% tool [Cut](Cut1) %} with the following parameters:
->    - *"Cut columns"*: `c1`
->    - {% icon param-file %} *"From"*: `Genes input data for Monocle3`
-> 4. **Rename** {% icon galaxy-pencil %} the output: `Genes IDs`
->
-{: .hands_on}
-
-> <hands-on-title> Filter matrix values by cell barcodes</hands-on-title>
->
-> 1. {% tool [Join two Datasets](join1) %} with the following parameters:
->    - {% icon param-file %} *"Join"*: `Cells IDs`
->    - *"using column"*: `c1`or `Column: 1`
->    - {% icon param-file %} *"with"*: `Unprocessed expression matrix`
->    - *"and column"*: `c1`or `Column: 1`
->    - *"Keep lines of first input that do not join with second input"*: `Yes`
->    - *"Keep lines of first input that are incomplete"*: `Yes`
->    - *"Fill empty columns"*: `No`
->    - *"Keep the header lines"*: `Yes`
-> 2. **Rename** {% icon galaxy-pencil %} the output: `Pre-filtered matrix (by cells)`
->
-{: .hands_on}
-
-Look at the preview of the output file. First of all, you can see that there are 8570 lines (8569 cells) instead of 31178 cells that were present in the matrix. That’s exactly what we wanted to achieve - now we have raw information for the T-cells that we have filtered. However, the step that we have already performed left us with the matrix whose first and second columns are the same - let’s get rid of one of those!
-
-> <hands-on-title>Remove duplicate column (cells IDs)</hands-on-title>
->
-> 1. {% tool [Advanced Cut](toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0) %} with the following parameters:
->    - {% icon param-file %} *"File to cut"*: `Pre-filtered matrix (by cells)`
->    - *"Operation"*: `Discard`
->    - *"Cut by"*: `fields`
->        - *"List of Fields"*: `c1`
-> 2. **Rename** {% icon galaxy-pencil %} the output: `Filtered matrix (by cells)`
->
-{: .hands_on}
-
-Now we will perform the same steps, but for gene IDs. But gene IDs are currently in the first row, so we need to transpose the matrix, and from there we can repeat the same steps as above for Gene IDs.
-
-> <hands-on-title>Filter matrix by gene IDs</hands-on-title>
->
-> 1. {% tool [Transpose](toolshed.g2.bx.psu.edu/repos/iuc/datamash_transpose/datamash_transpose/1.1.0+galaxy2) %} with the following parameters:
->    - {% icon param-file %} *"Input tabular dataset"*: `Filtered matrix (by cells)`
->    - The matrix is now ready to be filtered by gene IDs!
-> 2. {% tool [Join two Datasets](join1) %} with the following parameters:
->    - {% icon param-file %} *"Join"*: `Genes IDs`
->    - *"using column"*: `c1` or `Column: 1`
->    - {% icon param-file %} *"with"*: output of **Transpose** {% icon tool %}
->    - *"and column"*: `c1` or `Column: 1`
->    - *"Keep lines of first input that do not join with second input"*: `Yes`
->    - *"Keep lines of first input that are incomplete"*: `Yes`
->    - *"Fill empty columns"*: `No`
->    - *"Keep the header lines"*: `Yes`
-> 3. {% tool [Advanced Cut](toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0) %} with the following parameters:
->    - {% icon param-file %} *"File to cut"*: output of **Join two Datasets** {% icon tool %}
->    - *"Operation"*: `Discard`
->    - *"Cut by"*: `fields`
->        - *"List of Fields"*: `c1`
->    -  Monocle3 requires that in the matrix rows are genes, and columns are cells - that is what we've got, so there is no need to transpose matrix again. The expression matrix is ready! Let's just rename it...
-> 4. **Rename** {% icon galaxy-pencil %} the output: `Expression matrix for Monocle3`
->
-{: .hands_on}
-
-{% icon congratulations %} Finally! We have prepared all the files to pass them onto the Monocle3 workflow!
-
-# Monocle3 workflow
-
-Monocle3 turns the expression matrix, cell and gene annotations into an object called cell_data_set (CDS), which holds single-cell expression data.
-
-> <details-title>Input files</details-title>
->
-> Here is what [Monocle3 documentation](https://cole-trapnell-lab.github.io/monocle3/docs/starting/) says about the required three input files:
->    - **expression_matrix**: a numeric matrix of expression values, where rows are genes, and columns are cells. Must have the same number of columns as the cell_metadata has rows and the same number of rows as the gene_metadata has rows.
->    - **cell_metadata**: a data frame, where rows are cells, and columns are cell attributes (such as cell type, culture condition, day captured, etc.)
->    - **gene_metadata**: a data frame, where rows are features (e.g. genes), and columns are gene attributes, such as biotype, gc content, etc. One of its columns should be named "gene_short_name", which represents the gene symbol or simple name (generally used for plotting) for each gene.
+>  Since Monocle’s CDS object is analogous to Python's AnnData, why don’t we use some kind of conversion between those two formats? There is indeed a package called `sceasy` that helps easy conversion of different single-cell data formats to each other. However, when we tested this conversion on our dataset and then used Monocle to plot the expression of genes, the plots were not correct – the expression was shown to be identical throughout the sample. For comparison, Seurat did well when plotting gene expression of the same converted object! Although conversion functions are very handy, you have to be aware that their output might be interpreted differently by certain packages. Therefore, to make sure that the analysis is reliable, we decided to generate CDS object directly using Monocle’s function.
+> ![Comparison between plots of gene expression generated by Monocle and Seurat using the CDS object that was converted from AnnData using SCEasy tool. Gene expression in Monocle plots is identical throughout the sample, while the expression of the same genes plotted by Seurat is noticeable only in specific clusters.](../../images/scrna-casestudy-monocle/monocle_seurat.png "Comparison between plots of gene expression generated by Monocle and Seurat using the CDS object that was converted from AnnData using SCEasy tool.")
 >
 {: .details}
 
-The Monocle3 workflow looks like the following, which should seem pretty similar to what you've done throughout the case study.
+# Additional step: adding genes symbols based on their IDs
+> <warning-title>Additional step</warning-title>
+>  This step is not necessary for the dataset we are working on but some users might find it helpful when analysing their own data.
+>
+{: .warning}
 
+If you remember the very first tutorial in the case study, we started with gene IDs and added gene symbols based on the Ensembl GTF file.  
+But what if we didn’t have the genes symbols in our CDS object and wanted to add them now? Of course - it's possible! We will also base this annotation on Ensembl - the genome database – with the use of the library BioMart. We will use the same archive as in the Alevin tutorial (Genome assembly GRCm38) to get the gene names. Please note that the updated version (GRCm39) is available, but some of the gene IDs are not in that EnsEMBL database. The code below is written in a way that it will work for the updated dataset too, but will produce ‘NA’ where the corresponding gene name couldn’t be found.
+```r
+cds_extra <- cds                                        # assign our CDS to a new object for the demonstration purpose
+head(rownames(fData(cds_extra)))                        # preview of the gene IDs as rownames
+```
+```r
+# get relevant gene names
+library("biomaRt")                                      # load the BioMart library
+ensembl.ids <- rownames(fData(cds_extra))               # fData() allows to access cds rowData table
+mart <- useEnsembl(biomart = "ENSEMBL_MART_ENSEMBL")    # connect to a specified BioMart database and dataset hosted by Ensembl
+ensembl_m = useMart("ensembl", dataset="mmusculus_gene_ensembl", host='https://nov2020.archive.ensembl.org') 	
+
+# The line above connects to a specified BioMart database and dataset within this database.
+# In our case we choose the mus musculus database and to get the desired Genome assembly GRCm38,
+# we specify the host with this archive. If you want to use the most recent version of the dataset, just run:
+# ensembl_m = useMart("ensembl", dataset="mmusculus_gene_ensembl")
+```
+```r
+genes <- getBM(attributes=c('ensembl_gene_id','external_gene_name'),
+               filters = 'ensembl_gene_id',
+               values = ensembl.ids,
+               mart = ensembl_m)
+
+# The line above retrieves the specified attributes from the connected BioMart database;
+# 'ensembl_gene_id' are genes IDs,
+# 'external_gene_name' are the genes symbols that we want to get for our values stored in ‘ensembl.ids’.
+```
+```r
+# see the resulting data
+head(genes)                          
+```
+```r
+# replace IDs for gene names
+gene_names <- ensembl.ids	 
+count = 1 	 
+for (geneID in gene_names)
+{
+ index <- which(genes==geneID)    # finds an index of geneID in the genes object created by getBM()
+ if (length(index)==0)            # condition in case if there is no corresponding gene name in the chosen dataset
+  {
+    gene_names[count] <- 'NA'
+  }
+  else
+  {
+    gene_names[count] <- genes$external_gene_name[index] 	# replaces gene ID by the corresponding gene name based on the found geneID’s index
+  }
+ count = count + 1                # increased count so that every element in gene_names is replaced
+}
+```
+```r
+# store the gene names in our CDS object in a new column gene_short_name_extra
+fData(cds_extra)$gene_short_name_extra <- gene_names
+```
+```r
+# see the changes
+fData(cds_extra)                    
+```
+
+If you are working on your own data and it’s not mouse data, you can check available datasets for other species and just use relevant dataset in `useMart()` function.
+```r
+listDatasets(mart)                # available datasets
+```
+
+> <warning-title>Ensembl connection problems</warning-title>
+> Sometimes you may encounter some connection issues with Ensembl. To improve performance Ensembl provides several mirrors of their site distributed around the globe. When you use the default settings for useEnsembl() your queries will be directed to your closest mirror geographically. In theory this should give you the best performance, however this is not always the case in practice. For example, if the nearest mirror is experiencing many queries from other users it may perform poorly for you. In such cases, the other mirrors should be chosen automatically.
+>
+{: .warning}
+
+# Monocle workflow
+Do you remember the Monocle workflow introduced in the previous tutorial? Here is a recap:
 ![Monocle workflow: scRNA-seq dataset, pre-process data (normalise, remove batch effects), non-linear dimensionality reduction (t-SNE, UMAP), cluster cells, compare clusters (identify top markers, targeted contrasts), trajectory analysis](../../images/scrna-casestudy-monocle/monocle3_new_workflow.png "Workflow provided by Monocle3 documentation")
 
-We will follow those steps and see how it all works in practice.
-
-> <hands-on-title>Create CDS object</hands-on-title>
->
->    > <details-title>Data format</details-title>
->    >
->    > You can provide expression matrix as TSV, CSV, MTX or RDS file, while genes and cells metadata as TSV, CSV or RDS files. In our case all three files are tabular, so we will set the format to TSV.
->    {: .details}
-> 1. {% tool [Monocle3 create](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_create/monocle3_create/0.1.4+galaxy2) %} with the following parameters:
->    - {% icon param-file %} *"Expression matrix, genes as rows, cells as columns. Required input. Provide as TSV, CSV or RDS."*: `Expression matrix for Monocle3`
->    - *"Format of expression matrix"*: `TSV`
->    - {% icon param-file %} *"Per-cell annotation, optional. Row names must match the column names of the expression matrix. Provide as TSV, CSV or RDS."*: `Cells input data for Monocle3`
->    - *"Format of cell metadata"*: `TSV`
->    - {% icon param-file %} *"Per-gene annotation, optional. Row names must match the row names of the expression matrix. Provide as TSV, CSV or RDS."*: `Genes input data for Monocle3`
->    - *"Format of gene annotation"*: `TSV`
->
-{: .hands_on}
-
-> <question-title></question-title>
->
-> What are the dimensions of the created CDS object?
->
-> > <solution-title></solution-title>
-> >
-> > Just click on the performed step - on the preview you’ll see that the dimensions are 15395 x 8569 - so exactly as we predicted genes x cells!
-> > ![The dataset preview shows class: cell_data_set, dim: 15395 8569](../../images/scrna-casestudy-monocle/monocle_dimensions.png "Monocle Object Dimensions")
-> >
-> {: .solution}
-{: .question}
-
 ## Pre-processing
+Let’s start with normalisation and pre-processing that can be performed using the function `preprocess_cds()`. The argument `num_dim` is the number of principal components that will be used. You can check that you're using enough PCs to capture most of the variation in gene expression across all the cells in the data set. Note that “PCA” is the default method of pre-processing in Monocle3, so although we can specify this in our function, we don’t have to.
 
-In Galaxy, there are currently 2 methods of initial dimensionality reduction included in the pre-processing step: principal component analysis (PCA) and latent semantic indexing (LSI).
-Given that PCA is more commonly used, and it allows us to perform further steps on the CDS object, we’ll use this method. There is one parameter here that has a great impact on how our analysis will look - the `dimensionality of the initially reduced space`. This is a highly subjective choice - you will want to test a lot of different parameters on your dataset. After much trial and error, we were able to find the value that made the most sense biologically. Have a look at the image below to see how different values affect the outcomes.
+Note that this step can take awhile - around 5 or so minutes due to the high number of PCs calculated. Feel free to use a `num_dim` value around 100 to accelerate preprocessing and compare the results.
 
-![Six graphs showing the output of depending on the number of dimensions that the space was reduced to during pre-processing. Chosen numbers: 10 (really disjoint cell groups), 50 (disjoint cell groups), 150 (two bigger groups), 200 (cell groups start to come together), 250 (cell groups well aligned into a semicircle), 300 (cell groups start to fold and become biologically irrelevant)](../../images/scrna-casestudy-monocle/num_dim_legend.jpg "Different outputs depending on the number of dimensions that the space was reduced to during pre-processing. Currently the label size in Monocle graphs in Galaxy is a nightmare, so for clarity additional legend was added to this image. We're working on the label size so that you can generate clear, readable and pretty graphs. However in this particular figure, the main point is to show the differences in shapes depending on the num-dim.")
+```r
+# PCA pre-processing with 210 principal components
+cds_preprocessing <- preprocess_cds(cds, method = "PCA", num_dim = 210)
+```
+```r
+ # plot the variation in gene expression vs PCA components
+plot_pc_variance_explained(cds_preprocessing)                              		                            
+```
+
+![Plot of variation in gene expression vs PCA components, decreasing exponentially.](../../images/scrna-casestudy-monocle/pca_plot.jpg " Plot of variation in gene expression vs PCA components.")
+
+The plot shows that actually using more than ~100 PCs captures only a small amount of additional variation. However, if we look at how the cells are plotted on 2D graph when using different values of PCs, it is easier to visualise how the `num_dim` actually affects the output. We will use the value of 210, which, compared to the results from the previous tutorial, makes the most sense for our dataset. 
+
+![Six plots showing only the shaded shape of how the cells are clustered depending on the num_dim argument. The general trend is maintained though.](../../images/scrna-casestudy-monocle/num_dim.jpg "The "shape" of the plot showing how the cells are clustered depending on the 'num_dim' argument.")
+
+## Batch correction and Dimensionality reduction
+Our dataset actually comprises data from 7 samples, so there is a risk that batch effects will impact analysis. Batch effects are systematic differences in the transcriptome of cells measured in different experimental batches. However, we can use Monocle to deal with that!
+First, let’s check how our dataset looks in terms of batch effects. We can do that by colouring the cells by batch.  This information is stored in our CDS object from the `cell_metadata` file. Before asking Monocle to plot anything, let’s check the exact column name of the batch information column.
+```r
+colnames(colData(cds_preprocessing)) 	          # check column names
+```
+In our case it’s indeed ‘batch’, but your data might have another name (eg. "plate", etc.), so make sure you put the correct argument value.
+
+In order to plot our cells on a 2D graph, we need to reduce the numbers of dimensions. The [previous tutorial]({% link topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.md %}) introduced the methods of dimensionality reduction in Monocle. You can replicate what we did in Galaxy to compare the output of dimensionality reduction using different methods, simply by changing the `reduction_method` argument. Options currently supported by Monocle are "UMAP", "tSNE", "PCA", "LSI", and "Aligned". However, as for now, let’s just recall that UMAP gave the best results, so we will use UMAP here as well.
+```r
+# reduce dimension first
+cds_preprocessing_UMAP <- reduce_dimension(cds_preprocessing, reduction_method = "UMAP", preprocess_method = "PCA")
+```
+```r
+# then produce a plot to check for batch effects
+plot_cells(cds_preprocessing_UMAP, color_cells_by="batch", label_cell_groups=FALSE)
+```
+
+We can see that upper and lower right branches mostly consist of N705 and N706, so indeed batch correction might be helpful. Let’s run this.
+```r
+# perform batch correction
+cds_batch <- align_cds(cds_preprocessing_UMAP, preprocess_method = "PCA", alignment_group = "batch")
+```
+
+To see the changes, we have to run UMAP again, but this time on the aligned dataset. We will specify that `preprocess_method ` as "Aligned" and not “PCA". Monocle would use the "Aligned" argument automatically if no `preprocess_method` was specified.
+```r
+# dimensionality reduction after alignment
+cds_red_dim <- reduce_dimension(cds_batch, preprocess_method = "Aligned", reduction_method = "UMAP")  
+```
+```r
+# see the batch correction effect on a plot
+plot_cells(cds_red_dim, color_cells_by="batch", label_cell_groups=FALSE)		
+```
+
+![Left image showing dataset before batch correction: upper and lower right branches mostly consist of N705 and N706. Right image showing the dataset after batch correction: the cells from all the samples are evenly spread throughout the whole dataset.](../../images/scrna-casestudy-monocle/batch_correction.png "Comparison of the dataset before and after batch correction.")
 
 > <question-title></question-title>
 >
-> Looking at the image above, which value would you choose?
+> Does your plot look the same as the one in the Figure?
 >
 > > <solution-title></solution-title>
 > >
-> > It might be hard to tell at this point without any explanation! Don’t worry, after a few more steps you’ll understand what all those colors mean and how to generate those plots. But look - we want to infer trajectories and find relationships between cells, ideally we would see the development of cells or transition from one type to another. In the graphs where num-dim is from 10 to 200, you see that the clusters are quite disjoint, while we want to see smooth transitions from one to another. I can tell you now that we’ll go ahead with the value of **250**. We're not choosing 300, because the arrangement of the cells on that graph is not really biologically relevant.
+> > Your plot might be slightly different to the one shown in the Figure but this is fine, as long as you see analogical patterns. Some libraries that you're using might have been updated, giving non-identical output. However, the principle behind the analysis is still the same, so you can peacefully follow the tutorial. Just keep your eyes open and... THINK!
 > >
 > {: .solution}
+>
 {: .question}
 
-> <hands-on-title>Pre-processing</hands-on-title>
+Do you see this? It’s amazing! Batch correction did a great job here! Now the dataset is nicely aligned, and the cells from all the samples are evenly spread throughout the whole dataset. It is worth mentioning that removing batch effects was done using mutual nearest neighbor alignment, a technique introduced by John Marioni's lab ({% cite Haghverdi_2018 %}) and supported by Aaron Lun's package [batchelor](https://bioconductor.org/packages/release/bioc/html/batchelor.html). Also, due to the machine learning elements of the code of this technique - as well as the fact that packages are updated regularly - your plots may not look identical to the ones pictured here. Nevertheless, the interpretation should be the same - the batch corrected plot should show better batch distribution than the uncorrected one.
+
+Now we can move to the next step and perform dimensionality reduction.
+
+
+> <tip-title>Plotting: labels vs legend</tip-title>
 >
-> 1. {% tool [Monocle3 preprocess](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_preprocess/monocle3_preprocess/0.1.4+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 create** {% icon tool %}
->    - *"The dimensionality of the reduced space."*: `250`
- >
-{: .hands_on}
-
-##  Dimensionality reduction
-
-Now it’s time for the proper dimensionality reduction, to turn the original thousands of dimensions (genes), into a 2-dimensional graph. There are several algorithms to do this: UMAP, tSNE, PCA and LSI (only possible when preprocess_method is set to `LSI`), but due to the same reasons as above, we’ll use UMAP (most common + allows further operations + best results). But I’ll let you see how the outputs from the other algorithms look to convince you that **UMAP** is indeed the best for this dataset. Of course, it's possible that by choosing different pre-processing values, tSNE or PCA plots would look better, so don't be afraid to play around with the parameters and test them!
-
-![Four graphs showing the alignment of cell types depending on the algorithm of dimensionality reduction that was chosen: UMAP, tSNE, PCA, LSI. UMAP shows distinct cell groups, transitioning smoothly from one to another, creating kind of semicircle. tSNE shows distinct cell groups, however no smooth transitions are observed, all groups gathered into one big grouping. PCA shows cell groups whose boundaries are blurred between each other. On LSI graph, the cell types are all mixed together.](../../images/scrna-casestudy-monocle/dim_red_methods.png "The preview of alignment of cell types depending on the algorithm of dimensionality reduction that was chosen: UMAP, tSNE, PCA, LSI. The methods were applied to the output of the PCA-preprocessed data (except LSI method which was called on LSI-preprocessed data). LSI failed in forming distinct cell groups, PCA managed to cluster cells according to their types but tSNE did it more precisely. However, UMAP gave the best results, not only showing distinct cell type groups, but also ordering them in a way that makes sense biologically - DN to T-mat.")
-
-> <hands-on-title>Dimensionality reduction</hands-on-title>
+>  When creating graphs, we sometimes use labels and sometimes just a legend. You can choose whichever you think makes the data clear and readable.
 >
-> 1. {% tool [Monocle3 reduceDim](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_reducedim/monocle3_reduceDim/0.1.4+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 preprocess** {% icon tool %}
+> If you want to use a legend, then specify an argument `label_cell_groups=FALSE` in the function `plot_cells()`.
 >
-{: .hands_on}
-
-## Plotting
-
-Alright, now let's have a look at our output! Above you got a sneak peek of how the plot would look, but now you’ll generate the plots on your own!
-
-Thanks to the fact that we provided Monocle3 with annotated data, we can now color the cells by any attribute that was in the cell metadata file! Similarly to the previous tutorial, we’ll color them by cell type, genotype, batch and sex. At least for now...
-
-> <hands-on-title>Plotting</hands-on-title>
->
-> 1. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 reduceDim** {% icon tool %}
->    - *"The cell attribute (e.g. the column of pData(cds)) to map to each cell's color, or one of {cluster, partition, pseudotime}."*: `cell_type`
->    - *"If set, display the cell group names directly on the plot. Otherwise include a color legend on the side of the plot."*: {% icon history-share %} `No`
-> 2. Rename {% icon galaxy-pencil %} the output: `Cell type plot`
->
-> 3. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 reduceDim** {% icon tool %}
->    - *"The cell attribute (e.g. the column of pData(cds)) to map to each cell's color, or one of {cluster, partition, pseudotime}."*: `genotype`
->    - *"If set, display the cell group names directly on the plot. Otherwise include a color legend on the side of the plot."*: {% icon history-share %} `No`
-> 4. Rename {% icon galaxy-pencil %} the output: `Genotype plot`
->
-> 5. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 reduceDim** {% icon tool %}
->    - *"The cell attribute (e.g. the column of pData(cds)) to map to each cell's color, or one of {cluster, partition, pseudotime}."*: `batch`
->    - *"If set, display the cell group names directly on the plot. Otherwise include a color legend on the side of the plot."*: {% icon history-share %} `No`
-> 6. Rename {% icon galaxy-pencil %} the output: `Batch plot`
->
-> 7. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 reduceDim** {% icon tool %}
->    - *"The cell attribute (e.g. the column of pData(cds)) to map to each cell's color, or one of {cluster, partition, pseudotime}."*: `sex`
->    - *"If set, display the cell group names directly on the plot. Otherwise include a color legend on the side of the plot."*: {% icon history-share %} `No`
-> 8. Rename {% icon galaxy-pencil %} the output: `Sex plot`
->
-{: .hands_on}
-
-The [Previous tutorial]({% link topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.md %}) discussed in detail the biological interpretation of data, so we will quickly go through similar analysis to see if the results are consistent and if we can draw any new conclusions.
+> The labels are set automatically, but if you want to change their size (default labels are tiny), use the argument `group_label_size`.
+{: .tip}
 
 
-As a reminder, here's the comparision between cell type annotation done in the other tutorial using Scanpy, and the output from the previous step of this Monocle tutorial. The main difference is that Scanpy was used to identify the cell types and assign them to clusters. That data was then passed on to Force-Directed + PAGA algorithms to infer trajectory, and then the arrangement of the cell groups changed a bit. In Monocle, trajectory analysis will be based on the clustering you see now.
-
-![Each cell type forms a distinct group but they lie next to each other: DN, DP-M2, DP-M3, then DP-M4 has DP-M1 on the right and DP-L on the left, and DP-L neighbors with T-mat](../../images/scrna-casestudy-monocle/cell_types.png "Cells coloured in Monocle by their type.")
-
-In the mentioned tutorial, we annotated the cells so that we know what type they are. Above you can see how Monocle used this information to colour cells by their type. It is important to see the 'form' of the graph and how the cell types are arranged within its confines. But why is it important? Well, in Monocle, our trajectory analysis will be based on the same arrangement of the cells that you see now. And if you now recall our choice of the number of dimensions during pre-processing, you'll understand why it was crucial - choosing the right value at the beginning determines the 'shape' of the graph that is then retained for the trajectory analysis. Therefore, the fact that on the plot above we clearly see DN cells on one side of the graph and T-mat on the other, going through DP cells, looks promising. But there is DP-M1 group that suspiciously branches out... Let's investigate that and wait until the trajectory is inferred!
-
-> <question-title>Genotype</question-title>
-> Based on our results, can we confirm findings from the previous tutorial that DP-L and mature T-cells (particularly the top half) are missing some knockout cells?
-> ![Genotype data plotted on the obtained graph, compared with the cell types graph. Cell types DP-M1, DP-L and T-mat are mainly wildtypes, while for other cell types the distribution is fairly even.](../../images/scrna-casestudy-monocle/genotypes.png "Genotype differences")
->
-> > <solution-title></solution-title>
-> >
-> > Indeed, that's what we see in our graph! But look closer, there is something more...Additionally, we also discovered that the vast majority of DP-M1 is only wildtype cells. That's interesting, isn't it?
-> >
-> {: .solution}
-{: .question}
-
-> <question-title>Batch effect</question-title>
-> Can we confirm the previous findings that DP-L looks to be mainly comprised of N705?
-> ![Batch data plotted on the obtained graph, compared with the cell types graph. DP-L and DP-M1 seem to consist mostly of N705 and N706, while other cell types have quite even batch distribution.](../../images/scrna-casestudy-monocle/batch_1.png "Checking for batch effect")
->
-> > <solution-title></solution-title>
-> >
-> > Both DP-L and DP-M1 seem to consist mostly of N705 and N706. There might be indeed a bit of batch effect, so you could consider using batch correction on this dataset. In the absence of batch correction, we will focus on those clusters where there is batch mixing for biological interpretation. Finally, we will look at the confounding effect of sex.
-> > ![Sex data plotted on the obtained graph, compared with the cell types and genotype graphs. No female cells in DP-L and DP-M1 can be observed, but they appear in other cell types.](../../images/scrna-casestudy-monocle/sex_1.png "Sex distribution across the sample")
-> >  There are also no female cells in DP-L and DP-M1. The one female sample - which is one of the mere three knockout samples - seems to be distributed in the same areas as the knockout samples at large. Luckily, this doesn’t seem to be a confounding factor and we can still learn from our data.
-> >
-> {: .solution}
-{: .question}
-
-## Clustering
-
-Don't get confused - we haven't clustered our cells yet, for now we have only plotted them based on cell type annotation. Now it's time to create clusters, which - in an ideal world where all computation picks up the exact biological phenomenons - would yield the same areas as the clusters determined by the Scanpy algorithms. Is this the case here? Do Monocle and Scanpy identify the same clusters?
->
+## Clustering: clusters
+We want to get some information about cell types, don’t we? In order to do so, we have to cluster our cells first.
 Monocle uses a technique called "community detection" ({% cite Traag_2019 %}) to group cells. This approach was introduced by {% cite Levine_2015 %} as part of the phenoGraph algorithm.
->
 Monocle also divides the cells into larger, more well separated groups called partitions, using a statistical test from {% cite Wolf_2019 %}, introduced as part of their [PAGA](https://github.com/theislab/paga) algorithm.
 
 > <details-title>Clusters vs partitions</details-title>
@@ -496,52 +361,116 @@ Monocle also divides the cells into larger, more well separated groups called pa
 >
 {: .details}
 
-> <hands-on-title>Clustering </hands-on-title>
->
-> 1. {% tool [Monocle3 partition](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_partition/monocle3_partition/0.1.4+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 reduceDim** {% icon tool %}
->    - *"Resolution of clustering result, specifying the granularity of clusters. Not used by default and the standard igraph louvain clustering algorithm will be used."*: `0.00015`
->    - *"The q-value threshold used to determine the partition of cells."*: `1.0`
->    - The clusters and partitions are now stored in your CDS file. To see them, just plot the output, coloring the cells with the corresponding attributes.
->
-> 2. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 partition** {% icon tool %}
->    - *"The cell attribute (e.g. the column of pData(cds)) to map to each cell's color, or one of {cluster, partition, pseudotime}."*: `partition`
-> 3. Rename {% icon galaxy-pencil %} the output: `Partition plot`
->
-> 4. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 partition** {% icon tool %}
->    - *"The cell attribute (e.g. the column of pData(cds)) to map to each cell's color, or one of {cluster, partition, pseudotime}."*: `cluster`
-> 5. Rename {% icon galaxy-pencil %} the output: `Cluster plot`
->
-{: .hands_on}
-> <tip-title>If the partition does not contain all your cells of interest...</tip-title>
->
-> Sometimes it might happen that cells are grouped into several partitions, while you want them all to be in just one in order to perform trajectory analysis on all of them. Then, you can try to increase the `q-value` threshold that is used to determine the partition of cells.
-> ![Two graphs showing the difference between q-value used. For q-value=0.05 there are two partitions formed and for q-value=1.0 all cells were assigned to one partition so that there is only one in total.](../../images/scrna-casestudy-monocle/partition_qval.png "q-value threshold affecting the span of partition. Note that 0.05 is the default value.")
->
-{: .tip}
-> <tip-title>If the granularity of clusters does not make sense...</tip-title>
->
->
-> When using standard igraph louvain clustering, the value of `resolution` parameter is by default set to `NULL`, which means that it is determined automatically. If you are not satisfied with the results of the standard igraph louvain clustering, you may set the `resolution` value manually, and thus specify the granularity of the clustering.
-> ![Three graphs showing the difference between the resolution of clustering. During automatic determination of this value, there were 6 clusters formed, corresponding to cell types. Manually set resolution=0.001 resulted in 11 clusters so that more than one cluster corresponds to one cell type, and resolution=0.1 resulted in almost 200 very small clusters.](../../images/scrna-casestudy-monocle/clusters_resolution.png "Different granularity of clusters based on the resolution set automatically and manually.")
-{: .tip}
+Therefore, let’s perform clustering and visualise the resulting clusters.
+```r
+# clustering
+cds_auto_cluster <- cluster_cells(cds_red_dim, reduction_method = "UMAP")
+```
+```r
+# see the clusters
+plot_cells(cds_auto_cluster, reduction_method = "UMAP", color_cells_by = 'cluster', group_label_size = 5)     
+```
 
-> <warning-title>Ambiguous clusters!</warning-title>
-> As mentioned above, standard igraph louvain clustering determines the resolution automatically, unless the specific value is provided by the user. Therefore, it sometimes returns slightly different outputs. To ensure that your clusters are reproducible, you might want to pass a certain value to the `resolution` parameter. In case of our data, the resolution value of 0.00015 gave the same results as the best output of igraph louvain clustering, and ensured reproducibility.
-> ![Four graphs showing slight changes in clustering: 1) 5 clusters, 2) 5 clusters but with other cells assigned, 3) 4 clusters, 4) 6 clusters.](../../images/scrna-casestudy-monocle/igraph.png "Standard igraph louvain clustering giving different results despite the same input becasue of the automatic determination of resolution vaule.")
+When using standard igraph louvain clustering, the value of resolution parameter is by default set to NULL, which means that it is determined automatically. Although the resulting clusters are OK, it would be nice to get some more granularity to identify cell types more specifically. The higher the resolution value, the more clusters we get. We will set the resolution value to 0.0002, but you are very welcome to try different values to see the changes.
+
+```r
+# clustering with changed resolution value
+cds_clustered <- cluster_cells(cds_red_dim, reduction_method = "UMAP", resolution = 0.0002)
+```
+```r
+# see the new clusters
+plot_cells(cds_clustered, reduction_method = "UMAP", color_cells_by = 'cluster', group_label_size = 5) 	
+```
+
+![Left image showing 6 clusters formed using automatic standard igraph louvain clustering. Right image showing the dataset with clusters formed using resolution argument set to 0.0002: now there are 7 clusters, as one automatically formed cluster could be divided into two smaller distinct clusters.](../../images/scrna-casestudy-monocle/clusters_compare.png "Comparison of the clusters formed using standard igraph louvain clustering and using resolution argument set to 0.0002.")
+
+
+
+## Clustering: partitions
+OK, what about partitions? They were also created during the clustering step and it’s important to check them before calculating the trajectory because it is performed only within one partition. It is essential that all the cells that we want to analyse in pseudotime belong to the same partition.
+```r
+# see the partitions
+plot_cells(cds_clustered, reduction_method = "UMAP", color_cells_by = 'partition', label_cell_groups=FALSE)
+```
+
+While your plot might be slightly different due to package updates, we can see that there are 3 partitions identified in `cds_clustered` object. Ideally, we would like to combine partitions 1 and 2 to draw a trajectory through all those cells (we can ignore cells in outlier partition). Sometimes using the default values might result in multiple partitions while you only need one. Then you would have to change the q-value cutoff in `partition_qval`. The default is 0.05 and by increasing this value you can increase the span of partitions, meaning that you would get fewer partitions. When trying different values of q-value, you also have to check if the clusters didn't change. It's all about finding a balance between the value of `resolution` and `partition_qval` so that both clusters and partitions are satisfactory enough for downstream analysis. Let's try that on our dataset.
+```r
+# changing the partition q-value
+cds_clustered <- cluster_cells(cds_red_dim, reduction_method = "UMAP", resolution = 0.0002, partition_qval = 1)
+```
+```r
+# see the partitions with the changed q-value
+plot_cells(cds_clustered, reduction_method = "UMAP", color_cells_by = 'partition', label_cell_groups=FALSE)
+```
+```r
+# check if clusters didn't change
+plot_cells(cds_clustered, reduction_method = "UMAP", color_cells_by = 'cluster', label_cell_groups=FALSE)
+```
+
+> <question-title></question-title>
 >
+> Have the clusters change after changing the partition q-value?
+>
+> > <solution-title></solution-title>
+> >
+> > It might be the case that after changing partition q-value, you will notice that additional clusters appeared. In that situation, you might either play around the `resolution` and `partition_qval` values, go forward with the current clustering (adjusting the parameters accordingly), or check the other method of assigning cells to one partition given below.
+> >
+> {: .solution}
+>
+{: .question}
+
+Now we have cells of interest in one partition, we still have reasonable clusters, so now we can learn the trajectory. However, in some cases even this method might not be enough. Then, there is a last resort… assigning cells to a partition manually.
+
+## Additional step: assigning cells to one partition
+> <warning-title>Additional step</warning-title>
+>  This step is not necessary for the dataset we are working on but some users might find it helpful when analysing their own data.
 >
 {: .warning}
 
-If we compare the annotated cell types and the clusters that were just formed, we see that they nicely correspond to one another.
-![When projected onto a graph, clusters quite accurately corresponding to the cell type.](../../images/scrna-casestudy-monocle/cell_type_vs_cluster.png "Comparision between annotated cell types and formed clusters.")
+Let’s assume we have 4 partitions that cannot be extended to one big partition using `partition_qval` (it might sound unreasonable but it does happen!) and we are desperate to have all the cells in one partition to draw a trajectory through all of them. We can simulate the initial dataset by setting `partition_qval` value to 0.0001.
+```r
+# simulate the dataset
+cds_partitions_extra <- cluster_cells(cds_red_dim, reduction_method = "UMAP", partition_qval = 0.0001)		
+```
+```r
+# see the simulated partitions
+plot_cells(cds_partitions_extra, reduction_method = "UMAP", color_cells_by = 'partition', label_cell_groups=FALSE)
+```
+```r
+# store ‘1’ the number of times equal to the number of cells
+big_partition <- c(rep(1,length(cds_partitions_extra@colData@rownames))) 	
+```
+```r
+# take the barcode of each cell and assign ‘1’ to each of them (now the ‘ones’ are named)
+names(big_partition) <- cds_partitions_extra@colData@rownames 	
+```
+```r
+# convert from numeric to factor
+big_partition <- as.factor(big_partition)
+```
+```r
+# assign the created barcodes-partition list to the location where information about partitions is stored in CDS object
+cds_partitions_extra@clusters$UMAP$partitions <- big_partition 	
+```
+```r
+# see the new partition assignment
+plot_cells(cds_partitions_extra, reduction_method = "UMAP", color_cells_by = 'partition', label_cell_groups=FALSE)
+```
+
+![Left image showing the dataset divided into 4 partitions. Right image showing all cells assigned to one partition.](../../images/scrna-casestudy-monocle/partitions_compare.png "The result of the manual assignment of all the cells to one partition.")
 
 
-## Gene expression
-> We haven't looked at gene expression yet! This step is particularly important when working with data which is not annotated. Then, based on the expression of marker genes, you are able to identify which clusters correspond to which cell types. This is indeed what we did in the previous tutorial using scanpy. We can do the same using Monocle3! Since we work on annotated data, we can directly check if the expressed genes actually correspond to the previously assigned cell types. If they do, that’s great - if two different methods are consistent, that gives us more confidence that our results are valid.
-> Below is the table that we used in the previous tutorial to identify the cell types.
+> <details-title>@ and $ operators</details-title>
+>
+> As you saw above, we used `@` and `$` operators to navigate in CDS object. What is the difference between them? `$` operator is used to access one variable/column, while `@` extracts the contents of a slot in an object with a formal (S4) class structure. If you use `View()` function on our CDS object, you will see the elements of type "S4" that you can access using `@` operator. The suggestion list of elements that can be accessed should also pop up as you type the name of the object followed by the corresponding operator.
+>
+{: .details}
+
+# Assigning cell types
+There are two main approaches to assigning cell types to clusters that we’ve just identified – supervised and unsupervised, both based on gene expression in each cluster.
+
+## Supervised approach
+The supervised approach relies on prior knowledge of which cell types to expect. We can simply check the expression of marker genes specific to the expected cell types. Let’s then check the markers mentioned in the original paper {% cite Bacon2018 %}.
 
 | Marker | Cell type |
 |--------------------|
@@ -552,173 +481,517 @@ If we compare the annotated cell types and the clusters that were just formed, w
 | Aif1    | Macrophages    |
 | Hba-a1    | RBC    |
 
-> <hands-on-title>Gene expression</hands-on-title>
->
-> 1. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 partition** {% icon tool %}
->    - *"The cell attribute (e.g. the column of pData(cds)) to map to each cell's color, or one of {cluster, partition, pseudotime}."*: `cell_type`
->    - *"A list of gene IDs/short names to plot."*: `Il2ra,Cd8b1,Cd8a,Cd4,Itm2a,Aif1,Hba-a1`
->
-{: .hands_on}
+To plot the expression of all those genes across our dataset in one go, we will pass a vector with the names of those markers into a parameter `genes` in the `plot_cells` function.
+```r
+# expression of marker genes across the sample
+plot_cells(cds_clustered, genes=c('Il2ra','Cd8b1','Cd8a','Cd4','Itm2a','Aif1','Hba-a1'), reduction_method = "UMAP")
+```
 
-![Expression on the genes: Il2ra expressed in DN, Cd8b1, Cd8a expressed in the areas where middle DP, Cd4 mostly expressed in late DP cluster, Itm2a expressed in mature T-cells, Aif1 – no expression, Hba-a1 - very high expression in small branch of DP-M4.](../../images/scrna-casestudy-monocle/gene_expression.png "Expression of the genes across analysed sample")
+![7 graphs, each showing expression of one of the genes in the corresponding clusters: 'Il2ra' – cluster 4; 'Cd8b1' and 'Cd8a' – clusters 1,6,2; 'Cd4' – high expression in cluster 5; 'Itm2a' – cluster 3; 'Aif1' – barely anything, no specific cluster assigned; 'Hba-a1' - throughout the entire sample in low numbers.](../../images/scrna-casestudy-monocle/genes.png "Expression of the reference marker genes across analysed sample.")
 
-> <question-title>Genes and cell types</question-title>
-> Based on the gene expression graph that we just generated, the table above and your knowledge from the previous tutorial, how would you interpret the results?
+
+> <question-title>Genes, cell types and clusters</question-title>
+> Based on the gene expression graph that we just generated, the table above and your knowledge from the previous tutorials, how would you assign the clusters?
 >
 > > <solution-title></solution-title>
 > >
-> > - `Il2ra`: expressed in the cluster where DN cells are - an indication of where the trajectory should start
-> > - `Cd8b1, Cd8a`: expressed in the areas where middle DP were assigned - great
-> > - high `Cd4`: mostly in late DP cluster - as expected
-> > - `Itm2a`: expressed in mature T-cells - tells us where the trajectory should end
-> > - `Aif1`: nothing here - correct! We filtered out macrophages from the sample
-> > - `Hba-a1`: look at this! Very high expression in just one, tiny bit, which hasn't even been grouped into a cluster! So wait, why do we see hemoglobin gene here? Do we have red blood cells in our sample?! Let's investigate that further...
+> > Keep in mind that these results refer to our numbered clusters, while yours might be slightly different.
+> > - `Il2ra` (DN): mostly expressed in cluster 4
+> > - `Cd8b1, Cd8a` (DP middle): expressed in clusters 1, 6, and highly in cluster 2
+> > - `Cd4` (DP late): average expression in clusters 1, 6, 2 and high expression in cluster 5
+> > - `Itm2a` (T-mat): expressed in cluster 3
+> > - `Aif1` (macrophages): barely anything here, minimal expression spread across the sample with some more cells in cluster 4 and 3 – not enough to form a distinct cluster though). In theory, we shouldn’t have any macrophages in our sample. If you remember from the previous tutorials, we actually filtered out macrophages from the sample during the processing step, because we worked on annotated data. When analysing unannotated data, we could only assign macrophages and then filter them out, provided that Monocle clusters them into a separate group. As you can see, it’s not the case here, so we will just carry on with the analysis, interpreting this as a contamination.
+> > - `Hba-a1` (RBC): appears throughout the entire sample in low numbers suggesting some background contamination of red blood cell debris in the cell samples during library generation, but also shows higher expression in a distinct tiny bit of cluster 3, at the border between clusters 1 and 5. However, it’s too small to be clustered into a separate group and filtered out in this case.
+If you remember, this gene was found to be expressed in the previous Scanpy tutorial also in low numbers across the sample, and in the other Monocle tutorial (using Galaxy tools and annotated data) algorithms allowed us to gather the cells expressing that gene into a distinct group. Our result now sits somewhere in between.
+> > ![In Scanpy graph the marker gene appears throughout the entire sample in low numbers, in Monocle in Galaxy cells expressing hemoglobin gene were grouped into a small branch of DP-M4, allowing to group those cells. Monocle in RStudio graph is somewhere in between showing mostly low expression across the sample, but also having a tiny bit of grouped cells, less distinct than in Galaxy though.](../../images/scrna-casestudy-monocle/hb_all.png "Hemoglobin across clusters - comparison between Scanpy, Monocle using Galaxy tools and Monocle run in RStudio.")
 > >
 > {: .solution}
 {: .question}
 
-> <tip-title>Purity of the sample - Hba-a1 gene</tip-title>
->
-> The Hba-a1 gene creates hemoglobin which is found in red blood cells. This is highly expressed in a tiny bit of the middle DP cluster. Interestingly, it forms a a clearly visible, distinct, little branch. Hemoglobin should NOT be found in T-cells. However, if you remember, the gene was found to be expressed in the previous Scanpy tutorial (see the image below). That marker appeared throughout the entire sample in low numbers, suggesting some background contamination of red blood cell debris in the cell samples during library generation. Unlike Scanpy, Monocle algorithms allowed us to gather the cells expressing that gene into a distinct group! That's great!
->
-> ![In Monocle graph, the cells expressing hemoglobin gene were grouped into a small branch of DP-M4, while in Scanpy the marker appears throughout the entire sample in low numbers, not allowing to group those cells.](../../images/scrna-casestudy-monocle/hb.png "Hemoglobin across clusters - comparision between Monocle and Scanpy")
->
-{: .tip}
+Having identified which cluster corresponds to a specific cell type, we can finally run some code to add the annotation to our CDS object. First, we will create a new column called `cell_type`  in `colData()` - this is where the information about the cells is stored (eg. batch, genotype, sex, etc) - and initialize it with the values of clusters. Then, we will get the `dplyr` package which will be used for cluster annotation.
 
-## Top marker genes
+```r
+# just to keep the objects tidy and not overwrite them so that you can come back to any point of the analysis
+cds_annotated <- cds_clustered 	
+```
+```r
+# create a new column ‘cell_type’ and initialise it with clusters values
+colData(cds_annotated)$cell_type <- as.character(clusters(cds_annotated)) 	
+```
+```r
+# annotate clusters
+colData(cds_annotated)$cell_type <- dplyr::recode(colData(cds_annotated)$cell_type,
+                                                       '1'='DP-M1',   # double positive – middle T-cell (1st cluster)
+                                                       '2'='DP-M2',	  # double positive – middle T-cell (2nd cluster)
+                                                       '3'='T-mat',	  # mature T-cell
+                                                       '4'='DN',		  # double negative – early T-cell
+                                                       '5'='DP-L',	  # double positive – late middle T-cell
+                                                       '6'='DP-M3',	  # double positive – middle T-cell (3rd cluster)
+                                                       '7'='Unknown') # no info for now, so call it ‘Unknown’
+                                                       '8'='Unknown') # no info for now, so call it ‘Unknown’
+```
+```r
+# check the annotation
+plot_cells(cds_annotated, color_cells_by="cell_type", label_cell_groups=FALSE)    
+```
 
-Here we used a priori knowledge regarding the marker genes. If we wanted to approach this problem in an unsupervised manner, we could use Monocle to tell us the top marker genes in each group of cells. This is very useful if we are trying to identify a cell type, or if we want to find novel marker genes for known cell types.
+![A plot showing the identified clusters, now each coloured by the assigned cell type.](../../images/scrna-casestudy-monocle/annotated.png "Our annotated dataset.")
+
+## Unsupervised approach
+But what if we don’t have any reference that we can use to assign our clusters? In that case, we will turn to the mentioned unsupervised approach - we will check what are the specifically expressed genes for each cluster. Then we can identify the cell types by looking up what cell types contain those genes. That’s a more tedious process, but sometimes can lead to exciting and unexpected results.
+We will use Monocle’s function `top_markers()` and store the information about specifically expressed genes for each cluster in the data frame `marker_test`.
+```r
+# find top marker genes in each cluster
+marker_test <- top_markers(cds_clustered, group_cells_by="cluster", reduction_method = "UMAP", reference_cells=1000, cores=8)
+```
+You can group the cells by any categorical variable in `colData(cds_clustered)`. The parameter `reference_cells` is used to accelerate the marker significance test at some cost in sensitivity. It works by randomly selecting a specified number of cells and performing the marker significance test against a chosen set of cells. If your dataset is not massively big, you might skip this parameter as it wouldn’t help much.
 
 > <question-title></question-title>
 >
-> If I cluster cells that are not annotated, can I assign clusters to a cell type based on gene expression using Monocle3?
+> What are the variables stored in `marker_test` data frame and what do they mean?
 >
 > > <solution-title></solution-title>
 > >
-> > Theoretically...yes! That’s the point of the clustering and gene expression analysis. However, as of the writing of this tutorial, this function hasn’t been turned into a Galaxy tool yet and is only available in R.
+> > Those are 10 variables that you can check easily either using colnames(marker_test) or `View(marker_test)` which will also display all the corresponding values.
+> >- `gene_id` - Ensembl gene ID
+> >- `gene_short_name` - short name of the gene corresponding to its ID
+> >- `cell_group` - a group to which the cell belongs, specified in the `group_cells_by` argument
+> >- `marker_score` - numeric vector of marker scores as the fraction expressing scaled by the specificity. The value ranges from 0 to 1
+> >- `mean_expression` -  numeric vector of mean normalized expression of the gene in the cell group
+> >- `fraction_expressing` - numeric vector of fraction of cells expressing the gene within the cell group
+> >- `specificity` - numeric vector of a measure of how specific the gene's expression is to the cell group based on the Jensen-Shannon divergence. The value ranges from 0 to 1.
+> >- `pseudo_R2` - numeric vector of pseudo R-squared values, a measure of how well the gene expression model fits the categorical data relative to the null model. The value ranges from 0 to 1.
+> >- `marker_test_p_value` - numeric vector of likelihood ratio p-values; p-value is an area in the tail of a distribution that tells you the odds of a result happening by chance
+> >- `marker_test_q_value` -  numeric vector of likelihood ratio q-values; q-value is a p-value that has been adjusted for the False Discovery Rate (FDR)
 > >
 > {: .solution}
 >
 {: .question}
 
-> <hands-on-title>Top marker genes</hands-on-title>
+We can now use data in `marker_test` to rank the cells based on one of the specificity metrics and take the top gene(s) for each cluster. We will filter the expressing cells that constitute more than 10% of the cell group and we will take one gene in each cluster with the highest `pseudo_R2` value (you can of course modify this value and choose more genes to be selected).
+
+```r
+# filter the ‘marker_test’ data frame
+top_specific_markers <- marker_test %>%
+                            dplyr::filter(fraction_expressing >= 0.10) %>%       # set the fraction of expressing cells
+                            dplyr::group_by(cell_group) %>%                      # set a group to which the cells belong
+                            dplyr::top_n(1, pseudo_R2)                           # set the number of top genes and the variable from 'marker_test' to rank by
+```
+```r
+# store the names of the marker genes
+# you can also use IDs, the conversion to gene names should happen automatically when plotting
+top_marker_names <- unique(top_specific_markers %>% dplyr::pull(gene_short_name))
+```
+
+Now we have all elements to plot the expression and fraction of cells that express found markers in each group.
+
+```r
+plot_genes_by_group(cds_clustered,                    # our CDS object
+                    top_marker_names,                 # a list of gene names to show in the plot
+                    group_cells_by="cluster",         # how to group cells when labeling
+                    ordering_type="maximal_on_diag")  # how to order the genes / groups on the dot plot
+```
+
+> <tip-title>Unexpectedly too many genes on y-axis?</tip-title>
 >
-> 1. {% tool [Monocle3 top markers](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_topmarkers/monocle3_topmarkers/0.1.5+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Input Object"*: output of **Monocle3 partition** {% icon tool %}
->    - *"Group cell by"*: `cell_type`
-> 2. Rename {% icon galaxy-pencil %} the tabular output: `Top markers table`
-> 3. Rename {% icon galaxy-pencil %} the pdf output: `Top markers plot`
->
-{: .hands_on}
-
-![A table showing top markers - which genes (and their percentage) are the most expressed in each cell type.](../../images/scrna-casestudy-monocle/top_markers.jpg "Identification of the genes most specifically expressed in groups of cells.")
-
-> <question-title></question-title>
->
-> What genes are uniquely expressed in DP-M1?
->
-> > <solution-title></solution-title>
-> >
-> > By looking at the table, you might give the 5 top gene IDs expressed in DP-M1. To save you some time and make the analysis more readable, we converted the gene IDs to gene names and they are as follows: Rps17, Rpl41, Rps26, Rps29, Rps28. They are all ribosomal! [You can do this yourself if you want by following this section of a previous tutorial that [uses the gene names in one object to add to a table of Ensembl IDs](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html#findmarkers). These ribosomal differences might be due to housekeeping background, cell cycling, or even something more bioligically interesting...or all three!
-> > The plot also indicates other specifically expressed genes, such as Hmgb2, Pclaf, Rpl13, Rps19, Ybx1, Ncl, Hsp90ab1, Npm1.
-> >
-> > Whenever you want to explore what might be the function of a particular cluster or why it branches out from the trajectory, check the top markers for that cluster to draw biological conclusions. Thank you Maths!
-> {: .solution}
->
-{: .question}
-
-But what if you want to know how gene expression changes across a trajectory? This is where Monocle is particularly powerful. But in order to do that, we have to infer that trajectory first!
-
-## Learn the trajectory graph
-
-We’re getting closer and closer! The next step is to learn the trajectory graph, which means to fit a principal graph within each partition. In that way, we’ll ‘connect’ the existing clusters by creating a path between them.
-
-> <hands-on-title>Learn graph</hands-on-title>
->
-> 1. {% tool [Monocle3 learnGraph](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_learngraph/monocle3_learnGraph/0.1.4+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 partition** {% icon tool %}
->    - Again, the graph is now stored in your CDS file. To see it, just plot the output, you can color the cells by any attribute that you want. We'll use cell types to see how they are connected.
-> 2. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 learnGraph** {% icon tool %}
->    - *"The cell attribute (e.g. the column of pData(cds)) to map to each cell's color, or one of {cluster, partition, pseudotime}."*: `cell_type`
->
-{: .hands_on}
-
-As you can see, the learned trajectory path is just a line connecting the clusters. However, there are some important points to understand here.
-> If the resolution of the clusters is high, then the trajectory path will be very meticulous, strongly branched and curved. There's a danger here that we might start seeing things that don't really exist.
-> You can set an option to learn a single tree structure for all the partitions or use the partitions calculated when clustering and identify disjoint graphs in each. To make the right decision, you have to understand how/if the partitions are related and what would make more biolgical sense. In our case, we were only interested in a big partition containing all the cells and we ignored the small 'dot' classified as another partition.
-> There are many trajectory patterns: linear, cycle, bifurcation, tree and so on. Those patterns might correspond to various biological processes: transition events for different phases, cell cycle, cell differentiation. Therefore, branching points are quite important on the trajectory path. You can always plot them, {% icon history-share %} checking the correct box in {% tool Monocle3 plotCells %}.
-
-
-![A trajectory path, branching out to connect all the clusters and thus show their relationships.](../../images/scrna-casestudy-monocle/learned_trajectory.png "Learned trajectory path")
-
-> <tip-title>Comparing the trajectories</tip-title>
->
-> As a reminder, here's the comparision between our trajectory and the one from the previous tutorial, where we used Scanpy for clustering, and then appplied Force-Directed + PAGA algorithms to infer trajectory. As you remember from those tutorials, the arrangement of the cell groups changed a bit during these steps. Indeed - by using the mentioned methods, we get different graphs for clusters and trajectory, while in Monocle the general 'shape' of the graph stays the same from the beginning. 'Leranig the trajectory' step in Monocle is about finding a path, along which the cells can be then ordered in pseudotime.
-> ![First graph shows the trajectory inferred by using Scanpy + Force-Directed + PAGA (DN connecting equally with DP-M2 and DP-M3, then going to DP-M1, and branching out to DP-M4, then going down to DP-L and finally turning into T-mat).  Second graph shows the trajectory inferred by using Monocle (DN connected to DP-M2 and DP-M3, then DP-M4 has DP-M1 on the right and DP-L on the left, and DP-L comes to T-mat).](../../images/scrna-casestudy-monocle/scanpy_monocle_trajectories.png "Comparison between the trajectory inferred in the previous 'case study' tutorials (Scanpy + Force-Directed + PAGA) and the trajectory obtained in Monocle.")
+>  If you notice that on your dot plot any cluster has more genes than you specified (here we set one gene per cluster `top_n(1, pseudo_R2)`), go back to the code and create a new cell, right after assigning `top_specific_markers` object and just before `top_marker_names`. In the new cell, paste and execute the following:
+>  
+> ```r
+> top_specific_markers <- top_specific_markers %>%
+>                            dplyr::distinct(pseudo_R2, .keep_all=TRUE)     # select only one row if there are multiple rows with the same value in 'pseudo_R2' column
+> ```
+> Then you can execute `top_marker_names` again and see how the plot looks like now. Better, right? 
+> This problem may arise when several genes in one cluster have the same values of specific variable from 'marker_test' (in our case we chose `pseudo_R2`). It might likely happen in small and quite unsignificant clusters.
 {: .tip}
 
-## Pseudotime analysis
 
-Finally, it's time to see our cells in pseudotime! We have already learned a trajectory, now we only have to order the cells along it. Monocle3 requires information on where to start ordering the cells, so we need to provide it with this information. We annotated early T-cells as double negative (DN), so those will be our root cells!
+![A dot plot showing the expression of genes and fraction of cells that express found markers in each group. On the diagonal there are two genes corresponding to each cluster with the highest pseudo_R2 score in their group.](../../images/scrna-casestudy-monocle/gene_group.png "A plot of the expression and fraction of cells that express found markers in each group. Here, the two top genes from each cluster were plotted on diagonal beased on the highest pseudo_R2 score. Shown is the result of changing the value from 1 to 2 in "top_n(1, pseudo_R2)" in the code above.")
 
-> <details-title>Pseudotime</details-title>
->
-> To infer trajectories, we need data from cells at different points along a path of differentiation. The assumption is that in any given sample, some cells are further along a trajectory than others. This inferred temporal dimension is known as pseudotime. Pseudotime measures the cells’ progress through the transition.  See {% cite Reid_2016 %} for more.
->
-{: .details}
+Look at this – we have identified some more marker genes specific to each cluster! However, sometimes it happens that the found genes are not as specific as one would expect, and they appear across the whole sample. Therefore, it is a good idea to plot all those marker genes and check how they appear in the bigger picture.
 
-> <hands-on-title>Ordering the cells along trajectory</hands-on-title>
->
-> 1. {% tool [Monocle3 orderCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_ordercells/monocle3_orderCells/0.1.4+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 learnGraph** {% icon tool %}
->    - *"The cell phenotype (column in pdata) used to identify root principal nodes."*: `cell_type`
->    - *"The value in the cell phenotype column used to extract root nodes."*: `DN`
->    - Alright - we were waiting for this plot the whole tutorial: once we have the cells ordered, we can finally color them by pseudotime!
->
-> 2. {% tool [Monocle3 plotCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_plotcells/monocle3_plotCells/0.1.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 orderCells** {% icon tool %}
-> 3. Rename {% icon galaxy-pencil %} the output: `Pseudotime plot`
->
-{: .hands_on}
+```r
+# plot the identified genes to check their expression
+plot_cells(cds_clustered, genes=c('Pcdhgc4','Pcdhga5','Gm5559','Gm10359','Ccr9','Cd8b1','Plac8', 'Il2ra', 'Cd52', 'Tmsb10', 'Mki67', 'Hmgb2', 'Pclaf', 'Npm1'), reduction_method = "UMAP")
+```
 
-> <tip-title>Other ways to specify the root cells</tip-title>
+![Plots showing the expression of fourteen found marker genes across the whole sample. Those genes are 'Pcdhgc4','Pcdhga5','Gm5559','Gm10359','Ccr9','Cd8b1','Plac8', 'Il2ra', 'Cd52', 'Tmsb10', 'Mki67', 'Hmgb2', 'Pclaf', 'Npm1'.](../../images/scrna-casestudy-monocle/markers_plot.png "Plots of the expression of marker genes across the sample.")
+
+Further steps from now would include reviewing literature and checking what cell types correspond to the genes expressed in each cluster. Then you can annotate your clusters in the same way as shown above. Once you have your clusters annotated, Monocle can generate a file of marker genes for the identified cell types. This file can be then used with [Garnett](https://cole-trapnell-lab.github.io/garnett/), a software toolkit for automatically annotating cells. We will not go through this in the current tutorial, but we will generate the file of marker genes.
+
+```r
+# use ‘top_markers()’ again, now grouping cells by the assigned cell type
+assigned_marker_test <- top_markers(cds_annotated,
+                                             group_cells_by="cell_type",
+                                             reference_cells=1000,
+                                             cores=8)
+```
+```r
+# filter these markers according to how stringent you want to be
+garnett_markers <- assigned_marker_test %>%
+                        dplyr::filter(marker_test_q_value < 0.05 & specificity >= 0.25) %>%
+                        dplyr::group_by(cell_group) %>%
+                        dplyr::top_n(5, marker_score)
+```
+```r
+# exclude genes that are good markers for more than one cell type:
+garnett_markers_filtered <- garnett_markers %>%
+                        dplyr::group_by(gene_short_name) %>%
+                        dplyr::filter(dplyr::n() == 1)
+```
+```r
+# generate a file of marker genes
+generate_garnett_marker_file(garnett_markers_filtered, file="./marker_file.txt")
+```
+
+A new file should appear in the ‘Files’ window. If you click on it, you will see the cell types and their corresponding marker genes, satisfying your chosen conditions.
+
+> <tip-title>Marker genes file</tip-title>
 >
-> The method to specify the root cells shown above is not the only one available in Galaxy! However, it is probably the most intuitive one.
-> 1. **Annotated cell type as root cells**
->    -  fill *(--cell-phenotype)* with the colname (heading) where the cell types are stored
->    -  fill *(--root-type)* with the name of the cell type that you want to start ordering from
-> 2. **Cell ID as root cell**
->    -  fill *(--root-cells)* with the cell ID that you want to start ordering from
-> {% comment %}
->   3. **Starting principal points**
->     - repeat the plotting step, find the parameter *label_principal_points* and set its value to {% icon history-share %} `Yes`
->     - have a look at the plot and note which principal point best corresponds to the root cells
->     - fill *(--root-pr-nodes)* with the noted value from *label_principal_points*
-> {% endcomment %}
+>  Note that you can use the above block of code to generate file with the marker genes for unannotated CDS object to help you identify and check specifically expressed genes – you’d only have to change `group_cells_by` parameter from "cell_type" to “cluster”.
 {: .tip}
 
-Now we can see how all our hard work has come together to give a final pseudotime trajectory analysis. DN cells gently switching to DP-M which change into DP-L to finally become mature T-cells. Isn't it beautiful? But wait, don't be too enthusiastic - why on earth DP-M1 group branches out? We didn't expect that... What could that mean?
->
-There are a lot of such questions in bioinformatics, and we're always get excited to try to answer them. However, with analysing scRNA-seq data, it's almost like you need to know about 75% of your data to make sure that your analysis is reasonable, before you can identify the 25% new information. Additionally, pseudotime analysis crucially depends on choosing the right analysis and parameter values, as we showed for example with initial dimensionality reduction during pre-processing. The outputs here, at least in our hands, are more sensitive to parameter choice than standard clustering analysis with Scanpy.
 
-![Pseudotime plot, showing the development of T-cells – starting in dark blue on DN cells and ending up on mature T-cells, marked in yellow on pseudotime scale and (going in the opposite direction) DP-M1 branch which is marked in light orange.](../../images/scrna-casestudy-monocle/pseudotime.png "Trajectory analysis - pseudotime")
-
-Last but not least, you can now identify genes that define the inferred trajectories.
-
-> <hands-on-title>Differentially expressed genes</hands-on-title>
+> <tip-title>Only for users of local RStudio</tip-title>
 >
-> 1. {% tool [Monocle3 diffExp](toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_diffexp/monocle3_diffExp/0.1.4+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Input object in RDS format"*: output of **Monocle3 orderCells** {% icon tool %}
-> 2. Rename {% icon galaxy-pencil %} the output: `Differential gene expression table`
+> If you are working in RStudio locally, you might want to try a great function `choose_cells()`, which allows you to make a subset of the CDS object containing only cells of interest to investigate certain clusters more in-depth. It only works in interactive mode, so can be only used locally - when you call it, then a pop-up window will appear where you can choose cells to subset.
+>```r
+># create a CDS subset
+>cds_subset <- choose_cells(cds_clustered)
+>```
+>Now the chosen cluster is stored as a separate CDS object and you can analyse it independently, using the methods described above.
 >
+{: .tip}
+
+# Trajectory inference
+It’s time to perform trajectory analysis! First, let’s learn the trajectory graph. With an argument `use_partition` we can specify if we want to learn a disjoint graph (value TRUE - default) in each partition, or to learn a single graph (value FALSE) across all partitions. The thing is, we can visualise the cells in pseudotime only if they belong to one partition. This is why it is important to make sure that all the cells that you want to analyse in pseudotime belong to one partition.
+
+In one of the previous sections we've already prepared the partitions for trajectory inference - we assigned all the cells of interest into one partition by changing the q-value. As a result, we got two partitions – one containing only the cells that we labeled as ‘Unknown’ and another including all other cells. That is a perfect assignment – we’d like to focus only on maturation of T-cells, so we don’t want to connect those two partitions (therefore we specify `use_partition=TRUE` to get a disjoint graph) and we will work downstream only on the graph going through annotated T-cells.
+
+```r
+# learn trajectory graph
+cds_trajectory <- learn_graph(cds_annotated, use_partition=TRUE)
+```
+```r
+# visualise the learned trajectory
+plot_cells(cds_trajectory,
+           color_cells_by = "cell_type",
+           label_cell_groups=FALSE,
+           label_groups_by_cluster=FALSE,
+           label_leaves=FALSE,
+           label_branch_points=FALSE)
+```
+
+![Learned trajectory graph connecting all the annotated clusters except the ‘Unknown’ group of cells.](../../images/scrna-casestudy-monocle/learned_trajectory_r.png "Learned trajectory graph.")
+
+We have to tell Monocle where to start ordering the cells, ie. when we expect the analysed biological process to begin. Thanks to our biological knowledge, we know that the beginning of the trajectory should be at DN cluster.
+There are a couple of ways to specify the root cells:
+
+## Option 1: Root nodes
+Here, you will use `root_pr_nodes` argument in `order_cells()` function.
+
+To find the names of the principal points, you have to plot the learned trajectory again, specifying `label_principal_points = TRUE`
+```r
+# specifying root cells: `root_pr_nodes` argument - check the principal points
+plot_cells(cds_trajectory,
+          color_cells_by = "cell_type",
+          label_cell_groups=FALSE,
+          label_groups_by_cluster=FALSE,
+          label_leaves=FALSE,
+          label_branch_points=FALSE,
+          label_principal_points = TRUE,       # set this to TRUE
+          graph_label_size=3)
+```
+You can see now the principal points and their labels in the form `Y_number`. Pick the principal point in the cluster that you expect to be the beginning of the trajectory and type its name in the `root_pr_nodes` argument when calling `order_cells()` function.
+
+```r
+# specifying root cells: `root_pr_nodes` argument - use the relevant principal point
+cds_order_1 <- order_cells(cds_trajectory, root_pr_nodes='Y_14')
+```
+
+There is also a helper function to identify the root principal points based on the annotated cell types. This function uses `pr_graph_cell_proj_closest_vertex` which is just a matrix with a single column that stores for each cell, the ID of the principal graph node it's closest to.
+
+```r
+# a helper function to identify the root principal points
+get_correct_root_state <- function(cds, cell_phenotype, root_type){
+      cell_ids <- which(pData(cds)[, cell_phenotype] == root_type)
+
+      closest_vertex <- cds@principal_graph_aux[["UMAP"]]$pr_graph_cell_proj_closest_vertex
+      closest_vertex <- as.matrix(closest_vertex[colnames(cds), ])
+      root_pr_nodes <- igraph::V(principal_graph(cds)[["UMAP"]])$name[as.numeric(names
+                                                                    (which.max(table(closest_vertex[cell_ids,]))))]       
+      root_pr_nodes
+      }
+```
+```r
+# call the function to automatically find the node in the principal graph where our DN cells reside
+DN_node_id = get_correct_root_state(cds_trajectory, cell_phenotype = 'cell_type', "DN")
+
+DN_node_id      # check the node found
+```
+```r
+# order cells using the helper function output
+cds_order_1_helper <- order_cells(cds_trajectory, root_pr_nodes = DN_node_id)
+```
+
+## Option 2: Root cells
+Here, you will use `root_cells` argument in `order_cells()` function.
+
+Specify a vector of starting cell IDs. You can provide only one cell as well as all cells of a given type.
+
+```r
+# find the names of all cells belonging to a certain type, identified as a beginning of a trajectory
+starting_cell_type <- 'DN'
+index <- which(cds_trajectory@colData$cell_type == starting_cell_type)
+DN_cells <- colnames(cds_trajectory)[index]
+```
+```r
+# alternatively, if you work on unannotated data, you can use the number of the cluster that should be used as the beginning of the trajectory and pass it in the ‘root_cells’ argument
+starting_cluster <- colnames(cds_trajectory[,clusters(cds_trajectory) == 4])
+```
+```r
+# order cells
+cds_order_2 <- order_cells(cds_trajectory, root_cells = DN_cells)
+```
+
+> <tip-title>Only for users of local RStudio</tip-title>
+>
+> If you are working in RStudio locally, you can use `order_cells()` function in the interactive mode. The pop-up window should appear and then you can simply select root nodes in the cluster with the cell type identified as the beginning of the trajectory.
+>
+> ```r
+># specifying root cells: pop up window
+>cds_order_1 <- order_cells(cds_trajectory)
+>```
+>
+{: .tip}
+
+# Plotting in pseudotime
+
+You can use any `cds_order` object for the downstream analysis. Let’s pick one and assign it to an object with a shorter and more general name.
+```r
+cds_order <- cds_order_1_helper
+```
+
+The function `order_cells()` calculates pseudotime for each cell, so we can now visualise the T-cell maturation process in pseudotime! Additionally, we can access it and store in our CDS object for further analysis.
+
+```r
+# plot cells in pseudotime
+plot_cells(cds_order,
+           color_cells_by = "pseudotime",
+           label_cell_groups=FALSE,
+           label_leaves=FALSE,
+           label_branch_points=FALSE)
+```
+```r
+# access pseudotime calculated for each cell and store it alongside cell metadata
+pseudotime <- pseudotime(cds_order) 	
+cds_order@colData$pseudotime <- pseudotime 		 
+```
+
+![Plot of the cells ordered in pseudotime. The trajectory starts at double negative cells (ie. pseudotime = 0) which are coloured blue, then goes through double positive (middle T-cells), gradually changing colour from purple to pink, then double positive (late T-cells) are coloured orange and the trajectory ends at T-mature cells, which are coloured yellow.](../../images/scrna-casestudy-monocle/pseudotime_r.png "Cells ordered in pseudotime.")
+
+We can now see how our hard work has come together to give a final pseudotime trajectory analysis, which starts at double negative cells, then gently switches to double positives: from middle to late T-cells, and ends up on mature T-cells.
+
+# Differential expression analysis
+There are two approaches for more advanced differential analysis in Monocle:
+- Regression analysis: using `fit_models()`, you can evaluate whether each gene depends on variables such as time, treatments, etc.
+- Graph-autocorrelation analysis: using `graph_test()`, you can find genes that vary over a trajectory or between clusters.
+
+In this section, for some examples, we will work on the subset of our CDS object because the computation time for the whole dataset would take quite some time. Let’s make the subset CDS containing the information about the genes listed in the table in the previous section, so instead having 15395 elements, it will have only 7.
+```r
+# make the subset CDS
+test_genes=c('Il2ra','Cd8b1','Cd8a','Cd4','Itm2a','Aif1','Hba-a1')
+cds_subset <- cds_order[rowData(cds_order)$gene_short_name %in% test_genes,]
+```
+
+## Some more plotting
+Monocle also provides some easy ways to plot the expression of a small set of genes grouped by the factors you use during differential analysis.
+For example `plot_genes_violin()` allows us to create violin plots which are quite common in the field. Therefore let’s visualise how the gene expression changes between the cell types.
+```r
+# produce violin plots
+plot_genes_violin(cds_subset, group_cells_by="cell_type", ncol=2)
+```
+
+![ Violin plots of the expression of the specified genes in each assigned cell type. The trends are consistent with the previous biological interpretation and assignment.](../../images/scrna-casestudy-monocle/violin_plots.png " Violin plots of the expression of the specified genes in each assigned cell type.")
+
+When analysing the above violin plots, we will realise that the results are consistent with the detailed analysis in the previous tutorials, as well as findings in current tutorial.
+
+Another great function `plot_genes_in_pseudotime()` takes a small set of genes and shows their dynamics as a function of pseudotime.
+```r
+plot_genes_in_pseudotime(cds_subset, color_cells_by="cell_type", min_expr=0.5)
+```
+
+![On the left hand side scatter plots of expression of the specified genes in pseudotime. On the right hand side also the expression of specified genes as a function of pseudotime but shown with the cell type data superimposed. Again the trends are consistent with the previous biological interpretation and assignment](../../images/scrna-casestudy-monocle/genes_in_pseudotime.png " A visualisation of how specified genes change in the pseudotime.")
+
+
+## Regression analysis - advanced
+We will use a function which fits a generalized linear model for each gene in a CDS object. We have to specify the model formula which is any term that exists as a column in `colData()`. We want to test genes that differ between cell types and batches, so we will use "~cell_type + batch" argument. Then, we extract a table of coefficients from each model. `coefficient_table()` tests whether each coefficient differs significantly from zero under the [Wald test](https://en.wikipedia.org/wiki/Wald_test).
+
+```r
+# fit a generalized linear model for each gene
+gene_fits <- fit_models(cds_subset, model_formula_str = "~cell_type + batch")
+```
+```r
+# extract a table of coefficients
+fit_coefs <- coefficient_table(gene_fits) 	
+```
+```r
+# preview the content of 'fit_coefs'
+head(fit_coefs)
+```
+If you inspect the `fit_coefs` object, you will notice that the table includes one row for each term of each gene's model. We generally don't care about the intercept term, so we can filter it out. In this way, we will be able to control for the chosen factors. To focus on only one variable, you have to check the `term` column in the `fit_coefs` and pass this as an argument for filtering. Then, you should also filter the results with q_value < 0.05 to control the false discovery rate.
+
+```r
+# filter out Intercept term
+no_intercept_coefs <- fit_coefs %>% dplyr::filter(term != "(Intercept)") 	
+```
+```r
+# extract results for DP-M1 cells only
+DP_M1_coefs <- fit_coefs %>% dplyr::filter(term == "cell_typeDP-M1") 	
+```
+```r
+# control the false discovery rate and choose only several variables to store
+DP_M1_coefs_filtered <- DP_M1_coefs %>% dplyr::filter (q_value < 0.05) %>%
+  dplyr::select(gene_short_name, term, q_value, estimate)		
+```
+```r
+# view the resulting table
+DP_M1_coefs_filtered
+```
+The resulting table shows the genes that differ depending on the chosen term. Maybe this function is not very helpful in the case of our dataset, but may be useful when analysing unannotated data or choosing another term from `colData()`.
+
+## Graph-autocorrelation analysis - advanced
+Alongside regression analysis, Monocle also provides another way of finding genes that vary between groups of cells. The function `graph_test()` uses a statistic from spatial autocorrelation analysis called [Moran's I](https://en.wikipedia.org/wiki/Moran%27s_I), which {% cite Cao_2019 %} showed to be effective in finding genes that vary in single-cell RNA-seq datasets. Let’s try to perform this step on our full dataset (be patient!).
+```r
+# run autocorrelation test
+graph_test_res <- graph_test(cds_order, neighbor_graph="knn", cores=8)
+```
+
+The output data frame has a bunch of statistical values that you can use to rank the genes by, for example `morans_I` column, which ranges from -1 to +1. A value of 0 indicates no effect, while +1 indicates perfect positive autocorrelation and suggests that nearby cells have very similar values of a gene's expression.
+
+We will now try to associate genes with clusters by grouping genes into modules that have similar patterns of expression. You can call `find_gene_modules()`, which essentially runs UMAP on the genes (as opposed to the cells) and then groups them into modules using Louvain community analysis.
+
+```r
+# get gene IDs for which q-value < 0.05
+pr_deg_ids <- row.names(subset(graph_test_res, q_value < 0.05)) 	
+```
+```r
+# group genes into modules
+gene_module_df <- find_gene_modules(cds_order[pr_deg_ids,], resolution=1e-2) 	
+```
+Now we can show the aggregate expression of all genes in each module across all the clusters. Monocle provides a simple utility function called `aggregate_gene_expression` for this purpose:
+
+```r
+# aggregate expression of genes in each module
+cell_group_df <- tibble::tibble(cell=row.names(colData(cds_order)),
+                                cell_group=clusters(cds_order)[colnames(cds_order)])
+agg_mat <- aggregate_gene_expression(cds_order, gene_module_df, cell_group_df)
+row.names(agg_mat) <- stringr::str_c("Module ", row.names(agg_mat))
+colnames(agg_mat) <- stringr::str_c("Cluster ", colnames(agg_mat))
+```
+We can now use this data to create a heatmap. Don't worry if yours look a little bit different that the one shown in this tutorial. The general features should be maintained though.
+```r
+# create a heatmap
+pheatmap::pheatmap(agg_mat, cluster_rows=TRUE, cluster_cols=TRUE,
+                   scale="column", clustering_method="ward.D2",
+                   fontsize=6)
+```
+![A heatmap showing modules of co-regulated genes across the clusters. Modules listed vertically while clusters horizontally. Some modules are highly specific to certain partitions of cells, while others are shared across multiple partitions.](../../images/scrna-casestudy-monocle/heatmap.png "Heatmap showing modules of co-regulated genes across the clusters.")
+
+You can also visualise the modules using `plot_cells()` function. We've chosen some modules to see how the differences on a heatmap correlate with the expression shown on our starting plot.
+```r
+# see the chosen modules across the whole sample
+plot_cells(cds_order,
+           genes=gene_module_df %>% dplyr::filter(module %in% c(40, 39, 36, 17)),
+           group_cells_by="cluster",
+           color_cells_by="cluster",
+           show_trajectory_graph=FALSE)
+```
+![Plots showing expression of the genes belonging to specified modules across whole sample. Module 19 highly expressed in cluster 2 but also low expression thtoughout the sample, module 38 low expression but throughout the sample, module 41 highly expressed in cluster 5 only, module 42 almost no expression, except cluster 6.](../../images/scrna-casestudy-monocle/modules_plot.png "Plots of expression of the genes belonging to specified modules across whole sample.")
+
+With the visualisation methods above, you can now come back to the generated data frame `gene_module_df`, filter genes that belong to the module of interest and check their functions to get some more evidence for the correct biological interpretation.
+
+
+# 3D plotting
+Let’s have some fun at the end! That was quite a long and insightful analysis – you definitely deserve to look at some nice, rotatable, cool plot now!
+Essentially the workflow is the same as we followed in two dimensions. The crucial part is to specify the dimensionality of the reduced space with the `max_components` parameter in `reduce_dimension()` function. The default is 2, but if we want to see our data in 3D, we will change that value to 3. From there, you can just repeat the next steps in 3D… or just reward yourself for completing this tutorial by toggling this beautiful 3D plot!
+
+```r
+# reduce dimension to 3D
+cds_3d <- reduce_dimension(cds_order, preprocess_method = 'Aligned', max_components = 3)
+```
+```r
+# see the resulting 3D plot
+plot_cells_3d(cds_3d, color_cells_by="cell_type")
+```
+
+# Export your data, figures, and notebook
+
+Don’t forget to save and export your data! First, we will get Jupyter to see those as files. 
+
+## Export plots
+If you want to export your plot, you have to make sure that you assigned it to an object. For example, if you want to save the plot of cells in pseudotime, simply assign the function you used to generate this plot to an object. Here we call this object `plot_pseudotime`, like so:
+
+```r
+plot_pseudotime <- plot_cells(cds_order,
+           color_cells_by = "pseudotime",
+           label_cell_groups=FALSE,
+           label_leaves=FALSE,
+           label_branch_points=FALSE)
+```
+
+Then, if you want to save the plot as PDF:
+
+```r
+pdf("plot_pseudotime.pdf")             # open the graphical device and specify the directory and the name of the output pdf file 
+plot_pseudotime                        # specify the object that your plot is assigned to
+dev.off()                              # close the graphical device
+```
+
+The procedure is very similar if you want to export the file as PNG (or analogically JPEG – just replace png with jpeg):
+```r
+png("plot_pseudotime.png",            # open the graphical device and specify the directory and the name of the output png file 
+width=600, height=400)                # optionally you can specify the width and height of the final plot
+plot_pseudotime                       # specify the object that your plot is assigned to
+dev.off()                             # close the graphical device
+```
+
+However, it often happens that the quality of the exported PNG and JPEG files is not perfect. For best results, we recommend exporting to SVG:
+```r
+svg("plot_pseudotime.svg")             # open the graphical device and specify the directory and the name of the output svg file 
+plot_pseudotime                        # specify the object that your plot is assigned to
+dev.off()                              # close the graphical device
+```
+
+You can do the same with any plot that you want to save! You will find the saved figures in the left panel of your JupyterLab. You can right-click on them and download directly onto your computer. You can also push them into your Galaxy history. To do so, you have to change Kernel to Python3 (either click on `Kernel` -> `Change Kernel...` in the upper left corner of your JupyterLab or click on the displayed current kernel in the upper right corner and change it). 
+![Figure showing the JupyterLab interface with an arrow pointing to the left corner, showing the option `Kernel` -> `Change Kernel...` and another arrow pointing to the right corner, showing the icon of the current kernel. The pop-up window asks which kernel should be chosen instead.](../../images/scrna-casestudy-monocle/switch_kernel.jpg "Two ways of switching kernel.")
+
+Check in the upper right corner that selected kernel is Python3, and run the following:
+```python
+put("marker_file.txt")
+put("plot_pseudotime.pdf")
+put("plot_pseudotime.png")
+```
+
+In this way you can push all the files you've saved into your Galaxy history. You can also do the same with this notebook. The cell below will only work if you haven’t changed the name of the notebook. If you renamed it, simply type its new name in the parenthesis.
+```python
+put("single-cell-scrna-case_monocle3-rstudio.ipynb") 
+```
+
+Now you can go check your Galaxy history to make sure your files have all made it back into your Galaxy history. 
+
+
+# After Jupyter
+
+Congratulations! You've made it through Jupyter!
+
+> <hands-on-title>Closing JupyterLab</hands-on-title>
+> 1. Click **User**: **Active Interactive Tools**
+> 2. Tick the box of your Jupyter Interactive Tool, and click **Stop**
 {: .hands_on}
+
+If you want to run this notebook again, or share it with others, it now exists in your history. You can use this 'finished' version just the same way as you downloaded the directions file and uploaded it into the Jupyter environment.
+
 
 # Conclusion
 
-{% icon congratulations %} Well done, you’ve made it to the end! You might want to consult your results with this [control history](https://humancellatlas.usegalaxy.eu/u/j.jakiela/h/monoce3-tutorial-workflow), or check out the [full workflow](https://humancellatlas.usegalaxy.eu/u/j.jakiela/w/copy-of-anndata-to-monocle-right-1) for this tutorial. I also split this workflow into two separate workflows: [preparing the input files for Monocle3, starting from AnnData](https://humancellatlas.usegalaxy.eu/u/j.jakiela/w/copy-of-trajectory-analysis-using-monocle3), and [Monocle3 only workflow](https://humancellatlas.usegalaxy.eu/u/j.jakiela/w/copy-of-trajectory-analysis-using-monocle3-1). You can use them to accelerate analysis of your own data, paying attention to the requirements of the input data that are mentioned in this tutorial.
-
-![A scheme connecting all the tools used in this tutorial.](../../images/scrna-casestudy-monocle/workflow.jpg "Full workflow for this tutorial.")
-
-If you're following the Case Study tutorials from the beginning, you have already experienced what it’s like to analyse and question a dataset, potentially without clear cut-offs or clear answers. You now know that trajectory analysis is even more sensitive to parameter values, so it's often trying to find the best set of values that would give the most reasonable results and go in accordance with biology. Moreover, not all trajectory analysis methods are designed to infer all kinds of biological processes - due to the fact that they use different algorithms, some would work better for analysing your sample. Since Monocle is quite widely used for trajectory analysis, it might be a good practice to compare its results with other methods. The more evidence you have to confirm your findings, the more confident you can be about their reliability!
+If you’re following the Case Study tutorials from the beginning, you have already experienced what it’s like to analyse and question a dataset, potentially without clear cut-offs or clear answers. The [Monocle in Galaxy tutorial]({% link topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.md %}) was focused more on explaining each step of the trajectory analysis and interpreting the results in the biological context. The current tutorial aims at showing the variety of methods that can be used when Galaxy's Monocle tools are not enough. It shows the potential of batch correction, differential expression analysis and flexibility when using different functions. It's also a guide for those who would like to understand what is happening 'behind the scenes' when clicking on Galaxy buttons.
