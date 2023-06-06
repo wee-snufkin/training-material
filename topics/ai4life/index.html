@@ -8,16 +8,35 @@
         
             <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
 
+<!-- JavaScript Error Monitoring, and performance tracking. -->
+<script
+  src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
+  integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript">
+Sentry.init({
+  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
+  // Capture Replay for no sessions by default
+  replaysSessionSampleRate: 0.01,
+  // plus for 1% of sessions with an error
+  replaysOnErrorSampleRate: 0.01,
+  // PII OFF
+  sendDefaultPii: false, // Off by default but just in case.
+  environment: "production",
+});
+</script>
+
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/ai4life/">
-        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -34,7 +53,7 @@
         <meta property="og:title" content="Galaxy Training: Image analysis using Deep Learning">
         <meta property="og:description" content="Here you can learn all about Image analysis using Deep Le...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
+        <meta property="og:image" content="/training-material/assets/images/GTN.png">
 
         
     </head>
@@ -110,8 +129,7 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/ai4life/" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/ai4life/index.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -247,7 +265,7 @@ body.remark-container .my-footer a {
 
     <h2 id="material">Material</h2>
     
-    <div class="label label-default tutorial_tag" style="--color-primary: #c9deff; --color-darker: #9cc7ff; --color-dimmed: #b3d3ff;">work-in-progress</div>
+    <div class="label label-default tutorial_tag" style="--color-primary: #c4dcff; --color-darker: #96c5ff; --color-dimmed: #aed0ff;">work-in-progress</div>
     
         <!-- subtopic = [__FLAT__, {subtopic => , materials => [ ... ]} ] -->
 
@@ -273,15 +291,15 @@ body.remark-container .my-footer a {
 
   
   
-        <!-- MAT: ai4life/example-slides -->
+        <!-- MAT: ai4life/getting-started -->
       
 
         <tr>
           <td class="tutorial_title">
             
             
-            <a href="/training-material/topics/ai4life/tutorials/example-slides/slides.html">
-                Example Slide Deck
+            <a href="/training-material/topics/ai4life/tutorials/getting-started/slides.html">
+                BioImage Model Zoo: Advanced models in one-click
             </a>
             
 
@@ -290,9 +308,9 @@ body.remark-container .my-footer a {
             
             
               
-              <a href="/training-material/search?query=some" class="label label-default tutorial_tag" style="--color-primary: #ffcef6; --color-darker: #ffa7f1; --color-dimmed: #ffbbf3;" title="Click to show all tutorials tagged some">some</a>
+              <a href="/training-material/search?query=bioimageio" class="label label-default tutorial_tag" style="--color-primary: #00f7b5; --color-darker: #00dca0; --color-dimmed: #00eaaa;" title="Click to show all tutorials tagged bioimageio">bioimageio</a>
               
-              <a href="/training-material/search?query=tags" class="label label-default tutorial_tag" style="--color-primary: #ffd1dd; --color-darker: #ffadc5; --color-dimmed: #ffbfd1;" title="Click to show all tutorials tagged tags">tags</a>
+              <a href="/training-material/search?query=image analysis" class="label label-default tutorial_tag" style="--color-primary: #00f995; --color-darker: #00de84; --color-dimmed: #00eb8c;" title="Click to show all tutorials tagged image analysis">image analysis</a>
               
             
             </div>
@@ -303,10 +321,10 @@ body.remark-container .my-footer a {
 
 
 <div class="btn-group">
-	<a class="visually-hidden" href="/training-material/topics/ai4life/tutorials/example-slides/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+	<a class="visually-hidden" href="/training-material/topics/ai4life/tutorials/getting-started/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
 </div>
     <div class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/example-slides/slides.html" title="Slides">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/getting-started/slides.html" title="Slides">
             <i class="fab fa-slideshare" aria-hidden="true"></i>
         </a>
         <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
@@ -319,43 +337,43 @@ body.remark-container .my-footer a {
         <li class="dropdown-item"><strong>Automatic translations</strong></li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 Français
             </a>
 		</li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 日本語
             </a>
 		</li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 Español
             </a>
 		</li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 Português
             </a>
 		</li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 العربية
             </a>
 		</li>
         
 		<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
             More Languages
         </a>
 		</li>
 
 	<li class="dropdown-item">
-	<a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/example-slides/slides-plain.html" aria-label="more accessible, plain text slides">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/getting-started/slides-plain.html" aria-label="more accessible, plain text slides">
 		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
 	</a>
 	</li>
@@ -367,7 +385,7 @@ body.remark-container .my-footer a {
 
 <div class="btn-group">
   <!-- add video button -->
-  <a class="btn btn-default topic-icon" href="/training-material/videos/watch.html?v=ai4life/tutorials/example-slides/slides" title="Video Slides (text-to-speech)">
+  <a class="btn btn-default topic-icon" href="/training-material/videos/watch.html?v=ai4life/tutorials/getting-started/slides" title="Video Slides (text-to-speech)">
     <i class="far fa-play-circle" aria-hidden="true"></i>
   </a>
 
@@ -415,10 +433,10 @@ body.remark-container .my-footer a {
 
 
 <div class="btn-group">
-	<a class="visually-hidden" href="/training-material/topics/ai4life/tutorials/example-slides/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+	<a class="visually-hidden" href="/training-material/topics/ai4life/tutorials/getting-started/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
 </div>
     <div class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/example-slides/slides.html" title="Slides">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/getting-started/slides.html" title="Slides">
             <i class="fab fa-slideshare" aria-hidden="true"></i>
         </a>
         <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
@@ -431,43 +449,43 @@ body.remark-container .my-footer a {
         <li class="dropdown-item"><strong>Automatic translations</strong></li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 Français
             </a>
 		</li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 日本語
             </a>
 		</li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 Español
             </a>
 		</li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 Português
             </a>
 		</li>
         
 		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
                 العربية
             </a>
 		</li>
         
 		<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fexample-slides%2Fslides.html&edit-text=&act=url" title="">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fgetting-started%2Fslides.html&edit-text=&act=url" title="">
             More Languages
         </a>
 		</li>
 
 	<li class="dropdown-item">
-	<a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/example-slides/slides-plain.html" aria-label="more accessible, plain text slides">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/getting-started/slides-plain.html" aria-label="more accessible, plain text slides">
 		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
 	</a>
 	</li>
@@ -479,7 +497,505 @@ body.remark-container .my-footer a {
 
 <div class="btn-group">
   <!-- add video button -->
-  <a class="btn btn-default topic-icon" href="/training-material/videos/watch.html?v=ai4life/tutorials/example-slides/slides" title="Video Slides (text-to-speech)">
+  <a class="btn btn-default topic-icon" href="/training-material/videos/watch.html?v=ai4life/tutorials/getting-started/slides" title="Video Slides (text-to-speech)">
+    <i class="far fa-play-circle" aria-hidden="true"></i>
+  </a>
+
+  
+
+</div>
+
+ </td>
+          <td> 
+ </td>
+          <td> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ </td>
+
+          
+          <td> 
+
+
+ </td>
+          <td> 
+
+
+ </td>
+          
+
+          
+         </tr>
+       
+    
+        <!-- MAT: ai4life/contribute-materials -->
+      
+
+        <tr>
+          <td class="tutorial_title">
+            
+            
+            <a href="/training-material/topics/ai4life/tutorials/contribute-materials/slides.html">
+                Contribute to the BioImage.IO models
+            </a>
+            
+
+
+            <div class="extra">
+            
+            
+              
+              <a href="/training-material/search?query=bioimageio" class="label label-default tutorial_tag" style="--color-primary: #00f7b5; --color-darker: #00dca0; --color-dimmed: #00eaaa;" title="Click to show all tutorials tagged bioimageio">bioimageio</a>
+              
+              <a href="/training-material/search?query=image analysis" class="label label-default tutorial_tag" style="--color-primary: #00f995; --color-darker: #00de84; --color-dimmed: #00eb8c;" title="Click to show all tutorials tagged image analysis">image analysis</a>
+              
+            
+            </div>
+
+            <div class="duplicate">
+              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
+              
+
+
+<div class="btn-group">
+	<a class="visually-hidden" href="/training-material/topics/ai4life/tutorials/contribute-materials/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+</div>
+    <div class="btn-group">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/contribute-materials/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+
+        <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                Français
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                Español
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                Português
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+		</li>
+
+	<li class="dropdown-item">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/contribute-materials/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
+	</li>
+    </ul>
+</div>
+
+
+<!-- video slides -->
+
+<div class="btn-group">
+  <!-- add video button -->
+  <a class="btn btn-default topic-icon" href="/training-material/videos/watch.html?v=ai4life/tutorials/contribute-materials/slides" title="Video Slides (text-to-speech)">
+    <i class="far fa-play-circle" aria-hidden="true"></i>
+  </a>
+
+  
+
+</div>
+
+
+              
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+              
+                  
+
+
+
+                  
+
+
+
+              
+
+              
+              </div>
+            </div>
+          </td>
+
+          <td> 
+
+
+<div class="btn-group">
+	<a class="visually-hidden" href="/training-material/topics/ai4life/tutorials/contribute-materials/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+</div>
+    <div class="btn-group">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/contribute-materials/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+
+        <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                Français
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                Español
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                Português
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fcontribute-materials%2Fslides.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+		</li>
+
+	<li class="dropdown-item">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/contribute-materials/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
+	</li>
+    </ul>
+</div>
+
+
+<!-- video slides -->
+
+<div class="btn-group">
+  <!-- add video button -->
+  <a class="btn btn-default topic-icon" href="/training-material/videos/watch.html?v=ai4life/tutorials/contribute-materials/slides" title="Video Slides (text-to-speech)">
+    <i class="far fa-play-circle" aria-hidden="true"></i>
+  </a>
+
+  
+
+</div>
+
+ </td>
+          <td> 
+ </td>
+          <td> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ </td>
+
+          
+          <td> 
+
+
+ </td>
+          <td> 
+
+
+ </td>
+          
+
+          
+         </tr>
+       
+    
+        <!-- MAT: ai4life/welcome-bioimageio -->
+      
+
+        <tr>
+          <td class="tutorial_title">
+            
+            
+            <a href="/training-material/topics/ai4life/tutorials/welcome-bioimageio/slides.html">
+                Welcome to the BioImage Model Zoo
+            </a>
+            
+
+
+            <div class="extra">
+            
+            
+              
+              <a href="/training-material/search?query=bioimageio" class="label label-default tutorial_tag" style="--color-primary: #00f7b5; --color-darker: #00dca0; --color-dimmed: #00eaaa;" title="Click to show all tutorials tagged bioimageio">bioimageio</a>
+              
+              <a href="/training-material/search?query=image analysis" class="label label-default tutorial_tag" style="--color-primary: #00f995; --color-darker: #00de84; --color-dimmed: #00eb8c;" title="Click to show all tutorials tagged image analysis">image analysis</a>
+              
+            
+            </div>
+
+            <div class="duplicate">
+              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
+              
+
+
+<div class="btn-group">
+	<a class="visually-hidden" href="/training-material/topics/ai4life/tutorials/welcome-bioimageio/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+</div>
+    <div class="btn-group">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/welcome-bioimageio/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+
+        <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                Français
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                Español
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                Português
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+		</li>
+
+	<li class="dropdown-item">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/welcome-bioimageio/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
+	</li>
+    </ul>
+</div>
+
+
+<!-- video slides -->
+
+<div class="btn-group">
+  <!-- add video button -->
+  <a class="btn btn-default topic-icon" href="/training-material/videos/watch.html?v=ai4life/tutorials/welcome-bioimageio/slides" title="Video Slides (text-to-speech)">
+    <i class="far fa-play-circle" aria-hidden="true"></i>
+  </a>
+
+  
+
+</div>
+
+
+              
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+              
+                  
+
+
+
+                  
+
+
+
+              
+
+              
+              </div>
+            </div>
+          </td>
+
+          <td> 
+
+
+<div class="btn-group">
+	<a class="visually-hidden" href="/training-material/topics/ai4life/tutorials/welcome-bioimageio/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+</div>
+    <div class="btn-group">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/welcome-bioimageio/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+
+        <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                Français
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                Español
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                Português
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fai4life%2Ftutorials%2Fwelcome-bioimageio%2Fslides.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+		</li>
+
+	<li class="dropdown-item">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/ai4life/tutorials/welcome-bioimageio/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
+	</li>
+    </ul>
+</div>
+
+
+<!-- video slides -->
+
+<div class="btn-group">
+  <!-- add video button -->
+  <a class="btn btn-default topic-icon" href="/training-material/videos/watch.html?v=ai4life/tutorials/welcome-bioimageio/slides" title="Video Slides (text-to-speech)">
     <i class="far fa-play-circle" aria-hidden="true"></i>
   </a>
 
@@ -554,31 +1070,54 @@ body.remark-container .my-footer a {
     <h2 id="contributors">Contributors</h2>
     <p>This material was contributed to by:</p>
     
-    <a href="/training-material/hall-of-fame/beatrizserrano/" class="contributor-badge contributor-beatrizserrano"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/beatrizserrano?s=27" alt="Avatar">Beatriz Serrano-Solano</a>
+    <a href="/training-material/hall-of-fame/cfusterbarcelo/" class="contributor-badge contributor-cfusterbarcelo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/cfusterbarcelo?s=27" alt="Avatar">Caterina Fuster-Barceló</a>
 
     
 </section>
 
         </div>
-        
-            <footer>
-    <div class="container">
-        <br><br>
-        <p>
-            The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
-            provides researchers with online training materials, connects them with local trainers, and helps promoting open data analysis practices worldwide.
-        </p>
-        <p>
-        The content of the tutorials is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The website and infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>.
-        </p>
+        <footer>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6" style="text-align: left">
+				<p>
+					The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
+					provides researchers with online training materials, connects them with local trainers, and helps promoting FAIR and Open Science practices worldwide. All contributions are subject to the <a rel="code-of-conduct" href="https://galaxyproject.org/community/coc/">Galaxy Project Code of Conduct</a>.
+				</p>
+				<p>
+				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
+				</p>
+				<p>
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				</p>
+			</div>
+			<div class="col-sm-6" style="text-align: right">
+				
+				<p>
+					<i>This Material</i>:
+					
+					It is licensed under
+					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+						Creative Commons Attribution 4.0 International License
+					</a>
+				</p>
+				<p>
+					<a href="https://github.com/galaxyproject/training-material/edit/main/topics/ai4life/index.md" title="Edit on GitHub">
+					<i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
 
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/432506ea252fecb020af981ef0c2a32ca4d28b6c">432506ea252fecb020af981ef0c2a32ca4d28b6c</a>. </p>
+
     </div>
 </footer>
 
-        
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -586,9 +1125,13 @@ body.remark-container .my-footer a {
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
@@ -597,7 +1140,6 @@ body.remark-container .my-footer a {
         </script>
         
         <script type="text/javascript" src="/training-material/assets/js/list.min.js"></script>
-        <script type="text/javascript" src="/training-material/assets/js/topic.js"></script>
         
 
         <script type="text/javascript">

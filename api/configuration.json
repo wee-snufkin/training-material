@@ -264,19 +264,14 @@
   },
   "announcement": {
     "class": "success",
-    "title": "GTN Smörgåsbord 2023",
-    "text": "The Galaxy Training Network is happy to announce the 3rd annual edition of the GTN Smörgåsbord global training event!\nThis 5-day, 24/7 training event is completely free, and covers a wide range of topics! During the week, **you** decide your own schedule, pick and choose the topics that are interesting to you, and learn at your own pace, with support from the global community of over 100 Galaxy instructors available on Slack 24/7 to answer your questions!\n\n[Register today!](https://gallantries.github.io/video-library/events/smorgasbord3/?utm_source=gtn-button&utm_medium=website&utm_campaign=smorgasbord2023){: .btn.btn-success}\n"
-  },
-  "banner_image": {
-    "source": "https://gallantries.github.io/assets/images/smorgasbord3/png/banner-email.png",
-    "link": "https://gallantries.github.io/video-library/events/smorgasbord3/?utm_source=gtn-banner&utm_medium=website&utm_campaign=smorgasbord2023",
-    "alt": "The Gallantries, Galaxy Training Network & Galaxy Community are happy to announce: GTN Smorgasbord 3, gxy.io/smorgasbord3 a free galaxy training event, online, from may 22-26 2023. Topics covered include SARS-CoV-2, RNA-Seq, Single Cell, Proteomics, Machine Learning, Annotation, Climate, Ecology, Cancer, RO-Crates, and more! An EU flag in the corner indicates that this event is made possible with the support of the european union. A waterman butterfly projection map adorns the other corner suggesting a world wide event. Links are included to @gtn@mstdn.science @gallantries@mstdn.science, and two twitter urls @gxyTraining and @gallantries_eu\n"
+    "title": "GTN Celebrates Pride Month",
+    "text": "June is pride month in many countries around the world! The GTN is celebrating it by remembering the story of Alan L. Hart, a trans doctor who pioneered the use of x-ray photography in tuberculosis detection.\n\n[Read about Alan L. Hart's contribution to M. Tuberculosis](/training-material/news/2023/06/01/hart.html){: .btn.btn-primary}\n<a href=\"#\" class=\"btn btn-success\" onclick=\"setTheme('progress')\">Activate the GTN Theme!</a>\n\n<strong>Note:</strong> You can change your theme any time via the 'Extras' menu at the top!\n"
   },
   "serving": false,
   "boxify": {
   },
-  "git_revision": "432506ea252fecb020af981ef0c2a32ca4d28b6c",
-  "git_revision_short": "432506e",
+  "git_revision": "9df592fe7466e0f098d2daea62ad9471ce46169e",
+  "git_revision_short": "9df592f",
   "gtn_fork": "wee-snufkin",
   "git_tags": [
     "2019-02-07",
@@ -324,5 +319,5 @@
     "2022-05-01",
     "2022-04-01"
   ],
-  "age": 7.876796714579055
+  "age": 7.9370294318959616
 }

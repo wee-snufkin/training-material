@@ -8,22 +8,41 @@
         
             <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
 
+<!-- JavaScript Error Monitoring, and performance tracking. -->
+<script
+  src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
+  integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript">
+Sentry.init({
+  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
+  // Capture Replay for no sessions by default
+  replaysSessionSampleRate: 0.01,
+  // plus for 1% of sessions with an error
+  replaysOnErrorSampleRate: 0.01,
+  // PII OFF
+  sendDefaultPii: false, // Off by default but just in case.
+  environment: "production",
+});
+</script>
+
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/learning-pathways/intro-to-galaxy-and-ecology.html">
-        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Introduction to Galaxy and Ecological data analysis">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-05-03 16:25:37 +0000">
+<meta name="DC.date" content="2023-05-17 16:00:56 +0000">
 
         
         
@@ -34,7 +53,7 @@
         <meta property="og:title" content="Galaxy Training: Introduction to Galaxy and Ecological data analysis">
         <meta property="og:description" content="Collection of tutorials developed and maintained by the w...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
+        <meta property="og:image" content="/training-material/assets/images/GTN.png">
 
         
     </head>
@@ -103,8 +122,7 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/learning-pathways/intro-to-galaxy-and-ecology.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/mainlearning-pathways/intro-to-galaxy-and-ecology.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -226,10 +244,10 @@ steps of biodiversity data analysis: download, check, filter and explore biodive
 
     
         <h3 id="st-module-1-introduction-to-galaxy">Module 1: Introduction to Galaxy</h3>
-        <p>Get a first look at the Galaxy platform for data analysis. We start with a
-short introduction (video slides & practical) to familiarize you with the Galaxy
+        <p><p>Get a first look at the Galaxy platform for data analysis. We start with a
+short introduction (video slides &amp; practical) to familiarize you with the Galaxy
 interface, and then proceed with a slightly longer introduction tutorials where
-you perform a first, very simple, analysis.
+you perform a first, very simple, analysis.</p>
 </p>
 
         
@@ -277,7 +295,7 @@ you perform a first, very simple, analysis.
             
             
               
-              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00f6ea; --color-darker: #00dbd0; --color-dimmed: #00e9dd;" title="Click to show all tutorials tagged español">español</a>
+              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00f3e8; --color-darker: #00d8ce; --color-dimmed: #00e6db;" title="Click to show all tutorials tagged español">español</a>
               
             
             </div>
@@ -738,7 +756,8 @@ you perform a first, very simple, analysis.
 
     
         <h3 id="st-module-2-basics-of-biodiversity-data-exploration">Module 2: Basics of Biodiversity data exploration</h3>
-        <p>When analysing biodiversity data, you should often explore your data (and/or existing data from GBIF for example) looking at geographical, taxonomic or temporal components to clean it and make sure your data is good enough to answer your research question.</p>
+        <p><p>When analysing biodiversity data, you should often explore your data (and/or existing data from GBIF for example) looking at geographical, taxonomic or temporal components to clean it and make sure your data is good enough to answer your research question.</p>
+</p>
 
         
 	<table class="table table-responsive table-striped">
@@ -775,9 +794,9 @@ you perform a first, very simple, analysis.
             
             
               
-              <a href="/training-material/search?query=taxonomic data" class="label label-default tutorial_tag" style="--color-primary: #79f900; --color-darker: #6bde00; --color-dimmed: #72ec00;" title="Click to show all tutorials tagged taxonomic data">taxonomic data</a>
+              <a href="/training-material/search?query=taxonomic data" class="label label-default tutorial_tag" style="--color-primary: #78f600; --color-darker: #6adb00; --color-dimmed: #71e900;" title="Click to show all tutorials tagged taxonomic data">taxonomic data</a>
               
-              <a href="/training-material/search?query=data quality" class="label label-default tutorial_tag" style="--color-primary: #ffd0e6; --color-darker: #ffabd5; --color-dimmed: #ffbedd;" title="Click to show all tutorials tagged data quality">data quality</a>
+              <a href="/training-material/search?query=data quality" class="label label-default tutorial_tag" style="--color-primary: #ffcce4; --color-darker: #ffa7d3; --color-dimmed: #ffbadc;" title="Click to show all tutorials tagged data quality">data quality</a>
               
             
             </div>
@@ -964,11 +983,11 @@ you perform a first, very simple, analysis.
             
             
               
-              <a href="/training-material/search?query=gbif" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb1; --color-dimmed: #ffc1c2;" title="Click to show all tutorials tagged gbif">gbif</a>
+              <a href="/training-material/search?query=gbif" class="label label-default tutorial_tag" style="--color-primary: #ffcecf; --color-darker: #ffacad; --color-dimmed: #ffbdbe;" title="Click to show all tutorials tagged gbif">gbif</a>
               
-              <a href="/training-material/search?query=data management" class="label label-default tutorial_tag" style="--color-primary: #ffd79b; --color-darker: #f9ba00; --color-dimmed: #ffc860;" title="Click to show all tutorials tagged data management">data management</a>
+              <a href="/training-material/search?query=data management" class="label label-default tutorial_tag" style="--color-primary: #ffd390; --color-darker: #f6b800; --color-dimmed: #ffc54e;" title="Click to show all tutorials tagged data management">data management</a>
               
-              <a href="/training-material/search?query=data cleaning" class="label label-default tutorial_tag" style="--color-primary: #00fe66; --color-darker: #00e25a; --color-dimmed: #00f060;" title="Click to show all tutorials tagged data cleaning">data cleaning</a>
+              <a href="/training-material/search?query=data cleaning" class="label label-default tutorial_tag" style="--color-primary: #00fb65; --color-darker: #00df59; --color-dimmed: #00ed5f;" title="Click to show all tutorials tagged data cleaning">data cleaning</a>
               
             
             </div>
@@ -1088,7 +1107,8 @@ you perform a first, very simple, analysis.
 
     
         <h3 id="st-module-3-basics-of-biodiversity-abundance-data-analysis">Module 3: Basics of Biodiversity abundance data analysis</h3>
-        <p>Working on abundance data, you often want to analyze it through modeling to compute and analyze biodiversity metrics.</p>
+        <p><p>Working on abundance data, you often want to analyze it through modeling to compute and analyze biodiversity metrics.</p>
+</p>
 
         
 	<table class="table table-responsive table-striped">
@@ -1125,15 +1145,15 @@ you perform a first, very simple, analysis.
             
             
               
-              <a href="/training-material/search?query=Species population EBV class" class="label label-default tutorial_tag" style="--color-primary: #00f7e5; --color-darker: #00dccb; --color-dimmed: #00e9d8;" title="Click to show all tutorials tagged Species population EBV class">Species population EBV class</a>
+              <a href="/training-material/search?query=Species population EBV class" class="label label-default tutorial_tag" style="--color-primary: #00f4e2; --color-darker: #00d9c9; --color-dimmed: #00e6d5;" title="Click to show all tutorials tagged Species population EBV class">Species population EBV class</a>
               
-              <a href="/training-material/search?query=Community composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #c4e0ff; --color-darker: #90caff; --color-dimmed: #abd5ff;" title="Click to show all tutorials tagged Community composition EBV class">Community composition EBV class</a>
+              <a href="/training-material/search?query=Community composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #beddff; --color-darker: #8ac8ff; --color-dimmed: #a5d2ff;" title="Click to show all tutorials tagged Community composition EBV class">Community composition EBV class</a>
               
-              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #efd3ff; --color-darker: #e4b1ff; --color-dimmed: #e9c2ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
+              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #eecfff; --color-darker: #e3aeff; --color-dimmed: #e8beff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
               
-              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00f9cf; --color-darker: #00ddb7; --color-dimmed: #00ebc3;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
+              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00f6cc; --color-darker: #00dbb5; --color-dimmed: #00e8c0;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
               
-              <a href="/training-material/search?query=modeling" class="label label-default tutorial_tag" style="--color-primary: #e5d6ff; --color-darker: #d3b8ff; --color-dimmed: #dcc7ff;" title="Click to show all tutorials tagged modeling">modeling</a>
+              <a href="/training-material/search?query=modeling" class="label label-default tutorial_tag" style="--color-primary: #e3d3ff; --color-darker: #d1b5ff; --color-dimmed: #dac4ff;" title="Click to show all tutorials tagged modeling">modeling</a>
               
             
             </div>
@@ -1320,13 +1340,13 @@ you perform a first, very simple, analysis.
             
             
               
-              <a href="/training-material/search?query=Species populations EBV class" class="label label-default tutorial_tag" style="--color-primary: #00f7e5; --color-darker: #00dccb; --color-dimmed: #00e9d8;" title="Click to show all tutorials tagged Species populations EBV class">Species populations EBV class</a>
+              <a href="/training-material/search?query=Species populations EBV class" class="label label-default tutorial_tag" style="--color-primary: #00f4e2; --color-darker: #00d9c9; --color-dimmed: #00e6d5;" title="Click to show all tutorials tagged Species populations EBV class">Species populations EBV class</a>
               
-              <a href="/training-material/search?query=Species traits EBV class" class="label label-default tutorial_tag" style="--color-primary: #d6dbff; --color-darker: #b7c1ff; --color-dimmed: #c6ceff;" title="Click to show all tutorials tagged Species traits EBV class">Species traits EBV class</a>
+              <a href="/training-material/search?query=Species traits EBV class" class="label label-default tutorial_tag" style="--color-primary: #d2d8ff; --color-darker: #b4beff; --color-dimmed: #c3cbff;" title="Click to show all tutorials tagged Species traits EBV class">Species traits EBV class</a>
               
-              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #efd3ff; --color-darker: #e4b1ff; --color-dimmed: #e9c2ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
+              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #eecfff; --color-darker: #e3aeff; --color-dimmed: #e8beff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
               
-              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00f9cf; --color-darker: #00ddb7; --color-dimmed: #00ebc3;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
+              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00f6cc; --color-darker: #00dbb5; --color-dimmed: #00e8c0;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
               
             
             </div>
@@ -1448,25 +1468,48 @@ you perform a first, very simple, analysis.
 </section>
 
         </div>
-        
-            <footer>
-    <div class="container">
-        <br><br>
-        <p>
-            The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
-            provides researchers with online training materials, connects them with local trainers, and helps promoting open data analysis practices worldwide.
-        </p>
-        <p>
-        The content of the tutorials is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The website and infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>.
-        </p>
+        <footer>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6" style="text-align: left">
+				<p>
+					The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
+					provides researchers with online training materials, connects them with local trainers, and helps promoting FAIR and Open Science practices worldwide. All contributions are subject to the <a rel="code-of-conduct" href="https://galaxyproject.org/community/coc/">Galaxy Project Code of Conduct</a>.
+				</p>
+				<p>
+				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
+				</p>
+				<p>
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				</p>
+			</div>
+			<div class="col-sm-6" style="text-align: right">
+				
+				<p>
+					<i>This Material</i>:
+					
+					It is licensed under
+					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+						Creative Commons Attribution 4.0 International License
+					</a>
+				</p>
+				<p>
+					<a href="https://github.com/galaxyproject/training-material/edit/main/learning-pathways/intro-to-galaxy-and-ecology.md" title="Edit on GitHub">
+					<i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
 
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/432506ea252fecb020af981ef0c2a32ca4d28b6c">432506ea252fecb020af981ef0c2a32ca4d28b6c</a>. </p>
+
     </div>
 </footer>
 
-        
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -1474,9 +1517,13 @@ you perform a first, very simple, analysis.
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

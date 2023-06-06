@@ -8,16 +8,35 @@
         
             <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
 
+<!-- JavaScript Error Monitoring, and performance tracking. -->
+<script
+  src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
+  integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript">
+Sentry.init({
+  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
+  // Capture Replay for no sessions by default
+  replaysSessionSampleRate: 0.01,
+  // plus for 1% of sessions with an error
+  replaysOnErrorSampleRate: 0.01,
+  // PII OFF
+  sendDefaultPii: false, // Off by default but just in case.
+  environment: "production",
+});
+</script>
+
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/hall-of-fame/nsoranzo/">
-        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -34,7 +53,7 @@
         <meta property="og:title" content="Galaxy Training: GTN Contributor: Nicola Soranzo">
         <meta property="og:description" content="Collection of tutorials developed and maintained by the w...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
+        <meta property="og:image" content="/training-material/assets/images/GTN.png">
 
         
     </head>
@@ -103,8 +122,7 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/hall-of-fame/nsoranzo/" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/mainhall-of-fame/nsoranzo/index.html" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -191,8 +209,8 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "http://purl.org/dc/terms/conformsTo": {
-    "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-    "@type": "Person"
+    "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+    "@type": "CreativeWork"
   },
   "url": "https://training.galaxyproject.org/training-material/hall-of-fame/nsoranzo/",
   "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/nsoranzo/",
@@ -223,11 +241,13 @@
 		<div class="row">
 
 			<div class="col-md-3">
+				<div>
 				
 					<img src="https://avatars.githubusercontent.com/nsoranzo" alt="github avatar" >
 				
+				</div>
 
-                
+				
 
 				
 
@@ -242,9 +262,11 @@
 				
 
 				
+
+				
 				<div class="contact-items">
-					<a title="Gitter" href="https://gitter.im/nsoranzo">
-						<i class="fab fa-gitter" aria-hidden="true"></i><span class="visually-hidden">gitter</span> nsoranzo
+					<a title="matrix" href="https://matrix.to/#/@nsoranzo:matrix.org">
+						<i class="fab fa-gitter" aria-hidden="true"></i><span class="visually-hidden">gitter</span> nsoranzo:matrix.org
 					</a>
 				</div>
 				
@@ -287,6 +309,7 @@
 					Nicola Soranzo
 				</h1>
 				
+				
 
 				<h2>Contributions</h2>
 
@@ -297,6 +320,7 @@
 
                 
                 <br><br>
+		
                 <h3> GitHub Activity</h4>
                 <ul>
                   <li><a href="https://github.com/galaxyproject/training-material/pulls?q=is%3Apr+author%3Ansoranzo"><i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Pull Requests</a> </li>
@@ -304,6 +328,7 @@
                   <li><a href="https://github.com/galaxyproject/training-material/issues?q=+is%3Aissue+author%3Ansoranzo"><i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Issues Reported</a></li>
                 </ul>
                 
+		
                 </p>
 
 				
@@ -313,114 +338,12 @@
 					<li>
 						
 						
-						<a href="/training-material/topics/dev">
-							Development in Galaxy
+						<a href="/training-material/topics/variant-analysis">
+							Variant Analysis
 						</a>
 						/
-						<a href="/training-material//topics/dev/tutorials/bioblend-api/tutorial.html">
-						Scripting Galaxy using the API and BioBlend
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/admin">
-							Galaxy Server administration
-						</a>
-						/
-						<a href="/training-material//topics/admin/tutorials/tool-management/tutorial.html">
-						Galaxy Tool Management with Ephemeris
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/admin">
-							Galaxy Server administration
-						</a>
-						/
-						<a href="/training-material//topics/admin/tutorials/external-auth/tutorial.html">
-						External Authentication
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/admin">
-							Galaxy Server administration
-						</a>
-						/
-						<a href="/training-material//topics/admin/tutorials/ansible-galaxy/tutorial.html">
-						Galaxy Installation with Ansible
-						</a>
-						
-						
-	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/single-cell">
-							Single Cell
-						</a>
-						/
-						<a href="/training-material//topics/single-cell/tutorials/scrna-scater-qc/tutorial.html">
-						Single-cell quality control with scater
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/transcriptomics">
-							Transcriptomics
-						</a>
-						/
-						<a href="/training-material//topics/transcriptomics/tutorials/ref-based/tutorial.html">
-						Reference-based RNA-Seq data analysis
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/introduction">
-							Introduction to Galaxy Analyses
-						</a>
-						/
-						<a href="/training-material//topics/introduction/tutorials/galaxy-intro-peaks2genes/tutorial.html">
-						From peaks to genes
+						<a href="/training-material//topics/variant-analysis/tutorials/dip/tutorial.html">
+						Calling variants in diploid systems
 						</a>
 						
 						
@@ -466,16 +389,118 @@
 					<li>
 						
 						
-						<a href="/training-material/topics/variant-analysis">
-							Variant Analysis
+						<a href="/training-material/topics/introduction">
+							Introduction to Galaxy Analyses
 						</a>
 						/
-						<a href="/training-material//topics/variant-analysis/tutorials/dip/tutorial.html">
-						Calling variants in diploid systems
+						<a href="/training-material//topics/introduction/tutorials/galaxy-intro-peaks2genes/tutorial.html">
+						From peaks to genes
 						</a>
 						
 						
 	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/dev">
+							Development in Galaxy
+						</a>
+						/
+						<a href="/training-material//topics/dev/tutorials/bioblend-api/tutorial.html">
+						Scripting Galaxy using the API and BioBlend
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/single-cell">
+							Single Cell
+						</a>
+						/
+						<a href="/training-material//topics/single-cell/tutorials/scrna-scater-qc/tutorial.html">
+						Single-cell quality control with scater
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/admin">
+							Galaxy Server administration
+						</a>
+						/
+						<a href="/training-material//topics/admin/tutorials/ansible-galaxy/tutorial.html">
+						Galaxy Installation with Ansible
+						</a>
+						
+						
+	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/admin">
+							Galaxy Server administration
+						</a>
+						/
+						<a href="/training-material//topics/admin/tutorials/tool-management/tutorial.html">
+						Galaxy Tool Management with Ephemeris
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/admin">
+							Galaxy Server administration
+						</a>
+						/
+						<a href="/training-material//topics/admin/tutorials/external-auth/tutorial.html">
+						External Authentication
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/transcriptomics">
+							Transcriptomics
+						</a>
+						/
+						<a href="/training-material//topics/transcriptomics/tutorials/ref-based/tutorial.html">
+						Reference-based RNA-Seq data analysis
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
 
 
 					</li>
@@ -486,6 +511,57 @@
 				
 				<h3>Slides</h3>
 				<ul>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/introduction">
+							Introduction to Galaxy Analyses
+						</a>
+						/
+						<a href="/training-material//topics/introduction/tutorials/galaxy-intro-short/slides.html">
+						A Short Introduction to Galaxy
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/introduction">
+							Introduction to Galaxy Analyses
+						</a>
+						/
+						<a href="/training-material//topics/introduction/tutorials/options-for-using-galaxy/slides.html">
+						Options for using Galaxy
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/introduction">
+							Introduction to Galaxy Analyses
+						</a>
+						/
+						<a href="/training-material//topics/introduction/tutorials/introduction/slides.html">
+						Introduction to Galaxy
+						</a>
+						
+						
+	
+
+
+					</li>
 				
 					<li>
 						
@@ -545,6 +621,23 @@
 							Galaxy Server administration
 						</a>
 						/
+						<a href="/training-material//topics/admin/tutorials/connect-to-compute-cluster/slides.html">
+						Connecting Galaxy to a compute cluster
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/admin">
+							Galaxy Server administration
+						</a>
+						/
 						<a href="/training-material//topics/admin/tutorials/tool-management/slides.html">
 						Galaxy Tool Management with Ephemeris
 						</a>
@@ -592,74 +685,6 @@
 					<li>
 						
 						
-						<a href="/training-material/topics/admin">
-							Galaxy Server administration
-						</a>
-						/
-						<a href="/training-material//topics/admin/tutorials/connect-to-compute-cluster/slides.html">
-						Connecting Galaxy to a compute cluster
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/introduction">
-							Introduction to Galaxy Analyses
-						</a>
-						/
-						<a href="/training-material//topics/introduction/tutorials/galaxy-intro-short/slides.html">
-						A Short Introduction to Galaxy
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/introduction">
-							Introduction to Galaxy Analyses
-						</a>
-						/
-						<a href="/training-material//topics/introduction/tutorials/introduction/slides.html">
-						Introduction to Galaxy
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/introduction">
-							Introduction to Galaxy Analyses
-						</a>
-						/
-						<a href="/training-material//topics/introduction/tutorials/options-for-using-galaxy/slides.html">
-						Options for using Galaxy
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
 						<a href="/training-material/topics/introduction">
 							Introduction to Galaxy Analyses
 						</a>
@@ -693,19 +718,23 @@ var topics = [
 
 	
 	
+	"Variant Analysis",
+
+	
+	
+	"Introduction to Galaxy Analyses",
+
+	
+	
+	"Introduction to Galaxy Analyses",
+
+	
+	
+	"Introduction to Galaxy Analyses",
+
+	
+	
 	"Development in Galaxy",
-
-	
-	
-	"Galaxy Server administration",
-
-	
-	
-	"Galaxy Server administration",
-
-	
-	
-	"Galaxy Server administration",
 
 	
 	
@@ -713,11 +742,20 @@ var topics = [
 
 	
 	
+	"Galaxy Server administration",
+
+	
+	
+	"Galaxy Server administration",
+
+	
+	
+	"Galaxy Server administration",
+
+	
+	
 	"Transcriptomics",
 
-	
-	
-	"Introduction to Galaxy Analyses",
 
 	
 	
@@ -729,8 +767,7 @@ var topics = [
 
 	
 	
-	"Variant Analysis",
-
+	"Introduction to Galaxy Analyses",
 
 	
 	
@@ -759,18 +796,6 @@ var topics = [
 	
 	
 	"Galaxy Server administration",
-
-	
-	
-	"Introduction to Galaxy Analyses",
-
-	
-	
-	"Introduction to Galaxy Analyses",
-
-	
-	
-	"Introduction to Galaxy Analyses",
 
 	
 	
@@ -911,25 +936,48 @@ var chart2 = new Chart(ctx2, {
 </section>
 
         </div>
-        
-            <footer>
-    <div class="container">
-        <br><br>
-        <p>
-            The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
-            provides researchers with online training materials, connects them with local trainers, and helps promoting open data analysis practices worldwide.
-        </p>
-        <p>
-        The content of the tutorials is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The website and infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>.
-        </p>
+        <footer>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6" style="text-align: left">
+				<p>
+					The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
+					provides researchers with online training materials, connects them with local trainers, and helps promoting FAIR and Open Science practices worldwide. All contributions are subject to the <a rel="code-of-conduct" href="https://galaxyproject.org/community/coc/">Galaxy Project Code of Conduct</a>.
+				</p>
+				<p>
+				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
+				</p>
+				<p>
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				</p>
+			</div>
+			<div class="col-sm-6" style="text-align: right">
+				
+				<p>
+					<i>This Material</i>:
+					
+					It is licensed under
+					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+						Creative Commons Attribution 4.0 International License
+					</a>
+				</p>
+				<p>
+					<a href="https://github.com/galaxyproject/training-material/edit/main/hall-of-fame/nsoranzo/index.html" title="Edit on GitHub">
+					<i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
 
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/432506ea252fecb020af981ef0c2a32ca4d28b6c">432506ea252fecb020af981ef0c2a32ca4d28b6c</a>. </p>
+
     </div>
 </footer>
 
-        
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -937,9 +985,13 @@ var chart2 = new Chart(ctx2, {
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

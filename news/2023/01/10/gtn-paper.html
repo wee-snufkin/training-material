@@ -8,22 +8,41 @@
         
             <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
 
+<!-- JavaScript Error Monitoring, and performance tracking. -->
+<script
+  src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
+  integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript">
+Sentry.init({
+  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
+  // Capture Replay for no sessions by default
+  replaysSessionSampleRate: 0.01,
+  // plus for 1% of sessions with an error
+  replaysOnErrorSampleRate: 0.01,
+  // PII OFF
+  sendDefaultPii: false, // Off by default but just in case.
+  environment: "production",
+});
+</script>
+
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/news/2023/01/10/gtn-paper.html">
-        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="New GTN paper: "Galaxy Training: A powerful framework for teaching!"">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-01-10 14:26:46 +0000">
+<meta name="DC.date" content="2023-05-18 11:55:15 +0000">
 <meta name="DC.creator" content="Bérénice Batut">
 <meta name="DC.creator" content="Saskia Hiltemann">
 <meta name="DC.creator" content="Helena Rasche">
@@ -37,7 +56,7 @@
         <meta property="og:title" content="Galaxy Training: New GTN paper: "Galaxy Training: A powerful framework for...">
         <meta property="og:description" content="Collection of tutorials developed and maintained by the w...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
+        <meta property="og:image" content="/training-materialnews/images/2023-01-10-gtn-paper-fig2.png">
 
         
     </head>
@@ -106,8 +125,7 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/news/2023/01/10/gtn-paper.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/mainnews/_posts/2023-01-10-gtn-paper.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -189,20 +207,44 @@
         <section>
   <h1>New GTN paper: "Galaxy Training: A powerful framework for teaching!"</h1>
 
-  
+  <article>
+
 
 <div class="newsitem">
 <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=27" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+		
+<table class="contributions">
+	
+	<tr>
+		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=27" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+		</td>
+	</tr>
+	
+
+
+	
+
+	
+
+	
+
+	
+
+	
+</table>
+
+
 	</div>
 
 </div>
 
 
 
-<button class="label label-default tutorial_tag" id="paper" style="--color-primary: #ffd87d; --color-darker: #eebf00; --color-dimmed: #fccb00;" title="paper">paper</button>
+<button class="label label-default tutorial_tag" id="paper" style="--color-primary: #ffd56b; --color-darker: #ebbc00; --color-dimmed: #f9c800;" title="paper">paper</button>
 
 
 <hr/>
@@ -236,6 +278,9 @@
     
 
     
+    
+
+    
   </div>
 
   <div class="col-md-4">
@@ -257,14 +302,14 @@
   "description": "<p>Our new paper about the Galaxy Training Network has been published this week in Plos Computational",
   "articleBody": "<p>Our new paper about the Galaxy Training Network has been published this week in Plos Computational Biology: <a href=\"https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752\">“Galaxy Training: A powerful framework for teaching!”</a></p>\n\n<p><strong>We would like to thank all contributors to the <a href=\"/training-material/hall-of-fame.html\">GTN</a> and Galaxy ecosystem in general</strong>. Without you, we would not have able to build such a great platform and awesome material, and reach some many people! We would like to thank also to the reviewers for their valuable comments that helped improving the paper.</p>\n\n<p><img src=\"/training-material/news/images/2023-01-10-gtn-paper-fig1.png\" alt=\" Statistics about training events organized by the Galaxy community and visits of the GTN website over years. (A) Number of events supported GTN materials, registered on the Galaxy Community Hub website [22], per year between 2018 and 2021. (B) Number of TIaaS events per year on Galaxy Europe (collected in May 2022). (C) Number of participants to TIaaS events per year on UseGalaxy.* (collected in May 2022). (D) Number of visits per year on the GTN website and per topics, initially tracked by Google Analytics and later with Plausible (collected in May 2022).\" /></p>\n\n<h2 id=\"abstract\">Abstract</h2>\n\n<p>There is an ongoing explosion of scientific datasets being generated, brought on by recent technological advances in many areas of the natural sciences. As a result, the life sciences have become increasingly computational in nature, and bioinformatics has taken on a central role in research studies. However, basic computational skills, data analysis, and stewardship are still rarely taught in life science educational programs, resulting in a skills gap in many of the researchers tasked with analysing these big datasets.</p>\n\n<p>In order to address this skills gap and empower researchers to perform their own data analyses, the Galaxy Training Network (GTN) has previously developed the Galaxy Training Platform (<a href=\"https://training.galaxyproject.org\">https://training.galaxyproject.org</a>), an open access, community-driven framework for the collection of FAIR (Findable, Accessible, Interoperable, Reusable) training materials for data analysis utilizing the user-friendly Galaxy framework as its primary data analysis platform.</p>\n\n<p>Since its inception, this training platform has thrived, with the number of tutorials and contributors growing rapidly, and the range of topics extending beyond life sciences to include topics such as climatology, cheminformatics, and machine learning. While initially aimed at supporting researchers directly, the GTN framework has proven to be an invaluable resource for educators as well. We have focused our efforts in recent years on adding increased support for this growing community of instructors. New features have been added to facilitate the use of the materials in a classroom setting, simplifying the contribution flow for new materials, and have added a set of train-the-trainer lessons. Here, we present the latest developments in the GTN project, aimed at facilitating the use of the Galaxy Training materials by educators, and its usage in different learning environments.</p>\n\n",
   "datePublished": "2023-01-10 00:00:00 +0000",
-  "dateModified": "2023-01-10 14:26:46 +0000",
+  "dateModified": "2023-05-18 11:55:15 +0000",
   "author": [
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
@@ -286,8 +331,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/",
@@ -309,8 +354,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/",
@@ -364,30 +409,164 @@
   "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users."
 }
 </script>
+</article>
+
+<hr/>
+<h2>Recent News</h2>
+<a href="/training-material/news.html">See all news</a>
+
+<div>
+
+
+
+	<article>
+	<h3>
+		<a href="/training-material/news/2023/06/01/hart.html">GTN Celebrates Pride Month: Alan Hart & M. Tuberculosis</a>
+	</h3>
+	<p>
+	1 June 2023 &nbsp;
+	
+	</p>
+	<p class="card-text">
+		
+		June is Pride Month in the US and countries around the world. We have automatically activated the new Progress Pride theme on the home page (Click to Activate) if you hadn’t already selected a theme.
+
+		
+	</p>
+</article>
+
+
+	<article>
+	<h3>
+		<a href="/training-material/news/2023/05/15/isoform-usage-training.html">New Galaxy training: Genome-wide alternative splicing analysis</a>
+	</h3>
+	<p>
+	15 May 2023 &nbsp;
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffd1ab; --color-darker: #ffb254; --color-dimmed: #ffc287;">new tutorial</span>
+	
+	</p>
+	<p class="card-text">
+		
+		The GTN hosts a new training for analyzing alternative splicing at genome-wide scale!
+
+		
+	</p>
+</article>
+
+
+	<article>
+	<h3>
+		<a href="/training-material/news/2023/05/11/ro-crate.html">BY-COVID and RO-Crate collaboration brings new topic: FAIR Data, Workflows & More</a>
+	</h3>
+	<p>
+	11 May 2023 &nbsp;
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #d7d6ff; --color-darker: #bdbbff; --color-dimmed: #cac9ff;">new topic</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #d6d7ff; --color-darker: #babcff; --color-dimmed: #c8c9ff;">new feature</span>
+	
+	</p>
+	<p class="card-text">
+		
+		As part of the BY-COVID project, the RO-Crate team and BY-COVID members have
+brought several RO-Crate related tutorials into the Galaxy Training Network, under a brand new {FAIR} topic!
+
+		
+	</p>
+</article>
+
+
+	<article>
+	<h3>
+		<a href="/training-material/news/2023/04/20/my-galaxy-training.html">New Feature: my.galaxy.training</a>
+	</h3>
+	<p>
+	20 April 2023 &nbsp;
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #d6d7ff; --color-darker: #babcff; --color-dimmed: #c8c9ff;">new feature</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff7cc; --color-darker: #f1dc00; --color-dimmed: #ffea42;">gtn</span>
+	
+	</p>
+	<p class="card-text">
+		
+		The GTN has set up a very simple “redirection” service based on my.home-assistant.io which Helena discovered after reading some Home Assistant documentation and saw a really neat link which led to her own internal home assistant.
+
+		
+	</p>
+</article>
+
+
+	<article>
+	<h3>
+		<a href="/training-material/news/2023/04/19/shortlinks.html">New Feature: Persistent URLs (PURLs) / Shortlinks</a>
+	</h3>
+	<p>
+	19 April 2023 &nbsp;
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #d6d7ff; --color-darker: #babcff; --color-dimmed: #c8c9ff;">new feature</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff7cc; --color-darker: #f1dc00; --color-dimmed: #ffea42;">gtn</span>
+	
+	</p>
+	<p class="card-text">
+		
+		The GTN has added persistent URL identifiers for our tutorials, slides, and FAQs. Using the gxy.io service, we have reserved GTN namespace for our persistent URLs. These work similarly to DOIs in that they will always point to a specific training material.
+
+		
+	</p>
+</article>
+
+
+</div>
 
 
 </section>
 
         </div>
-        
-            <footer>
-    <div class="container">
-        <br><br>
-        <p>
-            The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
-            provides researchers with online training materials, connects them with local trainers, and helps promoting open data analysis practices worldwide.
-        </p>
-        <p>
-        The content of the tutorials is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The website and infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>.
-        </p>
+        <footer>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6" style="text-align: left">
+				<p>
+					The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
+					provides researchers with online training materials, connects them with local trainers, and helps promoting FAIR and Open Science practices worldwide. All contributions are subject to the <a rel="code-of-conduct" href="https://galaxyproject.org/community/coc/">Galaxy Project Code of Conduct</a>.
+				</p>
+				<p>
+				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
+				</p>
+				<p>
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				</p>
+			</div>
+			<div class="col-sm-6" style="text-align: right">
+				
+				<p>
+					<i>This Material</i>:
+					
+					It is licensed under
+					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+						Creative Commons Attribution 4.0 International License
+					</a>
+				</p>
+				<p>
+					<a href="https://github.com/galaxyproject/training-material/edit/main/news/_posts/2023-01-10-gtn-paper.md" title="Edit on GitHub">
+					<i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
 
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/432506ea252fecb020af981ef0c2a32ca4d28b6c">432506ea252fecb020af981ef0c2a32ca4d28b6c</a>. </p>
+
     </div>
 </footer>
 
-        
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -395,9 +574,13 @@
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

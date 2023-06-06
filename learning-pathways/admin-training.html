@@ -8,16 +8,35 @@
         
             <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
 
+<!-- JavaScript Error Monitoring, and performance tracking. -->
+<script
+  src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
+  integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript">
+Sentry.init({
+  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
+  // Capture Replay for no sessions by default
+  replaysSessionSampleRate: 0.01,
+  // plus for 1% of sessions with an error
+  replaysOnErrorSampleRate: 0.01,
+  // PII OFF
+  sendDefaultPii: false, // Off by default but just in case.
+  environment: "production",
+});
+</script>
+
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/learning-pathways/admin-training.html">
-        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -34,7 +53,7 @@
         <meta property="og:title" content="Galaxy Training: Admin Training Course">
         <meta property="og:description" content="Collection of tutorials developed and maintained by the w...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
+        <meta property="og:image" content="/training-material/assets/images/GTN.png">
 
         
     </head>
@@ -103,8 +122,7 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/learning-pathways/admin-training.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/mainlearning-pathways/admin-training.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -227,7 +245,8 @@ the events.</p>
 
     
         <h3 id="st-module-1-setting-up-galaxy-with-ansible">Module 1: Setting up Galaxy with Ansible</h3>
-        <p>This module covers getting a Galaxy server setup with Ansible, a server you will develop furhter in the rest of the modules</p>
+        <p><p>This module covers getting a Galaxy server setup with Ansible, a server you will develop furhter in the rest of the modules</p>
+</p>
 
         
 	<table class="table table-responsive table-striped">
@@ -409,7 +428,7 @@ the events.</p>
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
             
             </div>
@@ -696,11 +715,11 @@ the events.</p>
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=deploying" class="label label-default tutorial_tag" style="--color-primary: #ffd3cb; --color-darker: #ffb1a2; --color-dimmed: #ffc2b7;" title="Click to show all tutorials tagged deploying">deploying</a>
+              <a href="/training-material/search?query=deploying" class="label label-default tutorial_tag" style="--color-primary: #ffcfc7; --color-darker: #ffad9d; --color-dimmed: #ffbeb3;" title="Click to show all tutorials tagged deploying">deploying</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -958,8 +977,8 @@ the events.</p>
 
     
         <h3 id="st-module-2-making-the-server-useful">Module 2: Making the server useful</h3>
-        <p>Here we pivot to focus on making our server useful; adding tools and data,
-configuring quotas and authentication
+        <p><p>Here we pivot to focus on making our server useful; adding tools and data,
+configuring quotas and authentication</p>
 </p>
 
         
@@ -997,11 +1016,11 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=deploying" class="label label-default tutorial_tag" style="--color-primary: #ffd3cb; --color-darker: #ffb1a2; --color-dimmed: #ffc2b7;" title="Click to show all tutorials tagged deploying">deploying</a>
+              <a href="/training-material/search?query=deploying" class="label label-default tutorial_tag" style="--color-primary: #ffcfc7; --color-darker: #ffad9d; --color-dimmed: #ffbeb3;" title="Click to show all tutorials tagged deploying">deploying</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -1210,9 +1229,9 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -1684,11 +1703,11 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fe6e; --color-darker: #00e261; --color-dimmed: #00f067;" title="Click to show all tutorials tagged jobs">jobs</a>
+              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fb6c; --color-darker: #00df5f; --color-dimmed: #00ed66;" title="Click to show all tutorials tagged jobs">jobs</a>
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -1875,9 +1894,9 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=tools" class="label label-default tutorial_tag" style="--color-primary: #ffd0e2; --color-darker: #ffaccf; --color-dimmed: #ffbed8;" title="Click to show all tutorials tagged tools">tools</a>
+              <a href="/training-material/search?query=tools" class="label label-default tutorial_tag" style="--color-primary: #ffcce0; --color-darker: #ffa8cd; --color-dimmed: #ffbbd6;" title="Click to show all tutorials tagged tools">tools</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -2429,11 +2448,11 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=storage" class="label label-default tutorial_tag" style="--color-primary: #ffcfef; --color-darker: #ffa9e4; --color-dimmed: #ffbce9;" title="Click to show all tutorials tagged storage">storage</a>
+              <a href="/training-material/search?query=storage" class="label label-default tutorial_tag" style="--color-primary: #ffcbed; --color-darker: #ffa5e3; --color-dimmed: #ffb8e8;" title="Click to show all tutorials tagged storage">storage</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -2906,7 +2925,8 @@ configuring quotas and authentication
 
     
         <h3 id="st-module-3-clusters">Module 3: Clusters</h3>
-        <p></p>
+        <p>
+</p>
 
         
 	<table class="table table-responsive table-striped">
@@ -2943,11 +2963,11 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fe6e; --color-darker: #00e261; --color-dimmed: #00f067;" title="Click to show all tutorials tagged jobs">jobs</a>
+              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fb6c; --color-darker: #00df5f; --color-dimmed: #00ed66;" title="Click to show all tutorials tagged jobs">jobs</a>
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -3253,9 +3273,9 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fe6e; --color-darker: #00e261; --color-dimmed: #00f067;" title="Click to show all tutorials tagged jobs">jobs</a>
+              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fb6c; --color-darker: #00df5f; --color-dimmed: #00ed66;" title="Click to show all tutorials tagged jobs">jobs</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -3442,11 +3462,11 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fe6e; --color-darker: #00e261; --color-dimmed: #00f067;" title="Click to show all tutorials tagged jobs">jobs</a>
+              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fb6c; --color-darker: #00df5f; --color-dimmed: #00ed66;" title="Click to show all tutorials tagged jobs">jobs</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -3704,7 +3724,8 @@ configuring quotas and authentication
 
     
         <h3 id="st-module-4">Module 4</h3>
-        <p></p>
+        <p>
+</p>
 
         
 	<table class="table table-responsive table-striped">
@@ -3741,9 +3762,9 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -3932,13 +3953,13 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=training" class="label label-default tutorial_tag" style="--color-primary: #ffcef7; --color-darker: #ffa7f2; --color-dimmed: #ffbbf5;" title="Click to show all tutorials tagged training">training</a>
+              <a href="/training-material/search?query=training" class="label label-default tutorial_tag" style="--color-primary: #ffcaf7; --color-darker: #ffa3f2; --color-dimmed: #ffb7f4;" title="Click to show all tutorials tagged training">training</a>
               
-              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fe6e; --color-darker: #00e261; --color-dimmed: #00f067;" title="Click to show all tutorials tagged jobs">jobs</a>
+              <a href="/training-material/search?query=jobs" class="label label-default tutorial_tag" style="--color-primary: #00fb6c; --color-darker: #00df5f; --color-dimmed: #00ed66;" title="Click to show all tutorials tagged jobs">jobs</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -4125,11 +4146,11 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=monitoring" class="label label-default tutorial_tag" style="--color-primary: #ffd3c5; --color-darker: #ffb294; --color-dimmed: #ffc3ae;" title="Click to show all tutorials tagged monitoring">monitoring</a>
+              <a href="/training-material/search?query=monitoring" class="label label-default tutorial_tag" style="--color-primary: #ffd0c0; --color-darker: #ffaf8e; --color-dimmed: #ffbfa8;" title="Click to show all tutorials tagged monitoring">monitoring</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -4258,11 +4279,11 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=monitoring" class="label label-default tutorial_tag" style="--color-primary: #ffd3c5; --color-darker: #ffb294; --color-dimmed: #ffc3ae;" title="Click to show all tutorials tagged monitoring">monitoring</a>
+              <a href="/training-material/search?query=monitoring" class="label label-default tutorial_tag" style="--color-primary: #ffd0c0; --color-darker: #ffaf8e; --color-dimmed: #ffbfa8;" title="Click to show all tutorials tagged monitoring">monitoring</a>
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -4527,11 +4548,11 @@ configuring quotas and authentication
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=monitoring" class="label label-default tutorial_tag" style="--color-primary: #ffd3c5; --color-darker: #ffb294; --color-dimmed: #ffc3ae;" title="Click to show all tutorials tagged monitoring">monitoring</a>
+              <a href="/training-material/search?query=monitoring" class="label label-default tutorial_tag" style="--color-primary: #ffd0c0; --color-darker: #ffaf8e; --color-dimmed: #ffbfa8;" title="Click to show all tutorials tagged monitoring">monitoring</a>
               
-              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffd2d3; --color-darker: #ffafb2; --color-dimmed: #ffc1c3;" title="Click to show all tutorials tagged git-gat">git-gat</a>
+              <a href="/training-material/search?query=git-gat" class="label label-default tutorial_tag" style="--color-primary: #ffced0; --color-darker: #ffacaf; --color-dimmed: #ffbdc0;" title="Click to show all tutorials tagged git-gat">git-gat</a>
               
             
             </div>
@@ -4809,8 +4830,8 @@ configuring quotas and authentication
 
     
         <h3 id="st-module-5-grab-bag">Module 5: Grab bag</h3>
-        <p>Here we have some additional topics, some of which are not admin related.
-Please feel free to pick and choose the tutorials that are interesting for you.
+        <p><p>Here we have some additional topics, some of which are not admin related.
+Please feel free to pick and choose the tutorials that are interesting for you.</p>
 </p>
 
         
@@ -5160,7 +5181,7 @@ Please feel free to pick and choose the tutorials that are interesting for you.
             
             
               
-              <a href="/training-material/search?query=collections" class="label label-default tutorial_tag" style="--color-primary: #ffd2d6; --color-darker: #ffafb7; --color-dimmed: #ffc1c7;" title="Click to show all tutorials tagged collections">collections</a>
+              <a href="/training-material/search?query=collections" class="label label-default tutorial_tag" style="--color-primary: #ffced2; --color-darker: #ffabb4; --color-dimmed: #ffbdc3;" title="Click to show all tutorials tagged collections">collections</a>
               
             
             </div>
@@ -5299,9 +5320,9 @@ Please feel free to pick and choose the tutorials that are interesting for you.
             
             
               
-              <a href="/training-material/search?query=collections" class="label label-default tutorial_tag" style="--color-primary: #ffd2d6; --color-darker: #ffafb7; --color-dimmed: #ffc1c7;" title="Click to show all tutorials tagged collections">collections</a>
+              <a href="/training-material/search?query=collections" class="label label-default tutorial_tag" style="--color-primary: #ffced2; --color-darker: #ffabb4; --color-dimmed: #ffbdc3;" title="Click to show all tutorials tagged collections">collections</a>
               
-              <a href="/training-material/search?query=tags" class="label label-default tutorial_tag" style="--color-primary: #ffd1dd; --color-darker: #ffadc5; --color-dimmed: #ffbfd1;" title="Click to show all tutorials tagged tags">tags</a>
+              <a href="/training-material/search?query=tags" class="label label-default tutorial_tag" style="--color-primary: #ffcddb; --color-darker: #ffa9c3; --color-dimmed: #ffbbcf;" title="Click to show all tutorials tagged tags">tags</a>
               
             
             </div>
@@ -5671,9 +5692,9 @@ Please feel free to pick and choose the tutorials that are interesting for you.
             
             
               
-              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcfeb; --color-darker: #ffaadd; --color-dimmed: #ffbde4;" title="Click to show all tutorials tagged ansible">ansible</a>
+              <a href="/training-material/search?query=ansible" class="label label-default tutorial_tag" style="--color-primary: #ffcbe9; --color-darker: #ffa6dc; --color-dimmed: #ffb9e2;" title="Click to show all tutorials tagged ansible">ansible</a>
               
-              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffd3c6; --color-darker: #ffb296; --color-dimmed: #ffc3af;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
+              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffd0c1; --color-darker: #ffae90; --color-dimmed: #ffbfaa;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
               
             
             </div>
@@ -5933,25 +5954,48 @@ Please feel free to pick and choose the tutorials that are interesting for you.
 </section>
 
         </div>
-        
-            <footer>
-    <div class="container">
-        <br><br>
-        <p>
-            The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
-            provides researchers with online training materials, connects them with local trainers, and helps promoting open data analysis practices worldwide.
-        </p>
-        <p>
-        The content of the tutorials is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The website and infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>.
-        </p>
+        <footer>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6" style="text-align: left">
+				<p>
+					The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
+					provides researchers with online training materials, connects them with local trainers, and helps promoting FAIR and Open Science practices worldwide. All contributions are subject to the <a rel="code-of-conduct" href="https://galaxyproject.org/community/coc/">Galaxy Project Code of Conduct</a>.
+				</p>
+				<p>
+				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
+				</p>
+				<p>
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				</p>
+			</div>
+			<div class="col-sm-6" style="text-align: right">
+				
+				<p>
+					<i>This Material</i>:
+					
+					It is licensed under
+					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+						Creative Commons Attribution 4.0 International License
+					</a>
+				</p>
+				<p>
+					<a href="https://github.com/galaxyproject/training-material/edit/main/learning-pathways/admin-training.md" title="Edit on GitHub">
+					<i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
 
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/432506ea252fecb020af981ef0c2a32ca4d28b6c">432506ea252fecb020af981ef0c2a32ca4d28b6c</a>. </p>
+
     </div>
 </footer>
 
-        
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -5959,9 +6003,13 @@ Please feel free to pick and choose the tutorials that are interesting for you.
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

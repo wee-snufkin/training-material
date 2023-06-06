@@ -8,16 +8,35 @@
         
             <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
 
+<!-- JavaScript Error Monitoring, and performance tracking. -->
+<script
+  src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
+  integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript">
+Sentry.init({
+  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
+  // Capture Replay for no sessions by default
+  replaysSessionSampleRate: 0.01,
+  // plus for 1% of sessions with an error
+  replaysOnErrorSampleRate: 0.01,
+  // PII OFF
+  sendDefaultPii: false, // Off by default but just in case.
+  environment: "production",
+});
+</script>
+
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html">
-        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -35,7 +54,7 @@
         <meta property="og:title" content="Galaxy Training: Avian influenza viral strain analysis from gene segment s...">
         <meta property="og:description" content="Genetic differences (variants) between healthy and diseas...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
+        <meta property="og:image" content="/training-material/assets/images/GTN.png">
 
         
         <script type="application/ld+json">
@@ -90,6 +109,10 @@
     "url": "https://galaxyproject.org/teach/gtn/"
   },
   "identifier": "https://github.com/galaxyproject/training-material",
+  "workTranslation": [
+
+  ],
+  "creativeWorkStatus": "Active",
   "accessMode": [
     "textual",
     "visual"
@@ -117,6 +140,7 @@
   "name": "Hands-on for 'Avian influenza viral strain analysis from gene segment sequencing data' tutorial",
   "url": "https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html",
   "timeRequired": "PT4H",
+  "teaches": "Determine how reassortment impacts reference-based mapping approaches\n - Use a collection of per-segment reference sequences to construct a hybrid reference genome that is sufficiently close to a sequenced sample to be useful as a reference for mapping\n - Construct a sample consensus genome from mapped reads\n - Generate per-segment phylogenetic trees of AIV consensus sequences",
   "keywords": "variant-analysis, virology",
   "description": "The questions this  addresses are:\n - With reassortment of gene segments being a common event in avian influenza virus (AIV) evolution, does it make sense to use a reference-based mapping approach for constructing consensus genome sequences for AIV samples?\n - Is it possible to reuse existing tools and workflows developed for the analysis of sequencing data from other viruses?\n - How can we obtain meaningful phylogenetic insight from AIV consensus sequences?\n\n\nThe objectives are:\n - Determine how reassortment impacts reference-based mapping approaches\n - Use a collection of per-segment reference sequences to construct a hybrid reference genome that is sufficiently close to a sequenced sample to be useful as a reference for mapping\n - Construct a sample consensus genome from mapped reads\n - Generate per-segment phylogenetic trees of AIV consensus sequences\n\n",
   "inLanguage": {
@@ -204,33 +228,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/",
-      "name": "Wolfgang Maier",
-      "image": "https://avatars.githubusercontent.com/wm75",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-9464-6640",
-      "orcid": "https://orcid.org/0000-0002-9464-6640"
-    }
-  ],
-  "contributor": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/",
@@ -264,7 +263,14 @@
       "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0199"
     }
   ],
-  "educationalLevel": "Intermediate"
+  "educationalLevel": "Intermediate",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "name": "virology"
+    }
+  ],
+  "abstract": "# Introduction"
 }
         </script>
         
@@ -339,8 +345,7 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/variant-analysis/tutorials/aiv-analysis/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/variant-analysis/tutorials/aiv-analysis/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -452,236 +457,6 @@
 
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
-<script type="application/ld+json">
-    
-
-
-{
-  "@context": "http://schema.org",
-  "@type": "LearningResource",
-  "http://purl.org/dc/terms/conformsTo": {
-    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-    "@type": "CreativeWork"
-  },
-  "audience": {
-    "@type": "EducationalAudience",
-    "educationalRole": "Students"
-  },
-  "citation": {
-    "@type": "CreativeWork",
-    "name": "Community-Driven Data Analysis Training for Biology",
-    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
-  },
-  "copyrightHolder": {
-    "@type": "Organization",
-    "email": "galaxytrainingnetwork@gmail.com",
-    "name": "Galaxy Training Network",
-    "url": "https://galaxyproject.org/teach/gtn/"
-  },
-  "dateModified": "2023-04-28 07:02:26 +0000",
-  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
-  "headline": "Avian influenza viral strain analysis from gene segment sequencing data",
-  "interactivityType": "mixed",
-  "isAccessibleForFree": true,
-  "isFamilyFriendly": true,
-  "license": "https://spdx.org/licenses/CC-BY-4.0.html",
-  "producer": {
-    "@type": "Organization",
-    "email": "galaxytrainingnetwork@gmail.com",
-    "name": "Galaxy Training Network",
-    "url": "https://galaxyproject.org/teach/gtn/"
-  },
-  "provider": {
-    "@type": "Organization",
-    "email": "galaxytrainingnetwork@gmail.com",
-    "name": "Galaxy Training Network",
-    "url": "https://galaxyproject.org/teach/gtn/"
-  },
-  "sourceOrganization": {
-    "@type": "Organization",
-    "email": "galaxytrainingnetwork@gmail.com",
-    "name": "Galaxy Training Network",
-    "url": "https://galaxyproject.org/teach/gtn/"
-  },
-  "identifier": "https://github.com/galaxyproject/training-material",
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
-  "isPartOf": {
-    "@type": "CreativeWork",
-    "name": "Variant Analysis",
-    "description": "Genetic differences (variants) between healthy and diseased tissue,\nbetween individuals of a population, or between strains of an organism\ncan provide mechanistic insight into disease processes and the natural\nfunction of affected genes.\n\nThe tutorials in this section show how to detect evidence for\ngenetic variants in next-generation sequencing data, a process termed\nvariant calling.\n\nOf equal importance, they also demonstrate how you can interpret, for\na range of different organisms, the resulting sets of variants by\npredicting their molecular effects on genes and proteins, by\nannotating previously observed variants with published knowledge, and\nby trying to link phenotypes of the sequenced samples to their variant\ngenotypes.\n",
-    "url": "https://training.galaxyproject.org/training-material/topics/variant-analysis/"
-  },
-  "learningResourceType": "hands-on tutorial",
-  "name": "Hands-on for 'Avian influenza viral strain analysis from gene segment sequencing data' tutorial",
-  "url": "https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html",
-  "timeRequired": "PT4H",
-  "keywords": "variant-analysis, virology",
-  "description": "The questions this  addresses are:\n - With reassortment of gene segments being a common event in avian influenza virus (AIV) evolution, does it make sense to use a reference-based mapping approach for constructing consensus genome sequences for AIV samples?\n - Is it possible to reuse existing tools and workflows developed for the analysis of sequencing data from other viruses?\n - How can we obtain meaningful phylogenetic insight from AIV consensus sequences?\n\n\nThe objectives are:\n - Determine how reassortment impacts reference-based mapping approaches\n - Use a collection of per-segment reference sequences to construct a hybrid reference genome that is sufficiently close to a sequenced sample to be useful as a reference for mapping\n - Construct a sample consensus genome from mapped reads\n - Generate per-segment phylogenetic trees of AIV consensus sequences\n\n",
-  "inLanguage": {
-    "@type": "Language",
-    "name": "English",
-    "alternateName": "en"
-  },
-  "competencyRequired": [
-    {
-      "@context": "http://schema.org",
-      "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
-      "name": "Introduction to Galaxy Analyses",
-      "description": "Introduction to Galaxy Analyses",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    },
-    {
-      "@context": "http://schema.org",
-      "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/slides.html",
-      "name": "Quality Control",
-      "description": "Slides for 'Quality Control' tutorial",
-      "learningResourceType": "slides",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    },
-    {
-      "@context": "http://schema.org",
-      "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html",
-      "name": "Quality Control",
-      "description": "Hands-on for 'Quality Control' tutorial",
-      "learningResourceType": "hands-on tutorial",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    },
-    {
-      "@context": "http://schema.org",
-      "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/mapping/slides.html",
-      "name": "Mapping",
-      "description": "Slides for 'Mapping' tutorial",
-      "learningResourceType": "slides",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    },
-    {
-      "@context": "http://schema.org",
-      "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html",
-      "name": "Mapping",
-      "description": "Hands-on for 'Mapping' tutorial",
-      "learningResourceType": "hands-on tutorial",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    }
-  ],
-  "author": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/",
-      "name": "Wolfgang Maier",
-      "image": "https://avatars.githubusercontent.com/wm75",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-9464-6640",
-      "orcid": "https://orcid.org/0000-0002-9464-6640"
-    }
-  ],
-  "contributor": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/",
-      "name": "Wolfgang Maier",
-      "image": "https://avatars.githubusercontent.com/wm75",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-9464-6640",
-      "orcid": "https://orcid.org/0000-0002-9464-6640"
-    }
-  ],
-  "about": [
-    {
-      "@type": "CreativeWork",
-      "name": "Variant Analysis",
-      "description": "Genetic differences (variants) between healthy and diseased tissue,\nbetween individuals of a population, or between strains of an organism\ncan provide mechanistic insight into disease processes and the natural\nfunction of affected genes.\n\nThe tutorials in this section show how to detect evidence for\ngenetic variants in next-generation sequencing data, a process termed\nvariant calling.\n\nOf equal importance, they also demonstrate how you can interpret, for\na range of different organisms, the resulting sets of variants by\npredicting their molecular effects on genes and proteins, by\nannotating previously observed variants with published knowledge, and\nby trying to link phenotypes of the sequenced samples to their variant\ngenotypes.\n",
-      "url": "https://training.galaxyproject.org/training-material/topics/variant-analysis/"
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id": "http://edamontology.org/topic_0199",
-      "inDefinedTermSet": "http://edamontology.org",
-      "termCode": "topic_0199",
-      "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0199"
-    }
-  ],
-  "educationalLevel": "Intermediate"
-}
-</script>
-
 <article class="tutorial topic-variant-analysis">
     <h1 data-toc-skip>Avian influenza viral strain analysis from gene segment sequencing data</h1>
     
@@ -757,6 +532,8 @@
                         
                     
                         
+                    
+                        
                             
                             <li> Quality Control:
                             
@@ -773,9 +550,9 @@
                     
                         
                     
-                        
-                    
                 
+                    
+                        
                     
                         
                             
@@ -790,8 +567,6 @@
                                 
                             
                             </li>
-                        
-                    
                         
                     
                         
@@ -873,20 +648,43 @@
                 <li class="btn btn-default supporting_material">
 
 
+
+
+
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
         <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>&nbsp;Available on these Galaxies 
     </a>
     <ul class="dropdown-menu">
+	<li class="dropdown-header">
+		<b>Known Working</b>
+	</li>
+	
+	
+
     
+	<li>
+		<a class="dropdown-item" href="https://usegalaxy.eu" title="">
+			UseGalaxy.eu <abbr title="This instance supports the precise tool versions used in this tutorial">✅</abbr> ⭐️
+		</a>
+	</li>
+    
+    
+	<li class="dropdown-header">
+		<b>Possibly Working</b>
+	</li>
+    
+
+    
+	<li class="dropdown-header">
+		Containers
+	</li>
         <li>
-            <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/tree/main/topics/variant-analysis/docker" title="Docker image for this tutorial">
+            <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/tree/main/topics//docker" title="Docker image for this tutorial">
                 <i class="fab fa-docker" aria-hidden="true"></i><span class="visually-hidden">docker_image</span> Docker image
             </a>
         </li>
     
-    
     </ul>
-
 
 </li>
             
@@ -895,10 +693,10 @@
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Apr 28, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
-            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
-            
-            <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">The GTN Framework is licensed under MIT</a>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
+             The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
         <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00308">https://gxy.io/GTN:T00308</a> </div>
@@ -991,6 +789,7 @@ If you want to learn how you can create a Galaxy collection from your own refere
 
       <!--SNIPPET-->
       <blockquote class="tip">   <div class="box-title tip-title" id="tip-renaming-a-history"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-renaming-a-history" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Renaming a history<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ol>   <li>Click on <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> (<strong>Edit</strong>) next to the history name (which by default is “Unnamed history”)</li>   <li>Type the new name: <code class="language-plaintext highlighter-rouge">Avian influenza tutorial</code></li>   <li>Click on <strong>Save</strong></li> </ol>   <p>If you do not have the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> (<strong>Edit</strong>) next to the history name:</p>   <ol>   <li>Click on <strong>Unnamed history</strong> (or the current name of the history) (<strong>Click to rename history</strong>) at the top of your history panel</li>   <li>Type the new name: <code class="language-plaintext highlighter-rouge">Avian influenza tutorial</code></li>   <li>Press <kbd>Enter</kbd></li> </ol> </blockquote>
+      <p><!--END_SNIPPET--></p>
     </li>
   </ol>
 
@@ -1011,7 +810,7 @@ https://usegalaxy.eu/api/datasets/4838ba20a6d867657d09280baae4e1ec/display?to_ex
 
       <ol>
         <li>Copy the links above</li>
-        <li>Open the <span class="tool" data-tool="upload1" title="Upload tool"><strong>Upload</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: upload1</span></span>  Manager</li>
+        <li>Open the <span class="tool" data-tool="upload1" title="Upload tool" aria-role="link"><strong>Upload</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: upload1</span></span> Manager</li>
         <li>In the top row of tabs select <strong>Collection</strong></li>
         <li>Configure the drop-down select boxes on that tab like this:
           <ul>
@@ -1083,7 +882,7 @@ https://usegalaxy.eu/api/datasets/4838ba20a6d867657d09280baae4e1ec/display?to_ex
   <div class="box-title hands-on-title" id="hands-on-qc-and-read-trimming-filtering-with-fastp"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: QC and read trimming/filtering with fastp</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0" title="fastp tool"><strong>fastp</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0" title="fastp tool" aria-role="link"><strong>fastp</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0</span></span>
       <ul>
         <li><em>“Single-end or paired reads”</em>: <code class="language-plaintext highlighter-rouge">Paired Collection</code></li>
         <li><em>“Select paired collection(s)”</em>: the uploaded paired collection of sequenced reads</li>
@@ -1167,7 +966,7 @@ Inside the <em>Filter Options</em> inspect <em>Quality filtering options</em> an
   <div class="box-title hands-on-title" id="hands-on-exploring-best-matching-reference-segment-scores"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Exploring best-matching reference segment scores</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/vapor/vapor/1.0.2+galaxy3" title="VAPOR tool"><strong>VAPOR</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/vapor/vapor/1.0.2+galaxy3</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/vapor/vapor/1.0.2+galaxy3" title="VAPOR tool" aria-role="link"><strong>VAPOR</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/vapor/vapor/1.0.2+galaxy3</span></span>
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Reference sequences”</em>: <code class="language-plaintext highlighter-rouge">References per segment (INSAFlu)</code></li>
         <li><em>“Type of sequencing data”</em>: <code class="language-plaintext highlighter-rouge">Paired-end as collection</code></li>
@@ -1218,7 +1017,7 @@ Inside the <em>Filter Options</em> inspect <em>Quality filtering options</em> an
   <div class="box-title hands-on-title" id="hands-on-obtaining-sequences-of-top-hits-identified-by-vapor"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Obtaining sequences of top hits identified by VAPOR</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace parts of text tool"><strong>Replace parts of text</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4</span></span>  to extract just the name of the sequence from each line of VAPOR’s output
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace parts of text tool" aria-role="link"><strong>Replace parts of text</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4</span></span> to extract just the name of the sequence from each line of VAPOR’s output
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“File to process”</em>: collection of score outputs of <strong>VAPOR</strong></li>
         <li>In <i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“1. Find and Replace”</em>:
@@ -1230,20 +1029,20 @@ Inside the <em>Filter Options</em> inspect <em>Quality filtering options</em> an
         </li>
       </ul>
     </li>
-    <li><span class="tool" data-tool="Show beginning1" title="Select first lines from a dataset tool"><strong>Select first lines from a dataset</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Show beginning1</span></span>  to get the first line, i.e. the best match from VAPOR’s output
+    <li><span class="tool" data-tool="Show beginning1" title="Select first lines from a dataset tool" aria-role="link"><strong>Select first lines from a dataset</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Show beginning1</span></span> to get the first line, i.e. the best match from VAPOR’s output
       <ul>
         <li><em>“Select first”</em>: <code class="language-plaintext highlighter-rouge">1</code> lines</li>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“from”</em>: output of <strong>Replace</strong></li>
       </ul>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_subseq/1.3.1" title="seqtk_subseq tool"><strong>seqtk_subseq</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_subseq/1.3.1</span></span>  to extract the reference sequences based on their names reported by VAPOR
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_subseq/1.3.1" title="seqtk_subseq tool" aria-role="link"><strong>seqtk_subseq</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_subseq/1.3.1</span></span> to extract the reference sequences based on their names reported by VAPOR
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Input FASTA/Q file”</em>: <code class="language-plaintext highlighter-rouge">References per segment (INSAFlu)</code></li>
         <li><em>“Select source of sequence choices”</em>: <code class="language-plaintext highlighter-rouge">FASTA/Q ID list</code></li>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Input ID list”</em>: the collection output of <strong>Select first</strong></li>
       </ul>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0" title="Collapse Collection tool"><strong>Collapse Collection</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0</span></span>  to combine the best-matching sequence of each segment into one dataset
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0" title="Collapse Collection tool" aria-role="link"><strong>Collapse Collection</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0</span></span> to combine the best-matching sequence of each segment into one dataset
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Collection of files to collapse into single dataset”</em>: the selected sequences collection produced by <strong>seqtk_subseq</strong></li>
       </ul>
@@ -1262,7 +1061,7 @@ Inside the <em>Filter Options</em> inspect <em>Quality filtering options</em> an
   <div class="box-title hands-on-title" id="hands-on-shortening-sequence-titles"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Shortening sequence titles</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace parts of text tool"><strong>Replace parts of text</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace parts of text tool" aria-role="link"><strong>Replace parts of text</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4</span></span>
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“File to process”</em>: the hybrid reference genome; output of <strong>Collapse Collection</strong></li>
         <li>In <i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“1. Find and Replace”</em>:
@@ -1297,7 +1096,7 @@ It is an important intermediate result, to which we will need to return later, a
   <div class="box-title hands-on-title" id="hands-on-read-mapping-and-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Read mapping and quality control</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2" title="Map with BWA-MEM tool"><strong>Map with BWA-MEM</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2" title="Map with BWA-MEM tool" aria-role="link"><strong>Map with BWA-MEM</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2</span></span>
       <ul>
         <li><em>“Will you select a reference genome from your history or use a built-in index?”</em>: <code class="language-plaintext highlighter-rouge">Use a genome from history and build index</code></li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Use the following dataset as the reference sequence”</em>: hybrid reference genome with shortened names; output of <strong>Replace</strong></li>
@@ -1305,7 +1104,7 @@ It is an important intermediate result, to which we will need to return later, a
         <li><em>“Select a paired collection”</em>: quality-trimmed reads; output of <strong>fastp</strong> in QC and Trimming</li>
       </ul>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0" title="Samtools view tool"><strong>Samtools view</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0" title="Samtools view tool" aria-role="link"><strong>Samtools view</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0</span></span>
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“SAM/BAM/CRAM data set”</em>: mapped reads BAM dataset; output of <strong>BWA-MEM</strong></li>
         <li><em>“What would you like to look at?”</em>: <code class="language-plaintext highlighter-rouge">A filtered/subsampled selection of reads</code></li>
@@ -1317,7 +1116,7 @@ It is an important intermediate result, to which we will need to return later, a
         </li>
       </ul>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.2.2d+galaxy3" title="QualiMap BamQC tool"><strong>QualiMap BamQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.2.2d+galaxy3</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.2.2d+galaxy3" title="QualiMap BamQC tool" aria-role="link"><strong>QualiMap BamQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.2.2d+galaxy3</span></span>
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Mapped reads input dataset”</em>: filtered mapped reads BAM dataset; output of <strong>Samtools view</strong></li>
         <li><em>“Skip duplicate reads”</em>: <code class="language-plaintext highlighter-rouge">Unselect all</code></li>
@@ -1366,7 +1165,7 @@ It is an important intermediate result, to which we will need to return later, a
   <div class="box-title hands-on-title" id="hands-on-splitting-mapped-reads-by-genome-segment"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Splitting mapped reads by genome segment</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bamtools_split_ref/bamtools_split_ref/2.5.2+galaxy1" title="Split BAM by Reference tool"><strong>Split BAM by Reference</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/bamtools_split_ref/bamtools_split_ref/2.5.2+galaxy1</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bamtools_split_ref/bamtools_split_ref/2.5.2+galaxy1" title="Split BAM by Reference tool" aria-role="link"><strong>Split BAM by Reference</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/bamtools_split_ref/bamtools_split_ref/2.5.2+galaxy1</span></span>
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“BAM dataset to split by reference”</em>: filtered mapped reads; output of <strong>Samtools view</strong></li>
       </ul>
@@ -1381,7 +1180,7 @@ It is an important intermediate result, to which we will need to return later, a
   <div class="box-title hands-on-title" id="hands-on-relabeling-collection-elements"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Relabeling collection elements</div>
 
   <ol>
-    <li><span class="tool" data-tool="Grep1" title="Select lines that match an expression tool"><strong>Select lines that match an expression</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Grep1</span></span>
+    <li><span class="tool" data-tool="Grep1" title="Select lines that match an expression tool" aria-role="link"><strong>Select lines that match an expression</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Grep1</span></span>
       <ul>
         <li>
           <p><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Select lines from”</em>: the mapping reference; output of <strong>Replace</strong> in Mapping to a hybrid reference</p>
@@ -1392,7 +1191,7 @@ It is an important intermediate result, to which we will need to return later, a
         <li><em>“the pattern”</em>: <code class="language-plaintext highlighter-rouge">^&gt;.+</code></li>
       </ul>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace parts of text tool"><strong>Replace parts of text</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace parts of text tool" aria-role="link"><strong>Replace parts of text</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4</span></span>
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“File to process”</em>: output of <strong>Select</strong></li>
         <li>In <i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“1. Find and Replace”</em>:
@@ -1404,7 +1203,7 @@ It is an important intermediate result, to which we will need to return later, a
         </li>
       </ul>
     </li>
-    <li><span class="tool" data-tool="__RELABEL_FROM_FILE__" title="Relabel identifiers tool"><strong>Relabel identifiers</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <strong>RELABEL_FROM_FILE</strong></span></span>
+    <li><span class="tool" data-tool="__RELABEL_FROM_FILE__" title="Relabel identifiers tool" aria-role="link"><strong>Relabel identifiers</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <strong>RELABEL_FROM_FILE</strong></span></span>
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input collection”</em>: the split mappings; output of <strong>Split BAM by Reference</strong></li>
         <li><em>“How should the new labels be specified?”</em>: <code class="language-plaintext highlighter-rouge">Using lines in a simple text file.</code></li>
@@ -1435,7 +1234,7 @@ It is an important intermediate result, to which we will need to return later, a
   <div class="box-title hands-on-title" id="hands-on-per-segment-consensus-construction"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Per-segment consensus construction</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ivar_consensus/ivar_consensus/1.4.2+galaxy0" title="ivar consensus tool"><strong>ivar consensus</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/ivar_consensus/ivar_consensus/1.4.2+galaxy0</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ivar_consensus/ivar_consensus/1.4.2+galaxy0" title="ivar consensus tool" aria-role="link"><strong>ivar consensus</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/ivar_consensus/ivar_consensus/1.4.2+galaxy0</span></span>
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Bam file”</em>: the relabeled collection of mapped reads; output of <strong>Relabel identifiers</strong></li>
         <li><em>“Minimum quality score threshold to count base”</em>: <code class="language-plaintext highlighter-rouge">20</code></li>
@@ -1448,7 +1247,7 @@ It is an important intermediate result, to which we will need to return later, a
       <p>The output is a consensus sequence in FASTA format, one per segment, with
 the names just providing a bit too much detail for our purpose.</p>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace parts of text tool"><strong>Replace parts of text</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace parts of text tool" aria-role="link"><strong>Replace parts of text</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4</span></span>
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“File to process”</em>: consensus sequences; output of <strong>ivar consensus</strong></li>
         <li>In <i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“1: Find and Replace”</em>:
@@ -1489,7 +1288,7 @@ To do so, we are going to combine the reference sequences of all segments with t
   <div class="box-title hands-on-title" id="hands-on-exploring-phylogeny"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Exploring phylogeny</div>
 
   <ol>
-    <li><span class="tool" data-tool="cat1" title="Concatenate datasets tool"><strong>Concatenate datasets</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: cat1</span></span>
+    <li><span class="tool" data-tool="cat1" title="Concatenate datasets tool" aria-role="link"><strong>Concatenate datasets</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: cat1</span></span>
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Concatenate Dataset”</em>: <code class="language-plaintext highlighter-rouge">References per segment (INSAFlu)</code></li>
         <li>In <em>“Dataset”</em>:
@@ -1505,10 +1304,11 @@ To do so, we are going to combine the reference sequences of all segments with t
 
       <!--SNIPPET-->
       <blockquote class="tip">   <div class="box-title tip-title" id="tip-pick-the-right-concatenate-tool"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-pick-the-right-concatenate-tool" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Pick the right Concatenate tool<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>On most Galaxy servers you will find two <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>Concatenate datasets</strong> tools installed:</p>   <ol>   <li><strong>Concatenate datasets</strong> tail-to-head</li>   <li><strong>Concatenate datasets</strong> tail-to-head (cat)</li> </ol>   <p><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> The tool you want to use at this step is <code class="language-plaintext highlighter-rouge">#1</code>, but if you are interested in the details, here is why:</p>   <p>The two tools have nearly identical interfaces, but behave differently in certain situations, specifically:</p>   <ul>   <li>     <p>The second tool, the one with “(cat)” in its name, simply concatenates everything you give to it into a single output dataset.</p>     <p>Whether you give it multiple datasets or a collection as the first parameter, or some datasets as the first and some others as the second parameter, it will always concatenate them all. In fact, the only reason for having multiple parameters for this tool is that by providing inputs through multiple parameters, you can make sure they are concatenated in the order you pass them in.</p>   </li>   <li>     <p>The first tool, on the other hand, will only ever concatenate inputs provided through <em>different</em> parameters.</p>     <p>This tool allows you to specify an arbitrary number of <i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> single datasets, but if you also want to use <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> multiple datasets or <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> a collection for some of the Dataset parameters, then all of these need to be of the same type (multiple datasets <em>or</em> collections) and have the same number of inputs.</p>     <p>Now depending on the inputs, one of the following behaviors will occur:</p>     <ul>       <li>If all the different inputs are <i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> single datasets, the tool will concatenate them all and produce a single output dataset.</li>       <li>If all the different inputs are specified <em>either</em> as <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> multiple datasets <em>or</em> as <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span>, and all have the same number of datasets, then the tool will concatenate the first datasets of each input parameter, the second datasets of each input parameter, the third, etc., and produce an output collection with as many elements as there are inputs per Dataset parameter.</li>       <li>In extension of the above, if <em>some</em> additional inputs are provided as <i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> single datasets, the content of these will be recycled and be reused in the concatenation of all the nth elements of the other parameters.</li>     </ul>   </li> </ul> </blockquote>
+      <p><!--END_SNIPPET--></p>
 
       <p>The tool should produce a collection of eight multi-sequence fasta datasets, each of which has the generated consensus sequence for one segment concatenated to the INSAFlu reference sequences of that segment.</p>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.508+galaxy0" title="MAFFT tool"><strong>MAFFT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.508+galaxy0</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.508+galaxy0" title="MAFFT tool" aria-role="link"><strong>MAFFT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.508+galaxy0</span></span>
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Sequences to align”</em>: collection of concatenated sequences; output of <strong>Concatenate datasets</strong></li>
         <li><em>“Data type”</em>: <code class="language-plaintext highlighter-rouge">Nucleic Acids</code></li>
@@ -1517,7 +1317,7 @@ To do so, we are going to combine the reference sequences of all segments with t
 
       <p>The result is a collection of MSAs, each aligning all reference sequences of one genome segment plus the consensus sequence we have obtained for that segment against each other.</p>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/iqtree/iqtree/2.1.2+galaxy2" title="IQ-TREE tool"><strong>IQ-TREE</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/iqtree/iqtree/2.1.2+galaxy2</span></span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/iqtree/iqtree/2.1.2+galaxy2" title="IQ-TREE tool" aria-role="link"><strong>IQ-TREE</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/iqtree/iqtree/2.1.2+galaxy2</span></span>
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Specify input alignment file in PHYLIP, FASTA, NEXUS, CLUSTAL or MSF format.”</em>: output of <strong>MAFFT</strong></li>
         <li><em>“Specify sequence type …“</em>: <code class="language-plaintext highlighter-rouge">DNA</code></li>
@@ -1613,6 +1413,9 @@ To do so, we are going to combine the reference sequences of all segments with t
                             Wolfgang Maier,  <b>Avian influenza viral strain analysis from gene segment sequencing data (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html">https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -1634,12 +1437,12 @@ To do so, we are going to combine the reference sequences of all segments with t
 
 <code id="citation-code">@misc{variant-analysis-aiv-analysis,
 author = "Wolfgang Maier",
-title = "Avian influenza viral strain analysis from gene segment sequencing data (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "Avian influenza viral strain analysis from gene segment sequencing data (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -1665,9 +1468,9 @@ note = "[Online; accessed TODAY]"
 
 <script>
 // update the date on load, or leave fallback of 'today'
-var d = new Date();
-document.getElementById("citation-code").innerHTML = document.getElementById("citation-code").innerHTML.replace("TODAY", d.toDateString());
-document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
+const citationTodaysDate = new Date();
+document.getElementById("citation-code").innerHTML = document.getElementById("citation-code").innerHTML.replace("TODAY", citationTodaysDate.toDateString());
+document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", citationTodaysDate.toDateString());
 </script>
 
                 <i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!
@@ -1675,6 +1478,83 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                 
 
                 
+
+		
+                <blockquote class="agenda follow-up" id="admins-install-missing-tools">
+                    <div class="box-title">Galaxy Administrators: Install the missing tools</div>
+			<p>You can use Ephemeris's <code>shed-tools install</code> command to install the tools used in this tutorial.</p>
+<div class="highlight"><pre class="highlight"><code>shed-tools install [-g GALAXY] [-a API_KEY] -t &lt;(curl https://training.galaxyproject.org/training-material/api/topics/variant-analysis/tutorials/aiv-analysis/tutorial.json | jq .admin_install_yaml -r)</code></pre></div>
+<p>Alternatively you can copy and paste the following YAML</p>
+<div class="highlight"><pre class="highlight"><code>---
+install_tool_dependencies: true
+install_repository_dependencies: true
+install_resolver_dependencies: true
+tools:
+- name: text_processing
+  owner: bgruening
+  revisions: d698c222f354
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: bwa
+  owner: devteam
+  revisions: e188dc7a68e6
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: bamtools_split_ref
+  owner: iuc
+  revisions: 9b520009db81
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: fastp
+  owner: iuc
+  revisions: 65b93b623c77
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: iqtree
+  owner: iuc
+  revisions: 9b892d7f82cc
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: ivar_consensus
+  owner: iuc
+  revisions: ede363a64152
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: qualimap_bamqc
+  owner: iuc
+  revisions: 19ece8afbaab
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: samtools_view
+  owner: iuc
+  revisions: 5826298f6a73
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: seqtk
+  owner: iuc
+  revisions: 3da72230c066
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: vapor
+  owner: iuc
+  revisions: 244812f5bd1f
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: collapse_collections
+  owner: nml
+  revisions: 90981f86000f
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: mafft
+  owner: rnateam
+  revisions: a65296ffb4a0
+  tool_panel_section_label: Variant Analysis
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+</code></pre></div>
+                </blockquote>
+		
+
+
                 </section>
 
             </div>
@@ -1686,9 +1566,52 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 <br/>
 
         </div>
-        
+        <footer>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6" style="text-align: left">
+				<p>
+					The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
+					provides researchers with online training materials, connects them with local trainers, and helps promoting FAIR and Open Science practices worldwide. All contributions are subject to the <a rel="code-of-conduct" href="https://galaxyproject.org/community/coc/">Galaxy Project Code of Conduct</a>.
+				</p>
+				<p>
+				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
+				</p>
+				<p>
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				</p>
+			</div>
+			<div class="col-sm-6" style="text-align: right">
+				
+				<p>
+					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00308">https://gxy.io/GTN:T00308</a>
+				</p>
+				
+				<p>
+					<i>This Material</i>:
+					
+					It is licensed under
+					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+						Creative Commons Attribution 4.0 International License
+					</a>
+				</p>
+				<p>
+					<a href="https://github.com/galaxyproject/training-material/edit/main/topics/variant-analysis/tutorials/aiv-analysis/tutorial.md" title="Edit on GitHub">
+					<i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    </div>
+</footer>
+
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -1696,9 +1619,13 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

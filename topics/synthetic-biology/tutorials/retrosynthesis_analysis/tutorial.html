@@ -8,22 +8,41 @@
         
             <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
 
+<!-- JavaScript Error Monitoring, and performance tracking. -->
+<script
+  src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
+  integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript">
+Sentry.init({
+  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
+  // Capture Replay for no sessions by default
+  replaysSessionSampleRate: 0.01,
+  // plus for 1% of sessions with an error
+  replaysOnErrorSampleRate: 0.01,
+  // PII OFF
+  sendDefaultPii: false, // Off by default but just in case.
+  environment: "production",
+});
+</script>
+
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.html">
-        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Generating theoretical possible pathways for the production of Lycopene in E.Coli using Retrosynthesis tools">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2022-11-28 09:55:50 +0000">
+<meta name="DC.date" content="2023-05-17 12:24:12 +0000">
 <meta name="DC.creator" content="Guillaume Gricourt">
 <meta name="DC.creator" content="Thomas Duigou">
 <meta name="DC.creator" content="Kenza Bazi-Kabbaj">
@@ -40,7 +59,7 @@
         <meta property="og:title" content="Galaxy Training: Generating theoretical possible pathways for the producti...">
         <meta property="og:description" content="Synthetic Biology is the engineering of biology : the del...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
+        <meta property="og:image" content="/training-material/assets/images/GTN.png">
 
         
         <script type="application/ld+json">
@@ -69,7 +88,7 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2022-11-28 09:55:50 +0000",
+  "dateModified": "2023-05-17 12:24:12 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Generating theoretical possible pathways for the production of Lycopene in E.Coli using Retrosynthesis tools",
   "interactivityType": "mixed",
@@ -95,6 +114,10 @@
     "url": "https://galaxyproject.org/teach/gtn/"
   },
   "identifier": "https://github.com/galaxyproject/training-material",
+  "workTranslation": [
+
+  ],
+  "creativeWorkStatus": "Active",
   "accessMode": [
     "textual",
     "visual"
@@ -122,6 +145,7 @@
   "name": "Hands-on for 'Generating theoretical possible pathways for the production of Lycopene in E.Coli using Retrosynthesis tools' tutorial",
   "url": "https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.html",
   "timeRequired": "PT30M",
+  "teaches": "Define what data are required to run RetroSynthesis analysis.\n - Understanding how to run the tools to search heterologous pathways.",
   "keywords": "synthetic-biology",
   "description": "The questions this  addresses are:\n - Which heterologous pathways are candidates to produce a compound in a chassis?\n\n\nThe objectives are:\n - Define what data are required to run RetroSynthesis analysis.\n - Understanding how to run the tools to search heterologous pathways.\n\n",
   "inLanguage": {
@@ -149,8 +173,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/guillaume-gricourt/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/guillaume-gricourt/",
@@ -172,8 +196,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/tduigou/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/tduigou/",
@@ -195,8 +219,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/kenza12/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/kenza12/",
@@ -218,8 +242,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/breakthewall/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/breakthewall/",
@@ -241,8 +265,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/ioanagry/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/ioanagry/",
@@ -264,148 +288,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/",
-      "name": "Jean-Loup Faulon",
-      "image": "https://avatars.githubusercontent.com/jfaulon",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0003-4274-2953",
-      "orcid": "https://orcid.org/0000-0003-4274-2953"
-    }
-  ],
-  "contributor": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/guillaume-gricourt/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/guillaume-gricourt/",
-      "name": "Guillaume Gricourt",
-      "image": "https://avatars.githubusercontent.com/guillaume-gricourt",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0003-0143-5535",
-      "orcid": "https://orcid.org/0000-0003-0143-5535"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/tduigou/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/tduigou/",
-      "name": "Thomas Duigou",
-      "image": "https://avatars.githubusercontent.com/tduigou",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-2649-2950",
-      "orcid": "https://orcid.org/0000-0002-2649-2950"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/kenza12/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/kenza12/",
-      "name": "Kenza Bazi-Kabbaj",
-      "image": "https://avatars.githubusercontent.com/kenza12",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-4319-5616",
-      "orcid": "https://orcid.org/0000-0002-4319-5616"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/breakthewall/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/breakthewall/",
-      "name": "Joan Hérisson",
-      "image": "https://avatars.githubusercontent.com/breakthewall",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0001-9741-0847",
-      "orcid": "https://orcid.org/0000-0001-9741-0847"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/ioanagry/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/ioanagry/",
-      "name": "Ioana Popescu",
-      "image": "https://avatars.githubusercontent.com/ioanagry",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0003-2547-8935",
-      "orcid": "https://orcid.org/0000-0003-2547-8935"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
       },
       "url": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/",
       "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/",
@@ -438,7 +322,12 @@
       "termCode": "topic_3895",
       "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3895"
     }
-  ]
+  ],
+  "educationalLevel": "Introductory",
+  "mentions": [
+
+  ],
+  "abstract": "# Introduction"
 }
         </script>
         
@@ -513,8 +402,7 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -625,405 +513,6 @@
 
 
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
-<script type="application/ld+json">
-    
-
-
-{
-  "@context": "http://schema.org",
-  "@type": "LearningResource",
-  "http://purl.org/dc/terms/conformsTo": {
-    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-    "@type": "CreativeWork"
-  },
-  "audience": {
-    "@type": "EducationalAudience",
-    "educationalRole": "Students"
-  },
-  "citation": {
-    "@type": "CreativeWork",
-    "name": "Community-Driven Data Analysis Training for Biology",
-    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
-  },
-  "copyrightHolder": {
-    "@type": "Organization",
-    "email": "galaxytrainingnetwork@gmail.com",
-    "name": "Galaxy Training Network",
-    "url": "https://galaxyproject.org/teach/gtn/"
-  },
-  "dateModified": "2022-11-28 09:55:50 +0000",
-  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
-  "headline": "Generating theoretical possible pathways for the production of Lycopene in E.Coli using Retrosynthesis tools",
-  "interactivityType": "mixed",
-  "isAccessibleForFree": true,
-  "isFamilyFriendly": true,
-  "license": "https://spdx.org/licenses/CC-BY-4.0.html",
-  "producer": {
-    "@type": "Organization",
-    "email": "galaxytrainingnetwork@gmail.com",
-    "name": "Galaxy Training Network",
-    "url": "https://galaxyproject.org/teach/gtn/"
-  },
-  "provider": {
-    "@type": "Organization",
-    "email": "galaxytrainingnetwork@gmail.com",
-    "name": "Galaxy Training Network",
-    "url": "https://galaxyproject.org/teach/gtn/"
-  },
-  "sourceOrganization": {
-    "@type": "Organization",
-    "email": "galaxytrainingnetwork@gmail.com",
-    "name": "Galaxy Training Network",
-    "url": "https://galaxyproject.org/teach/gtn/"
-  },
-  "identifier": "https://github.com/galaxyproject/training-material",
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
-  "isPartOf": {
-    "@type": "CreativeWork",
-    "name": "Synthetic Biology",
-    "description": "Synthetic Biology is the engineering of biology : the deliberate (re)design and construction of novel biological and biologically based parts, devices and systems to perform new functions for useful purposes, that draws on principles elucidated from biology and engineering.\nBy applying these principles to living systems, Synthetic Biology overcomes mimicry and optimisation-led research and introduces a rationale and systematic approach to the construction and (re)design.\nSynthetic Biology is at the intersection of engineering, bioscience, chemistry, and information technology.\nThe goal of synthetic biology is to extend or modify the behavior of organisms and engineer them to perform new tasks. \nIn this section, the tutorials shows how to design metabolic pathways for producing the desired chemical targets.\n",
-    "url": "https://training.galaxyproject.org/training-material/topics/synthetic-biology/"
-  },
-  "learningResourceType": "hands-on tutorial",
-  "name": "Hands-on for 'Generating theoretical possible pathways for the production of Lycopene in E.Coli using Retrosynthesis tools' tutorial",
-  "url": "https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.html",
-  "timeRequired": "PT30M",
-  "keywords": "synthetic-biology",
-  "description": "The questions this  addresses are:\n - Which heterologous pathways are candidates to produce a compound in a chassis?\n\n\nThe objectives are:\n - Define what data are required to run RetroSynthesis analysis.\n - Understanding how to run the tools to search heterologous pathways.\n\n",
-  "inLanguage": {
-    "@type": "Language",
-    "name": "English",
-    "alternateName": "en"
-  },
-  "competencyRequired": [
-    {
-      "@context": "http://schema.org",
-      "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
-      "name": "Introduction to Galaxy Analyses",
-      "description": "Introduction to Galaxy Analyses",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    }
-  ],
-  "author": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/guillaume-gricourt/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/guillaume-gricourt/",
-      "name": "Guillaume Gricourt",
-      "image": "https://avatars.githubusercontent.com/guillaume-gricourt",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0003-0143-5535",
-      "orcid": "https://orcid.org/0000-0003-0143-5535"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/tduigou/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/tduigou/",
-      "name": "Thomas Duigou",
-      "image": "https://avatars.githubusercontent.com/tduigou",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-2649-2950",
-      "orcid": "https://orcid.org/0000-0002-2649-2950"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/kenza12/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/kenza12/",
-      "name": "Kenza Bazi-Kabbaj",
-      "image": "https://avatars.githubusercontent.com/kenza12",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-4319-5616",
-      "orcid": "https://orcid.org/0000-0002-4319-5616"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/breakthewall/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/breakthewall/",
-      "name": "Joan Hérisson",
-      "image": "https://avatars.githubusercontent.com/breakthewall",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0001-9741-0847",
-      "orcid": "https://orcid.org/0000-0001-9741-0847"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/ioanagry/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/ioanagry/",
-      "name": "Ioana Popescu",
-      "image": "https://avatars.githubusercontent.com/ioanagry",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0003-2547-8935",
-      "orcid": "https://orcid.org/0000-0003-2547-8935"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/",
-      "name": "Jean-Loup Faulon",
-      "image": "https://avatars.githubusercontent.com/jfaulon",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0003-4274-2953",
-      "orcid": "https://orcid.org/0000-0003-4274-2953"
-    }
-  ],
-  "contributor": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/guillaume-gricourt/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/guillaume-gricourt/",
-      "name": "Guillaume Gricourt",
-      "image": "https://avatars.githubusercontent.com/guillaume-gricourt",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0003-0143-5535",
-      "orcid": "https://orcid.org/0000-0003-0143-5535"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/tduigou/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/tduigou/",
-      "name": "Thomas Duigou",
-      "image": "https://avatars.githubusercontent.com/tduigou",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-2649-2950",
-      "orcid": "https://orcid.org/0000-0002-2649-2950"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/kenza12/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/kenza12/",
-      "name": "Kenza Bazi-Kabbaj",
-      "image": "https://avatars.githubusercontent.com/kenza12",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-4319-5616",
-      "orcid": "https://orcid.org/0000-0002-4319-5616"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/breakthewall/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/breakthewall/",
-      "name": "Joan Hérisson",
-      "image": "https://avatars.githubusercontent.com/breakthewall",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0001-9741-0847",
-      "orcid": "https://orcid.org/0000-0001-9741-0847"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/ioanagry/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/ioanagry/",
-      "name": "Ioana Popescu",
-      "image": "https://avatars.githubusercontent.com/ioanagry",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0003-2547-8935",
-      "orcid": "https://orcid.org/0000-0003-2547-8935"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
-        "@type": "Person"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/",
-      "name": "Jean-Loup Faulon",
-      "image": "https://avatars.githubusercontent.com/jfaulon",
-      "description": "A contributor to the GTN project.",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "url": "https://galaxyproject.org/teach/gtn/"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0003-4274-2953",
-      "orcid": "https://orcid.org/0000-0003-4274-2953"
-    }
-  ],
-  "about": [
-    {
-      "@type": "CreativeWork",
-      "name": "Synthetic Biology",
-      "description": "Synthetic Biology is the engineering of biology : the deliberate (re)design and construction of novel biological and biologically based parts, devices and systems to perform new functions for useful purposes, that draws on principles elucidated from biology and engineering.\nBy applying these principles to living systems, Synthetic Biology overcomes mimicry and optimisation-led research and introduces a rationale and systematic approach to the construction and (re)design.\nSynthetic Biology is at the intersection of engineering, bioscience, chemistry, and information technology.\nThe goal of synthetic biology is to extend or modify the behavior of organisms and engineer them to perform new tasks. \nIn this section, the tutorials shows how to design metabolic pathways for producing the desired chemical targets.\n",
-      "url": "https://training.galaxyproject.org/training-material/topics/synthetic-biology/"
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id": "http://edamontology.org/topic_3895",
-      "inDefinedTermSet": "http://edamontology.org",
-      "termCode": "topic_3895",
-      "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3895"
-    }
-  ]
-}
-</script>
 
 <article class="tutorial topic-synthetic-biology">
     <h1 data-toc-skip>Generating theoretical possible pathways for the production of Lycopene in E.Coli using Retrosynthesis tools</h1>
@@ -1166,156 +655,49 @@
                 <li class="btn btn-default supporting_material">
 
 
+
+
+
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
         <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>&nbsp;Available on these Galaxies 
     </a>
     <ul class="dropdown-menu">
+	<li class="dropdown-header">
+		<b>Known Working</b>
+	</li>
+	
+	
+
     
+    
+	<li class="dropdown-header">
+		<b>Possibly Working</b>
+	</li>
+    
+
+    
+	<li class="dropdown-header">
+		Containers
+	</li>
         <li>
-            <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/tree/main/topics/synthetic-biology/docker" title="Docker image for this tutorial">
+            <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/tree/main/topics//docker" title="Docker image for this tutorial">
                 <i class="fab fa-docker" aria-hidden="true"></i><span class="visually-hidden">docker_image</span> Docker image
             </a>
         </li>
     
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
     </ul>
-
 
 </li>
             
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Nov 28, 2022 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> May 17, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
-            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
-            
-            <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">The GTN Framework is licensed under MIT</a>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
+             The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
         <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00275">https://gxy.io/GTN:T00275</a> </div>
@@ -1353,7 +735,7 @@
 
 <p>Lastly, the metabolic network is then deconstructed into individual pathways using RP2paths and rpCompletion takes those individual metabolic pathways to filter them (duplicated pathways are removed), splits them into sub-pathways by adding the appropriate cofactors, and finally converted them to SBML files.</p>
 
-<p><img src="../../images/Retrosynthesis_Workflow.png" alt="Retrosynthesis Workflow. " loading="lazy" /></p>
+<p><img src="../../images/Retrosynthesis_Workflow.png" alt="Retrosynthesis Workflow. " width="2514" height="682" loading="lazy" /></p>
 
 <p>Note that we will run the steps of this workflow individually so as not to neglect the understanding of the intermediate steps as well. Then, we will run the workflow automatically so that it itself retrieves the outputs from the previous step and gives them as input to the next tool.</p>
 
@@ -1405,7 +787,7 @@ Lastly, we request from RetroRules all possible reactions to find a chemical rea
   <div class="box-title hands-on-title" id="hands-on-select-a-model"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Select a model.</div>
 
   <ol>
-    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/get_sbml_model/get_sbml_model/0.0.1" title="Pick SBML Model tool"><strong>Pick SBML Model</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/get_sbml_model/get_sbml_model/0.0.1</span></span>  with the following parameters:
+    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/get_sbml_model/get_sbml_model/0.0.1" title="Pick SBML Model tool" aria-role="link"><strong>Pick SBML Model</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/get_sbml_model/get_sbml_model/0.0.1</span></span> with the following parameters:
       <ul>
         <li><i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden">galaxy-dropdown</span> <em>“Strain”</em>: <code class="language-plaintext highlighter-rouge">Escherichia coli str. K-12 substr. MG1655 (iML1515)</code></li>
       </ul>
@@ -1444,7 +826,7 @@ Lastly, we request from RetroRules all possible reactions to find a chemical rea
   <div class="box-title hands-on-title" id="hands-on-generate-a-sink-file"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Generate a sink file.</div>
 
   <ol>
-    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/rpextractsink/rpextractsink/5.12.1" title="Sink from SBML tool"><strong>Sink from SBML</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/rpextractsink/rpextractsink/5.12.1</span></span>  with the following parameters:
+    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/rpextractsink/rpextractsink/5.12.1" title="Sink from SBML tool" aria-role="link"><strong>Sink from SBML</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/rpextractsink/rpextractsink/5.12.1</span></span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Strain”</em>: <code class="language-plaintext highlighter-rouge">sbml_model</code> (output of <strong>Pick SBML Model</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“SBML compartment ID”</em>: <code class="language-plaintext highlighter-rouge">c</code></li>
@@ -1487,7 +869,7 @@ If the user wishes to upload an SBML file from another source, then this value m
   <div class="box-title hands-on-title" id="hands-on-generate-a-file-with-all-reactions"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Generate a file with all reactions.</div>
 
   <ol>
-    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/rrparser/rrparser/2.4.6" title="RRules Parser  tool"><strong>RRules Parser </strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/rrparser/rrparser/2.4.6</span></span>  with the following parameters:
+    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/rrparser/rrparser/2.4.6" title="RRules Parser  tool" aria-role="link"><strong>RRules Parser </strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/rrparser/rrparser/2.4.6</span></span> with the following parameters:
       <ul>
         <li><em>“Rule Type”</em>: <code class="language-plaintext highlighter-rouge">retro</code></li>
         <li><em>“Select the diameters of the reactions rules”</em>: <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">6</code>, <code class="language-plaintext highlighter-rouge">8</code>, <code class="language-plaintext highlighter-rouge">10</code>, <code class="language-plaintext highlighter-rouge">12</code>, <code class="language-plaintext highlighter-rouge">14</code> and <code class="language-plaintext highlighter-rouge">16</code></li>
@@ -1536,7 +918,7 @@ The retrosynthesis network is outputted as a CSV file providing reactions in the
   <div class="box-title hands-on-title" id="hands-on-build-a-reaction-network"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Build a reaction network</div>
 
   <ol>
-    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/retropath2/retropath2/2.3.0" title="RetroPath2.0 tool"><strong>RetroPath2.0</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/retropath2/retropath2/2.3.0</span></span>  with the following parameters:
+    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/retropath2/retropath2/2.3.0" title="RetroPath2.0 tool" aria-role="link"><strong>RetroPath2.0</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/retropath2/retropath2/2.3.0</span></span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Rules File”</em>: <code class="language-plaintext highlighter-rouge">out_rules</code> (output of <strong>RRules Parser</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Sink File”</em>: <code class="language-plaintext highlighter-rouge">sink</code> (output of <strong>Sink from SBML</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1584,7 +966,7 @@ We need to split the network and perform some adjustments to these pathways.</p>
   <div class="box-title hands-on-title" id="hands-on-build-a-reaction-network-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Build a reaction network</div>
 
   <ol>
-    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/rp2paths/rp2paths/1.5.0" title="RP2paths tool"><strong>RP2paths</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/rp2paths/rp2paths/1.5.0</span></span>  with the following parameters:
+    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/rp2paths/rp2paths/1.5.0" title="RP2paths tool" aria-role="link"><strong>RP2paths</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/rp2paths/rp2paths/1.5.0</span></span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“RetroPath2.0 Pathways”</em>: <code class="language-plaintext highlighter-rouge">Reaction_Network</code> (output of <strong>RetroPath2.0</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
       </ul>
@@ -1624,7 +1006,7 @@ We need to split the network and perform some adjustments to these pathways.</p>
   <div class="box-title hands-on-title" id="hands-on-refine-reactions"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Refine reactions</div>
 
   <ol>
-    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/rpcompletion/rpcompletion/5.12.2" title="Complete Reactions tool"><strong>Complete Reactions</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/rpcompletion/rpcompletion/5.12.2</span></span>  with the following parameters:
+    <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/tduigou/rpcompletion/rpcompletion/5.12.2" title="Complete Reactions tool" aria-role="link"><strong>Complete Reactions</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/tduigou/rpcompletion/rpcompletion/5.12.2</span></span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“RP2paths pathways”</em>: <code class="language-plaintext highlighter-rouge">master_pathways</code> (output of <strong>RP2paths</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“RP2paths compounds”</em>: <code class="language-plaintext highlighter-rouge">compounds</code> (output of <strong>RP2paths</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1673,10 +1055,11 @@ The node converts each predicted pathway to distinct SBML files.</p>
 
   <ol>
     <li>
-      <p>Import your <strong>RetroSynthesis workflow</strong> by uploading the <a href="https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/basic_assembly_analysis/workflows/RetroSynthesis.ga"><strong>workflow file</strong></a>.</p>
+      <p>Import the workflow into Galaxy</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-a-workflow"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-a-workflow" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing a workflow<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em>Workflow</em> on the top menu bar of Galaxy. You will see a list of all your workflows.</li>   <li>Click on <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Import</strong> at the top-right of the screen</li>   <li>Provide your workflow     <ul>       <li>Option 1: Paste the URL of the workflow into the box labelled <em>“Archived Workflow URL”</em></li>       <li>Option 2: Upload the workflow file in the box labelled <em>“Archived Workflow File”</em></li>     </ul>   </li>   <li>Click the <strong>Import workflow</strong> button</li> </ul> </blockquote>
+      <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-importing-and-launching-a-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Importing and Launching a workflow</div>   <div class="show-when-galaxy-proxy-active"> Click here to run the  <span class="workflow" data-workflow="https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/synthetic-biology-basic_assembly_analysis/versions/retrosynthesis"><strong>RetroSynthesis workflow</strong> <i class="fas fa-share-alt" aria-hidden="true"></i></span> workflow. </div>   <p class="hide-when-galaxy-proxy-active">Or copy the URL (e.g. via right-click) of <a href="https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/basic_assembly_analysis/workflows/RetroSynthesis.ga">this workflow</a>, and import the workflow into Galaxy</p>   <div class="hide-when-galaxy-proxy-active"> <!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-a-workflow"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-a-workflow" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing a workflow<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em>Workflow</em> on the top menu bar of Galaxy. You will see a list of all your workflows.</li>   <li>Click on <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Import</strong> at the top-right of the screen</li>   <li>Provide your workflow     <ul>       <li>Option 1: Paste the URL of the workflow into the box labelled <em>“Archived Workflow URL”</em></li>       <li>Option 2: Upload the workflow file in the box labelled <em>“Archived Workflow File”</em></li>     </ul>   </li>   <li>Click the <strong>Import workflow</strong> button</li> </ul> </blockquote> <!--END_SNIPPET--> </div> </blockquote>
+      <p><!--END_SNIPPET--></p>
     </li>
     <li>Click on <em>Workflow</em> on the top menu bar of Galaxy. You will see <strong>RetroSynthesis</strong> workflow.</li>
     <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden">workflow-run</span> (<em>Run workflow</em>) button next to your workflow</li>
@@ -1755,6 +1138,9 @@ Three main steps were involved:</p>
                             Guillaume Gricourt, Thomas Duigou, Kenza Bazi-Kabbaj, Joan Hérisson, Ioana Popescu, Jean-Loup Faulon,  <b>Generating theoretical possible pathways for the production of Lycopene in E.Coli using Retrosynthesis tools (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.html">https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -1776,12 +1162,12 @@ Three main steps were involved:</p>
 
 <code id="citation-code">@misc{synthetic-biology-retrosynthesis_analysis,
 author = "Guillaume Gricourt and Thomas Duigou and Kenza Bazi-Kabbaj and Joan Hérisson and Ioana Popescu and Jean-Loup Faulon",
-title = "Generating theoretical possible pathways for the production of Lycopene in E.Coli using Retrosynthesis tools (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "Generating theoretical possible pathways for the production of Lycopene in E.Coli using Retrosynthesis tools (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -1807,9 +1193,9 @@ note = "[Online; accessed TODAY]"
 
 <script>
 // update the date on load, or leave fallback of 'today'
-var d = new Date();
-document.getElementById("citation-code").innerHTML = document.getElementById("citation-code").innerHTML.replace("TODAY", d.toDateString());
-document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
+const citationTodaysDate = new Date();
+document.getElementById("citation-code").innerHTML = document.getElementById("citation-code").innerHTML.replace("TODAY", citationTodaysDate.toDateString());
+document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", citationTodaysDate.toDateString());
 </script>
 
                 <i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!
@@ -1817,6 +1203,43 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                 
 
                 
+
+		
+                <blockquote class="agenda follow-up" id="admins-install-missing-tools">
+                    <div class="box-title">Galaxy Administrators: Install the missing tools</div>
+			<p>You can use Ephemeris's <code>shed-tools install</code> command to install the tools used in this tutorial.</p>
+<div class="highlight"><pre class="highlight"><code>shed-tools install [-g GALAXY] [-a API_KEY] -t &lt;(curl https://training.galaxyproject.org/training-material/api/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.json | jq .admin_install_yaml -r)</code></pre></div>
+<p>Alternatively you can copy and paste the following YAML</p>
+<div class="highlight"><pre class="highlight"><code>---
+install_tool_dependencies: true
+install_repository_dependencies: true
+install_resolver_dependencies: true
+tools:
+- name: get_sbml_model
+  owner: tduigou
+  revisions: 4797d0b36ff3
+  tool_panel_section_label: Synthetic Biology
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: retropath2
+  owner: tduigou
+  revisions: 9c8ac9980bd6
+  tool_panel_section_label: Synthetic Biology
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: rp2paths
+  owner: tduigou
+  revisions: aed346f2e254
+  tool_panel_section_label: Synthetic Biology
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: rrparser
+  owner: tduigou
+  revisions: ea590c609fec
+  tool_panel_section_label: Synthetic Biology
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+</code></pre></div>
+                </blockquote>
+		
+
+
                 </section>
 
             </div>
@@ -1828,9 +1251,52 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 <br/>
 
         </div>
-        
+        <footer>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6" style="text-align: left">
+				<p>
+					The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
+					provides researchers with online training materials, connects them with local trainers, and helps promoting FAIR and Open Science practices worldwide. All contributions are subject to the <a rel="code-of-conduct" href="https://galaxyproject.org/community/coc/">Galaxy Project Code of Conduct</a>.
+				</p>
+				<p>
+				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
+				</p>
+				<p>
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				</p>
+			</div>
+			<div class="col-sm-6" style="text-align: right">
+				
+				<p>
+					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00275">https://gxy.io/GTN:T00275</a>
+				</p>
+				
+				<p>
+					<i>This Material</i>:
+					
+					It is licensed under
+					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+						Creative Commons Attribution 4.0 International License
+					</a>
+				</p>
+				<p>
+					<a href="https://github.com/galaxyproject/training-material/edit/main/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.md" title="Edit on GitHub">
+					<i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    </div>
+</footer>
+
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -1838,9 +1304,13 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
