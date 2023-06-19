@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/ecology/tutorials/species-distribution-modeling/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -56,7 +64,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Species distribution modeling">
         <meta property="og:description" content="Learn to analyse Ecological data through Galaxy.">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -343,7 +351,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/ecology/tutorials/species-distribution-modeling/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/ecology/tutorials/species-distribution-modeling/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -390,13 +398,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/ecology/tutorials/species-distribution-modeling/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/ecology/tutorials/species-distribution-modeling/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/ecology/tutorials/species-distribution-modeling/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/ecology/tutorials/species-distribution-modeling/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/ecology/tutorials/species-distribution-modeling/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/ecology/tutorials/species-distribution-modeling/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -409,7 +417,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -446,14 +454,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-ecology">
     <h1 data-toc-skip>Species distribution modeling</h1>
@@ -463,7 +464,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/emichn/" class="contributor-badge contributor-emichn"><img src="https://avatars.githubusercontent.com/emichn?s=27" alt="Avatar">Elisa Michon</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=27" alt="Avatar">Yvan Le Bras</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a>
+		Authors: <a href="/training-material/hall-of-fame/emichn/" class="contributor-badge contributor-emichn"><img src="https://avatars.githubusercontent.com/emichn?s=36" alt="Avatar">Elisa Michon</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=36" alt="Avatar">Yvan Le Bras</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a>
 	</div>
 
 </div>
@@ -645,7 +646,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00135">https://gxy.io/GTN:T00135</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00135">https://gxy.io/GTN:T00135</a> </div>
         
     </blockquote>
     </section>
@@ -695,7 +696,7 @@ Sentry.init({
 <p>In this study the datasets are all imported from the <a href="https://www.gbif.org/">GBIF</a> databanks. It is also possible to import from <a href="https://www.gbif.org/">bison</a>, <a href="https://www.inaturalist.org/">iNaturalist</a> and others.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-the-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Import the data</div>
+  <div class="box-title hands-on-title" id="hands-on-import-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import the data</div>
   <ol>
     <li>
       <p>Create a new history for this tutorial and give it a proper name</p>
@@ -722,14 +723,14 @@ Sentry.init({
 <p>We have now a tabular file with about 10,001 lines and many columns.</p>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
   <ol>
     <li>What do the lines in the files represent?</li>
     <li>What are the columns 1, 2, 3 and 54 of the generated file?</li>
   </ol>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <ol>
       <li>Each line represent an observation of Chrysemys picta, with its location, and some other metadata</li>
       <li>Column 1 is the name, column 2 the longitude of the observation of Chrysemys picta, column 3 the latitude and column 50 the country code of the location</li>
@@ -740,7 +741,7 @@ Sentry.init({
 <p>We would to extraction the 4 columns previously cited and keep only occurrence records from US.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-the-data-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Import the data</div>
+  <div class="box-title hands-on-title" id="hands-on-import-the-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import the data</div>
   <ol>
     <li><strong>Cut columns</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
       <ul>
@@ -761,12 +762,12 @@ Sentry.init({
       <p>Inspect the generated files</p>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <p>How many occurrences have been conserved?</p>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
           <p>63.06% of the occurrences (6,306) are conserved</p>
         </blockquote>
       </blockquote>
@@ -791,7 +792,7 @@ Sentry.init({
 <p>With this you can either upload file you’ve loaded earlier from Galaxy data or you can download data directly from Wallace. Let’s use the data from your Galaxy history:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-launch-wallace"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Launch Wallace</div>
+  <div class="box-title hands-on-title" id="hands-on-launch-wallace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Launch Wallace</div>
   <ol>
     <li>Verify your current history is the history containing previous filtered occurences data.</li>
     <li>Open <span class="tool" data-tool="interactive_tool_wallace" title="Wallace tool" aria-role="link"><strong>Wallace</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: interactive_tool_wallace</span></span> in Galaxy or click here to <a href="https://ecology.usegalaxy.eu/root?tool_id=interactive_tool_wallace">open the tool</a> and click on execute</li>
@@ -845,7 +846,7 @@ Sentry.init({
 <p>We want to work on the data from the US, we will select the occurrences with the 1st option</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-select-interesting-occurrences"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Select interesting occurrences</div>
+  <div class="box-title hands-on-title" id="hands-on-select-interesting-occurrences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Select interesting occurrences</div>
   <ol>
     <li>Go to <strong>2 Process Occ</strong></li>
     <li>In <strong>Process Occurrence Data</strong>
@@ -870,7 +871,7 @@ Sentry.init({
 <p>This module provides a raster with environmental variables from online sources. The raster is composed of environmental information. Each layer of the raster contains a climatic variable: starting from BIO1 = Annual mean temperature, to BIO19 = Precipitation of Coldest Quarter.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-obtain-environmental-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Obtain Environmental Data</div>
+  <div class="box-title hands-on-title" id="hands-on-obtain-environmental-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Obtain Environmental Data</div>
   <ol>
     <li>Go to <strong>3 Env Data</strong></li>
     <li>In <strong>Obtain Environmental Data</strong>
@@ -879,7 +880,7 @@ Sentry.init({
           <p><em>“Modules Available”</em>: <code class="language-plaintext highlighter-rouge">WorldClim Bioclims</code></p>
 
           <blockquote class="comment">
-            <div class="box-title comment-title" id="comment-using-your-own-raster"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Using your own raster</div>
+            <div class="box-title comment-title" id="comment-using-your-own-raster"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Using your own raster</div>
             <p>If you prefer to load your own raster:</p>
             <ol>
               <li>Import it into Galaxy in the GeoTIFF format</li>
@@ -928,7 +929,7 @@ Sentry.init({
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-obtain-environmental-data-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Obtain Environmental Data</div>
+  <div class="box-title hands-on-title" id="hands-on-obtain-environmental-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Obtain Environmental Data</div>
   <ol>
     <li>Go to <strong>4 Process Envs</strong></li>
     <li>In <strong>Process Environmental Data</strong>
@@ -983,7 +984,7 @@ Sentry.init({
 <p>For both of these techniques the number of occurrences into each bin may vary.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-partition-occurrence-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Partition Occurrence Data</div>
+  <div class="box-title hands-on-title" id="hands-on-partition-occurrence-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Partition Occurrence Data</div>
   <ol>
     <li>Go to <strong>5 Partition Occs</strong></li>
     <li>In <strong>Partition Occurrence Data</strong>
@@ -1011,7 +1012,7 @@ Sentry.init({
 <p>To evaluate these models, Wallace computes the performance on a hold-out dataset (data not used for training) and provide evaluation metrics as the AUC (Area Under the Curve) mean. As a rule of thumb, an AUC of 0.75 and above is considered good, and closer to 1 is better.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-build-and-evaluate-the-niche-model"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Build and evaluate the niche model</div>
+  <div class="box-title hands-on-title" id="hands-on-build-and-evaluate-the-niche-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Build and evaluate the niche model</div>
   <ol>
     <li>Go to <strong>6 Model</strong></li>
     <li>In <strong>Build and Evaluate Niche Model</strong>
@@ -1034,7 +1035,7 @@ Sentry.init({
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-model-results"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Visualize Model Results</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-model-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Model Results</div>
   <ol>
     <li>Go to <strong>7 Visualize</strong></li>
     <li>In <strong>Visualize Model Results</strong>
@@ -1055,7 +1056,7 @@ Sentry.init({
 <p>To visualize the suitability on the map, we can use the map prediction module.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-model-results-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Visualize Model Results</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-model-results-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Model Results</div>
   <ol>
     <li>In <strong>Visualize Model Results</strong>
       <ul>
@@ -1080,7 +1081,7 @@ Sentry.init({
 <p>Wallace can use the trained model to predict possible species distributions in a different area, outside of the sampled one. Here, we will try it for the Canada.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-model-results-2"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Visualize Model Results</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-model-results-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Model Results</div>
   <ol>
     <li>Go to <strong>8 Project</strong></li>
     <li>In <strong>Project Model</strong>
@@ -1108,7 +1109,7 @@ Sentry.init({
 <p>We would like to predict the presence of Chrysemys Picta in Canada in 2050, given the model <a href="http://www.cesm.ucar.edu/models/ccsm4.0/">CCSM4</a>, a US model based on earth circulation, and a RCP value of 2.6 <!--(**TODO: what does that represent?**)--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-model-results-with-a-2-6-rcp"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Visualize Model Results with a 2.6 RCP</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-model-results-with-a-2-6-rcp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Model Results with a 2.6 RCP</div>
   <ol>
     <li>In <strong>Project Model</strong>
       <ul>
@@ -1128,7 +1129,7 @@ Sentry.init({
 <p>We would like now to compare the prediction for RCP value of 8.5 <!--(**TODO: what does that represent?**)-->.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-model-results-with-a-8-5-rcp"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Visualize Model Results with a 8.5 RCP</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-model-results-with-a-8-5-rcp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Model Results with a 8.5 RCP</div>
   <ol>
     <li>In <strong>Project Model</strong>
       <ul>
@@ -1155,7 +1156,7 @@ Sentry.init({
 <p>Following this tutorial, we have been able here to load a dataset of occurrences used in the shiny app Wallace and model the repartition of <em>Chrysemys picta</em> (Painted turtle) with the Species Distribution Modeling (SDM) method. It allowed us to visualize it’s ecological niche and how climate change can influence it’s future repartition on North America. The project saved can help for future similar studies.</p>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-some-useful-references"><button class="gtn-boxify-button details" type="button" aria-controls="details-some-useful-references" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Some useful references<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-some-useful-references"><button class="gtn-boxify-button details" type="button" aria-controls="details-some-useful-references" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Some useful references<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <ul>
     <li>Predicting species distributions for conservation decisions (<span class="citation"><a href="#guisan2013">Guisan <i>et al.</i> 2013</a></span>).</li>
@@ -1344,19 +1345,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00135">https://gxy.io/GTN:T00135</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00135">https://gxy.io/GTN:T00135</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

@@ -138,6 +138,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/"
         }
       ],
+      "short_id": "T00273",
       "url": "/topics/synthetic-biology/tutorials/basic_assembly_analysis/tutorial.html",
       "topic_name": "synthetic-biology",
       "tutorial_name": "basic_assembly_analysis",
@@ -334,6 +335,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/"
         }
       ],
+      "short_id": "T00274",
       "url": "/topics/synthetic-biology/tutorials/pathway_analysis/tutorial.html",
       "topic_name": "synthetic-biology",
       "tutorial_name": "pathway_analysis",
@@ -539,6 +541,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/jfaulon/"
         }
       ],
+      "short_id": "T00275",
       "url": "/topics/synthetic-biology/tutorials/retrosynthesis_analysis/tutorial.html",
       "topic_name": "synthetic-biology",
       "tutorial_name": "retrosynthesis_analysis",

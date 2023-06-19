@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,17 +32,25 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/teaching/tutorials/learner_participation_engagement/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Training techniques to enhance learner participation and engagement">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2022-11-28 09:55:50 +0000">
+<meta name="DC.date" content="2023-06-14 14:07:25 +0000">
 <meta name="DC.creator" content="Bérénice Batut">
 <meta name="DC.creator" content="Fotis E. Psomopoulos">
 <meta name="DC.creator" content="Allegra Via">
@@ -58,7 +66,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Training techniques to enhance learner participation and ...">
         <meta property="og:description" content="Galaxy is a great solution to train the bioinformatics co...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -87,7 +95,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2022-11-28 09:55:50 +0000",
+  "dateModified": "2023-06-14 14:07:25 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Training techniques to enhance learner participation and engagement",
   "interactivityType": "mixed",
@@ -307,7 +315,7 @@ Sentry.init({
   "mentions": [
 
   ],
-  "abstract": "# Introduction"
+  "abstract": "<!-- GTN:IGNORE:002 -->"
 }
         </script>
         
@@ -382,7 +390,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/teaching/tutorials/learner_participation_engagement/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/teaching/tutorials/learner_participation_engagement/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -429,13 +437,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/teaching/tutorials/learner_participation_engagement/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/teaching/tutorials/learner_participation_engagement/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/teaching/tutorials/learner_participation_engagement/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/teaching/tutorials/learner_participation_engagement/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/teaching/tutorials/learner_participation_engagement/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/teaching/tutorials/learner_participation_engagement/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -448,7 +456,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -485,14 +493,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-teaching">
     <h1 data-toc-skip>Training techniques to enhance learner participation and engagement</h1>
@@ -508,7 +509,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/fpsom?s=27" alt="Avatar">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/allegravia/" class="contributor-badge contributor-allegravia"><img src="https://avatars.githubusercontent.com/allegravia?s=27" alt="Avatar">Allegra Via</a><a href="/training-material/hall-of-fame/ppalagi/" class="contributor-badge contributor-ppalagi"><img src="https://avatars.githubusercontent.com/ppalagi?s=27" alt="Avatar">Patricia Palagi</a><a href="/training-material/hall-of-fame/elixir-goblet-ttt/" class="contributor-badge contributor-elixir-goblet-ttt"><img src="https://avatars.githubusercontent.com/elixir-goblet-ttt?s=27" alt="Avatar">ELIXIR Goblet Train the Trainers</a>
+			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/fpsom?s=36" alt="Avatar">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/allegravia/" class="contributor-badge contributor-allegravia"><img src="https://avatars.githubusercontent.com/allegravia?s=36" alt="Avatar">Allegra Via</a><a href="/training-material/hall-of-fame/ppalagi/" class="contributor-badge contributor-ppalagi"><img src="https://avatars.githubusercontent.com/ppalagi?s=36" alt="Avatar">Patricia Palagi</a><a href="/training-material/hall-of-fame/elixir-goblet-ttt/" class="contributor-badge contributor-elixir-goblet-ttt"><img src="https://avatars.githubusercontent.com/elixir-goblet-ttt?s=36" alt="Avatar">ELIXIR Goblet Train the Trainers</a>
 		</td>
 	</tr>
 	
@@ -693,7 +694,7 @@ Sentry.init({
 
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Nov 28, 2022 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jun 14, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             
@@ -701,7 +702,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00280">https://gxy.io/GTN:T00280</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00280">https://gxy.io/GTN:T00280</a> </div>
         
     </blockquote>
     </section>
@@ -716,12 +717,14 @@ Sentry.init({
                  
 
                 <section aria-label="Tutorial Content" id="tutorial-content">
-                <h1 id="introduction">Introduction</h1>
+                <!-- GTN:IGNORE:002 -->
+
+<h1 id="introduction">Introduction</h1>
 
 <p>Effective training</p>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-resources-reading-recommendation"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Resources / Reading recommendation</div>
+  <div class="box-title comment-title" id="comment-resources-reading-recommendation"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Resources / Reading recommendation</div>
 
   <p>This tutorial is significantly based on the 3rd session of ELIXIR Train the Trainer curriculum, but also:</p>
   <ul>
@@ -760,15 +763,17 @@ Sentry.init({
 
 <h1 id="effective-training--good-trainer">Effective training &amp; good trainer</h1>
 
-<!-- 
-> <div class="box-title hands-on-title" id="hands-on-what-makes-training-effective-and-a-good-trainer-10-min-discussion-in-groups-of-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: What makes training effective and a good trainer? (10 min - Discussion in groups of 2)</div>
->
-> - Recall concrete examples of your past training experience
-> - Share with your colleague
-> - List 3 keywords for effective training
-> - List 3 keywords for a good trainer
->
-{: .hands_on} -->
+<blockquote class="notranslate hands_on">
+  <div class="box-title hands-on-title" id="hands-on-what-makes-training-effective-and-a-good-trainer-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-10-min-discussion-in-groups-of-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: What makes training effective and a good trainer? - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 10 min - Discussion in groups of 2</div>
+
+  <ul>
+    <li>Recall concrete examples of your past training experience</li>
+    <li>Share with your colleague</li>
+    <li>List 3 keywords for effective training</li>
+    <li>List 3 keywords for a good trainer</li>
+  </ul>
+
+</blockquote>
 
 <div>
   <blockquote class="question">
@@ -812,29 +817,70 @@ Sentry.init({
   <li>In which area(s) do you feel you are ok?</li>
 </ul>
 
-<!-- 
-> <div class="box-title hands-on-title" id="hands-on-reflect-on-your-skills-as-a-trainer-5-min-silent-reflection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reflect on your skills as a trainer? (5 min - Silent reflection)</div>
->
-> - Look at the GOBLET Skill Matrix
-> - Reflect on which areas do you need to develop in
-> - Write in the shared notes which skills you need to improve in each area of the GOBLET matrix
->
-{: .hands_on}-->
+<blockquote class="notranslate hands_on">
+  <div class="box-title hands-on-title" id="hands-on-reflect-on-your-skills-as-a-trainer-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-5-min-silent-reflection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reflect on your skills as a trainer? - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 5 min - Silent reflection</div>
 
-<div>
-  <blockquote class="question">
-    <div class="box-title" aria-label="quiz box: Reflect on your skills as a trainer"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: Reflect on your skills as a trainer</div>
-    <p>Check your knowledge with a quiz!</p>
+  <ul>
+    <li>Look at the GOBLET Skill Matrix</li>
+    <li>Reflect on the following questions
+      <ul>
+        <li>Which areas do you need to develop in?
+          <ul>
+            <li>Communication</li>
+            <li>Planning &amp; management</li>
+            <li>Trainee engagement</li>
+            <li>Expertise &amp; knowledge</li>
+          </ul>
+        </li>
+        <li>Which skills do you need to improve in <strong>communication</strong>?
+          <ul>
+            <li>Written communication skills</li>
+            <li>Presentation skills</li>
+            <li>Verbal communication skills</li>
+          </ul>
+        </li>
+        <li>Which skills do you need to improve in <strong>planning &amp; management</strong>?
+          <ul>
+            <li>Session planning</li>
+            <li>Curriculum planning</li>
+            <li>Event management</li>
+          </ul>
+        </li>
+        <li>Which skills do you need to improve in <strong>trainee engagement</strong>?
+          <ul>
+            <li>Flexibility in delivery</li>
+            <li>Empathy with trainees</li>
+            <li>Understanding &amp; knowledge of trainees</li>
+          </ul>
+        </li>
+        <li>Which skills do you need to improve in <strong>expertise &amp; knowledge</strong>?
+          <ul>
+            <li>Subject area knowledge</li>
+            <li>User application awareness</li>
+            <li>Knowledge of training methodology</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 
-    <ul>
-      <li><a href="/training-material/quiz/quiz.html?mode=self&amp;quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/trainer_skills.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.</li>
-      <li><a href="/training-material/quiz/quiz.html?mode=teacher&amp;quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/trainer_skills.yaml">Classroom Mode</a> - do the quiz synchronously with a classroom of students.</li>
-    </ul>
-  </blockquote>
+</blockquote>
+
+<!--
+
+
+<div markdown="1">
+> <div class="box-title" aria-label="quiz box: Reflect on your skills as a trainer"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: Reflect on your skills as a trainer</div>
+> Check your knowledge with a quiz!
+>
+>  - [Self Study Mode](/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/trainer_skills.yaml) - do the quiz at your own pace, to check your understanding.
+>  - [Classroom Mode](/training-material/quiz/quiz.html?mode=teacher&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/trainer_skills.yaml) - do the quiz synchronously with a classroom of students.
+{: .question}
 </div>
+-->
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-goblet"><button class="gtn-boxify-button details" type="button" aria-controls="details-goblet" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: GOBLET<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-goblet"><button class="gtn-boxify-button details" type="button" aria-controls="details-goblet" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: GOBLET<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p><a href="https://www.mygoblet.org/">Global Organisation for <em>Bioinformatics</em> Learning, Education &amp; Training (GOBLET)</a> aims to coordinate world-wide bioinformatics training activities:</p>
   <ul>
@@ -853,25 +899,27 @@ Sentry.init({
 
 <p>In this video, Eric Mazur discusses some of these teaching practices and a <strong>paradigm change: from the traditional lecture to active learning-based approaches</strong>. Can you recognise the main features of this change of paradigm?</p>
 
-<!-- 
-> <div class="box-title hands-on-title" id="hands-on-reflect-on-mazur-s-interview-5-min-silent-reflection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reflect on Mazur's interview (5 min - Silent reflection)</div>
->
-> - Write something that really impressed you in Mazur’s interview
->
-{: .hands_on}
--->
+<blockquote class="notranslate hands_on">
+  <div class="box-title hands-on-title" id="hands-on-reflect-on-mazur-s-interview-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-5-min-silent-reflection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reflect on Mazur's interview - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 5 min - Silent reflection</div>
 
-<div>
-  <blockquote class="question">
-    <div class="box-title" aria-label="quiz box: Reflect on Mazur's interview"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: Reflect on Mazur's interview</div>
-    <p>Check your knowledge with a quiz!</p>
+  <ul>
+    <li>Write something that really impressed you in Mazur’s interview</li>
+  </ul>
 
-    <ul>
-      <li><a href="/training-material/quiz/quiz.html?mode=self&amp;quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/mazur_interview.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.</li>
-      <li><a href="/training-material/quiz/quiz.html?mode=teacher&amp;quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/mazur_interview.yaml">Classroom Mode</a> - do the quiz synchronously with a classroom of students.</li>
-    </ul>
-  </blockquote>
+</blockquote>
+
+<!--
+
+
+<div markdown="1">
+> <div class="box-title" aria-label="quiz box: Reflect on Mazur's interview"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: Reflect on Mazur's interview</div>
+> Check your knowledge with a quiz!
+>
+>  - [Self Study Mode](/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/mazur_interview.yaml) - do the quiz at your own pace, to check your understanding.
+>  - [Classroom Mode](/training-material/quiz/quiz.html?mode=teacher&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/mazur_interview.yaml) - do the quiz synchronously with a classroom of students.
+{: .question}
 </div>
+-->
 
 <p>From the Eric Mazur’s interview but also as Mitchell Waldrop pointed out in <span class="citation"><a href="#waldrop2015we">Waldrop 2015</a></span>, learners who <strong>actively interact with the material, the teacher, and other learners</strong>:</p>
 <ul>
@@ -933,7 +981,7 @@ Sentry.init({
   <li>is there any “ideal” teaching technique I should absolutely learn?</li>
 </ul>
 
-<p><strong>There is not “the” ideal teaching technique nor the “most effective” teaching technique.</strong></p>
+<p>There is <strong>not “the” ideal teaching technique nor the “most effective” teaching technique.</strong></p>
 
 <p>You may remember from the Nichols’ steps of curriculum design, that it is <strong>essential that you align learning experiences to the learning outcomes</strong> of your course. In other words, for each LO, you should identify the learning experience(s) that will best support the achievement of the LO.</p>
 
@@ -976,7 +1024,7 @@ Sentry.init({
       <td>Flipped class</td>
       <td>Apply, Analyse</td>
       <td>Teach learners how to formulate questions, help learners to memorise new information &amp; concepts, or analyse &amp; understand course materials</td>
-      <td><em>summarise</em> the content material, *ask* appropriate questions</td>
+      <td><em>summarise</em> the content material, <em>ask</em> appropriate questions</td>
     </tr>
     <tr>
       <td>Peer instruction</td>
@@ -1006,7 +1054,7 @@ Sentry.init({
 </table>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-learning-experience-vs-teaching-practice"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Learning experience vs Teaching practice</div>
+  <div class="box-title comment-title" id="comment-learning-experience-vs-teaching-practice"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Learning experience vs Teaching practice</div>
 
   <p>In the table, Learning experience (from the learner point of view) is the Teaching practice (from the teacher point of view).</p>
 
@@ -1021,7 +1069,7 @@ Sentry.init({
 <p>Peer instruction is a 1-to-1 instruction done in a scalable way by <strong>interleaving formative assessment with learner discussion</strong>.</p>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-peer-to-peer-or-peer-learning-what-is-it-2-min-video"><button class="gtn-boxify-button details" type="button" aria-controls="details-peer-to-peer-or-peer-learning-what-is-it-2-min-video" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Peer-to-peer or peer-learning: what is it? (2-min video)<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-peer-to-peer-or-peer-learning-what-is-it-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-2-min-video"><button class="gtn-boxify-button details" type="button" aria-controls="details-peer-to-peer-or-peer-learning-what-is-it-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-2-min-video" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Peer-to-peer or peer-learning: what is it? - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 2-min video<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/MYa4hgcMRNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
@@ -1043,14 +1091,14 @@ Sentry.init({
 <p>You may also be creative and implement this technique in your own way.</p>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-concept-tests-at-avanti-s-learning-centre-in-kanpur-2-min-video"><button class="gtn-boxify-button details" type="button" aria-controls="details-concept-tests-at-avanti-s-learning-centre-in-kanpur-2-min-video" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Concept Tests at Avanti's Learning Centre in Kanpur (2-min video)<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-concept-tests-at-avanti-s-learning-centre-in-kanpur-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-2-min-video"><button class="gtn-boxify-button details" type="button" aria-controls="details-concept-tests-at-avanti-s-learning-centre-in-kanpur-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-2-min-video" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Concept Tests at Avanti's Learning Centre in Kanpur - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 2-min video<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/2LbuoxAy56o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 </blockquote>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-does-that-work"><button class="gtn-boxify-button details" type="button" aria-controls="details-does-that-work" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Does that work?<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-does-that-work"><button class="gtn-boxify-button details" type="button" aria-controls="details-does-that-work" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Does that work?<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>It has been studied extensively in a wide variety of contexts, including programming (references??). Learners value peer instruction even at first contact.</p>
 
@@ -1081,7 +1129,7 @@ Sentry.init({
     <p><strong>Brief question-and-answer sessions</strong>: a classic to distribute attention</p>
 
     <blockquote class="details">
-      <div class="box-title details-title" id="details-recommendation-for-brief-question-and-answer-sessions"><button class="gtn-boxify-button details" type="button" aria-controls="details-recommendation-for-brief-question-and-answer-sessions" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Recommendation for brief question-and-answer sessions<span class="fold-unfold fa fa-minus-square"></span></button></div>
+      <div class="box-title details-title" id="details-recommendation-for-brief-question-and-answer-sessions"><button class="gtn-boxify-button details" type="button" aria-controls="details-recommendation-for-brief-question-and-answer-sessions" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Recommendation for brief question-and-answer sessions<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <p>When doing, the teachers should <strong>make sure that everybody has a voice and that attention is fairly distributed</strong></p>
 
@@ -1101,7 +1149,7 @@ Sentry.init({
     <p><strong>Think, pair, share</strong>: a lightweight technique that helps people improve ideas through discussion with their peers</p>
 
     <blockquote class="details">
-      <div class="box-title details-title" id="details-think-pair-share"><button class="gtn-boxify-button details" type="button" aria-controls="details-think-pair-share" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Think, pair, share<span class="fold-unfold fa fa-minus-square"></span></button></div>
+      <div class="box-title details-title" id="details-think-pair-share"><button class="gtn-boxify-button details" type="button" aria-controls="details-think-pair-share" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Think, pair, share<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <p>In this form of peer instruction, Teacher proposes an activity, a question, a problem and then follow 3 steps&gt;</p>
 
@@ -1126,7 +1174,7 @@ It forces people to externalize their cognition and gives a chance to spot and r
     <p><strong>Take notes together / shared notes</strong></p>
 
     <blockquote class="details">
-      <div class="box-title details-title" id="details-shared-notes"><button class="gtn-boxify-button details" type="button" aria-controls="details-shared-notes" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Shared notes<span class="fold-unfold fa fa-minus-square"></span></button></div>
+      <div class="box-title details-title" id="details-shared-notes"><button class="gtn-boxify-button details" type="button" aria-controls="details-shared-notes" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Shared notes<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <p>This form of real-time elaboration forces to organize and reflect on material as it’s coming in, which in turn increases the likelihood of transfer it to long-term memory</p>
 
@@ -1146,7 +1194,7 @@ It forces people to externalize their cognition and gives a chance to spot and r
     <p><strong>Pair programming</strong></p>
 
     <blockquote class="details">
-      <div class="box-title details-title" id="details-pair-programming"><button class="gtn-boxify-button details" type="button" aria-controls="details-pair-programming" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Pair programming<span class="fold-unfold fa fa-minus-square"></span></button></div>
+      <div class="box-title details-title" id="details-pair-programming"><button class="gtn-boxify-button details" type="button" aria-controls="details-pair-programming" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Pair programming<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <iframe width="560" height="315" src="https://www.youtube.com/embed/vgkahOzFH2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
@@ -1174,7 +1222,7 @@ The two switch roles several times per hour. This practice is found effective in
     <p>Galaxy is a great tool for that. That is why tutorials from the GTN are developed around that ideas.</p>
 
     <blockquote class="details">
-      <div class="box-title details-title" id="details-recommendation-for-brief-question-and-answer-sessions-1"><button class="gtn-boxify-button details" type="button" aria-controls="details-recommendation-for-brief-question-and-answer-sessions-1" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Recommendation for brief question-and-answer sessions<span class="fold-unfold fa fa-minus-square"></span></button></div>
+      <div class="box-title details-title" id="details-recommendation-for-brief-question-and-answer-sessions-1"><button class="gtn-boxify-button details" type="button" aria-controls="details-recommendation-for-brief-question-and-answer-sessions-1" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Recommendation for brief question-and-answer sessions<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <p>During training session, teachers could use sticky notes as status flags. They Give each learner two sticky notes of different colors, such as orange and green.</p>
 
@@ -1199,17 +1247,38 @@ And teacher can quickly see from the front of the room what state the class is i
   </li>
 </ul>
 
-<div>
-  <blockquote class="question">
-    <div class="box-title" aria-label="quiz box: Which strategies for active learning training did you use?"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: Which strategies for active learning training did you use?</div>
-    <p>Check your knowledge with a quiz!</p>
+<!--
 
-    <ul>
-      <li><a href="/training-material/quiz/quiz.html?mode=self&amp;quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.</li>
-      <li><a href="/training-material/quiz/quiz.html?mode=teacher&amp;quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies.yaml">Classroom Mode</a> - do the quiz synchronously with a classroom of students.</li>
-    </ul>
-  </blockquote>
+
+<div markdown="1">
+> <div class="box-title" aria-label="quiz box: Which strategies for active learning training did you use?"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: Which strategies for active learning training did you use?</div>
+> Check your knowledge with a quiz!
+>
+>  - [Self Study Mode](/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies.yaml) - do the quiz at your own pace, to check your understanding.
+>  - [Classroom Mode](/training-material/quiz/quiz.html?mode=teacher&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies.yaml) - do the quiz synchronously with a classroom of students.
+{: .question}
 </div>
+-->
+
+<blockquote class="notranslate hands_on">
+  <div class="box-title hands-on-title" id="hands-on-which-strategies-for-active-learning-training-did-you-use-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-5-min-silent-reflection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Which strategies for active learning training did you use? - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 5 min - Silent reflection</div>
+
+  <p>Which strategies for active learning training did you use? (Add +)</p>
+  <ul>
+    <li>Peer instruction</li>
+    <li>Flipped-classroom</li>
+    <li>Brief question-and-answer sessions</li>
+    <li>Think, pair, share</li>
+    <li>Take notes together / shared notes</li>
+    <li>Work in groups</li>
+    <li>Pair programming</li>
+    <li>Discussions</li>
+    <li>Hands-on activities</li>
+    <li>Have learners make predictions / presentations</li>
+    <li>Build an artefact (e.g. concept map)</li>
+  </ul>
+
+</blockquote>
 
 <h1 id="practices-and-behaviors-to-improve-delivery-and-learning">Practices and behaviors to improve delivery and learning</h1>
 
@@ -1269,7 +1338,7 @@ And teacher can quickly see from the front of the room what state the class is i
     </ul>
 
     <blockquote class="tip">
-      <div class="box-title tip-title" id="tip-check-our-dedicated-tutorials-to-set-up-galaxy-for-teaching"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-check-our-dedicated-tutorials-to-set-up-galaxy-for-teaching" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Check our dedicated tutorials to set up Galaxy for teaching<span class="fold-unfold fa fa-minus-square"></span></button></div>
+      <div class="box-title tip-title" id="tip-check-our-dedicated-tutorials-to-set-up-galaxy-for-teaching"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-check-our-dedicated-tutorials-to-set-up-galaxy-for-teaching" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Check our dedicated tutorials to set up Galaxy for teaching<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <ul>
         <li><a href="/training-material/topics/teaching/tutorials/organize-workshop/tutorial.html">Organizing a workshop</a></li>
@@ -1298,7 +1367,7 @@ And teacher can quickly see from the front of the room what state the class is i
     <p><strong>Never teach alone. Teach together</strong>. Whenever possible: With two or more trainers in the classroom, the class can be observed from different angles, it is easier to detect learners who are not comfortable or struggling or lagging behind. It is possible to provide one-to-one support without stopping the lesson flow. It is also important that trainers teaching together provide feedback to each other.</p>
 
     <blockquote class="details">
-      <div class="box-title details-title" id="details-different-models-to-teach-together-or-co-teaching-https-teachtogether-tech-en-index-html-g-co-teaching"><button class="gtn-boxify-button details" type="button" aria-controls="details-different-models-to-teach-together-or-co-teaching-https-teachtogether-tech-en-index-html-g-co-teaching" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Different models to teach together or **[co-teaching](https://teachtogether.tech/en/index.html#g:co-teaching)**<span class="fold-unfold fa fa-minus-square"></span></button></div>
+      <div class="box-title details-title" id="details-different-models-to-teach-together-or-co-teaching"><button class="gtn-boxify-button details" type="button" aria-controls="details-different-models-to-teach-together-or-co-teaching" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Different models to teach together or co-teaching<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <ul>
         <li><strong>Team teaching</strong>: Both teachers deliver a single stream of content in tandem, taking turns like musicians taking solos.</li>
@@ -1312,7 +1381,7 @@ And teacher can quickly see from the front of the room what state the class is i
     </blockquote>
 
     <blockquote class="tip">
-      <div class="box-title tip-title" id="tip-recommendations-for-co-teaching"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-recommendations-for-co-teaching" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Recommendations for co-teaching<span class="fold-unfold fa fa-minus-square"></span></button></div>
+      <div class="box-title tip-title" id="tip-recommendations-for-co-teaching"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-recommendations-for-co-teaching" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Recommendations for co-teaching<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <p>If you and a partner are co-teaching:</p>
       <ul>
@@ -1339,18 +1408,146 @@ And teacher can quickly see from the front of the room what state the class is i
 
 <h1 id="conclusion">Conclusion</h1>
 
-<div>
-  <blockquote class="question">
-    <div class="box-title" aria-label="quiz box: What is the highest Bloom's level supported by each teaching technique?"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: What is the highest Bloom's level supported by each teaching technique?</div>
-    <p>Check your knowledge with a quiz!</p>
+<!--
 
-    <ul>
-      <li><a href="/training-material/quiz/quiz.html?mode=self&amp;quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies_bloom_levels.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.</li>
-      <li><a href="/training-material/quiz/quiz.html?mode=teacher&amp;quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies_bloom_levels.yaml">Classroom Mode</a> - do the quiz synchronously with a classroom of students.</li>
-    </ul>
-  </blockquote>
+
+<div markdown="1">
+> <div class="box-title" aria-label="quiz box: What is the highest Bloom's level supported by each teaching technique?"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: What is the highest Bloom's level supported by each teaching technique?</div>
+> Check your knowledge with a quiz!
+>
+>  - [Self Study Mode](/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies_bloom_levels.yaml) - do the quiz at your own pace, to check your understanding.
+>  - [Classroom Mode](/training-material/quiz/quiz.html?mode=teacher&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies_bloom_levels.yaml) - do the quiz synchronously with a classroom of students.
+{: .question}
 </div>
+-->
 
+<blockquote class="question">
+  <div class="box-title question-title" id="question-what-is-the-highest-bloom-s-level-supported-by-each-teaching-technique-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-5-min-silent-reflection"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: What is the highest Bloom’s level supported by each teaching technique? - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 5 min - Silent reflection</div>
+
+  <ol>
+    <li>What is the highest Bloom’s level supported by <strong>Peer instruction</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Peer instruction</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Flipped-classroom</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Brief question-and-answer sessions</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Think, pair, share</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Take notes together / shared notes</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Work in groups</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Pair programming</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Discussions</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Hands-on activities</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Have learners make predictions / presentations</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+    <li>What is the highest Bloom’s level supported by <strong>Build an artefact (e.g. concept map)</strong>?
+      <ul>
+        <li>Remember</li>
+        <li>Understand</li>
+        <li>Apply</li>
+        <li>Analyze</li>
+        <li>Evaluate</li>
+        <li>Create</li>
+      </ul>
+    </li>
+  </ol>
+
+</blockquote>
 
                 </section>
 
@@ -1386,7 +1583,7 @@ And teacher can quickly see from the front of the room what state the class is i
                 <p>Check your understanding with these quizzes</p>
                     
                     <h2>Which strategies for active learning training did you use?</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1397,7 +1594,7 @@ And teacher can quickly see from the front of the room what state the class is i
                     </ul>
                     
                     <h2>What is the highest Bloom's level supported by each teaching technique?</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/active_learning_strategies_bloom_levels.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1408,7 +1605,7 @@ And teacher can quickly see from the front of the room what state the class is i
                     </ul>
                     
                     <h2>What makes training effective and a good trainer?</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/effective_training_trainer.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1419,7 +1616,7 @@ And teacher can quickly see from the front of the room what state the class is i
                     </ul>
                     
                     <h2>Reflect on Mazur's interview</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/mazur_interview.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1430,7 +1627,7 @@ And teacher can quickly see from the front of the room what state the class is i
                     </ul>
                     
                     <h2>Reflect on your skills as a trainer</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/teaching/tutorials/learner_participation_engagement/quiz/trainer_skills.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1603,19 +1800,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00280">https://gxy.io/GTN:T00280</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00280">https://gxy.io/GTN:T00280</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

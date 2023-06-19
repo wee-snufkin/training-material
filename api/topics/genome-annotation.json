@@ -136,6 +136,7 @@
         }
       ],
       "subtopic": "prokaryote",
+      "short_id": "T00168",
       "url": "/topics/genome-annotation/tutorials/annotation-with-prokka/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "annotation-with-prokka",
@@ -458,6 +459,7 @@
       "abbreviations": {
         "OGS": "Official Gene Set"
       },
+      "short_id": "T00169",
       "url": "/topics/genome-annotation/tutorials/apollo/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "apollo",
@@ -683,6 +685,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/estebanpw/"
         }
       ],
+      "short_id": "T00176",
       "url": "/topics/genome-annotation/tutorials/hpc-for-lsgc/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "hpc-for-lsgc",
@@ -932,6 +935,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 1,
+      "short_id": "T00178",
       "url": "/topics/genome-annotation/tutorials/repeatmasker/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "repeatmasker",
@@ -1147,6 +1151,7 @@
         }
       ],
       "subtopic": "intro",
+      "short_id": "S00069",
       "url": "/topics/genome-annotation/tutorials/introduction/slides.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "introduction",
@@ -1254,6 +1259,7 @@
         }
       ],
       "subtopic": "prokaryote",
+      "short_id": "T00175",
       "url": "/topics/genome-annotation/tutorials/genome-annotation/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "genome-annotation",
@@ -1375,6 +1381,7 @@
         "ORF": "Open Reading Frame"
       },
       "priority": 2,
+      "short_id": "T00174",
       "url": "/topics/genome-annotation/tutorials/gene-centric/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "gene-centric",
@@ -1619,6 +1626,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 2,
+      "short_id": "T00172",
       "url": "/topics/genome-annotation/tutorials/funannotate/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "funannotate",
@@ -1990,6 +1998,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 3,
+      "short_id": "T00167",
       "url": "/topics/genome-annotation/tutorials/annotation-with-maker-short/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "annotation-with-maker-short",
@@ -2185,6 +2194,7 @@
       ],
       "subtopic": "prokaryote",
       "priority": 4,
+      "short_id": "T00179",
       "url": "/topics/genome-annotation/tutorials/tnseq/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "tnseq",
@@ -2386,6 +2396,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 4,
+      "short_id": "T00166",
       "url": "/topics/genome-annotation/tutorials/annotation-with-maker/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "annotation-with-maker",
@@ -2590,6 +2601,7 @@
       },
       "subtopic": "eukaryote",
       "priority": 6,
+      "short_id": "T00173",
       "url": "/topics/genome-annotation/tutorials/functional/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "functional",
@@ -2834,6 +2846,7 @@
       "abbreviations": {
         "OGS": "Official Gene Set"
       },
+      "short_id": "T00170",
       "url": "/topics/genome-annotation/tutorials/apollo-euk/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "apollo-euk",
@@ -2975,6 +2988,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 7,
+      "short_id": "T00177",
       "url": "/topics/genome-annotation/tutorials/lncrna/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "lncrna",
@@ -3191,6 +3205,7 @@
       },
       "subtopic": "eukaryote",
       "priority": 8,
+      "short_id": "T00171",
       "url": "/topics/genome-annotation/tutorials/crispr-screen/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "crispr-screen",

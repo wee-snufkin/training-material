@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/admin/tutorials/sentry/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -54,7 +62,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Monitoring Galaxy and Pulsar with Sentry">
         <meta property="og:description" content="Resources related to configuration and maintenance of Gal...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -357,7 +365,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/admin/tutorials/sentry/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/sentry/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -404,13 +412,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/sentry/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/sentry/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/sentry/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/sentry/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/sentry/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/sentry/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -423,7 +431,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -460,14 +468,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/admins'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-admin">
     <h1 data-toc-skip>Monitoring Galaxy and Pulsar with Sentry</h1>
@@ -483,7 +484,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/mvdbeek/" class="contributor-badge contributor-mvdbeek"><img src="https://avatars.githubusercontent.com/mvdbeek?s=27" alt="Avatar">Marius van den Beek</a>
+			<a href="/training-material/hall-of-fame/mvdbeek/" class="contributor-badge contributor-mvdbeek"><img src="https://avatars.githubusercontent.com/mvdbeek?s=36" alt="Avatar">Marius van den Beek</a>
 		</td>
 	</tr>
 	
@@ -495,7 +496,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a></td>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a></td>
 	</tr>
 	
 
@@ -950,7 +951,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00330">https://gxy.io/GTN:T00330</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00330">https://gxy.io/GTN:T00330</a> </div>
         
     </blockquote>
     </section>
@@ -997,7 +998,7 @@ Sentry.init({
 <p>To proceed from here it is expected that:</p>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-requirements-for-running-this-tutorial"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Requirements for Running This Tutorial</div>
+  <div class="box-title comment-title" id="comment-requirements-for-running-this-tutorial"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Requirements for Running This Tutorial</div>
 
   <ol>
     <li>You have set up a working Galaxy instance as described in the <a href="../ansible-galaxy/tutorial.html">ansible-galaxy</a> tutorial.</li>
@@ -1010,7 +1011,7 @@ Sentry.init({
 <p>First we need to add our new Ansible role to <code class="language-plaintext highlighter-rouge">requirements.yml</code>:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-set-up-sentry-with-ansible"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Set up Sentry with Ansible</div>
+  <div class="box-title hands-on-title" id="hands-on-set-up-sentry-with-ansible"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Set up Sentry with Ansible</div>
 
   <ol>
     <li>
@@ -1036,7 +1037,7 @@ Sentry.init({
       <p>Install the roles with:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" data-ref="req-install" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-galaxy <span class="nb">install</span> <span class="nt">-p</span> roles <span class="nt">-r</span> requirements.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1097,7 +1098,7 @@ Sentry.init({
       <p>We will add an associated admin password to the vault, do that now:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-vault edit group_vars/secret.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1213,7 +1214,7 @@ Sentry.init({
       <p>Run the sentry playbook to deploy sentry and the galaxy playbook to update the nginx configuration.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook sentry.yml galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1226,7 +1227,7 @@ Sentry.init({
       <p>We will add the galaxy project dsn to the vault. Edit your <code class="language-plaintext highlighter-rouge">group_vars/secret.yml</code> and add the sentry dsn.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-vault edit group_vars/secret.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1260,7 +1261,7 @@ We will also enable sending performance metrics to Sentry by setting the <code c
   </ol>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+    <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
     <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>    </div>
   </blockquote>
@@ -1273,7 +1274,7 @@ We will also enable sending performance metrics to Sentry by setting the <code c
 Just visit: <a href="https://my.gat.galaxy.training/?path=/error">/error</a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-open-the-galaxy-project-in-sentry"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Open the Galaxy Project in Sentry</div>
+  <div class="box-title hands-on-title" id="hands-on-open-the-galaxy-project-in-sentry"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open the Galaxy Project in Sentry</div>
   <ol>
     <li>Go to your Sentry instance and click on issues. You should see a couple of issues,
 one them should be the “Fake error” exception we generated by visiting https://galaxy.example.org/error.</li>
@@ -1285,7 +1286,7 @@ one them should be the “Fake error” exception we generated by visiting https
 <p>In addition to sending logging errors to Sentry you can also collect failing tool runs in Sentry. For this we will set up the error reporting configuration file and reference it in galaxy.yml. The <code class="language-plaintext highlighter-rouge">user_submission</code> parameter controls whether all reports will be collected in Sentry (when set to <code class="language-plaintext highlighter-rouge">false</code>) or only those that have been reported manually (when set to <code class="language-plaintext highlighter-rouge">true</code>). For testing purposes we’ll also add a tool that will fail running so we can test that submitting tool errors to Sentry works as expected.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-update-galaxy-config-to-send-tool-error-reports"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Update Galaxy config to send tool error reports</div>
+  <div class="box-title hands-on-title" id="hands-on-update-galaxy-config-to-send-tool-error-reports"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Update Galaxy config to send tool error reports</div>
 
   <ol>
     <li>
@@ -1410,7 +1411,7 @@ one them should be the “Fake error” exception we generated by visiting https
       <p>Run the galaxy playbook.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1424,7 +1425,7 @@ one them should be the “Fake error” exception we generated by visiting https
 <p>To generate a tool error, run the job properties testing tool and set the <code class="language-plaintext highlighter-rouge">failbool</code> parameter to true.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-open-the-galaxy-project-in-sentry-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Open the Galaxy Project in Sentry</div>
+  <div class="box-title hands-on-title" id="hands-on-open-the-galaxy-project-in-sentry-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open the Galaxy Project in Sentry</div>
   <ol>
     <li>Go to your Sentry instance and click on issues. You should see an issue for the tool run error.</li>
   </ol>
@@ -1435,14 +1436,14 @@ one them should be the “Fake error” exception we generated by visiting https
 <p>It is also possible to report errors from the Pulsar server. You can either use the Galaxy project we created before in Sentry, or we can create a new project for Pulsar. We recommend creating a separate Pulsar project. Since the Pulsar server runs on a remote VM for this to work you need a valid certificate for the Sentry domain and you cannot use localhost.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-sentry-connection-to-pulsar"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Add Sentry connection to Pulsar</div>
+  <div class="box-title hands-on-title" id="hands-on-add-sentry-connection-to-pulsar"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add Sentry connection to Pulsar</div>
   <ol>
     <li>Create a new dsn by creating a new pulsar project in Sentry.</li>
     <li>
       <p>We will add the project dsn to the vault. Edit your <code class="language-plaintext highlighter-rouge">group_vars/secret.yml</code> and add the sentry dsn.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-vault edit group_vars/secret.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1470,7 +1471,7 @@ one them should be the “Fake error” exception we generated by visiting https
       <p>Run the pulsar playbook.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1633,19 +1634,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00330">https://gxy.io/GTN:T00330</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00330">https://gxy.io/GTN:T00330</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

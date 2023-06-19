@@ -108,6 +108,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "T00135",
       "url": "/topics/ecology/tutorials/species-distribution-modeling/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "species-distribution-modeling",
@@ -256,6 +257,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         }
       ],
+      "short_id": "T00133",
       "url": "/topics/ecology/tutorials/ref-based-rad-seq/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "ref-based-rad-seq",
@@ -478,6 +480,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/brigidagallone/"
         }
       ],
+      "short_id": "T00132",
       "url": "/topics/ecology/tutorials/phylogeny-data-prep/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "phylogeny-data-prep",
@@ -665,6 +668,7 @@
           "erasmusplus"
         ]
       },
+      "short_id": "T00332",
       "url": "/topics/ecology/tutorials/obisindicators/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "obisindicators",
@@ -1550,6 +1554,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/jbmihoub/"
         }
       ],
+      "short_id": "T00125",
       "url": "/topics/ecology/tutorials/PAMPA-toolsuite-tutorial/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "PAMPA-toolsuite-tutorial",
@@ -1863,6 +1868,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/sbenateau/"
         }
       ],
+      "short_id": "T00134",
       "url": "/topics/ecology/tutorials/regionalGAM/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "regionalGAM",
@@ -2125,6 +2131,7 @@
         ],
         "video": false
       },
+      "short_id": "T00127",
       "url": "/topics/ecology/tutorials/champs-blocs/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "champs-blocs",
@@ -2240,6 +2247,7 @@
           "yvanlebras"
         ]
       },
+      "short_id": "T00333",
       "url": "/topics/ecology/tutorials/remote-sensing/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "remote-sensing",
@@ -2452,6 +2460,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         }
       ],
+      "short_id": "T00126",
       "url": "/topics/ecology/tutorials/biodiversity-data-exploration/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "biodiversity-data-exploration",
@@ -2667,6 +2676,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/Quickbeasts51429/"
         }
       ],
+      "short_id": "T00136",
       "url": "/topics/ecology/tutorials/x-array-map-plot/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "x-array-map-plot",
@@ -2834,6 +2844,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/sbenateau/"
         }
       ],
+      "short_id": "T00129",
       "url": "/topics/ecology/tutorials/gbif_cleaning/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "gbif_cleaning",
@@ -2978,6 +2989,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         }
       ],
+      "short_id": "T00130",
       "url": "/topics/ecology/tutorials/genetic-map-rad-seq/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "genetic-map-rad-seq",
@@ -3125,6 +3137,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         }
       ],
+      "short_id": "T00128",
       "url": "/topics/ecology/tutorials/de-novo-rad-seq/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "de-novo-rad-seq",
@@ -3320,6 +3333,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         }
       ],
+      "short_id": "T00124",
       "url": "/topics/ecology/tutorials/Obitools-metabarcoding/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "Obitools-metabarcoding",
@@ -3605,6 +3619,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/annefou/"
         }
       ],
+      "short_id": "T00131",
       "url": "/topics/ecology/tutorials/panoply_ebv/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "panoply_ebv",

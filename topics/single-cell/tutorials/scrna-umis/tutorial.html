@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-umis/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -54,7 +62,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Understanding Barcodes">
         <meta property="og:description" content="Training material and practicals for all kinds of single ...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -276,7 +284,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/single-cell/tutorials/scrna-umis/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/single-cell/tutorials/scrna-umis/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -323,13 +331,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/single-cell/tutorials/scrna-umis/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/single-cell/tutorials/scrna-umis/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/single-cell/tutorials/scrna-umis/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/single-cell/tutorials/scrna-umis/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/single-cell/tutorials/scrna-umis/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/single-cell/tutorials/scrna-umis/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -342,7 +350,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -379,14 +387,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/galaxy-single-cell'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-single-cell">
     <h1 data-toc-skip>Understanding Barcodes</h1>
@@ -396,7 +397,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge contributor-mtekman"><img src="https://avatars.githubusercontent.com/mtekman?s=27" alt="Avatar">Mehmet Tekman</a>
+		Authors: <a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge contributor-mtekman"><img src="https://avatars.githubusercontent.com/mtekman?s=36" alt="Avatar">Mehmet Tekman</a>
 	</div>
 
 </div>
@@ -549,7 +550,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00256">https://gxy.io/GTN:T00256</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00256">https://gxy.io/GTN:T00256</a> </div>
         
     </blockquote>
     </section>
@@ -585,7 +586,7 @@ Sentry.init({
 
 <p>In this case; <em>Read1</em> contains the barcoding information followed by the polyT tail of the messenger RNA, and <em>Read2</em> contains the actual sequence. Here, Read1 is regarded as the ‘forward’ strand and Read2 as the ‘reverse’ strand, though this is more a convention when dealing with paired-end data rather than an indication of the actual strand orientation.</p>
 
-<figure id="figure-1" style="max-width: 90%; margin:auto;"><div style="overflow-x: auto"><object data="../../images/scrna-umis/celseq2_schema.svg" type="image/svg+xml">CEL-Seq2 Scheme.</object></div><small><a href="../../images/scrna-umis/celseq2_schema.svg">Open image in new tab</a></small><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Read1 encapsulates the barcodes, and Read2 the mRNA sequence</figcaption></figure>
+<figure id="figure-1" style="max-width: 90%; margin:auto;"><div style="overflow-x: auto"><object data="../../images/scrna-umis/celseq2_schema.svg" type="image/svg+xml" alt="CEL-Seq2 Scheme. ">CEL-Seq2 Scheme.</object></div><small><a target="_blank" href="../../images/scrna-umis/celseq2_schema.svg">Open image in new tab</a></small><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Read1 encapsulates the barcodes, and Read2 the mRNA sequence</figcaption></figure>
 
 <blockquote class="agenda">
   <div class="box-title agenda-title" id="agenda">Agenda</div>
@@ -634,7 +635,7 @@ Sentry.init({
 <p>Transcript barcodes are often <em>not</em> unique. This becomes evident when you consider that there are approximately 200,000 mRNA’s in a given mammalian cell (<span class="citation"><a href="#Shapiro2013">Shapiro <i>et al.</i> 2013</a></span>) which would require barcode lengths of greater than 9 nucleotides to capture, assuming no sequencing errors.</p>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <ol>
     <li>Why is it important to know which cell a read came from?</li>
@@ -642,7 +643,7 @@ Sentry.init({
   </ol>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>If all our reads encode for a <em>Red Gene</em> (as above), we may want to know which cells express <em>Red Gene</em> more than others.
@@ -826,7 +827,7 @@ How do we correct for this bias?</p>
 </blockquote>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-about-umis"><i class="far fa-question-circle" aria-hidden="true"></i> Question: about UMIs</div>
+  <div class="box-title question-title" id="question-about-umis"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: about UMIs</div>
 
   <ol>
     <li>Are UMIs not specific to certain genes? Can the same UMI map to different genes?</li>
@@ -834,7 +835,7 @@ How do we correct for this bias?</p>
   </ol>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>Yes, UMIs are not specific to genes and the same UMI barcode can tag the transcripts of different genes. UMIs are not universal tags, they are just ‘added randomness’ that help reduce amplification bias.</li>
@@ -895,7 +896,7 @@ How do we correct for this bias?</p>
 <p>We now know the role of UMIs and cell barcodes, but how do we handle them in the analysis? Let us look at 4 example sequences in our paired-end FASTQ data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-preparing-the-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Preparing the Data</div>
+  <div class="box-title hands-on-title" id="hands-on-preparing-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Preparing the Data</div>
 
   <ol>
     <li>Create a new history and rename it (<em>e.g.</em> ‘Inspecting FastQ Files in scRNA batch data’)</li>
@@ -905,7 +906,7 @@ https://zenodo.org/record/2573177/files/test_barcodes_celseq2_R2.fastq.gz
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Open the Galaxy Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>   </li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Click <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload Data</strong> at the top of the tool panel</p>   </li>   <li>Select <i class="fa fa-edit" aria-hidden="true"></i><span class="visually-hidden">galaxy-wf-edit</span> <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
       <p><!--END_SNIPPET--> <br /></p>
     </li>
     <li>Build a <em>Dataset pair</em> for the two FASTQ files <!-- cannot force this to count from 3 -->
@@ -936,7 +937,7 @@ J00182:75:HTKJNBBXX:2:1115:8501:46961
 <p>At this point we now have a history with two items: our paired FASTQ test data, and a tabular file of read names. We will now apply the tabular file to the FASTQ file and extract only those reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extracting-the-reads"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Extracting the Reads</div>
+  <div class="box-title hands-on-title" id="hands-on-extracting-the-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extracting the Reads</div>
 
   <ol>
     <li>Extracting our 4 reads
@@ -1004,7 +1005,7 @@ These are reads that all map to ENSDARG00000019692. In [Cell, UMI] format:
 <p>Let us examine these four reads of interest which we have just sub-selected using their headers:</p>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-forward-reads"><button class="gtn-boxify-button details" type="button" aria-controls="details-forward-reads" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Forward Reads:<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-forward-reads"><button class="gtn-boxify-button details" type="button" aria-controls="details-forward-reads" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Forward Reads:<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@J00182:75:HTKJNBBXX:2:1115:8501:46961 1:N:0:ATCACG
 GGAAGAACCAGATTTTTTTTTTTTTTTTTT
@@ -1030,7 +1031,7 @@ AAFFFJJJJJJJFAFFJJJJJJJJF---&lt;F
 </blockquote>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-reverse-reads"><button class="gtn-boxify-button details" type="button" aria-controls="details-reverse-reads" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Reverse Reads:<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-reverse-reads"><button class="gtn-boxify-button details" type="button" aria-controls="details-reverse-reads" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Reverse Reads:<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@J00182:75:HTKJNBBXX:2:1115:8501:46961 2:N:0:ATCACG
 GACCTCTGATCTTTACGAAAGGCCAACGCGTTTTCAGTCTGGACACGGTTCAGCTCCTGTTCATTATTCA
@@ -1096,7 +1097,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 <p>The encoding of the barcodes on the first read can actually be seen by examining the distribution of bases in a FastQC plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-confirming-the-barcoding"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Confirming the Barcoding</div>
+  <div class="box-title hands-on-title" id="hands-on-confirming-the-barcoding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Confirming the Barcoding</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1" title="FastQC tool" aria-role="link"><strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1</span></span> with the following parameters:
@@ -1105,7 +1106,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
       </ul>
 
       <blockquote class="comment">
-        <div class="box-title comment-title" id="comment"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment</div>
+        <div class="box-title comment-title" id="comment"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
 
         <p>We are only interested in the distribution of bases on the Forward read, but it is more convenient to process the data as a pair instead of un-hiding the original dataset</p>
       </blockquote>
@@ -1129,12 +1130,12 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 <p>We can see that the distribution of nucleotides in the 01-06bp range is relatively more stable than the distribution of nucleotides in the 07-12bp range, which seems to exhibit more extreme variation.</p>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <p>Why is this the case? Why is the UMI barcode base distribution smoother than the Cell barcode base distribution?</p>
   <blockquote class="solution">
 
-    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <p>There are far more UMIs than cells. Cell barcodes are designed and selected with a specified edit distance, greatly limiting their availability in the data. UMIs are not so well-curated – i.e it is possible to encounter the same UMI in the same cell multiple times. The more extreme variation in the 7-12bp region is simply caused by a fewer number of samples.</p>
 
@@ -1183,7 +1184,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 </table>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <p>Provided that these reads all map to the same gene:</p>
 
@@ -1193,7 +1194,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
   </ol>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-3"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-3" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-3"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-3" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>Reads:
@@ -1231,7 +1232,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 <p>For this we need to take the barcode information from the Forward reads, and stick it into the <em>header</em> of the Reverse reads. That way we can align our sequence to the reference and still keep the barcode information associated with the reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-barcode-extraction-and-annotation-of-our-4-reads"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Barcode Extraction and Annotation of our 4 reads</div>
+  <div class="box-title hands-on-title" id="hands-on-barcode-extraction-and-annotation-of-our-4-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Barcode Extraction and Annotation of our 4 reads</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/umi_tools_extract/umi_tools_extract/0.5.5.1" title="UMI-tools extract tool" aria-role="link"><strong>UMI-tools extract</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/umi_tools_extract/umi_tools_extract/0.5.5.1</span></span> with the following parameters:
@@ -1248,7 +1249,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
       </ul>
 
       <blockquote class="comment">
-        <div class="box-title comment-title" id="comment-1"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment</div>
+        <div class="box-title comment-title" id="comment-1"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
 
         <ul>
           <li>Here we specify the format of our barcodes as <code class="language-plaintext highlighter-rouge">NNNNNNCCCCCC</code> where the <em>N</em>s represent UMI bases and the <em>C</em>s represent the cell barcodes.</li>
@@ -1269,7 +1270,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 <p>We should now be able to see the following reads:</p>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-forward-reads-1"><button class="gtn-boxify-button details" type="button" aria-controls="details-forward-reads-1" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Forward Reads:<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-forward-reads-1"><button class="gtn-boxify-button details" type="button" aria-controls="details-forward-reads-1" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Forward Reads:<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@J00182:75:HTKJNBBXX:2:1115:8501:46961_ACCAGA_GGAAGA 1:N:0:ATCACG
 TTTTTTTTTTTTTTTTTT
@@ -1295,7 +1296,7 @@ FAFFJJJJJJJJF---&lt;F&gt;
 </blockquote>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-reverse-reads-1"><button class="gtn-boxify-button details" type="button" aria-controls="details-reverse-reads-1" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Reverse Reads:<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-reverse-reads-1"><button class="gtn-boxify-button details" type="button" aria-controls="details-reverse-reads-1" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Reverse Reads:<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@J00182:75:HTKJNBBXX:2:1115:8501:46961_ACCAGA_GGAAGA 2:N:0:ATCACG
 GACCTCTGATCTTTACGAAAGGCCAACGCGTTTTCAGTCTGGACACGGTTCAGCTCCTGTTCATTATTCA
@@ -1323,7 +1324,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 <p>Notice the remaining sequence in each of the reads, and that the reverse reads appear to fully encapsulate all the information that we wanted to capture in our table at the beginning of this section.</p>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-3"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question-3"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <ol>
     <li>Compare the Forward/Read1 and Reverse/Read2 reads to those prior the extraction. What has happened to the header and sequence of each read?</li>
@@ -1331,7 +1332,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
   </ol>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-4"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-4" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-4"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-4" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
       <li>Comparison:
@@ -1545,19 +1546,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00256">https://gxy.io/GTN:T00256</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00256">https://gxy.io/GTN:T00256</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

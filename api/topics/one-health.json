@@ -135,6 +135,7 @@
         "virology",
         "one-health"
       ],
+      "short_id": "T00316",
       "url": "/topics/variant-analysis/tutorials/sars-cov-2-variant-discovery/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "sars-cov-2-variant-discovery",
@@ -304,6 +305,7 @@
           "wm75"
         ]
       },
+      "short_id": "T00315",
       "url": "/topics/variant-analysis/tutorials/sars-cov-2/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "sars-cov-2",
@@ -641,6 +643,7 @@
         "virology",
         "one-health"
       ],
+      "short_id": "T00347",
       "url": "/topics/variant-analysis/tutorials/pox-tiled-amplicon/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "pox-tiled-amplicon",
@@ -921,6 +924,7 @@
         "prokaryote",
         "one-health"
       ],
+      "short_id": "T00319",
       "url": "/topics/variant-analysis/tutorials/tb-variant-analysis/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "tb-variant-analysis",
@@ -1210,6 +1214,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
         }
       ],
+      "short_id": "T00049",
       "url": "/topics/computational-chemistry/tutorials/covid19-docking/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "covid19-docking",
@@ -1467,6 +1472,7 @@
           ]
         }
       ],
+      "short_id": "T00036",
       "url": "/topics/assembly/tutorials/mrsa-illumina/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "mrsa-illumina",
@@ -1759,6 +1765,7 @@
         "prokaryote",
         "one-health"
       ],
+      "short_id": "T00145",
       "url": "/topics/evolution/tutorials/mtb_transmission/tutorial.html",
       "topic_name": "evolution",
       "tutorial_name": "mtb_transmission",
@@ -2112,6 +2119,7 @@
         "one-health",
         "phylogenetics"
       ],
+      "short_id": "T00144",
       "url": "/topics/evolution/tutorials/mtb_phylogeny/tutorial.html",
       "topic_name": "evolution",
       "tutorial_name": "mtb_phylogeny",

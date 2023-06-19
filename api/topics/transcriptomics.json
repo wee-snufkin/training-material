@@ -266,6 +266,7 @@
           ]
         }
       ],
+      "short_id": "T00298",
       "url": "/topics/transcriptomics/tutorials/rna-seq-counts-to-genes/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-counts-to-genes",
@@ -456,6 +457,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
         }
       ],
+      "short_id": "T00292",
       "url": "/topics/transcriptomics/tutorials/mirna-target-finder/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "mirna-target-finder",
@@ -738,6 +740,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/malloryfreeberg/"
         }
       ],
+      "short_id": "T00307",
       "url": "/topics/transcriptomics/tutorials/srna/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "srna",
@@ -937,6 +940,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pavanvidem/"
         }
       ],
+      "short_id": "T00296",
       "url": "/topics/transcriptomics/tutorials/rna-interactome/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-interactome",
@@ -1135,6 +1139,7 @@
           ]
         }
       ],
+      "short_id": "T00304",
       "url": "/topics/transcriptomics/tutorials/rna-seq-viz-with-volcanoplot/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-viz-with-volcanoplot",
@@ -1341,6 +1346,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "T00288",
       "url": "/topics/transcriptomics/tutorials/clipseq/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "clipseq",
@@ -1620,6 +1626,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/xiliu/"
         }
       ],
+      "short_id": "T00290",
       "url": "/topics/transcriptomics/tutorials/full-de-novo/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "full-de-novo",
@@ -1862,6 +1869,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pavanvidem/"
         }
       ],
+      "short_id": "T00306",
       "url": "/topics/transcriptomics/tutorials/small_ncrna_clustering/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "small_ncrna_clustering",
@@ -2070,6 +2078,7 @@
           ]
         }
       ],
+      "short_id": "T00301",
       "url": "/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-reads-to-counts",
@@ -2375,6 +2384,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bphipson/"
         }
       ],
+      "short_id": "T00300",
       "url": "/topics/transcriptomics/tutorials/rna-seq-genes-to-pathways/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-genes-to-pathways",
@@ -2518,10 +2528,10 @@
     {
       "layout": "tutorial_hands_on",
       "title": "Genome-wide alternative splicing analysis",
-      "zenodo_link": "https://zenodo.org/record/7941871",
+      "zenodo_link": "https://zenodo.org/record/7974884",
       "tags": [
-        "alternative-splicing",
-        "isoform-switching"
+        "alternative splicing",
+        "isoform switching"
       ],
       "questions": [
         "Are there statistically significant differences in gene splicing patterns between samples?",
@@ -2552,6 +2562,7 @@
         "TSGs": "tumor supression genes",
         "OCGs": "oncogenes"
       },
+      "short_id": "T00345",
       "url": "/topics/transcriptomics/tutorials/differential-isoform-expression/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "differential-isoform-expression",
@@ -2589,30 +2600,41 @@
       "api": "https://training.galaxyproject.org/training-material/api/topics/transcriptomics/tutorials/differential-isoform-expression/tutorial.json",
       "tools": [
         "CONVERTER_fasta_to_tabular",
+        "Cut1",
         "Remove beginning1",
         "__FILTER_FROM_FILE__",
         "__FLATTEN__",
         "cat1",
+        "gene2exon1",
+        "param_value_from_file",
+        "sort1",
         "toolshed.g2.bx.psu.edu/repos/bgruening/cpat/cpat/3.0.4+galaxy0",
         "toolshed.g2.bx.psu.edu/repos/bgruening/pfamscan/pfamscan/1.6+galaxy0",
         "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/1.1.2",
         "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1",
         "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/1.1.1",
+        "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sorted_uniq/1.1.0",
         "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0",
+        "toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.3+galaxy0",
         "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.1",
         "toolshed.g2.bx.psu.edu/repos/iuc/collection_element_identifiers/collection_element_identifiers/0.0.2",
         "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0",
+        "toolshed.g2.bx.psu.edu/repos/iuc/gffcompare/gffcompare/0.12.6+galaxy0",
         "toolshed.g2.bx.psu.edu/repos/iuc/gtftobed12/gtftobed12/357",
         "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.2.1+galaxy1",
-        "toolshed.g2.bx.psu.edu/repos/iuc/isoformswitchanalyzer/isoformswitchanalyzer/1.20.0+galaxy0",
+        "toolshed.g2.bx.psu.edu/repos/iuc/isoformswitchanalyzer/isoformswitchanalyzer/1.20.0+galaxy5",
         "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
         "toolshed.g2.bx.psu.edu/repos/iuc/pygenometracks/pygenomeTracks/3.8+galaxy1",
         "toolshed.g2.bx.psu.edu/repos/iuc/rgrnastar/rna_star/2.7.10b+galaxy3",
+        "toolshed.g2.bx.psu.edu/repos/iuc/rnaquast/rna_quast/2.2.1",
+        "toolshed.g2.bx.psu.edu/repos/iuc/rnaquast/rna_quast/2.2.3+galaxy0",
         "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/2.2.1+galaxy1",
+        "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie_merge/2.2.1+galaxy1",
         "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage/5.0.1+galaxy1",
         "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage/5.0.1+galaxy2",
         "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_infer_experiment/5.0.1+galaxy1",
         "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_infer_experiment/5.0.1+galaxy2",
+        "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_inner_distance/5.0.1+galaxy2",
         "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_junction_annotation/5.0.1+galaxy1",
         "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_junction_annotation/5.0.1+galaxy2",
         "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_junction_saturation/5.0.1+galaxy1",
@@ -2622,19 +2644,14 @@
       ],
       "supported_servers": {
         "exact": [
-
-        ],
-        "inexact": [
           {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
             "usegalaxy": "true"
-          },
-          {
-            "url": "https://usegalaxy.org.au",
-            "name": "UseGalaxy.org.au",
-            "usegalaxy": "true"
           }
+        ],
+        "inexact": [
+
         ]
       },
       "topic_name_human": "Transcriptomics",
@@ -2679,9 +2696,23 @@
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
+            "name": "text_processing",
+            "owner": "bgruening",
+            "revisions": "d698c222f354",
+            "tool_panel_section_label": "Transcriptomics",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
             "name": "fastqc",
             "owner": "devteam",
             "revisions": "3d0c7bdf12f5",
+            "tool_panel_section_label": "Transcriptomics",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "gffread",
+            "owner": "devteam",
+            "revisions": "154d00cbbf2d",
             "tool_panel_section_label": "Transcriptomics",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
@@ -2707,6 +2738,13 @@
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
+            "name": "gffcompare",
+            "owner": "iuc",
+            "revisions": "f99dd58de04f",
+            "tool_panel_section_label": "Transcriptomics",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
             "name": "gtftobed12",
             "owner": "iuc",
             "revisions": "b026dae67fba",
@@ -2723,7 +2761,7 @@
           {
             "name": "isoformswitchanalyzer",
             "owner": "iuc",
-            "revisions": "f3fefb6d8254",
+            "revisions": "b3f292d9f35d",
             "tool_panel_section_label": "Transcriptomics",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
@@ -2745,6 +2783,27 @@
             "name": "rgrnastar",
             "owner": "iuc",
             "revisions": "3ea5a2a63fa2",
+            "tool_panel_section_label": "Transcriptomics",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "rnaquast",
+            "owner": "iuc",
+            "revisions": "96f74538896e",
+            "tool_panel_section_label": "Transcriptomics",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "rnaquast",
+            "owner": "iuc",
+            "revisions": "f89e3c318453",
+            "tool_panel_section_label": "Transcriptomics",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "stringtie",
+            "owner": "iuc",
+            "revisions": "ae618321f34a",
             "tool_panel_section_label": "Transcriptomics",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
@@ -2773,6 +2832,13 @@
             "name": "rseqc",
             "owner": "nilesh",
             "revisions": "5968573462fa",
+            "tool_panel_section_label": "Transcriptomics",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "rseqc",
+            "owner": "nilesh",
+            "revisions": "473382134e56",
             "tool_panel_section_label": "Transcriptomics",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
@@ -2827,7 +2893,7 @@
           }
         ]
       },
-      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: cpat\n  owner: bgruening\n  revisions: 8e9e228c54c4\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: pfamscan\n  owner: bgruening\n  revisions: 15cff34c2005\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: text_processing\n  owner: bgruening\n  revisions: d698c222f354\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: text_processing\n  owner: bgruening\n  revisions: d698c222f354\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: text_processing\n  owner: bgruening\n  revisions: d698c222f354\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: fastqc\n  owner: devteam\n  revisions: 3d0c7bdf12f5\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: tabular_to_fasta\n  owner: devteam\n  revisions: 0a7799698fe5\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: collection_element_identifiers\n  owner: iuc\n  revisions: d3c07d270a50\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: fastp\n  owner: iuc\n  revisions: 65b93b623c77\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: gtftobed12\n  owner: iuc\n  revisions: b026dae67fba\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: hisat2\n  owner: iuc\n  revisions: f4af63aaf57a\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: isoformswitchanalyzer\n  owner: iuc\n  revisions: f3fefb6d8254\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: multiqc\n  owner: iuc\n  revisions: abfd8a6544d7\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: pygenometracks\n  owner: iuc\n  revisions: 360df4999907\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rgrnastar\n  owner: iuc\n  revisions: 3ea5a2a63fa2\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: stringtie\n  owner: iuc\n  revisions: ae618321f34a\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
+      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: cpat\n  owner: bgruening\n  revisions: 8e9e228c54c4\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: pfamscan\n  owner: bgruening\n  revisions: 15cff34c2005\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: text_processing\n  owner: bgruening\n  revisions: d698c222f354\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: text_processing\n  owner: bgruening\n  revisions: d698c222f354\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: text_processing\n  owner: bgruening\n  revisions: d698c222f354\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: text_processing\n  owner: bgruening\n  revisions: d698c222f354\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: fastqc\n  owner: devteam\n  revisions: 3d0c7bdf12f5\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: gffread\n  owner: devteam\n  revisions: 154d00cbbf2d\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: tabular_to_fasta\n  owner: devteam\n  revisions: 0a7799698fe5\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: collection_element_identifiers\n  owner: iuc\n  revisions: d3c07d270a50\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: fastp\n  owner: iuc\n  revisions: 65b93b623c77\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: gffcompare\n  owner: iuc\n  revisions: f99dd58de04f\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: gtftobed12\n  owner: iuc\n  revisions: b026dae67fba\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: hisat2\n  owner: iuc\n  revisions: f4af63aaf57a\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: isoformswitchanalyzer\n  owner: iuc\n  revisions: b3f292d9f35d\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: multiqc\n  owner: iuc\n  revisions: abfd8a6544d7\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: pygenometracks\n  owner: iuc\n  revisions: 360df4999907\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rgrnastar\n  owner: iuc\n  revisions: 3ea5a2a63fa2\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rnaquast\n  owner: iuc\n  revisions: 96f74538896e\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rnaquast\n  owner: iuc\n  revisions: f89e3c318453\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: stringtie\n  owner: iuc\n  revisions: ae618321f34a\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: stringtie\n  owner: iuc\n  revisions: ae618321f34a\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 5968573462fa\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rseqc\n  owner: nilesh\n  revisions: 473382134e56\n  tool_panel_section_label: Transcriptomics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
       "tours": false,
       "video": false,
       "translations": {
@@ -2912,6 +2978,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/ChaoZhang123/"
         }
       ],
+      "short_id": "T00293",
       "url": "/topics/transcriptomics/tutorials/network-analysis-with-heinz/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "network-analysis-with-heinz",
@@ -3068,6 +3135,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mblue9/"
         }
       ],
+      "short_id": "T00303",
       "url": "/topics/transcriptomics/tutorials/rna-seq-viz-with-heatmap2/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-viz-with-heatmap2",
@@ -3215,6 +3283,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mblue9/"
         }
       ],
+      "short_id": "T00291",
       "url": "/topics/transcriptomics/tutorials/goenrichment/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "goenrichment",
@@ -3378,6 +3447,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mwolfien/"
         }
       ],
+      "short_id": "S00094",
       "url": "/topics/transcriptomics/tutorials/introduction/slides.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "introduction",
@@ -3507,6 +3577,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bagnacan/"
         }
       ],
+      "short_id": "T00302",
       "url": "/topics/transcriptomics/tutorials/rna-seq-viz-with-cummerbund/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-viz-with-cummerbund",
@@ -3657,6 +3728,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mboudet/"
         }
       ],
+      "short_id": "T00297",
       "url": "/topics/transcriptomics/tutorials/rna-seq-analysis-with-askomics-it/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-analysis-with-askomics-it",
@@ -3755,6 +3827,7 @@
           "carpentries"
         ]
       },
+      "short_id": "T00346",
       "url": "/topics/transcriptomics/tutorials/rna-seq-bash-star-align/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-bash-star-align",
@@ -3948,6 +4021,7 @@
           ]
         }
       ],
+      "short_id": "T00305",
       "url": "/topics/transcriptomics/tutorials/rna-seq-viz-with-volcanoplot-r/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-viz-with-volcanoplot-r",
@@ -4160,6 +4234,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
         }
       ],
+      "short_id": "T00299",
       "url": "/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rna-seq-counts-to-viz-in-r",
@@ -4287,6 +4362,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nekrut/"
         }
       ],
+      "short_id": "T00294",
       "url": "/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "rb-rnaseq",
@@ -4423,6 +4499,7 @@
           "hexylena"
         ]
       },
+      "short_id": "T00295",
       "url": "/topics/transcriptomics/tutorials/ref-based/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "ref-based",
@@ -5143,6 +5220,7 @@
           "jxtx"
         ]
       },
+      "short_id": "T00289",
       "url": "/topics/transcriptomics/tutorials/de-novo/tutorial.html",
       "topic_name": "transcriptomics",
       "tutorial_name": "de-novo",

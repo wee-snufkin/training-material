@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/dev/tutorials/writing_tests/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -55,7 +63,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Writing Automated Tests for Galaxy">
         <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -236,7 +244,7 @@ Sentry.init({
   "mentions": [
 
   ],
-  "abstract": "> <div class=\"box-title agenda-title\" id=\"agenda\">Agenda</div>"
+  "abstract": "> <div class="box-title agenda-title" id="agenda">Agenda</div>"
 }
         </script>
         
@@ -311,7 +319,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/dev/tutorials/writing_tests/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/dev/tutorials/writing_tests/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -358,13 +366,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/dev/tutorials/writing_tests/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/dev/tutorials/writing_tests/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/dev/tutorials/writing_tests/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/dev/tutorials/writing_tests/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/dev/tutorials/writing_tests/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/dev/tutorials/writing_tests/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -377,7 +385,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -414,14 +422,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/dev'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-dev">
     <h1 data-toc-skip>Writing Automated Tests for Galaxy</h1>
@@ -431,7 +432,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/jdavcs/" class="contributor-badge contributor-jdavcs"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jdavcs?s=27" alt="Avatar">John Davis</a><a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge contributor-jmchilton"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jmchilton?s=27" alt="Avatar">John Chilton</a>
+		Authors: <a href="/training-material/hall-of-fame/jdavcs/" class="contributor-badge contributor-jdavcs"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jdavcs?s=36" alt="Avatar">John Davis</a><a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge contributor-jmchilton"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jmchilton?s=36" alt="Avatar">John Chilton</a>
 	</div>
 
 </div>
@@ -665,7 +666,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00123">https://gxy.io/GTN:T00123</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00123">https://gxy.io/GTN:T00123</a> </div>
         
     </blockquote>
     </section>
@@ -681,7 +682,7 @@ Sentry.init({
 
                 <section aria-label="Tutorial Content" id="tutorial-content">
                 <blockquote class="agenda">
-  <div class="box-title agenda-title" id="agenda">Agenda</div>
+  <div class="box-title agenda-title" id="agenda-1">Agenda</div>
 
 <ol id="markdown-toc">
   <li><a href="#testing-in-galaxy" id="markdown-toc-testing-in-galaxy">Testing in Galaxy</a></li>
@@ -736,7 +737,7 @@ Sentry.init({
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setup-your-local-galaxy-instance"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Setup your local Galaxy instance</div>
+  <div class="box-title hands-on-title" id="hands-on-setup-your-local-galaxy-instance"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setup your local Galaxy instance</div>
 
   <ol>
     <li>Use GitHub UI to fork Galaxy’s repository at <code class="language-plaintext highlighter-rouge">galaxyproject/galaxy</code>.</li>
@@ -744,7 +745,7 @@ Sentry.init({
       <p>Clone your forked repository to a local path, further referred to as <code class="language-plaintext highlighter-rouge">GALAXY_ROOT</code> and <code class="language-plaintext highlighter-rouge">cd</code> into <code class="language-plaintext highlighter-rouge">GALAXY_ROOT</code>. Note that we specify the tutorial branch with the <code class="language-plaintext highlighter-rouge">-b</code> option:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;your-username&gt;/galaxy GALAXY_ROOT
 <span class="nb">cd </span>GALAXY_ROOT
 </code></pre></div>        </div>
@@ -754,7 +755,7 @@ Sentry.init({
       <p>Before we can use Galaxy, we need to create a virtual environment and install the required dependencies. This is generally done with the <code class="language-plaintext highlighter-rouge">common_startup.sh</code> script:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash scripts/common_startup.sh <span class="nt">--dev-wheels</span>
 </code></pre></div>        </div>
       </blockquote>
@@ -765,7 +766,7 @@ Sentry.init({
       <p>Activate your new virtual environment:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span> .venv/bin/activate
 </code></pre></div>        </div>
       </blockquote>
@@ -776,7 +777,7 @@ Sentry.init({
       <p>Finally, let’s create a new branch for your edits:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">-b</span> my-training
 </code></pre></div>        </div>
       </blockquote>
@@ -785,13 +786,13 @@ Sentry.init({
 
       <blockquote class="code-2col">
         <blockquote class="code-in">
-          <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+          <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch
 </code></pre></div>          </div>
         </blockquote>
 
         <blockquote class="code-out">
-          <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output</div>
+          <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  training
 <span class="k">*</span> my-training
 </code></pre></div>          </div>
@@ -1165,7 +1166,7 @@ Sentry.init({
 <p>Run the tests to verify they pass. You can use the <code class="language-plaintext highlighter-rouge">pytest</code> command:</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pytest <span class="nb">test</span>/unit/util/test_bytesize.py
 </code></pre></div>  </div>
 </blockquote>
@@ -1364,13 +1365,13 @@ following. Note that the test function takes 2 additional arguments.</p>
 <p>Now run the tests for this module:</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pytest <span class="nb">test</span>/unit/data/security/test_validate_user_input.py
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote class="warning">
-  <div class="box-title warning-title" id="warning"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Warning</div>
+  <div class="box-title warning-title" id="warning"><i class="fas fa-exclamation-triangle" aria-hidden="true" ></i> Warning</div>
   <p>As a word of caution, mocking (or any kind of patching to accommodate testing) may lead to brittle tests: by relying too much on <em>how</em> the logic is implemented, we’ll be forced to adjust the test each time that implementation changes. It’s a tradeoff between having narrowly-scoped tests that will point to the exact location of the problem but may lock the code under test into a given state, and higher-level integration-type tests that test the end result without “looking under the hood”, but may be less helpful when pinpointing the exact cause of a failed test. So, use sparingly and keep it simple.</p>
 </blockquote>
 
@@ -1975,19 +1976,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00123">https://gxy.io/GTN:T00123</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00123">https://gxy.io/GTN:T00123</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

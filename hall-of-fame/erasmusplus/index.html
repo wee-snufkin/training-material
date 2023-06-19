@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -53,7 +61,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: GTN Contributor: Erasmus+ Programme">
         <meta property="og:description" content="Collection of tutorials developed and maintained by the w...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
     </head>
@@ -122,7 +130,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/mainhall-of-fame/erasmusplus/index.html" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/hall-of-fame/erasmusplus/index.html" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -166,13 +174,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/hall-of-fame/erasmusplus/" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/hall-of-fame/erasmusplus/">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/hall-of-fame/erasmusplus/" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/hall-of-fame/erasmusplus/">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/hall-of-fame/erasmusplus/" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/hall-of-fame/erasmusplus/">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -185,7 +193,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -278,7 +286,7 @@ Sentry.init({
 					Erasmus+ Programme
 				</h1>
 				
-				<div class="label label-default label-large" style="--color-primary: #ffc0d8; --color-darker: #ff9dc5; --color-dimmed: #ffafce;">GTN Funder</div>
+				<div class="label label-default label-large" style="--color-primary: #ff9ec5; --color-darker: #ff7ab5; --color-dimmed: #ff8dbd;">GTN Funder</div>
 				
 				
 
@@ -607,6 +615,23 @@ Sentry.init({
 					<li>
 						
 						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/workshop-final-exercise/tutorial.html">
+						Train-the-Trainer: putting it all together
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
 						<a href="/training-material/topics/assembly">
 							Assembly
 						</a>
@@ -713,6 +738,23 @@ Sentry.init({
 							Foundations of Data Science
 						</a>
 						/
+						<a href="/training-material//topics/data-science/tutorials/data-manipulation-olympics-viz-r/tutorial.html">
+						Data visualisation Olympics - Visualization in R
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/data-science">
+							Foundations of Data Science
+						</a>
+						/
 						<a href="/training-material//topics/data-science/tutorials/cli-bashcrawl/tutorial.html">
 						CLI Educational Game - Bashcrawl
 						</a>
@@ -736,6 +778,23 @@ Sentry.init({
 						
 						
 	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/data-science">
+							Foundations of Data Science
+						</a>
+						/
+						<a href="/training-material//topics/data-science/tutorials/data-manipulation-olympics-sql/tutorial.html">
+						Data Manipulation Olympics - SQL
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
 
 
 					</li>
@@ -817,6 +876,23 @@ Sentry.init({
 						/
 						<a href="/training-material//topics/data-science/tutorials/r-basics/tutorial.html">
 						R basics in Galaxy
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/data-science">
+							Foundations of Data Science
+						</a>
+						/
+						<a href="/training-material//topics/data-science/tutorials/data-manipulation-olympics-jq/tutorial.html">
+						Data Manipulation Olympics - JQ
 						</a>
 						
 						
@@ -970,7 +1046,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=27" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -994,7 +1070,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #b3b5ff; --color-darker: #9b9eff; --color-dimmed: #a7a9ff;">new feature</span>
 
     <hr/>
     <p class="card-text">
@@ -1022,7 +1098,7 @@ Sentry.init({
   </div>
  <div class="row no-gutters">
   <div class="col-sm-5">
-   <img class="card-img newscover" src="/training-material//assets/images/GTN.png" alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" loading="lazy">
+   <img class="card-img newscover" src="/training-material//assets/images/GTNLogo1000.png" alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" loading="lazy">
   </div>
   <div class="col-sm-7">
    <div class="card-body">
@@ -1039,7 +1115,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/lldelisle/" class="contributor-badge contributor-lldelisle"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/lldelisle?s=27" alt="Avatar">Lucille Delisle</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/lldelisle/" class="contributor-badge contributor-lldelisle"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/lldelisle?s=36" alt="Avatar">Lucille Delisle</a>
 		</td>
 	</tr>
 	
@@ -1063,11 +1139,11 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #b3b5ff; --color-darker: #9b9eff; --color-dimmed: #a7a9ff;">new feature</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #99e700; --color-darker: #87ce00; --color-dimmed: #90db00;">community building</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #88cf00; --color-darker: #79b800; --color-dimmed: #81c400;">community building</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #b1e200; --color-darker: #9ec900; --color-dimmed: #a8d600;">capacity building</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #9fcb00; --color-darker: #8db500; --color-dimmed: #96c000;">capacity building</span>
 
     <hr/>
     <p class="card-text">
@@ -1095,7 +1171,7 @@ Sentry.init({
   </div>
  <div class="row no-gutters">
   <div class="col-sm-5">
-   <img class="card-img newscover" src="/training-material//assets/images/GTN.png" alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" loading="lazy">
+   <img class="card-img newscover" src="/training-material//assets/images/GTNLogo1000.png" alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" loading="lazy">
   </div>
   <div class="col-sm-7">
    <div class="card-body">
@@ -1112,7 +1188,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1136,9 +1212,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #b3b5ff; --color-darker: #9b9eff; --color-dimmed: #a7a9ff;">new feature</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffef92; --color-darker: #ead500; --color-dimmed: #f8e300;">gtn</span>
 
     <hr/>
     <p class="card-text">
@@ -1183,7 +1259,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1207,11 +1283,11 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00d683; --color-darker: #00bf74; --color-dimmed: #00cb7b;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #b3b5ff; --color-darker: #9b9eff; --color-dimmed: #a7a9ff;">new feature</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #dfc8ff; --color-darker: #cfaaff; --color-dimmed: #d7b9ff;">tutorial authors</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #d0abff; --color-darker: #c38fff; --color-dimmed: #c99dff;">tutorial authors</span>
 
     <hr/>
     <p class="card-text">
@@ -1256,7 +1332,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1280,9 +1356,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00d683; --color-darker: #00bf74; --color-dimmed: #00cb7b;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #b3b5ff; --color-darker: #9b9eff; --color-dimmed: #a7a9ff;">new feature</span>
 
     <hr/>
     <p class="card-text">
@@ -1310,7 +1386,7 @@ Sentry.init({
   </div>
  <div class="row no-gutters">
   <div class="col-sm-5">
-   <img class="card-img newscover" src="/training-material//assets/images/GTN.png" alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" loading="lazy">
+   <img class="card-img newscover" src="/training-material//assets/images/GTNLogo1000.png" alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" loading="lazy">
   </div>
   <div class="col-sm-7">
    <div class="card-body">
@@ -1327,7 +1403,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1351,7 +1427,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #fff972; --color-darker: #e5de00; --color-dimmed: #f3ec00;">new-feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #fbf400; --color-darker: #dfd900; --color-dimmed: #ede600;">new-feature</span>
 
     <hr/>
     <p class="card-text">
@@ -1379,7 +1455,7 @@ Sentry.init({
   </div>
  <div class="row no-gutters">
   <div class="col-sm-5">
-   <img class="card-img newscover" src="/training-material//assets/images/GTN.png" alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" loading="lazy">
+   <img class="card-img newscover" src="/training-material//assets/images/GTNLogo1000.png" alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" loading="lazy">
   </div>
   <div class="col-sm-7">
    <div class="card-body">
@@ -1396,7 +1472,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=27" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/abretaud?s=27" alt="Avatar">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=27" alt="Avatar">Yvan Le Bras</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/fpsom?s=27" alt="Avatar">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/carpentries/" class="contributor-badge contributor-carpentries"><img src="https://avatars.githubusercontent.com/carpentries?s=27" alt="Avatar">The Carpentries</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/abretaud?s=36" alt="Avatar">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=36" alt="Avatar">Yvan Le Bras</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/fpsom?s=36" alt="Avatar">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/carpentries/" class="contributor-badge contributor-carpentries"><img src="https://avatars.githubusercontent.com/carpentries?s=36" alt="Avatar">The Carpentries</a>
 		</td>
 	</tr>
 	
@@ -1420,9 +1496,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00d683; --color-darker: #00bf74; --color-dimmed: #00cb7b;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #cfcdff; --color-darker: #b6b3ff; --color-dimmed: #c2c0ff;">new topic</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #b7b4ff; --color-darker: #a09cff; --color-dimmed: #aba8ff;">new topic</span>
 
     <hr/>
     <p class="card-text">
@@ -1528,6 +1604,10 @@ var topics = [
 
 	
 	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
 	"Assembly",
 
 	
@@ -1537,6 +1617,18 @@ var topics = [
 	
 	
 	"Visualisation",
+
+	
+	
+	"Foundations of Data Science",
+
+	
+	
+	"Foundations of Data Science",
+
+	
+	
+	"Foundations of Data Science",
 
 	
 	
@@ -1606,6 +1698,14 @@ var topics = [
 ];
 
 var slidesVsTutos = [
+
+	"Tutorials",
+
+	"Tutorials",
+
+	"Tutorials",
+
+	"Tutorials",
 
 	"Tutorials",
 
@@ -1791,7 +1891,7 @@ var chart2 = new Chart(ctx2, {
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1799,7 +1899,7 @@ var chart2 = new Chart(ctx2, {
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

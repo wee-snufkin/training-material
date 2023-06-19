@@ -123,6 +123,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallardoalba/"
         }
       ],
+      "short_id": "T00321",
       "url": "/topics/visualisation/tutorials/circos/tutorial.html",
       "topic_name": "visualisation",
       "tutorial_name": "circos",
@@ -405,6 +406,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
         }
       ],
+      "short_id": "T00322",
       "url": "/topics/visualisation/tutorials/jbrowse/tutorial.html",
       "topic_name": "visualisation",
       "tutorial_name": "jbrowse",
@@ -563,6 +565,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
       ],
+      "short_id": "S00101",
       "url": "/topics/visualisation/tutorials/introduction/slides.html",
       "topic_name": "visualisation",
       "tutorial_name": "introduction",

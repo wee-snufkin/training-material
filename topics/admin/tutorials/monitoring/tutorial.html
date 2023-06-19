@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -54,7 +62,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Galaxy Monitoring with Telegraf and Grafana">
         <meta property="og:description" content="Resources related to configuration and maintenance of Gal...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -363,7 +371,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/admin/tutorials/monitoring/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/monitoring/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -410,13 +418,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/monitoring/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/monitoring/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/monitoring/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/monitoring/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/monitoring/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/monitoring/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -429,7 +437,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -466,14 +474,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/admins'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-admin">
     <h1 data-toc-skip>Galaxy Monitoring with Telegraf and Grafana</h1>
@@ -483,7 +484,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+		Authors: <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
 	</div>
 
 </div>
@@ -987,7 +988,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00015">https://gxy.io/GTN:T00015</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00015">https://gxy.io/GTN:T00015</a> </div>
         
     </blockquote>
     </section>
@@ -1057,7 +1058,7 @@ Sentry.init({
 <p>The available Ansible roles for InfluxDB unfortunately do not support configuring databases or users or retention policies. Ansible itself contains <a href="https://docs.ansible.com/ansible/2.9/modules/list_of_database_modules.html#influxdb">several modules</a> you can use to write your own roles, but nothing generic. UseGalaxy.eu wrote <a href="https://github.com/usegalaxy-eu/infrastructure-playbook/blob/master/roles/hxr.influxdb/tasks/main.yml">their own role</a> for setting up their InfluxDB database, but it is not reusable enough for it to be used here yet. If you plan to automate your entire setup, this tutorial can perhaps provide inspiration for writing your own Ansible role. However, in this case it is sufficient to manually create your users and retention policies as a one-off task.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setting-up-influxdb"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Setting up InfluxDB</div>
+  <div class="box-title hands-on-title" id="hands-on-setting-up-influxdb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setting up InfluxDB</div>
 
   <ol>
     <li>
@@ -1082,7 +1083,7 @@ Sentry.init({
       <p>Install the role</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-galaxy <span class="nb">install</span> <span class="nt">-p</span> roles <span class="nt">-r</span> requirements.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1122,7 +1123,7 @@ Sentry.init({
       <p>Run the playbook:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook monitoring.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1252,7 +1253,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 <p>Setting up Telegraf is again very simple. We just add a single role to our playbook and set some variables.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-dependencies"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Dependencies</div>
+  <div class="box-title hands-on-title" id="hands-on-dependencies"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Dependencies</div>
 
   <ol>
     <li>
@@ -1275,7 +1276,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
       <p>Install the requirements</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-galaxy <span class="nb">install</span> <span class="nt">-p</span> roles <span class="nt">-r</span> requirements.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1408,7 +1409,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setting-up-grafana"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Setting up Grafana</div>
+  <div class="box-title hands-on-title" id="hands-on-setting-up-grafana"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setting up Grafana</div>
 
   <ol>
     <li>
@@ -1429,7 +1430,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
       <p>Install the role</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-galaxy <span class="nb">install</span> <span class="nt">-p</span> roles <span class="nt">-r</span> requirements.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1477,7 +1478,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
       <p>Run the monitoring playbook:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook monitoring.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1506,7 +1507,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
       <p>Run the Galaxy playbook which includes Nginx:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1529,7 +1530,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 <p>For any public Grafana dashboard, you can copy the dashboard for your own use. This is a nice feature of Grafana that has really helped it spread in the Galaxy community, any cool thing one of us builds, everyone else can copy and build upon.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-a-dashboard"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Import a dashboard</div>
+  <div class="box-title hands-on-title" id="hands-on-import-a-dashboard"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import a dashboard</div>
 
   <ol>
     <li>
@@ -1561,7 +1562,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 <p>Importing dashboards is a good start, but it’s more interesting to create our own that’s personalised to our needs.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-dashboard"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Create a dashboard</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-dashboard"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a dashboard</div>
 
   <ol>
     <li>
@@ -1609,7 +1610,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 <p>This will track how long it takes the interface to respond on various web routes and API routes. The collection of individual points is a bit hard to interpret the “feeling” of, so it’s common to add a query like the <a href="https://en.wikipedia.org/wiki/Percentile">95th percentile</a> of requests. This is a value that is calculated from all of the data points collected. The 95th percentile means that 95% of requests are responded to more quickly than this value.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-a-second-query-to-an-existing-graph"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Add a second query to an existing graph</div>
+  <div class="box-title hands-on-title" id="hands-on-add-a-second-query-to-an-existing-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add a second query to an existing graph</div>
 
   <ol>
     <li>
@@ -1661,7 +1662,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 <p>We will update the panel we’ve added to highlight the important information and downplay less important facets, as well as configuring it to have a nicer title than “Panel Title”</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-styling-the-graph"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Styling the graph</div>
+  <div class="box-title hands-on-title" id="hands-on-styling-the-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Styling the graph</div>
 
   <ol>
     <li>
@@ -1743,14 +1744,14 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 <p>Doing monitoring effectively, without causing undue burden to the administrators (extraneous alerts that are not actionable), or the users (unexpected/unnoticed downtime), is a very complex topic. Recommended reading here includes the <a href="https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/">monitoring chapter</a> of the Google SRE book <span class="citation"><a href="#Beyer:2016:SRE:3006357">Beyer <i>et al.</i> 2016</a></span> which can provide some general guidance on the topic and what metrics may be interesting or annoying to alert upon.</p>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-no-generic-advice"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: No generic advice</div>
+  <div class="box-title comment-title" id="comment-no-generic-advice"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: No generic advice</div>
   <p>We cannot easily provide generic and applicable recommendations, that work across every system and every scale. Some of these performance bounds or features you will need to discover yourself, either adding new metrics in support of this, or changing monitoring thresholds to match the values you need.</p>
 </blockquote>
 
 <p>We will add an example alert, to make you familiar with the process. This is not an alert that will probably be useful in production.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-an-alert-to-your-graph"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Add an alert to your graph</div>
+  <div class="box-title hands-on-title" id="hands-on-add-an-alert-to-your-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add an alert to your graph</div>
 
   <ol>
     <li>
@@ -1790,7 +1791,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 <p>It’s simple to install gxadmin. Here’s how you do it, if you haven’t done it already:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-installing-gxadmin-and-configuring-telegraf"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Installing gxadmin and configuring Telegraf</div>
+  <div class="box-title hands-on-title" id="hands-on-installing-gxadmin-and-configuring-telegraf"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Installing gxadmin and configuring Telegraf</div>
 
   <ol>
     <li>
@@ -1815,7 +1816,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 <h2 id="configuring-telegraf-for-gxadmin">Configuring Telegraf for gxadmin</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-configuring-telegraf"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Configuring Telegraf</div>
+  <div class="box-title hands-on-title" id="hands-on-configuring-telegraf"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configuring Telegraf</div>
 
   <ol>
     <li>
@@ -1885,7 +1886,7 @@ queue-overview,tool_id=iuc/mothur_pre_cluster/mothur_pre_cluster,tool_version=1.
 <p>We’ll now create a graph for this, just like the one on <a href="https://stats.galaxyproject.eu">stats.galaxyproject.eu</a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-building-the-queue-graph"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Building the queue graph</div>
+  <div class="box-title hands-on-title" id="hands-on-building-the-queue-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Building the queue graph</div>
 
   <ol>
     <li>
@@ -2174,19 +2175,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00015">https://gxy.io/GTN:T00015</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00015">https://gxy.io/GTN:T00015</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

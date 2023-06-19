@@ -136,6 +136,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "T00201",
       "url": "/topics/metagenomics/tutorials/general-tutorial/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "general-tutorial",
@@ -473,6 +474,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/tnabtaf/"
         }
       ],
+      "short_id": "T00206",
       "url": "/topics/metagenomics/tutorials/mothur-miseq-sop-short/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "mothur-miseq-sop-short",
@@ -981,6 +983,7 @@
       "tags": [
         "nanopore"
       ],
+      "short_id": "T00207",
       "url": "/topics/metagenomics/tutorials/nanopore-16S-metagenomics/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "nanopore-16S-metagenomics",
@@ -1269,6 +1272,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/paulzierep/"
         }
       ],
+      "short_id": "T00203",
       "url": "/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "metatranscriptomics",
@@ -1646,6 +1650,7 @@
         "assembly",
         "amr"
       ],
+      "short_id": "T00209",
       "url": "/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "plasmid-metagenomics-nanopore",
@@ -1982,6 +1987,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/tnabtaf/"
         }
       ],
+      "short_id": "T00205",
       "url": "/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "mothur-miseq-sop",
@@ -2382,6 +2388,7 @@
           "teresa-m"
         ]
       },
+      "short_id": "T00200",
       "url": "/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "beer-data-analysis",
@@ -2639,6 +2646,7 @@
         "metagenomics",
         "taxonomic profiling"
       ],
+      "short_id": "T00338",
       "url": "/topics/metagenomics/tutorials/taxonomic-profiling/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "taxonomic-profiling",
@@ -2962,6 +2970,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/paulzierep/"
         }
       ],
+      "short_id": "T00204",
       "url": "/topics/metagenomics/tutorials/metatranscriptomics-short/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "metatranscriptomics-short",
@@ -3451,6 +3460,7 @@
           "wm75"
         ]
       },
+      "short_id": "T00208",
       "url": "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "pathogen-detection-from-nanopore-foodborne-data",
@@ -4080,6 +4090,7 @@
         "assembly",
         "metagenomics"
       ],
+      "short_id": "T00202",
       "url": "/topics/metagenomics/tutorials/metagenomics-assembly/tutorial.html",
       "topic_name": "metagenomics",
       "tutorial_name": "metagenomics-assembly",
@@ -4432,6 +4443,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
       ],
+      "short_id": "S00078",
       "url": "/topics/metagenomics/tutorials/introduction/slides.html",
       "topic_name": "metagenomics",
       "tutorial_name": "introduction",

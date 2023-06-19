@@ -116,7 +116,7 @@
   "github_repository": "https://github.com/galaxyproject/training-material",
   "github_repository_branch": "main",
   "gitter_url": "https://gitter.im/Galaxy-Training-Network/Lobby",
-  "logo": "assets/images/GTN.png",
+  "logo": "assets/images/GTNLogo1000.png",
   "small_logo": "assets/images/GTN-60px.png",
   "help_url": "https://help.galaxyproject.org/",
   "other_languages": {
@@ -236,6 +236,7 @@
     "pref-signout": "fa fa-sign-out",
     "pref-notifications": "far fa-plus-square",
     "pref-delete": "fas fa-radiation",
+    "purl": "fas fa-fingerprint",
     "question": "far fa-question-circle",
     "references": "far fa-bookmark",
     "requirements": "fas fa-check-circle",
@@ -270,8 +271,8 @@
   "serving": false,
   "boxify": {
   },
-  "git_revision": "9df592fe7466e0f098d2daea62ad9471ce46169e",
-  "git_revision_short": "9df592f",
+  "git_revision": "9142c8a06a76631ea66583734e4821acd24ed772",
+  "git_revision_short": "9142c8a",
   "gtn_fork": "wee-snufkin",
   "git_tags": [
     "2019-02-07",

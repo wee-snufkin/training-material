@@ -169,6 +169,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00189",
       "url": "/topics/introduction/tutorials/galaxy-intro-peaks2genes/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "galaxy-intro-peaks2genes",
@@ -360,6 +361,7 @@
           "bebatut"
         ]
       },
+      "short_id": "T00190",
       "url": "/topics/introduction/tutorials/galaxy-intro-short/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "galaxy-intro-short",
@@ -649,6 +651,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00186",
       "url": "/topics/introduction/tutorials/galaxy-intro-101/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "galaxy-intro-101",
@@ -1917,6 +1920,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/annefou/"
         }
       ],
+      "short_id": "T00192",
       "url": "/topics/introduction/tutorials/galaxy-reproduce/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "galaxy-reproduce",
@@ -2098,6 +2102,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/blankenberg/"
         }
       ],
+      "short_id": "T00188",
       "url": "/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "galaxy-intro-ngs-data-managment",
@@ -2397,6 +2402,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallardoalba/"
         }
       ],
+      "short_id": "T00191",
       "url": "/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "galaxy-intro-strands",
@@ -2607,7 +2613,7 @@
       "time_estimation": "1h",
       "key_points": [
         "There are a lot of tools available in Galaxy for performing basic data manipulation tasks",
-        "Bacis data manipulation is often needed between steps in a larger scientific analysis in order to connect outputs from one tool to input of another.",
+        "Basic data manipulation is often needed between steps in a larger scientific analysis in order to connect outputs from one tool to input of another.",
         "There are often multiple ways/tools to achieve the same end result",
         "Having a basic understanding of data manipulation tools will make it easier to do exploratory data analysis",
         "Always read the help text of the tool before using it to get a full understanding of its workings",
@@ -2626,6 +2632,7 @@
       },
       "level": "Introductory",
       "subtopic": "next-steps",
+      "short_id": "T00184",
       "url": "/topics/introduction/tutorials/data-manipulation-olympics/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "data-manipulation-olympics",
@@ -2938,6 +2945,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
       ],
+      "short_id": "T00187",
       "url": "/topics/introduction/tutorials/galaxy-intro-101-everyone/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "galaxy-intro-101-everyone",
@@ -3252,6 +3260,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/tnabtaf/"
         }
       ],
+      "short_id": "S00073",
       "url": "/topics/introduction/tutorials/introduction/slides.html",
       "topic_name": "introduction",
       "tutorial_name": "introduction",
@@ -3386,6 +3395,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/alaaelghamry/"
         }
       ],
+      "short_id": "S00075",
       "url": "/topics/introduction/tutorials/options-for-using-galaxy/slides.html",
       "topic_name": "introduction",
       "tutorial_name": "options-for-using-galaxy",
@@ -3488,6 +3498,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pajanne/"
         }
       ],
+      "short_id": "T00193",
       "url": "/topics/introduction/tutorials/igv-introduction/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "igv-introduction",
@@ -3598,6 +3609,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "T00185",
       "url": "/topics/introduction/tutorials/dummy/tutorial.html",
       "topic_name": "introduction",
       "tutorial_name": "dummy",

@@ -222,6 +222,7 @@
         }
       ],
       "subtopic": "features",
+      "short_id": "T00010",
       "url": "/topics/admin/tutorials/interactive-tools/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "interactive-tools",
@@ -379,6 +380,7 @@
         "topic_0605",
         "topic_3071"
       ],
+      "short_id": "T00324",
       "url": "/topics/admin/tutorials/backup-cleanup/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "backup-cleanup",
@@ -531,6 +533,7 @@
         }
       ],
       "subtopic": "data",
+      "short_id": "T00329",
       "url": "/topics/admin/tutorials/reference-genomes/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "reference-genomes",
@@ -729,6 +732,7 @@
         "tools",
         "git-gat"
       ],
+      "short_id": "T00023",
       "url": "/topics/admin/tutorials/tool-management/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "tool-management",
@@ -920,6 +924,7 @@
         "ansible",
         "git-gat"
       ],
+      "short_id": "T00326",
       "url": "/topics/admin/tutorials/celery/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "celery",
@@ -1048,6 +1053,7 @@
         }
       ],
       "subtopic": "deprecated",
+      "short_id": "S00028",
       "url": "/topics/admin/tutorials/uwsgi/slides.html",
       "topic_name": "admin",
       "tutorial_name": "uwsgi",
@@ -1172,6 +1178,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
         }
       ],
+      "short_id": "S00011",
       "url": "/topics/admin/tutorials/galaxy-docker/slides.html",
       "topic_name": "admin",
       "tutorial_name": "galaxy-docker",
@@ -1285,6 +1292,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
       ],
+      "short_id": "S00009",
       "url": "/topics/admin/tutorials/empathy/slides.html",
       "topic_name": "admin",
       "tutorial_name": "empathy",
@@ -1423,6 +1431,7 @@
           ]
         }
       ],
+      "short_id": "T00016",
       "url": "/topics/admin/tutorials/object-store/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "object-store",
@@ -1564,6 +1573,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "S00022",
       "url": "/topics/admin/tutorials/stuff/slides.html",
       "topic_name": "admin",
       "tutorial_name": "stuff",
@@ -1712,6 +1722,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "S00015",
       "url": "/topics/admin/tutorials/introduction/slides.html",
       "topic_name": "admin",
       "tutorial_name": "introduction",
@@ -1815,6 +1826,7 @@
         }
       ],
       "subtopic": "maintenance",
+      "short_id": "S00026",
       "url": "/topics/admin/tutorials/troubleshooting/slides.html",
       "topic_name": "admin",
       "tutorial_name": "troubleshooting",
@@ -1959,6 +1971,7 @@
           ]
         }
       ],
+      "short_id": "T00005",
       "url": "/topics/admin/tutorials/data-library/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "data-library",
@@ -2113,6 +2126,7 @@
         }
       ],
       "subtopic": "deprecated",
+      "short_id": "S00000",
       "url": "/topics/admin/tutorials/advanced-galaxy-customisation/slides.html",
       "topic_name": "admin",
       "tutorial_name": "advanced-galaxy-customisation",
@@ -2210,6 +2224,7 @@
         ]
       },
       "subtopic": "maintenance",
+      "short_id": "S00027",
       "url": "/topics/admin/tutorials/users-groups-quotas/slides.html",
       "topic_name": "admin",
       "tutorial_name": "users-groups-quotas",
@@ -2466,6 +2481,7 @@
           "type": "none"
         }
       ],
+      "short_id": "T00017",
       "url": "/topics/admin/tutorials/pulsar/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "pulsar",
@@ -2687,6 +2703,7 @@
           ]
         }
       ],
+      "short_id": "T00007",
       "url": "/topics/admin/tutorials/external-auth/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "external-auth",
@@ -2807,6 +2824,7 @@
         }
       ],
       "subtopic": "maintenance",
+      "short_id": "S00019",
       "url": "/topics/admin/tutorials/production/slides.html",
       "topic_name": "admin",
       "tutorial_name": "production",
@@ -2938,6 +2956,7 @@
         "ansible",
         "git-gat"
       ],
+      "short_id": "T00003",
       "url": "/topics/admin/tutorials/cvmfs/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "cvmfs",
@@ -3115,6 +3134,7 @@
         "ansible",
         "git-gat"
       ],
+      "short_id": "T00009",
       "url": "/topics/admin/tutorials/gxadmin/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "gxadmin",
@@ -3233,6 +3253,7 @@
         }
       ],
       "subtopic": "cloud",
+      "short_id": "S00004",
       "url": "/topics/admin/tutorials/cloudbursting/slides.html",
       "topic_name": "admin",
       "tutorial_name": "cloudbursting",
@@ -3364,6 +3385,7 @@
       "abbreviations": {
         "TSDB": "Time Series Database"
       },
+      "short_id": "T00015",
       "url": "/topics/admin/tutorials/monitoring/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "monitoring",
@@ -3535,6 +3557,7 @@
         }
       ],
       "subtopic": "deprecated",
+      "short_id": "S00023",
       "url": "/topics/admin/tutorials/systemd-supervisor/slides.html",
       "topic_name": "admin",
       "tutorial_name": "systemd-supervisor",
@@ -3666,6 +3689,7 @@
         "topic_0605",
         "topic_3071"
       ],
+      "short_id": "T00001",
       "url": "/topics/admin/tutorials/ansible-galaxy/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "ansible-galaxy",
@@ -4054,6 +4078,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "S00008",
       "url": "/topics/admin/tutorials/database/slides.html",
       "topic_name": "admin",
       "tutorial_name": "database",
@@ -4216,6 +4241,7 @@
           ]
         }
       ],
+      "short_id": "T00002",
       "url": "/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "connect-to-compute-cluster",
@@ -4349,6 +4375,7 @@
       "tags": [
         "ansible"
       ],
+      "short_id": "T00000",
       "url": "/topics/admin/tutorials/ansible/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "ansible",
@@ -4542,6 +4569,7 @@
         }
       ],
       "subtopic": "monitoring",
+      "short_id": "S00012",
       "url": "/topics/admin/tutorials/general-monitoring/slides.html",
       "topic_name": "admin",
       "tutorial_name": "general-monitoring",
@@ -4663,6 +4691,7 @@
         "data",
         "git-gat"
       ],
+      "short_id": "T00008",
       "url": "/topics/admin/tutorials/ftp/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "ftp",
@@ -4775,6 +4804,7 @@
         }
       ],
       "subtopic": "data",
+      "short_id": "T00004",
       "url": "/topics/admin/tutorials/cvmfs-manual/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "cvmfs-manual",
@@ -4887,6 +4917,7 @@
         "wireguard",
         "networking"
       ],
+      "short_id": "T00027",
       "url": "/topics/admin/tutorials/wireguard-headscale/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "wireguard-headscale",
@@ -5025,6 +5056,7 @@
         "wireguard",
         "networking"
       ],
+      "short_id": "T00026",
       "url": "/topics/admin/tutorials/wireguard/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "wireguard",
@@ -5172,6 +5204,7 @@
       "abbreviations": {
         "CI": "Continuous Integration"
       },
+      "short_id": "T00011",
       "url": "/topics/admin/tutorials/jenkins/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "jenkins",
@@ -5276,6 +5309,7 @@
         "ansible",
         "git-gat"
       ],
+      "short_id": "T00330",
       "url": "/topics/admin/tutorials/sentry/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "sentry",
@@ -5415,6 +5449,7 @@
         "beacon",
         "git-gat"
       ],
+      "short_id": "T00325",
       "url": "/topics/admin/tutorials/beacon/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "beacon",
@@ -5565,6 +5600,7 @@
 
       ],
       "subtopic": "maintenance",
+      "short_id": "T00328",
       "url": "/topics/admin/tutorials/customization-manual/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "customization-manual",
@@ -5709,6 +5745,7 @@
           ]
         }
       ],
+      "short_id": "T00025",
       "url": "/topics/admin/tutorials/upgrading/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "upgrading",
@@ -5879,6 +5916,7 @@
         }
       ],
       "priority": 1,
+      "short_id": "T00014",
       "url": "/topics/admin/tutorials/k8s-managing-galaxy/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "k8s-managing-galaxy",
@@ -6027,6 +6065,7 @@
       "abbreviations": {
         "TIaaS": "Training Infrastructure as a Service"
       },
+      "short_id": "T00022",
       "url": "/topics/admin/tutorials/tiaas/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "tiaas",
@@ -6180,6 +6219,7 @@
       "abbreviations": {
         "TPV": "Total Perspective Vortex"
       },
+      "short_id": "T00012",
       "url": "/topics/admin/tutorials/job-destinations/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "job-destinations",
@@ -6423,6 +6463,7 @@
           ]
         }
       ],
+      "short_id": "T00024",
       "url": "/topics/admin/tutorials/tus/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "tus",
@@ -6594,7 +6635,8 @@
       "tags": [
         "ansible",
         "monitoring",
-        "git-gat"
+        "git-gat",
+        "broken"
       ],
       "requirements": [
         {
@@ -6606,6 +6648,7 @@
           ]
         }
       ],
+      "short_id": "T00018",
       "url": "/topics/admin/tutorials/reports/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "reports",
@@ -6707,6 +6750,7 @@
         "git-gat"
       ],
       "subtopic": "maintenance",
+      "short_id": "T00327",
       "url": "/topics/admin/tutorials/customization/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "customization",
@@ -6850,6 +6894,7 @@
           ]
         }
       ],
+      "short_id": "T00020",
       "url": "/topics/admin/tutorials/stop-worrying-love-systemd/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "stop-worrying-love-systemd",
@@ -7049,6 +7094,7 @@
           ]
         }
       ],
+      "short_id": "T00323",
       "url": "/topics/admin/tutorials/apptainer/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "apptainer",
@@ -7212,6 +7258,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
         }
       ],
+      "short_id": "T00006",
       "url": "/topics/admin/tutorials/database-schema/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "database-schema",
@@ -7349,6 +7396,7 @@
         }
       ],
       "priority": 2,
+      "short_id": "T00013",
       "url": "/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "k8s-deploying-galaxy",
@@ -7463,6 +7511,7 @@
         "cloud"
       ],
       "priority": 3,
+      "short_id": "T00021",
       "url": "/topics/admin/tutorials/terraform/tutorial.html",
       "topic_name": "admin",
       "tutorial_name": "terraform",

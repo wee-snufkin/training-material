@@ -81,6 +81,7 @@
         "prokaryote",
         "one-health"
       ],
+      "short_id": "T00145",
       "url": "/topics/evolution/tutorials/mtb_transmission/tutorial.html",
       "topic_name": "evolution",
       "tutorial_name": "mtb_transmission",
@@ -434,6 +435,7 @@
         "one-health",
         "phylogenetics"
       ],
+      "short_id": "T00144",
       "url": "/topics/evolution/tutorials/mtb_phylogeny/tutorial.html",
       "topic_name": "evolution",
       "tutorial_name": "mtb_phylogeny",

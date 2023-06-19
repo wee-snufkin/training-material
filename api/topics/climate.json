@@ -110,6 +110,7 @@
         "language": "python",
         "snippet": "topics/climate/tutorials/pangeo-notebook/preamble.md"
       },
+      "short_id": "T00045",
       "url": "/topics/climate/tutorials/pangeo-notebook/tutorial.html",
       "topic_name": "climate",
       "tutorial_name": "pangeo-notebook",
@@ -249,6 +250,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/annefou/"
         }
       ],
+      "short_id": "T00041",
       "url": "/topics/climate/tutorials/climate-101/tutorial.html",
       "topic_name": "climate",
       "tutorial_name": "climate-101",
@@ -447,6 +449,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/huitang-earth/"
         }
       ],
+      "short_id": "T00042",
       "url": "/topics/climate/tutorials/fates/tutorial.html",
       "topic_name": "climate",
       "tutorial_name": "fates",
@@ -678,6 +681,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/annefou/"
         }
       ],
+      "short_id": "T00044",
       "url": "/topics/climate/tutorials/pangeo/tutorial.html",
       "topic_name": "climate",
       "tutorial_name": "pangeo",
@@ -898,6 +902,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/j34ni/"
         }
       ],
+      "short_id": "S00037",
       "url": "/topics/climate/tutorials/introduction/slides.html",
       "topic_name": "climate",
       "tutorial_name": "introduction",
@@ -1033,6 +1038,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/annefou/"
         }
       ],
+      "short_id": "T00043",
       "url": "/topics/climate/tutorials/fates-jupyterlab/tutorial.html",
       "topic_name": "climate",
       "tutorial_name": "fates-jupyterlab",
@@ -1146,6 +1152,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/annefou/"
         }
       ],
+      "short_id": "T00046",
       "url": "/topics/climate/tutorials/panoply/tutorial.html",
       "topic_name": "climate",
       "tutorial_name": "panoply",

@@ -19,7 +19,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -34,12 +34,15 @@ Sentry.init({
 </script>
 
         
+        <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
+        <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/dev/tutorials/toolshed/slides.html">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
-        <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
-        <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml" />
-        <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/dev/tutorials/toolshed/slides.html" />
-        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -292,7 +295,7 @@ class: center, middle, inverse
 
 
 
-<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
+<img src="/training-material/assets/images/GTNLogo1000.png" alt="Galaxy Training Network" class="cover-logo"/>
 
 
 # Tool Shed: sharing Galaxy tools
@@ -301,7 +304,7 @@ class: center, middle, inverse
 <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/abretaud?s=27" alt="Avatar">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/loraine-gueguen/" class="contributor-badge contributor-loraine-gueguen"><img src="https://avatars.githubusercontent.com/loraine-gueguen?s=27" alt="Avatar">Loraine Guéguen</a><a href="/training-material/hall-of-fame/slegras/" class="contributor-badge contributor-slegras"><img src="https://avatars.githubusercontent.com/slegras?s=27" alt="Avatar">Stéphanie Legras</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a>
+		Authors: <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/abretaud?s=36" alt="Avatar">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/loraine-gueguen/" class="contributor-badge contributor-loraine-gueguen"><img src="https://avatars.githubusercontent.com/loraine-gueguen?s=36" alt="Avatar">Loraine Guéguen</a><a href="/training-material/hall-of-fame/slegras/" class="contributor-badge contributor-slegras"><img src="https://avatars.githubusercontent.com/slegras?s=36" alt="Avatar">Stéphanie Legras</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a>
 	</div>
 
 </div>
@@ -974,7 +977,7 @@ planemo shed_update
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 ![picture indicating exercise](../../images/exercise.png)
 
@@ -987,7 +990,7 @@ Publish your tool (seqtk_seq) in your local toolshed with Planemo
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-1&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### Step 1: Start and configure your toolshed
 - Start your toolshed (in galaxy home directory):
@@ -1001,13 +1004,13 @@ login: galaxy/azerty
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-2&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### Step 2: Use planemo to publish your tool
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-3&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### Step 2: Use planemo to publish your tool
 
@@ -1034,13 +1037,13 @@ planemo shed_create --shed_target local
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-4&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### Step 3: Update your tool and then use planemo to update your tool on the Tool Shed
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-5&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### Step 3: Update your tool and then use planemo to update your tool on the Tool Shed
 
@@ -1077,7 +1080,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/abretaud?s=27" alt="Avatar">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/loraine-gueguen/" class="contributor-badge contributor-loraine-gueguen"><img src="https://avatars.githubusercontent.com/loraine-gueguen?s=27" alt="Avatar">Loraine Guéguen</a><a href="/training-material/hall-of-fame/slegras/" class="contributor-badge contributor-slegras"><img src="https://avatars.githubusercontent.com/slegras?s=27" alt="Avatar">Stéphanie Legras</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a>
+		Authors: <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/abretaud?s=36" alt="Avatar">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/loraine-gueguen/" class="contributor-badge contributor-loraine-gueguen"><img src="https://avatars.githubusercontent.com/loraine-gueguen?s=36" alt="Avatar">Loraine Guéguen</a><a href="/training-material/hall-of-fame/slegras/" class="contributor-badge contributor-slegras"><img src="https://avatars.githubusercontent.com/slegras?s=36" alt="Avatar">Stéphanie Legras</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a>
 	</div>
 
 </div>
@@ -1085,7 +1088,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 
 <div style="display: flex;flex-direction: row;align-items: center;justify-content: center;">
 
-<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
+<img src="/training-material/assets/images/GTNLogo1000.png" alt="Galaxy Training Network" style="height: 100px;"/>
 
 
 </div>

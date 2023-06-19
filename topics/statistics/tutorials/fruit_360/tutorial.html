@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/fruit_360/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -54,7 +62,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Image classification in Galaxy with fruit 360 dataset">
         <meta property="og:description" content="Statistical Analyses for omics data and machine learning ...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -310,7 +318,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/statistics/tutorials/fruit_360/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/statistics/tutorials/fruit_360/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -357,13 +365,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/statistics/tutorials/fruit_360/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/statistics/tutorials/fruit_360/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/statistics/tutorials/fruit_360/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/statistics/tutorials/fruit_360/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/statistics/tutorials/fruit_360/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/statistics/tutorials/fruit_360/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -376,7 +384,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -413,14 +421,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-statistics">
     <h1 data-toc-skip>Image classification in Galaxy with fruit 360 dataset</h1>
@@ -430,7 +431,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/kxk302/" class="contributor-badge contributor-kxk302"><img src="https://avatars.githubusercontent.com/kxk302?s=27" alt="Avatar">Kaivan Kamali</a>
+		Authors: <a href="/training-material/hall-of-fame/kxk302/" class="contributor-badge contributor-kxk302"><img src="https://avatars.githubusercontent.com/kxk302?s=36" alt="Avatar">Kaivan Kamali</a>
 	</div>
 
 </div>
@@ -713,7 +714,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00265">https://gxy.io/GTN:T00265</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00265">https://gxy.io/GTN:T00265</a> </div>
         
     </blockquote>
     </section>
@@ -905,7 +906,7 @@ Orange:8, Peach:9.</p>
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
 
   <ol>
     <li>
@@ -919,7 +920,7 @@ Orange:8, Peach:9.</p>
       <p><strong>Rename your history</strong> to make it easy to recognize</p>
 
       <blockquote class="tip">
-        <div class="box-title tip-title" id="tip-rename-a-history"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-rename-a-history" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Rename a history<span class="fold-unfold fa fa-minus-square"></span></button></div>
+        <div class="box-title tip-title" id="tip-rename-a-history"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-rename-a-history" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Rename a history<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
         <ul>
           <li>
@@ -943,7 +944,7 @@ https://zenodo.org/record/5702887/files/test_y_10.tsv
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Open the Galaxy Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>   </li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Click <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload Data</strong> at the top of the tool panel</p>   </li>   <li>Select <i class="fa fa-edit" aria-hidden="true"></i><span class="visually-hidden">galaxy-wf-edit</span> <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
       <p><!--END_SNIPPET--></p>
     </li>
     <li>
@@ -990,7 +991,7 @@ its OHE representation.</p>
 <h3 id="extract-the-label-column-from-train_y_10"><strong>Extract the Label column from train_y_10</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-advanced-cut"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Advanced Cut</div>
+  <div class="box-title hands-on-title" id="hands-on-advanced-cut"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Advanced Cut</div>
 
   <ul>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0" title="Advanced Cut tool" aria-role="link"><strong>Advanced Cut</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0</span></span>
@@ -1010,7 +1011,7 @@ its OHE representation.</p>
 <h3 id="create-one-hot-encoding-ohe-representation-of-training-labels"><strong>Create One-Hot Encoding (OHE) representation of training labels</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-one-hot-encoding"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: One-Hot Encoding</div>
+  <div class="box-title hands-on-title" id="hands-on-one-hot-encoding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: One-Hot Encoding</div>
 
   <ul>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_to_categorical/sklearn_to_categorical/1.0.8.3" title="To categorical tool" aria-role="link"><strong>To categorical</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_to_categorical/sklearn_to_categorical/1.0.8.3</span></span>
@@ -1028,7 +1029,7 @@ its OHE representation.</p>
 <h3 id="create-a-deep-learning-model-architecture"><strong>Create a deep learning model architecture</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-model-config"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Model config</div>
+  <div class="box-title hands-on-title" id="hands-on-model-config"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Model config</div>
 
   <ul>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/0.5.0" title="Create a deep learning model architecture tool" aria-role="link"><strong>Create a deep learning model architecture</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/0.5.0</span></span>
@@ -1157,7 +1158,7 @@ highest probability is predicted by CNN. The model config can be downloaded as a
 <h3 id="create-a-deep-learning-model"><strong>Create a deep learning model</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-model-builder-optimizer-loss-function-and-fit-parameters"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Model builder (Optimizer, loss function, and fit parameters)</div>
+  <div class="box-title hands-on-title" id="hands-on-model-builder-optimizer-loss-function-and-fit-parameters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Model builder (Optimizer, loss function, and fit parameters)</div>
 
   <ul>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/0.5.0" title="Create deep learning model tool" aria-role="link"><strong>Create deep learning model</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/0.5.0</span></span>
@@ -1194,7 +1195,7 @@ the weights/biases. <em>batch_size</em> decides the size of this subset. The mod
 <h3 id="deep-learning-training-and-evaluation"><strong>Deep learning training and evaluation</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-training-the-model"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Training the model</div>
+  <div class="box-title hands-on-title" id="hands-on-training-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Training the model</div>
 
   <ul>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.2" title="Deep learning training and evaluation tool" aria-role="link"><strong>Deep learning training and evaluation</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.2</span></span>
@@ -1222,7 +1223,7 @@ the weights/biases. <em>batch_size</em> decides the size of this subset. The mod
 <h3 id="model-prediction"><strong>Model Prediction</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-testing-the-model"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Testing the model</div>
+  <div class="box-title hands-on-title" id="hands-on-testing-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Testing the model</div>
 
   <ul>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.2" title="Model Prediction tool" aria-role="link"><strong>Model Prediction</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.2</span></span>
@@ -1246,7 +1247,7 @@ in the test dataset.</p>
 <h3 id="machine-learning-visualization-extension"><strong>Machine Learning Visualization Extension</strong></h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-the-confusion-matrix"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Creating the confusion matrix</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-the-confusion-matrix"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating the confusion matrix</div>
 
   <ul>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.2" title="Machine Learning Visualization Extension tool" aria-role="link"><strong>Machine Learning Visualization Extension</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.2</span></span>
@@ -1516,19 +1517,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00265">https://gxy.io/GTN:T00265</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00265">https://gxy.io/GTN:T00265</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

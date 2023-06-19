@@ -177,6 +177,7 @@
       "tags": [
         "DIA"
       ],
+      "short_id": "T00210",
       "url": "/topics/proteomics/tutorials/DIA_Analysis_MSstats/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "DIA_Analysis_MSstats",
@@ -361,6 +362,7 @@
         "DDA",
         "human"
       ],
+      "short_id": "T00234",
       "url": "/topics/proteomics/tutorials/proteome_annotation/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "proteome_annotation",
@@ -592,6 +594,7 @@
       "tags": [
 
       ],
+      "short_id": "T00226",
       "url": "/topics/proteomics/tutorials/ntails/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "ntails",
@@ -739,6 +742,7 @@
         "DDA",
         "HeLa"
       ],
+      "short_id": "T00228",
       "url": "/topics/proteomics/tutorials/protein-id-oms/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "protein-id-oms",
@@ -1059,6 +1063,7 @@
         "TMT",
         "work-in-progress"
       ],
+      "short_id": "T00220",
       "url": "/topics/proteomics/tutorials/maxquant-msstats-tmt/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "maxquant-msstats-tmt",
@@ -1254,6 +1259,7 @@
       "tags": [
         "microbiome"
       ],
+      "short_id": "T00224",
       "url": "/topics/proteomics/tutorials/metaquantome-taxonomy/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "metaquantome-taxonomy",
@@ -1448,6 +1454,7 @@
       "tags": [
         "DIA"
       ],
+      "short_id": "T00211",
       "url": "/topics/proteomics/tutorials/DIA_Analysis_OSW/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "DIA_Analysis_OSW",
@@ -1644,6 +1651,7 @@
         "mouse",
         "imaging"
       ],
+      "short_id": "T00217",
       "url": "/topics/proteomics/tutorials/mass-spectrometry-imaging-loading-exploring-data/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "mass-spectrometry-imaging-loading-exploring-data",
@@ -1869,6 +1877,7 @@
       "tags": [
         "microbiome"
       ],
+      "short_id": "T00223",
       "url": "/topics/proteomics/tutorials/metaquantome-function/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "metaquantome-function",
@@ -2127,6 +2136,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/timothygriffin/"
         }
       ],
+      "short_id": "T00215",
       "url": "/topics/proteomics/tutorials/encyclopedia/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "encyclopedia",
@@ -2373,6 +2383,7 @@
       "tags": [
         "DIA"
       ],
+      "short_id": "T00212",
       "url": "/topics/proteomics/tutorials/DIA_lib_OSW/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "DIA_lib_OSW",
@@ -2599,6 +2610,7 @@
       "tags": [
         "microbiome"
       ],
+      "short_id": "T00222",
       "url": "/topics/proteomics/tutorials/metaquantome-data-creation/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "metaquantome-data-creation",
@@ -2814,6 +2826,7 @@
         "ML",
         "cancer"
       ],
+      "short_id": "T00225",
       "url": "/topics/proteomics/tutorials/ml-modeling-of-anti-cancer-peptides/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "ml-modeling-of-anti-cancer-peptides",
@@ -2971,6 +2984,7 @@
       "tags": [
         "human"
       ],
+      "short_id": "T00235",
       "url": "/topics/proteomics/tutorials/secretome-prediction/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "secretome-prediction",
@@ -3179,6 +3193,7 @@
       "tags": [
         "proteogenomics"
       ],
+      "short_id": "T00233",
       "url": "/topics/proteomics/tutorials/proteogenomics-novel-peptide-analysis/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "proteogenomics-novel-peptide-analysis",
@@ -3386,6 +3401,7 @@
       "tags": [
         "DDA"
       ],
+      "short_id": "T00214",
       "url": "/topics/proteomics/tutorials/database-handling/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "database-handling",
@@ -3568,6 +3584,7 @@
         "DDA",
         "label-free"
       ],
+      "short_id": "T00218",
       "url": "/topics/proteomics/tutorials/maxquant-label-free/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "maxquant-label-free",
@@ -3736,6 +3753,7 @@
       "tags": [
 
       ],
+      "short_id": "T00227",
       "url": "/topics/proteomics/tutorials/peptide-library-data-analysis/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "peptide-library-data-analysis",
@@ -3965,6 +3983,7 @@
       "tags": [
         "proteogenomics"
       ],
+      "short_id": "T00232",
       "url": "/topics/proteomics/tutorials/proteogenomics-dbsearch/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "proteogenomics-dbsearch",
@@ -4182,6 +4201,7 @@
         "DDA",
         "HeLa"
       ],
+      "short_id": "T00229",
       "url": "/topics/proteomics/tutorials/protein-id-sg-ps/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "protein-id-sg-ps",
@@ -4369,6 +4389,7 @@
       "tags": [
         "proteogenomics"
       ],
+      "short_id": "T00231",
       "url": "/topics/proteomics/tutorials/proteogenomics-dbcreation/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "proteogenomics-dbcreation",
@@ -4694,6 +4715,7 @@
         "DDA",
         "SILAC"
       ],
+      "short_id": "T00230",
       "url": "/topics/proteomics/tutorials/protein-quant-sil/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "protein-quant-sil",
@@ -4949,6 +4971,7 @@
         "DDA",
         "human"
       ],
+      "short_id": "T00213",
       "url": "/topics/proteomics/tutorials/biomarker_selection/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "biomarker_selection",
@@ -5143,6 +5166,7 @@
       "tags": [
         "label-free"
       ],
+      "short_id": "T00219",
       "url": "/topics/proteomics/tutorials/maxquant-msstats-dda-lfq/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "maxquant-msstats-dda-lfq",
@@ -5422,6 +5446,7 @@
       "tags": [
         "microbiome"
       ],
+      "short_id": "T00221",
       "url": "/topics/proteomics/tutorials/metaproteomics/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "metaproteomics",
@@ -5607,6 +5632,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/foellmelanie/"
         }
       ],
+      "short_id": "S00080",
       "url": "/topics/proteomics/tutorials/introduction/slides.html",
       "topic_name": "proteomics",
       "tutorial_name": "introduction",
@@ -5748,6 +5774,7 @@
       "tags": [
         "DDA"
       ],
+      "short_id": "T00216",
       "url": "/topics/proteomics/tutorials/labelfree-vs-labelled/tutorial.html",
       "topic_name": "proteomics",
       "tutorial_name": "labelfree-vs-labelled",

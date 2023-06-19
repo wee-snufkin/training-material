@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/admin/tutorials/tiaas/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -55,7 +63,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Training Infrastructure as a Service (TIaaS)">
         <meta property="og:description" content="Resources related to configuration and maintenance of Gal...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -436,7 +444,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/admin/tutorials/tiaas/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/tiaas/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -483,13 +491,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/tiaas/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/tiaas/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/tiaas/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/tiaas/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/tiaas/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/tiaas/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -502,7 +510,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -539,14 +547,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/admins'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-admin">
     <h1 data-toc-skip>Training Infrastructure as a Service (TIaaS)</h1>
@@ -556,7 +557,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=27" alt="Avatar">Saskia Hiltemann</a>
+		Authors: <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a>
 	</div>
 
 </div>
@@ -1253,7 +1254,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00022">https://gxy.io/GTN:T00022</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00022">https://gxy.io/GTN:T00022</a> </div>
         
     </blockquote>
     </section>
@@ -1293,7 +1294,7 @@ resources, thus reducing queue times on the day of the training.</p>
 <h1 id="setting-up-tiaas">Setting up TIaaS</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setup-tiaas"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Setup TIaaS</div>
+  <div class="box-title hands-on-title" id="hands-on-setup-tiaas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setup TIaaS</div>
 
   <ol>
     <li>
@@ -1314,7 +1315,7 @@ resources, thus reducing queue times on the day of the training.</p>
       <p>And run the install step:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-galaxy <span class="nb">install</span> <span class="nt">-p</span> roles <span class="nt">-r</span> requirements.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1385,7 +1386,7 @@ resources, thus reducing queue times on the day of the training.</p>
 </code></pre></div>      </div>
 
       <blockquote class="tip">
-        <div class="box-title tip-title" id="tip-why-does-tiaas-get-delete-privileges-on-galaxy-s-database"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-why-does-tiaas-get-delete-privileges-on-galaxy-s-database" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Why does TIaaS get `DELETE` privileges on Galaxy's Database?<span class="fold-unfold fa fa-minus-square"></span></button></div>
+        <div class="box-title tip-title" id="tip-why-does-tiaas-get-delete-privileges-on-galaxy-s-database"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-why-does-tiaas-get-delete-privileges-on-galaxy-s-database" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Why does TIaaS get `DELETE` privileges on Galaxy's Database?<span class="fold-unfold fa fa-minus-square"></span></button></div>
         <p>The <code class="language-plaintext highlighter-rouge">DELETE</code> privilege is limited in scope to one table: <code class="language-plaintext highlighter-rouge">group_role_association</code>. This allows TIaaS to
 disassociate training groups from roles in the Galaxy database after the training event date has passed, so that
 users who participated in a training return to using normal (non-training) resources after the training ends.</p>
@@ -1397,7 +1398,7 @@ to perform this process every night at midnight. You can control when this runs 
       </blockquote>
 
       <blockquote class="tip">
-        <div class="box-title tip-title" id="tip-running-the-playbook-from-scratch"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-running-the-playbook-from-scratch" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Running the playbook from scratch<span class="fold-unfold fa fa-minus-square"></span></button></div>
+        <div class="box-title tip-title" id="tip-running-the-playbook-from-scratch"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-running-the-playbook-from-scratch" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Running the playbook from scratch<span class="fold-unfold fa fa-minus-square"></span></button></div>
         <p>This is one of the few statements we’ve provided that presents difficulties when running the playbook completely from scratch on a blank machine. Setting postgresql roles is one of the first steps in our playbook, but the rules we’ve provided above depend on the Galaxy tables existing in that database. If those tables aren’t there, it will fail. If you do someday run this from scratch, you’ll find that you need to comment out those roles.</p>
       </blockquote>
     </li>
@@ -1436,7 +1437,7 @@ to perform this process every night at midnight. You can control when this runs 
       <p>Run the playbook</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1497,7 +1498,7 @@ to perform this process every night at midnight. You can control when this runs 
 <p>Let’s see it in action!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-using-tiaas"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Using TIaaS</div>
+  <div class="box-title hands-on-title" id="hands-on-using-tiaas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Using TIaaS</div>
 
   <ol>
     <li><strong>Create a new TIaaS request</strong>
@@ -1576,7 +1577,7 @@ to perform this process every night at midnight. You can control when this runs 
 </blockquote>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-note-gdpr-assistance"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Note: GDPR assistance</div>
+  <div class="box-title comment-title" id="comment-note-gdpr-assistance"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Note: GDPR assistance</div>
 
   <p>Since this setup tracks additional personal information (submitter name &amp; email, users in the queue view), TIaaS includes some always-on features to assist with your GDPR compliance.</p>
 
@@ -1596,7 +1597,7 @@ to perform this process every night at midnight. You can control when this runs 
 <p>In order to achieve this, we first need some way to sort the jobs of the training users into these private queues, while letting the other jobs continue on. So let’s create a <em>traffic controller</em> to figure out where jobs belong.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-writing-a-dynamic-job-destination"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Writing a dynamic job destination</div>
+  <div class="box-title hands-on-title" id="hands-on-writing-a-dynamic-job-destination"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Writing a dynamic job destination</div>
 
   <ol>
     <li>
@@ -1647,7 +1648,7 @@ to perform this process every night at midnight. You can control when this runs 
       <p>Run the playbook</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1841,19 +1842,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00022">https://gxy.io/GTN:T00022</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00022">https://gxy.io/GTN:T00022</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

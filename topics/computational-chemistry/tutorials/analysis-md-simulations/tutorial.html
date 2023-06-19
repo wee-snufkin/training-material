@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -57,7 +65,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Analysis of molecular dynamics simulations">
         <meta property="og:description" content="Modelling, simulation and analysis of biomolecular systems">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -378,7 +386,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -425,13 +433,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -444,7 +452,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -481,14 +489,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxycomputationalchemistry/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-computational-chemistry">
     <h1 data-toc-skip>Analysis of molecular dynamics simulations</h1>
@@ -498,7 +499,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/chrisbarnettster/" class="contributor-badge contributor-chrisbarnettster"><img src="https://avatars.githubusercontent.com/chrisbarnettster?s=27" alt="Avatar">Christopher Barnett</a><a href="/training-material/hall-of-fame/tsenapathi/" class="contributor-badge contributor-tsenapathi"><img src="https://avatars.githubusercontent.com/tsenapathi?s=27" alt="Avatar">Tharindu Senapathi</a><a href="/training-material/hall-of-fame/simonbray/" class="contributor-badge contributor-simonbray"><img src="https://avatars.githubusercontent.com/simonbray?s=27" alt="Avatar">Simon Bray</a><a href="/training-material/hall-of-fame/nagoue/" class="contributor-badge contributor-nagoue"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/nagoue?s=27" alt="Avatar">Nadia Goué</a>
+		Authors: <a href="/training-material/hall-of-fame/chrisbarnettster/" class="contributor-badge contributor-chrisbarnettster"><img src="https://avatars.githubusercontent.com/chrisbarnettster?s=36" alt="Avatar">Christopher Barnett</a><a href="/training-material/hall-of-fame/tsenapathi/" class="contributor-badge contributor-tsenapathi"><img src="https://avatars.githubusercontent.com/tsenapathi?s=36" alt="Avatar">Tharindu Senapathi</a><a href="/training-material/hall-of-fame/simonbray/" class="contributor-badge contributor-simonbray"><img src="https://avatars.githubusercontent.com/simonbray?s=36" alt="Avatar">Simon Bray</a><a href="/training-material/hall-of-fame/nagoue/" class="contributor-badge contributor-nagoue"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/nagoue?s=36" alt="Avatar">Nadia Goué</a>
 	</div>
 
 </div>
@@ -766,7 +767,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00047">https://gxy.io/GTN:T00047</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00047">https://gxy.io/GTN:T00047</a> </div>
         
     </blockquote>
     </section>
@@ -815,7 +816,7 @@ Sentry.init({
 <p>The data required can be generated by completing the <a href="/training-material/topics/computational-chemistry/tutorials/md-simulation-namd/tutorial.html">NAMD simulation tutorial</a>.  Access it from your history. Alternatively, download the data from the Zenodo link provided.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-cellulose-simulation-trajectory"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Upload cellulose simulation trajectory</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-cellulose-simulation-trajectory"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload cellulose simulation trajectory</div>
 
   <ol>
     <li>
@@ -833,7 +834,7 @@ https://zenodo.org/record/2537734/files/cbh1test.pdb
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Open the Galaxy Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>   </li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Click <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload Data</strong> at the top of the tool panel</p>   </li>   <li>Select <i class="fa fa-edit" aria-hidden="true"></i><span class="visually-hidden">galaxy-wf-edit</span> <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
       <p><!--END_SNIPPET--></p>
     </li>
     <li>
@@ -856,7 +857,7 @@ https://zenodo.org/record/2537734/files/cbh1test.pdb
 <p>RMSD, or root-mean-square deviation, is a standard measure of structural distance between coordinates. It measures the average distance between a group of atoms (e.g. backbone atoms of a protein). If we calculate RMSD between two sets of atomic coordinates - for example, two time points from the trajectory - the value is a measure of how much the protein conformation has changed. <a href="https://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions">Wikipedia</a> provides more information.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calculate-rmsd"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Calculate RMSD</div>
+  <div class="box-title hands-on-title" id="hands-on-calculate-rmsd"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Calculate RMSD</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsd/bio3d_rmsd/2.3.4" title="RMSD Analysis tool" aria-role="link"><strong>RMSD Analysis</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsd/bio3d_rmsd/2.3.4</span></span> with the following parameters:</p>
   <ul>
@@ -871,12 +872,12 @@ https://zenodo.org/record/2537734/files/cbh1test.pdb
 <figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="/training-material/topics/computational-chemistry/images/RMSD_Histogram_Plot_34.png" alt="Snapshot of RMSD histogram. " width="480" height="480" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> RMSD histogram for a short CBH1 simulation</figcaption></figure>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <p>What do the features in the RMSD plot tell us?</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <p>The increase in the RMSD plot with time shows the protein steadily deviates from its original conformation.</p>
 
     <p>The three peaks visible in the histogram suggests the presence of three main conformations which are accessed during the trajectory.</p>
@@ -888,7 +889,7 @@ https://zenodo.org/record/2537734/files/cbh1test.pdb
 <p>The root-mean-square fluctuation (RMSF) measures the average deviation of a particle (e.g. a protein residue) over time from a reference position (typically the time-averaged position of the particle). Thus, RMSF analyzes the portions of structure that are fluctuating from their mean structure the most (or least).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calculate-rmsf"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Calculate RMSF</div>
+  <div class="box-title hands-on-title" id="hands-on-calculate-rmsf"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Calculate RMSF</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsf/bio3d_rmsf/2.3.4" title="RMSF Analysis tool" aria-role="link"><strong>RMSF Analysis</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsf/bio3d_rmsf/2.3.4</span></span> with the following parameters:
@@ -905,12 +906,12 @@ https://zenodo.org/record/2537734/files/cbh1test.pdb
 <figure id="figure-3" style="max-width: 90%; margin:auto;"><img src="/training-material/topics/computational-chemistry/images/rmsf_plot_23.png" alt="Snapshot of RMSF plot. " width="480" height="480" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> RMSF plot for a short CBH1 simulation</figcaption></figure>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <p>What can we learn from the features in the RMSF plot?</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <p>Higher RMSF values most likely are loop regions with more conformational flexibility, where the structure is not as well defined.</p>
 
     <p>This allows a link with experimental spectroscopic techniques which detect the secondary structure of a protein.</p>
@@ -930,7 +931,7 @@ https://zenodo.org/record/2537734/files/cbh1test.pdb
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calculate-pca"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Calculate PCA</div>
+  <div class="box-title hands-on-title" id="hands-on-calculate-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Calculate PCA</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_pca/bio3d_pca/2.3.4" title="PCA tool" aria-role="link"><strong>PCA</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_pca/bio3d_pca/2.3.4</span></span> with the following parameters:
       <ul>
@@ -958,12 +959,12 @@ https://zenodo.org/record/2537734/files/cbh1test.pdb
 <figure id="figure-4" style="max-width: 90%; margin:auto;"><img src="/training-material/topics/computational-chemistry/images/PCA_plot_46.png" alt="Snapshot of PCA plot. " width="480" height="480" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 4</strong>:</span> PCA plot for a short CBH1 simulation</figcaption></figure>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <p>What do the features in the RMSD plot tell us? Do the principal coordinates have a meaning?</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <p>Here, PCA shows the statistically meaningful conformations in the CBH1 trajectory. The principal motions within the trajectory and the vital motions needed for conformational changes can be identified. Two distinct groupings along the PC1 plane, indicating a non-periodic conformational change, are identified. The groupings along the PC2 and PC3 planes do not completely cluster separately, implying that these global motions are periodic. The PC1 is linked to an active site motion that limits the motion to a key glycosidic bond.</p>
   </blockquote>
 </blockquote>
@@ -973,7 +974,7 @@ https://zenodo.org/record/2537734/files/cbh1test.pdb
 <figure id="figure-5" style="max-width: 90%; margin:auto;"><img src="/training-material/topics/computational-chemistry/images/workflow_confanalysis.png" alt="Snapshot of conformational analysis workflow. " width="934" height="687" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 5</strong>:</span> A simple analysis workflow</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-a-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Upload a workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-a-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload a workflow</div>
 
   <ol>
     <li>
@@ -1258,19 +1259,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00047">https://gxy.io/GTN:T00047</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00047">https://gxy.io/GTN:T00047</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

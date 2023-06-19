@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/ecology/tutorials/panoply_ebv/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -57,7 +65,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Visualize EBV cube data with Panoply netCDF viewer">
         <meta property="og:description" content="Learn to analyse Ecological data through Galaxy.">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -363,7 +371,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/ecology/tutorials/panoply_ebv/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/ecology/tutorials/panoply_ebv/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -410,13 +418,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/ecology/tutorials/panoply_ebv/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/ecology/tutorials/panoply_ebv/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/ecology/tutorials/panoply_ebv/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/ecology/tutorials/panoply_ebv/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/ecology/tutorials/panoply_ebv/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/ecology/tutorials/panoply_ebv/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -429,7 +437,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -466,14 +474,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-ecology">
     <h1 data-toc-skip>Visualize EBV cube data with Panoply netCDF viewer</h1>
@@ -483,7 +484,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=27" alt="Avatar">Yvan Le Bras</a><a href="/training-material/hall-of-fame/colineroyaux/" class="contributor-badge contributor-colineroyaux"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/colineroyaux?s=27" alt="Avatar">Coline Royaux</a><a href="/training-material/hall-of-fame/Marie59/" class="contributor-badge contributor-Marie59"><img src="https://avatars.githubusercontent.com/Marie59?s=27" alt="Avatar">Marie Josse</a><a href="/training-material/hall-of-fame/annefou/" class="contributor-badge contributor-annefou"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annefou?s=27" alt="Avatar">Anne Fouilloux</a>
+		Authors: <a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=36" alt="Avatar">Yvan Le Bras</a><a href="/training-material/hall-of-fame/colineroyaux/" class="contributor-badge contributor-colineroyaux"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/colineroyaux?s=36" alt="Avatar">Coline Royaux</a><a href="/training-material/hall-of-fame/Marie59/" class="contributor-badge contributor-Marie59"><img src="https://avatars.githubusercontent.com/Marie59?s=36" alt="Avatar">Marie Josse</a><a href="/training-material/hall-of-fame/annefou/" class="contributor-badge contributor-annefou"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annefou?s=36" alt="Avatar">Anne Fouilloux</a>
 	</div>
 
 </div>
@@ -651,7 +652,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00131">https://gxy.io/GTN:T00131</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00131">https://gxy.io/GTN:T00131</a> </div>
         
     </blockquote>
     </section>
@@ -669,7 +670,7 @@ Sentry.init({
                 <h1 id="introduction">Introduction</h1>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment</div>
+  <div class="box-title comment-title" id="comment"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
 
   <p>This tutorial is significantly based on <a href="https://www.giss.nasa.gov/tools/panoply/help/">the Panoply documentation</a> and the <a href="/training-material/topics/climate/tutorials/panoply/tutorial.html">Galaxy climate dedicated tutorial</a>.</p>
 
@@ -711,7 +712,7 @@ Sentry.init({
 </blockquote>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-background"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Background</div>
+  <div class="box-title comment-title" id="comment-background"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Background</div>
 
   <p>In this tutorial, we will be focusing on the usage of Biodiversity data in <a href="https://en.wikipedia.org/wiki/NetCDF">Network Common data Form</a> (netCDF) because it is the data format used to store data on the EBV data portal.
 We will be using a freely available dataset representing Essential Biodiversity Variables from <a href="https://portal.geobon.org/home">GEO BON data portal</a>. We will learn to use panoply to visualize the Local bird diversity for last century.</p>
@@ -728,7 +729,7 @@ We will be using a freely available dataset representing Essential Biodiversity 
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
 
   <ol>
     <li>
@@ -745,7 +746,7 @@ We will be using a freely available dataset representing Essential Biodiversity 
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Open the Galaxy Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>   </li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Click <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload Data</strong> at the top of the tool panel</p>   </li>   <li>Select <i class="fa fa-edit" aria-hidden="true"></i><span class="visually-hidden">galaxy-wf-edit</span> <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
       <p><!--END_SNIPPET--></p>
 
       <!--SNIPPET-->
@@ -774,7 +775,7 @@ We will be using a freely available dataset representing Essential Biodiversity 
       <p><strong>Add a tag</strong> <i class="fas fa-tags" aria-hidden="true"></i><span class="visually-hidden">galaxy-tags</span> to the dataset corresponding to <code class="language-plaintext highlighter-rouge">#EBV</code></p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">   <div class="box-title tip-title" id="tip-adding-a-tag"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-adding-a-tag" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Adding a tag<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on the dataset</li>   <li>Click on <i class="fas fa-tags" aria-hidden="true"></i><span class="visually-hidden">galaxy-tags</span> <strong>Add Tags</strong></li>   <li>     <p>Add a tag starting with <code class="language-plaintext highlighter-rouge">#</code></p>     <p>Tags starting with <code class="language-plaintext highlighter-rouge">#</code> will be automatically propagated to the outputs of tools using this dataset.</p>   </li>   <li>Check that the tag is appearing below the dataset name</li> </ul> </blockquote>
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-adding-a-tag"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-adding-a-tag" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Adding a tag<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ol>   <li>Click on the dataset to expand it</li>   <li>Click on <strong>Add Tags</strong> <i class="fas fa-tags" aria-hidden="true"></i><span class="visually-hidden">galaxy-tags</span></li>   <li>Add a tag  starting with <code class="language-plaintext highlighter-rouge">#</code>     <ul>       <li>Tags starting with <code class="language-plaintext highlighter-rouge">#</code> will be automatically propagated to the outputs of tools using this dataset.</li>     </ul>   </li>   <li>Press <kbd>Enter</kbd></li>   <li>Check that the tag appears below the dataset name</li> </ol> </blockquote>
       <p><!--END_SNIPPET--></p>
     </li>
   </ol>
@@ -786,12 +787,12 @@ We will be using a freely available dataset representing Essential Biodiversity 
 <h2 id="opening-up-panoply">Opening up Panoply</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-launch-panoply"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Launch Panoply</div>
+  <div class="box-title hands-on-title" id="hands-on-launch-panoply"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Launch Panoply</div>
 
   <p>Panoply is available as a Galaxy interactive tool and may not be available on all Galaxy servers.</p>
 
   <blockquote class="tip">
-    <div class="box-title tip-title" id="tip-launch-panoply-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-panoply-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Launch Panoply in Galaxy<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title tip-title" id="tip-launch-panoply-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-panoply-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Launch Panoply in Galaxy<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <p>Currently Panoply in Galaxy is available on useGalaxy.eu instance, on the “Interactive tools” tool panel section.</p>
 
     <ol>
@@ -811,7 +812,7 @@ We will be using a freely available dataset representing Essential Biodiversity 
 <h2 id="inspect-metadata">Inspect metadata</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-dataset"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Inspect dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect dataset</div>
 
   <ol>
     <li>
@@ -820,12 +821,12 @@ We will be using a freely available dataset representing Essential Biodiversity 
       <p>Here you can look at the dataset (martins_comcom_id1_20220208_v1.nc) and related variables (<code class="language-plaintext highlighter-rouge">crs</code>, <code class="language-plaintext highlighter-rouge">entity</code>, <code class="language-plaintext highlighter-rouge">lat</code>, <code class="language-plaintext highlighter-rouge">lon</code>, <code class="language-plaintext highlighter-rouge">metric_1</code>, <code class="language-plaintext highlighter-rouge">ebv_cube</code>, <code class="language-plaintext highlighter-rouge">time</code>)</p>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <p>what is the unit of the <code class="language-plaintext highlighter-rouge">ebv_cube</code> variable of <code class="language-plaintext highlighter-rouge">metric_1</code>and its shape?</p>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
           <p>The unit of <strong>ebv_cube</strong> is “Percentage points”. <strong>ebv_cube</strong> is a 4D array (entity, time, latitude, longitude).</p>
         </blockquote>
@@ -835,12 +836,12 @@ We will be using a freely available dataset representing Essential Biodiversity 
       <p>Take a look at the general properties of the dataset</p>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <p>Can you find the title, summary, EBV class and EBV name informations?</p>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
           <p>Double click on “martins_comcom_id1_2022…” element of the “Name” column to display these general information
 Title: Local bird diversity (cSAR/BES-SIM).
@@ -851,12 +852,12 @@ EBV name: Taxonomic and phylogenetic diversity.</p>
       </blockquote>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <p>Can you find the biodviersity metrics names?</p>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
           <p>metric_1: Relative change in the number of species (%)
 metric_2: Absolute change in the number of species</p>
@@ -869,14 +870,14 @@ metric_2: Absolute change in the number of species</p>
 <h2 id="create-geo-referenced-longitude-latitude-plot">Create Geo-referenced Longitude-Latitude plot</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-geographical-map"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: geographical map</div>
+  <div class="box-title hands-on-title" id="hands-on-geographical-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: geographical map</div>
 
   <ol>
     <li>Double click on the variable <strong>ebv_cube</strong> from <code class="language-plaintext highlighter-rouge">metric_1</code> and click on <strong>Create</strong>
       <figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/map0.PNG" alt="Panoply create Latitude longitude map. " width="1645" height="741" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Create map</figcaption></figure>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question-3"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question-3"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <ol>
           <li>What does it shows?</li>
@@ -885,7 +886,7 @@ metric_2: Absolute change in the number of species</p>
         </ol>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution-3"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-3" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution-3"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-3" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
           <ol>
             <li>The plot represent the relative change in the number of species (%).
@@ -925,7 +926,7 @@ You need to make sure to save all your plot in the <em>outputs</em> folder other
 <h2 id="changing-map-projection">Changing map projection</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-change-projection"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Change projection</div>
+  <div class="box-title hands-on-title" id="hands-on-change-projection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Change projection</div>
 
   <p>From your previous plot window, click on Tab <strong>Map</strong> and change <strong>Projection</strong>. Try a few of them and save each of your plot with <strong>File</strong> –&gt; <strong>Save Image As</strong>.</p>
 
@@ -936,7 +937,7 @@ You need to make sure to save all your plot in the <em>outputs</em> folder other
 <h2 id="export-animation">Export Animation</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-export-animation"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Export animation</div>
+  <div class="box-title hands-on-title" id="hands-on-export-animation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Export animation</div>
 
   <ol>
     <li>From your previous plot window, click on <strong>File</strong> and select <strong>Export Animation</strong>. Save your plot using either <strong>MOV</strong> or <strong>AVI</strong> format.
@@ -948,7 +949,7 @@ You will be able to download the resulting movie from Galaxy once you quit Panop
 <h2 id="quit-panoply">Quit Panoply</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quit-panoply-to-keep-your-plots"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Quit Panoply to keep your plots</div>
+  <div class="box-title hands-on-title" id="hands-on-quit-panoply-to-keep-your-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quit Panoply to keep your plots</div>
 
   <ol>
     <li>To make sure all your plots stored in <strong>outputs</strong> folder get exported to Galaxy, you need to quit panoply:
@@ -1121,19 +1122,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00131">https://gxy.io/GTN:T00131</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00131">https://gxy.io/GTN:T00131</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

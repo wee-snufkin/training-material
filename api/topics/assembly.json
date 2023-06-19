@@ -91,6 +91,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/slugger70/"
         }
       ],
+      "short_id": "T00034",
       "url": "/topics/assembly/tutorials/general-introduction/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "general-introduction",
@@ -384,6 +385,7 @@
         "VGP": "Vertebrate Genome Project",
         "G10K": "Genome 10K"
       },
+      "short_id": "T00040",
       "url": "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "vgp_workflow_training",
@@ -714,6 +716,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00032",
       "url": "/topics/assembly/tutorials/ecoli_comparison/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "ecoli_comparison",
@@ -990,6 +993,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/annasyme/"
         }
       ],
+      "short_id": "T00331",
       "url": "/topics/assembly/tutorials/largegenome/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "largegenome",
@@ -1422,6 +1426,7 @@
           ]
         }
       ],
+      "short_id": "T00036",
       "url": "/topics/assembly/tutorials/mrsa-illumina/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "mrsa-illumina",
@@ -1700,6 +1705,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/annasyme/"
         }
       ],
+      "short_id": "T00030",
       "url": "/topics/assembly/tutorials/chloroplast-assembly/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "chloroplast-assembly",
@@ -1991,6 +1997,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/slugger70/"
         }
       ],
+      "short_id": "T00038",
       "url": "/topics/assembly/tutorials/unicycler-assembly/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "unicycler-assembly",
@@ -2215,6 +2222,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
       ],
+      "short_id": "T00031",
       "url": "/topics/assembly/tutorials/debruijn-graph-assembly/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "debruijn-graph-assembly",
@@ -2380,6 +2388,7 @@
         "assembly",
         "metagenomics"
       ],
+      "short_id": "T00035",
       "url": "/topics/assembly/tutorials/metagenomics-assembly/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "metagenomics-assembly",
@@ -2752,6 +2761,7 @@
         "ASM": "assembly",
         "QV": "consensus accuracy quality value"
       },
+      "short_id": "T00039",
       "url": "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "vgp_genome_assembly",
@@ -3213,6 +3223,7 @@
       "abbreviations": {
         "SVs": "Structural Variations"
       },
+      "short_id": "T00037",
       "url": "/topics/assembly/tutorials/mrsa-nanopore/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "mrsa-nanopore",
@@ -3562,6 +3573,7 @@
           ]
         }
       ],
+      "short_id": "T00028",
       "url": "/topics/assembly/tutorials/assembly-quality-control/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "assembly-quality-control",
@@ -3769,6 +3781,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
         }
       ],
+      "short_id": "T00029",
       "url": "/topics/assembly/tutorials/assembly-with-preprocessing/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "assembly-with-preprocessing",
@@ -4141,6 +4154,7 @@
           ]
         }
       ],
+      "short_id": "T00033",
       "url": "/topics/assembly/tutorials/flye-assembly/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "flye-assembly",
@@ -4336,6 +4350,7 @@
       },
       "level": "Introductory",
       "time_estimation": "1h",
+      "short_id": "S00034",
       "url": "/topics/assembly/tutorials/get-started-genome-assembly/slides.html",
       "topic_name": "assembly",
       "tutorial_name": "get-started-genome-assembly",
@@ -4535,6 +4550,7 @@
         }
       ],
       "level": "Intermediate",
+      "short_id": "S00029",
       "url": "/topics/assembly/tutorials/algorithms-introduction/slides.html",
       "topic_name": "assembly",
       "tutorial_name": "algorithms-introduction",

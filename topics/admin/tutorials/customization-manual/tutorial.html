@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/admin/tutorials/customization-manual/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -54,7 +62,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Customizing the look of Galaxy (Manual)">
         <meta property="og:description" content="Resources related to configuration and maintenance of Gal...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -260,7 +268,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/admin/tutorials/customization-manual/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/customization-manual/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -307,13 +315,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/customization-manual/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/customization-manual/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/customization-manual/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/customization-manual/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/customization-manual/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/customization-manual/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -326,7 +334,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -363,14 +371,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/admins'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-admin">
     <h1 data-toc-skip>Customizing the look of Galaxy (Manual)</h1>
@@ -386,7 +387,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/ElectronicBlueberry/" class="contributor-badge contributor-ElectronicBlueberry"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/ElectronicBlueberry?s=27" alt="Avatar">Laila Los</a>
+			<a href="/training-material/hall-of-fame/ElectronicBlueberry/" class="contributor-badge contributor-ElectronicBlueberry"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/ElectronicBlueberry?s=36" alt="Avatar">Laila Los</a>
 		</td>
 	</tr>
 	
@@ -398,7 +399,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a></td>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a></td>
 	</tr>
 	
 
@@ -513,7 +514,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00328">https://gxy.io/GTN:T00328</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00328">https://gxy.io/GTN:T00328</a> </div>
         
     </blockquote>
     </section>
@@ -560,7 +561,7 @@ It is an easy way to set your instance apart, and make it more identifiable.</p>
 <figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="images/galaxy-europe.png" alt="screenshot of the start page of Galaxy Europe. " width="1450" height="687" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Galaxy Europe uses the brand text \"Europe\"</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-customising-the-branding"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Customising the Branding</div>
+  <div class="box-title hands-on-title" id="hands-on-customising-the-branding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Customising the Branding</div>
 
   <ol>
     <li>
@@ -588,7 +589,7 @@ It is what users see when first navigating to your instance.
 This page can be used to communicate what your instance is about, and share news and updates with your users.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-a-custom-welcome-page"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Creating a custom welcome page</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-a-custom-welcome-page"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating a custom welcome page</div>
 
   <ol>
     <li>
@@ -632,7 +633,7 @@ This will act as the heading for your start-page, which can help assistive techn
 </blockquote>
 
 <blockquote class="tip">
-  <div class="box-title tip-title" id="tip-use-an-iframe"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-use-an-iframe" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Use an IFrame!<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title tip-title" id="tip-use-an-iframe"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-use-an-iframe" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Use an IFrame!<span class="fold-unfold fa fa-minus-square"></span></button></div>
   <p>A lot of the UseGalaxy.* instances choose to use their <code class="language-plaintext highlighter-rouge">welcome.html</code> to display an IFrame to a different site,
 e.g. the GalaxyProject.org site, or a sub-site thereof.</p>
 
@@ -643,7 +644,7 @@ without having to re-deploy Galaxy every time.</p>
 </blockquote>
 
 <blockquote class="tip">
-  <div class="box-title tip-title" id="tip-styling-your-welcome"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-styling-your-welcome" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Styling your Welcome<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title tip-title" id="tip-styling-your-welcome"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-styling-your-welcome" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Styling your Welcome<span class="fold-unfold fa fa-minus-square"></span></button></div>
   <p>As in our example welcome.html, we’ve loaded the default Galaxy CSS to keep
 it consistent with the surrounding material. If you wish to load a different
 CSS file, or set a different font for the main panel, you can easily do that
@@ -656,7 +657,7 @@ by adding whatever CSS you like.</p>
 You can even offer several options, to allow users to switch to the default if they prefer it, or another look all together.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-configuring-themes"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Configuring Themes</div>
+  <div class="box-title hands-on-title" id="hands-on-configuring-themes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configuring Themes</div>
 
   <ol>
     <li>
@@ -872,19 +873,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00328">https://gxy.io/GTN:T00328</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00328">https://gxy.io/GTN:T00328</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/admin/tutorials/stop-worrying-love-systemd/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -54,7 +62,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: How I learned to stop worrying and love the systemd">
         <meta property="og:description" content="Resources related to configuration and maintenance of Gal...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -299,7 +307,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/admin/tutorials/stop-worrying-love-systemd/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/stop-worrying-love-systemd/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -346,13 +354,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/stop-worrying-love-systemd/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/stop-worrying-love-systemd/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/stop-worrying-love-systemd/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/stop-worrying-love-systemd/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/stop-worrying-love-systemd/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/stop-worrying-love-systemd/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -365,7 +373,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -402,14 +410,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/admins'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-admin">
     <h1 data-toc-skip>How I learned to stop worrying and love the systemd</h1>
@@ -425,7 +426,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -437,7 +438,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge contributor-natefoo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/natefoo?s=27" alt="Avatar">Nate Coraor</a></td>
+			<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge contributor-natefoo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/natefoo?s=36" alt="Avatar">Nate Coraor</a></td>
 	</tr>
 	
 
@@ -445,7 +446,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people tested the tutorial to ensure it works correctly for students, or reported issues with the tutorial.">Tester(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge contributor-natefoo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/natefoo?s=27" alt="Avatar">Nate Coraor</a></td>
+			<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge contributor-natefoo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/natefoo?s=36" alt="Avatar">Nate Coraor</a></td>
 	</tr>
 	
 
@@ -682,7 +683,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00020">https://gxy.io/GTN:T00020</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00020">https://gxy.io/GTN:T00020</a> </div>
         
     </blockquote>
     </section>
@@ -912,13 +913,13 @@ graphical.target reached after 11.547s in userspace
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemd-analyze plot <span class="o">&gt;</span> plot.svg
 </code></pre></div></div>
 
-<figure id="figure-1" style="max-width: 90%; margin:auto;"><div style="overflow-x: auto"><object data="images/plot.svg" type="image/svg+xml">waterfall graphic of systemd boot time, cloud-init has the most, largest red bars.</object></div><small><a href="images/plot.svg">Open image in new tab</a></small><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Notice how many units wait for network to finish being ready, and are stuck until that is ready. This image was generated from a training VM. Can you spot Galaxy? It doesn't show the red bars, because it does not currently notify systemd when it's done starting up.</figcaption></figure>
+<figure id="figure-1" style="max-width: 90%; margin:auto;"><div style="overflow-x: auto"><object data="images/plot.svg" type="image/svg+xml" alt="waterfall graphic of systemd boot time, cloud-init has the most, largest red bars. ">waterfall graphic of systemd boot time, cloud-init has the most, largest red bars.</object></div><small><a target="_blank" href="images/plot.svg">Open image in new tab</a></small><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Notice how many units wait for network to finish being ready, and are stuck until that is ready. This image was generated from a training VM. Can you spot Galaxy? It doesn't show the red bars, because it does not currently notify systemd when it's done starting up.</figcaption></figure>
 
 <h2 id="procons-of-systemd">Pro/Cons of systemd</h2>
 
 <blockquote class="code-2col">
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-pros"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output: Pros</div>
+    <div class="box-title code-out-title" id="code-out-pros"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Pros</div>
     <ul>
       <li>CGroups, to reap children!</li>
       <li>CGroups, for hard memory/cpu limits</li>
@@ -929,7 +930,7 @@ graphical.target reached after 11.547s in userspace
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-cons"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Cons</div>
+    <div class="box-title code-in-title" id="code-in-cons"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Cons</div>
     <ul>
       <li>It’s new and requires time to learn
         <ul>
@@ -966,7 +967,7 @@ graphical.target reached after 11.547s in userspace
 
 <blockquote class="code-2col">
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-pros-1"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output: Pros</div>
+    <div class="box-title code-out-title" id="code-out-pros-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Pros</div>
     <ul>
       <li>Easier testing, you can trigger units any time</li>
       <li>Cgroups!</li>
@@ -977,7 +978,7 @@ graphical.target reached after 11.547s in userspace
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-cons-1"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Cons</div>
+    <div class="box-title code-in-title" id="code-in-cons-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Cons</div>
     <ul>
       <li>Two files, instead of a single line. It <em>is</em> annoying, you’re not wrong. Maybe write an ansible role that translates it.</li>
       <li>No <code class="language-plaintext highlighter-rouge">MALITO</code> functionality built in.</li>
@@ -1087,7 +1088,7 @@ OnFailure=failure-notification@%n
 <h2 id="per-unit-logs">Per Unit Logs</h2>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-the-journalctl-way"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output: The journalctl Way</div>
+  <div class="box-title code-out-title" id="code-out-the-journalctl-way"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: The journalctl Way</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>journalctl <span class="nt">-u</span> galaxy
 </code></pre></div>  </div>
 </blockquote>
@@ -1100,7 +1101,7 @@ OnFailure=failure-notification@%n
 
 <blockquote class="code-2col">
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-pros-2"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output: Pros</div>
+    <div class="box-title code-out-title" id="code-out-pros-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Pros</div>
     <p>You did not need to know or remember:</p>
 
     <ul>
@@ -1110,7 +1111,7 @@ OnFailure=failure-notification@%n
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-cons-2"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Cons</div>
+    <div class="box-title code-in-title" id="code-in-cons-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Cons</div>
     <ul>
       <li>Can’t just <code class="language-plaintext highlighter-rouge">cat</code> it.</li>
     </ul>
@@ -1130,7 +1131,7 @@ OnFailure=failure-notification@%n
 <p>And then you can simply</p>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-the-journalctl-way-1"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output: The journalctl Way</div>
+  <div class="box-title code-out-title" id="code-out-the-journalctl-way-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: The journalctl Way</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>journalctl <span class="nt">-f</span> <span class="nt">-u</span> galaxy<span class="k">*</span> <span class="nt">-u</span> nginx <span class="nt">-u</span> postgresql
 </code></pre></div>  </div>
 </blockquote>
@@ -1139,7 +1140,7 @@ OnFailure=failure-notification@%n
 
 <blockquote class="code-2col">
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-pros-3"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output: Pros</div>
+    <div class="box-title code-out-title" id="code-out-pros-3"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Pros</div>
     <ul>
       <li>Tail multiple units at once</li>
       <li>Again don’t have to know where the files are</li>
@@ -1148,7 +1149,7 @@ OnFailure=failure-notification@%n
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-cons-3"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Cons</div>
+    <div class="box-title code-in-title" id="code-in-cons-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Cons</div>
     <p>?</p>
   </blockquote>
 </blockquote>
@@ -1168,14 +1169,14 @@ OnFailure=failure-notification@%n
 
 <blockquote class="code-2col">
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-the-old-way"><i class="far fa-keyboard" aria-hidden="true"></i> Input: The Old Way</div>
+    <div class="box-title code-in-title" id="code-in-the-old-way"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: The Old Way</div>
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zcat /var/log/<span class="k">*</span> | egrep <span class="s2">"(Jul</span><span class="se">\s</span><span class="s2">*1 11:4.:..|2022-07-01 11:4.:..)"</span>
 </code></pre></div>    </div>
     <p>Hope everything logs in the same timezone! And no one uses UTC when there’s a different system time configured.</p>
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-the-journalctl-way-2"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output: The journalctl Way</div>
+    <div class="box-title code-out-title" id="code-out-the-journalctl-way-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: The journalctl Way</div>
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>journalctl <span class="nt">--since</span> <span class="s2">"2022-07-01 11:40 CEST"</span> <span class="nt">--until</span> <span class="s2">"2022-07-01 11:50 CEST"</span>
 </code></pre></div>    </div>
   </blockquote>
@@ -1489,19 +1490,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00020">https://gxy.io/GTN:T00020</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00020">https://gxy.io/GTN:T00020</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

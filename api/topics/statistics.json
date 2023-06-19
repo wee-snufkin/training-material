@@ -99,6 +99,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "T00263",
       "url": "/topics/statistics/tutorials/classification_regression/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "classification_regression",
@@ -281,6 +282,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/anuprulez/"
         }
       ],
+      "short_id": "T00264",
       "url": "/topics/statistics/tutorials/clustering_machinelearning/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "clustering_machinelearning",
@@ -445,6 +447,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
         }
       ],
+      "short_id": "T00271",
       "url": "/topics/statistics/tutorials/regression_machinelearning/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "regression_machinelearning",
@@ -689,6 +692,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/khanteymoori/"
         }
       ],
+      "short_id": "T00268",
       "url": "/topics/statistics/tutorials/intro_deep_learning/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "intro_deep_learning",
@@ -861,6 +865,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/anuprulez/"
         }
       ],
+      "short_id": "T00270",
       "url": "/topics/statistics/tutorials/machinelearning/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "machinelearning",
@@ -1524,6 +1529,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/kxk302/"
         }
       ],
+      "short_id": "T00257",
       "url": "/topics/statistics/tutorials/CNN/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "CNN",
@@ -1745,6 +1751,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/blankenberg/"
         }
       ],
+      "short_id": "T00272",
       "url": "/topics/statistics/tutorials/text-mining_simtext/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "text-mining_simtext",
@@ -1874,6 +1881,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/anuprulez/"
         }
       ],
+      "short_id": "T00261",
       "url": "/topics/statistics/tutorials/age-prediction-with-ml/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "age-prediction-with-ml",
@@ -2063,6 +2071,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/kxk302/"
         }
       ],
+      "short_id": "T00258",
       "url": "/topics/statistics/tutorials/FNN/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "FNN",
@@ -2264,6 +2273,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/kxk302/"
         }
       ],
+      "short_id": "T00265",
       "url": "/topics/statistics/tutorials/fruit_360/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "fruit_360",
@@ -2510,6 +2520,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/kxk302/"
         }
       ],
+      "short_id": "T00259",
       "url": "/topics/statistics/tutorials/RNN/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "RNN",
@@ -2726,6 +2737,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/cumbof/"
         }
       ],
+      "short_id": "T00269",
       "url": "/topics/statistics/tutorials/iwtomics/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "iwtomics",
@@ -2898,6 +2910,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/anuprulez/"
         }
       ],
+      "short_id": "T00266",
       "url": "/topics/statistics/tutorials/gpu_jupyter_lab/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "gpu_jupyter_lab",
@@ -3014,6 +3027,7 @@
         "cancer biomarkers",
         "oncogenes and tumor suppressor genes"
       ],
+      "short_id": "T00260",
       "url": "/topics/statistics/tutorials/aberrant_pi3k_pathway_analysis/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "aberrant_pi3k_pathway_analysis",
@@ -3227,6 +3241,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
         }
       ],
+      "short_id": "T00262",
       "url": "/topics/statistics/tutorials/classification_machinelearning/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "classification_machinelearning",
@@ -3507,6 +3522,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/cumbof/"
         }
       ],
+      "short_id": "T00337",
       "url": "/topics/statistics/tutorials/hyperdimensional_computing/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "hyperdimensional_computing",
@@ -3651,6 +3667,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
         }
       ],
+      "short_id": "T00267",
       "url": "/topics/statistics/tutorials/intro-to-ml-with-r/tutorial.html",
       "topic_name": "statistics",
       "tutorial_name": "intro-to-ml-with-r",

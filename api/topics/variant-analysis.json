@@ -185,6 +185,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         }
       ],
+      "short_id": "S00099",
       "url": "/topics/variant-analysis/tutorials/introduction/slides.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "introduction",
@@ -292,6 +293,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/astrovsky01/"
         }
       ],
+      "short_id": "T00314",
       "url": "/topics/variant-analysis/tutorials/non-dip/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "non-dip",
@@ -513,6 +515,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/NickSto/"
         }
       ],
+      "short_id": "T00310",
       "url": "/topics/variant-analysis/tutorials/dunovo/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "dunovo",
@@ -719,6 +722,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nsoranzo/"
         }
       ],
+      "short_id": "T00309",
       "url": "/topics/variant-analysis/tutorials/dip/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "dip",
@@ -948,6 +952,7 @@
         "virology",
         "one-health"
       ],
+      "short_id": "T00316",
       "url": "/topics/variant-analysis/tutorials/sars-cov-2-variant-discovery/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "sars-cov-2-variant-discovery",
@@ -1132,6 +1137,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/tseemann/"
         }
       ],
+      "short_id": "T00313",
       "url": "/topics/variant-analysis/tutorials/microbial-variants/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "microbial-variants",
@@ -1290,6 +1296,7 @@
           "wm75"
         ]
       },
+      "short_id": "T00315",
       "url": "/topics/variant-analysis/tutorials/sars-cov-2/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "sars-cov-2",
@@ -1654,6 +1661,7 @@
       "tags": [
         "cyoa"
       ],
+      "short_id": "T00320",
       "url": "/topics/variant-analysis/tutorials/trio-analysis/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "trio-analysis",
@@ -1862,6 +1870,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
         }
       ],
+      "short_id": "T00318",
       "url": "/topics/variant-analysis/tutorials/somatic-variants/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "somatic-variants",
@@ -2158,6 +2167,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
         }
       ],
+      "short_id": "T00311",
       "url": "/topics/variant-analysis/tutorials/exome-seq/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "exome-seq",
@@ -2419,6 +2429,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/poterlowicz-lab/"
         }
       ],
+      "short_id": "T00317",
       "url": "/topics/variant-analysis/tutorials/somatic-variant-discovery/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "somatic-variant-discovery",
@@ -2682,6 +2693,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
         }
       ],
+      "short_id": "T00312",
       "url": "/topics/variant-analysis/tutorials/mapping-by-sequencing/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "mapping-by-sequencing",
@@ -2904,6 +2916,7 @@
         "virology",
         "one-health"
       ],
+      "short_id": "T00347",
       "url": "/topics/variant-analysis/tutorials/pox-tiled-amplicon/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "pox-tiled-amplicon",
@@ -3184,6 +3197,7 @@
         "prokaryote",
         "one-health"
       ],
+      "short_id": "T00319",
       "url": "/topics/variant-analysis/tutorials/tb-variant-analysis/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "tb-variant-analysis",
@@ -3467,6 +3481,7 @@
       "tags": [
         "virology"
       ],
+      "short_id": "T00308",
       "url": "/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "aiv-analysis",

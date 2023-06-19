@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/history/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -54,7 +62,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Understanding Galaxy history system">
         <meta property="og:description" content="A collection of microtutorials explaining various feature...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -258,7 +266,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/galaxy-interface/tutorials/history/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/galaxy-interface/tutorials/history/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -305,13 +313,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/galaxy-interface/tutorials/history/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/galaxy-interface/tutorials/history/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/galaxy-interface/tutorials/history/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/galaxy-interface/tutorials/history/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/galaxy-interface/tutorials/history/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/galaxy-interface/tutorials/history/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -324,7 +332,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -361,14 +369,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-galaxy-interface">
     <h1 data-toc-skip>Understanding Galaxy history system</h1>
@@ -384,7 +385,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge contributor-nekrut"><img src="https://avatars.githubusercontent.com/nekrut?s=27" alt="Avatar">Anton Nekrutenko</a>
+			<a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge contributor-nekrut"><img src="https://avatars.githubusercontent.com/nekrut?s=36" alt="Avatar">Anton Nekrutenko</a>
 		</td>
 	</tr>
 	
@@ -396,7 +397,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/polkhe/" class="contributor-badge contributor-polkhe"><img src="https://avatars.githubusercontent.com/polkhe?s=27" alt="Avatar">Ekaterina Polkh</a><a href="/training-material/hall-of-fame/martenson/" class="contributor-badge contributor-martenson"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/martenson?s=27" alt="Avatar">Martin Čech</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=27" alt="Avatar">Cristóbal Gallardo</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=27" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bgruening?s=27" alt="Avatar">Björn Grüning</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a></td>
+			<a href="/training-material/hall-of-fame/polkhe/" class="contributor-badge contributor-polkhe"><img src="https://avatars.githubusercontent.com/polkhe?s=36" alt="Avatar">Ekaterina Polkh</a><a href="/training-material/hall-of-fame/martenson/" class="contributor-badge contributor-martenson"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/martenson?s=36" alt="Avatar">Martin Čech</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Avatar">Cristóbal Gallardo</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bgruening?s=36" alt="Avatar">Björn Grüning</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a></td>
 	</tr>
 	
 
@@ -455,7 +456,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00150">https://gxy.io/GTN:T00150</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00150">https://gxy.io/GTN:T00150</a> </div>
         
     </blockquote>
     </section>
@@ -498,7 +499,7 @@ only allowed one history. On our main, public Galaxy server, users are encourage
 benefit that they can work on many histories and switch between them.</p>
 
 <blockquote class="warning">
-  <div class="box-title warning-title" id="warning-anonymous-users-beware"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Warning: Anonymous Users: Beware</div>
+  <div class="box-title warning-title" id="warning-anonymous-users-beware"><i class="fas fa-exclamation-triangle" aria-hidden="true" ></i> Warning: Anonymous Users: Beware</div>
   <p>The histories of anonymous users are only associated through your browser’s session. <strong>If you close the browser or
 clear you sessions - that history will be lost!</strong> We can not recover it for you if it is.</p>
 </blockquote>
@@ -540,7 +541,7 @@ or <code class="language-plaintext highlighter-rouge">variants</code>. Or you ma
 <code class="language-plaintext highlighter-rouge">yellowstone park:2014</code>.</p>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-best-practices-for-tagging"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Best Practices for Tagging</div>
+  <div class="box-title comment-title" id="comment-best-practices-for-tagging"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Best Practices for Tagging</div>
   <p>It is strongly recommended to replace spaces in tags with <code class="language-plaintext highlighter-rouge">_</code> or <code class="language-plaintext highlighter-rouge">-</code>, as spaces will automatically be removed when the tag is saved.</p>
 </blockquote>
 
@@ -617,7 +618,7 @@ datasets and brought that total below the quota.</p>
 <figure id="figure-6" style="max-width: 90%; margin:auto;"><img src="../../images/summary.png" alt="Close up of a single dataset, number 4 with title pdb70_hmm.ffindex. Three icons are visible, eyeball, pencil, trash. It has a purple hashtag of 🦠 (bacteria emoji). " width="493" height="112" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 6</strong>:</span> Controls for 'summary' (or collapsed) dataset view. From left to right: view, edit, delete.</figcaption></figure>
 
 <blockquote class="tip">
-  <div class="box-title tip-title" id="tip-disabled-buttons"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-disabled-buttons" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Disabled buttons?<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title tip-title" id="tip-disabled-buttons"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-disabled-buttons" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Disabled buttons?<span class="fold-unfold fa fa-minus-square"></span></button></div>
   <p>some of the buttons above may be disabled if the dataset is in a state that doesn’t allow the
 action. For example, the ‘edit’ button is disabled for datasets that are still queued or running</p>
 </blockquote>
@@ -635,7 +636,7 @@ action. For example, the ‘edit’ button is disabled for datasets that are sti
 <figure id="figure-7" style="max-width: 90%; margin:auto;"><img src="../../images/details.png" alt="Close up of expanded dataset. The top row is the dataset name and view/edit/delete controls." width="325" height="343" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 7</strong>:</span> Controls for expanded dataset view. Here we see the aforementioned dataset view and edit controls, tags, description, format, actions, and a dataset preview.</figcaption></figure>
 
 <blockquote class="tip">
-  <div class="box-title tip-title" id="tip-where-are-the-details"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-where-are-the-details" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Where are the details?<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title tip-title" id="tip-where-are-the-details"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-where-are-the-details" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Where are the details?<span class="fold-unfold fa fa-minus-square"></span></button></div>
   <p>Many of these details are only displayed if the dataset has finished running, is in the ‘ok’ state, and
 is not deleted. Otherwise, you may only see a shorter message describing the dataset’s state (e.g. ‘this dataset
 is waiting to run’)</p>
@@ -947,19 +948,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00150">https://gxy.io/GTN:T00150</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00150">https://gxy.io/GTN:T00150</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

@@ -156,6 +156,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/LeilyR/"
         }
       ],
+      "short_id": "T00140",
       "url": "/topics/epigenetics/tutorials/formation_of_super-structures_on_xi/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "formation_of_super-structures_on_xi",
@@ -452,6 +453,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/polkhe/"
         }
       ],
+      "short_id": "T00141",
       "url": "/topics/epigenetics/tutorials/hicexplorer/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "hicexplorer",
@@ -630,6 +632,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/heylf/"
         }
       ],
+      "short_id": "T00137",
       "url": "/topics/epigenetics/tutorials/atac-seq/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "atac-seq",
@@ -986,6 +989,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/fidelram/"
         }
       ],
+      "short_id": "T00138",
       "url": "/topics/epigenetics/tutorials/estrogen-receptor-binding-site-identification/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "estrogen-receptor-binding-site-identification",
@@ -1252,6 +1256,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dpryan79/"
         }
       ],
+      "short_id": "T00142",
       "url": "/topics/epigenetics/tutorials/methylation-seq/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "methylation-seq",
@@ -1512,6 +1517,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erxleben/"
         }
       ],
+      "short_id": "T00143",
       "url": "/topics/epigenetics/tutorials/tal1-binding-site-identification/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "tal1-binding-site-identification",
@@ -1756,6 +1762,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "S00059",
       "url": "/topics/epigenetics/tutorials/introduction-chip-seq/slides.html",
       "topic_name": "epigenetics",
       "tutorial_name": "introduction-chip-seq",
@@ -1861,6 +1868,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/poterlowicz-lab/"
         }
       ],
+      "short_id": "T00139",
       "url": "/topics/epigenetics/tutorials/ewas-suite/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "ewas-suite",
@@ -1956,6 +1964,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         }
       ],
+      "short_id": "S00060",
       "url": "/topics/epigenetics/tutorials/introduction-dna-methylation/slides.html",
       "topic_name": "epigenetics",
       "tutorial_name": "introduction-dna-methylation",

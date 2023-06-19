@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/climate/">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -53,7 +61,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Climate">
         <meta property="og:description" content="Learn to analyze climate data through Galaxy.">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
     </head>
@@ -128,7 +136,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/climate/index.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/climate/index.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -175,13 +183,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/climate/" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/climate/">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/climate/" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/climate/">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/climate/" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/climate/">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -194,7 +202,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -218,13 +226,6 @@ Sentry.init({
 
 <!-- Gitter -->
 
-
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <section class="tutorials-list climate topic-type-use">
     <h1>Climate</h1>
@@ -260,14 +261,14 @@ Sentry.init({
         <table class="table table-responsive table-striped">
   <thead>
     <tr>
-      <th>Lesson</th>
-      <th title="Lecture for this training. May include a video version using automated text-to-speech.">Slides</th>
-      <th title="Practical tutorial guiding you through an analysis step by step.">Hands-on</th>
-      <th title="Recordings of various instructors teaching this tutorial. May use an outdated version of the tutorial.">Recordings</th>
+      <th scope="col">Lesson</th>
+      <th scope="col" title="Lecture for this training. May include a video version using automated text-to-speech.">Slides</th>
+      <th scope="col" title="Practical tutorial guiding you through an analysis step by step.">Hands-on</th>
+      <th scope="col" title="Recordings of various instructors teaching this tutorial. May use an outdated version of the tutorial.">Recordings</th>
 
       
-      <th title="Datasets used in this tutorial, available from Zenodo.">Input dataset</th>
-      <th title="Galaxy workflows used in this tutorial.">Workflows</th>
+      <th scope="col" title="Datasets used in this tutorial, available from Zenodo.">Input dataset</th>
+      <th scope="col" title="Galaxy workflows used in this tutorial.">Workflows</th>
       
 
       
@@ -294,7 +295,7 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffc4b1; --color-darker: #ffa47e; --color-dimmed: #ffb499;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
+              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffa581; --color-darker: #ff863a; --color-dimmed: #ff9664;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
               
             
             </div>
@@ -735,7 +736,7 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffc4b1; --color-darker: #ffa47e; --color-dimmed: #ffb499;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
+              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffa581; --color-darker: #ff863a; --color-dimmed: #ff9664;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
               
             
             </div>
@@ -1412,11 +1413,11 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=pangeo" class="label label-default tutorial_tag" style="--color-primary: #00eea4; --color-darker: #00d492; --color-dimmed: #00e19b;" title="Click to show all tutorials tagged pangeo">pangeo</a>
+              <a href="/training-material/search?query=pangeo" class="label label-default tutorial_tag" style="--color-primary: #00d592; --color-darker: #00be82; --color-dimmed: #00ca8a;" title="Click to show all tutorials tagged pangeo">pangeo</a>
               
-              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffc4b1; --color-darker: #ffa47e; --color-dimmed: #ffb499;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
+              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffa581; --color-darker: #ff863a; --color-dimmed: #ff9664;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
               
-              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #00e7f9; --color-darker: #00cede; --color-dimmed: #00daec;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
+              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #00cfdf; --color-darker: #00b8c7; --color-dimmed: #00c4d3;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
               
             
             </div>
@@ -1837,7 +1838,7 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=pangeo" class="label label-default tutorial_tag" style="--color-primary: #00eea4; --color-darker: #00d492; --color-dimmed: #00e19b;" title="Click to show all tutorials tagged pangeo">pangeo</a>
+              <a href="/training-material/search?query=pangeo" class="label label-default tutorial_tag" style="--color-primary: #00d592; --color-darker: #00be82; --color-dimmed: #00ca8a;" title="Click to show all tutorials tagged pangeo">pangeo</a>
               
             
             </div>
@@ -2258,7 +2259,7 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffc4b1; --color-darker: #ffa47e; --color-dimmed: #ffb499;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
+              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffa581; --color-darker: #ff863a; --color-dimmed: #ff9664;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
               
             
             </div>
@@ -2479,7 +2480,7 @@ Sentry.init({
     <h2 id="maintainers">Maintainers</h2>
     <p>This material is maintained by:</p>
     
-    <a href="/training-material/hall-of-fame/annefou/" class="contributor-badge contributor-annefou"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annefou?s=27" alt="Avatar">Anne Fouilloux</a>
+    <a href="/training-material/hall-of-fame/annefou/" class="contributor-badge contributor-annefou"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annefou?s=36" alt="Avatar">Anne Fouilloux</a>
 
     <p>
         <em>For any question related to this topic and the content, you can contact them or visit our <a href="https://gitter.im/Galaxy-Training-Network/Lobby">Gitter channel</a>.</em>
@@ -2488,7 +2489,7 @@ Sentry.init({
     <h2 id="contributors">Contributors</h2>
     <p>This material was contributed to by:</p>
     
-    <a href="/training-material/hall-of-fame/annefou/" class="contributor-badge contributor-annefou"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annefou?s=27" alt="Avatar">Anne Fouilloux</a><a href="/training-material/hall-of-fame/huitang-earth/" class="contributor-badge contributor-huitang-earth"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/huitang-earth?s=27" alt="Avatar">Hui Tang</a><a href="/training-material/hall-of-fame/j34ni/" class="contributor-badge contributor-j34ni"><img src="https://avatars.githubusercontent.com/j34ni?s=27" alt="Avatar">Jean Iaquinta</a>
+    <a href="/training-material/hall-of-fame/annefou/" class="contributor-badge contributor-annefou"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annefou?s=36" alt="Avatar">Anne Fouilloux</a><a href="/training-material/hall-of-fame/j34ni/" class="contributor-badge contributor-j34ni"><img src="https://avatars.githubusercontent.com/j34ni?s=36" alt="Avatar">Jean Iaquinta</a><a href="/training-material/hall-of-fame/huitang-earth/" class="contributor-badge contributor-huitang-earth"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/huitang-earth?s=36" alt="Avatar">Hui Tang</a>
 
     
 </section>
@@ -2507,7 +2508,7 @@ Sentry.init({
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -2515,7 +2516,7 @@ Sentry.init({
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

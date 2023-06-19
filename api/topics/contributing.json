@@ -155,6 +155,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/lldelisle/"
         }
       ],
+      "short_id": "T00057",
       "url": "/topics/contributing/tutorials/create-new-tutorial/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial",
@@ -395,6 +396,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "S00042",
       "url": "/topics/contributing/tutorials/introduction/slides.html",
       "topic_name": "contributing",
       "tutorial_name": "introduction",
@@ -545,6 +547,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
       ],
+      "short_id": "S00040",
       "url": "/topics/contributing/tutorials/create-new-tutorial-slides/slides.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-slides",
@@ -695,6 +698,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "T00064",
       "url": "/topics/contributing/tutorials/github-command-line-contribution/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "github-command-line-contribution",
@@ -800,6 +804,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
       ],
+      "short_id": "T00066",
       "url": "/topics/contributing/tutorials/gitpod/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "gitpod",
@@ -929,6 +934,7 @@
         "API": "Application Programming Interface",
         "JSON": "JavaScript Object Notation"
       },
+      "short_id": "T00058",
       "url": "/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-content",
@@ -1147,6 +1153,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "T00063",
       "url": "/topics/contributing/tutorials/generating-pdf/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "generating-pdf",
@@ -1254,6 +1261,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "T00065",
       "url": "/topics/contributing/tutorials/github-interface-contribution/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "github-interface-contribution",
@@ -1420,6 +1428,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00060",
       "url": "/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-technical",
@@ -1559,6 +1568,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
       ],
+      "short_id": "T00061",
       "url": "/topics/contributing/tutorials/create-new-tutorial-tours/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-tours",
@@ -1677,6 +1687,7 @@
           "erasmusplus"
         ]
       },
+      "short_id": "T00062",
       "url": "/topics/contributing/tutorials/design/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "design",
@@ -1874,12 +1885,14 @@
           "fpsom",
           "allegravia",
           "ppalagi",
+          "gallardoalba",
           "elixir-goblet-ttt"
         ],
         "funding": [
           "erasmusplus"
         ]
       },
+      "short_id": "T00067",
       "url": "/topics/contributing/tutorials/learning-principles/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "learning-principles",
@@ -2033,6 +2046,15 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/ppalagi/"
         },
         {
+          "name": "Cristóbal Gallardo",
+          "joined": "2020-11",
+          "elixir_node": "de",
+          "orcid": "0000-0002-5752-2155",
+          "id": "gallardoalba",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/gallardoalba.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallardoalba/"
+        },
+        {
           "name": "ELIXIR Goblet Train the Trainers",
           "joined": "2022-09",
           "id": "elixir-goblet-ttt",
@@ -2130,6 +2152,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
       ],
+      "short_id": "T00069",
       "url": "/topics/contributing/tutorials/running-jekyll/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "running-jekyll",
@@ -2228,6 +2251,7 @@
           "dirowa"
         ]
       },
+      "short_id": "T00068",
       "url": "/topics/contributing/tutorials/python/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "python",
@@ -2366,6 +2390,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00059",
       "url": "/topics/contributing/tutorials/create-new-tutorial-quiz/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-quiz",
@@ -2480,6 +2505,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00055",
       "url": "/topics/contributing/tutorials/admin-knitting/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "admin-knitting",
@@ -2570,6 +2596,7 @@
           "hexylena"
         ]
       },
+      "short_id": "T00056",
       "url": "/topics/contributing/tutorials/create-new-topic/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-topic",
@@ -2716,6 +2743,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00071",
       "url": "/topics/contributing/tutorials/slides-with-video/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "slides-with-video",
@@ -2814,6 +2842,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00070",
       "url": "/topics/contributing/tutorials/schemas/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "schemas",

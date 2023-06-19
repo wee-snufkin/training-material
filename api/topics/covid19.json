@@ -70,6 +70,7 @@
         }
       ],
       "subtopic": "workflows",
+      "short_id": "T00162",
       "url": "/topics/galaxy-interface/tutorials/workflow-automation/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "workflow-automation",
@@ -304,6 +305,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bedroesb/"
         }
       ],
+      "short_id": "T00159",
       "url": "/topics/galaxy-interface/tutorials/upload-data-to-ena/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "upload-data-to-ena",
@@ -438,6 +440,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
         }
       ],
+      "short_id": "T00236",
       "url": "/topics/sequence-analysis/tutorials/human-reads-removal/tutorial.html",
       "topic_name": "sequence-analysis",
       "tutorial_name": "human-reads-removal",
@@ -698,6 +701,7 @@
         "virology",
         "one-health"
       ],
+      "short_id": "T00316",
       "url": "/topics/variant-analysis/tutorials/sars-cov-2-variant-discovery/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "sars-cov-2-variant-discovery",
@@ -867,6 +871,7 @@
           "wm75"
         ]
       },
+      "short_id": "T00315",
       "url": "/topics/variant-analysis/tutorials/sars-cov-2/tutorial.html",
       "topic_name": "variant-analysis",
       "tutorial_name": "sars-cov-2",
@@ -1189,6 +1194,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
         }
       ],
+      "short_id": "T00049",
       "url": "/topics/computational-chemistry/tutorials/covid19-docking/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "covid19-docking",
@@ -1443,6 +1449,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
         }
       ],
+      "short_id": "T00029",
       "url": "/topics/assembly/tutorials/assembly-with-preprocessing/tutorial.html",
       "topic_name": "assembly",
       "tutorial_name": "assembly-with-preprocessing",
@@ -1759,6 +1766,7 @@
           ]
         }
       ],
+      "short_id": "T00155",
       "url": "/topics/galaxy-interface/tutorials/ncbi-sarf/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "ncbi-sarf",

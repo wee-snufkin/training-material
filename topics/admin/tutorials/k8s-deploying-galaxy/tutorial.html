@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -58,7 +66,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Galaxy Installation on Kubernetes">
         <meta property="og:description" content="Resources related to configuration and maintenance of Gal...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -351,7 +359,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/admin/tutorials/k8s-deploying-galaxy/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -398,13 +406,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -417,7 +425,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -454,14 +462,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/admins'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-admin">
     <h1 data-toc-skip>Galaxy Installation on Kubernetes</h1>
@@ -471,7 +472,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/pcm32/" class="contributor-badge contributor-pcm32"><img src="https://avatars.githubusercontent.com/pcm32?s=27" alt="Avatar">Pablo Moreno</a><a href="/training-material/hall-of-fame/afgane/" class="contributor-badge contributor-afgane"><img src="https://avatars.githubusercontent.com/afgane?s=27" alt="Avatar">Enis Afgan</a><a href="/training-material/hall-of-fame/nuwang/" class="contributor-badge contributor-nuwang"><img src="https://avatars.githubusercontent.com/nuwang?s=27" alt="Avatar">Nuwan Goonasekera</a><a href="/training-material/hall-of-fame/almahmoud/" class="contributor-badge contributor-almahmoud"><img src="https://avatars.githubusercontent.com/almahmoud?s=27" alt="Avatar">Alex Mahmoud</a><a href="/training-material/hall-of-fame/jdavcs/" class="contributor-badge contributor-jdavcs"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jdavcs?s=27" alt="Avatar">John Davis</a>
+		Authors: <a href="/training-material/hall-of-fame/pcm32/" class="contributor-badge contributor-pcm32"><img src="https://avatars.githubusercontent.com/pcm32?s=36" alt="Avatar">Pablo Moreno</a><a href="/training-material/hall-of-fame/afgane/" class="contributor-badge contributor-afgane"><img src="https://avatars.githubusercontent.com/afgane?s=36" alt="Avatar">Enis Afgan</a><a href="/training-material/hall-of-fame/nuwang/" class="contributor-badge contributor-nuwang"><img src="https://avatars.githubusercontent.com/nuwang?s=36" alt="Avatar">Nuwan Goonasekera</a><a href="/training-material/hall-of-fame/almahmoud/" class="contributor-badge contributor-almahmoud"><img src="https://avatars.githubusercontent.com/almahmoud?s=36" alt="Avatar">Alex Mahmoud</a><a href="/training-material/hall-of-fame/jdavcs/" class="contributor-badge contributor-jdavcs"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jdavcs?s=36" alt="Avatar">John Davis</a>
 	</div>
 
 </div>
@@ -579,7 +580,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00013">https://gxy.io/GTN:T00013</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00013">https://gxy.io/GTN:T00013</a> </div>
         
     </blockquote>
     </section>
@@ -678,7 +679,7 @@ implementation. This will be the easiest method to keep up with chart changes
 for the time being.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-download-the-chart"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Download the chart</div>
+  <div class="box-title hands-on-title" id="hands-on-download-the-chart"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Download the chart</div>
 
   <p>Clone the chart repository from the machine where you would like to deploy
   Galaxy and change into the chart directory.</p>
@@ -709,7 +710,7 @@ also take a look at how to make configuration changes in the context of the
 chart later in this tutorial.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-deploying-the-galaxy-helm-chart"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Deploying the Galaxy Helm Chart</div>
+  <div class="box-title hands-on-title" id="hands-on-deploying-the-galaxy-helm-chart"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Deploying the Galaxy Helm Chart</div>
 
   <ol>
     <li>
@@ -752,7 +753,7 @@ just defines more configuration options. Namely, we attach to the
 configurations while leveraging <a href="https://biocontainers.pro/#/">BioContainers</a> for resolving tool dependencies.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-deploying-the-cvmfs-enabled-configuration"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Deploying the CVMFS-enabled Configuration</div>
+  <div class="box-title hands-on-title" id="hands-on-deploying-the-cvmfs-enabled-configuration"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Deploying the CVMFS-enabled Configuration</div>
 
   <ol>
     <li>
@@ -806,7 +807,7 @@ interfere here with all the application data being potentially lost. This
 predominantly depends on how the relevant storage class was configured.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-deleting-a-deployed-helm-release"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Deleting a Deployed Helm Release</div>
+  <div class="box-title hands-on-title" id="hands-on-deleting-a-deployed-helm-release"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Deleting a Deployed Helm Release</div>
 
   <ol>
     <li>
@@ -1132,19 +1133,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00013">https://gxy.io/GTN:T00013</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00013">https://gxy.io/GTN:T00013</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>

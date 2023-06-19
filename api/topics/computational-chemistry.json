@@ -133,6 +133,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
         }
       ],
+      "short_id": "T00049",
       "url": "/topics/computational-chemistry/tutorials/covid19-docking/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "covid19-docking",
@@ -359,6 +360,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
         }
       ],
+      "short_id": "T00048",
       "url": "/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "cheminformatics",
@@ -661,6 +663,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nagoue/"
         }
       ],
+      "short_id": "T00047",
       "url": "/topics/computational-chemistry/tutorials/analysis-md-simulations/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "analysis-md-simulations",
@@ -910,6 +913,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
         }
       ],
+      "short_id": "T00050",
       "url": "/topics/computational-chemistry/tutorials/htmd-analysis/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "htmd-analysis",
@@ -1303,6 +1307,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
         }
       ],
+      "short_id": "T00051",
       "url": "/topics/computational-chemistry/tutorials/md-simulation-gromacs/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "md-simulation-gromacs",
@@ -1555,6 +1560,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
         }
       ],
+      "short_id": "T00052",
       "url": "/topics/computational-chemistry/tutorials/md-simulation-namd/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "md-simulation-namd",
@@ -1683,6 +1689,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
         }
       ],
+      "short_id": "T00054",
       "url": "/topics/computational-chemistry/tutorials/zauberkugel/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "zauberkugel",
@@ -1872,6 +1879,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nagoue/"
         }
       ],
+      "short_id": "T00053",
       "url": "/topics/computational-chemistry/tutorials/setting-up-molecular-systems/tutorial.html",
       "topic_name": "computational-chemistry",
       "tutorial_name": "setting-up-molecular-systems",

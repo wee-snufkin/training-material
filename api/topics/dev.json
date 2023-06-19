@@ -163,6 +163,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dannon/"
         }
       ],
+      "short_id": "T00120",
       "url": "/topics/dev/tutorials/visualization-charts/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "visualization-charts",
@@ -284,6 +285,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yhoogstrate/"
         }
       ],
+      "short_id": "T00121",
       "url": "/topics/dev/tutorials/visualization-generic/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "visualization-generic",
@@ -400,6 +402,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
         }
       ],
+      "short_id": "S00043",
       "url": "/topics/dev/tutorials/architecture/slides.html",
       "topic_name": "dev",
       "tutorial_name": "architecture",
@@ -529,6 +532,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/cmonjeau/"
         }
       ],
+      "short_id": "S00046",
       "url": "/topics/dev/tutorials/conda_sys/slides.html",
       "topic_name": "dev",
       "tutorial_name": "conda_sys",
@@ -634,6 +638,7 @@
       "notebook": {
         "language": "python"
       },
+      "short_id": "T00111",
       "url": "/topics/dev/tutorials/bioblend-api/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "bioblend-api",
@@ -830,6 +835,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hmenager/"
         }
       ],
+      "short_id": "S00045",
       "url": "/topics/dev/tutorials/conda/slides.html",
       "topic_name": "dev",
       "tutorial_name": "conda",
@@ -954,6 +960,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
         }
       ],
+      "short_id": "S00047",
       "url": "/topics/dev/tutorials/containers/slides.html",
       "topic_name": "dev",
       "tutorial_name": "containers",
@@ -1083,6 +1090,7 @@
         }
       ],
       "subtopic": "advanced",
+      "short_id": "T00122",
       "url": "/topics/dev/tutorials/webhooks/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "webhooks",
@@ -1205,6 +1213,7 @@
         }
       ],
       "subtopic": "advanced",
+      "short_id": "S00049",
       "url": "/topics/dev/tutorials/interactive-tours/slides.html",
       "topic_name": "dev",
       "tutorial_name": "interactive-tours",
@@ -1352,6 +1361,7 @@
         }
       ],
       "subtopic": "advanced",
+      "short_id": "S00048",
       "url": "/topics/dev/tutorials/interactive-environments/slides.html",
       "topic_name": "dev",
       "tutorial_name": "interactive-environments",
@@ -1498,6 +1508,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "S00052",
       "url": "/topics/dev/tutorials/toolshed/slides.html",
       "topic_name": "dev",
       "tutorial_name": "toolshed",
@@ -1649,6 +1660,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00118",
       "url": "/topics/dev/tutorials/tool-generators/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "tool-generators",
@@ -1887,6 +1899,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/lecorguille/"
         }
       ],
+      "short_id": "S00051",
       "url": "/topics/dev/tutorials/tool-integration/slides.html",
       "topic_name": "dev",
       "tutorial_name": "tool-integration",
@@ -2073,6 +2086,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00116",
       "url": "/topics/dev/tutorials/interactive-tools/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "interactive-tools",
@@ -2203,6 +2217,7 @@
         }
       ],
       "subtopic": "core",
+      "short_id": "T00123",
       "url": "/topics/dev/tutorials/writing_tests/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "writing_tests",
@@ -2347,6 +2362,7 @@
         }
       ],
       "subtopic": "core",
+      "short_id": "T00115",
       "url": "/topics/dev/tutorials/debugging/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "debugging",
@@ -2501,6 +2517,7 @@
         "Data flows from the external data resource to the Galaxy server without the need of \"downloading\" the data"
       ],
       "subtopic": "advanced",
+      "short_id": "T00114",
       "url": "/topics/dev/tutorials/data-source-integration/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "data-source-integration",
@@ -2620,6 +2637,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/fubar2/"
         }
       ],
+      "short_id": "T00119",
       "url": "/topics/dev/tutorials/tool-generators-advanced/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "tool-generators-advanced",
@@ -2777,6 +2795,7 @@
         "API": "Application Programming Interface",
         "PR": "Pull Request"
       },
+      "short_id": "T00112",
       "url": "/topics/dev/tutorials/bioblend-dev/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "bioblend-dev",
@@ -2894,6 +2913,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bernt-matthias/"
         }
       ],
+      "short_id": "T00117",
       "url": "/topics/dev/tutorials/tool-from-scratch/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "tool-from-scratch",
@@ -3076,6 +3096,7 @@
           ]
         }
       ],
+      "short_id": "T00113",
       "url": "/topics/dev/tutorials/core-contributing/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "core-contributing",

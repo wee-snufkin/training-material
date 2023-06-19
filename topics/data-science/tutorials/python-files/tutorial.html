@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9df592fe7466e0f098d2daea62ad9471ce46169e",
+  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -32,11 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/data-science/tutorials/python-files/tutorial.html">
         <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -56,7 +64,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Python - Files & CSV">
         <meta property="og:description" content="These lessons will help you get your feet in data science...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -314,7 +322,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/data-science/tutorials/python-files/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/data-science/tutorials/python-files/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -361,13 +369,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/data-science/tutorials/python-files/tutorial.html" title="Version 2022-06-01">2022-06-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-06-01/topics/data-science/tutorials/python-files/tutorial.html">2022-06-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/data-science/tutorials/python-files/tutorial.html" title="Version 2022-05-01">2022-05-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-05-01/topics/data-science/tutorials/python-files/tutorial.html">2022-05-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/data-science/tutorials/python-files/tutorial.html" title="Version 2022-04-01">2022-04-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2022-04-01/topics/data-science/tutorials/python-files/tutorial.html">2022-04-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -380,7 +388,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -417,14 +425,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-data-science">
     <h1 data-toc-skip>Python - Files & CSV</h1>
@@ -434,7 +435,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/dirowa/" class="contributor-badge contributor-dirowa"><img src="https://avatars.githubusercontent.com/dirowa?s=27" alt="Avatar">Donny Vrins</a><a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge contributor-bazante1"><img src="https://avatars.githubusercontent.com/bazante1?s=27" alt="Avatar">Bazante Sanders</a>
+		Authors: <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/dirowa/" class="contributor-badge contributor-dirowa"><img src="https://avatars.githubusercontent.com/dirowa?s=36" alt="Avatar">Donny Vrins</a><a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge contributor-bazante1"><img src="https://avatars.githubusercontent.com/bazante1?s=36" alt="Avatar">Bazante Sanders</a>
 	</div>
 
 </div>
@@ -562,7 +563,7 @@ Sentry.init({
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00087">https://gxy.io/GTN:T00087</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00087">https://gxy.io/GTN:T00087</a> </div>
         
     </blockquote>
     </section>
@@ -690,13 +691,13 @@ Sentry.init({
 
 <blockquote class="code-2col">
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-using-with"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Using `with`</div>
+    <div class="box-title code-in-title" id="code-in-using-with"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Using `with`</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>with open('file.txt', 'r') as handle:
     print(handle.readlines())
 </code></pre></div>    </div>
   </blockquote>
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-not-using-with"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output: Not using `with`</div>
+    <div class="box-title code-out-title" id="code-out-not-using-with"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Not using `with`</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>handle = open('file.txt', 'r')
 print(handle.readlines())
 handle.close() # Important!
@@ -910,7 +911,7 @@ GTGCCAGCCGCCGCGGTAGTCCGACGTGGCTGTCTCTTATACACATCTCCGAGCCCACGAGACCGAAGAACATCTCGTAT
 <p>That’s it! Check if your <code class="language-plaintext highlighter-rouge">fasta</code> file looks correct.</p>
 
 <blockquote class="tip">
-  <div class="box-title tip-title" id="tip-enumerate"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-enumerate" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: `enumerate`<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title tip-title" id="tip-enumerate"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-enumerate" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: `enumerate`<span class="fold-unfold fa fa-minus-square"></span></button></div>
   <p>If you want to know which item number you’re on while you’re looping over a list, you can use the function <code class="language-plaintext highlighter-rouge">enumerate()</code>
 Try out this code to see how it works:</p>
 
@@ -1105,12 +1106,12 @@ Jane,"London, UK",Z86.16
 <p>That should be easier to work with, now we only have one country’s data. Let’s do some exercises with this data:</p>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-which-vaccines-were-given"><i class="far fa-question-circle" aria-hidden="true"></i> Question: Which vaccines were given?</div>
+  <div class="box-title question-title" id="question-which-vaccines-were-given"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: Which vaccines were given?</div>
 
   <p>Which vaccines were given? Use the <code class="language-plaintext highlighter-rouge">subset</code> to examine which vaccines were given in the Netherlands. <em>Tip</em>: if <code class="language-plaintext highlighter-rouge">x</code> is a list, <code class="language-plaintext highlighter-rouge">set(x)</code> will return the unique values in that list.</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <p>To figure out which vaccines were given, we can look at column 12:</p>
 
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vaccines</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1127,7 +1128,7 @@ Jane,"London, UK",Z86.16
 </span></code></pre></div></div>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-how-many-of-each-vaccine-were-given"><i class="far fa-question-circle" aria-hidden="true"></i> Question: How many of each vaccine were given?</div>
+  <div class="box-title question-title" id="question-how-many-of-each-vaccine-were-given"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: How many of each vaccine were given?</div>
 
   <p>How many of each were given?</p>
 
@@ -1135,7 +1136,7 @@ Jane,"London, UK",Z86.16
 <em>Tip</em>: Columns 5, 7, and 8 have doses being given out to patients.</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">doses</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">subset</span><span class="p">:</span>
     <span class="n">brand</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span>
@@ -1151,7 +1152,7 @@ Jane,"London, UK",Z86.16
 </span></code></pre></div></div>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-how-many-of-each-vaccine-were-exported-received"><i class="far fa-question-circle" aria-hidden="true"></i> Question: How many of each vaccine were exported? received?</div>
+  <div class="box-title question-title" id="question-how-many-of-each-vaccine-were-exported-received"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: How many of each vaccine were exported? received?</div>
 
   <p>How many of each were exported? received?</p>
 
@@ -1159,7 +1160,7 @@ Jane,"London, UK",Z86.16
 <em>Tip</em>: you will need to handle an edge case here. Try and find it out!</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">export</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">received</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">subset</span><span class="p">:</span>
@@ -1182,12 +1183,12 @@ Jane,"London, UK",Z86.16
 </span></code></pre></div></div>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-when-was-the-first-dose-received"><i class="far fa-question-circle" aria-hidden="true"></i> Question: When was the first dose received?</div>
+  <div class="box-title question-title" id="question-when-was-the-first-dose-received"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: When was the first dose received?</div>
 
   <p><em>Tip</em>: use <code class="language-plaintext highlighter-rouge">break</code>, and check how many doses were given!</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-3"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-3" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-3"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-3" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">subset</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ow">and</span> <span class="nf">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"On </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s">, </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s"> doses of </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="si">}</span><span class="s"> were given"</span><span class="p">)</span>
@@ -1200,7 +1201,7 @@ Jane,"London, UK",Z86.16
 </span></code></pre></div></div>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-transform-the-data-for-plotting"><i class="far fa-question-circle" aria-hidden="true"></i> Question: Transform the data for plotting</div>
+  <div class="box-title question-title" id="question-transform-the-data-for-plotting"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: Transform the data for plotting</div>
 
   <p>Let’s say you want to plot the fraction of the population that has been vaccinated by the various points in time.</p>
 
@@ -1213,7 +1214,7 @@ Jane,"London, UK",Z86.16
   <p>The output should be a list of percentages ranging from [0.0 to 1.0].</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-4"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-4" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-4"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-4" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">total_doses</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">percent_vaccinated_per_week</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">subset</span><span class="p">:</span>
@@ -1242,7 +1243,7 @@ Jane,"London, UK",Z86.16
 </code></pre></div></div>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-which-vaccines-were-given-1"><i class="far fa-question-circle" aria-hidden="true"></i> Question: Which vaccines were given?</div>
+  <div class="box-title question-title" id="question-which-vaccines-were-given-1"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: Which vaccines were given?</div>
 
   <p>Write this out to a new file, with two columns. The index and the Percent Vaccinated. It should be a comma separated file, and should have a header. Save this as a csv file named <code class="language-plaintext highlighter-rouge">weekly-percent-vax.csv</code></p>
 
@@ -1250,7 +1251,7 @@ Jane,"London, UK",Z86.16
 <em>Tip</em>: Use <code class="language-plaintext highlighter-rouge">enumerate()</code> to get a list of items with indexes.</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-5"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-5" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-5"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-5" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>with open('weekly-percent-vax.csv', 'w') as handle:
     writer = csv.writer(csv_data, delimiter=",", quotechar='"')
@@ -1434,19 +1435,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9df592fe7466e0f098d2daea62ad9471ce46169e">9df592f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00087">https://gxy.io/GTN:T00087</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00087">https://gxy.io/GTN:T00087</a>
 				</p>
 				
 				<p>
 					<i>This Material</i>:
 					
-					It is licensed under
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
