@@ -1179,6 +1179,11 @@
             "usegalaxy": "false"
           },
           {
+            "url": "https://galaxy.hyphy.org/",
+            "name": "HyPhy HIV NGS Tools",
+            "usegalaxy": "false"
+          },
+          {
             "url": "http://pepsimili.e-nios.com:8080/",
             "name": "PepSimili",
             "usegalaxy": "false"
@@ -2817,6 +2822,11 @@
           {
             "url": "https://galaxytrakr.org/",
             "name": "GalaxyTrakr",
+            "usegalaxy": "false"
+          },
+          {
+            "url": "https://galaxy.hyphy.org/",
+            "name": "HyPhy HIV NGS Tools",
             "usegalaxy": "false"
           },
           {
