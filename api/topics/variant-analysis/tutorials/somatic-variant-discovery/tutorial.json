@@ -28,6 +28,7 @@
     },
     {
       "name": "Katarzyna Kamieniecka",
+      "twitter": "katemurat",
       "orcid": "0009-0004-2454-5950",
       "joined": "2018-08",
       "elixir_node": "uk",
@@ -38,8 +39,11 @@
     {
       "name": "Wolfgang Maier",
       "orcid": "0000-0002-9464-6640",
+      "matrix": "wm75:matrix.org",
       "joined": "2017-09",
       "elixir_node": "de",
+      "fediverse": "https://scholar.social/@zerodivision",
+      "fediverse_flavor": "mastodon",
       "id": "wm75",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/wm75.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"

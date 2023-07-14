@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
+  release: "galaxy-training-network@720736375c1bc32d8cc8b0de02dffd16e3e1d072",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1689303195' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1689303195' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -299,7 +301,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1689303195'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -481,7 +483,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge contributor-slugger70"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/slugger70?s=36" alt="Avatar">Simon Gladman</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a>
+		Authors: <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge contributor-slugger70"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/slugger70?s=36" alt="Avatar" width="36" height="36">Simon Gladman</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a>
 	</div>
 
 </div>
@@ -554,6 +556,8 @@ Sentry.init({
                                 
                             
                             </li>
+                        
+                    
                         
                     
                         
@@ -1200,7 +1204,7 @@ https://zenodo.org/record/582600/files/mutant_R2.fastq
                 <ol class="bibliography"><li id="Velvet2008">Zerbino, D. R., and E. Birney, 2008 <b>Velvet: Algorithms for de novo short read assembly using de Bruijn graphs</b>. Genome Research 18: 821–829. <a href="https://doi.org/10.1101/gr.074492.107">10.1101/gr.074492.107</a></li>
 <li id="Zerbino2009">Zerbino, D. R., G. K. McEwen, E. H. Margulies, and E. Birney, 2009 <b>Pebble and Rock Band: Heuristic Resolution of Repeats and Scaffolding in the Velvet Short-Read de Novo Assembler</b> (S. L. Salzberg, Ed.). PLoS ONE 4: e8407. <a href="https://doi.org/10.1371/journal.pone.0008407">10.1371/journal.pone.0008407</a></li>
 <li id="Bankevich2012">Bankevich, A., S. Nurk, D. Antipov, A. A. Gurevich, M. Dvorkin <i>et al.</i>, 2012 <b>SPAdes: A New Genome Assembly Algorithm and Its Applications to Single-Cell Sequencing</b>. Journal of Computational Biology 19: 455–477. <a href="https://doi.org/10.1089/cmb.2012.0021">10.1089/cmb.2012.0021</a></li>
-<li id="Wick2015">Wick, R. R., M. B. Schultz, J. Zobel, and K. E. Holt, 2015 <b>Bandage: interactive visualization ofde novogenome assemblies: Fig. 1.</b> Bioinformatics 31: 3350–3352. <a href="https://doi.org/10.1093/bioinformatics/btv383">10.1093/bioinformatics/btv383</a></li></ol>
+<li id="Wick2015">Wick, R. R., M. B. Schultz, J. Zobel, and K. E. Holt, 2015 <b>Bandage: interactive visualization of \lessi\greaterde novo\less/i\greater genome assemblies</b>. Bioinformatics 31: 3350–3352. <a href="https://doi.org/10.1093/bioinformatics/btv383">10.1093/bioinformatics/btv383</a></li></ol>
                 
 
                 
@@ -1342,7 +1346,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/720736375c1bc32d8cc8b0de02dffd16e3e1d072">7207363</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1373,41 +1377,8 @@ tools:
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1689303195'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

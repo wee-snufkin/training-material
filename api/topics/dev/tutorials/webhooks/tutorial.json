@@ -40,6 +40,7 @@
         "lon": -122.0
       },
       "fediverse": "https://mastodon.world/@martenson",
+      "fediverse_flavor": "mastodon",
       "joined": "2017-09",
       "id": "martenson",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/martenson.json",
@@ -49,6 +50,8 @@
       "name": "Björn Grüning",
       "email": "bjoern.gruening@gmail.com",
       "twitter": "bjoerngruening",
+      "fediverse": "https://fosstodon.org/@bgruening",
+      "fediverse_flavor": "mastodon",
       "matrix": "bgruening:matrix.org",
       "orcid": "0000-0002-3079-6586",
       "linkedin": "bgruening",

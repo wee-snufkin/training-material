@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
+  release: "galaxy-training-network@720736375c1bc32d8cc8b0de02dffd16e3e1d072",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1689303195' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1689303195' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -66,7 +68,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1689303195'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -286,18 +288,23 @@ Sentry.init({
 					Erasmus+ Programme
 				</h1>
 				
-				<div class="label label-default label-large" style="--color-primary: #ffc0d8; --color-darker: #ff9dc5; --color-dimmed: #ffafce;">GTN Funder</div>
+				<div class="label label-default label-large" style="--color-primary: #ffabcc; --color-darker: #ff88bb; --color-dimmed: #ff9ac3;">GTN Funder</div>
 				
 				
 
 				<h2>Contributions</h2>
 
-				<p class="text-muted">
-					
-						<p>This project (<a href="https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717"><code class="language-plaintext highlighter-rouge">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.
+				
+				
+				<a href="https://www.erasmusplus.nl">https://www.erasmusplus.nl</a>
+				
+				<p>This project (<a href="https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717"><code class="language-plaintext highlighter-rouge">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.
 <img src="https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg" alt="eu flag with the text: with the support of the erasmus programme of the european union" /></p>
 
-					
+				
+
+				<p class="text-muted">
+					The following list includes only slides and tutorials where the individual has been added to the contributor list. This may not include the sum total of their contributions to the training materials (e.g. GTN css or design, tutorial datasets, workflow development, etc.) unless described by a news post.
 
                 
                 </p>
@@ -472,6 +479,23 @@ Sentry.init({
 						
 						
 	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/data-science">
+							Foundations of Data Science
+						</a>
+						/
+						<a href="/training-material//topics/data-science/tutorials/bash-variant-calling/tutorial.html">
+						Variant Calling Workflow
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
 
 
 					</li>
@@ -717,6 +741,108 @@ Sentry.init({
 					<li>
 						
 						
+						<a href="/training-material/topics/ecology">
+							Ecology
+						</a>
+						/
+						<a href="/training-material//topics/ecology/tutorials/biodiversity-data-exploration/tutorial.html">
+						Biodiversity data exploration
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/metagenomics">
+							Metagenomics
+						</a>
+						/
+						<a href="/training-material//topics/metagenomics/tutorials/metagenomics-assembly/tutorial.html">
+						Assembly of metagenomic sequencing data
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/metagenomics">
+							Metagenomics
+						</a>
+						/
+						<a href="/training-material//topics/metagenomics/tutorials/beer-data-analysis/tutorial.html">
+						Identification of the micro-organisms in a beer using Nanopore sequencing
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/metagenomics">
+							Metagenomics
+						</a>
+						/
+						<a href="/training-material//topics/metagenomics/tutorials/taxonomic-profiling/tutorial.html">
+						Taxonomic Profiling and Visualization of Metagenomic Data
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/metagenomics">
+							Metagenomics
+						</a>
+						/
+						<a href="/training-material//topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html">
+						Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/assembly">
+							Assembly
+						</a>
+						/
+						<a href="/training-material//topics/assembly/tutorials/metagenomics-assembly/tutorial.html">
+						Assembly of metagenomic sequencing data
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
 						<a href="/training-material/topics/assembly">
 							Assembly
 						</a>
@@ -794,7 +920,7 @@ Sentry.init({
 						</a>
 						
 						
-	
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
 
 
 					</li>
@@ -811,7 +937,7 @@ Sentry.init({
 						</a>
 						
 						
-	
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
 
 
 					</li>
@@ -828,7 +954,7 @@ Sentry.init({
 						</a>
 						
 						
-	
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
 
 
 					</li>
@@ -880,6 +1006,23 @@ Sentry.init({
 						
 						
 	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/transcriptomics">
+							Transcriptomics
+						</a>
+						/
+						<a href="/training-material//topics/transcriptomics/tutorials/rna-seq-bash-star-align/tutorial.html">
+						RNA-seq Alignment with STAR
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
 
 
 					</li>
@@ -1014,6 +1157,91 @@ Sentry.init({
 				
 
 				
+				<h3>Learning Pathways</h3>
+				<ul>
+				
+					<li>
+						<a href="/training-material//learning-pathways/genome-annotation-eukaryote.html">
+						Genome annotation for eukaryotes
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						<a href="/training-material//learning-pathways/genome-annotation-prokaryote.html">
+						Genome annotation for prokaryotes
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						<a href="/training-material//learning-pathways/intro-to-galaxy-and-ecology.html">
+						Introduction to Galaxy and Ecological data analysis
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						<a href="/training-material//learning-pathways/intro-to-galaxy-and-genomics.html">
+						Introduction to Galaxy and Sequence analysis
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						<a href="/training-material//learning-pathways/intro-to-r-and-ml.html">
+						From R to Machine Learning; an introductory course
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						<a href="/training-material//learning-pathways/metagenomics.html">
+						Metagenomics data processing and analysis for microbiome
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+					<li>
+						<a href="/training-material//learning-pathways/train-the-trainers.html">
+						Train the Trainers
+						</a>
+						
+						
+	<abbr title="These individuals or organisations provided funding support for the development of this resource">💵</abbr>
+
+
+					</li>
+				
+				</ul>
+				
+
+
+				
                 <h3>News</h3>
                 <div class="newslist">
                 
@@ -1046,7 +1274,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1070,7 +1298,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 
     <hr/>
     <p class="card-text">
@@ -1115,7 +1343,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/lldelisle/" class="contributor-badge contributor-lldelisle"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/lldelisle?s=36" alt="Avatar">Lucille Delisle</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/lldelisle/" class="contributor-badge contributor-lldelisle"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/lldelisle?s=36" alt="Avatar" width="36" height="36">Lucille Delisle</a>
 		</td>
 	</tr>
 	
@@ -1139,11 +1367,11 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #99e700; --color-darker: #87ce00; --color-dimmed: #90db00;">community building</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #8ed800; --color-darker: #7ec100; --color-dimmed: #86cc00;">community building</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #b1e200; --color-darker: #9ec900; --color-dimmed: #a8d600;">capacity building</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #a5d400; --color-darker: #93bc00; --color-dimmed: #9cc800;">capacity building</span>
 
     <hr/>
     <p class="card-text">
@@ -1188,7 +1416,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1212,9 +1440,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #fff1a4; --color-darker: #ecd700; --color-dimmed: #fbe500;">gtn</span>
 
     <hr/>
     <p class="card-text">
@@ -1259,7 +1487,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1283,11 +1511,11 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00e088; --color-darker: #00c779; --color-dimmed: #00d381;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #dfc8ff; --color-darker: #cfaaff; --color-dimmed: #d7b9ff;">tutorial authors</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #d5b6ff; --color-darker: #c899ff; --color-dimmed: #cea8ff;">tutorial authors</span>
 
     <hr/>
     <p class="card-text">
@@ -1332,7 +1560,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1356,9 +1584,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00e088; --color-darker: #00c779; --color-dimmed: #00d381;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 
     <hr/>
     <p class="card-text">
@@ -1403,7 +1631,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1427,7 +1655,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #fff972; --color-darker: #e5de00; --color-dimmed: #f3ec00;">new-feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #fef600; --color-darker: #e1db00; --color-dimmed: #efe800;">new-feature</span>
 
     <hr/>
     <p class="card-text">
@@ -1472,7 +1700,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/abretaud?s=36" alt="Avatar">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=36" alt="Avatar">Yvan Le Bras</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/fpsom?s=36" alt="Avatar">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/carpentries/" class="contributor-badge contributor-carpentries"><img src="https://avatars.githubusercontent.com/carpentries?s=36" alt="Avatar">The Carpentries</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a><a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/abretaud?s=36" alt="Avatar" width="36" height="36">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=36" alt="Avatar" width="36" height="36">Yvan Le Bras</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/fpsom?s=36" alt="Avatar" width="36" height="36">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/carpentries/" class="contributor-badge contributor-carpentries"><img src="https://avatars.githubusercontent.com/carpentries?s=36" alt="Avatar" width="36" height="36">The Carpentries</a>
 		</td>
 	</tr>
 	
@@ -1496,9 +1724,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00e088; --color-darker: #00c779; --color-dimmed: #00d381;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #cfcdff; --color-darker: #b6b3ff; --color-dimmed: #c2c0ff;">new topic</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #c0bdff; --color-darker: #a8a5ff; --color-dimmed: #b4b1ff;">new topic</span>
 
     <hr/>
     <p class="card-text">
@@ -1624,7 +1852,35 @@ var topics = [
 
 	
 	
+	"Foundations of Data Science",
+
+	
+	
 	"Ecology",
+
+	
+	
+	"Ecology",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Assembly",
 
 	
 	
@@ -1668,6 +1924,10 @@ var topics = [
 
 	
 	
+	"Transcriptomics",
+
+	
+	
 	"Visualisation",
 
 	
@@ -1698,6 +1958,22 @@ var topics = [
 ];
 
 var slidesVsTutos = [
+
+	"Tutorials",
+
+	"Tutorials",
+
+	"Tutorials",
+
+	"Tutorials",
+
+	"Tutorials",
+
+	"Tutorials",
+
+	"Tutorials",
+
+	"Tutorials",
 
 	"Tutorials",
 
@@ -1891,7 +2167,7 @@ var chart2 = new Chart(ctx2, {
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/720736375c1bc32d8cc8b0de02dffd16e3e1d072">7207363</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1918,41 +2194,8 @@ var chart2 = new Chart(ctx2, {
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1689303195'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

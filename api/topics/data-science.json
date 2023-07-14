@@ -53,6 +53,7 @@
       "joined": "2017-09",
       "elixir_node": "nl",
       "fediverse": "https://galaxians.garden/hexylena",
+      "fediverse_flavor": "akkoma",
       "contact_for_training": false,
       "location": {
         "country": "NL",
@@ -113,6 +114,7 @@
         "lon": 3.08
       },
       "fediverse": "https://piaille.fr/@bebatut",
+      "fediverse_flavor": "mastodon",
       "id": "bebatut",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -220,6 +222,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -348,77 +351,18 @@
         "To use most powerful bioinformatic tools, you will need to use the command line.",
         "There are many different file formats for storing genomics data. It is important to understand what type of information is contained in each file, and how it was derived."
       ],
-      "contributors": [
-        {
-          "name": "Sofoklis Keisaris",
-          "email": "sofoskeisaris@gmail.com",
-          "orcid": "0000-0002-4833-4726",
-          "joined": "2022-05",
-          "id": "Sofokli5",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/Sofokli5.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/Sofokli5/"
-        },
-        {
-          "name": "Fotis E. Psomopoulos",
-          "email": "fpsom@certh.gr",
-          "twitter": "fopsom",
-          "matrix": "fpsom:matrix.org",
-          "orcid": "0000-0002-0222-4273",
-          "linkedin": "fpsom",
-          "joined": "2019-03",
-          "elixir_node": "gr",
-          "id": "fpsom",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/fpsom.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/fpsom/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "twitter": "shiltemann",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        },
-        {
-          "name": "Helena Rasche",
-          "email": "hexylena@galaxians.org",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "fediverse": "https://galaxians.garden/hexylena",
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "The Carpentries",
-          "joined": "2021-09",
-          "id": "carpentries",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/carpentries.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
-        }
-      ],
+      "contributions": {
+        "authorship": [
+          "Sofokli5",
+          "fpsom",
+          "shiltemann",
+          "hexylena",
+          "carpentries"
+        ],
+        "funding": [
+          "erasmusplus"
+        ]
+      },
       "short_id": "T00073",
       "url": "/topics/data-science/tutorials/bash-variant-calling/tutorial.html",
       "topic_name": "data-science",
@@ -482,6 +426,91 @@
         "video": false
       },
       "type": "tutorial",
+      "contributors": [
+        {
+          "name": "Sofoklis Keisaris",
+          "email": "sofoskeisaris@gmail.com",
+          "orcid": "0000-0002-4833-4726",
+          "joined": "2022-05",
+          "id": "Sofokli5",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/Sofokli5.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/Sofokli5/"
+        },
+        {
+          "name": "Fotis E. Psomopoulos",
+          "email": "fpsom@certh.gr",
+          "twitter": "fopsom",
+          "matrix": "fpsom:matrix.org",
+          "orcid": "0000-0002-0222-4273",
+          "linkedin": "fpsom",
+          "joined": "2019-03",
+          "elixir_node": "gr",
+          "id": "fpsom",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/fpsom.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/fpsom/"
+        },
+        {
+          "name": "Saskia Hiltemann",
+          "maintainer_contact": "gitter",
+          "email": "saskia.hiltemann@gmail.com",
+          "twitter": "shiltemann",
+          "linkedin": "shiltemann",
+          "matrix": "shiltemann:matrix.org",
+          "orcid": "0000-0003-3803-468X",
+          "joined": "2017-09",
+          "bio": "Researcher at Erasmus Medical Center",
+          "elixir_node": "nl",
+          "contact_for_training": true,
+          "location": {
+            "country": "NL",
+            "lat": 51.912,
+            "lon": 4.462
+          },
+          "id": "shiltemann",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
+        },
+        {
+          "name": "Helena Rasche",
+          "email": "hexylena@galaxians.org",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "The Carpentries",
+          "joined": "2021-09",
+          "id": "carpentries",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/carpentries.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
+        },
+        {
+          "name": "Erasmus+ Programme",
+          "joined": "2020-09",
+          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "github": false,
+          "funder": true,
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "funding_id": "2020-1-NL01-KA203-064717",
+          "funding_system": "erasmusplus",
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
+          "id": "erasmusplus",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
+        }
+      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/bash-variant-calling/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/bash-variant-calling/tutorial.json"
@@ -623,6 +652,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -744,6 +774,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -962,6 +993,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -1166,6 +1198,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -1246,6 +1279,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -1478,6 +1512,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -1691,6 +1726,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -1777,6 +1813,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -2061,6 +2098,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -2232,6 +2270,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -2376,6 +2415,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -2613,6 +2653,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -2710,6 +2751,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -2881,6 +2923,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -3105,6 +3148,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -3291,6 +3335,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -3640,6 +3685,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -3785,6 +3831,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -4088,6 +4135,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -4236,6 +4284,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -4382,6 +4431,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -4536,6 +4586,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -4675,6 +4726,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -4812,6 +4864,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -4957,6 +5010,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -5177,6 +5231,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -5335,6 +5390,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -5522,6 +5578,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -5696,6 +5753,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -5851,6 +5909,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -5915,6 +5974,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -6052,6 +6112,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -6281,6 +6342,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -6429,6 +6491,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",

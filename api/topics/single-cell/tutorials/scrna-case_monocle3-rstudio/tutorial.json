@@ -138,6 +138,7 @@
       "joined": "2017-09",
       "elixir_node": "nl",
       "fediverse": "https://galaxians.garden/hexylena",
+      "fediverse_flavor": "akkoma",
       "contact_for_training": false,
       "location": {
         "country": "NL",
@@ -171,6 +172,7 @@
     },
     {
       "name": "EOSC-Life",
+      "github": false,
       "joined": "2023-04",
       "avatar": "https://www.eosc-life.eu/wp-content/themes/eosc-life-v2/assets/images/eosclogo.png",
       "funder": true,

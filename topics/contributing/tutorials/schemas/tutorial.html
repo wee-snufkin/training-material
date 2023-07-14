@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
+  release: "galaxy-training-network@720736375c1bc32d8cc8b0de02dffd16e3e1d072",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1689303195' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1689303195' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -199,7 +201,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1689303195'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -381,7 +383,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+		Authors: <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 	</div>
 
 </div>
@@ -3903,6 +3905,8 @@ switch pages.</p>
 		
 	
 		
+	
+		
 			
 			
 			
@@ -4478,6 +4482,76 @@ switch pages.</p>
 
 	<div class="box-title">
 		
+		<button type="button" aria-expanded="true" aria-label="Toggle tip box: fediverse_flavor">
+			<i class="far fa-lightbulb" aria-hidden="true"></i>
+			
+				<code>fediverse_flavor</code>
+			
+			<span role="button" class="fold-unfold fa fa-plus-square"></span>
+		</button>
+		
+	</div>
+
+<b>Free Text</b>
+
+<p>
+<p>The flavor of the fediverse server (used in our webfinger endpoint.)</p>
+
+</p>
+
+
+
+
+<p>
+<b>Possible Values:</b>
+<ul>
+
+	<li><code>mastodon</code></li>
+
+	<li><code>akkoma</code></li>
+
+</ul>
+</p>
+
+
+
+
+
+<p>
+	<b>Example(s)</b>
+	
+<div>
+          <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">fediverse_flavor</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mastodon"</span>
+</code></pre></div>          </div>
+        </div>
+	
+<div>
+          <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">fediverse_flavor</span><span class="pi">:</span> <span class="s2">"</span><span class="s">akkoma"</span>
+</code></pre></div>          </div>
+        </div>
+	</p>
+
+
+
+
+
+
+
+
+
+</blockquote>
+
+		
+	
+		
+			
+			
+			
+
+			<blockquote class="tip">
+
+	<div class="box-title">
+		
 		<button type="button" aria-expanded="true" aria-label="Toggle tip box: funder">
 			<i class="far fa-lightbulb" aria-hidden="true"></i>
 			
@@ -4659,6 +4733,8 @@ switch pages.</p>
 
 	<li><code>erasmusplus</code></li>
 
+	<li><code>ukri</code></li>
+
 </ul>
 </p>
 
@@ -4676,6 +4752,11 @@ switch pages.</p>
 	
 <div>
           <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">funding_system</span><span class="pi">:</span> <span class="s2">"</span><span class="s">erasmusplus"</span>
+</code></pre></div>          </div>
+        </div>
+	
+<div>
+          <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">funding_system</span><span class="pi">:</span> <span class="s2">"</span><span class="s">ukri"</span>
 </code></pre></div>          </div>
         </div>
 	</p>
@@ -11802,9 +11883,216 @@ mistakes to help students identify where they went wrong.</p>
 
 
 
+<p>
+<b>Possible Values:</b>
+<ul>
+
+	<li><code>admin</code></li>
+
+	<li><code>covid19</code></li>
+
+	<li><code>ai4life</code></li>
+
+	<li><code>assembly</code></li>
+
+	<li><code>climate</code></li>
+
+	<li><code>computational-chemistry</code></li>
+
+	<li><code>contributing</code></li>
+
+	<li><code>data-science</code></li>
+
+	<li><code>dev</code></li>
+
+	<li><code>ecology</code></li>
+
+	<li><code>epigenetics</code></li>
+
+	<li><code>evolution</code></li>
+
+	<li><code>fair</code></li>
+
+	<li><code>galaxy-interface</code></li>
+
+	<li><code>genome-annotation</code></li>
+
+	<li><code>imaging</code></li>
+
+	<li><code>introduction</code></li>
+
+	<li><code>metabolomics</code></li>
+
+	<li><code>metagenomics</code></li>
+
+	<li><code>proteomics</code></li>
+
+	<li><code>sequence-analysis</code></li>
+
+	<li><code>single-cell</code></li>
+
+	<li><code>statistics</code></li>
+
+	<li><code>synthetic-biology</code></li>
+
+	<li><code>teaching</code></li>
+
+	<li><code>transcriptomics</code></li>
+
+	<li><code>variant-analysis</code></li>
+
+	<li><code>visualisation</code></li>
+
+</ul>
+</p>
 
 
 
+
+
+<p>
+	<b>Example(s)</b>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">admin"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">covid19"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">ai4life"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">assembly"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">climate"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">computational-chemistry"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">contributing"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">data-science"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">dev"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">ecology"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">epigenetics"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">evolution"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">fair"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">galaxy-interface"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">genome-annotation"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">imaging"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">introduction"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">metabolomics"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">metagenomics"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">proteomics"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">sequence-analysis"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">single-cell"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">statistics"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">synthetic-biology"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">teaching"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">transcriptomics"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">variant-analysis"</span>
+</code></pre></div>                </div>
+              </div>
+	
+<div>
+                <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">topic</span><span class="pi">:</span> <span class="s2">"</span><span class="s">visualisation"</span>
+</code></pre></div>                </div>
+              </div>
+	</p>
 
 
 
@@ -13609,7 +13897,7 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/720736375c1bc32d8cc8b0de02dffd16e3e1d072">7207363</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -13640,41 +13928,8 @@ tools: []
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1689303195'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

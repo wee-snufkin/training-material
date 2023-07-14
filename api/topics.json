@@ -14,6 +14,7 @@
         "joined": "2017-09",
         "elixir_node": "nl",
         "fediverse": "https://galaxians.garden/hexylena",
+        "fediverse_flavor": "akkoma",
         "contact_for_training": false,
         "location": {
           "country": "NL",
@@ -50,6 +51,8 @@
         "name": "Björn Grüning",
         "email": "bjoern.gruening@gmail.com",
         "twitter": "bjoerngruening",
+        "fediverse": "https://fosstodon.org/@bgruening",
+        "fediverse_flavor": "mastodon",
         "matrix": "bgruening:matrix.org",
         "orcid": "0000-0002-3079-6586",
         "linkedin": "bgruening",
@@ -72,6 +75,7 @@
           "lon": -122.0
         },
         "fediverse": "https://mastodon.world/@martenson",
+        "fediverse_flavor": "mastodon",
         "joined": "2017-09",
         "id": "martenson",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/martenson.json",
@@ -194,6 +198,8 @@
         "name": "Björn Grüning",
         "email": "bjoern.gruening@gmail.com",
         "twitter": "bjoerngruening",
+        "fediverse": "https://fosstodon.org/@bgruening",
+        "fediverse_flavor": "mastodon",
         "matrix": "bgruening:matrix.org",
         "orcid": "0000-0002-3079-6586",
         "linkedin": "bgruening",
@@ -227,6 +233,7 @@
           "lon": 3.08
         },
         "fediverse": "https://piaille.fr/@bebatut",
+        "fediverse_flavor": "mastodon",
         "id": "bebatut",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -235,6 +242,8 @@
         "name": "Björn Grüning",
         "email": "bjoern.gruening@gmail.com",
         "twitter": "bjoerngruening",
+        "fediverse": "https://fosstodon.org/@bgruening",
+        "fediverse_flavor": "mastodon",
         "matrix": "bgruening:matrix.org",
         "orcid": "0000-0002-3079-6586",
         "linkedin": "bgruening",
@@ -255,8 +264,11 @@
       {
         "name": "Wolfgang Maier",
         "orcid": "0000-0002-9464-6640",
+        "matrix": "wm75:matrix.org",
         "joined": "2017-09",
         "elixir_node": "de",
+        "fediverse": "https://scholar.social/@zerodivision",
+        "fediverse_flavor": "mastodon",
         "id": "wm75",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/wm75.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
@@ -278,6 +290,7 @@
         "joined": "2017-09",
         "elixir_node": "nl",
         "fediverse": "https://galaxians.garden/hexylena",
+        "fediverse_flavor": "akkoma",
         "contact_for_training": false,
         "location": {
           "country": "NL",
@@ -338,6 +351,7 @@
           "lon": 3.08
         },
         "fediverse": "https://piaille.fr/@bebatut",
+        "fediverse_flavor": "mastodon",
         "id": "bebatut",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -386,6 +400,7 @@
           "lon": 3.08
         },
         "fediverse": "https://piaille.fr/@bebatut",
+        "fediverse_flavor": "mastodon",
         "id": "bebatut",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -399,6 +414,7 @@
         "joined": "2017-09",
         "elixir_node": "nl",
         "fediverse": "https://galaxians.garden/hexylena",
+        "fediverse_flavor": "akkoma",
         "contact_for_training": false,
         "location": {
           "country": "NL",
@@ -541,6 +557,7 @@
           "lon": -2.233631283105614
         },
         "fediverse": "https://scholar.social/@soilandreyes",
+        "fediverse_flavor": "mastodon",
         "id": "stain",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/stain.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/stain/"
@@ -556,6 +573,7 @@
       },
       {
         "name": "Katarzyna Kamieniecka",
+        "twitter": "katemurat",
         "orcid": "0009-0004-2454-5950",
         "joined": "2018-08",
         "elixir_node": "uk",
@@ -609,6 +627,7 @@
         "joined": "2017-09",
         "elixir_node": "nl",
         "fediverse": "https://galaxians.garden/hexylena",
+        "fediverse_flavor": "akkoma",
         "contact_for_training": false,
         "location": {
           "country": "NL",
@@ -636,6 +655,7 @@
         "joined": "2017-09",
         "elixir_node": "nl",
         "fediverse": "https://galaxians.garden/hexylena",
+        "fediverse_flavor": "akkoma",
         "contact_for_training": false,
         "location": {
           "country": "NL",
@@ -672,6 +692,7 @@
           "lon": -1.64
         },
         "fediverse": "https://genomic.social/@abretaud",
+        "fediverse_flavor": "mastodon",
         "id": "abretaud",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -786,6 +807,7 @@
           "lon": 3.08
         },
         "fediverse": "https://piaille.fr/@bebatut",
+        "fediverse_flavor": "mastodon",
         "id": "bebatut",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -822,8 +844,11 @@
       {
         "name": "Wolfgang Maier",
         "orcid": "0000-0002-9464-6640",
+        "matrix": "wm75:matrix.org",
         "joined": "2017-09",
         "elixir_node": "de",
+        "fediverse": "https://scholar.social/@zerodivision",
+        "fediverse_flavor": "mastodon",
         "id": "wm75",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/wm75.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
@@ -859,6 +884,7 @@
         "joined": "2017-09",
         "elixir_node": "nl",
         "fediverse": "https://galaxians.garden/hexylena",
+        "fediverse_flavor": "akkoma",
         "contact_for_training": false,
         "location": {
           "country": "NL",
@@ -914,6 +940,8 @@
         "name": "Björn Grüning",
         "email": "bjoern.gruening@gmail.com",
         "twitter": "bjoerngruening",
+        "fediverse": "https://fosstodon.org/@bgruening",
+        "fediverse_flavor": "mastodon",
         "matrix": "bgruening:matrix.org",
         "orcid": "0000-0002-3079-6586",
         "linkedin": "bgruening",
@@ -959,6 +987,7 @@
           "lon": 3.08
         },
         "fediverse": "https://piaille.fr/@bebatut",
+        "fediverse_flavor": "mastodon",
         "id": "bebatut",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -977,7 +1006,7 @@
   "single-cell": {
     "name": "single-cell",
     "title": "Single Cell",
-    "summary": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!",
+    "summary": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!\n\nWhat else do you want to see? You can submit tool and/or tutorial requests, as well as up-vote requests from others at our [Single Cell Community Planning site](https://github.com/orgs/galaxyproject/projects/31/views/1).\n{: .alert.alert-success}\n",
     "url": "https://training.galaxyproject.org/training-material/api/topics/single-cell.json",
     "maintainers": [
       {
@@ -1001,6 +1030,14 @@
         "id": "mtekman",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/mtekman.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mtekman/"
+      },
+      {
+        "name": "Pavankumar Videm",
+        "orcid": "0000-0002-5192-126X",
+        "joined": "2017-09",
+        "id": "pavanvidem",
+        "url": "https://training.galaxyproject.org/training-material/api/contributors/pavanvidem.json",
+        "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pavanvidem/"
       }
     ]
   },
@@ -1110,6 +1147,7 @@
           "lon": 3.08
         },
         "fediverse": "https://piaille.fr/@bebatut",
+        "fediverse_flavor": "mastodon",
         "id": "bebatut",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -1138,6 +1176,7 @@
           "lon": 3.08
         },
         "fediverse": "https://piaille.fr/@bebatut",
+        "fediverse_flavor": "mastodon",
         "id": "bebatut",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -1183,6 +1222,7 @@
           "lon": 3.08
         },
         "fediverse": "https://piaille.fr/@bebatut",
+        "fediverse_flavor": "mastodon",
         "id": "bebatut",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -1190,8 +1230,11 @@
       {
         "name": "Wolfgang Maier",
         "orcid": "0000-0002-9464-6640",
+        "matrix": "wm75:matrix.org",
         "joined": "2017-09",
         "elixir_node": "de",
+        "fediverse": "https://scholar.social/@zerodivision",
+        "fediverse_flavor": "mastodon",
         "id": "wm75",
         "url": "https://training.galaxyproject.org/training-material/api/contributors/wm75.json",
         "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
@@ -1200,6 +1243,8 @@
         "name": "Björn Grüning",
         "email": "bjoern.gruening@gmail.com",
         "twitter": "bjoerngruening",
+        "fediverse": "https://fosstodon.org/@bgruening",
+        "fediverse_flavor": "mastodon",
         "matrix": "bgruening:matrix.org",
         "orcid": "0000-0002-3079-6586",
         "linkedin": "bgruening",
@@ -1255,6 +1300,7 @@
         "joined": "2017-09",
         "elixir_node": "nl",
         "fediverse": "https://galaxians.garden/hexylena",
+        "fediverse_flavor": "akkoma",
         "contact_for_training": false,
         "location": {
           "country": "NL",

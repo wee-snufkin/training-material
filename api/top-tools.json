@@ -2,6 +2,10 @@
   "devteam/fastqc": {
     "tool_id": [
       [
+        "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy0",
+        "0.74+galaxy0"
+      ],
+      [
         "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0",
         "0.73+galaxy0"
       ],
@@ -168,6 +172,12 @@
         "Quality Control",
         "Sequence analysis",
         "/topics/sequence-analysis/tutorials/quality-control/tutorial.html"
+      ],
+      [
+        "sequence-analysis/sars-with-galaxy-on-anvil",
+        "SARS-CoV-2 Viral Sample Alignment and Variant Visualization",
+        "Sequence analysis",
+        "/topics/sequence-analysis/tutorials/sars-with-galaxy-on-anvil/tutorial.html"
       ],
       [
         "single-cell/scatac-preprocessing-tenx",
@@ -1327,6 +1337,126 @@
       ]
     ]
   },
+  "nml/collapse_dataset": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0",
+        "5.1.0"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/4.2",
+        "4.2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/4.0",
+        "4.0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "assembly/assembly-with-preprocessing",
+        "Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads",
+        "Assembly",
+        "/topics/assembly/tutorials/assembly-with-preprocessing/tutorial.html"
+      ],
+      [
+        "assembly/ecoli_comparison",
+        "Making sense of a newly assembled genome",
+        "Assembly",
+        "/topics/assembly/tutorials/ecoli_comparison/tutorial.html"
+      ],
+      [
+        "assembly/vgp_genome_assembly",
+        "VGP assembly pipeline",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
+      ],
+      [
+        "assembly/vgp_workflow_training",
+        "VGP assembly pipeline - short version",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
+      ],
+      [
+        "computational-chemistry/cheminformatics",
+        "Protein-ligand docking",
+        "Computational chemistry",
+        "/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html"
+      ],
+      [
+        "computational-chemistry/covid19-docking",
+        "Virtual screening of the SARS-CoV-2 main protease with rxDock and pose scoring",
+        "Computational chemistry",
+        "/topics/computational-chemistry/tutorials/covid19-docking/tutorial.html"
+      ],
+      [
+        "ecology/phylogeny-data-prep",
+        "Preparing genomic data for phylogeny reconstruction",
+        "Ecology",
+        "/topics/ecology/tutorials/phylogeny-data-prep/tutorial.html"
+      ],
+      [
+        "evolution/mtb_transmission",
+        "Identifying tuberculosis transmission links: from SNPs to transmission clusters",
+        "Evolution",
+        "/topics/evolution/tutorials/mtb_transmission/tutorial.html"
+      ],
+      [
+        "galaxy-interface/collections",
+        "Using dataset collections",
+        "Using Galaxy and Managing your Data",
+        "/topics/galaxy-interface/tutorials/collections/tutorial.html"
+      ],
+      [
+        "galaxy-interface/workflow-automation",
+        "Automating Galaxy workflows using the command line",
+        "Using Galaxy and Managing your Data",
+        "/topics/galaxy-interface/tutorials/workflow-automation/tutorial.html"
+      ],
+      [
+        "genome-annotation/gene-centric",
+        "Comparative gene analysis in unannotated genomes",
+        "Genome Annotation",
+        "/topics/genome-annotation/tutorials/gene-centric/tutorial.html"
+      ],
+      [
+        "imaging/hela-screen-analysis",
+        "Analyse HeLa fluorescence siRNA screen",
+        "Imaging",
+        "/topics/imaging/tutorials/hela-screen-analysis/tutorial.html"
+      ],
+      [
+        "introduction/galaxy-intro-ngs-data-managment",
+        "NGS data logistics",
+        "Introduction to Galaxy Analyses",
+        "/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.html"
+      ],
+      [
+        "metagenomics/mothur-miseq-sop-short",
+        "16S Microbial Analysis with mothur (short)",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/mothur-miseq-sop-short/tutorial.html"
+      ],
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
+      ],
+      [
+        "variant-analysis/aiv-analysis",
+        "Avian influenza viral strain analysis from gene segment sequencing data",
+        "Variant Analysis",
+        "/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html"
+      ]
+    ]
+  },
   "bgruening/tp_cat": {
     "tool_id": [
       [
@@ -1440,120 +1570,6 @@
         "Pox virus genome analysis from tiled-amplicon sequencing data",
         "Variant Analysis",
         "/topics/variant-analysis/tutorials/pox-tiled-amplicon/tutorial.html"
-      ]
-    ]
-  },
-  "nml/collapse_dataset": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0",
-        "5.1.0"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/4.2",
-        "4.2"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/4.0",
-        "4.0"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/assembly-with-preprocessing",
-        "Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads",
-        "Assembly",
-        "/topics/assembly/tutorials/assembly-with-preprocessing/tutorial.html"
-      ],
-      [
-        "assembly/ecoli_comparison",
-        "Making sense of a newly assembled genome",
-        "Assembly",
-        "/topics/assembly/tutorials/ecoli_comparison/tutorial.html"
-      ],
-      [
-        "assembly/vgp_genome_assembly",
-        "VGP assembly pipeline",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
-      ],
-      [
-        "assembly/vgp_workflow_training",
-        "VGP assembly pipeline - short version",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
-      ],
-      [
-        "computational-chemistry/cheminformatics",
-        "Protein-ligand docking",
-        "Computational chemistry",
-        "/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html"
-      ],
-      [
-        "computational-chemistry/covid19-docking",
-        "Virtual screening of the SARS-CoV-2 main protease with rxDock and pose scoring",
-        "Computational chemistry",
-        "/topics/computational-chemistry/tutorials/covid19-docking/tutorial.html"
-      ],
-      [
-        "ecology/phylogeny-data-prep",
-        "Preparing genomic data for phylogeny reconstruction",
-        "Ecology",
-        "/topics/ecology/tutorials/phylogeny-data-prep/tutorial.html"
-      ],
-      [
-        "evolution/mtb_transmission",
-        "Identifying tuberculosis transmission links: from SNPs to transmission clusters",
-        "Evolution",
-        "/topics/evolution/tutorials/mtb_transmission/tutorial.html"
-      ],
-      [
-        "galaxy-interface/collections",
-        "Using dataset collections",
-        "Using Galaxy and Managing your Data",
-        "/topics/galaxy-interface/tutorials/collections/tutorial.html"
-      ],
-      [
-        "galaxy-interface/workflow-automation",
-        "Automating Galaxy workflows using the command line",
-        "Using Galaxy and Managing your Data",
-        "/topics/galaxy-interface/tutorials/workflow-automation/tutorial.html"
-      ],
-      [
-        "genome-annotation/gene-centric",
-        "Comparative gene analysis in unannotated genomes",
-        "Genome Annotation",
-        "/topics/genome-annotation/tutorials/gene-centric/tutorial.html"
-      ],
-      [
-        "imaging/hela-screen-analysis",
-        "Analyse HeLa fluorescence siRNA screen",
-        "Imaging",
-        "/topics/imaging/tutorials/hela-screen-analysis/tutorial.html"
-      ],
-      [
-        "introduction/galaxy-intro-ngs-data-managment",
-        "NGS data logistics",
-        "Introduction to Galaxy Analyses",
-        "/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.html"
-      ],
-      [
-        "metagenomics/mothur-miseq-sop-short",
-        "16S Microbial Analysis with mothur (short)",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/mothur-miseq-sop-short/tutorial.html"
-      ],
-      [
-        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
-        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
-      ],
-      [
-        "variant-analysis/aiv-analysis",
-        "Avian influenza viral strain analysis from gene segment sequencing data",
-        "Variant Analysis",
-        "/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html"
       ]
     ]
   },
@@ -1900,6 +1916,12 @@
         "/topics/sequence-analysis/tutorials/mapping/tutorial.html"
       ],
       [
+        "sequence-analysis/sars-with-galaxy-on-anvil",
+        "SARS-CoV-2 Viral Sample Alignment and Variant Visualization",
+        "Sequence analysis",
+        "/topics/sequence-analysis/tutorials/sars-with-galaxy-on-anvil/tutorial.html"
+      ],
+      [
         "variant-analysis/microbial-variants",
         "Microbial Variant Calling",
         "Variant Analysis",
@@ -1960,6 +1982,12 @@
         "Removal of human reads from SARS-CoV-2 sequencing data",
         "Sequence analysis",
         "/topics/sequence-analysis/tutorials/human-reads-removal/tutorial.html"
+      ],
+      [
+        "sequence-analysis/sars-with-galaxy-on-anvil",
+        "SARS-CoV-2 Viral Sample Alignment and Variant Visualization",
+        "Sequence analysis",
+        "/topics/sequence-analysis/tutorials/sars-with-galaxy-on-anvil/tutorial.html"
       ],
       [
         "single-cell/scatac-preprocessing-tenx",
@@ -2291,6 +2319,94 @@
       ]
     ]
   },
+  "bgruening/tp_find_and_replace": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4",
+        "1.1.4"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.3",
+        "1.1.3"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.2",
+        "1.1.2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.1",
+        "1.1.1"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "assembly/vgp_genome_assembly",
+        "VGP assembly pipeline",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
+      ],
+      [
+        "assembly/vgp_workflow_training",
+        "VGP assembly pipeline - short version",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
+      ],
+      [
+        "climate/fates",
+        "Functionally Assembled Terrestrial Ecosystem Simulator (FATES)",
+        "Climate",
+        "/topics/climate/tutorials/fates/tutorial.html"
+      ],
+      [
+        "computational-chemistry/cheminformatics",
+        "Protein-ligand docking",
+        "Computational chemistry",
+        "/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html"
+      ],
+      [
+        "ecology/species-distribution-modeling",
+        "Species distribution modeling",
+        "Ecology",
+        "/topics/ecology/tutorials/species-distribution-modeling/tutorial.html"
+      ],
+      [
+        "metagenomics/metatranscriptomics",
+        "Metatranscriptomics analysis using microbiome RNA-seq data",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html"
+      ],
+      [
+        "metagenomics/metatranscriptomics-short",
+        "Metatranscriptomics analysis using microbiome RNA-seq data (short)",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/metatranscriptomics-short/tutorial.html"
+      ],
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
+      ],
+      [
+        "variant-analysis/aiv-analysis",
+        "Avian influenza viral strain analysis from gene segment sequencing data",
+        "Variant Analysis",
+        "/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html"
+      ],
+      [
+        "variant-analysis/mapping-by-sequencing",
+        "Mapping and molecular identification of phenotype-causing mutations",
+        "Variant Analysis",
+        "/topics/variant-analysis/tutorials/mapping-by-sequencing/tutorial.html"
+      ]
+    ]
+  },
   "join1": {
     "tool_id": [
       [
@@ -2551,6 +2667,92 @@
       ]
     ]
   },
+  "iuc/bandage_image": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/2022.09+galaxy4",
+        "2022.09+galaxy4"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy4",
+        "0.8.1+galaxy4"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy3",
+        "0.8.1+galaxy3"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2",
+        "0.8.1+galaxy2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy0",
+        "0.8.1+galaxy0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "assembly/assembly-with-preprocessing",
+        "Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads",
+        "Assembly",
+        "/topics/assembly/tutorials/assembly-with-preprocessing/tutorial.html"
+      ],
+      [
+        "assembly/chloroplast-assembly",
+        "Chloroplast genome assembly",
+        "Assembly",
+        "/topics/assembly/tutorials/chloroplast-assembly/tutorial.html"
+      ],
+      [
+        "assembly/largegenome",
+        "Large genome assembly and polishing",
+        "Assembly",
+        "/topics/assembly/tutorials/largegenome/tutorial.html"
+      ],
+      [
+        "assembly/metagenomics-assembly",
+        "Assembly of metagenomic sequencing data",
+        "Assembly",
+        "/topics/assembly/tutorials/metagenomics-assembly/tutorial.html"
+      ],
+      [
+        "assembly/mrsa-illumina",
+        "Genome Assembly of MRSA using Illumina MiSeq Data",
+        "Assembly",
+        "/topics/assembly/tutorials/mrsa-illumina/tutorial.html"
+      ],
+      [
+        "assembly/mrsa-nanopore",
+        "Genome Assembly of MRSA using Oxford Nanopore MinION Data",
+        "Assembly",
+        "/topics/assembly/tutorials/mrsa-nanopore/tutorial.html"
+      ],
+      [
+        "metagenomics/metagenomics-assembly",
+        "Assembly of metagenomic sequencing data",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/metagenomics-assembly/tutorial.html"
+      ],
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
+      ],
+      [
+        "metagenomics/plasmid-metagenomics-nanopore",
+        "Antibiotic resistance detection",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html"
+      ]
+    ]
+  },
   "bgruening/tp_awk_tool": {
     "tool_id": [
       [
@@ -2629,26 +2831,66 @@
       ]
     ]
   },
-  "bgruening/tp_find_and_replace": {
+  "iuc/busco": {
     "tool_id": [
       [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4",
-        "1.1.4"
+        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.4.6+galaxy0",
+        "5.4.6+galaxy0"
       ],
       [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.3",
-        "1.1.3"
+        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.4.4+galaxy0",
+        "5.4.4+galaxy0"
       ],
       [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.2",
-        "1.1.2"
+        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.3.2+galaxy0",
+        "5.3.2+galaxy0"
       ],
       [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.1",
-        "1.1.1"
+        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.2.2+galaxy2",
+        "5.2.2+galaxy2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.2.2+galaxy0",
+        "5.2.2+galaxy0"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.0.0+galaxy0",
+        "5.0.0+galaxy0"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4",
+        "4.1.4"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/3.0.2+galaxy1",
+        "3.0.2+galaxy1"
       ]
     ],
     "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "assembly/assembly-quality-control",
+        "Genome Assembly Quality Control",
+        "Assembly",
+        "/topics/assembly/tutorials/assembly-quality-control/tutorial.html"
+      ],
+      [
+        "assembly/flye-assembly",
+        "Genome assembly using PacBio data",
+        "Assembly",
+        "/topics/assembly/tutorials/flye-assembly/tutorial.html"
+      ],
+      [
+        "assembly/largegenome",
+        "Large genome assembly and polishing",
+        "Assembly",
+        "/topics/assembly/tutorials/largegenome/tutorial.html"
+      ],
       [
         "assembly/vgp_genome_assembly",
         "VGP assembly pipeline",
@@ -2662,52 +2904,28 @@
         "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
       ],
       [
-        "climate/fates",
-        "Functionally Assembled Terrestrial Ecosystem Simulator (FATES)",
-        "Climate",
-        "/topics/climate/tutorials/fates/tutorial.html"
-      ],
-      [
-        "computational-chemistry/cheminformatics",
-        "Protein-ligand docking",
-        "Computational chemistry",
-        "/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html"
-      ],
-      [
-        "ecology/species-distribution-modeling",
-        "Species distribution modeling",
+        "ecology/phylogeny-data-prep",
+        "Preparing genomic data for phylogeny reconstruction",
         "Ecology",
-        "/topics/ecology/tutorials/species-distribution-modeling/tutorial.html"
+        "/topics/ecology/tutorials/phylogeny-data-prep/tutorial.html"
       ],
       [
-        "metagenomics/metatranscriptomics",
-        "Metatranscriptomics analysis using microbiome RNA-seq data",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html"
+        "genome-annotation/annotation-with-maker",
+        "Genome annotation with Maker",
+        "Genome Annotation",
+        "/topics/genome-annotation/tutorials/annotation-with-maker/tutorial.html"
       ],
       [
-        "metagenomics/metatranscriptomics-short",
-        "Metatranscriptomics analysis using microbiome RNA-seq data (short)",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/metatranscriptomics-short/tutorial.html"
+        "genome-annotation/annotation-with-maker-short",
+        "Genome annotation with Maker (short)",
+        "Genome Annotation",
+        "/topics/genome-annotation/tutorials/annotation-with-maker-short/tutorial.html"
       ],
       [
-        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
-        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
-      ],
-      [
-        "variant-analysis/aiv-analysis",
-        "Avian influenza viral strain analysis from gene segment sequencing data",
-        "Variant Analysis",
-        "/topics/variant-analysis/tutorials/aiv-analysis/tutorial.html"
-      ],
-      [
-        "variant-analysis/mapping-by-sequencing",
-        "Mapping and molecular identification of phenotype-causing mutations",
-        "Variant Analysis",
-        "/topics/variant-analysis/tutorials/mapping-by-sequencing/tutorial.html"
+        "genome-annotation/funannotate",
+        "Genome annotation with Funannotate",
+        "Genome Annotation",
+        "/topics/genome-annotation/tutorials/funannotate/tutorial.html"
       ]
     ]
   },
@@ -3070,170 +3288,6 @@
         "Trio Analysis using Synthetic Datasets from RD-Connect GPAP",
         "Variant Analysis",
         "/topics/variant-analysis/tutorials/trio-analysis/tutorial.html"
-      ]
-    ]
-  },
-  "iuc/bandage_image": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy4",
-        "0.8.1+galaxy4"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy3",
-        "0.8.1+galaxy3"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2",
-        "0.8.1+galaxy2"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy0",
-        "0.8.1+galaxy0"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/assembly-with-preprocessing",
-        "Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads",
-        "Assembly",
-        "/topics/assembly/tutorials/assembly-with-preprocessing/tutorial.html"
-      ],
-      [
-        "assembly/chloroplast-assembly",
-        "Chloroplast genome assembly",
-        "Assembly",
-        "/topics/assembly/tutorials/chloroplast-assembly/tutorial.html"
-      ],
-      [
-        "assembly/largegenome",
-        "Large genome assembly and polishing",
-        "Assembly",
-        "/topics/assembly/tutorials/largegenome/tutorial.html"
-      ],
-      [
-        "assembly/metagenomics-assembly",
-        "Assembly of metagenomic sequencing data",
-        "Assembly",
-        "/topics/assembly/tutorials/metagenomics-assembly/tutorial.html"
-      ],
-      [
-        "assembly/mrsa-illumina",
-        "Genome Assembly of MRSA using Illumina MiSeq Data",
-        "Assembly",
-        "/topics/assembly/tutorials/mrsa-illumina/tutorial.html"
-      ],
-      [
-        "assembly/mrsa-nanopore",
-        "Genome Assembly of MRSA using Oxford Nanopore MinION Data",
-        "Assembly",
-        "/topics/assembly/tutorials/mrsa-nanopore/tutorial.html"
-      ],
-      [
-        "metagenomics/metagenomics-assembly",
-        "Assembly of metagenomic sequencing data",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/metagenomics-assembly/tutorial.html"
-      ],
-      [
-        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
-        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
-      ],
-      [
-        "metagenomics/plasmid-metagenomics-nanopore",
-        "Antibiotic resistance detection",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html"
-      ]
-    ]
-  },
-  "iuc/busco": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.4.6+galaxy0",
-        "5.4.6+galaxy0"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.3.2+galaxy0",
-        "5.3.2+galaxy0"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.2.2+galaxy2",
-        "5.2.2+galaxy2"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.2.2+galaxy0",
-        "5.2.2+galaxy0"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.0.0+galaxy0",
-        "5.0.0+galaxy0"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4",
-        "4.1.4"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/3.0.2+galaxy1",
-        "3.0.2+galaxy1"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/assembly-quality-control",
-        "Genome Assembly Quality Control",
-        "Assembly",
-        "/topics/assembly/tutorials/assembly-quality-control/tutorial.html"
-      ],
-      [
-        "assembly/flye-assembly",
-        "Genome assembly using PacBio data",
-        "Assembly",
-        "/topics/assembly/tutorials/flye-assembly/tutorial.html"
-      ],
-      [
-        "assembly/largegenome",
-        "Large genome assembly and polishing",
-        "Assembly",
-        "/topics/assembly/tutorials/largegenome/tutorial.html"
-      ],
-      [
-        "assembly/vgp_genome_assembly",
-        "VGP assembly pipeline",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
-      ],
-      [
-        "assembly/vgp_workflow_training",
-        "VGP assembly pipeline - short version",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
-      ],
-      [
-        "ecology/phylogeny-data-prep",
-        "Preparing genomic data for phylogeny reconstruction",
-        "Ecology",
-        "/topics/ecology/tutorials/phylogeny-data-prep/tutorial.html"
-      ],
-      [
-        "genome-annotation/annotation-with-maker",
-        "Genome annotation with Maker",
-        "Genome Annotation",
-        "/topics/genome-annotation/tutorials/annotation-with-maker/tutorial.html"
-      ],
-      [
-        "genome-annotation/annotation-with-maker-short",
-        "Genome annotation with Maker (short)",
-        "Genome Annotation",
-        "/topics/genome-annotation/tutorials/annotation-with-maker-short/tutorial.html"
-      ],
-      [
-        "genome-annotation/funannotate",
-        "Genome annotation with Funannotate",
-        "Genome Annotation",
-        "/topics/genome-annotation/tutorials/funannotate/tutorial.html"
       ]
     ]
   },
@@ -3959,6 +4013,66 @@
       ]
     ]
   },
+  "devteam/samtools_stats": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.4",
+        "2.0.4"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.2+galaxy2",
+        "2.0.2+galaxy2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.1",
+        "2.0.1"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "assembly/assembly-with-preprocessing",
+        "Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads",
+        "Assembly",
+        "/topics/assembly/tutorials/assembly-with-preprocessing/tutorial.html"
+      ],
+      [
+        "introduction/galaxy-intro-ngs-data-managment",
+        "NGS data logistics",
+        "Introduction to Galaxy Analyses",
+        "/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.html"
+      ],
+      [
+        "sequence-analysis/mapping",
+        "Mapping",
+        "Sequence analysis",
+        "/topics/sequence-analysis/tutorials/mapping/tutorial.html"
+      ],
+      [
+        "single-cell/scrna-preprocessing",
+        "Pre-processing of Single-Cell RNA Data",
+        "Single Cell",
+        "/topics/single-cell/tutorials/scrna-preprocessing/tutorial.html"
+      ],
+      [
+        "variant-analysis/sars-cov-2",
+        "From NCBI's Sequence Read Archive (SRA) to Galaxy: SARS-CoV-2 variant analysis",
+        "Variant Analysis",
+        "/topics/variant-analysis/tutorials/sars-cov-2/tutorial.html"
+      ],
+      [
+        "variant-analysis/tb-variant-analysis",
+        "M. tuberculosis Variant Analysis",
+        "Variant Analysis",
+        "/topics/variant-analysis/tutorials/tb-variant-analysis/tutorial.html"
+      ]
+    ]
+  },
   "iuc/query_tabular": {
     "tool_id": [
       [
@@ -4193,57 +4307,65 @@
       ]
     ]
   },
-  "devteam/samtools_stats": {
+  "iuc/hisat2": {
     "tool_id": [
       [
-        "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.4",
-        "2.0.4"
+        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.2.1+galaxy1",
+        "2.2.1+galaxy1"
       ],
       [
-        "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.2+galaxy2",
-        "2.0.2+galaxy2"
+        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.2.1+galaxy0",
+        "2.2.1+galaxy0"
       ],
       [
-        "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.1",
-        "2.0.1"
+        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.1.0+galaxy5",
+        "2.1.0+galaxy5"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.1.0+galaxy3",
+        "2.1.0+galaxy3"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3",
+        "2.0.3"
       ]
     ],
     "tutorials": [
       [
-        "assembly/assembly-with-preprocessing",
-        "Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads",
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
         "Assembly",
-        "/topics/assembly/tutorials/assembly-with-preprocessing/tutorial.html"
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
       ],
       [
-        "introduction/galaxy-intro-ngs-data-managment",
-        "NGS data logistics",
-        "Introduction to Galaxy Analyses",
-        "/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.html"
+        "proteomics/proteogenomics-dbcreation",
+        "Proteogenomics 1: Database Creation",
+        "Proteomics",
+        "/topics/proteomics/tutorials/proteogenomics-dbcreation/tutorial.html"
       ],
       [
-        "sequence-analysis/mapping",
-        "Mapping",
-        "Sequence analysis",
-        "/topics/sequence-analysis/tutorials/mapping/tutorial.html"
+        "transcriptomics/de-novo",
+        "De novo transcriptome reconstruction with RNA-Seq",
+        "Transcriptomics",
+        "/topics/transcriptomics/tutorials/de-novo/tutorial.html"
       ],
       [
-        "single-cell/scrna-preprocessing",
-        "Pre-processing of Single-Cell RNA Data",
-        "Single Cell",
-        "/topics/single-cell/tutorials/scrna-preprocessing/tutorial.html"
+        "transcriptomics/differential-isoform-expression",
+        "Genome-wide alternative splicing analysis",
+        "Transcriptomics",
+        "/topics/transcriptomics/tutorials/differential-isoform-expression/tutorial.html"
       ],
       [
-        "variant-analysis/sars-cov-2",
-        "From NCBI's Sequence Read Archive (SRA) to Galaxy: SARS-CoV-2 variant analysis",
-        "Variant Analysis",
-        "/topics/variant-analysis/tutorials/sars-cov-2/tutorial.html"
+        "transcriptomics/rna-seq-reads-to-counts",
+        "1: RNA-Seq reads to counts",
+        "Transcriptomics",
+        "/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/tutorial.html"
       ],
       [
-        "variant-analysis/tb-variant-analysis",
-        "M. tuberculosis Variant Analysis",
-        "Variant Analysis",
-        "/topics/variant-analysis/tutorials/tb-variant-analysis/tutorial.html"
+        "transcriptomics/srna",
+        "Differential abundance testing of small RNAs",
+        "Transcriptomics",
+        "/topics/transcriptomics/tutorials/srna/tutorial.html"
       ]
     ]
   },
@@ -4348,6 +4470,52 @@
         "1: RNA-Seq reads to counts",
         "Transcriptomics",
         "/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/tutorial.html"
+      ]
+    ]
+  },
+  "__EXTRACT_DATASET__": {
+    "tool_id": [
+      [
+        "__EXTRACT_DATASET__",
+        "__EXTRACT_DATASET__"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "climate/fates",
+        "Functionally Assembled Terrestrial Ecosystem Simulator (FATES)",
+        "Climate",
+        "/topics/climate/tutorials/fates/tutorial.html"
+      ],
+      [
+        "climate/pangeo",
+        "Pangeo ecosystem 101 for everyone - Introduction to Xarray Galaxy Tools",
+        "Climate",
+        "/topics/climate/tutorials/pangeo/tutorial.html"
+      ],
+      [
+        "genome-annotation/tnseq",
+        "Essential genes detection with Transposon insertion sequencing",
+        "Genome Annotation",
+        "/topics/genome-annotation/tutorials/tnseq/tutorial.html"
+      ],
+      [
+        "transcriptomics/ref-based",
+        "Reference-based RNA-Seq data analysis",
+        "Transcriptomics",
+        "/topics/transcriptomics/tutorials/ref-based/tutorial.html"
+      ],
+      [
+        "variant-analysis/somatic-variant-discovery",
+        "Somatic Variant Discovery from WES Data Using Control-FREEC",
+        "Variant Analysis",
+        "/topics/variant-analysis/tutorials/somatic-variant-discovery/tutorial.html"
       ]
     ]
   },
@@ -4759,6 +4927,50 @@
       ]
     ]
   },
+  "iuc/meryl": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/meryl/meryl/1.3+galaxy6",
+        "1.3+galaxy6"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/meryl/meryl/1.3+galaxy4",
+        "1.3+galaxy4"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "assembly/assembly-quality-control",
+        "Genome Assembly Quality Control",
+        "Assembly",
+        "/topics/assembly/tutorials/assembly-quality-control/tutorial.html"
+      ],
+      [
+        "assembly/largegenome",
+        "Large genome assembly and polishing",
+        "Assembly",
+        "/topics/assembly/tutorials/largegenome/tutorial.html"
+      ],
+      [
+        "assembly/vgp_genome_assembly",
+        "VGP assembly pipeline",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
+      ],
+      [
+        "assembly/vgp_workflow_training",
+        "VGP assembly pipeline - short version",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
+      ]
+    ]
+  },
   "iuc/fasta-stats": {
     "tool_id": [
       [
@@ -5112,62 +5324,6 @@
         "Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
-      ]
-    ]
-  },
-  "iuc/hisat2": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.2.1+galaxy1",
-        "2.2.1+galaxy1"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.2.1+galaxy0",
-        "2.2.1+galaxy0"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.1.0+galaxy5",
-        "2.1.0+galaxy5"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.1.0+galaxy3",
-        "2.1.0+galaxy3"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3",
-        "2.0.3"
-      ]
-    ],
-    "tutorials": [
-      [
-        "proteomics/proteogenomics-dbcreation",
-        "Proteogenomics 1: Database Creation",
-        "Proteomics",
-        "/topics/proteomics/tutorials/proteogenomics-dbcreation/tutorial.html"
-      ],
-      [
-        "transcriptomics/de-novo",
-        "De novo transcriptome reconstruction with RNA-Seq",
-        "Transcriptomics",
-        "/topics/transcriptomics/tutorials/de-novo/tutorial.html"
-      ],
-      [
-        "transcriptomics/differential-isoform-expression",
-        "Genome-wide alternative splicing analysis",
-        "Transcriptomics",
-        "/topics/transcriptomics/tutorials/differential-isoform-expression/tutorial.html"
-      ],
-      [
-        "transcriptomics/rna-seq-reads-to-counts",
-        "1: RNA-Seq reads to counts",
-        "Transcriptomics",
-        "/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/tutorial.html"
-      ],
-      [
-        "transcriptomics/srna",
-        "Differential abundance testing of small RNAs",
-        "Transcriptomics",
-        "/topics/transcriptomics/tutorials/srna/tutorial.html"
       ]
     ]
   },
@@ -5604,46 +5760,6 @@
         "Reference-based RNA-Seq data analysis",
         "Transcriptomics",
         "/topics/transcriptomics/tutorials/ref-based/tutorial.html"
-      ]
-    ]
-  },
-  "__EXTRACT_DATASET__": {
-    "tool_id": [
-      [
-        "__EXTRACT_DATASET__",
-        "__EXTRACT_DATASET__"
-      ]
-    ],
-    "tutorials": [
-      [
-        "climate/fates",
-        "Functionally Assembled Terrestrial Ecosystem Simulator (FATES)",
-        "Climate",
-        "/topics/climate/tutorials/fates/tutorial.html"
-      ],
-      [
-        "climate/pangeo",
-        "Pangeo ecosystem 101 for everyone - Introduction to Xarray Galaxy Tools",
-        "Climate",
-        "/topics/climate/tutorials/pangeo/tutorial.html"
-      ],
-      [
-        "genome-annotation/tnseq",
-        "Essential genes detection with Transposon insertion sequencing",
-        "Genome Annotation",
-        "/topics/genome-annotation/tutorials/tnseq/tutorial.html"
-      ],
-      [
-        "transcriptomics/ref-based",
-        "Reference-based RNA-Seq data analysis",
-        "Transcriptomics",
-        "/topics/transcriptomics/tutorials/ref-based/tutorial.html"
-      ],
-      [
-        "variant-analysis/somatic-variant-discovery",
-        "Somatic Variant Discovery from WES Data Using Control-FREEC",
-        "Variant Analysis",
-        "/topics/variant-analysis/tutorials/somatic-variant-discovery/tutorial.html"
       ]
     ]
   },
@@ -6123,23 +6239,99 @@
       ]
     ]
   },
-  "iuc/meryl": {
+  "bgruening/bg_diamond": {
     "tool_id": [
       [
-        "toolshed.g2.bx.psu.edu/repos/iuc/meryl/meryl/1.3+galaxy6",
-        "1.3+galaxy6"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/meryl/meryl/1.3+galaxy4",
-        "1.3+galaxy4"
+        "toolshed.g2.bx.psu.edu/repos/bgruening/diamond/bg_diamond/2.0.15+galaxy0",
+        "2.0.15+galaxy0"
       ]
     ],
     "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "genome-annotation/functional",
+        "Functional annotation of protein sequences",
+        "Genome Annotation",
+        "/topics/genome-annotation/tutorials/functional/tutorial.html"
+      ],
+      [
+        "genome-annotation/gene-centric",
+        "Comparative gene analysis in unannotated genomes",
+        "Genome Annotation",
+        "/topics/genome-annotation/tutorials/gene-centric/tutorial.html"
+      ],
+      [
+        "sequence-analysis/ncbi-blast-against-the-madland",
+        "NCBI BLAST+ against the MAdLand",
+        "Sequence analysis",
+        "/topics/sequence-analysis/tutorials/ncbi-blast-against-the-madland/tutorial.html"
+      ]
+    ]
+  },
+  "iuc/merqury": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy2",
+        "1.3+galaxy2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy1",
+        "1.3+galaxy1"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3",
+        "1.3"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
       [
         "assembly/assembly-quality-control",
         "Genome Assembly Quality Control",
         "Assembly",
         "/topics/assembly/tutorials/assembly-quality-control/tutorial.html"
+      ],
+      [
+        "assembly/vgp_genome_assembly",
+        "VGP assembly pipeline",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
+      ],
+      [
+        "assembly/vgp_workflow_training",
+        "VGP assembly pipeline - short version",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
+      ]
+    ]
+  },
+  "iuc/genomescope": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/genomescope/genomescope/2.0+galaxy2",
+        "2.0+galaxy2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/genomescope/genomescope/2.0+galaxy1",
+        "2.0+galaxy1"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
       ],
       [
         "assembly/largegenome",
@@ -6158,6 +6350,40 @@
         "VGP assembly pipeline - short version",
         "Assembly",
         "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
+      ]
+    ]
+  },
+  "param_value_from_file": {
+    "tool_id": [
+      [
+        "param_value_from_file",
+        "param_value_from_file"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/vgp_workflow_training",
+        "VGP assembly pipeline - short version",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
+      ],
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
+      ],
+      [
+        "transcriptomics/differential-isoform-expression",
+        "Genome-wide alternative splicing analysis",
+        "Transcriptomics",
+        "/topics/transcriptomics/tutorials/differential-isoform-expression/tutorial.html"
+      ],
+      [
+        "variant-analysis/pox-tiled-amplicon",
+        "Pox virus genome analysis from tiled-amplicon sequencing data",
+        "Variant Analysis",
+        "/topics/variant-analysis/tutorials/pox-tiled-amplicon/tutorial.html"
       ]
     ]
   },
@@ -6406,40 +6632,6 @@
         "Genome-wide alternative splicing analysis",
         "Transcriptomics",
         "/topics/transcriptomics/tutorials/differential-isoform-expression/tutorial.html"
-      ]
-    ]
-  },
-  "iuc/filter_tabular": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/filter_tabular/filter_tabular/2.0.0",
-        "2.0.0"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/metagenomics-assembly",
-        "Assembly of metagenomic sequencing data",
-        "Assembly",
-        "/topics/assembly/tutorials/metagenomics-assembly/tutorial.html"
-      ],
-      [
-        "metagenomics/metagenomics-assembly",
-        "Assembly of metagenomic sequencing data",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/metagenomics-assembly/tutorial.html"
-      ],
-      [
-        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
-        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
-        "Metagenomics",
-        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
-      ],
-      [
-        "proteomics/proteogenomics-dbcreation",
-        "Proteogenomics 1: Database Creation",
-        "Proteomics",
-        "/topics/proteomics/tutorials/proteogenomics-dbcreation/tutorial.html"
       ]
     ]
   },
@@ -7227,34 +7419,6 @@
       ]
     ]
   },
-  "bgruening/bg_diamond": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/diamond/bg_diamond/2.0.15+galaxy0",
-        "2.0.15+galaxy0"
-      ]
-    ],
-    "tutorials": [
-      [
-        "genome-annotation/functional",
-        "Functional annotation of protein sequences",
-        "Genome Annotation",
-        "/topics/genome-annotation/tutorials/functional/tutorial.html"
-      ],
-      [
-        "genome-annotation/gene-centric",
-        "Comparative gene analysis in unannotated genomes",
-        "Genome Annotation",
-        "/topics/genome-annotation/tutorials/gene-centric/tutorial.html"
-      ],
-      [
-        "sequence-analysis/ncbi-blast-against-the-madland",
-        "NCBI BLAST+ against the MAdLand",
-        "Sequence analysis",
-        "/topics/sequence-analysis/tutorials/ncbi-blast-against-the-madland/tutorial.html"
-      ]
-    ]
-  },
   "iuc/volcanoplot": {
     "tool_id": [
       [
@@ -7659,27 +7823,23 @@
       ]
     ]
   },
-  "iuc/merqury": {
+  "iuc/pretext_snapshot": {
     "tool_id": [
       [
-        "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy2",
-        "1.3+galaxy2"
+        "toolshed.g2.bx.psu.edu/repos/iuc/pretext_snapshot/pretext_snapshot/0.0.3+galaxy1",
+        "0.0.3+galaxy1"
       ],
       [
-        "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy1",
-        "1.3+galaxy1"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3",
-        "1.3"
+        "toolshed.g2.bx.psu.edu/repos/iuc/pretext_snapshot/pretext_snapshot/0.0.3+galaxy0",
+        "0.0.3+galaxy0"
       ]
     ],
     "tutorials": [
       [
-        "assembly/assembly-quality-control",
-        "Genome Assembly Quality Control",
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
         "Assembly",
-        "/topics/assembly/tutorials/assembly-quality-control/tutorial.html"
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
       ],
       [
         "assembly/vgp_genome_assembly",
@@ -7695,23 +7855,51 @@
       ]
     ]
   },
-  "iuc/genomescope": {
+  "iuc/pretext_map": {
     "tool_id": [
       [
-        "toolshed.g2.bx.psu.edu/repos/iuc/genomescope/genomescope/2.0+galaxy2",
-        "2.0+galaxy2"
+        "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.1.9+galaxy0",
+        "0.1.9+galaxy0"
       ],
       [
-        "toolshed.g2.bx.psu.edu/repos/iuc/genomescope/genomescope/2.0+galaxy1",
-        "2.0+galaxy1"
+        "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.1.6+galaxy0",
+        "0.1.6+galaxy0"
       ]
     ],
     "tutorials": [
       [
-        "assembly/largegenome",
-        "Large genome assembly and polishing",
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
         "Assembly",
-        "/topics/assembly/tutorials/largegenome/tutorial.html"
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "assembly/vgp_genome_assembly",
+        "VGP assembly pipeline",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
+      ],
+      [
+        "assembly/vgp_workflow_training",
+        "VGP assembly pipeline - short version",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
+      ]
+    ]
+  },
+  "iuc/bellerophon": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/bellerophon/bellerophon/1.0+galaxy0",
+        "1.0+galaxy0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
       ],
       [
         "assembly/vgp_genome_assembly",
@@ -7763,34 +7951,6 @@
       ]
     ]
   },
-  "param_value_from_file": {
-    "tool_id": [
-      [
-        "param_value_from_file",
-        "param_value_from_file"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/vgp_workflow_training",
-        "VGP assembly pipeline - short version",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
-      ],
-      [
-        "transcriptomics/differential-isoform-expression",
-        "Genome-wide alternative splicing analysis",
-        "Transcriptomics",
-        "/topics/transcriptomics/tutorials/differential-isoform-expression/tutorial.html"
-      ],
-      [
-        "variant-analysis/pox-tiled-amplicon",
-        "Pox virus genome analysis from tiled-amplicon sequencing data",
-        "Variant Analysis",
-        "/topics/variant-analysis/tutorials/pox-tiled-amplicon/tutorial.html"
-      ]
-    ]
-  },
   "iuc/bcftools_norm": {
     "tool_id": [
       [
@@ -7810,6 +7970,66 @@
         "Exome sequencing data analysis for diagnosing a genetic disease",
         "Variant Analysis",
         "/topics/variant-analysis/tutorials/exome-seq/tutorial.html"
+      ],
+      [
+        "variant-analysis/trio-analysis",
+        "Trio Analysis using Synthetic Datasets from RD-Connect GPAP",
+        "Variant Analysis",
+        "/topics/variant-analysis/tutorials/trio-analysis/tutorial.html"
+      ]
+    ]
+  },
+  "bgruening/split_file_to_collection": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/split_file_to_collection/split_file_to_collection/0.5.0",
+        "0.5.0"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/split_file_to_collection/split_file_to_collection/0.4.0",
+        "0.4.0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "computational-chemistry/covid19-docking",
+        "Virtual screening of the SARS-CoV-2 main protease with rxDock and pose scoring",
+        "Computational chemistry",
+        "/topics/computational-chemistry/tutorials/covid19-docking/tutorial.html"
+      ],
+      [
+        "computational-chemistry/zauberkugel",
+        "Protein target prediction of a bioactive ligand with Align-it and ePharmaLib",
+        "Computational chemistry",
+        "/topics/computational-chemistry/tutorials/zauberkugel/tutorial.html"
+      ],
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
+      ]
+    ]
+  },
+  "CONVERTER_gz_to_uncompressed": {
+    "tool_id": [
+      [
+        "CONVERTER_gz_to_uncompressed",
+        "CONVERTER_gz_to_uncompressed"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
       ],
       [
         "variant-analysis/trio-analysis",
@@ -8383,6 +8603,34 @@
       ]
     ]
   },
+  "iuc/filter_tabular": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/filter_tabular/filter_tabular/2.0.0",
+        "2.0.0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/metagenomics-assembly",
+        "Assembly of metagenomic sequencing data",
+        "Assembly",
+        "/topics/assembly/tutorials/metagenomics-assembly/tutorial.html"
+      ],
+      [
+        "metagenomics/metagenomics-assembly",
+        "Assembly of metagenomic sequencing data",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/metagenomics-assembly/tutorial.html"
+      ],
+      [
+        "proteomics/proteogenomics-dbcreation",
+        "Proteogenomics 1: Database Creation",
+        "Proteomics",
+        "/topics/proteomics/tutorials/proteogenomics-dbcreation/tutorial.html"
+      ]
+    ]
+  },
   "devteam/ncbi_blastp_wrapper": {
     "tool_id": [
       [
@@ -8748,6 +8996,34 @@
         "Visualization of RNA-Seq results with heatmap2",
         "Transcriptomics",
         "/topics/transcriptomics/tutorials/rna-seq-viz-with-heatmap2/tutorial.html"
+      ]
+    ]
+  },
+  "iuc/collection_element_identifiers": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/collection_element_identifiers/collection_element_identifiers/0.0.2",
+        "0.0.2"
+      ]
+    ],
+    "tutorials": [
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
+      ],
+      [
+        "transcriptomics/differential-isoform-expression",
+        "Genome-wide alternative splicing analysis",
+        "Transcriptomics",
+        "/topics/transcriptomics/tutorials/differential-isoform-expression/tutorial.html"
+      ],
+      [
+        "transcriptomics/ref-based",
+        "Reference-based RNA-Seq data analysis",
+        "Transcriptomics",
+        "/topics/transcriptomics/tutorials/ref-based/tutorial.html"
       ]
     ]
   },
@@ -10555,32 +10831,6 @@
       ]
     ]
   },
-  "bgruening/split_file_to_collection": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/split_file_to_collection/split_file_to_collection/0.5.0",
-        "0.5.0"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/split_file_to_collection/split_file_to_collection/0.4.0",
-        "0.4.0"
-      ]
-    ],
-    "tutorials": [
-      [
-        "computational-chemistry/covid19-docking",
-        "Virtual screening of the SARS-CoV-2 main protease with rxDock and pose scoring",
-        "Computational chemistry",
-        "/topics/computational-chemistry/tutorials/covid19-docking/tutorial.html"
-      ],
-      [
-        "computational-chemistry/zauberkugel",
-        "Protein target prediction of a bioactive ligand with Align-it and ePharmaLib",
-        "Computational chemistry",
-        "/topics/computational-chemistry/tutorials/zauberkugel/tutorial.html"
-      ]
-    ]
-  },
   "devteam/fasta_compute_length": {
     "tool_id": [
       [
@@ -10703,6 +10953,54 @@
       ]
     ]
   },
+  "iuc/bwa_mem2": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/bwa_mem2/bwa_mem2/2.2.1+galaxy0",
+        "2.2.1+galaxy0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "assembly/vgp_genome_assembly",
+        "VGP assembly pipeline",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
+      ]
+    ]
+  },
+  "bgruening/gfastats": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.6+galaxy0",
+        "1.3.6+galaxy0"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.2.0+galaxy0",
+        "1.2.0+galaxy0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ],
+      [
+        "assembly/vgp_genome_assembly",
+        "VGP assembly pipeline",
+        "Assembly",
+        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
+      ]
+    ]
+  },
   "iuc/tbl2gff3": {
     "tool_id": [
       [
@@ -10794,80 +11092,6 @@
       [
         "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.5+galaxy2",
         "1.2.5+galaxy2"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/vgp_genome_assembly",
-        "VGP assembly pipeline",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
-      ],
-      [
-        "assembly/vgp_workflow_training",
-        "VGP assembly pipeline - short version",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
-      ]
-    ]
-  },
-  "iuc/pretext_snapshot": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/pretext_snapshot/pretext_snapshot/0.0.3+galaxy1",
-        "0.0.3+galaxy1"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/pretext_snapshot/pretext_snapshot/0.0.3+galaxy0",
-        "0.0.3+galaxy0"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/vgp_genome_assembly",
-        "VGP assembly pipeline",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
-      ],
-      [
-        "assembly/vgp_workflow_training",
-        "VGP assembly pipeline - short version",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
-      ]
-    ]
-  },
-  "iuc/pretext_map": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.1.9+galaxy0",
-        "0.1.9+galaxy0"
-      ],
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.1.6+galaxy0",
-        "0.1.6+galaxy0"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/vgp_genome_assembly",
-        "VGP assembly pipeline",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
-      ],
-      [
-        "assembly/vgp_workflow_training",
-        "VGP assembly pipeline - short version",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_workflow_training/tutorial.html"
-      ]
-    ]
-  },
-  "iuc/bellerophon": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/bellerophon/bellerophon/1.0+galaxy0",
-        "1.0+galaxy0"
       ]
     ],
     "tutorials": [
@@ -10982,6 +11206,28 @@
         "Creating the single-cell RNA-seq reference dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html"
+      ]
+    ]
+  },
+  "__BUILD_LIST__": {
+    "tool_id": [
+      [
+        "__BUILD_LIST__",
+        "__BUILD_LIST__"
+      ]
+    ],
+    "tutorials": [
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
+      ],
+      [
+        "variant-analysis/somatic-variant-discovery",
+        "Somatic Variant Discovery from WES Data Using Control-FREEC",
+        "Variant Analysis",
+        "/topics/variant-analysis/tutorials/somatic-variant-discovery/tutorial.html"
       ]
     ]
   },
@@ -13259,28 +13505,6 @@
       ]
     ]
   },
-  "iuc/collection_element_identifiers": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/collection_element_identifiers/collection_element_identifiers/0.0.2",
-        "0.0.2"
-      ]
-    ],
-    "tutorials": [
-      [
-        "transcriptomics/differential-isoform-expression",
-        "Genome-wide alternative splicing analysis",
-        "Transcriptomics",
-        "/topics/transcriptomics/tutorials/differential-isoform-expression/tutorial.html"
-      ],
-      [
-        "transcriptomics/ref-based",
-        "Reference-based RNA-Seq data analysis",
-        "Transcriptomics",
-        "/topics/transcriptomics/tutorials/ref-based/tutorial.html"
-      ]
-    ]
-  },
   "bgruening/plotly_ml_performance_plots": {
     "tool_id": [
       [
@@ -15193,19 +15417,19 @@
       ]
     ]
   },
-  "__BUILD_LIST__": {
+  "iuc/gene_iobio_display_generation_iframe": {
     "tool_id": [
       [
-        "__BUILD_LIST__",
-        "__BUILD_LIST__"
+        "toolshed.g2.bx.psu.edu/repos/iuc/geneiobio/gene_iobio_display_generation_iframe/4.7.1",
+        "4.7.1"
       ]
     ],
     "tutorials": [
       [
-        "variant-analysis/somatic-variant-discovery",
-        "Somatic Variant Discovery from WES Data Using Control-FREEC",
+        "variant-analysis/trio-analysis",
+        "Trio Analysis using Synthetic Datasets from RD-Connect GPAP",
         "Variant Analysis",
-        "/topics/variant-analysis/tutorials/somatic-variant-discovery/tutorial.html"
+        "/topics/variant-analysis/tutorials/trio-analysis/tutorial.html"
       ]
     ]
   },
@@ -15241,11 +15465,11 @@
       ]
     ]
   },
-  "CONVERTER_gz_to_uncompressed": {
+  "CONVERTER_uncompressed_to_gz": {
     "tool_id": [
       [
-        "CONVERTER_gz_to_uncompressed",
-        "CONVERTER_gz_to_uncompressed"
+        "CONVERTER_uncompressed_to_gz",
+        "CONVERTER_uncompressed_to_gz"
       ]
     ],
     "tutorials": [
@@ -18345,38 +18569,6 @@
       ]
     ]
   },
-  "iuc/bwa_mem2": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/iuc/bwa_mem2/bwa_mem2/2.2.1+galaxy0",
-        "2.2.1+galaxy0"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/vgp_genome_assembly",
-        "VGP assembly pipeline",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
-      ]
-    ]
-  },
-  "bgruening/gfastats": {
-    "tool_id": [
-      [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.6+galaxy0",
-        "1.3.6+galaxy0"
-      ]
-    ],
-    "tutorials": [
-      [
-        "assembly/vgp_genome_assembly",
-        "VGP assembly pipeline",
-        "Assembly",
-        "/topics/assembly/tutorials/vgp_genome_assembly/tutorial.html"
-      ]
-    ]
-  },
   "simon-gladman/velvetoptimiser": {
     "tool_id": [
       [
@@ -18441,6 +18633,58 @@
       ]
     ]
   },
+  "galaxy-australia/smudgeplot": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/galaxy-australia/smudgeplot/smudgeplot/0.2.5+galaxy+2",
+        "0.2.5+galaxy+2"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ]
+    ]
+  },
+  "bgruening/blobtoolkit": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/blobtoolkit/blobtoolkit/4.0.7+galaxy1",
+        "4.0.7+galaxy1"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/blobtoolkit/blobtoolkit/3.4.0+galaxy0",
+        "3.4.0+galaxy0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ]
+    ]
+  },
+  "interactive_tool_blobtoolkit": {
+    "tool_id": [
+      [
+        "interactive_tool_blobtoolkit",
+        "interactive_tool_blobtoolkit"
+      ]
+    ],
+    "tutorials": [
+      [
+        "assembly/ERGA-post-assembly-QC",
+        "ERGA post-assembly QC",
+        "Assembly",
+        "/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html"
+      ]
+    ]
+  },
   "iuc/shovill": {
     "tool_id": [
       [
@@ -18478,6 +18722,22 @@
       [
         "toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.22.0",
         "2.22.0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
+      ]
+    ]
+  },
+  "iuc/krakentools_extract_kraken_reads": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/iuc/krakentools_extract_kraken_reads/krakentools_extract_kraken_reads/1.2+galaxy1",
+        "1.2+galaxy1"
       ]
     ],
     "tutorials": [
@@ -18578,6 +18838,22 @@
       [
         "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_multijoin_tool/1.1.1",
         "1.1.1"
+      ]
+    ],
+    "tutorials": [
+      [
+        "metagenomics/pathogen-detection-from-nanopore-foodborne-data",
+        "Pathogen detection from (direct Nanopore) sequencing data using Galaxy - Foodborne Edition",
+        "Metagenomics",
+        "/topics/metagenomics/tutorials/pathogen-detection-from-nanopore-foodborne-data/tutorial.html"
+      ]
+    ]
+  },
+  "__FILTER_FAILED_DATASETS__": {
+    "tool_id": [
+      [
+        "__FILTER_FAILED_DATASETS__",
+        "__FILTER_FAILED_DATASETS__"
       ]
     ],
     "tutorials": [

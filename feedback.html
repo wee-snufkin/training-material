@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
+  release: "galaxy-training-network@720736375c1bc32d8cc8b0de02dffd16e3e1d072",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1689303195' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1689303195' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -66,7 +68,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1689303195'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -370,6 +372,18 @@ Sentry.init({
     fdbk_over_month['tuto-debruijn-graph-assembly'] = [tuto_data];
     fdbk_over_month['topic-assembly'].push(tuto_data);
     data_notes['tuto-debruijn-graph-assembly'] = [0,1,0,0,2,2];
+</script>
+
+<script>
+    var tuto_data =
+    {
+        label: "ERGA post-assembly QC",
+        data: [{x:"2023-06", y: 1 } ],
+        fill: false,
+    };
+    fdbk_over_month['tuto-ERGA-post-assembly-QC'] = [tuto_data];
+    fdbk_over_month['topic-assembly'].push(tuto_data);
+    data_notes['tuto-ERGA-post-assembly-QC'] = [0,0,0,0,0,1];
 </script>
 
 <script>
@@ -4609,8 +4623,93 @@ Sentry.init({
                     
                     
                     
-                        <div class="alert alert-warning" role="alert">
-                            <p>Tutorial "ERGA post-assembly QC" is not available anymore.</p>
+                        
+                        
+                        <div class="accordion-card card" id="tutorial-ERGA-post-assembly-QC">
+                            <div class="card-header" id="heading-ERGA-post-assembly-QC">
+                                <div class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-ERGA-post-assembly-QC" aria-expanded="false" aria-controls="collapse-ERGA-post-assembly-QC">
+                                        ERGA post-assembly QC
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="collapse-ERGA-post-assembly-QC" class="collapse" aria-labelledby="heading-ERGA-post-assembly-QC" data-parent="#accordion-assembly">
+                                <div class="card-body">
+                                    
+                                    <div class="row">
+                                        <!-- feedback over time  -->
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">1 responses</h5>
+                                                    
+                                                    <canvas id="ERGA-post-assembly-QC-tutorial-fdbkOverMonthGraph" width="400" height="400">
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        drawFdbkOverMonthGraph("ERGA-post-assembly-QC-tutorial-fdbkOverMonthGraph", fdbk_over_month['tuto-ERGA-post-assembly-QC']);
+    });
+</script>
+                                                    </canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- feedback notes  -->
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Rating Distribution</h5>
+                                                    
+                                                    <canvas id="ERGA-post-assembly-QC-tutorial-fdbkNoteGraph" width="400" height="400">
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        drawFdbkNoteGraph("ERGA-post-assembly-QC-tutorial-fdbkNoteGraph", data_notes['tuto-ERGA-post-assembly-QC'], labels_notes);
+    });
+</script>
+                                                    </canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <a href="/training-material/topics/assembly/tutorials/ERGA-post-assembly-QC/tutorial.html">View this Tutorial</a>
+                                    
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+
+                                                    <h5 class="card-title">Detailed feedback</h5>
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Date</th>
+                                                                <th>What did you like?</th>
+                                                                <th>What could be improved?</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            
+                                                            
+                                                                
+                                                                    
+                                                                    <tr>
+                                                                        <td>Jun 26, 2023</td>
+                                                                        <td>Everything!</td>
+                                                                        <td>It&apos;s awesome!</td>
+                                                                    </tr>
+                                                                    
+                                                                
+                                                            
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     
                 
@@ -38171,7 +38270,7 @@ Sentry.init({
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/720736375c1bc32d8cc8b0de02dffd16e3e1d072">7207363</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -38198,41 +38297,8 @@ Sentry.init({
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1689303195'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

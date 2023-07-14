@@ -38,6 +38,7 @@
         "lon": 3.08
       },
       "fediverse": "https://piaille.fr/@bebatut",
+      "fediverse_flavor": "mastodon",
       "id": "bebatut",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -161,6 +162,7 @@
     {
       "layout": "tutorial_hands_on",
       "title": "Genome-wide alternative splicing analysis",
+      "level": "Advanced",
       "zenodo_link": "https://zenodo.org/record/7974884",
       "tags": [
         "alternative splicing",
@@ -209,7 +211,7 @@
         "session": null
       },
       "hands_on": true,
-      "slides": false,
+      "slides": true,
       "workflows": [
         {
           "workflow": "main_workflow.ga",
@@ -1304,6 +1306,7 @@
             "lon": -1.64
           },
           "fediverse": "https://genomic.social/@abretaud",
+          "fediverse_flavor": "mastodon",
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -2671,6 +2674,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -3424,6 +3428,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -3599,6 +3604,7 @@
             "lon": -1.64
           },
           "fediverse": "https://genomic.social/@abretaud",
+          "fediverse_flavor": "mastodon",
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -4027,6 +4033,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -4207,6 +4214,9 @@
           "shiltemann",
           "hexylena",
           "carpentries"
+        ],
+        "funding": [
+          "erasmusplus"
         ]
       },
       "short_id": "T00346",
@@ -4325,6 +4335,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -4341,6 +4352,19 @@
           "id": "carpentries",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/carpentries.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
+        },
+        {
+          "name": "Erasmus+ Programme",
+          "joined": "2020-09",
+          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "github": false,
+          "funder": true,
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "funding_id": "2020-1-NL01-KA203-064717",
+          "funding_system": "erasmusplus",
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
+          "id": "erasmusplus",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
         }
       ],
       "urls": {
@@ -5080,6 +5104,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -5183,6 +5208,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",

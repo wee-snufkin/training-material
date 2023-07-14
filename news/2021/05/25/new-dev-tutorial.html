@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
+  release: "galaxy-training-network@720736375c1bc32d8cc8b0de02dffd16e3e1d072",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1689303195' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1689303195' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -68,7 +70,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1689303195'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -227,7 +229,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/rikeshi/" class="contributor-badge contributor-rikeshi"><img src="https://avatars.githubusercontent.com/rikeshi?s=36" alt="Avatar">Erik Schill</a><a href="/training-material/hall-of-fame/simonbray/" class="contributor-badge contributor-simonbray"><img src="https://avatars.githubusercontent.com/simonbray?s=36" alt="Avatar">Simon Bray</a>
+			<a href="/training-material/hall-of-fame/rikeshi/" class="contributor-badge contributor-rikeshi"><img src="https://avatars.githubusercontent.com/rikeshi?s=36" alt="Avatar" width="36" height="36">Erik Schill</a><a href="/training-material/hall-of-fame/simonbray/" class="contributor-badge contributor-simonbray"><img src="https://avatars.githubusercontent.com/simonbray?s=36" alt="Avatar" width="36" height="36">Simon Bray</a>
 		</td>
 	</tr>
 	
@@ -251,18 +253,23 @@ Sentry.init({
 
 
 
-<button class="label label-default tutorial_tag" id="new tutorial" style="--color-primary: #ffc793; --color-darker: #ffa801; --color-dimmed: #ffb769;" title="new tutorial">new tutorial</button>
+<span class="label label-default tutorial_tag" id="new tutorial" style="--color-primary: #ffb55e; --color-darker: #ef9d00; --color-dimmed: #fda700;">new tutorial</span>
 
 
 <hr/>
 
 <div class="row">
   <div class="col-md-8">
-    <p class="text-muted">
-      Posted on: 25 May 2021
+    <p class="text-muted" style="display: inline-flex; width: 100%; justify-content: space-between;">
+      <span>Posted on: 25 May 2021</span>
+      <span>
+        
+        <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a class="badge badge-info" href="https://gxy.io/GTN:N00014">https://gxy.io/GTN:N00014</a>
+        
+      </span>
     </p>
 
-    <p>The first of the developer tutorials for GCC2021 is live, first time contributor <a href="/training-material/hall-of-fame/rikeshi/" class="contributor-badge contributor-rikeshi"><img src="https://avatars.githubusercontent.com/rikeshi?s=36" alt="Avatar" />Erik Schill</a> has produced a fantastic tutorial covering how to develop new functions in BioBlend for new APIs in Galaxy. Many thanks to <a href="/training-material/hall-of-fame/simonbray/" class="contributor-badge contributor-simonbray"><img src="https://avatars.githubusercontent.com/simonbray?s=36" alt="Avatar" />Simon Bray</a> for editing!</p>
+    <p>The first of the developer tutorials for GCC2021 is live, first time contributor <a href="/training-material/hall-of-fame/rikeshi/" class="contributor-badge contributor-rikeshi"><img src="https://avatars.githubusercontent.com/rikeshi?s=36" alt="Avatar" width="36" height="36" />Erik Schill</a> has produced a fantastic tutorial covering how to develop new functions in BioBlend for new APIs in Galaxy. Many thanks to <a href="/training-material/hall-of-fame/simonbray/" class="contributor-badge contributor-simonbray"><img src="https://avatars.githubusercontent.com/simonbray?s=36" alt="Avatar" width="36" height="36" />Simon Bray</a> for editing!</p>
 
 
 
@@ -281,7 +288,7 @@ Sentry.init({
   </div>
 
   <div class="col-md-4">
-    <img alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" src="/training-material//assets/images/GTNLogo1000.png" width="300" loading="lazy"/>
+    <img alt="GTN logo with a multi-coloured star and the words Galaxy Training Network" src="/training-material//assets/images/GTNLogo1000.png" width="300"/>
   </div>
 </div>
 </div>
@@ -297,7 +304,7 @@ Sentry.init({
     "new tutorial"
   ],
   "description": "<p>The first of the developer tutorials for GCC2021 is live, first time contributor <a href=\"/trainin",
-  "articleBody": "<p>The first of the developer tutorials for GCC2021 is live, first time contributor <a href=\"/training-material/hall-of-fame/rikeshi/\" class=\"contributor-badge contributor-rikeshi\"><img src=\"https://avatars.githubusercontent.com/rikeshi?s=36\" alt=\"Avatar\" />Erik Schill</a> has produced a fantastic tutorial covering how to develop new functions in BioBlend for new APIs in Galaxy. Many thanks to <a href=\"/training-material/hall-of-fame/simonbray/\" class=\"contributor-badge contributor-simonbray\"><img src=\"https://avatars.githubusercontent.com/simonbray?s=36\" alt=\"Avatar\" />Simon Bray</a> for editing!</p>\n\n",
+  "articleBody": "<p>The first of the developer tutorials for GCC2021 is live, first time contributor <a href=\"/training-material/hall-of-fame/rikeshi/\" class=\"contributor-badge contributor-rikeshi\"><img src=\"https://avatars.githubusercontent.com/rikeshi?s=36\" alt=\"Avatar\" width=\"36\" height=\"36\" />Erik Schill</a> has produced a fantastic tutorial covering how to develop new functions in BioBlend for new APIs in Galaxy. Many thanks to <a href=\"/training-material/hall-of-fame/simonbray/\" class=\"contributor-badge contributor-simonbray\"><img src=\"https://avatars.githubusercontent.com/simonbray?s=36\" alt=\"Avatar\" width=\"36\" height=\"36\" />Simon Bray</a> for editing!</p>\n\n",
   "datePublished": "2021-05-25 00:00:00 +0000",
   "dateModified": "2023-05-18 11:55:15 +0000",
   "author": [
@@ -391,14 +398,55 @@ Sentry.init({
 
 	<article>
 	<h3>
+		<a href="https://ai4life.eurobioimaging.eu/ai4life-teams-up-with-galaxy-training-network-gtn-to-enhance-training-resources/">AI4Life teams up with GTN to enhance training resources</a>
+	</h3>
+	<p>
+	27 June 2023 &nbsp;
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #c0bdff; --color-darker: #a8a5ff; --color-dimmed: #b4b1ff;">new topic</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffa7ee; --color-darker: #ff7fe9; --color-dimmed: #ff94eb;">new community</span>
+	
+	</p>
+	<p class="card-text">
+		
+		This is an external post, please follow the link to read it.
+		
+	</p>
+</article>
+
+
+	<article>
+	<h3>
+		<a href="/training-material/news/2023/06/21/fair.html">ELIXIR-UK Fellow Launches New FAIR Data Management Training</a>
+	</h3>
+	<p>
+	21 June 2023 &nbsp;
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #c0bdff; --color-darker: #a8a5ff; --color-dimmed: #b4b1ff;">new topic</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffb55e; --color-darker: #ef9d00; --color-dimmed: #fda700;">new tutorial</span>
+	
+	</p>
+	<p class="card-text">
+		
+		Katarzyna Kamieniecka (University of Bradford), a member of the ELIXIR-UK Fellowship Programme, has just launched a new series of lessons to improve {FAIR} data management in the life sciences. The lessons are designed to help researchers and research support staff understand the principles of FAIR data management and apply them to their own work.
+
+		
+	</p>
+</article>
+
+
+	<article>
+	<h3>
 		<a href="/training-material/news/2023/06/07/pan-galactic-search.html">New Feature: Pan-Galactic Tool Search</a>
 	</h3>
 	<p>
 	7 June 2023 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff1a4; --color-darker: #ecd700; --color-dimmed: #fbe500;">gtn</span>
 	
 	</p>
 	<p class="card-text">
@@ -435,55 +483,12 @@ The GTN has you covered with the Pan-Galactic Tool Search that is now available.
 	<p>
 	15 May 2023 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ffc793; --color-darker: #ffa801; --color-dimmed: #ffb769;">new tutorial</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffb55e; --color-darker: #ef9d00; --color-dimmed: #fda700;">new tutorial</span>
 	
 	</p>
 	<p class="card-text">
 		
 		The GTN hosts a new training for analyzing alternative splicing at genome-wide scale!
-
-		
-	</p>
-</article>
-
-
-	<article>
-	<h3>
-		<a href="/training-material/news/2023/05/11/ro-crate.html">BY-COVID and RO-Crate collaboration brings new topic: FAIR Data, Workflows & More</a>
-	</h3>
-	<p>
-	11 May 2023 &nbsp;
-	
-	<span class="label label-default tutorial_tag" style="--color-primary: #cfcdff; --color-darker: #b6b3ff; --color-dimmed: #c2c0ff;">new topic</span>
-	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
-	
-	</p>
-	<p class="card-text">
-		
-		As part of the BY-COVID project, the RO-Crate team and BY-COVID members have
-brought several RO-Crate related tutorials into the Galaxy Training Network, under a brand new {FAIR} topic!
-
-		
-	</p>
-</article>
-
-
-	<article>
-	<h3>
-		<a href="/training-material/news/2023/04/20/my-galaxy-training.html">New Feature: my.galaxy.training</a>
-	</h3>
-	<p>
-	20 April 2023 &nbsp;
-	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
-	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
-	
-	</p>
-	<p class="card-text">
-		
-		The GTN has set up a very simple “redirection” service based on my.home-assistant.io which Helena discovered after reading some Home Assistant documentation and saw a really neat link which led to her own internal home assistant.
 
 		
 	</p>
@@ -509,10 +514,14 @@ brought several RO-Crate related tutorials into the Galaxy Training Network, und
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/720736375c1bc32d8cc8b0de02dffd16e3e1d072">7207363</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
+				
+				<p>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:N00014">https://gxy.io/GTN:N00014</a>
+				</p>
 				
 				<p>
 					<i>This Material</i>:
@@ -536,41 +545,8 @@ brought several RO-Crate related tutorials into the Galaxy Training Network, und
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1689303195'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
+  release: "galaxy-training-network@720736375c1bc32d8cc8b0de02dffd16e3e1d072",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1689303195' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1689303195' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -66,7 +68,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1689303195'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -343,10 +345,10 @@ Sentry.init({
 
 				<h2>Contributions</h2>
 
+				
+
 				<p class="text-muted">
-					
 					The following list includes only slides and tutorials where the individual has been added to the contributor list. This may not include the sum total of their contributions to the training materials (e.g. GTN css or design, tutorial datasets, workflow development, etc.) unless described by a news post.
-					
 
                 
                 <br><br>
@@ -513,7 +515,7 @@ Sentry.init({
 						</a>
 						
 						
-	
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
 
 
 					</li>
@@ -1379,6 +1381,25 @@ Sentry.init({
 				
 
 				
+				<h3>Learning Pathways</h3>
+				<ul>
+				
+					<li>
+						<a href="/training-material//learning-pathways/intro-to-galaxy-and-genomics.html">
+						Introduction to Galaxy and Sequence analysis
+						</a>
+						
+						
+	<abbr title="These individuals or organisations are responsible for maintaining this resource">🧑‍🏫</abbr>
+
+
+					</li>
+				
+				</ul>
+				
+
+
+				
                 <h3>News</h3>
                 <div class="newslist">
                 
@@ -1411,7 +1432,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1435,7 +1456,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 
     <hr/>
     <p class="card-text">
@@ -1480,7 +1501,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1504,7 +1525,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #fecc00; --color-darker: #e2b500; --color-dimmed: #f0c000;">paper</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #edbe00; --color-darker: #d3a900; --color-dimmed: #e0b400;">paper</span>
 
     <hr/>
     <p class="card-text">
@@ -1549,7 +1570,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a>
 		</td>
 	</tr>
 	
@@ -1573,7 +1594,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc793; --color-darker: #ffa801; --color-dimmed: #ffb769;">new tutorial</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffb55e; --color-darker: #ef9d00; --color-dimmed: #fda700;">new tutorial</span>
 
     <hr/>
     <p class="card-text">
@@ -1618,7 +1639,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a>
 		</td>
 	</tr>
 	
@@ -1642,9 +1663,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc793; --color-darker: #ffa801; --color-dimmed: #ffb769;">new tutorial</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffb55e; --color-darker: #ef9d00; --color-dimmed: #fda700;">new tutorial</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #add6ff; --color-darker: #76c1ff; --color-dimmed: #94cbff;">Galaxy Tips & Tricks</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #8fc9ff; --color-darker: #4bb6ff; --color-dimmed: #71c0ff;">Galaxy Tips & Tricks</span>
 
     <hr/>
     <p class="card-text">
@@ -1689,7 +1710,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1713,9 +1734,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00e088; --color-darker: #00c779; --color-dimmed: #00d381;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 
     <hr/>
     <p class="card-text">
@@ -1760,7 +1781,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/abretaud?s=36" alt="Avatar">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=36" alt="Avatar">Yvan Le Bras</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/fpsom?s=36" alt="Avatar">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/carpentries/" class="contributor-badge contributor-carpentries"><img src="https://avatars.githubusercontent.com/carpentries?s=36" alt="Avatar">The Carpentries</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a><a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/abretaud?s=36" alt="Avatar" width="36" height="36">Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=36" alt="Avatar" width="36" height="36">Yvan Le Bras</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/fpsom?s=36" alt="Avatar" width="36" height="36">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/carpentries/" class="contributor-badge contributor-carpentries"><img src="https://avatars.githubusercontent.com/carpentries?s=36" alt="Avatar" width="36" height="36">The Carpentries</a>
 		</td>
 	</tr>
 	
@@ -1784,9 +1805,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00e088; --color-darker: #00c779; --color-dimmed: #00d381;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #cfcdff; --color-darker: #b6b3ff; --color-dimmed: #c2c0ff;">new topic</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #c0bdff; --color-darker: #a8a5ff; --color-dimmed: #b4b1ff;">new topic</span>
 
     <hr/>
     <p class="card-text">
@@ -1831,7 +1852,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1855,9 +1876,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc793; --color-darker: #ffa801; --color-dimmed: #ffb769;">new tutorial</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffb55e; --color-darker: #ef9d00; --color-dimmed: #fda700;">new tutorial</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00e8f0; --color-darker: #00cfd6; --color-dimmed: #00dbe3;">contributors</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00d9e0; --color-darker: #00c1c8; --color-dimmed: #00cdd4;">contributors</span>
 
     <hr/>
     <p class="card-text">
@@ -1902,7 +1923,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a>
 		</td>
 	</tr>
 	
@@ -1926,7 +1947,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 
     <hr/>
     <p class="card-text">
@@ -1972,7 +1993,7 @@ On every tag, we’d build a copy of the website which we would place online and
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Avatar">Wendi Bacon</a><a href="/training-material/hall-of-fame/beatrizserrano/" class="contributor-badge contributor-beatrizserrano"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/beatrizserrano?s=36" alt="Avatar">Beatriz Serrano-Solano</a><a href="/training-material/hall-of-fame/pclo/" class="contributor-badge contributor-pclo"><img src="https://avatars.githubusercontent.com/pclo?s=36" alt="Avatar">Patricia Carvajal López</a><a href="/training-material/hall-of-fame/ales-ibt/" class="contributor-badge contributor-ales-ibt"><img src="https://avatars.githubusercontent.com/ales-ibt?s=36" alt="Avatar">Alejandra Escobar-Zepeda</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Avatar" width="36" height="36">Wendi Bacon</a><a href="/training-material/hall-of-fame/beatrizserrano/" class="contributor-badge contributor-beatrizserrano"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/beatrizserrano?s=36" alt="Avatar" width="36" height="36">Beatriz Serrano-Solano</a><a href="/training-material/hall-of-fame/pclo/" class="contributor-badge contributor-pclo"><img src="https://avatars.githubusercontent.com/pclo?s=36" alt="Avatar" width="36" height="36">Patricia Carvajal López</a><a href="/training-material/hall-of-fame/ales-ibt/" class="contributor-badge contributor-ales-ibt"><img src="https://avatars.githubusercontent.com/ales-ibt?s=36" alt="Avatar" width="36" height="36">Alejandra Escobar-Zepeda</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -1996,9 +2017,9 @@ On every tag, we’d build a copy of the website which we would place online and
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc793; --color-darker: #ffa801; --color-dimmed: #ffb769;">new tutorial</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffb55e; --color-darker: #ef9d00; --color-dimmed: #fda700;">new tutorial</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00eadf; --color-darker: #00d0c6; --color-dimmed: #00ddd2;">español</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00dbd0; --color-darker: #00c3b9; --color-dimmed: #00cfc4;">español</span>
 
     <hr/>
     <p class="card-text">
@@ -2043,7 +2064,7 @@ On every tag, we’d build a copy of the website which we would place online and
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge contributor-bazante1"><img src="https://avatars.githubusercontent.com/bazante1?s=36" alt="Avatar">Bazante Sanders</a><a href="/training-material/hall-of-fame/miaomiaozhou88/" class="contributor-badge contributor-miaomiaozhou88"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/miaomiaozhou88?s=36" alt="Avatar">Miaomiao Zhou</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a>
+			<a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge contributor-bazante1"><img src="https://avatars.githubusercontent.com/bazante1?s=36" alt="Avatar" width="36" height="36">Bazante Sanders</a><a href="/training-material/hall-of-fame/miaomiaozhou88/" class="contributor-badge contributor-miaomiaozhou88"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/miaomiaozhou88?s=36" alt="Avatar" width="36" height="36">Miaomiao Zhou</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a>
 		</td>
 	</tr>
 	
@@ -2067,17 +2088,17 @@ On every tag, we’d build a copy of the website which we would place online and
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc793; --color-darker: #ffa801; --color-dimmed: #ffb769;">new tutorial</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffb55e; --color-darker: #ef9d00; --color-dimmed: #fda700;">new tutorial</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ffbfe2; --color-darker: #ff9ad4; --color-dimmed: #ffaddb;">assembly</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffaad9; --color-darker: #ff85cd; --color-dimmed: #ff98d3;">assembly</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00e8f0; --color-darker: #00cfd6; --color-dimmed: #00dbe3;">mrsa</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00d9e0; --color-darker: #00c1c8; --color-dimmed: #00cdd4;">mrsa</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #c1d1ff; --color-darker: #9eb9ff; --color-dimmed: #afc5ff;">amr</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #acc3ff; --color-darker: #89adff; --color-dimmed: #9bb8ff;">amr</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #aad6ff; --color-darker: #6ec2ff; --color-dimmed: #8fccff;">nanopore</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #89caff; --color-darker: #39b8ff; --color-dimmed: #69c1ff;">nanopore</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc880; --color-darker: #f5ad00; --color-dimmed: #ffb93e;">illumina</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffb624; --color-darker: #e5a200; --color-dimmed: #f3ac00;">illumina</span>
 
     <hr/>
     <p class="card-text">
@@ -2128,7 +2149,7 @@ JBrowse.
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a>
 		</td>
 	</tr>
 	
@@ -2152,13 +2173,13 @@ JBrowse.
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00e088; --color-darker: #00c779; --color-dimmed: #00d381;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00e8f0; --color-darker: #00cfd6; --color-dimmed: #00dbe3;">contributors</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00d9e0; --color-darker: #00c1c8; --color-dimmed: #00cdd4;">contributors</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00ecc5; --color-darker: #00d2af; --color-dimmed: #00dfba;">instructors</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00ddb8; --color-darker: #00c4a4; --color-dimmed: #00d0ae;">instructors</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #bcbeff; --color-darker: #a3a6ff; --color-dimmed: #b0b2ff;">new feature</span>
 
     <hr/>
     <p class="card-text">
@@ -2203,7 +2224,7 @@ JBrowse.
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/jennaj/" class="contributor-badge contributor-jennaj"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jennaj?s=36" alt="Avatar">Jennifer Hillman-Jackson</a><a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Avatar">Delphine Lariviere</a><a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annasyme?s=36" alt="Avatar">Anna Syme</a><a href="/training-material/hall-of-fame/mblue9/" class="contributor-badge contributor-mblue9"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/mblue9?s=36" alt="Avatar">Maria Doyle</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a><a href="/training-material/hall-of-fame/jennaj/" class="contributor-badge contributor-jennaj"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/jennaj?s=36" alt="Avatar" width="36" height="36">Jennifer Hillman-Jackson</a><a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Avatar" width="36" height="36">Delphine Lariviere</a><a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/annasyme?s=36" alt="Avatar" width="36" height="36">Anna Syme</a><a href="/training-material/hall-of-fame/mblue9/" class="contributor-badge contributor-mblue9"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/mblue9?s=36" alt="Avatar" width="36" height="36">Maria Doyle</a>
 		</td>
 	</tr>
 	
@@ -2227,7 +2248,7 @@ JBrowse.
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffbdf1; --color-darker: #ff96eb; --color-dimmed: #ffaaee;">cofest</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffa7ee; --color-darker: #ff7fe9; --color-dimmed: #ff94eb;">cofest</span>
 
     <hr/>
     <p class="card-text">
@@ -2272,7 +2293,7 @@ JBrowse.
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a>
 		</td>
 	</tr>
 	
@@ -2296,7 +2317,7 @@ JBrowse.
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00e8ef; --color-darker: #00cfd5; --color-dimmed: #00dbe2;">event</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00d9df; --color-darker: #00c1c7; --color-dimmed: #00cdd3;">event</span>
 
     <hr/>
     <p class="card-text">
@@ -2340,7 +2361,7 @@ JBrowse.
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -2364,11 +2385,11 @@ JBrowse.
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00e8ef; --color-darker: #00cfd5; --color-dimmed: #00dbe2;">event</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00d9df; --color-darker: #00c1c7; --color-dimmed: #00cdd3;">event</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d3; --color-darker: #ff9ebd; --color-dimmed: #ffb0c8;">pandemic</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffacc6; --color-darker: #ff89b1; --color-dimmed: #ff9bbb;">pandemic</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #81deff; --color-darker: #00cbf5; --color-dimmed: #40d6ff;">remote-teaching</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #28d4ff; --color-darker: #00bee5; --color-dimmed: #00c9f3;">remote-teaching</span>
 
     <hr/>
     <p class="card-text">
@@ -2897,7 +2918,7 @@ var chart2 = new Chart(ctx2, {
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/720736375c1bc32d8cc8b0de02dffd16e3e1d072">7207363</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -2924,41 +2945,8 @@ var chart2 = new Chart(ctx2, {
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1689303195'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

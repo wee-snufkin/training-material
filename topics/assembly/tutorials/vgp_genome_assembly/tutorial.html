@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
+  release: "galaxy-training-network@720736375c1bc32d8cc8b0de02dffd16e3e1d072",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1689303195' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1689303195' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -422,7 +424,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1689303195'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -604,7 +606,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Avatar">Delphine Lariviere</a><a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge contributor-astrovsky01"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/astrovsky01?s=36" alt="Avatar">Alex Ostrovsky</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Avatar">Cristóbal Gallardo</a><a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annasyme?s=36" alt="Avatar">Anna Syme</a><a href="/training-material/hall-of-fame/abueg/" class="contributor-badge contributor-abueg"><img src="https://avatars.githubusercontent.com/abueg?s=36" alt="Avatar">Linelle Abueg</a><a href="/training-material/hall-of-fame/pickettbd/" class="contributor-badge contributor-pickettbd"><img src="https://avatars.githubusercontent.com/pickettbd?s=36" alt="Avatar">Brandon Pickett</a><a href="/training-material/hall-of-fame/gf777/" class="contributor-badge contributor-gf777"><img src="https://avatars.githubusercontent.com/gf777?s=36" alt="Avatar">Giulio Formenti</a><a href="/training-material/hall-of-fame/msozzoni/" class="contributor-badge contributor-msozzoni"><img src="https://avatars.githubusercontent.com/msozzoni?s=36" alt="Avatar">Marcella Sozzoni</a>
+		Authors: <a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Avatar" width="36" height="36">Delphine Lariviere</a><a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge contributor-astrovsky01"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/astrovsky01?s=36" alt="Avatar" width="36" height="36">Alex Ostrovsky</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Avatar" width="36" height="36">Cristóbal Gallardo</a><a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/annasyme?s=36" alt="Avatar" width="36" height="36">Anna Syme</a><a href="/training-material/hall-of-fame/abueg/" class="contributor-badge contributor-abueg"><img src="https://avatars.githubusercontent.com/abueg?s=36" alt="Avatar" width="36" height="36">Linelle Abueg</a><a href="/training-material/hall-of-fame/pickettbd/" class="contributor-badge contributor-pickettbd"><img src="https://avatars.githubusercontent.com/pickettbd?s=36" alt="Avatar" width="36" height="36">Brandon Pickett</a><a href="/training-material/hall-of-fame/gf777/" class="contributor-badge contributor-gf777"><img src="https://avatars.githubusercontent.com/gf777?s=36" alt="Avatar" width="36" height="36">Giulio Formenti</a><a href="/training-material/hall-of-fame/msozzoni/" class="contributor-badge contributor-msozzoni"><img src="https://avatars.githubusercontent.com/msozzoni?s=36" alt="Avatar" width="36" height="36">Marcella Sozzoni</a>
 	</div>
 
 </div>
@@ -674,6 +676,8 @@ Sentry.init({
                                 
                             
                             </li>
+                        
+                    
                         
                     
                         
@@ -2456,7 +2460,7 @@ dataset_03    https://zenodo.org/record/6098306/files/HiFi_synthetic_50x_03.fast
 
 </blockquote>
 
-<figure id="figure-21" style="max-width: 90%; margin:auto;"><img src="../../images/vgp_assembly/scaffoldingandcuration.png" alt="Schematic of scaffolding contigs to generate a draft assembly, and then curating the draft scaffolds to generate a curated assembly." width="1184" height="1394" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 21</strong>:</span> Scaffolding uses additional information to join together contigs. Optical maps, such as those produced using the Bionano Saphyr, as well as Hi-C data such as those generated by Arima Hi-C or Dovetail OmniC kits, are used to re-order and orient contigs according to long-range information. This generates the draft scaffold-level genome. This draft genome then undergoes manual curation, which uses information such as coverage tracks or repeat annotations in order to further orient scaffolds and correct misassemblies such as mis-joins and missed joins. Image adapted from <span class="citation"><a href="#Rhie2022">Rhie <i>et al.</i> 2021</a></span>.</figcaption></figure>
+<figure id="figure-21" style="max-width: 90%; margin:auto;"><img src="../../images/vgp_assembly/scaffoldingandcuration.png" alt="Schematic of scaffolding contigs to generate a draft assembly, and then curating the draft scaffolds to generate a curated assembly." width="1184" height="1394" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 21</strong>:</span> Scaffolding uses additional information to join together contigs. Optical maps, such as those produced using the Bionano Saphyr, as well as Hi-C data such as those generated by Arima Hi-C or Dovetail OmniC kits, are used to re-order and orient contigs according to long-range information. This generates the draft scaffold-level genome. This draft genome then undergoes manual curation, which uses information such as coverage tracks or repeat annotations in order to further orient scaffolds and correct misassemblies such as mis-joins and missed joins. Image adapted from <span class="citation"><a href="#Rhie2022">Rhie <i>et al.</i> 2020</a></span>.</figcaption></figure>
 
 <h1 id="hybrid-scaffolding-with-bionano-optical-maps">Hybrid scaffolding with Bionano optical maps</h1>
 
@@ -2910,12 +2914,12 @@ dataset_03    https://zenodo.org/record/6098306/files/HiFi_synthetic_50x_03.fast
 <li id="Rhie2021">Rhie, A., B. P. Walenz, S. Koren, and A. M. Phillippy, 2020 <b>Merqury: reference-free quality,  completeness,  and phasing assessment for genome assemblies</b>. Genome Biology 21: <a href="https://doi.org/10.1186/s13059-020-02134-9">10.1186/s13059-020-02134-9</a></li>
 <li id="Rhie2020">Rhie, A., B. P. Walenz, S. Koren, and A. M. Phillippy, 2020 <b>Merqury: reference-free quality,  completeness,  and phasing assessment for genome assemblies</b>. Genome Biology 21: <a href="https://doi.org/10.1186/s13059-020-02134-9">10.1186/s13059-020-02134-9</a></li>
 <li id="Rhie_merqury">Rhie, A., B. P. Walenz, S. Koren, and A. M. Phillippy, 2020 <b>Merqury: reference-free quality,  completeness,  and phasing assessment for genome assemblies</b>. Genome Biology 21: <a href="https://doi.org/10.1186/s13059-020-02134-9">10.1186/s13059-020-02134-9</a></li>
+<li id="Rhie2022">Rhie, A., B. P. Walenz, S. Koren, and A. M. Phillippy, 2020 <b>Merqury: reference-free quality,  completeness,  and phasing assessment for genome assemblies</b>. Genome Biology 21: <a href="https://doi.org/10.1186/s13059-020-02134-9">10.1186/s13059-020-02134-9</a></li>
 <li id="wang2020estimation">Wang, H., B. Liu, Y. Zhang, F. Jiang, Y. Ren <i>et al.</i>, 2020 <b>Estimation of genome size using k-mer frequencies from corrected long reads</b>. arXiv preprint arXiv:2003.11817. <a href="https://arxiv.org/abs/2003.11817">https://arxiv.org/abs/2003.11817</a></li>
 <li id="Yuan2020">Yuan, Y., C. Y.-L. Chung, and T.-F. Chan, 2020 <b>Advances in optical mapping for genomic research</b>. Computational and Structural Biotechnology Journal 18: 2051–2062. <a href="https://doi.org/10.1016/j.csbj.2020.07.018">10.1016/j.csbj.2020.07.018</a></li>
 <li id="Zhang2020">Zhang, X., R. Wu, Y. Wang, J. Yu, and H. Tang, 2020 <b>Unzipping haplotypes in diploid and polyploid genomes</b>. Computational and Structural Biotechnology Journal 18: 66–72. <a href="https://doi.org/10.1016/j.csbj.2019.11.011">10.1016/j.csbj.2019.11.011</a></li>
 <li id="Cheng2021">Cheng, H., G. T. Concepcion, X. Feng, H. Zhang, and H. Li, 2021 <b>Haplotype-resolved de novo assembly using phased assembly graphs with hifiasm</b>. Nature Methods 18: 170–175. <a href="https://doi.org/10.1038/s41592-020-01056-5">10.1038/s41592-020-01056-5</a></li>
 <li id="Dida2021">Dida, F., and G. Yi, 2021 <b>Empirical evaluation of methods for de novo genome assembly</b>. PeerJ Computer Science 7: e636. <a href="https://doi.org/10.7717/peerj-cs.636">10.7717/peerj-cs.636</a></li>
-<li id="Rhie2022">Rhie, A., S. A. McCarthy, O. Fedrigo, J. Damas, G. Formenti <i>et al.</i>, 2021 <b>Towards complete and error-free genome assemblies of all vertebrate species</b>. Nature 592: 737–746. <a href="https://doi.org/10.1038/s41586-021-03451-0">10.1038/s41586-021-03451-0</a></li>
 <li id="Savara2021">Savara, J., T. Novosád, P. Gajdoš, and E. Kriegová, 2021 <b>Comparison of structural variants detected by optical mapping with long-read next-generation sequencing</b> (C. Kendziorski, Ed.). Bioinformatics 37: 3398–3404. <a href="https://doi.org/10.1093/bioinformatics/btab359">10.1093/bioinformatics/btab359</a></li>
 <li id="Formenti2022">Formenti, G., L. Abueg, A. Brajuka, N. Brajuka, C. Gallardo-Alba <i>et al.</i>, 2022 <b>Gfastats: conversion,  evaluation and manipulation of genome sequences using assembly graphs</b> (A. Valencia, Ed.). Bioinformatics 38: 4214–4216. <a href="https://doi.org/10.1093/bioinformatics/btac460">10.1093/bioinformatics/btac460</a></li>
 <li id="Nurk2022">Nurk, S., S. Koren, A. Rhie, M. Rautiainen, A. V. Bzikadze <i>et al.</i>, 2022 <b>The complete sequence of a human genome</b>. Science 376: 44–53. <a href="https://doi.org/10.1126/science.abj6987">10.1126/science.abj6987</a></li>
@@ -3286,7 +3290,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/720736375c1bc32d8cc8b0de02dffd16e3e1d072">7207363</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -3317,41 +3321,8 @@ tools:
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1689303195'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

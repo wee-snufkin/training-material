@@ -61,6 +61,7 @@
         "lon": 3.08
       },
       "fediverse": "https://piaille.fr/@bebatut",
+      "fediverse_flavor": "mastodon",
       "id": "bebatut",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -69,6 +70,8 @@
       "name": "Hans-Rudolf Hotz",
       "email": "hrhotz@googlemail.com",
       "twitter": "hrhotz",
+      "fediverse": "https://genomic.social/@hrhotz",
+      "fediverse_flavor": "mastodon",
       "matrix": "hrhotz:matrix.org",
       "orcid": "0000-0002-2799-424X",
       "linkedin": "hans-rudolf-hotz-542b31",

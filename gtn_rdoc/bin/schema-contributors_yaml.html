@@ -157,6 +157,12 @@
             description: The URL to your fediverse profile
             examples:
               - http://genomic.social/@abretaud
+        fediverse_flavor:
+            type: str
+            enum:
+              - mastodon
+              - akkoma
+            description: The flavor of the fediverse server (used in our webfinger endpoint.)
         bio:
             type: str
             description: |
@@ -242,8 +248,9 @@
             type: str
             description: Automatically link to the grant&#39;s information in the appropriate funding system site.
             enum:
-                - &quot;cordis&quot;
-                - &quot;erasmusplus&quot;
+                - cordis
+                - erasmusplus
+                - ukri
         funding_statement:
             type: str
             description: A short statement about the funder, markdown is supported.

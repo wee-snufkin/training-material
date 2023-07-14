@@ -130,6 +130,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -471,6 +472,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -1757,6 +1759,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -1946,6 +1949,7 @@
       "contributors": [
         {
           "name": "Katarzyna Kamieniecka",
+          "twitter": "katemurat",
           "orcid": "0009-0004-2454-5950",
           "joined": "2018-08",
           "elixir_node": "uk",

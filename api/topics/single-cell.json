@@ -2,7 +2,7 @@
   "name": "single-cell",
   "type": "use",
   "title": "Single Cell",
-  "summary": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!",
+  "summary": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!\n\nWhat else do you want to see? You can submit tool and/or tutorial requests, as well as up-vote requests from others at our [Single Cell Community Planning site](https://github.com/orgs/galaxyproject/projects/31/views/1).\n{: .alert.alert-success}\n",
   "requirements": [
     {
       "type": "internal",
@@ -31,6 +31,14 @@
       "id": "mtekman",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/mtekman.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mtekman/"
+    },
+    {
+      "name": "Pavankumar Videm",
+      "orcid": "0000-0002-5192-126X",
+      "joined": "2017-09",
+      "id": "pavanvidem",
+      "url": "https://training.galaxyproject.org/training-material/api/contributors/pavanvidem.json",
+      "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pavanvidem/"
     }
   ],
   "subtopics": [
@@ -153,6 +161,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -170,8 +179,11 @@
         {
           "name": "Wolfgang Maier",
           "orcid": "0000-0002-9464-6640",
+          "matrix": "wm75:matrix.org",
           "joined": "2017-09",
           "elixir_node": "de",
+          "fediverse": "https://scholar.social/@zerodivision",
+          "fediverse_flavor": "mastodon",
           "id": "wm75",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/wm75.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
@@ -915,6 +927,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -1878,6 +1891,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -2601,6 +2615,8 @@
           "name": "Hans-Rudolf Hotz",
           "email": "hrhotz@googlemail.com",
           "twitter": "hrhotz",
+          "fediverse": "https://genomic.social/@hrhotz",
+          "fediverse_flavor": "mastodon",
           "matrix": "hrhotz:matrix.org",
           "orcid": "0000-0002-2799-424X",
           "linkedin": "hans-rudolf-hotz-542b31",
@@ -3547,6 +3563,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -4039,6 +4056,7 @@
             "lon": 3.08
           },
           "fediverse": "https://piaille.fr/@bebatut",
+          "fediverse_flavor": "mastodon",
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -4047,6 +4065,8 @@
           "name": "Hans-Rudolf Hotz",
           "email": "hrhotz@googlemail.com",
           "twitter": "hrhotz",
+          "fediverse": "https://genomic.social/@hrhotz",
+          "fediverse_flavor": "mastodon",
           "matrix": "hrhotz:matrix.org",
           "orcid": "0000-0002-2799-424X",
           "linkedin": "hans-rudolf-hotz-542b31",
@@ -4705,6 +4725,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -5040,6 +5061,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -5078,6 +5100,7 @@
         },
         {
           "name": "EPSRC Training Grant DTP 2020-2021 Open University",
+          "github": false,
           "joined": "2022-09",
           "funder": true,
           "funding_statement": "The research internship was supported through EPSRC Training Grant DTP 2020-2021 Open University",
@@ -5496,6 +5519,7 @@
           "joined": "2017-09",
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -5529,6 +5553,7 @@
         },
         {
           "name": "EOSC-Life",
+          "github": false,
           "joined": "2023-04",
           "avatar": "https://www.eosc-life.eu/wp-content/themes/eosc-life-v2/assets/images/eosclogo.png",
           "funder": true,

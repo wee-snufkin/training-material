@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@9142c8a06a76631ea66583734e4821acd24ed772",
+  release: "galaxy-training-network@720736375c1bc32d8cc8b0de02dffd16e3e1d072",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1689303195' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1689303195' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -230,7 +232,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1689303195'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -418,7 +420,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/simleo/" class="contributor-badge contributor-simleo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/simleo?s=36" alt="Avatar">Simone Leo</a><a href="/training-material/hall-of-fame/kinow/" class="contributor-badge contributor-kinow"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/kinow?s=36" alt="Avatar">Bruno P. Kinoshita</a>
+			<a href="/training-material/hall-of-fame/simleo/" class="contributor-badge contributor-simleo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/simleo?s=36" alt="Avatar" width="36" height="36">Simone Leo</a><a href="/training-material/hall-of-fame/kinow/" class="contributor-badge contributor-kinow"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/kinow?s=36" alt="Avatar" width="36" height="36">Bruno P. Kinoshita</a>
 		</td>
 	</tr>
 	
@@ -430,7 +432,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a></td>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a></td>
 	</tr>
 	
 
@@ -600,7 +602,7 @@ Sentry.init({
                 <p>This tutorial will show you how to manipulate <a href="https://w3id.org/ro/crate/">RO-Crates</a> in Python using the <a href="https://github.com/ResearchObject/ro-crate-py">ro-crate-py</a> package. It is based on the <a href="https://github.com/ResearchObject/ro-crate-py/blob/e1218fbca595f4c33059cfe15849ee2ae9e6896b/README.md">ro-crate-py documentation</a>.</p>
 
 <blockquote class="agenda">
-  <div class="box-title agenda-title" id="agenda">Agenda</div>
+  <div class="box-title agenda-title" id="agenda-1">Agenda</div>
 
   <p>In this tutorial, you will learn how to create a git repo, and begin working with it.</p>
 
@@ -634,17 +636,17 @@ Sentry.init({
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">rocrate.rocrate</span> <span class="kn">import</span> <span class="n">ROCrate</span>
 
 <span class="n">crate</span> <span class="o">=</span> <span class="nc">ROCrate</span><span class="p">()</span>
-<span class="n">paper</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_file</span><span class="p">(</span><span class="s">"exp/paper.pdf"</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
-    <span class="s">"name"</span><span class="p">:</span> <span class="s">"manuscript"</span><span class="p">,</span>
-    <span class="s">"encodingFormat"</span><span class="p">:</span> <span class="s">"application/pdf"</span>
+<span class="n">paper</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_file</span><span class="p">(</span><span class="sh">"</span><span class="s">exp/paper.pdf</span><span class="sh">"</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+    <span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">manuscript</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">encodingFormat</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">application/pdf</span><span class="sh">"</span>
 <span class="p">})</span>
-<span class="n">table</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_file</span><span class="p">(</span><span class="s">"exp/results.csv"</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
-    <span class="s">"name"</span><span class="p">:</span> <span class="s">"experimental data"</span><span class="p">,</span>
-    <span class="s">"encodingFormat"</span><span class="p">:</span> <span class="s">"text/csv"</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_file</span><span class="p">(</span><span class="sh">"</span><span class="s">exp/results.csv</span><span class="sh">"</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+    <span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">experimental data</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">encodingFormat</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">text/csv</span><span class="sh">"</span>
 <span class="p">})</span>
-<span class="n">diagram</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_file</span><span class="p">(</span><span class="s">"exp/diagram.svg"</span><span class="p">,</span> <span class="n">dest_path</span><span class="o">=</span><span class="s">"images/figure.svg"</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
-    <span class="s">"name"</span><span class="p">:</span> <span class="s">"bar chart"</span><span class="p">,</span>
-    <span class="s">"encodingFormat"</span><span class="p">:</span> <span class="s">"image/svg+xml"</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_file</span><span class="p">(</span><span class="sh">"</span><span class="s">exp/diagram.svg</span><span class="sh">"</span><span class="p">,</span> <span class="n">dest_path</span><span class="o">=</span><span class="sh">"</span><span class="s">images/figure.svg</span><span class="sh">"</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+    <span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">bar chart</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">encodingFormat</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">image/svg+xml</span><span class="sh">"</span>
 <span class="p">})</span>
 </code></pre></div></div>
 
@@ -652,23 +654,23 @@ Sentry.init({
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">rocrate.model.person</span> <span class="kn">import</span> <span class="n">Person</span>
 
-<span class="n">alice_id</span> <span class="o">=</span> <span class="s">"https://orcid.org/0000-0000-0000-0000"</span>
-<span class="n">bob_id</span> <span class="o">=</span> <span class="s">"https://orcid.org/0000-0000-0000-0001"</span>
+<span class="n">alice_id</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://orcid.org/0000-0000-0000-0000</span><span class="sh">"</span>
+<span class="n">bob_id</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://orcid.org/0000-0000-0000-0001</span><span class="sh">"</span>
 <span class="n">alice</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Person</span><span class="p">(</span><span class="n">crate</span><span class="p">,</span> <span class="n">alice_id</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
-    <span class="s">"name"</span><span class="p">:</span> <span class="s">"Alice Doe"</span><span class="p">,</span>
-    <span class="s">"affiliation"</span><span class="p">:</span> <span class="s">"University of Flatland"</span>
+    <span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Alice Doe</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">affiliation</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">University of Flatland</span><span class="sh">"</span>
 <span class="p">}))</span>
 <span class="n">bob</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Person</span><span class="p">(</span><span class="n">crate</span><span class="p">,</span> <span class="n">bob_id</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
-    <span class="s">"name"</span><span class="p">:</span> <span class="s">"Bob Doe"</span><span class="p">,</span>
-    <span class="s">"affiliation"</span><span class="p">:</span> <span class="s">"University of Flatland"</span>
+    <span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Bob Doe</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">affiliation</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">University of Flatland</span><span class="sh">"</span>
 <span class="p">}))</span>
 </code></pre></div></div>
 
 <p>At this point, we have a representation of the various entities. Now we need to express the relationships between them. This is done by adding properties that reference other entities:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">paper</span><span class="p">[</span><span class="s">"author"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">alice</span><span class="p">,</span> <span class="n">bob</span><span class="p">]</span>
-<span class="n">table</span><span class="p">[</span><span class="s">"author"</span><span class="p">]</span> <span class="o">=</span> <span class="n">alice</span>
-<span class="n">diagram</span><span class="p">[</span><span class="s">"author"</span><span class="p">]</span> <span class="o">=</span> <span class="n">bob</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">paper</span><span class="p">[</span><span class="sh">"</span><span class="s">author</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">alice</span><span class="p">,</span> <span class="n">bob</span><span class="p">]</span>
+<span class="n">table</span><span class="p">[</span><span class="sh">"</span><span class="s">author</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">alice</span>
+<span class="n">diagram</span><span class="p">[</span><span class="sh">"</span><span class="s">author</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">bob</span>
 </code></pre></div></div>
 
 <p>You can also add whole directories together with their contents. In RO-Crate, a directory is represented by the <code class="language-plaintext highlighter-rouge">Dataset</code> entity:</p>
@@ -678,19 +680,19 @@ Sentry.init({
 <span class="nb">touch </span>exp/logs/log2.txt
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">logs</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_dataset</span><span class="p">(</span><span class="s">"exp/logs"</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">logs</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_dataset</span><span class="p">(</span><span class="sh">"</span><span class="s">exp/logs</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Finally, we serialize the crate to disk:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">crate</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s">"exp_crate"</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">crate</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sh">"</span><span class="s">exp_crate</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>This should generate an <code class="language-plaintext highlighter-rouge">exp_crate</code> directory containing copies of all the files we added and an <code class="language-plaintext highlighter-rouge">ro-crate-metadata.json</code> file containing a JSON-LD representation of the metadata. Note that we have chosen a different destination path for the diagram, while the paper and the spreadsheet have been placed at the top level with their names unchanged (the default).</p>
 
 <p>Some applications and services support RO-Crates stored as archives. To save the crate in zip format, you can use <code class="language-plaintext highlighter-rouge">write_zip</code>:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">crate</span><span class="p">.</span><span class="nf">write_zip</span><span class="p">(</span><span class="s">"exp_crate.zip"</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">crate</span><span class="p">.</span><span class="nf">write_zip</span><span class="p">(</span><span class="sh">"</span><span class="s">exp_crate.zip</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="appending-elements-to-property-values">Appending elements to property values</h3>
@@ -714,22 +716,22 @@ Sentry.init({
 
 <p>When <code class="language-plaintext highlighter-rouge">paper["author"]</code> is accessed, a new list containing the <code class="language-plaintext highlighter-rouge">alice</code> and <code class="language-plaintext highlighter-rouge">bob</code> entities is generated on the fly. For this reason, calling <code class="language-plaintext highlighter-rouge">append</code> on <code class="language-plaintext highlighter-rouge">paper["author"]</code> won’t actually modify the <code class="language-plaintext highlighter-rouge">paper</code> entity in any way. To add an author, use the <code class="language-plaintext highlighter-rouge">append_to</code> method instead:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">donald</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Person</span><span class="p">(</span><span class="n">crate</span><span class="p">,</span> <span class="s">"https://en.wikipedia.org/wiki/Donald_Duck"</span><span class="p">))</span>
-<span class="n">paper</span><span class="p">.</span><span class="nf">append_to</span><span class="p">(</span><span class="s">"author"</span><span class="p">,</span> <span class="n">donald</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">donald</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Person</span><span class="p">(</span><span class="n">crate</span><span class="p">,</span> <span class="sh">"</span><span class="s">https://en.wikipedia.org/wiki/Donald_Duck</span><span class="sh">"</span><span class="p">))</span>
+<span class="n">paper</span><span class="p">.</span><span class="nf">append_to</span><span class="p">(</span><span class="sh">"</span><span class="s">author</span><span class="sh">"</span><span class="p">,</span> <span class="n">donald</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Note that <code class="language-plaintext highlighter-rouge">append_to</code> also works if the property to be updated is missing or has only one value:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="s">"Mickey_Mouse"</span><span class="p">,</span> <span class="s">"Scrooge_McDuck"</span><span class="p">:</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Person</span><span class="p">(</span><span class="n">crate</span><span class="p">,</span> <span class="sa">f</span><span class="s">"https://en.wikipedia.org/wiki/</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s">"</span><span class="p">))</span>
-    <span class="n">donald</span><span class="p">.</span><span class="nf">append_to</span><span class="p">(</span><span class="s">"follows"</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="sh">"</span><span class="s">Mickey_Mouse</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Scrooge_McDuck</span><span class="sh">"</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Person</span><span class="p">(</span><span class="n">crate</span><span class="p">,</span> <span class="sa">f</span><span class="sh">"</span><span class="s">https://en.wikipedia.org/wiki/</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="sh">"</span><span class="p">))</span>
+    <span class="n">donald</span><span class="p">.</span><span class="nf">append_to</span><span class="p">(</span><span class="sh">"</span><span class="s">follows</span><span class="sh">"</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="adding-remote-entities">Adding remote entities</h3>
 
 <p>Data entities can also be remote:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">input_data</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_file</span><span class="p">(</span><span class="s">"http://example.org/exp_data.zip"</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">input_data</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add_file</span><span class="p">(</span><span class="sh">"</span><span class="s">http://example.org/exp_data.zip</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>By default the file won’t be downloaded, and will be referenced by its URI in <code class="language-plaintext highlighter-rouge">ro-crate-metadata.json</code>:</p>
@@ -750,12 +752,12 @@ Sentry.init({
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">rocrate.model.contextentity</span> <span class="kn">import</span> <span class="n">ContextEntity</span>
 
-<span class="n">hackathon</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">ContextEntity</span><span class="p">(</span><span class="n">crate</span><span class="p">,</span> <span class="s">"#bh2021"</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
-    <span class="s">"@type"</span><span class="p">:</span> <span class="s">"Hackathon"</span><span class="p">,</span>
-    <span class="s">"name"</span><span class="p">:</span> <span class="s">"Biohackathon 2021"</span><span class="p">,</span>
-    <span class="s">"location"</span><span class="p">:</span> <span class="s">"Barcelona, Spain"</span><span class="p">,</span>
-    <span class="s">"startDate"</span><span class="p">:</span> <span class="s">"2021-11-08"</span><span class="p">,</span>
-    <span class="s">"endDate"</span><span class="p">:</span> <span class="s">"2021-11-12"</span>
+<span class="n">hackathon</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">ContextEntity</span><span class="p">(</span><span class="n">crate</span><span class="p">,</span> <span class="sh">"</span><span class="s">#bh2021</span><span class="sh">"</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+    <span class="sh">"</span><span class="s">@type</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Hackathon</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Biohackathon 2021</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">location</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Barcelona, Spain</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">startDate</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">2021-11-08</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">endDate</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">2021-11-12</span><span class="sh">"</span>
 <span class="p">}))</span>
 </code></pre></div></div>
 
@@ -768,7 +770,7 @@ Sentry.init({
 
 <p>An existing RO-Crate package can be loaded from a directory or zip file:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">crate</span> <span class="o">=</span> <span class="nc">ROCrate</span><span class="p">(</span><span class="s">'exp_crate'</span><span class="p">)</span>  <span class="c1"># or ROCrate('exp_crate.zip')
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">crate</span> <span class="o">=</span> <span class="nc">ROCrate</span><span class="p">(</span><span class="sh">'</span><span class="s">exp_crate</span><span class="sh">'</span><span class="p">)</span>  <span class="c1"># or ROCrate('exp_crate.zip')
 </span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">crate</span><span class="p">.</span><span class="nf">get_entities</span><span class="p">():</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="nb">type</span><span class="p">)</span>
 </code></pre></div></div>
@@ -786,13 +788,13 @@ https://orcid.org/0000-0000-0000-0001 Person
 <p>The first two entities shown in the output are the <a href="https://www.researchobject.org/ro-crate/1.1/metadata.html">metadata file descriptor</a> and the <a href="https://www.researchobject.org/ro-crate/1.1/root-data-entity.html">root data entity</a>, respectively. The former represents the metadata file, while the latter represents the whole crate. These are special entities managed by the <code class="language-plaintext highlighter-rouge">ROCrate</code> object, and are always present. The other entities are the ones we added in the <a href="#creating-an-ro-crate">section on RO-Crate creation</a>. As shown above, <code class="language-plaintext highlighter-rouge">get_entities</code> allows to iterate over all entities in the crate. You can also access only data entities with <code class="language-plaintext highlighter-rouge">crate.data_entities</code> and only contextual entities with <code class="language-plaintext highlighter-rouge">crate.contextual_entities</code>. For instance:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">crate</span><span class="p">.</span><span class="n">data_entities</span><span class="p">:</span>
-    <span class="n">author</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"author"</span><span class="p">)</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">author</span><span class="sh">"</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">author</span><span class="p">:</span>
         <span class="k">continue</span>
     <span class="k">elif</span> <span class="nf">isinstance</span><span class="p">(</span><span class="n">author</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-        <span class="nf">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span> <span class="p">[</span><span class="n">p</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"name"</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">author</span><span class="p">])</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span> <span class="p">[</span><span class="n">p</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">author</span><span class="p">])</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nf">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span> <span class="nf">repr</span><span class="p">(</span><span class="n">author</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"name"</span><span class="p">)))</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span> <span class="nf">repr</span><span class="p">(</span><span class="n">author</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">)))</span>
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>paper.pdf ['Alice Doe', 'Bob Doe']
@@ -802,7 +804,7 @@ images/figure.svg 'Bob Doe'
 
 <p>You can fetch an entity by its <code class="language-plaintext highlighter-rouge">@id</code> as follows:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">article</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">dereference</span><span class="p">(</span><span class="s">"paper.pdf"</span><span class="p">)</span>  <span class="c1"># or crate.get("paper.pdf")
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">article</span> <span class="o">=</span> <span class="n">crate</span><span class="p">.</span><span class="nf">dereference</span><span class="p">(</span><span class="sh">"</span><span class="s">paper.pdf</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># or crate.get("paper.pdf")
 </span></code></pre></div></div>
 
 <h2 id="command-line-interface">Command Line Interface</h2>
@@ -1010,9 +1012,9 @@ author = "Simone Leo and Bruno P. Kinoshita",
 		<a href="/training-material/hall-of-fame/by-covid/" class="btn btn-secondary">See Funder Profile</a>
 	</div>
 	<div class="col-md-9 col-xs-12">
-		<p>BY-COVID is an <a href="https://cordis.europa.eu/project/id/101046203">EC funded project</a> that tackles the data challenges that can hinder effective pandemic response.</p>
+		<p>BY-COVID is an EC funded project that tackles the data challenges that can hinder effective pandemic response.</p>
 
-<p>This project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement No. 101046203 (BY-COVID)</p>
+<p>This project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement № 101046203 (BY-COVID)</p>
 
 	</div>
 
@@ -1076,7 +1078,7 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/9142c8a06a76631ea66583734e4821acd24ed772">9142c8a</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/720736375c1bc32d8cc8b0de02dffd16e3e1d072">7207363</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1107,41 +1109,8 @@ tools: []
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1689303195'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>
