@@ -135,6 +135,11 @@
     "title": "Overview of the Galaxy Training Material for Instructors"
   },
   {
+    "id": "data-science/tutorials/online-resources-gene/slides",
+    "topic": "Foundations of Data Science",
+    "title": "Learning about one gene across biological resources and formats"
+  },
+  {
     "id": "dev/tutorials/tool-generators/slides",
     "topic": "Development in Galaxy",
     "title": "ToolFactory: Generating Tools From Simple Scripts"

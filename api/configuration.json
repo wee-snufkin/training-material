@@ -133,7 +133,7 @@
       "resources": [
         "assets/js/theme.js"
       ],
-      "timestamp": 1695862349
+      "timestamp": 1695936841
     },
     "main": {
       "preload": true,
@@ -146,7 +146,7 @@
         "assets/js/list.min.js",
         "assets/js/main.js"
       ],
-      "timestamp": 1695862349
+      "timestamp": 1695936841
     }
   },
   "figurify": {
@@ -209,6 +209,7 @@
     "galaxy-save": "far fa-save",
     "galaxy-scratchbook": "fas fa-th",
     "galaxy-selector": "far fa-check-square",
+    "galaxy-show-hidden": "fas fa-eye-slash",
     "galaxy-star": "far fa-star",
     "galaxy-tags": "fas fa-tags",
     "galaxy-toggle": "fas fa-toggle-on",
@@ -288,8 +289,8 @@
   "serving": false,
   "boxify": {
   },
-  "git_revision": "720736375c1bc32d8cc8b0de02dffd16e3e1d072",
-  "git_revision_short": "7207363",
+  "git_revision": "c93ee501f7ece6f502f6f17dae238bdf50605ecc",
+  "git_revision_short": "c93ee50",
   "gtn_fork": "wee-snufkin",
   "git_tags": [
     "2019-02-07",
