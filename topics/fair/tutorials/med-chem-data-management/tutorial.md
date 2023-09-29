@@ -48,3 +48,12 @@ follow_up_training:
     topic_name: computational-chemistry
 ---
 
+# Introduction 
+
+# Principles of medicinal chemistry research
+
+# Chemical and pharmacological databases
+
+# Data management in chemistry using Galaxy
+
+# Looking into the future: data-driven medicinal chemistry
