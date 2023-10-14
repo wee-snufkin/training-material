@@ -51,7 +51,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 		
 	Sentry.init({
 	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@0c9d252243153e0d408d3eb6b0478dfb6ae973ec",
+	  release: "galaxy-training-network@fda9b45cc9a369125238666674b869418ac8d08e",
 	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 	  sampleRate: 0.1,
 	  tracesSampleRate: 0.1,
@@ -76,8 +76,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1696985486' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1696985486' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1697244609' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1697244609' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -103,7 +103,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1696985486'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1697244609'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -274,7 +274,41 @@ sequences.
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #fff5d8; --color-darker: #fbd800; --color-dimmed: #ffe691;">beginner</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ffedb7; --color-darker: #f4d200; --color-dimmed: #ffdf57;">beginner</span>
+        
+      </div>
+    </div>
+    </a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="pathwayitem col-md-4">
+    <a href="/training-material/learning-pathways/intro_single_cell.html">
+    <div class="card d-flex">
+      <div class="d-flex align-items-center" style="height:200px;">
+      
+      <img class="pathwaycover card-img-top" src="/training-material/assets/images/wab-annotatedcells-2.png" alt="Image of cells in different coloured clusters" loading="lazy" />
+      
+      </div>
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">Introduction to Galaxy and Single Cell RNA Sequence analysis</h5>
+        <p class="card-text">
+          This learning path aims to teach you the basics of Galaxy and analysis of Single Cell RNA-seq data. You will learn how to use Galaxy for analysis, and an important Galaxy feature for iterative single cell analysis. You’ll tbe guided through the general theory of single analysis and then perform a basic analysis of 10X chromium data. For support throughout...
+        </p>
+      </div>
+      <div class="card-footer">
+        
+        <span class="label label-default tutorial_tag" style="--color-primary: #ffedb7; --color-darker: #f4d200; --color-dimmed: #ffdf57;">beginner</span>
         
       </div>
     </div>
@@ -309,9 +343,9 @@ sequences.
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #ffc6ee; --color-darker: #ffa0e5; --color-dimmed: #ffb4e9;">genome annotation</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ff9ae4; --color-darker: #ff72dd; --color-dimmed: #ff87e0;">genome annotation</span>
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #56f600; --color-darker: #4bdb00; --color-dimmed: #51e900;">eukaryote</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #4ad700; --color-darker: #41bf00; --color-dimmed: #45cb00;">eukaryote</span>
         
       </div>
     </div>
@@ -346,9 +380,9 @@ sequences.
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #ffc6ee; --color-darker: #ffa0e5; --color-dimmed: #ffb4e9;">genome annotation</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ff9ae4; --color-darker: #ff72dd; --color-dimmed: #ff87e0;">genome annotation</span>
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #d8d2ff; --color-darker: #c1b6ff; --color-dimmed: #cdc4ff;">prokaryote</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #beb2ff; --color-darker: #aa99ff; --color-dimmed: #b4a5ff;">prokaryote</span>
         
       </div>
     </div>
@@ -385,7 +419,7 @@ steps of biodiversity data analysis: download, check, filter and explore biodive
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #fff5d8; --color-darker: #fbd800; --color-dimmed: #ffe691;">beginner</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ffedb7; --color-darker: #f4d200; --color-dimmed: #ffdf57;">beginner</span>
         
       </div>
     </div>
@@ -423,7 +457,7 @@ the various types of Machine Learning techniques, developing some simple models 
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #fff5d8; --color-darker: #fbd800; --color-dimmed: #ffe691;">beginner</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ffedb7; --color-darker: #f4d200; --color-dimmed: #ffdf57;">beginner</span>
         
       </div>
     </div>
@@ -460,7 +494,7 @@ steps of microbiome data analysis: quality control, taxonomic profiling, taxonom
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #ffcbbf; --color-darker: #ffaa91; --color-dimmed: #ffbba9;">microbiome</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ffa588; --color-darker: #ff854e; --color-dimmed: #ff956f;">microbiome</span>
         
       </div>
     </div>
@@ -495,9 +529,9 @@ steps of microbiome data analysis: quality control, taxonomic profiling, taxonom
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #c8d7ff; --color-darker: #a3bfff; --color-dimmed: #b6cbff;">python</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #9dbbff; --color-darker: #78a6ff; --color-dimmed: #8bb0ff;">python</span>
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #fbc6ff; --color-darker: #f99fff; --color-dimmed: #fab3ff;">real-course</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #f998ff; --color-darker: #f86fff; --color-dimmed: #f985ff;">real-course</span>
         
       </div>
     </div>
@@ -532,9 +566,9 @@ steps of microbiome data analysis: quality control, taxonomic profiling, taxonom
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #c8d7ff; --color-darker: #a3bfff; --color-dimmed: #b6cbff;">python</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #9dbbff; --color-darker: #78a6ff; --color-dimmed: #8bb0ff;">python</span>
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #fbc6ff; --color-darker: #f99fff; --color-dimmed: #fab3ff;">real-course</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #f998ff; --color-darker: #f86fff; --color-dimmed: #f985ff;">real-course</span>
         
       </div>
     </div>
@@ -580,9 +614,9 @@ configuring it, and making it production ready.
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #ffc8e1; --color-darker: #ffa4d0; --color-dimmed: #ffb6d8;">Galaxy administrators</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ff9dcd; --color-darker: #ff78bf; --color-dimmed: #ff8bc6;">Galaxy administrators</span>
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #ffcdab; --color-darker: #ffae5f; --color-dimmed: #ffbe8a;">5-day course</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ffa84b; --color-darker: #ec9300; --color-dimmed: #fa9c00;">5-day course</span>
         
       </div>
     </div>
@@ -617,9 +651,9 @@ configuring it, and making it production ready.
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #ffcace; --color-darker: #ffa8af; --color-dimmed: #ffb9bf;">Climate</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ffa2aa; --color-darker: #ff808d; --color-dimmed: #ff919c;">Climate</span>
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #ffd088; --color-darker: #f4b500; --color-dimmed: #ffc141;">Overview</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #efb100; --color-darker: #d69e00; --color-dimmed: #e2a700;">Overview</span>
         
       </div>
     </div>
@@ -654,9 +688,9 @@ configuring it, and making it production ready.
       </div>
       <div class="card-footer">
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #ffc5f6; --color-darker: #ff9ef1; --color-dimmed: #ffb2f4;">training</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ff97f1; --color-darker: #ff6eed; --color-dimmed: #ff84ef;">training</span>
         
-        <span class="label label-default tutorial_tag" style="--color-primary: #ffc6ef; --color-darker: #ffa0e7; --color-dimmed: #ffb4eb;">trainers</span>
+        <span class="label label-default tutorial_tag" style="--color-primary: #ff9ae5; --color-darker: #ff71df; --color-dimmed: #ff87e2;">trainers</span>
         
       </div>
     </div>
@@ -687,7 +721,7 @@ configuring it, and making it production ready.
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/0c9d252243153e0d408d3eb6b0478dfb6ae973ec">0c9d252</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/fda9b45cc9a369125238666674b869418ac8d08e">fda9b45</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -715,7 +749,7 @@ configuring it, and making it production ready.
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1696985486'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1697244609'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

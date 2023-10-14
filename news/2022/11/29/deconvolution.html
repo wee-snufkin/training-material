@@ -51,7 +51,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 		
 	Sentry.init({
 	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@0c9d252243153e0d408d3eb6b0478dfb6ae973ec",
+	  release: "galaxy-training-network@fda9b45cc9a369125238666674b869418ac8d08e",
 	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 	  sampleRate: 0.1,
 	  tracesSampleRate: 0.1,
@@ -76,8 +76,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1696985486' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1696985486' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1697244609' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1697244609' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -105,7 +105,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1696985486'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1697244609'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -274,11 +274,11 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 
 
-<span class="label label-default tutorial_tag" id="new tutorial" style="--color-primary: #ffcea4; --color-darker: #ffaf45; --color-dimmed: #ffbe7e;">new tutorial</span>
+<span class="label label-default tutorial_tag" id="new tutorial" style="--color-primary: #ffa91e; --color-darker: #e59600; --color-dimmed: #f39f00;">new tutorial</span>
 
-<span class="label label-default tutorial_tag" id="single-cell" style="--color-primary: #00f1de; --color-darker: #00d6c5; --color-dimmed: #00e3d1;">single-cell</span>
+<span class="label label-default tutorial_tag" id="single-cell" style="--color-primary: #00d2c1; --color-darker: #00bbac; --color-dimmed: #00c6b7;">single-cell</span>
 
-<span class="label label-default tutorial_tag" id="transcriptomics" style="--color-primary: #ecda00; --color-darker: #d2c200; --color-dimmed: #dfce00;">transcriptomics</span>
+<span class="label label-default tutorial_tag" id="transcriptomics" style="--color-primary: #cebe00; --color-darker: #b8a900; --color-dimmed: #c3b300;">transcriptomics</span>
 
 
 <hr/>
@@ -428,14 +428,35 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 	<article>
 	<h3>
+		<a href="/training-material/news/2023/10/05/wendi.html">New Feature: Embeddable GTN Tutorial Lists and UseGalaxy Workflow List Widgets</a>
+	</h3>
+	<p>
+	5 October 2023 &nbsp;
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #b3b5ff; --color-darker: #9b9eff; --color-dimmed: #a7a9ff;">new feature</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffef92; --color-darker: #ead500; --color-dimmed: #f8e300;">gtn</span>
+	
+	</p>
+	<p class="card-text">
+		
+		We at the GTN strive to bring you the most fun and fancy features we can in a completely static site! Today we’re addressing the question of Wendi Bacon who needed a solution for keeping her single cell subdomain up-to-date with all the latest happenings in the Single Cell world.
+
+		
+	</p>
+</article>
+
+
+	<article>
+	<h3>
 		<a href="/training-material/news/2023/07/20/prefs.html">New Feature: GTN User Preferences</a>
 	</h3>
 	<p>
 	20 July 2023 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d3d4ff; --color-darker: #b8b9ff; --color-dimmed: #c5c7ff;">new feature</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #b3b5ff; --color-darker: #9b9eff; --color-dimmed: #a7a9ff;">new feature</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff6c7; --color-darker: #f1dc00; --color-dimmed: #ffe92f;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffef92; --color-darker: #ead500; --color-dimmed: #f8e300;">gtn</span>
 	
 	</p>
 	<p class="card-text">
@@ -454,9 +475,9 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	<p>
 	27 June 2023 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d5d3ff; --color-darker: #bbb8ff; --color-dimmed: #c8c6ff;">new topic</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #b7b4ff; --color-darker: #a09cff; --color-dimmed: #aba8ff;">new topic</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ffc6f3; --color-darker: #ff9fed; --color-dimmed: #ffb3ef;">new community</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ff98ec; --color-darker: #ff70e7; --color-dimmed: #ff85e9;">new community</span>
 	
 	</p>
 	<p class="card-text">
@@ -474,9 +495,9 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	<p>
 	21 June 2023 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d5d3ff; --color-darker: #bbb8ff; --color-dimmed: #c8c6ff;">new topic</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #b7b4ff; --color-darker: #a09cff; --color-dimmed: #aba8ff;">new topic</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ffcea4; --color-darker: #ffaf45; --color-dimmed: #ffbe7e;">new tutorial</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffa91e; --color-darker: #e59600; --color-dimmed: #f39f00;">new tutorial</span>
 	
 	</p>
 	<p class="card-text">
@@ -495,32 +516,15 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	<p>
 	7 June 2023 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d3d4ff; --color-darker: #b8b9ff; --color-dimmed: #c5c7ff;">new feature</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #b3b5ff; --color-darker: #9b9eff; --color-dimmed: #a7a9ff;">new feature</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff6c7; --color-darker: #f1dc00; --color-dimmed: #ffe92f;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffef92; --color-darker: #ead500; --color-dimmed: #f8e300;">gtn</span>
 	
 	</p>
 	<p class="card-text">
 		
 		Did you ever want to run a tool, but not know where it might be available?
 The GTN has you covered with the Pan-Galactic Tool Search that is now available.
-
-		
-	</p>
-</article>
-
-
-	<article>
-	<h3>
-		<a href="/training-material/news/2023/06/01/hart.html">GTN Celebrates Pride Month: Alan Hart & M. Tuberculosis</a>
-	</h3>
-	<p>
-	1 June 2023 &nbsp;
-	
-	</p>
-	<p class="card-text">
-		
-		June is Pride Month in the US and countries around the world. We have automatically activated the new Progress Pride theme on the home page (Click to Activate) if you hadn’t already selected a theme.
 
 		
 	</p>
@@ -546,7 +550,7 @@ The GTN has you covered with the Pan-Galactic Tool Search that is now available.
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/0c9d252243153e0d408d3eb6b0478dfb6ae973ec">0c9d252</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/fda9b45cc9a369125238666674b869418ac8d08e">fda9b45</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -578,7 +582,7 @@ The GTN has you covered with the Pan-Galactic Tool Search that is now available.
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1696985486'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1697244609'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

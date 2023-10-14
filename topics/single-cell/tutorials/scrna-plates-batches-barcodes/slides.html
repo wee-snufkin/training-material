@@ -53,7 +53,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 		
 	Sentry.init({
 	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@0c9d252243153e0d408d3eb6b0478dfb6ae973ec",
+	  release: "galaxy-training-network@fda9b45cc9a369125238666674b869418ac8d08e",
 	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 	  sampleRate: 0.1,
 	  tracesSampleRate: 0.1,
@@ -83,7 +83,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Plates, Batches, and Barcodes">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2022-11-12 21:26:33 +0000">
+<meta name="DC.date" content="2023-10-09 16:30:03 +0000">
 <meta name="DC.creator" content="Wendi Bacon">
 <meta name="DC.creator" content="Mehmet Tekman">
 <meta name="DC.creator" content="Alex Ostrovsky">
@@ -125,7 +125,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2022-11-12 21:26:33 +0000",
+  "dateModified": "2023-10-09 16:30:03 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Plates, Batches, and Barcodes",
   "interactivityType": "mixed",
@@ -175,7 +175,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Single Cell",
-    "description": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!",
+    "description": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!\n\nWhat else do you want to see? You can submit tool and/or tutorial request on our <i class=\"fa fa-wrench\" aria-hidden=\"true\"></i> [Single Cell Community Tool Request Spreadsheet](https://docs.google.com/spreadsheets/d/15hqgqA-RMDhXR-ylKhRF-Dab9Ij2arYSKiEVoPl2df4/edit?usp=sharing).\n {: .alert.alert-success}\n",
     "url": "https://training.galaxyproject.org/training-material/topics/single-cell/"
   },
   "learningResourceType": "slides",
@@ -183,7 +183,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-plates-batches-barcodes/slides.html",
   "timeRequired": "PT1H",
   "teaches": "How to set up plates to prevent batch effect\n - Proper naming conventions when dealing with scRNA-seq samples",
-  "keywords": "single-cell, single-cell",
+  "keywords": "single-cell",
   "description": "The questions this  addresses are:\n - What is a batch when it comes to single cells?\n - What’s the difference between a barcode and an index?\n - What is batch effect and how do you prevent it?\n - What is a lane?\n\n\nThe objectives are:\n - How to set up plates to prevent batch effect\n - Proper naming conventions when dealing with scRNA-seq samples\n\n",
   "inLanguage": {
     "@type": "Language",
@@ -278,16 +278,13 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
     {
       "@type": "CreativeWork",
       "name": "Single Cell",
-      "description": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!",
+      "description": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!\n\nWhat else do you want to see? You can submit tool and/or tutorial request on our <i class=\"fa fa-wrench\" aria-hidden=\"true\"></i> [Single Cell Community Tool Request Spreadsheet](https://docs.google.com/spreadsheets/d/15hqgqA-RMDhXR-ylKhRF-Dab9Ij2arYSKiEVoPl2df4/edit?usp=sharing).\n {: .alert.alert-success}\n",
       "url": "https://training.galaxyproject.org/training-material/topics/single-cell/"
     }
   ],
   "educationalLevel": "Introductory",
   "mentions": [
-    {
-      "@type": "Thing",
-      "name": "single-cell"
-    }
+
   ],
   "abstract": "### Sorting Plates"
 }

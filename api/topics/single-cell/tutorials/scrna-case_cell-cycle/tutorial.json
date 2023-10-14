@@ -29,9 +29,7 @@
     "Identifying the cell cycle genes and using them to regress out the effects of the cell cycle can reveal underlying patterns in the data"
   ],
   "tags": [
-    "single-cell",
-    "10x",
-    "transcriptomics"
+    "10x"
   ],
   "contributions": {
     "authorship": [

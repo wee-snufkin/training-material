@@ -51,7 +51,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 		
 	Sentry.init({
 	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@0c9d252243153e0d408d3eb6b0478dfb6ae973ec",
+	  release: "galaxy-training-network@fda9b45cc9a369125238666674b869418ac8d08e",
 	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 	  sampleRate: 0.1,
 	  tracesSampleRate: 0.1,
@@ -76,8 +76,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1696985486' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1696985486' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1697244609' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1697244609' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -87,7 +87,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Matrix Exchange Format to ESet | Creating a single-cell RNA-seq reference dataset for deconvolution">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-09-21 15:57:42 +0000">
+<meta name="DC.date" content="2023-10-09 16:30:03 +0000">
 <meta name="DC.creator" content="Wendi Bacon">
 <meta name="DC.creator" content="Mehmet Tekman">
 
@@ -129,7 +129,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-09-21 15:57:42 +0000",
+  "dateModified": "2023-10-09 16:30:03 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Matrix Exchange Format to ESet | Creating a single-cell RNA-seq reference dataset for deconvolution",
   "interactivityType": "mixed",
@@ -179,7 +179,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Single Cell",
-    "description": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!",
+    "description": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!\n\nWhat else do you want to see? You can submit tool and/or tutorial request on our <i class=\"fa fa-wrench\" aria-hidden=\"true\"></i> [Single Cell Community Tool Request Spreadsheet](https://docs.google.com/spreadsheets/d/15hqgqA-RMDhXR-ylKhRF-Dab9Ij2arYSKiEVoPl2df4/edit?usp=sharing).\n {: .alert.alert-success}\n",
     "url": "https://training.galaxyproject.org/training-material/topics/single-cell/"
   },
   "learningResourceType": "hands-on tutorial",
@@ -187,7 +187,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html",
   "timeRequired": "PT1H",
   "teaches": "You will retrieve raw data from the EMBL-EBI Single cell expression atlas.\n - You will manipulate the metadata and matrix files.\n - You will combine the metadata and matrix files into an ESet object for MuSiC deconvolution.\n - You will create multiple ESet objects - both combined and separated out by disease phenotype for your single cell reference.",
-  "keywords": "single-cell, single-cell, human, deconvolution, bulk, transcriptomics",
+  "keywords": "single-cell, transcriptomics, data management",
   "description": "The questions this  addresses are:\n - Where can I find good quality scRNA-seq reference datasets?\n - How can I reformat and manipulate these downloads to create the right format for MuSiC?\n\n\nThe objectives are:\n - You will retrieve raw data from the EMBL-EBI Single cell expression atlas.\n - You will manipulate the metadata and matrix files.\n - You will combine the metadata and matrix files into an ESet object for MuSiC deconvolution.\n - You will create multiple ESet objects - both combined and separated out by disease phenotype for your single cell reference.\n\n",
   "inLanguage": {
     "@type": "Language",
@@ -274,7 +274,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
     {
       "@type": "CreativeWork",
       "name": "Single Cell",
-      "description": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!",
+      "description": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!\n\nWhat else do you want to see? You can submit tool and/or tutorial request on our <i class=\"fa fa-wrench\" aria-hidden=\"true\"></i> [Single Cell Community Tool Request Spreadsheet](https://docs.google.com/spreadsheets/d/15hqgqA-RMDhXR-ylKhRF-Dab9Ij2arYSKiEVoPl2df4/edit?usp=sharing).\n {: .alert.alert-success}\n",
       "url": "https://training.galaxyproject.org/training-material/topics/single-cell/"
     }
   ],
@@ -282,23 +282,11 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
   "mentions": [
     {
       "@type": "Thing",
-      "name": "single-cell"
-    },
-    {
-      "@type": "Thing",
-      "name": "human"
-    },
-    {
-      "@type": "Thing",
-      "name": "deconvolution"
-    },
-    {
-      "@type": "Thing",
-      "name": "bulk"
-    },
-    {
-      "@type": "Thing",
       "name": "transcriptomics"
+    },
+    {
+      "@type": "Thing",
+      "name": "data management"
     }
   ],
   "abstract": "# Introduction"
@@ -307,7 +295,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1696985486'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1697244609'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -730,7 +718,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
         </ul>
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Sep 21, 2023 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 9, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             
@@ -859,7 +847,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 <p>You can inspect the dataset <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> to see that it’s full of annoying “” everywhere, and overly long descriptions of each columns.</p>
 
-<p><a href="../../images/bulk-music/annoying_ebimetadata.png" rel="noopener noreferrer"><figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/annoying_ebimetadata.png" alt="Columns in Galaxy history window contain &quot;Assay&quot; and &quot;&quot; around every word or ID. " width="766" height="448" loading="lazy" />&lt;figcaption&gt;<span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Annoying metadata&lt;/figcaption&gt;</figure></a></p>
+<figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/annoying_ebimetadata.png" alt="Columns in Galaxy history window contain &quot;Assay&quot; and &quot;&quot; around every word or ID. " width="766" height="448" loading="lazy" /><a target="_blank" href="../../images/bulk-music/annoying_ebimetadata.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Annoying metadata</figcaption></figure>
 
 <p>Now, there might be a better way to do this in Galaxy (or you might consider downloading the file locally and changing it in a spreadsheet application or something), but this is what will work to reformat all that annoying text.</p>
 
@@ -1081,7 +1069,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 <p>Fantastic! You’ve completed part 1 - making the single cell metadata file. It should now look like this:</p>
 
-<p><a href="../../images/bulk-music/corrected_ebimetadata.png" rel="noopener noreferrer"><figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/corrected_ebimetadata.png" alt="Columns in the history window of a dataset contain words without any extra symbols or &quot;&quot;. " width="786" height="458" loading="lazy" />&lt;figcaption&gt;<span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Pretty scRNA metadata&lt;/figcaption&gt;</figure></a></p>
+<figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/corrected_ebimetadata.png" alt="Columns in the history window of a dataset contain words without any extra symbols or &quot;&quot;. " width="786" height="458" loading="lazy" /><a target="_blank" href="../../images/bulk-music/corrected_ebimetadata.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Pretty scRNA metadata</figcaption></figure>
 
 <p>You can use the <a href="https://usegalaxy.eu/u/wendi.bacon.training/w/music-deconvolution-data-generation--sc--metadata">workflow for this portion of the tutorial</a>, and access an <a href="https://usegalaxy.eu/u/wendi.bacon.training/h/music-deconvolution-data-generation--sc--metadata">example history</a>.</p>
 
@@ -1183,7 +1171,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 But…
 As biologists, it’s very difficult to interpret ENSIDs. And it’s an awful shame to get to the end of the MuSiC deconvolution and have all our plots show sad ENS IDs. So, courtesy of the excellent @mtekman, we steal his workflow to collapse the ENS IDs into gene names.</p>
 
-<p><a href="../../images/bulk-music/ensid_collapse.png" rel="noopener noreferrer"><figure id="figure-3" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/ensid_collapse.png" alt="First table shows 4 rows with different ENS IDs and a second column with geney symbols and some overlap. Arrow pointing to second table shows 3 rows having collapsed the overlap." width="1597" height="431" loading="lazy" />&lt;figcaption&gt;<span class="figcaption-prefix"><strong>Figure 3</strong>:</span> Collapsing ENS IDs&lt;/figcaption&gt;</figure></a></p>
+<figure id="figure-3" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/ensid_collapse.png" alt="First table shows 4 rows with different ENS IDs and a second column with geney symbols and some overlap. Arrow pointing to second table shows 3 rows having collapsed the overlap." width="1597" height="431" loading="lazy" /><a target="_blank" href="../../images/bulk-music/ensid_collapse.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> Collapsing ENS IDs</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-convert-from-ensembl-to-genesymbol-using-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Convert from Ensembl to GeneSymbol using workflow</div>
@@ -1213,7 +1201,7 @@ As biologists, it’s very difficult to interpret ENSIDs. And it’s an awful sh
 
 <p>The output will likely be called <strong>Text transformation</strong> and will look like this:</p>
 
-<p><a href="../../images/bulk-music/ensid_output.png" rel="noopener noreferrer"><figure id="figure-4" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/ensid_output.png" alt="Alphabetised gene symbols appear in column one with decimal pointed integers in the following columns corresponding to cells. " width="792" height="480" loading="lazy" />&lt;figcaption&gt;<span class="figcaption-prefix"><strong>Figure 4</strong>:</span> Output of the ENS ID collapsing workflow&lt;/figcaption&gt;</figure></a></p>
+<figure id="figure-4" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/ensid_output.png" alt="Alphabetised gene symbols appear in column one with decimal pointed integers in the following columns corresponding to cells. " width="792" height="480" loading="lazy" /><a target="_blank" href="../../images/bulk-music/ensid_output.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 4</strong>:</span> Output of the ENS ID collapsing workflow</figcaption></figure>
 
 <h1 id="construct-expression-set-objects">Construct Expression Set Objects</h1>
 
@@ -1349,15 +1337,19 @@ As biologists, it’s very difficult to interpret ENSIDs. And it’s an awful sh
 
 <p>You have successfully performed, essentially, three workflows. You can find the <a href="https://usegalaxy.eu/u/wendi.bacon.training/w/music-deconvolution-data-generation--sc--matrix--eset">workflows for generating the ESet object</a> and the <a href="https://usegalaxy.eu/u/wendi.bacon.training/h/music-deconvolution-data-generation--sc--matrix--eset">answer key history for this entire tutorial</a>.</p>
 
-<p><a href="../../images/bulk-music/scref-metadata.png" rel="noopener noreferrer"><figure id="figure-5" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/scref-metadata.png" alt="6 boxes in the workflow editor. " width="1358" height="354" loading="lazy" />&lt;figcaption&gt;<span class="figcaption-prefix"><strong>Figure 5</strong>:</span> Workflow: Manipulating metadata&lt;/figcaption&gt;</figure></a></p>
+<figure id="figure-5" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/scref-metadata.png" alt="6 boxes in the workflow editor. " width="1358" height="354" loading="lazy" /><a target="_blank" href="../../images/bulk-music/scref-metadata.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 5</strong>:</span> Workflow: Manipulating metadata</figcaption></figure>
 
-<p><a href="../../images/bulk-music/scref-eset.png" rel="noopener noreferrer"><figure id="figure-6" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/scref-eset.png" alt="9 boxes including a subworkflow in the workflow editor. " width="1090" height="252" loading="lazy" />&lt;figcaption&gt;<span class="figcaption-prefix"><strong>Figure 6</strong>:</span> Workflow: Creating the ESet single-cell object&lt;/figcaption&gt;</figure></a></p>
+<figure id="figure-6" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/scref-eset.png" alt="9 boxes including a subworkflow in the workflow editor. " width="1090" height="252" loading="lazy" /><a target="_blank" href="../../images/bulk-music/scref-eset.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 6</strong>:</span> Workflow: Creating the ESet single-cell object</figcaption></figure>
 
-<p><a href="../../images/bulk-music/ens-id-collapse.png" rel="noopener noreferrer"><figure id="figure-7" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/ens-id-collapse.png" alt="8 boxes in the workflow editor. " width="984" height="632" loading="lazy" />&lt;figcaption&gt;<span class="figcaption-prefix"><strong>Figure 7</strong>:</span> Subworkflow: Collapsing the Ensembl IDs into gene names&lt;/figcaption&gt;</figure></a></p>
+<figure id="figure-7" style="max-width: 90%; margin:auto;"><img src="../../images/bulk-music/ens-id-collapse.png" alt="8 boxes in the workflow editor. " width="984" height="632" loading="lazy" /><a target="_blank" href="../../images/bulk-music/ens-id-collapse.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 7</strong>:</span> Subworkflow: Collapsing the Ensembl IDs into gene names</figcaption></figure>
 
 <p>With these workflows, you’ve created three Expression Set objects, capable of running in the MuSiC Compare tutorial. Now you just need the bulk RNA-seq Expression Set objects!</p>
 
 <p>This tutorial is part of the <a href="https://singlecell.usegalaxy.eu">https://singlecell.usegalaxy.eu</a> portal (<span class="citation"><a href="#tekman2020single">Tekman <i>et al.</i> 2020</a></span>).</p>
+
+<!--SNIPPET-->
+<blockquote class="tip">   <div class="box-title tip-title" id="tip-how-can-i-talk-with-other-users"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-can-i-talk-with-other-users" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: How can I talk with other users?<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>To discuss with like-minded scientists, join our Matrix/Element chatroom to discuss with fellow users of Galaxy single cell analysis tools!</p>   <p><a href="https://matrix.to/#/#Galaxy-Training-Network_galaxy-single-cell:gitter.im"><img src="/training-material/topics/single-cell/images/matrix-badge.svg" alt="Matrix" /></a></p>   <p>We also post new tutorials / workflows there from time to time, as well as any other news.</p> </blockquote>
+<p><!--END_SNIPPET--></p>
 
                 </section>
 
@@ -1518,7 +1510,7 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                     
                         
                             
-                            <li> Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution:
+                            <li> Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution:
                             
                             
                                 
@@ -1685,7 +1677,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/0c9d252243153e0d408d3eb6b0478dfb6ae973ec">0c9d252</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/fda9b45cc9a369125238666674b869418ac8d08e">fda9b45</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1717,7 +1709,7 @@ tools:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1696985486'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1697244609'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
