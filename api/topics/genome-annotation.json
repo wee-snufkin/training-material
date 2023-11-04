@@ -24,6 +24,11 @@
       "elixir_node": "nl",
       "fediverse": "https://galaxians.garden/hexylena",
       "fediverse_flavor": "akkoma",
+      "affiliations": [
+        "gallantries",
+        "erasmusmc",
+        "avans-atgm"
+      ],
       "contact_for_training": false,
       "location": {
         "country": "NL",
@@ -61,6 +66,9 @@
       },
       "fediverse": "https://genomic.social/@abretaud",
       "fediverse_flavor": "mastodon",
+      "affiliations": [
+        "gallantries"
+      ],
       "id": "abretaud",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -231,7 +239,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Genome Annotation with Prokka [Feb 2020]",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/annotation-with-prokka/tutorial.json",
@@ -404,7 +414,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "CHROMEISTER chromosome comparison",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         },
         {
           "workflow": "GECKO_pairwise_comparison.ga",
@@ -418,7 +430,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "GECKO pairwise comparison",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/hpc-for-lsgc/tutorial.json",
@@ -538,7 +552,7 @@
           "jkreplak"
         ],
         "funding": [
-          "erasmusplus"
+          "gallantries"
         ]
       },
       "abbreviations": {
@@ -629,7 +643,9 @@
               "name": "Anthony Bretaudeau"
             }
           ],
-          "test_results": null
+          "name": "RepeatMasker",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/repeatmasker/tutorial.json",
@@ -732,6 +748,9 @@
           },
           "fediverse": "https://genomic.social/@abretaud",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -785,17 +804,29 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/jkreplak/"
         },
         {
-          "name": "Erasmus+ Programme",
+          "name": "Gallantries: Bridging Training Communities in Life Science, Environment and Health",
+          "short_name": "Gallantries",
+          "start_date": "2020-09-01",
+          "end_date": "2023-09-30",
           "joined": "2020-09",
-          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "avatar": "https://gallantries.github.io/assets/images/gallantries-logo.png",
           "github": false,
           "funder": true,
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/gallantries.json",
+          "funder_name": "Erasmus+ Programme",
           "funding_id": "2020-1-NL01-KA203-064717",
           "funding_system": "erasmusplus",
-          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
-          "id": "erasmusplus",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />\n<img src=\"https://www.erasmusplus.nl/assets/images/logo.png\" alt=\"erasmus plus logo\" />",
+          "members": [
+            "abretaud",
+            "bebatut",
+            "fpsom",
+            "hexylena",
+            "shiltemann",
+            "yvanlebras"
+          ],
+          "id": "gallantries",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallantries/"
         }
       ],
       "urls": {
@@ -806,7 +837,7 @@
     {
       "layout": "tutorial_hands_on",
       "title": "Refining Genome Annotations with Apollo (prokaryotes)",
-      "zenodo_link": "https://zenodo.org/record/3270822",
+      "zenodo_link": "https://zenodo.org/record/4889110",
       "tags": [
         "prokaryote"
       ],
@@ -839,7 +870,7 @@
           "mboudet"
         ],
         "funding": [
-          "erasmusplus"
+          "gallantries"
         ]
       },
       "requirements": [
@@ -960,7 +991,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Apollo Load Test",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/apollo/tutorial.json",
@@ -1061,6 +1094,9 @@
           },
           "fediverse": "https://genomic.social/@abretaud",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -1075,6 +1111,11 @@
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
           "fediverse_flavor": "akkoma",
+          "affiliations": [
+            "gallantries",
+            "erasmusmc",
+            "avans-atgm"
+          ],
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -1105,17 +1146,29 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mboudet/"
         },
         {
-          "name": "Erasmus+ Programme",
+          "name": "Gallantries: Bridging Training Communities in Life Science, Environment and Health",
+          "short_name": "Gallantries",
+          "start_date": "2020-09-01",
+          "end_date": "2023-09-30",
           "joined": "2020-09",
-          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "avatar": "https://gallantries.github.io/assets/images/gallantries-logo.png",
           "github": false,
           "funder": true,
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/gallantries.json",
+          "funder_name": "Erasmus+ Programme",
           "funding_id": "2020-1-NL01-KA203-064717",
           "funding_system": "erasmusplus",
-          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
-          "id": "erasmusplus",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />\n<img src=\"https://www.erasmusplus.nl/assets/images/logo.png\" alt=\"erasmus plus logo\" />",
+          "members": [
+            "abretaud",
+            "bebatut",
+            "fpsom",
+            "hexylena",
+            "shiltemann",
+            "yvanlebras"
+          ],
+          "id": "gallantries",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallantries/"
         }
       ],
       "urls": {
@@ -1151,6 +1204,9 @@
           },
           "fediverse": "https://genomic.social/@abretaud",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -1165,6 +1221,11 @@
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
           "fediverse_flavor": "akkoma",
+          "affiliations": [
+            "gallantries",
+            "erasmusmc",
+            "avans-atgm"
+          ],
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -1243,6 +1304,152 @@
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/introduction/slides.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/introduction/slides.json"
+      }
+    },
+    {
+      "layout": "tutorial_hands_on",
+      "title": "Creating an Official Gene Set",
+      "zenodo_link": "",
+      "questions": [
+        "I have several genomes assemblies that are not annotated (or I do not trust annotations)",
+        "I am interested to compare structure of a particular gene across these genome assemblies",
+        "How do I do that?"
+      ],
+      "objectives": [
+        "Validate your genes and create an official gene set from them."
+      ],
+      "time_estimation": "30M",
+      "key_points": [
+        "Genoest' OGS Tools makes it easy to validate and release a build of your genome and its annotations."
+      ],
+      "contributions": {
+        "authorship": [
+          "abretaud"
+        ],
+        "funding": [
+          "gallantries"
+        ]
+      },
+      "draft": true,
+      "short_id": null,
+      "url": "/topics/genome-annotation/tutorials/official-gene-set/tutorial.html",
+      "topic_name": "genome-annotation",
+      "tutorial_name": "official-gene-set",
+      "dir": "topics/genome-annotation/tutorials/official-gene-set",
+      "id": "genome-annotation/official-gene-set",
+      "video_library": {
+        "tutorial": null,
+        "slides": null,
+        "demo": null,
+        "both": null,
+        "session": null
+      },
+      "hands_on": true,
+      "slides": false,
+      "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/official-gene-set/tutorial.json",
+      "tools": [
+
+      ],
+      "supported_servers": {
+        "exact": [
+
+        ],
+        "inexact": [
+          {
+            "name": "UseGalaxy.eu",
+            "url": "https://usegalaxy.eu",
+            "usegalaxy": true
+          },
+          {
+            "name": "UseGalaxy.org",
+            "url": "https://usegalaxy.org",
+            "usegalaxy": true
+          },
+          {
+            "name": "UseGalaxy.org.au",
+            "url": "https://usegalaxy.org.au",
+            "usegalaxy": true
+          }
+        ]
+      },
+      "topic_name_human": "Genome Annotation",
+      "admin_install": {
+        "install_tool_dependencies": true,
+        "install_repository_dependencies": true,
+        "install_resolver_dependencies": true,
+        "tools": [
+
+        ]
+      },
+      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
+      "tours": false,
+      "video": false,
+      "translations": {
+        "tutorial": [
+
+        ],
+        "slides": [
+
+        ],
+        "video": false
+      },
+      "type": "tutorial",
+      "tags": [
+        "work-in-progress"
+      ],
+      "contributors": [
+        {
+          "name": "Anthony Bretaudeau",
+          "email": "anthony.bretaudeau@inrae.fr",
+          "twitter": "abretau",
+          "matrix": "abretaud:matrix.org",
+          "orcid": "0000-0003-0914-2470",
+          "joined": "2017-09",
+          "elixir_node": "fr",
+          "contact_for_training": true,
+          "location": {
+            "country": "FR",
+            "lat": 48.11,
+            "lon": -1.64
+          },
+          "fediverse": "https://genomic.social/@abretaud",
+          "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
+          "id": "abretaud",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
+        },
+        {
+          "name": "Gallantries: Bridging Training Communities in Life Science, Environment and Health",
+          "short_name": "Gallantries",
+          "start_date": "2020-09-01",
+          "end_date": "2023-09-30",
+          "joined": "2020-09",
+          "avatar": "https://gallantries.github.io/assets/images/gallantries-logo.png",
+          "github": false,
+          "funder": true,
+          "url": "https://training.galaxyproject.org/training-material/api/funders/gallantries.json",
+          "funder_name": "Erasmus+ Programme",
+          "funding_id": "2020-1-NL01-KA203-064717",
+          "funding_system": "erasmusplus",
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />\n<img src=\"https://www.erasmusplus.nl/assets/images/logo.png\" alt=\"erasmus plus logo\" />",
+          "members": [
+            "abretaud",
+            "bebatut",
+            "fpsom",
+            "hexylena",
+            "shiltemann",
+            "yvanlebras"
+          ],
+          "id": "gallantries",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallantries/"
+        }
+      ],
+      "urls": {
+        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/official-gene-set/tutorial.json",
+        "slides": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/official-gene-set/tutorial.json"
       }
     },
     {
@@ -1394,7 +1601,7 @@
           "stephanierobin"
         ],
         "funding": [
-          "erasmusplus"
+          "gallantries"
         ]
       },
       "abbreviations": {
@@ -1484,7 +1691,9 @@
               "name": "Anthony Bretaudeau"
             }
           ],
-          "test_results": null
+          "name": "Funannotate",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/funannotate/tutorial.json",
@@ -1671,6 +1880,9 @@
           },
           "fediverse": "https://genomic.social/@abretaud",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -1715,17 +1927,29 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/stephanierobin/"
         },
         {
-          "name": "Erasmus+ Programme",
+          "name": "Gallantries: Bridging Training Communities in Life Science, Environment and Health",
+          "short_name": "Gallantries",
+          "start_date": "2020-09-01",
+          "end_date": "2023-09-30",
           "joined": "2020-09",
-          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "avatar": "https://gallantries.github.io/assets/images/gallantries-logo.png",
           "github": false,
           "funder": true,
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/gallantries.json",
+          "funder_name": "Erasmus+ Programme",
           "funding_id": "2020-1-NL01-KA203-064717",
           "funding_system": "erasmusplus",
-          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
-          "id": "erasmusplus",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />\n<img src=\"https://www.erasmusplus.nl/assets/images/logo.png\" alt=\"erasmus plus logo\" />",
+          "members": [
+            "abretaud",
+            "bebatut",
+            "fpsom",
+            "hexylena",
+            "shiltemann",
+            "yvanlebras"
+          ],
+          "id": "gallantries",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallantries/"
         }
       ],
       "urls": {
@@ -1819,7 +2043,9 @@
               "name": "Anton Nekrutenko"
             }
           ],
-          "test_results": null
+          "name": "Comparative gene analysis",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/gene-centric/tutorial.json",
@@ -2016,6 +2242,9 @@
           },
           "fediverse": "https://genomic.social/@abretaud",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -2051,7 +2280,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Genome annotation with Maker (short)",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/annotation-with-maker-short/tutorial.json",
@@ -2209,6 +2440,10 @@
           },
           "fediverse": "https://piaille.fr/@bebatut",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries",
+            "uni-freiburg"
+          ],
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -2244,7 +2479,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Essential genes detection with Transposon insertion sequencing",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/tnseq/tutorial.json",
@@ -2412,6 +2649,9 @@
           },
           "fediverse": "https://genomic.social/@abretaud",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -2455,7 +2695,9 @@
               "name": "French National Institute for Agriculture, Food, and Environment (INRAE)"
             }
           ],
-          "test_results": null
+          "name": "Genome annotation with Maker ",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/annotation-with-maker/tutorial.json",
@@ -2614,7 +2856,7 @@
           "abretaud"
         ],
         "funding": [
-          "erasmusplus"
+          "gallantries"
         ]
       },
       "subtopic": "eukaryote",
@@ -2651,7 +2893,9 @@
               "name": "Anthony Bretaudeau"
             }
           ],
-          "test_results": null
+          "name": "Functional annotation",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/functional/tutorial.json",
@@ -2758,22 +3002,37 @@
           },
           "fediverse": "https://genomic.social/@abretaud",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
         },
         {
-          "name": "Erasmus+ Programme",
+          "name": "Gallantries: Bridging Training Communities in Life Science, Environment and Health",
+          "short_name": "Gallantries",
+          "start_date": "2020-09-01",
+          "end_date": "2023-09-30",
           "joined": "2020-09",
-          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "avatar": "https://gallantries.github.io/assets/images/gallantries-logo.png",
           "github": false,
           "funder": true,
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/gallantries.json",
+          "funder_name": "Erasmus+ Programme",
           "funding_id": "2020-1-NL01-KA203-064717",
           "funding_system": "erasmusplus",
-          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
-          "id": "erasmusplus",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />\n<img src=\"https://www.erasmusplus.nl/assets/images/logo.png\" alt=\"erasmus plus logo\" />",
+          "members": [
+            "abretaud",
+            "bebatut",
+            "fpsom",
+            "hexylena",
+            "shiltemann",
+            "yvanlebras"
+          ],
+          "id": "gallantries",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallantries/"
         }
       ],
       "urls": {
@@ -2815,7 +3074,7 @@
           "abretaud"
         ],
         "funding": [
-          "erasmusplus"
+          "gallantries"
         ]
       },
       "requirements": [
@@ -2935,22 +3194,37 @@
           },
           "fediverse": "https://genomic.social/@abretaud",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
         },
         {
-          "name": "Erasmus+ Programme",
+          "name": "Gallantries: Bridging Training Communities in Life Science, Environment and Health",
+          "short_name": "Gallantries",
+          "start_date": "2020-09-01",
+          "end_date": "2023-09-30",
           "joined": "2020-09",
-          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "avatar": "https://gallantries.github.io/assets/images/gallantries-logo.png",
           "github": false,
           "funder": true,
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/gallantries.json",
+          "funder_name": "Erasmus+ Programme",
           "funding_id": "2020-1-NL01-KA203-064717",
           "funding_system": "erasmusplus",
-          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
-          "id": "erasmusplus",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />\n<img src=\"https://www.erasmusplus.nl/assets/images/logo.png\" alt=\"erasmus plus logo\" />",
+          "members": [
+            "abretaud",
+            "bebatut",
+            "fpsom",
+            "hexylena",
+            "shiltemann",
+            "yvanlebras"
+          ],
+          "id": "gallantries",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallantries/"
         }
       ],
       "urls": {
@@ -3042,13 +3316,14 @@
               "name": "Stéphanie Robin"
             }
           ],
-          "test_results": null
+          "name": "Long non-coding RNAs (lncRNAs) annotation with FEELnc",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/lncrna/tutorial.json",
       "tools": [
         "Extract_features1",
-        "https://toolshed.g2.bx.psu.edu/view/bgruening/text_processing/f46f0e4f75c4",
         "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1",
         "toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.3+galaxy0",
         "toolshed.g2.bx.psu.edu/repos/iuc/feelnc/feelnc/0.2",
@@ -3057,10 +3332,33 @@
       ],
       "supported_servers": {
         "exact": [
-
+          {
+            "url": "https://usegalaxy.eu",
+            "name": "UseGalaxy.eu",
+            "usegalaxy": "true"
+          },
+          {
+            "url": "https://usegalaxy.fr/",
+            "name": "UseGalaxy.fr",
+            "usegalaxy": "true"
+          },
+          {
+            "url": "https://usegalaxy.org",
+            "name": "UseGalaxy.org (Main)",
+            "usegalaxy": "true"
+          }
         ],
         "inexact": [
-
+          {
+            "url": "https://usegalaxy.be/",
+            "name": "UseGalaxy.be",
+            "usegalaxy": "true"
+          },
+          {
+            "url": "https://usegalaxy.no/",
+            "name": "UseGalaxy.no",
+            "usegalaxy": "true"
+          }
         ]
       },
       "topic_name_human": "Genome Annotation",
@@ -3146,6 +3444,9 @@
           },
           "fediverse": "https://genomic.social/@abretaud",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "abretaud",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
@@ -3322,7 +3623,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Workflow constructed from history 'CRISPR tutorial Kenji'",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/crispr-screen/tutorial.json",

@@ -6,63 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>GTN Contributor: Delphine Lariviere</title>
         
-            <!--
-<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
--->
-<!-- We let users opt-out, so if they've opted in, we need to append the plausible script to the body -->
-
-<script>
-var scriptElement = document.createElement("script");
-scriptElement.async = true;
-scriptElement.defer = true;
-scriptElement.setAttribute("data-domain", "training.galaxyproject.org");
-scriptElement.src = "https://plausible.galaxyproject.eu/js/plausible.js";
-
-// Appending the script element to the body
-if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
-	console.log("Plausible: opt-in");
-	// Wait for the document to be available
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-}
-</script>
+            <meta name="google-site-verification" content="9mOXn2JL833-i7-aioCCEuIdG4_tb6qjwUozB5GJnPQ" />
 
 <!-- JavaScript Error Monitoring, and performance tracking. -->
-<!--
 <script
   src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
   integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
   crossorigin="anonymous"
 ></script>
--->
 <script type="text/javascript">
-var scriptElement = document.createElement("script");
-scriptElement.src = "https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js";
-scriptElement.integrity = "sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43";
-scriptElement.crossOrigin = "anonymous";
-
 if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
 	console.log("Sentry: opt-in");
-	// Appending the script element to the body
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-		
 	Sentry.init({
-	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@fda9b45cc9a369125238666674b869418ac8d08e",
-	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-	  sampleRate: 0.1,
-	  tracesSampleRate: 0.1,
-	  // Capture Replay for no sessions by default
-	  replaysSessionSampleRate: 0.01,
-	  // plus for 1% of sessions with an error
-	  replaysOnErrorSampleRate: 0.01,
-	  // PII OFF
-	  sendDefaultPii: false, // Off by default but just in case.
-	  environment: "production",
+		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+		release: "galaxy-training-network@3a5225dd8dad00c5479fa12f0a4cfb7d88b0f9d6",
+		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+		sampleRate: 0.1,
+		tracesSampleRate: 0.1,
+		// Capture Replay for no sessions by default
+		replaysSessionSampleRate: 0.01,
+		// plus for 1% of sessions with an error
+		replaysOnErrorSampleRate: 0.01,
+		// PII OFF
+		sendDefaultPii: false, // Off by default but just in case.
+		environment: "production",
 	});
+}
+</script>
+
+<!-- Page view tracking -->
+<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+<script>
+if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
+	localStorage.removeItem("plausible_ignore")
+	console.log("Plausible: opt-in");
+} else {
+	// if they're opting-out, or DNT
+	// we might get one page by accident but we won't get future ones.
+	localStorage.setItem("plausible_ignore", "true")
 }
 </script>
 
@@ -76,8 +57,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699059106' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699059106' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699125453' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699125453' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -103,7 +84,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1699125453'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -187,7 +168,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
 
 		<a href="/training-material/preferences.html" class="dropdown-item">
-			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Themes have moved <span class="badge badge-secondary">New</span>
+			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> User Preferences <span class="badge badge-secondary">New</span>
 		</a>
 
         <div class="dropdown-item">
@@ -234,8 +215,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <div class="container main-content" role="main">
         
 
+
 <script type="application/ld+json">
-	
 	{
   "@context": "https://schema.org",
   "@type": "Person",
@@ -267,68 +248,25 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 }
 
 </style>
-<section class="contributor-delphine-l">
+<section class="contributor-page contributor-delphine-l">
 	<div class="stats">
 		<div class="row">
-
-			<div class="col-md-3">
-				<div>
-				
-					<img src="https://avatars.githubusercontent.com/delphine-l" alt="github avatar" >
-				
-				</div>
-
-				
-
-				
-
-				
-				<div class="contact-items">
-					<a title="GitHub" href="https://github.com/delphine-l">
-						<i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> delphine-l
-					</a>
-				</div>
-				
-
-				
-
-				
-				<div class="contact-items">
-					<a title="E-mail" href="mailto:delphine.lariviere@galaxy.org">
-						<i class="far fa-envelope" aria-hidden="true"></i><span class="visually-hidden">email</span> delphine.lariviere@galaxy.org
-					</a>
-				</div>
-				
-
-				
-
-				
-
-				
-
-				
-
-				
-				<div class="contact-items">
-					<a title="ORCID" href="https://orcid.org/0000-0001-6421-3484">
-						<i class="fab fa-orcid" aria-hidden="true"></i><span class="visually-hidden">orcid</span> 0000-0001-6421-3484
-					</a>
-				</div>
-				
-
-				
-
-				<h4>Favourite Topics</h4>
-				<canvas id="myChart" height="300px"></canvas>
-				<h4>Favourite Formats</h4>
-				<canvas id="slidesVsTutorials" height="300px"></canvas>
-
-			</div>
-
 			<div class="col-md-9">
-				<h1>
-					Delphine Lariviere
-				</h1>
+				<hgroup>
+					<h1>
+						Delphine Lariviere
+					</h1>
+				
+				</hgroup>
+
+				
+
+				
+				
+
+				
+				
+
 				
 				
 
@@ -568,7 +506,10 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Avatar" width="36" height="36">Cristóbal Gallardo</a><a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Avatar" width="36" height="36">Delphine Lariviere</a><a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge contributor-astrovsky01"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/astrovsky01?s=36" alt="Avatar" width="36" height="36">Alex Ostrovsky</a>
+			<a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Cristóbal Gallardo avatar" width="36" class="avatar" />
+    Cristóbal Gallardo</a><a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Delphine Lariviere avatar" width="36" class="avatar" />
+    Delphine Lariviere</a><a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge contributor-astrovsky01"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/astrovsky01?s=36" alt="Alex Ostrovsky avatar" width="36" class="avatar" />
+    Alex Ostrovsky</a>
 		</td>
 	</tr>
 	
@@ -592,13 +533,13 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffb14f; --color-darker: #eb9b00; --color-dimmed: #faa400;">new tutorial</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffa91e; --color-darker: #e59600; --color-dimmed: #f39f00;">new tutorial</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ffa5d8; --color-darker: #ff80cc; --color-dimmed: #ff93d2;">assembly</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ff9cd4; --color-darker: #ff76c9; --color-dimmed: #ff8acf;">assembly</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ffa6d4; --color-darker: #ff81c7; --color-dimmed: #ff94cd;">pacbio</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ff9dd1; --color-darker: #ff77c4; --color-dimmed: #ff8bca;">pacbio</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ffa3e7; --color-darker: #ff7ce0; --color-dimmed: #ff90e3;">vgp</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ff9ae5; --color-darker: #ff71df; --color-dimmed: #ff87e2;">vgp</span>
 
     <hr/>
     <p class="card-text">
@@ -643,7 +584,14 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar" width="36" height="36">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a><a href="/training-material/hall-of-fame/jennaj/" class="contributor-badge contributor-jennaj"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/jennaj?s=36" alt="Avatar" width="36" height="36">Jennifer Hillman-Jackson</a><a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Avatar" width="36" height="36">Delphine Lariviere</a><a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/annasyme?s=36" alt="Avatar" width="36" height="36">Anna Syme</a><a href="/training-material/hall-of-fame/mblue9/" class="contributor-badge contributor-mblue9"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/mblue9?s=36" alt="Avatar" width="36" height="36">Maria Doyle</a>
+			<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Saskia Hiltemann avatar" width="36" class="avatar" />
+    Saskia Hiltemann</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" />
+    Helena Rasche</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Bérénice Batut avatar" width="36" class="avatar" />
+    Bérénice Batut</a><a href="/training-material/hall-of-fame/jennaj/" class="contributor-badge contributor-jennaj"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/jennaj?s=36" alt="Jennifer Hillman-Jackson avatar" width="36" class="avatar" />
+    Jennifer Hillman-Jackson</a><a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Delphine Lariviere avatar" width="36" class="avatar" />
+    Delphine Lariviere</a><a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/annasyme?s=36" alt="Anna Syme avatar" width="36" class="avatar" />
+    Anna Syme</a><a href="/training-material/hall-of-fame/mblue9/" class="contributor-badge contributor-mblue9"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/mblue9?s=36" alt="Maria Doyle avatar" width="36" class="avatar" />
+    Maria Doyle</a>
 		</td>
 	</tr>
 	
@@ -667,7 +615,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffa2ed; --color-darker: #ff7ae8; --color-dimmed: #ff8fea;">cofest</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ff98ec; --color-darker: #ff70e7; --color-dimmed: #ff85e9;">cofest</span>
 
     <hr/>
     <p class="card-text">
@@ -712,7 +660,9 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Avatar" width="36" height="36">Delphine Lariviere</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" />
+    Helena Rasche</a><a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge contributor-delphine-l"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/delphine-l?s=36" alt="Delphine Lariviere avatar" width="36" class="avatar" />
+    Delphine Lariviere</a>
 		</td>
 	</tr>
 	
@@ -736,15 +686,15 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #b9bbff; --color-darker: #a0a3ff; --color-dimmed: #adafff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #b3b5ff; --color-darker: #9b9eff; --color-dimmed: #a7a9ff;">new feature</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00dc8d; --color-darker: #00c47d; --color-dimmed: #00d085;">videos</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00d688; --color-darker: #00bf79; --color-dimmed: #00ca81;">videos</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #fff19e; --color-darker: #ebd700; --color-dimmed: #fae400;">gtn</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffef92; --color-darker: #ead500; --color-dimmed: #f8e300;">gtn</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ffa8c3; --color-darker: #ff85af; --color-dimmed: #ff97b9;">pandemic</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ff9fbe; --color-darker: #ff7cab; --color-dimmed: #ff8eb4;">pandemic</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00d2fd; --color-darker: #00bbe2; --color-dimmed: #00c6f0;">remote-teaching</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00ccf6; --color-darker: #00b6dc; --color-dimmed: #00c1e9;">remote-teaching</span>
 
     <hr/>
     <p class="card-text">
@@ -763,6 +713,65 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
                 
                 </div>
 				
+
+			</div>
+
+			<div class="col-md-3">
+				<div>
+					<img src="https://avatars.githubusercontent.com/delphine-l?s=200" alt="Delphine Lariviere avatar" width="200" class="avatar" />
+				</div>
+
+				<h2>External Links</h2>
+				
+
+				
+				<div class="contact-items">
+					<a title="GitHub" href="https://github.com/delphine-l">
+						<i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> delphine-l
+					</a>
+				</div>
+				
+
+				
+
+				
+				<div class="contact-items">
+					<a title="E-mail" href="mailto:delphine.lariviere@galaxy.org">
+						<i class="far fa-envelope" aria-hidden="true"></i><span class="visually-hidden">email</span> delphine.lariviere@galaxy.org
+					</a>
+				</div>
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+				<div class="contact-items">
+					<a title="ORCID" href="https://orcid.org/0000-0001-6421-3484">
+						<i class="fab fa-orcid" aria-hidden="true"></i><span class="visually-hidden">orcid</span> 0000-0001-6421-3484
+					</a>
+				</div>
+				
+
+				
+
+				<p>Favourite Topics</p>
+				<canvas id="myChart" height="300px"></canvas>
+				<p>Favourite Formats</p>
+				<canvas id="slidesVsTutorials" height="300px"></canvas>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
 <script src="/training-material/assets/js/Chart.bundle.js"></script>
 
 <script>
@@ -913,14 +922,7 @@ var chart2 = new Chart(ctx2, {
 		}
 	}
 });
-				</script>
-
-			</div>
-
-			</div>
-		</div>
-	</div>
-</section>
+</script>
 
         </div>
         <footer>
@@ -936,7 +938,7 @@ var chart2 = new Chart(ctx2, {
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fda9b45cc9a369125238666674b869418ac8d08e">fda9b45</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/3a5225dd8dad00c5479fa12f0a4cfb7d88b0f9d6">3a5225d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -960,11 +962,7 @@ var chart2 = new Chart(ctx2, {
 </footer>
 
 
-    </div>
-</footer>
-
-
-        <script src='/training-material/assets/js/bundle.main.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1699125453'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

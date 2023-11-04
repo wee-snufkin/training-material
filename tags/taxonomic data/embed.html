@@ -6,63 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Galaxy Training!</title>
         
-            <!--
-<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
--->
-<!-- We let users opt-out, so if they've opted in, we need to append the plausible script to the body -->
-
-<script>
-var scriptElement = document.createElement("script");
-scriptElement.async = true;
-scriptElement.defer = true;
-scriptElement.setAttribute("data-domain", "training.galaxyproject.org");
-scriptElement.src = "https://plausible.galaxyproject.eu/js/plausible.js";
-
-// Appending the script element to the body
-if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
-	console.log("Plausible: opt-in");
-	// Wait for the document to be available
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-}
-</script>
+            <meta name="google-site-verification" content="9mOXn2JL833-i7-aioCCEuIdG4_tb6qjwUozB5GJnPQ" />
 
 <!-- JavaScript Error Monitoring, and performance tracking. -->
-<!--
 <script
   src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
   integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
   crossorigin="anonymous"
 ></script>
--->
 <script type="text/javascript">
-var scriptElement = document.createElement("script");
-scriptElement.src = "https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js";
-scriptElement.integrity = "sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43";
-scriptElement.crossOrigin = "anonymous";
-
 if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
 	console.log("Sentry: opt-in");
-	// Appending the script element to the body
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-		
 	Sentry.init({
-	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@fda9b45cc9a369125238666674b869418ac8d08e",
-	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-	  sampleRate: 0.1,
-	  tracesSampleRate: 0.1,
-	  // Capture Replay for no sessions by default
-	  replaysSessionSampleRate: 0.01,
-	  // plus for 1% of sessions with an error
-	  replaysOnErrorSampleRate: 0.01,
-	  // PII OFF
-	  sendDefaultPii: false, // Off by default but just in case.
-	  environment: "production",
+		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+		release: "galaxy-training-network@3a5225dd8dad00c5479fa12f0a4cfb7d88b0f9d6",
+		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+		sampleRate: 0.1,
+		tracesSampleRate: 0.1,
+		// Capture Replay for no sessions by default
+		replaysSessionSampleRate: 0.01,
+		// plus for 1% of sessions with an error
+		replaysOnErrorSampleRate: 0.01,
+		// PII OFF
+		sendDefaultPii: false, // Off by default but just in case.
+		environment: "production",
 	});
+}
+</script>
+
+<!-- Page view tracking -->
+<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+<script>
+if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
+	localStorage.removeItem("plausible_ignore")
+	console.log("Plausible: opt-in");
+} else {
+	// if they're opting-out, or DNT
+	// we might get one page by accident but we won't get future ones.
+	localStorage.setItem("plausible_ignore", "true")
 }
 </script>
 
@@ -75,8 +56,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699059106' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699059106' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699125453' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699125453' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -101,7 +82,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1699125453'></script>
         <section class="tutorials-list by_tag_taxonomic data topic-type-">
 
 
@@ -150,9 +131,9 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
             
               
-              <a href="/training-material/search?query=taxonomic data" class="label label-default tutorial_tag" style="--color-primary: #69da00; --color-darker: #5dc200; --color-dimmed: #63ce00;" title="Click to show all tutorials tagged taxonomic data">taxonomic data</a>
+              <a href="/training-material/search?query=taxonomic data" class="label label-default tutorial_tag" style="--color-primary: #66d400; --color-darker: #5abd00; --color-dimmed: #60c800;" title="Click to show all tutorials tagged taxonomic data">taxonomic data</a>
               
-              <a href="/training-material/search?query=data quality" class="label label-default tutorial_tag" style="--color-primary: #ffa6d3; --color-darker: #ff81c5; --color-dimmed: #ff94cc;" title="Click to show all tutorials tagged data quality">data quality</a>
+              <a href="/training-material/search?query=data quality" class="label label-default tutorial_tag" style="--color-primary: #ff9dcf; --color-darker: #ff78c2; --color-dimmed: #ff8bc9;" title="Click to show all tutorials tagged data quality">data quality</a>
               
             
             </div>
@@ -368,6 +349,6 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 </section>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1699125453'></script>
     </body>
 </html>

@@ -95,6 +95,10 @@
           },
           "fediverse": "https://piaille.fr/@bebatut",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries",
+            "uni-freiburg"
+          ],
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -128,7 +132,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Classification LSVC",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         },
         {
           "workflow": "regression_GradientBoosting.ga",
@@ -142,7 +148,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Regression GradientBoosting",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/classification_regression/tutorial.json",
@@ -307,7 +315,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Clustering in Machine Learning",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/clustering_machinelearning/tutorial.json",
@@ -491,7 +501,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Intro_To_CNN",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/CNN/tutorial.json",
@@ -688,7 +700,9 @@
               "name": "Kaivan Kamali"
             }
           ],
-          "test_results": null
+          "name": "fruit_360",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/fruit_360/tutorial.json",
@@ -886,6 +900,7 @@
           "creators": [
 
           ],
+          "name": "Machine Learning",
           "test_results": {
             "eu": {
               "summary": {
@@ -1405,7 +1420,8 @@
               ],
               "version": "0.1"
             }
-          }
+          },
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/machinelearning/tutorial.json",
@@ -1561,7 +1577,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "gpu_jupytool",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/gpu_jupyter_lab/tutorial.json",
@@ -1674,7 +1692,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Age Prediction DNA Methylation",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         },
         {
           "workflow": "age-prediction-rna.ga",
@@ -1688,7 +1708,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Age Prediction RNA-Seq",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/age-prediction-with-ml/tutorial.json",
@@ -1876,7 +1898,9 @@
               "name": ""
             }
           ],
-          "test_results": null
+          "name": "Simtext training workflow",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/text-mining_simtext/tutorial.json",
@@ -2033,26 +2057,32 @@
       "slides": true,
       "workflows": [
         {
-          "workflow": "Intro_To_FNN.ga",
-          "tests": false,
-          "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/FNN/workflows/Intro_To_FNN.ga",
-          "path": "topics/statistics/tutorials/FNN/workflows/Intro_To_FNN.ga",
+          "workflow": "Intro_To_FNN_v1_0_10_0.ga",
+          "tests": true,
+          "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/FNN/workflows/Intro_To_FNN_v1_0_10_0.ga",
+          "path": "topics/statistics/tutorials/FNN/workflows/Intro_To_FNN_v1_0_10_0.ga",
           "wfid": "statistics-FNN",
-          "wfname": "intro_to_fnn",
-          "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/statistics-FNN/versions/intro_to_fnn",
-          "license": null,
+          "wfname": "intro_to_fnn_v1_0_10_0",
+          "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/statistics-FNN/versions/intro_to_fnn_v1_0_10_0",
+          "license": "CC-BY-4.0",
           "creators": [
-
+            {
+              "class": "Person",
+              "identifier": "0000-0001-6585-3619",
+              "name": "Kaivan Kamali"
+            }
           ],
-          "test_results": null
+          "name": "Intro_To_FNN_v1_0_10_0",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/FNN/tutorial.json",
       "tools": [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/0.5.0",
-        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/0.5.0",
-        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.3",
-        "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.3",
+        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/1.0.10.0",
+        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/1.0.10.0",
+        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.10.0",
+        "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.10.0",
         "toolshed.g2.bx.psu.edu/repos/bgruening/plotly_regression_performance_plots/plotly_regression_performance_plots/0.1"
       ],
       "supported_servers": {
@@ -2060,11 +2090,6 @@
           {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
-            "usegalaxy": "true"
-          },
-          {
-            "url": "https://usegalaxy.no/",
-            "name": "UseGalaxy.no",
             "usegalaxy": "true"
           },
           {
@@ -2083,6 +2108,11 @@
             "url": "https://usegalaxy.be/",
             "name": "UseGalaxy.be",
             "usegalaxy": "true"
+          },
+          {
+            "url": "https://usegalaxy.no/",
+            "name": "UseGalaxy.no",
+            "usegalaxy": "true"
           }
         ]
       },
@@ -2095,28 +2125,28 @@
           {
             "name": "keras_model_builder",
             "owner": "bgruening",
-            "revisions": "772e0e89fc68",
+            "revisions": "66d7efc06000",
             "tool_panel_section_label": "Statistics and machine learning",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "keras_model_config",
             "owner": "bgruening",
-            "revisions": "8a794e6d3388",
+            "revisions": "f22a9297440f",
             "tool_panel_section_label": "Statistics and machine learning",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "keras_train_and_eval",
             "owner": "bgruening",
-            "revisions": "b6ef6d0cb6b7",
+            "revisions": "818f9b69d8a0",
             "tool_panel_section_label": "Statistics and machine learning",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "model_prediction",
             "owner": "bgruening",
-            "revisions": "1552b8cb4a94",
+            "revisions": "9991c4ddde14",
             "tool_panel_section_label": "Statistics and machine learning",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
@@ -2129,7 +2159,7 @@
           }
         ]
       },
-      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: keras_model_builder\n  owner: bgruening\n  revisions: 772e0e89fc68\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: keras_model_config\n  owner: bgruening\n  revisions: 8a794e6d3388\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: keras_train_and_eval\n  owner: bgruening\n  revisions: b6ef6d0cb6b7\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: model_prediction\n  owner: bgruening\n  revisions: 1552b8cb4a94\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: plotly_regression_performance_plots\n  owner: bgruening\n  revisions: 389227fa1864\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
+      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: keras_model_builder\n  owner: bgruening\n  revisions: 66d7efc06000\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: keras_model_config\n  owner: bgruening\n  revisions: f22a9297440f\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: keras_train_and_eval\n  owner: bgruening\n  revisions: 818f9b69d8a0\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: model_prediction\n  owner: bgruening\n  revisions: 9991c4ddde14\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: plotly_regression_performance_plots\n  owner: bgruening\n  revisions: 389227fa1864\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
       "tours": false,
       "video": false,
       "translations": {
@@ -2216,7 +2246,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Intro_To_Deep_Learning",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/intro_deep_learning/tutorial.json",
@@ -2394,7 +2426,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Workflow Constructed From History 'IWTomics Workflow'",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/iwtomics/tutorial.json",
@@ -2578,38 +2612,40 @@
       "slides": true,
       "workflows": [
         {
-          "workflow": "Intro_To_RNN.ga",
-          "tests": false,
-          "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/RNN/workflows/Intro_To_RNN.ga",
-          "path": "topics/statistics/tutorials/RNN/workflows/Intro_To_RNN.ga",
+          "workflow": "Intro_To_RNN_v1_0_10_0.ga",
+          "tests": true,
+          "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/RNN/workflows/Intro_To_RNN_v1_0_10_0.ga",
+          "path": "topics/statistics/tutorials/RNN/workflows/Intro_To_RNN_v1_0_10_0.ga",
           "wfid": "statistics-RNN",
-          "wfname": "intro_to_rnn",
-          "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/statistics-RNN/versions/intro_to_rnn",
-          "license": null,
+          "wfname": "intro_to_rnn_v1_0_10_0",
+          "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/statistics-RNN/versions/intro_to_rnn_v1_0_10_0",
+          "license": "CC-BY-4.0",
           "creators": [
-
+            {
+              "class": "Person",
+              "identifier": "0000-0001-6585-3619",
+              "name": "Kaivan Kamali"
+            }
           ],
-          "test_results": null
+          "name": "Intro_To_RNN_v1_0_10_0",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/RNN/tutorial.json",
       "tools": [
-        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/0.5.0",
-        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/0.5.0",
-        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.3",
+        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/1.0.10.0",
+        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/1.0.10.0",
+        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.10.0",
+        "toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.10.0",
         "toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.3",
-        "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.3"
+        "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.10.0"
       ],
       "supported_servers": {
         "exact": [
           {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
-            "usegalaxy": "true"
-          },
-          {
-            "url": "https://usegalaxy.no/",
-            "name": "UseGalaxy.no",
             "usegalaxy": "true"
           },
           {
@@ -2628,6 +2664,11 @@
             "url": "https://usegalaxy.be/",
             "name": "UseGalaxy.be",
             "usegalaxy": "true"
+          },
+          {
+            "url": "https://usegalaxy.no/",
+            "name": "UseGalaxy.no",
+            "usegalaxy": "true"
           }
         ]
       },
@@ -2640,21 +2681,28 @@
           {
             "name": "keras_model_builder",
             "owner": "bgruening",
-            "revisions": "772e0e89fc68",
+            "revisions": "66d7efc06000",
             "tool_panel_section_label": "Statistics and machine learning",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "keras_model_config",
             "owner": "bgruening",
-            "revisions": "8a794e6d3388",
+            "revisions": "f22a9297440f",
             "tool_panel_section_label": "Statistics and machine learning",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "keras_train_and_eval",
             "owner": "bgruening",
-            "revisions": "b6ef6d0cb6b7",
+            "revisions": "818f9b69d8a0",
+            "tool_panel_section_label": "Statistics and machine learning",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "ml_visualization_ex",
+            "owner": "bgruening",
+            "revisions": "1588f9076e32",
             "tool_panel_section_label": "Statistics and machine learning",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
@@ -2668,13 +2716,13 @@
           {
             "name": "model_prediction",
             "owner": "bgruening",
-            "revisions": "1552b8cb4a94",
+            "revisions": "9991c4ddde14",
             "tool_panel_section_label": "Statistics and machine learning",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           }
         ]
       },
-      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: keras_model_builder\n  owner: bgruening\n  revisions: 772e0e89fc68\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: keras_model_config\n  owner: bgruening\n  revisions: 8a794e6d3388\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: keras_train_and_eval\n  owner: bgruening\n  revisions: b6ef6d0cb6b7\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: ml_visualization_ex\n  owner: bgruening\n  revisions: 947c2eacccb8\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: model_prediction\n  owner: bgruening\n  revisions: 1552b8cb4a94\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
+      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: keras_model_builder\n  owner: bgruening\n  revisions: 66d7efc06000\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: keras_model_config\n  owner: bgruening\n  revisions: f22a9297440f\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: keras_train_and_eval\n  owner: bgruening\n  revisions: 818f9b69d8a0\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: ml_visualization_ex\n  owner: bgruening\n  revisions: 1588f9076e32\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: ml_visualization_ex\n  owner: bgruening\n  revisions: 947c2eacccb8\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: model_prediction\n  owner: bgruening\n  revisions: 9991c4ddde14\n  tool_panel_section_label: Statistics and machine learning\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
       "tours": false,
       "video": false,
       "translations": {
@@ -2695,7 +2743,7 @@
     {
       "layout": "tutorial_hands_on",
       "title": "PAPAA PI3K_OG: PanCancer Aberrant Pathway Activity Analysis",
-      "zenodo_link": "https://zenodo.org/record/4306639#.X9FJF-lKgZE",
+      "zenodo_link": "https://zenodo.org/record/4306639",
       "questions": [
         "How to predict aberrant pathway activity in The Cancer Genome Atlas (TCGA) using Machine learning approaches?"
       ],
@@ -2761,7 +2809,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "papaa@0.1.9_PI3K_OG_model_tutorial",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/aberrant_pi3k_pathway_analysis/tutorial.json",
@@ -3007,7 +3057,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Regression (from training material)",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/regression_machinelearning/tutorial.json",
@@ -3257,7 +3309,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "ml_classification",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/classification_machinelearning/tutorial.json",
@@ -3596,22 +3650,37 @@
           "linkedin": "fpsom",
           "joined": "2019-03",
           "elixir_node": "gr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "fpsom",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/fpsom.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/fpsom/"
         },
         {
-          "name": "Erasmus+ Programme",
+          "name": "Gallantries: Bridging Training Communities in Life Science, Environment and Health",
+          "short_name": "Gallantries",
+          "start_date": "2020-09-01",
+          "end_date": "2023-09-30",
           "joined": "2020-09",
-          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "avatar": "https://gallantries.github.io/assets/images/gallantries-logo.png",
           "github": false,
           "funder": true,
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/gallantries.json",
+          "funder_name": "Erasmus+ Programme",
           "funding_id": "2020-1-NL01-KA203-064717",
           "funding_system": "erasmusplus",
-          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
-          "id": "erasmusplus",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />\n<img src=\"https://www.erasmusplus.nl/assets/images/logo.png\" alt=\"erasmus plus logo\" />",
+          "members": [
+            "abretaud",
+            "bebatut",
+            "fpsom",
+            "hexylena",
+            "shiltemann",
+            "yvanlebras"
+          ],
+          "id": "gallantries",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallantries/"
         }
       ],
       "short_id": "T00267",

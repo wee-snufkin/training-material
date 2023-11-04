@@ -6,63 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>CRISPR screen analysis</title>
         
-            <!--
-<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
--->
-<!-- We let users opt-out, so if they've opted in, we need to append the plausible script to the body -->
-
-<script>
-var scriptElement = document.createElement("script");
-scriptElement.async = true;
-scriptElement.defer = true;
-scriptElement.setAttribute("data-domain", "training.galaxyproject.org");
-scriptElement.src = "https://plausible.galaxyproject.eu/js/plausible.js";
-
-// Appending the script element to the body
-if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
-	console.log("Plausible: opt-in");
-	// Wait for the document to be available
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-}
-</script>
+            <meta name="google-site-verification" content="9mOXn2JL833-i7-aioCCEuIdG4_tb6qjwUozB5GJnPQ" />
 
 <!-- JavaScript Error Monitoring, and performance tracking. -->
-<!--
 <script
   src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
   integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
   crossorigin="anonymous"
 ></script>
--->
 <script type="text/javascript">
-var scriptElement = document.createElement("script");
-scriptElement.src = "https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js";
-scriptElement.integrity = "sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43";
-scriptElement.crossOrigin = "anonymous";
-
 if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
 	console.log("Sentry: opt-in");
-	// Appending the script element to the body
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-		
 	Sentry.init({
-	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@fda9b45cc9a369125238666674b869418ac8d08e",
-	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-	  sampleRate: 0.1,
-	  tracesSampleRate: 0.1,
-	  // Capture Replay for no sessions by default
-	  replaysSessionSampleRate: 0.01,
-	  // plus for 1% of sessions with an error
-	  replaysOnErrorSampleRate: 0.01,
-	  // PII OFF
-	  sendDefaultPii: false, // Off by default but just in case.
-	  environment: "production",
+		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+		release: "galaxy-training-network@3a5225dd8dad00c5479fa12f0a4cfb7d88b0f9d6",
+		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+		sampleRate: 0.1,
+		tracesSampleRate: 0.1,
+		// Capture Replay for no sessions by default
+		replaysSessionSampleRate: 0.01,
+		// plus for 1% of sessions with an error
+		replaysOnErrorSampleRate: 0.01,
+		// PII OFF
+		sendDefaultPii: false, // Off by default but just in case.
+		environment: "production",
 	});
+}
+</script>
+
+<!-- Page view tracking -->
+<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+<script>
+if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
+	localStorage.removeItem("plausible_ignore")
+	console.log("Plausible: opt-in");
+} else {
+	// if they're opting-out, or DNT
+	// we might get one page by accident but we won't get future ones.
+	localStorage.setItem("plausible_ignore", "true")
 }
 </script>
 
@@ -76,8 +57,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699059106' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699059106' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699125453' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699125453' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -87,7 +68,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="CRISPR screen analysis">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-05-17 17:21:19 +0000">
+<meta name="DC.date" content="2023-10-18 08:56:55 +0000">
 <meta name="DC.creator" content="Maria Doyle">
 <meta name="DC.creator" content="Kenji Fujihara">
 <meta name="DC.creator" content="Twishi Gulati">
@@ -130,7 +111,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-05-17 17:21:19 +0000",
+  "dateModified": "2023-10-18 08:56:55 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "CRISPR screen analysis",
   "interactivityType": "mixed",
@@ -377,7 +358,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1699125453'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -469,7 +450,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
 
 		<a href="/training-material/preferences.html" class="dropdown-item">
-			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Themes have moved <span class="badge badge-secondary">New</span>
+			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> User Preferences <span class="badge badge-secondary">New</span>
 		</a>
 
         <div class="dropdown-item">
@@ -544,7 +525,10 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/mblue9/" class="contributor-badge contributor-mblue9"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/mblue9?s=36" alt="Avatar" width="36" height="36">Maria Doyle</a><a href="/training-material/hall-of-fame/kenjifujihara/" class="contributor-badge contributor-kenjifujihara"><img src="https://avatars.githubusercontent.com/kenjifujihara?s=36" alt="Avatar" width="36" height="36">Kenji Fujihara</a><a href="/training-material/hall-of-fame/twishigulati/" class="contributor-badge contributor-twishigulati"><img src="https://avatars.githubusercontent.com/twishigulati?s=36" alt="Avatar" width="36" height="36">Twishi Gulati</a>
+		Authors: <a href="/training-material/hall-of-fame/mblue9/" class="contributor-badge contributor-mblue9"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/mblue9?s=36" alt="Maria Doyle avatar" width="36" class="avatar" />
+    Maria Doyle</a><a href="/training-material/hall-of-fame/kenjifujihara/" class="contributor-badge contributor-kenjifujihara"><img src="/training-material/assets/images/avatar.png" alt="Kenji Fujihara avatar" width="36" class="avatar" />
+    Kenji Fujihara</a><a href="/training-material/hall-of-fame/twishigulati/" class="contributor-badge contributor-twishigulati"><img src="/training-material/assets/images/avatar.png" alt="Twishi Gulati avatar" width="36" class="avatar" />
+    Twishi Gulati</a>
 	</div>
 
 </div>
@@ -948,7 +932,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
         </ul>
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> May 17, 2023 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 18, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             
@@ -992,7 +976,10 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
       <li><a href="#trim-adapters" id="markdown-toc-trim-adapters">Trim adapters</a></li>
     </ol>
   </li>
-  <li><a href="#counting" id="markdown-toc-counting">Counting</a></li>
+  <li><a href="#counting" id="markdown-toc-counting">Counting</a>    <ol>
+      <li><a href="#count-summary-file" id="markdown-toc-count-summary-file">Count Summary file</a></li>
+    </ol>
+  </li>
   <li><a href="#testing" id="markdown-toc-testing">Testing</a>    <ol>
       <li><a href="#two-conditions" id="markdown-toc-two-conditions">Two conditions</a></li>
       <li><a href="#optional-multiple-conditions" id="markdown-toc-optional-multiple-conditions">(Optional) Multiple conditions</a></li>
@@ -1025,9 +1012,9 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <li>
           <p>Copy the following tabular data, paste it into the textbox and press <kbd>Build</kbd></p>
 
-          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>T0-Control https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/T0-Control.fastq.gz
-T8-APR-246 https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/T8-APR-246.fastq.gz
-T8-Vehicle https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/T8-Vehicle.fastq.gz
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>T0-Control https://zenodo.org/records/5750854/files/T0-Control.fastq.gz
+T8-APR-246 https://zenodo.org/records/5750854/files/T8-APR-246.fastq.gz
+T8-Vehicle https://zenodo.org/records/5750854/files/T8-Vehicle.fastq.gz
 </code></pre></div>          </div>
         </li>
       </ul>
@@ -1070,7 +1057,7 @@ With CRISPR screens we expect adapter sequence to be present, surrounding the gu
 <blockquote class="details">
   <div class="box-title details-title" id="details-adapters-file"><button class="gtn-boxify-button details" type="button" aria-controls="details-adapters-file" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Adapters file<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
-  <p>The adapters file (<code class="language-plaintext highlighter-rouge">adapter_list.tsv</code>) we use here with FASTQC was created by adding the two CRISPR adapter sequences (5’ and 3’ of the guide) to the bottom of the adapters file used by FASTQC <a href="https://github.com/s-andrews/FastQC/blob/master/Configuration/adapter_list.txt">here</a>. The first 12 bases of the CRISPR adapters were used, as that length is currently recommended in the FASTQC adapters file.</p>
+  <p>The adapters file (<code class="language-plaintext highlighter-rouge">adapter_list.tsv</code>) we use here with FASTQC was created by adding the two CRISPR adapter sequences (5’ and 3’ of the guide) to the bottom of <a href="https://github.com/s-andrews/FastQC/blob/master/Configuration/adapter_list.txt">the adapters file used by FASTQC</a>. The first 12 bases of the CRISPR adapters were used, as that length is currently recommended in the FASTQC adapters file.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -1078,19 +1065,19 @@ With CRISPR screens we expect adapter sequence to be present, surrounding the gu
 
   <ol>
     <li>Import the adapters file from <a href="https://zenodo.org/record/5750854">Zenodo</a> or the Shared Data library (if available):
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/adapter_list.tsv
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/records/5750854/files/adapter_list.tsv
 </code></pre></div>      </div>
       <!--SNIPPET-->
       <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Click <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload Data</strong> at the top of the tool panel</p>   </li>   <li>Select <i class="fa fa-edit" aria-hidden="true"></i><span class="visually-hidden">galaxy-wf-edit</span> <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
       <p><!--END_SNIPPET--></p>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="link"><strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Short read data from your current history”</em>: fastqs (click “Dataset collection” button on left-side of this input field)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span><em>“Adapter list”</em>: <code class="language-plaintext highlighter-rouge">adapter_list.tsv</code></li>
       </ul>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0" title="MultiQC tool" aria-role="link"><strong>MultiQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0</span></span> with the following parameters to aggregate the FastQC reports:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.11+galaxy0)</span> with the following parameters to aggregate the FastQC reports:
       <ul>
         <li>In <em>“Results”</em>
           <ul>
@@ -1155,7 +1142,7 @@ With CRISPR screens we expect adapter sequence to be present, surrounding the gu
 <blockquote class="details">
   <div class="box-title details-title" id="details-adapter-trimming"><button class="gtn-boxify-button details" type="button" aria-controls="details-adapter-trimming" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Adapter trimming<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
-  <p>In this dataset the adapters start at different positions in the reads, as was shown above. MAGeCK count can trim adapters around the guide sequences. However, the adapters need to start at the same position in each read, requiring the same trimming length, as described on the MAGeCK website <a href="https://sourceforge.net/p/mageck/wiki/advanced_tutorial/">here</a>. An example for what MAGeCK expects is shown below. If you used MAGeCK count trimming with the dataset in this tutorial it wouldn’t be able to trim the 5’ adapter properly and you would only get ~60% reads mapping instead of &gt;80%.</p>
+  <p>In this dataset the adapters start at different positions in the reads, as was shown above. MAGeCK count can trim adapters around the guide sequences. However, the adapters need to start at the same position in each read, requiring the same trimming length, <a href="https://sourceforge.net/p/mageck/wiki/advanced_tutorial/">as described on the MAGeCK website</a>. An example for what MAGeCK expects is shown below. If you used MAGeCK count trimming with the dataset in this tutorial it wouldn’t be able to trim the 5’ adapter properly and you would only get ~60% reads mapping instead of &gt;80%.</p>
 
   <figure id="figure-3" style="max-width: 90%; margin:auto;"><img src="../../images/crispr-screen/adapter_sequences_mageck.png" alt="Adapters MAGeCK can trim. " width="544" height="126" loading="lazy" /><a target="_blank" href="../../images/crispr-screen/adapter_sequences_mageck.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> Example showing what MAGeCK count expects to be able to auto-detect and trim adapters. Guide sequence is higlighted in blue with the adapter sequences directly adjacent on the right and left. MAGeCK count uses the first 20 bases of each read to map so the sequence after the guide is less important to trim exactly.</figcaption></figure>
 
@@ -1166,7 +1153,7 @@ With CRISPR screens we expect adapter sequence to be present, surrounding the gu
   <div class="box-title hands-on-title" id="hands-on-trim-adapters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Trim adapters</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/3.5+galaxy0" title="Cutadapt tool" aria-role="link"><strong>Cutadapt</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/3.5+galaxy0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/3.5+galaxy0" title="Cutadapt tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cutadapt</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.5+galaxy0)</span> with the following parameters:
       <ul>
         <li><em>“Single-end or Paired-end reads?”</em>: <code class="language-plaintext highlighter-rouge">Single-end</code>
           <ul>
@@ -1215,7 +1202,7 @@ With CRISPR screens we expect adapter sequence to be present, surrounding the gu
         </blockquote>
       </blockquote>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0" title="MultiQC tool" aria-role="link"><strong>MultiQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0</span></span> with the following parameters to aggregate the Cutadapt reports:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.11+galaxy0)</span> with the following parameters to aggregate the Cutadapt reports:
       <ul>
         <li>In <em>“Results”</em>
           <ul>
@@ -1242,7 +1229,7 @@ With CRISPR screens we expect adapter sequence to be present, surrounding the gu
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-exercise-quality-control-of-the-polished-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Exercise: Quality control of the polished datasets</div>
-  <p>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="link"><strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0</span></span> and <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0" title="MultiQC tool" aria-role="link"><strong>MultiQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0</span></span> like before, but using the the trimmed datasets produced by Cutadapt as input.</p>
+  <p>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span> and <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.11+galaxy0)</span> like before, but using the the trimmed datasets produced by Cutadapt as input.</p>
 
   <blockquote class="question">
     <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
@@ -1270,10 +1257,10 @@ With CRISPR screens we expect adapter sequence to be present, surrounding the gu
   <div class="box-title hands-on-title" id="hands-on-count-guides-per-gene"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Count guides per gene</div>
   <ol>
     <li>Import the sgRNA library file
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/brunello.tsv
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/records/5750854/files/brunello.tsv
 </code></pre></div>      </div>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/mageck_count/mageck_count/0.5.9.2.4" title="MAGeCK count tool" aria-role="link"><strong>MAGeCK count</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/mageck_count/mageck_count/0.5.9.2.4</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/mageck_count/mageck_count/0.5.9.2.4" title="MAGeCK count tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MAGeCK count</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.5.9.2.4)</span> with the following parameters:
       <ul>
         <li><em>“Reads Files or Count Table?”</em>: <code class="language-plaintext highlighter-rouge">Separate Reads files</code>
           <ul>
@@ -1290,9 +1277,9 @@ With CRISPR screens we expect adapter sequence to be present, surrounding the gu
       </ul>
     </li>
     <li>We have been using 1% of reads from the samples. Import the MAGeCK count files (sgRNA counts, counts summary and plots pdf) for the full dataset so you can see what results for a real dataset looks like.
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/kenji_mageck_sgrna_counts.tsv
-https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/kenji_mageck_count_summary.tsv
-https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/kenji_mageck_count_report.pdf
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/records/5750854/files/kenji_mageck_sgrna_counts.tsv
+https://zenodo.org/records/5750854/files/kenji_mageck_count_summary.tsv
+https://zenodo.org/records/5750854/files/kenji_mageck_count_report.pdf
 </code></pre></div>      </div>
     </li>
   </ol>
@@ -1307,9 +1294,9 @@ https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/kenji_mageck_c
   <li>a PDF report</li>
 </ul>
 
-<p><strong>Count Summary file</strong></p>
+<h2 id="count-summary-file">Count Summary file</h2>
 
-<p>The contents of the count summary file is explained on the MAGeCK website <a href="https://sourceforge.net/p/mageck/wiki/output/#count_summary_txt">here</a>, also shown below. The columns are as follows. To help you evaluate the quality of the data, recommended values from the MAGeCK authors are shown in bold.</p>
+<p>The contents of the count summary file is <a href="https://sourceforge.net/p/mageck/wiki/output/#count_summary_txt">explained on the MAGeCK website</a>, also shown below. The columns are as follows. To help you evaluate the quality of the data, recommended values from the MAGeCK authors are shown in bold.</p>
 
 <table>
   <thead>
@@ -1378,7 +1365,7 @@ distribution of the remaining sgRNAs that haven’t been negatively selected. A 
 
     <ol>
       <li>The number of reads is ok. For example, for T0 control sample we have 17,272,052 reads mapped to guides. We have 77,441 guides so we have ~220 reads per guide (17,272,052/77,441). A minimum of 100 reads per guide, preferably 300, is recommended.</li>
-      <li>Yes, in the summary we have &gt;85% mapped for all 3 samples. <abbr title="Model-based Analysis of Genome-wide CRISPR-Cas9 Knockout">MAGeCK</abbr> count does not allow any base mismatches between the reads and the library file, as described <a href="https://sourceforge.net/p/mageck/wiki/advanced_tutorial/#tutorial-1-allow-mismatches-for-read-mapping">here</a> so we expect not all reads will map. Note that we filtered out (6-10%) reads with Cutadapt so we should include those in our unmapped % if we want an accurate count.</li>
+      <li>Yes, in the summary we have &gt;85% mapped for all 3 samples. <abbr title="Model-based Analysis of Genome-wide CRISPR-Cas9 Knockout">MAGeCK</abbr> count does not allow any base mismatches between the reads and the library file, <a href="https://sourceforge.net/p/mageck/wiki/advanced_tutorial/#tutorial-1-allow-mismatches-for-read-mapping">as described</a> so we expect not all reads will map. Note that we filtered out (6-10%) reads with Cutadapt so we should include those in our unmapped % if we want an accurate count.</li>
       <li>T0-Control has 0.71% (546/77441 * 100) sgRNAs that have no reads mapped, which is good. The T8 samples are just slightly high at 2.3% (1752/77441 * 100) and 2.8% (2170/77441 * 100).</li>
       <li>The Gini Index is 0.09 for T0-Control (initial state) which is good. The T8 samples are higher at 0.13 and 0.14 but good for a negative selection experiment.</li>
     </ol>
@@ -1437,7 +1424,7 @@ distribution of the remaining sgRNAs that haven’t been negatively selected. A 
   <div class="box-title hands-on-title" id="hands-on-test-for-enrichment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Test for enrichment</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/mageck_test/mageck_test/0.5.9.2.1" title="MAGeCKs test tool" aria-role="link"><strong>MAGeCKs test</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/mageck_test/mageck_test/0.5.9.2.1</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/mageck_test/mageck_test/0.5.9.2.1" title="MAGeCKs test tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MAGeCKs test</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.5.9.2.1)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Counts file”</em>: <code class="language-plaintext highlighter-rouge">kenji_mageck_sgRNA_counts.tsv</code>(the counts file for the full dataset that we imported)</li>
         <li><em>“Specify Treated samples or Control”</em>: <code class="language-plaintext highlighter-rouge">Treated samples</code>
@@ -1684,7 +1671,7 @@ We can see the top genes ranked by RRA scores or p value. These values come from
 
     <ol>
       <li>No. We can see in this case that, while one sgRNA is a lot lower in the APR treated sample compared to the vehicle, one increases a little, and the other two sgRNAs don’t change much. So we might conclude that this gene is not strongly negatively selected.</li>
-      <li>None. One reason for this is likely the large number of genes being tested (&gt;20,000). You could try to increase sensitivity with the procedures described <a href="https://sourceforge.net/p/mageck/wiki/QA/#i-see-very-few-genes-that-are-below-the-certain-fdr-cutoff-like-010-why-it-is-that-and-what-should-i-do">here</a>.</li>
+      <li>None. One reason for this is likely the large number of genes being tested (&gt;20,000). You could try to <a href="https://sourceforge.net/p/mageck/wiki/QA/#i-see-very-few-genes-that-are-below-the-certain-fdr-cutoff-like-010-why-it-is-that-and-what-should-i-do">increase sensitivity with the procedures described</a>.</li>
     </ol>
 
     <p><a href="../../images/crispr-screen/fli1_plot.png" rel="noopener noreferrer"><img src="../../images/crispr-screen/fli1_plot.png" alt="Plot showing guide counts for FLI1 gene. " width="632" height="626" loading="lazy" /></a></p>
@@ -1700,7 +1687,7 @@ We can see the top genes ranked by RRA scores or p value. These values come from
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-create-volcano-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create volcano plot</div>
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/1.1.2" title="Text reformatting with awk tool" aria-role="link"><strong>Text reformatting with awk</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/1.1.2</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/1.1.2" title="Text reformatting with awk tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Text reformatting with awk</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.2)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“File to process”</em>: <code class="language-plaintext highlighter-rouge">MAGeCK test Gene Summary</code></li>
         <li><em>“AWK Program”</em>: Copy and paste the text in the grey box below into this field</li>
@@ -1730,7 +1717,7 @@ SHMT2   7.6093e-05  0.454208  -1.1328
 FLI1    9.0376e-05  0.454208  -0.08872
 </code></pre></div>      </div>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/0.0.5" title="Volcano Plot tool" aria-role="link"><strong>Volcano Plot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/0.0.5</span></span> to create a volcano plot
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/0.0.5" title="Volcano Plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Volcano Plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.5)</span> to create a volcano plot
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Specify an input file”</em>: the Text reformatting output file</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“File has header?”</em>: <code class="language-plaintext highlighter-rouge">Yes</code></li>
@@ -1772,14 +1759,14 @@ FLI1    9.0376e-05  0.454208  -0.08872
 
 <h3 id="pathway-analysis">Pathway analysis</h3>
 
-<p>We can perform pathway analysis on the results to identify pathways that are changing with the treatment. MAGeCK has a pathway analysis module, however, we will use the tool <strong>fgsea</strong> as it outputs some visualisations and the genes enriched in the pathway. For fgsea we need a ranked list of genes and a pathways file in GMT format. We can get the ranked list from our mageck results, we’ll use the RRA score column for negative results. For the pathways, we’ll use the Hallmark pathways from MSigDB, which can be a good starting point for pathway exploration as discussed <a href="http://www.gsea-msigdb.org/gsea/msigdb/collection_details.jsp">here</a>.</p>
+<p>We can perform pathway analysis on the results to identify pathways that are changing with the treatment. MAGeCK has a pathway analysis module, however, we will use the tool <strong>fgsea</strong> as it outputs some visualisations and the genes enriched in the pathway. For fgsea we need a ranked list of genes and a pathways file in GMT format. We can get the ranked list from our mageck results, we’ll use the RRA score column for negative results. For the pathways, we’ll use the Hallmark pathways from MSigDB, which can be a <a href="http://www.gsea-msigdb.org/gsea/msigdb/collection_details.jsp">good starting point for pathway exploration</a>.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-perform-gene-set-enrichment-with-fgsea"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Perform gene set enrichment with fgsea</div>
 
   <ol>
     <li>Import the Hallmark pathways file <a href="https://zenodo.org/record/5750854">Zenodo</a> or the Shared Data library (if available). Set the Type to tabular:
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/h.all.v7.4.symbols.gmt
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/5750854/files/h.all.v7.4.symbols.gmt
 </code></pre></div>      </div>
       <!--SNIPPET-->
       <blockquote class="tip">   <div class="box-title tip-title" id="tip-changing-the-datatype"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-changing-the-datatype" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Changing the datatype<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>   <li>In the central panel, click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden">galaxy-gear</span> <strong>Convert</strong> tab on the top</li>   <li>In the lower part <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden">galaxy-chart-select-data</span> <strong>Datatypes</strong>, select  your desired datatype     <ul>       <li>tip: you can start typing the datatype into the field to filter the dropdown menu</li>     </ul>   </li>   <li>Click the <strong>Save</strong> button</li> </ul> </blockquote>
@@ -1825,7 +1812,7 @@ You can see some explanation of fgsea output in the <a href="/training-material/
 <p>If we have more than two conditions to compare, or a complex experimental design, we can use MAGeCK mle. MAGeCK mle uses a maximum likelihood estimation (MLE) algorithm (<span class="citation"><a href="#Li2015">Li <i>et al.</i> 2015</a></span>). It outputs a single value (beta score) per gene instead of a score for both negative and positive selection. A negative beta score indicates negative selection and a positive indicates positive selection. MAGeCK mle can also be used for comparing 2 conditions instead of MAGeCK test (RRA) but it is slower.</p>
 
 <p>To demonstrate using MAGeCK mle, we will compare the drug treatment (T8-APR-246) to T0 and the vehicle (T8-Vehicle) to T0.
-We’ll use a design matrix file as described <a href="https://sourceforge.net/p/mageck/wiki/input/#design-matrix-file">here</a>.
+We’ll use <a href="https://sourceforge.net/p/mageck/wiki/input/#design-matrix-file">a design matrix file</a>.
 The rules of the design matrix are:</p>
 
 <ul>
@@ -1851,10 +1838,10 @@ T8-APR-246  1         0       1
   <div class="box-title hands-on-title" id="hands-on-test-for-enrichment-with-mle"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Test for enrichment with MLE</div>
   <ol>
     <li>Import the design matrix file from <a href="https://zenodo.org/record/5750854">Zenodo</a> or the Shared Data library (if available):
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/api/files/6599878c-f569-41bf-a37a-2c6f3d2e67f9/kenji_mageck_mle_design_matrix.tsv
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/5750854/files/kenji_mageck_mle_design_matrix.tsv
 </code></pre></div>      </div>
     </li>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/mageck_mle/mageck_mle/0.5.9.2.1" title="MAGeCKs mle tool" aria-role="link"><strong>MAGeCKs mle</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/mageck_mle/mageck_mle/0.5.9.2.1</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/mageck_mle/mageck_mle/0.5.9.2.1" title="MAGeCKs mle tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MAGeCKs mle</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.5.9.2.1)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Counts file”</em>: the <code class="language-plaintext highlighter-rouge">kenji_mageck_sgrna_counts.tsv</code> file</li>
         <li><em>“Design matrix or sample labels”</em>: <code class="language-plaintext highlighter-rouge">Design matrix</code>
@@ -1868,7 +1855,7 @@ T8-APR-246  1         0       1
 
 </blockquote>
 
-<p>MAGeCK mle Gene Summary output is described <a href="https://sourceforge.net/p/mageck/wiki/output/#gene_summary_txt-in-mle-subcommand">here</a> and below.</p>
+<p>MAGeCK <a href="https://sourceforge.net/p/mageck/wiki/output/#gene_summary_txt-in-mle-subcommand">mle Gene Summary output</a> is described below.</p>
 
 <table>
   <thead>
@@ -1920,7 +1907,7 @@ T8-APR-246  1         0       1
   <ol>
     <li>Create a volcano plot to visualise the result for APR vs T0. Use the gene summary file columns <code class="language-plaintext highlighter-rouge">Gene</code> <code class="language-plaintext highlighter-rouge">APR|beta</code> <code class="language-plaintext highlighter-rouge">APR|wald-p-value</code>  <code class="language-plaintext highlighter-rouge">APR|wald-fdr</code>
       <ul>
-        <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/0.0.5" title="Volcano Plot tool" aria-role="link"><strong>Volcano Plot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/0.0.5</span></span> to create a volcano plot
+        <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/0.0.5" title="Volcano Plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Volcano Plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.5)</span> to create a volcano plot
           <ul>
             <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Specify an input file”</em>: the MAGeCK mle Gene Summary file</li>
             <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“FDR (adjusted P value)”</em>: <code class="language-plaintext highlighter-rouge">Column 14</code></li>
@@ -2188,7 +2175,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fda9b45cc9a369125238666674b869418ac8d08e">fda9b45</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/3a5225dd8dad00c5479fa12f0a4cfb7d88b0f9d6">3a5225d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -2216,11 +2203,7 @@ tools:
 </footer>
 
 
-    </div>
-</footer>
-
-
-        <script src='/training-material/assets/js/bundle.main.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1699125453'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

@@ -92,6 +92,11 @@
           "bio": "Researcher at Erasmus Medical Center",
           "elixir_node": "nl",
           "contact_for_training": true,
+          "affiliations": [
+            "CINECA-Project",
+            "gallantries",
+            "erasmusmc"
+          ],
           "location": {
             "country": "NL",
             "lat": 51.912,
@@ -145,7 +150,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "GTN Training: Introduction To Imaging",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/imaging/tutorials/imaging-introduction/tutorial.json",
@@ -361,7 +368,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "GTN_Exemplar_002_TMA_workflow",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/imaging/tutorials/multiplex-tissue-imaging-TMA/tutorial.json",
@@ -566,7 +575,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "CP_object_tracking_example",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/imaging/tutorials/object-tracking-using-cell-profiler/tutorial.json",
@@ -788,7 +799,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "CP_pipeline_IDR_training",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/imaging/tutorials/tutorial-CP/tutorial.json",
@@ -1098,7 +1111,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Analyze Screen",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         },
         {
           "workflow": "feature_extraction.ga",
@@ -1112,7 +1127,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Feature Extraction",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:36 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/imaging/tutorials/hela-screen-analysis/tutorial.json",
@@ -1245,6 +1262,9 @@
           "Laura190",
           "kkamieniecka",
           "poterlowicz-lab"
+        ],
+        "funding": [
+          "ELIXIR-UK-DaSH"
         ]
       },
       "subtopic": "fair-data",
@@ -1370,6 +1390,18 @@
           "id": "poterlowicz-lab",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/poterlowicz-lab.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/poterlowicz-lab/"
+        },
+        {
+          "name": "DASH UK",
+          "joined": "2023-10",
+          "avatar": "https://github.com/galaxyproject/training-material/blob/main/shared/images/dash.png?raw=true",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/ELIXIR-UK-DaSH.json",
+          "funder": true,
+          "funding_system": "ukri",
+          "funding_id": "MR/V038966/1",
+          "funding_statement": "This Fellowship was funded through the ELIXIR-UK DaSH project as part of the UKRI Innovation Scholars: Data Science Training in Health and Bioscience call (DaSH). (MR/V038966/1). The project aims to embed Research Data Management (RDM) know-how into UK universities and institutes by producing and delivering training in FAIR data stewardship using ELIXIR-UK knowledge and resources.",
+          "id": "ELIXIR-UK-DaSH",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/ELIXIR-UK-DaSH/"
         }
       ],
       "urls": {
@@ -1407,6 +1439,9 @@
           "Laura190",
           "kkamieniecka",
           "poterlowicz-lab"
+        ],
+        "funding": [
+          "ELIXIR-UK-DaSH"
         ]
       },
       "subtopic": "fair-data",
@@ -1526,6 +1561,18 @@
           "id": "poterlowicz-lab",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/poterlowicz-lab.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/poterlowicz-lab/"
+        },
+        {
+          "name": "DASH UK",
+          "joined": "2023-10",
+          "avatar": "https://github.com/galaxyproject/training-material/blob/main/shared/images/dash.png?raw=true",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/ELIXIR-UK-DaSH.json",
+          "funder": true,
+          "funding_system": "ukri",
+          "funding_id": "MR/V038966/1",
+          "funding_statement": "This Fellowship was funded through the ELIXIR-UK DaSH project as part of the UKRI Innovation Scholars: Data Science Training in Health and Bioscience call (DaSH). (MR/V038966/1). The project aims to embed Research Data Management (RDM) know-how into UK universities and institutes by producing and delivering training in FAIR data stewardship using ELIXIR-UK knowledge and resources.",
+          "id": "ELIXIR-UK-DaSH",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/ELIXIR-UK-DaSH/"
         }
       ],
       "urls": {

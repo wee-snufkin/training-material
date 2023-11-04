@@ -22,6 +22,9 @@
       "orcid": "0000-0002-8504-068X",
       "joined": "2017-09",
       "elixir_node": "fr",
+      "affiliations": [
+        "gallantries"
+      ],
       "id": "yvanlebras",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -77,6 +80,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -110,7 +116,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "de novo Rad Seq",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/de-novo-rad-seq/tutorial.json",
@@ -268,6 +276,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -330,7 +341,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Workflow constructed from history 'Tuto Obitools'",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/Obitools-metabarcoding/tutorial.json",
@@ -554,7 +567,9 @@
               "name": "Marie Josse"
             }
           ],
-          "test_results": null
+          "name": "Sentinel 2 example",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/remote-sensing/tutorial.json",
@@ -662,6 +677,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -745,7 +763,9 @@
               "name": "Soumya Jha"
             }
           ],
-          "test_results": null
+          "name": "Xarray_Map_Plotting_Workflow",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/x-array-map-plot/tutorial.json",
@@ -861,6 +881,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -904,7 +927,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "GBIF data Quality check and filtering workflow Feb-2020",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/gbif_cleaning/tutorial.json",
@@ -1011,6 +1036,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -1053,7 +1081,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Champs blocs indicators",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/champs-blocs/tutorial.json",
@@ -1196,7 +1226,9 @@
               "name": "Miguel Roncoroni"
             }
           ],
-          "test_results": null
+          "name": "preparing genomic data for phylogeny recostruction (GTN)",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/phylogeny-data-prep/tutorial.json",
@@ -1371,6 +1403,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -1392,6 +1427,10 @@
           },
           "fediverse": "https://piaille.fr/@bebatut",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries",
+            "uni-freiburg"
+          ],
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -1425,7 +1464,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Species Distribution Modeling With Wallace From GBIF - Training Material",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/species-distribution-modeling/tutorial.json",
@@ -1553,6 +1594,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -1623,7 +1667,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Compute and analyze biodiversity metrics with PAMPA toolsuite",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/PAMPA-toolsuite-tutorial/tutorial.json",
@@ -1825,6 +1871,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -1858,7 +1907,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Workflow Constructed From History 'STACKS RAD: Population Genomics With Reference Genome'",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         },
         {
           "workflow": "workflow.ga",
@@ -1872,7 +1923,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Ref Based Rad Seq",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/ref-based-rad-seq/tutorial.json",
@@ -2019,7 +2072,7 @@
           "yvanlebras"
         ],
         "funding": [
-          "erasmusplus"
+          "gallantries"
         ]
       },
       "short_id": "T00332",
@@ -2055,6 +2108,7 @@
               "name": "Marie Josse"
             }
           ],
+          "name": "Obis indicators",
           "test_results": {
             "eu": {
               "summary": {
@@ -2736,7 +2790,8 @@
               ],
               "version": "0.1"
             }
-          }
+          },
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/obisindicators/tutorial.json",
@@ -2825,22 +2880,37 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         },
         {
-          "name": "Erasmus+ Programme",
+          "name": "Gallantries: Bridging Training Communities in Life Science, Environment and Health",
+          "short_name": "Gallantries",
+          "start_date": "2020-09-01",
+          "end_date": "2023-09-30",
           "joined": "2020-09",
-          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "avatar": "https://gallantries.github.io/assets/images/gallantries-logo.png",
           "github": false,
           "funder": true,
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/gallantries.json",
+          "funder_name": "Erasmus+ Programme",
           "funding_id": "2020-1-NL01-KA203-064717",
           "funding_system": "erasmusplus",
-          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
-          "id": "erasmusplus",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />\n<img src=\"https://www.erasmusplus.nl/assets/images/logo.png\" alt=\"erasmus plus logo\" />",
+          "members": [
+            "abretaud",
+            "bebatut",
+            "fpsom",
+            "hexylena",
+            "shiltemann",
+            "yvanlebras"
+          ],
+          "id": "gallantries",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallantries/"
         }
       ],
       "urls": {
@@ -2882,6 +2952,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -2915,7 +2988,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Genetic Map Rad Seq Workflow",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/genetic-map-rad-seq/tutorial.json",
@@ -3019,7 +3094,7 @@
           "yvanlebras"
         ],
         "funding": [
-          "erasmusplus"
+          "gallantries"
         ]
       },
       "short_id": "T00126",
@@ -3079,7 +3154,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Workflow 'Biodiversity data exploration tuto'",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/biodiversity-data-exploration/tutorial.json",
@@ -3223,22 +3300,37 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         },
         {
-          "name": "Erasmus+ Programme",
+          "name": "Gallantries: Bridging Training Communities in Life Science, Environment and Health",
+          "short_name": "Gallantries",
+          "start_date": "2020-09-01",
+          "end_date": "2023-09-30",
           "joined": "2020-09",
-          "avatar": "https://www.erasmusplus.nl/assets/images/logo.png",
+          "avatar": "https://gallantries.github.io/assets/images/gallantries-logo.png",
           "github": false,
           "funder": true,
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/erasmusplus.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/gallantries.json",
+          "funder_name": "Erasmus+ Programme",
           "funding_id": "2020-1-NL01-KA203-064717",
           "funding_system": "erasmusplus",
-          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />",
-          "id": "erasmusplus",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
+          "funding_statement": "This project (<a href=\"https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717\"><code class=\"language-plaintext highlighter-rouge\">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.\n<img src=\"https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg\" alt=\"eu flag with the text: with the support of the erasmus programme of the european union\" />\n<img src=\"https://www.erasmusplus.nl/assets/images/logo.png\" alt=\"erasmus plus logo\" />",
+          "members": [
+            "abretaud",
+            "bebatut",
+            "fpsom",
+            "hexylena",
+            "shiltemann",
+            "yvanlebras"
+          ],
+          "id": "gallantries",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/gallantries/"
         }
       ],
       "urls": {
@@ -3296,6 +3388,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -3317,6 +3412,10 @@
           },
           "fediverse": "https://piaille.fr/@bebatut",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries",
+            "uni-freiburg"
+          ],
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -3360,7 +3459,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Abundance Index \"stacked\" Visualization Creation",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         },
         {
           "workflow": "Galaxy-Workflow-Phenology__stacked__visualization_creation.ga",
@@ -3374,7 +3475,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Phenology \"stacked\" Visualization Creation",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         },
         {
           "workflow": "Galaxy-Workflow-Tutorial_regionalGAM_complete_Multispecies.ga",
@@ -3388,7 +3491,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Tutorial regionalGAM Complete Multispecies",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         },
         {
           "workflow": "Galaxy-Workflow-Tutorial_training_regionalGAM_complete_workflow.ga",
@@ -3402,7 +3507,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Regional GAM Workflow",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/regionalGAM/tutorial.json",
@@ -3577,6 +3684,9 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
@@ -3723,12 +3833,15 @@
           "orcid": "0000-0002-8504-068X",
           "joined": "2017-09",
           "elixir_node": "fr",
+          "affiliations": [
+            "gallantries"
+          ],
           "id": "yvanlebras",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/yvanlebras.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         }
       ],
-      "short_id": null,
+      "short_id": "T00367",
       "url": "/topics/ecology/tutorials/QGIS_Web_Feature_Services/tutorial.html",
       "topic_name": "ecology",
       "tutorial_name": "QGIS_Web_Feature_Services",

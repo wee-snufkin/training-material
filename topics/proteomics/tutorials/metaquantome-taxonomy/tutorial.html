@@ -6,63 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>metaQuantome 3: Taxonomy</title>
         
-            <!--
-<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
--->
-<!-- We let users opt-out, so if they've opted in, we need to append the plausible script to the body -->
-
-<script>
-var scriptElement = document.createElement("script");
-scriptElement.async = true;
-scriptElement.defer = true;
-scriptElement.setAttribute("data-domain", "training.galaxyproject.org");
-scriptElement.src = "https://plausible.galaxyproject.eu/js/plausible.js";
-
-// Appending the script element to the body
-if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
-	console.log("Plausible: opt-in");
-	// Wait for the document to be available
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-}
-</script>
+            <meta name="google-site-verification" content="9mOXn2JL833-i7-aioCCEuIdG4_tb6qjwUozB5GJnPQ" />
 
 <!-- JavaScript Error Monitoring, and performance tracking. -->
-<!--
 <script
   src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
   integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
   crossorigin="anonymous"
 ></script>
--->
 <script type="text/javascript">
-var scriptElement = document.createElement("script");
-scriptElement.src = "https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js";
-scriptElement.integrity = "sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43";
-scriptElement.crossOrigin = "anonymous";
-
 if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
 	console.log("Sentry: opt-in");
-	// Appending the script element to the body
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-		
 	Sentry.init({
-	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@fda9b45cc9a369125238666674b869418ac8d08e",
-	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-	  sampleRate: 0.1,
-	  tracesSampleRate: 0.1,
-	  // Capture Replay for no sessions by default
-	  replaysSessionSampleRate: 0.01,
-	  // plus for 1% of sessions with an error
-	  replaysOnErrorSampleRate: 0.01,
-	  // PII OFF
-	  sendDefaultPii: false, // Off by default but just in case.
-	  environment: "production",
+		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+		release: "galaxy-training-network@3a5225dd8dad00c5479fa12f0a4cfb7d88b0f9d6",
+		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+		sampleRate: 0.1,
+		tracesSampleRate: 0.1,
+		// Capture Replay for no sessions by default
+		replaysSessionSampleRate: 0.01,
+		// plus for 1% of sessions with an error
+		replaysOnErrorSampleRate: 0.01,
+		// PII OFF
+		sendDefaultPii: false, // Off by default but just in case.
+		environment: "production",
 	});
+}
+</script>
+
+<!-- Page view tracking -->
+<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+<script>
+if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
+	localStorage.removeItem("plausible_ignore")
+	console.log("Plausible: opt-in");
+} else {
+	// if they're opting-out, or DNT
+	// we might get one page by accident but we won't get future ones.
+	localStorage.setItem("plausible_ignore", "true")
 }
 </script>
 
@@ -76,8 +57,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699059106' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699059106' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699125453' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699125453' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -390,7 +371,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1699125453'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -482,7 +463,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
 
 		<a href="/training-material/preferences.html" class="dropdown-item">
-			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Themes have moved <span class="badge badge-secondary">New</span>
+			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> User Preferences <span class="badge badge-secondary">New</span>
 		</a>
 
         <div class="dropdown-item">
@@ -557,7 +538,13 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/subinamehta/" class="contributor-badge contributor-subinamehta"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/subinamehta?s=36" alt="Avatar" width="36" height="36">Subina Mehta</a><a href="/training-material/hall-of-fame/timothygriffin/" class="contributor-badge contributor-timothygriffin"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/timothygriffin?s=36" alt="Avatar" width="36" height="36">Timothy J. Griffin</a><a href="/training-material/hall-of-fame/pratikdjagtap/" class="contributor-badge contributor-pratikdjagtap"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/pratikdjagtap?s=36" alt="Avatar" width="36" height="36">Pratik Jagtap</a><a href="/training-material/hall-of-fame/emmaleith/" class="contributor-badge contributor-emmaleith"><img src="https://avatars.githubusercontent.com/emmaleith?s=36" alt="Avatar" width="36" height="36">Emma Leith</a><a href="/training-material/hall-of-fame/mariecrane/" class="contributor-badge contributor-mariecrane"><img src="https://avatars.githubusercontent.com/mariecrane?s=36" alt="Avatar" width="36" height="36">Marie Crane</a><a href="/training-material/hall-of-fame/pravs3683/" class="contributor-badge contributor-pravs3683"><img src="https://avatars.githubusercontent.com/pravs3683?s=36" alt="Avatar" width="36" height="36">Praveen Kumar</a>
+		Authors: <a href="/training-material/hall-of-fame/subinamehta/" class="contributor-badge contributor-subinamehta"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/subinamehta?s=36" alt="Subina Mehta avatar" width="36" class="avatar" />
+    Subina Mehta</a><a href="/training-material/hall-of-fame/timothygriffin/" class="contributor-badge contributor-timothygriffin"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="/training-material/assets/images/avatar.png" alt="Timothy J. Griffin avatar" width="36" class="avatar" />
+    Timothy J. Griffin</a><a href="/training-material/hall-of-fame/pratikdjagtap/" class="contributor-badge contributor-pratikdjagtap"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/pratikdjagtap?s=36" alt="Pratik Jagtap avatar" width="36" class="avatar" />
+    Pratik Jagtap</a><a href="/training-material/hall-of-fame/emmaleith/" class="contributor-badge contributor-emmaleith"><img src="https://avatars.githubusercontent.com/emmaleith?s=36" alt="Emma Leith avatar" width="36" class="avatar" />
+    Emma Leith</a><a href="/training-material/hall-of-fame/mariecrane/" class="contributor-badge contributor-mariecrane"><img src="https://avatars.githubusercontent.com/mariecrane?s=36" alt="Marie Crane avatar" width="36" class="avatar" />
+    Marie Crane</a><a href="/training-material/hall-of-fame/pravs3683/" class="contributor-badge contributor-pravs3683"><img src="https://avatars.githubusercontent.com/pravs3683?s=36" alt="Praveen Kumar avatar" width="36" class="avatar" />
+    Praveen Kumar</a>
 	</div>
 
 </div>
@@ -946,7 +933,7 @@ https://zenodo.org/record/4110725/files/Taxonomy-File.tabular
   <div class="box-title hands-on-title" id="hands-on-run-metaquantome-databases"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run metaQuantome databases</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_db/metaquantome_db/2.0.0-0" title="metaQuantome: databases tool" aria-role="link"><strong>metaQuantome: databases</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_db/metaquantome_db/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_db/metaquantome_db/2.0.0-0" title="metaQuantome: databases tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: databases</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Databases to Download”</em>: <code class="language-plaintext highlighter-rouge">Select All</code> (NCBI Taxonomy Database, Gene Ontology Database and Enzyme Commission (EC) database)</li>
       </ul>
@@ -1005,7 +992,7 @@ available at <a href="http://geneontology.org/docs/download-ontology/">GO term w
   <div class="box-title hands-on-title" id="hands-on-create-an-experimental-design-file-for-sorting-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create an experimental Design file for sorting samples</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_sample/metaquantome_sample/2.0.0-0" title="metaQuantome: create samples file tool" aria-role="link"><strong>metaQuantome: create samples file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_sample/metaquantome_sample/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_sample/metaquantome_sample/2.0.0-0" title="metaQuantome: create samples file tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: create samples file</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Sample file creation method”</em>: <code class="language-plaintext highlighter-rouge">Manually specify experimental conditions and samples</code></li>
         <li>In <em>“Insert Samples”</em>:
@@ -1062,7 +1049,7 @@ In taxonomy mode, the following information is required apart from metaQuantome 
   <div class="box-title hands-on-title" id="hands-on-run-metaquantome-expand"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run metaQuantome expand</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_expand/metaquantome_expand/2.0.0-0" title="metaQuantome: expand tool" aria-role="link"><strong>metaQuantome: expand</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_expand/metaquantome_expand/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_expand/metaquantome_expand/2.0.0-0" title="metaQuantome: expand tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: expand</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Database Archive File”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome databases</code> (output of <strong>metaQuantome: database</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Samples file”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome: create samples_file</code> (output of <strong>metaQuantome: create samples file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1132,7 +1119,7 @@ In taxonomy mode, the following information is required apart from metaQuantome 
   <div class="box-title hands-on-title" id="hands-on-filtering-the-expanded-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering the expanded data</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_filter/metaquantome_filter/2.0.0-0" title="metaQuantome: filter tool" aria-role="link"><strong>metaQuantome: filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_filter/metaquantome_filter/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_filter/metaquantome_filter/2.0.0-0" title="metaQuantome: filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: filter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><em>“Mode”</em>: <code class="language-plaintext highlighter-rouge">Taxonomic analysis</code></li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Samples file”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:create samples_file</code> (output of <strong>metaQuantome: create samples file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1181,7 +1168,7 @@ In taxonomy mode, the following information is required apart from metaQuantome 
   <div class="box-title hands-on-title" id="hands-on-statistical-analysis-of-the-filtered-data-on-multiple-conditions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Statistical analysis of the filtered data on multiple conditions.</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_stat/metaquantome_stat/2.0.0-0" title="metaQuantome: stat tool" aria-role="link"><strong>metaQuantome: stat</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_stat/metaquantome_stat/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_stat/metaquantome_stat/2.0.0-0" title="metaQuantome: stat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: stat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Samples file”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:create samples_file</code> (output of <strong>metaQuantome: create samples file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“metaquantome expanded or filtered file”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:Filter</code> (output of <strong>metaQuantome: filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1216,7 +1203,7 @@ There are two outputs of the visualization tool : an <strong>HTML file (figure) 
   <div class="box-title hands-on-title" id="hands-on-bar-chart-visualization-of-taxonomy-in-t2-sample"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Bar chart visualization of Taxonomy in T2 sample.</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="link"><strong>metaQuantome: visualize</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Tabular file from metaQuantome stats or metaQuantome filter”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:stat</code> (output of <strong>metaQuantome: stat</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Samples file”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:create samples_file</code> (output of <strong>metaQuantome: create samples file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1268,7 +1255,7 @@ There are two outputs of the visualization tool : an <strong>HTML file (figure) 
   <div class="box-title hands-on-title" id="hands-on-bar-chart-visualization-of-taxonomy-in-t7-sample"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Bar chart visualization of Taxonomy in T7 sample.</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="link"><strong>metaQuantome: visualize</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Tabular file from metaQuantome stats or metaQuantome filter”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:stat</code> (output of <strong>metaQuantome: stat</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Samples file”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:create samples_file</code> (output of <strong>metaQuantome: create samples file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1294,7 +1281,7 @@ There are two outputs of the visualization tool : an <strong>HTML file (figure) 
   <div class="box-title hands-on-title" id="hands-on-bar-chart-visualization-of-taxonomy-in-t4-sample"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Bar chart visualization of Taxonomy in T4 sample.</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="link"><strong>metaQuantome: visualize</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Tabular file from metaQuantome stats or metaQuantome filter”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:stat</code> (output of <strong>metaQuantome: stat</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Samples file”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:create samples_file</code> (output of <strong>metaQuantome: create samples file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1322,7 +1309,7 @@ There are two outputs of the visualization tool : an <strong>HTML file (figure) 
   <div class="box-title hands-on-title" id="hands-on-volcano-plot-visualization-of-the-data-t4-and-t2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Volcano Plot visualization of the data T4 and T2.</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="link"><strong>metaQuantome: visualize</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Tabular file from metaQuantome stats or metaQuantome filter”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:stat</code> (output of <strong>metaQuantome: stat</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Samples file”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:create samples_file</code> (output of <strong>metaQuantome: create samples file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1355,7 +1342,7 @@ There are two outputs of the visualization tool : an <strong>HTML file (figure) 
   <div class="box-title hands-on-title" id="hands-on-volcano-plot-visualization-of-the-data-t7-and-t2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Volcano Plot visualization of the data T7 and T2.</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="link"><strong>metaQuantome: visualize</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0</span></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/metaquantome_viz/metaquantome_viz/2.0.0-0" title="metaQuantome: visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>metaQuantome: visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0-0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Tabular file from metaQuantome stats or metaQuantome filter”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:stat</code> (output of <strong>metaQuantome: stat</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Samples file”</em>: <code class="language-plaintext highlighter-rouge">metaQuantome:create samples_file</code> (output of <strong>metaQuantome: create samples file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
@@ -1747,7 +1734,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fda9b45cc9a369125238666674b869418ac8d08e">fda9b45</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/3a5225dd8dad00c5479fa12f0a4cfb7d88b0f9d6">3a5225d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1775,11 +1762,7 @@ tools:
 </footer>
 
 
-    </div>
-</footer>
-
-
-        <script src='/training-material/assets/js/bundle.main.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1699125453'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

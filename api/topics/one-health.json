@@ -49,6 +49,11 @@
       "elixir_node": "nl",
       "fediverse": "https://galaxians.garden/hexylena",
       "fediverse_flavor": "akkoma",
+      "affiliations": [
+        "gallantries",
+        "erasmusmc",
+        "avans-atgm"
+      ],
       "contact_for_training": false,
       "location": {
         "country": "NL",
@@ -137,7 +142,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "From BAMs to drug resistance prediction with TB-profiler",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         },
         {
           "workflow": "Galaxy-Workflow-From_Fastqs_to_VCFs_and_BAMs.ga",
@@ -151,7 +158,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "From Fastqs to VCFs and BAMs",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         },
         {
           "workflow": "main_workflow.ga",
@@ -165,7 +174,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "From VCFs to SNP distance matrix",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/evolution/tutorials/mtb_transmission/tutorial.json",
@@ -489,7 +500,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Mtb phylogeny",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:35 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/evolution/tutorials/mtb_phylogeny/tutorial.json",
@@ -673,7 +686,9 @@
               "name": "Wolfgang Maier"
             }
           ],
-          "test_results": null
+          "name": "pox-virus-tiled-amplicon-ref-masking",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/variant-analysis/tutorials/pox-tiled-amplicon/tutorial.json",
@@ -890,7 +905,7 @@
           "funding_id": "101046203",
           "funding_system": "cordis",
           "funding_statement": "BY-COVID is an EC funded project that tackles the data challenges that can hinder effective pandemic response.\n\nThis project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement № 101046203 (BY-COVID)",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/by-covid.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/by-covid.json",
           "id": "by-covid",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/by-covid/"
         },
@@ -899,7 +914,7 @@
           "github": false,
           "joined": "2023-01",
           "avatar": "https://elixir-europe.org/sites/default/files/styles/right-medium/public/images/converge_logo.png",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/elixir-converge.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/elixir-converge.json",
           "funder": true,
           "funding_id": "871075",
           "funding_system": "cordis",
@@ -908,14 +923,15 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/elixir-converge/"
         },
         {
-          "name": "DEFEND",
+          "name": "Addressing the dual emerging threats of African Swine Fever and Lumpy Skin Disease in Europe",
+          "short_name": "DEFEND",
           "github": false,
           "joined": "2023-05",
           "funder": true,
           "funding_id": "773701",
           "funding_system": "cordis",
           "funding_statement": "DEFEND is Addressing the dual emerging threats of African Swine Fever and Lumpy Skin Disease in Europe.\n\nThis work has received funding from the DEFEND project (www.defend2020.eu) with funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 773701.",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/h2020-defend.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/h2020-defend.json",
           "id": "h2020-defend",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/h2020-defend/"
         }
@@ -1140,6 +1156,10 @@
           },
           "fediverse": "https://piaille.fr/@bebatut",
           "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "gallantries",
+            "uni-freiburg"
+          ],
           "id": "bebatut",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
@@ -1151,7 +1171,7 @@
           "funding_id": "101046203",
           "funding_system": "cordis",
           "funding_statement": "BY-COVID is an EC funded project that tackles the data challenges that can hinder effective pandemic response.\n\nThis project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement № 101046203 (BY-COVID)",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/by-covid.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/by-covid.json",
           "id": "by-covid",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/by-covid/"
         },
@@ -1160,7 +1180,7 @@
           "github": false,
           "joined": "2023-01",
           "avatar": "https://elixir-europe.org/sites/default/files/styles/right-medium/public/images/converge_logo.png",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/elixir-converge.json",
+          "url": "https://training.galaxyproject.org/training-material/api/funders/elixir-converge.json",
           "funder": true,
           "funding_id": "871075",
           "funding_system": "cordis",
@@ -1269,7 +1289,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Simple COVID-19 - PE Variation",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/variant-analysis/tutorials/sars-cov-2/tutorial.json",
@@ -1644,7 +1666,9 @@
               "name": "Peter van Heusden"
             }
           ],
-          "test_results": null
+          "name": "M. tuberculosis Variant Analysis tutorial",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:40 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/variant-analysis/tutorials/tb-variant-analysis/tutorial.json",
@@ -1887,7 +1911,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Genome Assembly of MRSA using Illumina MiSeq Data",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:33 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/assembly/tutorials/mrsa-illumina/tutorial.json",
@@ -2043,6 +2069,11 @@
           "elixir_node": "nl",
           "fediverse": "https://galaxians.garden/hexylena",
           "fediverse_flavor": "akkoma",
+          "affiliations": [
+            "gallantries",
+            "erasmusmc",
+            "avans-atgm"
+          ],
           "contact_for_training": false,
           "location": {
             "country": "NL",
@@ -2072,6 +2103,11 @@
           "bio": "Researcher at Erasmus Medical Center",
           "elixir_node": "nl",
           "contact_for_training": true,
+          "affiliations": [
+            "CINECA-Project",
+            "gallantries",
+            "erasmusmc"
+          ],
           "location": {
             "country": "NL",
             "lat": 51.912,
@@ -2093,9 +2129,11 @@
         {
           "name": "Avans Hogeschool",
           "joined": "2020-11",
-          "funder": true,
-          "funding_statement": "A number of our employees contribute directly to the Galaxy Training Network and seek to make our higher education learning materials more accessible to a wider audience through the GTN platform. <a href=\"https://avans.nl/\">avans.nl</a>",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/avans-atgm.json",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/avans-atgm.json",
+          "avatar": "/training-material/shared/images/logo-avans.png",
+          "members": [
+            "hexylena"
+          ],
           "id": "avans-atgm",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
         }
@@ -2176,7 +2214,9 @@
           "creators": [
 
           ],
-          "test_results": null
+          "name": "Virtual screening of the SARS-CoV-2 main protease with rDock and pose scoring",
+          "test_results": null,
+          "modified": "2023-11-04 19:17:33 +0000"
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/computational-chemistry/tutorials/covid19-docking/tutorial.json",

@@ -6,63 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Mapping Jobs to Destinations using TPV</title>
         
-            <!--
-<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
--->
-<!-- We let users opt-out, so if they've opted in, we need to append the plausible script to the body -->
-
-<script>
-var scriptElement = document.createElement("script");
-scriptElement.async = true;
-scriptElement.defer = true;
-scriptElement.setAttribute("data-domain", "training.galaxyproject.org");
-scriptElement.src = "https://plausible.galaxyproject.eu/js/plausible.js";
-
-// Appending the script element to the body
-if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
-	console.log("Plausible: opt-in");
-	// Wait for the document to be available
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-}
-</script>
+            <meta name="google-site-verification" content="9mOXn2JL833-i7-aioCCEuIdG4_tb6qjwUozB5GJnPQ" />
 
 <!-- JavaScript Error Monitoring, and performance tracking. -->
-<!--
 <script
   src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
   integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
   crossorigin="anonymous"
 ></script>
--->
 <script type="text/javascript">
-var scriptElement = document.createElement("script");
-scriptElement.src = "https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js";
-scriptElement.integrity = "sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43";
-scriptElement.crossOrigin = "anonymous";
-
 if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
 	console.log("Sentry: opt-in");
-	// Appending the script element to the body
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-		
 	Sentry.init({
-	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@fda9b45cc9a369125238666674b869418ac8d08e",
-	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-	  sampleRate: 0.1,
-	  tracesSampleRate: 0.1,
-	  // Capture Replay for no sessions by default
-	  replaysSessionSampleRate: 0.01,
-	  // plus for 1% of sessions with an error
-	  replaysOnErrorSampleRate: 0.01,
-	  // PII OFF
-	  sendDefaultPii: false, // Off by default but just in case.
-	  environment: "production",
+		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+		release: "galaxy-training-network@3a5225dd8dad00c5479fa12f0a4cfb7d88b0f9d6",
+		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+		sampleRate: 0.1,
+		tracesSampleRate: 0.1,
+		// Capture Replay for no sessions by default
+		replaysSessionSampleRate: 0.01,
+		// plus for 1% of sessions with an error
+		replaysOnErrorSampleRate: 0.01,
+		// PII OFF
+		sendDefaultPii: false, // Off by default but just in case.
+		environment: "production",
 	});
+}
+</script>
+
+<!-- Page view tracking -->
+<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+<script>
+if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
+	localStorage.removeItem("plausible_ignore")
+	console.log("Plausible: opt-in");
+} else {
+	// if they're opting-out, or DNT
+	// we might get one page by accident but we won't get future ones.
+	localStorage.setItem("plausible_ignore", "true")
 }
 </script>
 
@@ -76,8 +57,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699059106' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699059106' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1699125453' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1699125453' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -87,7 +68,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Mapping Jobs to Destinations using TPV">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-04-20 15:16:28 +0000">
+<meta name="DC.date" content="2023-11-02 15:43:45 +0000">
 <meta name="DC.creator" content="Nate Coraor">
 <meta name="DC.creator" content="Björn Grüning">
 <meta name="DC.creator" content="Nuwan Goonasekera">
@@ -131,7 +112,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-04-20 15:16:28 +0000",
+  "dateModified": "2023-11-02 15:43:45 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Mapping Jobs to Destinations using TPV",
   "interactivityType": "mixed",
@@ -345,7 +326,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1699125453'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -437,7 +418,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
 
 		<a href="/training-material/preferences.html" class="dropdown-item">
-			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Themes have moved <span class="badge badge-secondary">New</span>
+			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> User Preferences <span class="badge badge-secondary">New</span>
 		</a>
 
         <div class="dropdown-item">
@@ -518,7 +499,11 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge contributor-natefoo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/natefoo?s=36" alt="Avatar" width="36" height="36">Nate Coraor</a><a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bgruening?s=36" alt="Avatar" width="36" height="36">Björn Grüning</a><a href="/training-material/hall-of-fame/nuwang/" class="contributor-badge contributor-nuwang"><img src="https://avatars.githubusercontent.com/nuwang?s=36" alt="Avatar" width="36" height="36">Nuwan Goonasekera</a><a href="/training-material/hall-of-fame/mira-miracoli/" class="contributor-badge contributor-mira-miracoli"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/mira-miracoli?s=36" alt="Avatar" width="36" height="36">Mira Kuntz</a>
+			<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge contributor-natefoo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/natefoo?s=36" alt="Nate Coraor avatar" width="36" class="avatar" />
+    Nate Coraor</a><a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bgruening?s=36" alt="Björn Grüning avatar" width="36" class="avatar" />
+    Björn Grüning</a><a href="/training-material/hall-of-fame/nuwang/" class="contributor-badge contributor-nuwang"><img src="https://avatars.githubusercontent.com/nuwang?s=36" alt="Nuwan Goonasekera avatar" width="36" class="avatar" />
+    Nuwan Goonasekera</a><a href="/training-material/hall-of-fame/mira-miracoli/" class="contributor-badge contributor-mira-miracoli"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/mira-miracoli?s=36" alt="Mira Kuntz avatar" width="36" class="avatar" />
+    Mira Kuntz</a>
 		</td>
 	</tr>
 	
@@ -530,7 +515,9 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/afgane/" class="contributor-badge contributor-afgane"><img src="https://avatars.githubusercontent.com/afgane?s=36" alt="Avatar" width="36" height="36">Enis Afgan</a></td>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" />
+    Helena Rasche</a><a href="/training-material/hall-of-fame/afgane/" class="contributor-badge contributor-afgane"><img src="https://avatars.githubusercontent.com/afgane?s=36" alt="Enis Afgan avatar" width="36" class="avatar" />
+    Enis Afgan</a></td>
 	</tr>
 	
 
@@ -538,7 +525,9 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	<tr>
 		<td><abbr title="These people tested the tutorial to ensure it works correctly for students, or reported issues with the tutorial.">Tester(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/cat-bro/" class="contributor-badge contributor-cat-bro"><img src="https://avatars.githubusercontent.com/cat-bro?s=36" alt="Avatar" width="36" height="36">Catherine Bromhead</a></td>
+			<a href="/training-material/hall-of-fame/cat-bro/" class="contributor-badge contributor-cat-bro"><img src="https://avatars.githubusercontent.com/cat-bro?s=36" alt="Catherine Bromhead avatar" width="36" class="avatar" />
+    Catherine Bromhead</a><a href="/training-material/hall-of-fame/edmontosaurus/" class="contributor-badge contributor-edmontosaurus"><img src="https://avatars.githubusercontent.com/edmontosaurus?s=36" alt="Edwin den Haas avatar" width="36" class="avatar" />
+    Edwin den Haas</a></td>
 	</tr>
 	
 
@@ -811,7 +800,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
         </ul>
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Apr 20, 2023 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Nov 2, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             
@@ -1052,13 +1041,9 @@ And of course, Galaxy has an Ansible Role for that.</p>
 </code></pre></div>      </div>
     </li>
     <li>
-      <p>Run the Galaxy playbook. Because we modified the job configuration, Galaxy will be restarted to reread its config files.</p>
-
-      <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
-        <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
-</code></pre></div>        </div>
-      </blockquote>
+      <p>At this point we won’t run the modified playbook just yet. Because TPV itself has not yet been installed,
+the tpv_auto_lint role would fail at this point. So first, we’ll have to install and configure TPV itself before the
+linter can work.</p>
     </li>
   </ol>
 
@@ -1194,7 +1179,7 @@ destination is able to accept jobs greater than 1 core, TPV will automatically r
       <p>Run the Galaxy playbook.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1267,7 +1252,7 @@ We can also explicitly specify an <code class="language-plaintext highlighter-ro
       <p>Run the Galaxy playbook. When the new <code class="language-plaintext highlighter-rouge">tpv_rules_local.yml</code> is copied, TPV will automatically pickup the changes without requiring a restart of Galaxy.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1344,7 +1329,7 @@ any tools that exceed your cluster’s capabilities, and decide whether you want
       <p>Run the Galaxy playbook.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1400,7 +1385,7 @@ It is similarly possible to conditionally add job parameters, modify cores/mem/g
       <p>Run the Galaxy playbook to update the TPV rules.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1479,7 +1464,7 @@ This of course assumes that your users are well behaved enough not to choose the
      slow_query_log_threshold: 5
      enable_per_request_sql_debugging: true
 <span class="p">@@ -137,6 +146,8 @@</span> galaxy_config_templates:
-     dest: "{{ galaxy_config.galaxy.containers_resolvers_config_file }}"
+     dest: "{{ galaxy_config.galaxy.container_resolvers_config_file }}"
    - src: templates/galaxy/config/dependency_resolvers_conf.xml
      dest: "{{ galaxy_config.galaxy.dependency_resolvers_config_file }}"
 <span class="gi">+  - src: templates/galaxy/config/job_resource_params_conf.xml.j2
@@ -1577,7 +1562,7 @@ Note also that Python code-blocks can be multi-line, and that the final line mus
       <p>Run the Galaxy playbook to update the TPV rules.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1603,7 +1588,7 @@ Note also that Python code-blocks can be multi-line, and that the final line mus
 <p>The cores parameter can be verified from the output of the tool. The walltime can be verified with <code class="language-plaintext highlighter-rouge">scontrol</code>:</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-8"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
   <p>Your job number may be different.</p>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scontrol show job 24
 </code></pre></div>  </div>
@@ -1844,7 +1829,7 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fda9b45cc9a369125238666674b869418ac8d08e">fda9b45</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/3a5225dd8dad00c5479fa12f0a4cfb7d88b0f9d6">3a5225d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1872,11 +1857,7 @@ tools: []
 </footer>
 
 
-    </div>
-</footer>
-
-
-        <script src='/training-material/assets/js/bundle.main.js?v=1699059106'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1699125453'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
