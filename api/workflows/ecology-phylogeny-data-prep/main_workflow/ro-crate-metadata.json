@@ -19,7 +19,7 @@
     {
       "@id": "./",
       "@type": "Dataset",
-      "datePublished": "2023-11-06T00:55:07.736+00:00",
+      "datePublished": "2023-11-07T00:52:47.572+00:00",
       "mainEntity": {
         "@id": "main_workflow.ga"
       }
@@ -33,7 +33,7 @@
       ],
       "author": [
         {
-          "@id": "#5c6d2f07-2b4a-4040-9b4c-0186d868d864"
+          "@id": "#d0d82cb7-5246-4f0b-b337-aef04841390a"
         }
       ],
       "license": {
@@ -63,7 +63,7 @@
       "version": "23.1"
     },
     {
-      "@id": "#5c6d2f07-2b4a-4040-9b4c-0186d868d864",
+      "@id": "#d0d82cb7-5246-4f0b-b337-aef04841390a",
       "@type": "Person",
       "name": "Miguel Roncoroni"
     }
