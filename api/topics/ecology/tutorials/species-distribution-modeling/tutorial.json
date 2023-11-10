@@ -102,7 +102,7 @@
       ],
       "name": "Species Distribution Modeling With Wallace From GBIF - Training Material",
       "test_results": null,
-      "modified": "2023-11-09 00:51:58 +0000"
+      "modified": "2023-11-10 00:53:16 +0000"
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/species-distribution-modeling/tutorial.json",
