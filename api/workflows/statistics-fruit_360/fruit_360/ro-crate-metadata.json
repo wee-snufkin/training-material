@@ -19,7 +19,7 @@
     {
       "@id": "./",
       "@type": "Dataset",
-      "datePublished": "2023-11-10T00:53:18.036+00:00",
+      "datePublished": "2023-11-11T00:53:48.028+00:00",
       "mainEntity": {
         "@id": "fruit_360.ga"
       }
@@ -33,7 +33,7 @@
       ],
       "author": [
         {
-          "@id": "#2dbea316-f342-4195-bedd-586bd9cf7456"
+          "@id": "#5340daff-a24a-42e6-a9aa-f9b482966cde"
         }
       ],
       "license": {
@@ -63,7 +63,7 @@
       "version": "23.1"
     },
     {
-      "@id": "#2dbea316-f342-4195-bedd-586bd9cf7456",
+      "@id": "#5340daff-a24a-42e6-a9aa-f9b482966cde",
       "@type": "Person",
       "name": "Kaivan Kamali"
     }
