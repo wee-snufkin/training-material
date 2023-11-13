@@ -42,6 +42,9 @@ requirements:
     tutorials:
       - fair-intro
       - data-management
+   
+funding: 
+  - elixir-fair-data
 
 follow_up_training:
   - type: "internal"
