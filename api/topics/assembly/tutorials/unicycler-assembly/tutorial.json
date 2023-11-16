@@ -91,7 +91,7 @@
       ],
       "name": "Unicycler training",
       "test_results": null,
-      "modified": "2023-11-15 00:55:28 +0000"
+      "modified": "2023-11-16 00:54:22 +0000"
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/assembly/tutorials/unicycler-assembly/tutorial.json",
