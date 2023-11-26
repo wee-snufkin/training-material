@@ -19,7 +19,7 @@
     {
       "@id": "./",
       "@type": "Dataset",
-      "datePublished": "2023-11-25T00:51:26.089+00:00",
+      "datePublished": "2023-11-26T00:57:02.414+00:00",
       "mainEntity": {
         "@id": "workflow-plasmid-metagenomics-nanopore.ga"
       }
