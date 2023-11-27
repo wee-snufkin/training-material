@@ -114,7 +114,7 @@
       ],
       "name": "ml_classification",
       "test_results": null,
-      "modified": "2023-11-26 00:57:03 +0000"
+      "modified": "2023-11-27 00:54:52 +0000"
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/classification_machinelearning/tutorial.json",
