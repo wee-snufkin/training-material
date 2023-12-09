@@ -19,7 +19,7 @@
     {
       "@id": "./",
       "@type": "Dataset",
-      "datePublished": "2023-12-08T00:59:48.902+00:00",
+      "datePublished": "2023-12-09T00:53:26.325+00:00",
       "mainEntity": {
         "@id": "galaxy-workflow-tutorial_training_regionalgam_complete_workflow.ga"
       }
