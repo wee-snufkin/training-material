@@ -71,7 +71,7 @@
       ],
       "name": "GC MS using XCMS",
       "test_results": null,
-      "modified": "2023-12-09 00:53:27 +0000"
+      "modified": "2023-12-10 00:57:54 +0000"
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/metabolomics/tutorials/gc_ms_with_xcms/tutorial.json",

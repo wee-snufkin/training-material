@@ -69,7 +69,7 @@
       ],
       "name": "Clustering in Machine Learning",
       "test_results": null,
-      "modified": "2023-12-09 00:53:28 +0000"
+      "modified": "2023-12-10 00:57:55 +0000"
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/clustering_machinelearning/tutorial.json",
@@ -107,11 +107,7 @@
       }
     ],
     "inexact": [
-      {
-        "url": "https://usegalaxy.fr/",
-        "name": "UseGalaxy.fr",
-        "usegalaxy": "true"
-      }
+
     ]
   },
   "topic_name_human": "Statistics and machine learning",

@@ -125,7 +125,7 @@
       ],
       "name": "Compute and analyze biodiversity metrics with PAMPA toolsuite",
       "test_results": null,
-      "modified": "2023-12-09 00:53:26 +0000"
+      "modified": "2023-12-10 00:57:53 +0000"
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/ecology/tutorials/PAMPA-toolsuite-tutorial/tutorial.json",
@@ -156,11 +156,6 @@
       }
     ],
     "inexact": [
-      {
-        "url": "https://usegalaxy.fr/",
-        "name": "UseGalaxy.fr",
-        "usegalaxy": "true"
-      },
       {
         "url": "https://usegalaxy.org.au",
         "name": "UseGalaxy.org.au",
