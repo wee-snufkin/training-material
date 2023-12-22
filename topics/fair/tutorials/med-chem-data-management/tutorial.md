@@ -82,7 +82,18 @@ The rule of thumb developed back in 1997 by Christopher Lipinski and colleagues 
 
 Read more about re-assessing the rule of 5: {% cite Mullard2018 %}.
 
-Those are the properties that the compounds can be easily searched by if all the information is included in the database. However, nowadays there are more and more drugs being developed which don’t comply with those rules and regardless are still an effective drugs. “We are in danger of repeating our past mistakes if we assume these new modalities are not 'drug-like' and cannot be oral drugs because they are not [rule of 5] compliant,” writes Shultz. [1] Therefore, there is a need of assessing other molecular properties. This is one of the reasons why new repositories are being developed – they are more specific and gather particular properties of interest [EXAMPLE?]. 
+However, nowadays there are more and more drugs being developed which don’t comply with those rules and regardless are still effective. There are voices from the scientific community, pointing out that “We are in danger of repeating our past mistakes if we assume these new modalities are not 'drug-like' and cannot be oral drugs because they are not [rule of 5] compliant” (Michael Shultz from Novartis {% cite Mullard2018 %}). Then, in {% cite OHagan2014 %} we read "This famous "rule of 5" has been highly influential in this regard, but only about 50 % of orally administered new chemical entities actually obey it." 
+
+
+## Veber's rule
+
+In addition to the rule of 5, there are also other criteria, one of which is the Veber's rule, which helps to predict good oral bioavailability based on:
+- 10 or fewer rotatable bonds
+- Polar surface area no greater than 140 Å <sup>2</sup>
+
+
+# FAIR MedChem
+Those are the properties that the compounds can be easily searched by if all the information is included in the database. There is a need of assessing other molecular properties. This is one of the reasons why new repositories are being developed – they are more specific and gather particular properties of interest [EXAMPLE?]. 
 How much easier the life of scientists could be if the relevant data was publicly available, well-ordered and contained the needed metadata? By submitting the data with necessary information to the repository is a good way to make the data FAIR. This will make it:
 - **F**indable, as the data will be given specific identifiers
 - **A**ccessible, as the data will be available online, open and free where possible
@@ -90,7 +101,7 @@ How much easier the life of scientists could be if the relevant data was publicl
 -	**R**eusable, as the data will be released under a license with detailed provenance
 In the repositories 
 
-## Verber's rule
+
 
 # Chemical and pharmacological databases
 
@@ -110,7 +121,7 @@ There are many more databases available, and many are still being developed. The
 
 | Database | Description | Size (as of 29 October 2019) |
 |:---:|:---:|:---:|
-| [Enamine REAL Database](https://enamine.net/hit-finding/compound-collections/real-database) | Tool used to find new hit molecules using largescale virtual screening   and for searching analogs to hit molecules | >700 million compounds that comply with ‘rule of 5’ and Verber   criteria |
+| [Enamine REAL Database](https://enamine.net/hit-finding/compound-collections/real-database) | Tool used to find new hit molecules using largescale virtual screening   and for searching analogs to hit molecules | >700 million compounds that comply with ‘rule of 5’ and Veber   criteria |
 | [ZINC](http://zinc.docking.org/) | Contains compound information including 2D/3D structure, purchasability,   target, and biologyrelated information | >230 million compounds in 3D formats and >750 million compounds for   analogsearching |
 | [PubChem](https://pubchem.ncbi.nlm.nih.gov) | Contains chemical molecule (mostly small molecule) information, including   chemical structures, identifiers, chemical and physical properties,   biological activities, safety and toxicity data | 97 million compounds, 236 million substances, 268 million bioactivities |
 | [ChemSpider](www.chemspider.com) | Free chemical structure database providing fast access to >78 million   structures, properties, and associated information | >78 million compound structures |
