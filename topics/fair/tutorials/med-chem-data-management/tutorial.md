@@ -78,7 +78,10 @@ The rule of thumb developed back in 1997 by Christopher Lipinski and colleagues 
 -	The molecular mass is less than 500
 -	calculated logarithm of the octanol−water partition coefficient (clogP) is less than 5
 -	they have up to 5 H-bond donors
--	they have up to 10 H-bond acceptors 
+-	they have up to 10 H-bond acceptors
+
+Read more about re-assessing the rule of 5: {% cite Mullard2018 %}.
+
 Those are the properties that the compounds can be easily searched by if all the information is included in the database. However, nowadays there are more and more drugs being developed which don’t comply with those rules and regardless are still an effective drugs. “We are in danger of repeating our past mistakes if we assume these new modalities are not 'drug-like' and cannot be oral drugs because they are not [rule of 5] compliant,” writes Shultz. [1] Therefore, there is a need of assessing other molecular properties. This is one of the reasons why new repositories are being developed – they are more specific and gather particular properties of interest [EXAMPLE?]. 
 How much easier the life of scientists could be if the relevant data was publicly available, well-ordered and contained the needed metadata? By submitting the data with necessary information to the repository is a good way to make the data FAIR. This will make it:
 - **F**indable, as the data will be given specific identifiers
@@ -91,13 +94,15 @@ In the repositories
 
 # Chemical and pharmacological databases
 
-Currently there are lots of publicly available databases storing information about hit molecules, chemical structures and properties, drug targets, pharmaceuticals… 
+Currently there are lots of publicly available databases storing information about hit molecules, chemical structures and properties, drug targets, pharmaceuticals… In the recent paper {% cite Zhao2020 %} the authors collated relevant databases to advance computer-aided drug discovery and divided them into several main groups:
 - Chemical collections
 - Drug / drug-like compounds
 - Drug targets, including genomics and proteomics data
 - Biological data from assay screening, metabolism, efficacy studies
 - Drug liabilities and toxicities
 - Clinical databases
+
+Below you will find the databases listed under corresponding categoories, all taken from {% cite Zhao2020 %} paper. 
 
 There are many more databases available, and many are still being developed. They are often quite specific and contain certain types of compounds (eg. PROTACS) or are aimed at particular disease. If the listed databases are not specific enough for your research, you can try luck by searching smaller, more specific databases. 
 
