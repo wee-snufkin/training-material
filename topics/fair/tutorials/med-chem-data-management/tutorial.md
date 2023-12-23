@@ -50,30 +50,20 @@ follow_up_training:
 ---
 
 # Introduction 
-The development of medicinal chemistry is more and more advancing. Big pharmaceutical companies, research institutes and universities are working on ground-breaking solutions to help patients combat all kinds of diseases. During that development process, tons of data are generated – not only from the lab environment but also from clinical trials. Given that the discovery of more potent, safer and cheaper drugs is the ultimate goal of all research bodies, we should all focus on making the data we gather FAIR: Findable, Accessible, Interoperable, and Reusable to push the boundaries of drug development even further. 
+The development of medicinal chemistry is more and more advancing. Big pharmaceutical companies, research institutes and universities are working on ground-breaking solutions to help patients combat all kinds of diseases. During that development process, tons of data are generated – not only from the lab environment but also from clinical trials. Given that the discovery of more potent, safer and cheaper drugs is the ultimate goal of all research bodies, we should all focus on making the data we gather FAIR: **F**indable, **A**ccessible, **I**nteroperable, and **R**eusable to push the boundaries of drug development even further. 
 
-With the currently available methods such as artificial intelligence, machine learning, many toolkits, software and access to various databases, it seems that managing big data is now inherently linked to medicinal chemistry and hence ensures that this area is as efficient as it can be. 
+With the currently available methods such as artificial intelligence, machine learning, many toolkits, software and access to various databases, managing big data is now inherently linked to medicinal chemistry and helps to make this area as efficient as it can be. 
 
 
 # Principles of medicinal chemistry research
 
 ## Drug likeliness
-
-## Ten Vs of big data for drug discovery
-Volume: size of data. 
-Velocity: speed of new data generation. 
-Variety: various formats of data. 
-Veracity: quality of data. 
-Validity: authenticity of data. 
-Vocabulary: terminology of data. 
-Venue: platform of data generation. 
-Visualization: view of data. 
-Volatility: duration of data usefulness. 
-Value: potential of data usefulness to reduce the cost of drug discovery and development.
+There are many factors that medicinal chemists take into account while designing new drugs. It is essential to estimate the properties of the molecule before syntesisng it in the lab, so the structures of drug candidates are usually compared to the existing drugs by so-called drug-likeness. This includes
+intrinsic properties of a compound that will lead to favourable ADME (absorption, distribution, metabolism and excretion) characteristics. The combination of those make 
 
 
 ## The Lipinski rule of 5
-There are many factors that medicinal chemists take into account while designing new drugs. 
+
 The rule of thumb developed back in 1997 by Christopher Lipinski and colleagues tries to predict the likelihood that a given small molecule can be orally active. This Lipinski rule of 5 favours molecules as potential oral drug candidates if:
 -	The molecular mass is less than 500
 -	calculated logarithm of the octanol−water partition coefficient (clogP) is less than 5
@@ -92,7 +82,21 @@ In addition to the rule of 5, there are also other criteria, one of which is the
 - Polar surface area no greater than 140 Å <sup>2</sup>
 
 
-# FAIR MedChem
+# Big data for drug discovery
+
+## Ten Vs of big data for drug discovery
+Volume: size of data. 
+Velocity: speed of new data generation. 
+Variety: various formats of data. 
+Veracity: quality of data. 
+Validity: authenticity of data. 
+Vocabulary: terminology of data. 
+Venue: platform of data generation. 
+Visualization: view of data. 
+Volatility: duration of data usefulness. 
+Value: potential of data usefulness to reduce the cost of drug discovery and development.
+
+## FAIR MedChem
 Those are the properties that the compounds can be easily searched by if all the information is included in the database. There is a need of assessing other molecular properties. This is one of the reasons why new repositories are being developed – they are more specific and gather particular properties of interest [EXAMPLE?]. 
 How much easier the life of scientists could be if the relevant data was publicly available, well-ordered and contained the needed metadata? By submitting the data with necessary information to the repository is a good way to make the data FAIR. This will make it:
 - **F**indable, as the data will be given specific identifiers
