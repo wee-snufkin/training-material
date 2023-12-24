@@ -57,10 +57,30 @@ With the currently available methods such as artificial intelligence, machine le
 
 # Principles of medicinal chemistry research
 
-## Drug likeliness
-There are many factors that medicinal chemists take into account while designing new drugs. It is essential to estimate the properties of the molecule before syntesisng it in the lab, so the structures of drug candidates are usually compared to the existing drugs by so-called drug-likeness. This includes
-intrinsic properties of a compound that will lead to favourable ADME (absorption, distribution, metabolism and excretion) characteristics. The combination of those make 
+## Drug-likeness
+There are many factors that medicinal chemists take into account while designing new drugs. It is essential to estimate the properties of the molecule before syntesisng it in the lab, so the structures of drug candidates are usually compared to the existing drugs by so-called drug-likeness. This includes intrinsic properties of a compound that will lead to favourable ADME (absorption, distribution, metabolism and excretion) characteristics. Below are some properties usually assessed:
+- Lipophilicity
+- Size
+- Polarity
+- Insolubility
+- Insaturation
+- Flexibility
 
+Additionally, there have been some rules developed to help estimate drug-likeness, amongst which:
+- Lipinski rule
+- Ghose rule
+- Veber rule
+- Egan rule
+- Muegge rule
+- Abbott bioavailability score
+
+<!---
+refs?
+-->
+
+As you see, the number of characteristics to consider before even synthesising the molecule is huge. One of the tools that helps to summarise all the most important information about intrinsic properties and drug-likeness of compounds is called [SwissADME](http://www.swissadme.ch/) and is a free web tool to evaluate pharmacokinetics, drug-likeness and medicinal chemistry friendliness of small molecules ({% cite Daina2017 %}). 
+
+Below we briefly discuss two probably the most well-known rules: Lipinski's and Veber's.
 
 ## The Lipinski rule of 5
 
@@ -104,7 +124,6 @@ How much easier the life of scientists could be if the relevant data was publicl
 -	**I**nteroperable, as the repository will often enforce the use of formalised, consistent language
 -	**R**eusable, as the data will be released under a license with detailed provenance
 In the repositories 
-
 
 
 # Chemical and pharmacological databases
