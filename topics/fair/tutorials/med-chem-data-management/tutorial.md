@@ -164,7 +164,7 @@ There are many more databases available, and many are still being developed. The
 | [ChEMBL](www.ebi.ac.uk/chembl) | Manually curated database of bioactive molecules with drug-like   properties; brings together chemical, bioactivity, and genomic data to aid   translation of genomic information into effective new drugs. | >1.9 million compounds, 1.1 million pieces of assay information |
 | [TCM-Mesh](http://mesh.tcm.microbioinformatics.org/) | Integration of a database and a data-mining system for network   pharmacology analysis of all respects of traditional Chinese medicine,   including herbs, herbal ingredients, targets, related diseases, adverse   effect, and toxicity | 383 840 compounds, 6235 herbs |
 | [Super Natural II](http://bioinf-applied.charite.de/supernatural_new/index.php) | Contains natural compounds, including information about corresponding 2D   structures, physicochemical properties, predicted toxicity class and   potential vendors | 325 508 natural compounds |
-| [BIAdb](https://webs.iiitd.edu.in/raghava/biadb/index.html) | Comprehensive database of benzylisoquinoline alkaloids, containing   information about 846 unique benzylisoquinoline alkaloids | ~846 unique benzylisoquinoline alkaloids |
+| [BIAdb](https://webs.iiitd.edu.in/raghava/biadb/index.html) | Comprehensive database of benzylisoquinoline alkaloids, containing   information about 846 unique benzylisoquinoline alkaloids | ~846 unique benzylisoquinoline alkaloids |
 
 ## Drug / drug-like compounds
 
@@ -234,6 +234,21 @@ There are many more databases available, and many are still being developed. The
 | [Exposome-Explorer](http://exposome-explorer.iarc.fr/) | Contains detailed information on nature of biomarkers, populations and   subjects where measured, samples analyzed, methods used for biomarker   analyses, concentrations in biospecimens, correlations with external exposure   measurements, and biological reproducibility over time | 908 biomarkers |
 | [PharmaGKB](www.pharmgkb.org/) | A pharmacogenomics knowledge resource that encompasses clinical   information about drug molecules | 733 drugs with their clinical information |
 
+
 # Data management in chemistry using Galaxy
+
+## Chemical file formats
+
+Depending on the type of analysis you are going to perform, you will work with different file formats. Here are the most important data types, commonly used in cheminformatics:
+- SDF (.sd, .sdf) - stands for Structure-Data Format, and SDF files actually wrap the molfile (MDL Molfile) format. Stores information about the chemical structure and associated data of compounds in plain text. Files in SDF format can encode single or multiple molecules that are then delimited by lines consisting of four dollar signs ($$$$). SDF files are formatted ASCII files that store information about the positions of the individual atoms (either in 2D or 3D space) that make up the molecule. The data on connectivity and hybridization state are also encoded, although their use is less frequent and often inconsistent.
+- MOL (.mol) - an MDL Molfile for holding information about the atoms, bonds, connectivity and coordinates of a molecule. 
+- MOL2 (.mol2) - a Tripos Mol2 file is a complete, portable representation of a SYBYL molecule. It is an ASCII file which contains all the information needed to
+reconstruct a SYBYL molecule
+- CML (.cml) - Chemical Markup Language (ChemML or CML) is an approach to managing molecular information using tools such as XML and Java. It supports a wide range of chemical concepts including: molecules, reactions, spectra and analytical data, computational chemistry, chemical crystallography and materials
+- InChI (IUPAC International Chemical Identifier) - a textual identifier for chemical substances, designed to provide a standard way to encode molecular information. The identifiers describe chemical substances in terms of layers of information — the atoms and their bond connectivity, tautomeric information, isotope information, stereochemistry, and electronic charge information ({% cite Heller2015 %})
+- SMILES (.smi) - the **s**implified **m**olecular-**i**nput **l**ine-**e**ntry **s**ystem (SMILES) is a specification in the form of a line notation for describing the structure of chemical species using short ASCII strings. A linear text format which can describe the connectivity and chirality of a molecule ({% cite Weininger1988 %}) 
+- PDB - the Protein Data Bank (PDB) file format is a textual file format describing the three-dimensional structures of molecules held in the [Protein Data Bank](https://www.rcsb.org/), now succeeded by the mmCIF format. It contains description and annotation of protein and nucleic acid structures including atomic coordinates, secondary structure assignments, as well as atomic connectivity. In addition experimental metadata is stored. ({% cite Berman2007 %})
+- GRO (.gro) - a plain text file storing spatial coordinates and velocities (if available) of atoms during a molecular dynamics simulation, utilised by [GROMACS](https://manual.gromacs.org/archive/5.0.3/online/gro.html)
+
 
 # Looking into the future: data-driven medicinal chemistry
