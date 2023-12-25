@@ -239,7 +239,7 @@ There are many more databases available, and many are still being developed. The
 
 ## Chemical file formats
 
-Depending on the type of analysis you are going to perform, you will work with different file formats. Here are the most important data types, commonly used in cheminformatics:
+Depending on the type of analysis you are going to perform, you will work with different file formats. Below are the most important data types, commonly used in cheminformatics, that you will likely see in Galaxy:
 - SDF (.sd, .sdf) - stands for Structure-Data Format, and SDF files actually wrap the molfile (MDL Molfile) format. Stores information about the chemical structure and associated data of compounds in plain text. Files in SDF format can encode single or multiple molecules that are then delimited by lines consisting of four dollar signs ($$$$). SDF files are formatted ASCII files that store information about the positions of the individual atoms (either in 2D or 3D space) that make up the molecule. The data on connectivity and hybridization state are also encoded, although their use is less frequent and often inconsistent.
 - MOL (.mol) - an MDL Molfile for holding information about the atoms, bonds, connectivity and coordinates of a molecule. 
 - MOL2 (.mol2) - a Tripos Mol2 file is a complete, portable representation of a SYBYL molecule. It is an ASCII file which contains all the information needed to
@@ -250,5 +250,24 @@ reconstruct a SYBYL molecule
 - PDB - the Protein Data Bank (PDB) file format is a textual file format describing the three-dimensional structures of molecules held in the [Protein Data Bank](https://www.rcsb.org/), now succeeded by the mmCIF format. It contains description and annotation of protein and nucleic acid structures including atomic coordinates, secondary structure assignments, as well as atomic connectivity. In addition experimental metadata is stored. ({% cite Berman2007 %})
 - GRO (.gro) - a plain text file storing spatial coordinates and velocities (if available) of atoms during a molecular dynamics simulation, utilised by [GROMACS](https://manual.gromacs.org/archive/5.0.3/online/gro.html)
 
+## Galaxy tools 
+
+In Galaxy Chemical Toolbox there are dozens of tools that can be used for various analyses. Below we will only show a few, mostly related to data import, format conversion and some functions linked to what was discussed previously. 
+
+> <hands-on-title></hands-on-title>
+>
+> 1. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+>    - {% icon param-file %} *"Annotated data matrix"*: `Annotated_AnnData`
+>    - *"What to inspect?"*: `Key-indexed observations annotation (obs)`
+> 2. Rename {% icon galaxy-pencil %} the observations annotation `Extracted cell annotations (obs)`
+>
+> 3. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+>    - {% icon param-file %} *"Annotated data matrix"*: `Annotated_AnnData`
+>    - *"What to inspect?"*: `Key-indexed annotation of variables/features (var)`
+>
+> 4. Rename {% icon galaxy-pencil %} the annotation of variables `Extracted gene annotations (var)`
+>
+>
+{: .hands_on}
 
 # Looking into the future: data-driven medicinal chemistry
