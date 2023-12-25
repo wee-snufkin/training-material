@@ -58,7 +58,7 @@ With the currently available methods such as artificial intelligence, machine le
 # Principles of medicinal chemistry research
 
 ## Drug-likeness
-There are many factors that medicinal chemists take into account while designing new drugs. It is essential to estimate the properties of the molecule before syntesisng it in the lab, so the structures of drug candidates are usually compared to the existing drugs by so-called drug-likeness. This includes intrinsic properties of a compound that will lead to favourable ADME (absorption, distribution, metabolism and excretion) characteristics. Below are some properties usually assessed:
+There are many factors that medicinal chemists take into account while designing new drugs. It is essential to estimate the properties of the molecule before syntesisng it in the lab, so the structures of drug candidates are usually compared to the existing drugs by so-called drug-likeness. This includes intrinsic properties of a compound that will lead to favourable ADMET (**A**bsorption, **D**istribution, **M**etabolism, **E**xcretion, **T**oxicity) characteristics. Below are some properties usually assessed:
 - Lipophilicity
 - Size
 - Polarity
@@ -104,17 +104,29 @@ In addition to the rule of 5, there are also other criteria, one of which is the
 
 # Big data for drug discovery
 
+Have you ever wondered how new drugs are developed? It is actually quite a long and complex pathway and not only takes lots of time, but also resources. The scheme below will help you understand the scale of that process.
+
+![A scheme showing drug discovery pipeline: starting from target identification, hit, lead, lead optimisation, pre-clinical testing, clinical evaluation in phases I - III, and finaly regulatory approval. Lead optimisation also includes iterative steps of designing, making, testing and analysing the proposed compounds.](../../images/X.png "A scheme showing drug discovery pipeline")
+
+As you can see, to get just one drug to the market, often thousands of structures are assessed to find the most effective and safe compound. That's lots of information being generated in the whole process! The information can be stored in repositories and databases so that subsequent drug discovery process in a similar area is easier, faster and cheaper. Managing big data and using machine learning and computational chemistry methods is crucial in lead optimisation step. By reviewing chemical databases and studying molecular docking simulations, we can save much time and resources to synthesise only those compounds that are the most promising based on *in-silico* methods. Even after synthesising the optimised 'leads', we still get lots of data from tests and analyses. By using appropriate cheminformatic tools and software, we can use the results to drive forward this iterative process of lead optimisation.
+
+
 ## Ten Vs of big data for drug discovery
-Volume: size of data. 
-Velocity: speed of new data generation. 
-Variety: various formats of data. 
-Veracity: quality of data. 
-Validity: authenticity of data. 
-Vocabulary: terminology of data. 
-Venue: platform of data generation. 
-Visualization: view of data. 
-Volatility: duration of data usefulness. 
-Value: potential of data usefulness to reduce the cost of drug discovery and development.
+
+Hopefully now you have an idea of how the process of drug discovery looks like. To understand why managing data in medicinal chemistry is so challanging, let's have a closer look at "Ten Vs" {% cite Zhao2020 %} of big data:
+
+- **V**olume: size of data. 
+- **V**elocity: speed of new data generation. 
+- **V**ariety: various formats of data. 
+- **V**eracity: quality of data. 
+- **V**alidity: authenticity of data. 
+- **V**ocabulary: terminology of data. 
+- **V**enue: platform of data generation. 
+- **V**isualization: view of data. 
+- **V**olatility: duration of data usefulness. 
+- **V**alue: potential of data usefulness to reduce the cost of drug discovery and development.
+
+It is important that medicinal chemists keep in mind those features while both searching for data and publishing it. In this way we can focus on the main aspects of data management, try to improve the availability and normalisation of data, and be aware of limitations of repositories and inconsistencies in data quality. 
 
 ## FAIR MedChem
 Those are the properties that the compounds can be easily searched by if all the information is included in the database. There is a need of assessing other molecular properties. This is one of the reasons why new repositories are being developed – they are more specific and gather particular properties of interest [EXAMPLE?]. 
