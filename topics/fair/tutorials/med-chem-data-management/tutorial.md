@@ -250,24 +250,41 @@ reconstruct a SYBYL molecule
 - PDB - the Protein Data Bank (PDB) file format is a textual file format describing the three-dimensional structures of molecules held in the [Protein Data Bank](https://www.rcsb.org/), now succeeded by the mmCIF format. It contains description and annotation of protein and nucleic acid structures including atomic coordinates, secondary structure assignments, as well as atomic connectivity. In addition experimental metadata is stored. ({% cite Berman2007 %})
 - GRO (.gro) - a plain text file storing spatial coordinates and velocities (if available) of atoms during a molecular dynamics simulation, utilised by [GROMACS](https://manual.gromacs.org/archive/5.0.3/online/gro.html)
 
+If you plan to work with molecular dynamics simulations, there are also some MD trajectory file formats that you might want to get familiar with. In Galaxy, you can convert between  xtc, trr, dcd and netcdf files using a tool called {% tool [MDTraj file converter](toolshed.g2.bx.psu.edu/repos/chemteam/md_converter/md_converter/1.9.6+galaxy0) %}.
+
 ## Galaxy tools 
 
 In Galaxy Chemical Toolbox there are dozens of tools that can be used for various analyses. Below we will only show a few, mostly related to data import, format conversion and some functions linked to what was discussed previously. 
 
-> <hands-on-title></hands-on-title>
+> <hands-on-title>Import PDB file from  Protein Data Bank</hands-on-title>
 >
-> 1. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Annotated data matrix"*: `Annotated_AnnData`
->    - *"What to inspect?"*: `Key-indexed observations annotation (obs)`
-> 2. Rename {% icon galaxy-pencil %} the observations annotation `Extracted cell annotations (obs)`
->
-> 3. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
->    - {% icon param-file %} *"Annotated data matrix"*: `Annotated_AnnData`
->    - *"What to inspect?"*: `Key-indexed annotation of variables/features (var)`
->
-> 4. Rename {% icon galaxy-pencil %} the annotation of variables `Extracted gene annotations (var)`
->
+> 1. Open [Protein Data Bank](https://www.rcsb.org/)
+> 2. Type your search term in the box *"Enter search term(s), Entry ID(s), or sequence"*: `MAO B`
+> ![A screenshot showing a search box in the upper right corner of the Protein Data Bank website.](../../images/pdb_search.jpg "Search box of the Protein Data Bank")
+> 3. Choose the structure of interest and copy its accession code: 2BK3
+> ![A screenshot showing some of the resulting structures with their accession codes.](../../images/pdb_results.jpg "How to get accession code of the resulting structures.")
+> 4. Switch to Galaxy
+> 5. {% tool [Get PDB file](toolshed.g2.bx.psu.edu/repos/bgruening/get_pdb/get_pdb/0.1.0) %} with the following parameters:
+>    - *"PDB accession code"*: `2BK3`
 >
 {: .hands_on}
+
+
+> <hands-on-title>Convert the file format</hands-on-title>
+>
+> 1. {% tool [Compound conversion](toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0) %} with the following parameters:
+>    - {% icon param-file %} *"Molecular input file"*: output of **Get PDB file** {% icon tool %}
+>    - *"Output format"* - you have many options to choose from! Not only the formats but also the associated parameters. Just scroll the list and pick the one that is relevant to your downstream analysis. For demonstration purposes here we use `MDL MOL format (sdf, mol)`
+>
+{: .hands_on}
+
+
+> <hands-on-title>Estimate the drug-likeness</hands-on-title>
+>
+> 1. {% tool [Drug-likeness](toolshed.g2.bx.psu.edu/repos/bgruening/qed/ctb_silicos_qed/2021.03.4+galaxy0) %} with the following parameters:
+>    - {% icon param-file %} *"Molecule data in SDF or SMILES format"*: 
+>
+{: .hands_on}
+
 
 # Looking into the future: data-driven medicinal chemistry
