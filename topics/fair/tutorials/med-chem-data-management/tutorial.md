@@ -286,5 +286,20 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 >
 {: .hands_on}
 
+> <hands-on-title>Estimate the drug-likeness</hands-on-title>
+>
+> 1. {% tool [Search ChEMBL database](toolshed.g2.bx.psu.edu/repos/bgruening/chembl/chembl/0.10.1+galaxy4) %} with the following parameters:
+>    - {% icon param-file %} *"Molecule data in SDF or SMILES format"*: 
+>
+{: .hands_on}
+
+
+> <hands-on-title>Visualisation of compounds</hands-on-title>
+>
+> 1. {% tool [Visualisation](toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_svg_depiction/openbabel_svg_depiction/3.1.1+galaxy0) %} with the following parameters:
+>    - {% icon param-file %} *"Molecule data in SDF or SMILES format"*: 
+>
+{: .hands_on}
+
 
 # Looking into the future: data-driven medicinal chemistry
