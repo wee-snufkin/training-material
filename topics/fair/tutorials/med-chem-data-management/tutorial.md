@@ -256,6 +256,7 @@ If you plan to work with molecular dynamics simulations, there are also some MD 
 
 In Galaxy Chemical Toolbox there are dozens of tools that can be used for various analyses. Below we will only show a few, mostly related to data import, format conversion and some functions linked to what was discussed previously. 
 
+
 > <hands-on-title>Import PDB file from  Protein Data Bank</hands-on-title>
 >
 > 1. Open [Protein Data Bank](https://www.rcsb.org/)
@@ -270,21 +271,80 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 {: .hands_on}
 
 
+> <hands-on-title>Import SMILES</hands-on-title>
+>
+> 1. Copy SMILES of your molecule(s) of interest. In this example we use benzenesulfonyl chloride (SMILES: C1=CC=C(C=C1)S(=O)(=O)Cl) and ethylamine (SMILES: CCN).
+> 2. Click on **" {% icon galaxy-upload %} Upload data"** button in the tools panel on the left hand side.
+> 3. Click on **" {% icon galaxy-wf-edit %} Paste/Fetch data"** button twice. Two boxes will appear.
+> 4. In the first box, under **"Name"** section, enter `benzenesulfonyl_chloride` and under **"Type"**: `smi`
+> 5. Below paste the SMILES of benzenesulfonyl chloride: `C1=CC=C(C=C1)S(=O)(=O)Cl`
+> 6. In the second box, under **"Name"** section, enter `ethylamine` and under **"Type"**: `smi`
+> 7. Below paste the SMILES of ethylamine: `CCN`
+> 8. Click **"Start"** button, then close the dialog box. Your files are being added to your history!
+>    
+{: .hands_on}
+
+
 > <hands-on-title>Convert the file format</hands-on-title>
 >
 > 1. {% tool [Compound conversion](toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Molecular input file"*: output of **Get PDB file** {% icon tool %}
->    - *"Output format"* - you have many options to choose from! Not only the formats but also the associated parameters. Just scroll the list and pick the one that is relevant to your downstream analysis. For demonstration purposes here we use `MDL MOL format (sdf, mol)`
+>    - {% icon param-files %} *"Molecular input file"*: click on {% icon param-files %} *Multiple datasets* icon and choose both `benzenesulfonyl_chloride` and `ethylamine`
+>    - *"Output format"* - you have many options to choose from! Not only the formats but also the associated parameters. Just scroll the list and pick the one that is relevant to your downstream analysis. Here we use `MDL MOL format (sdf, mol)`
+> 2. Rename {% icon galaxy-pencil %} the corresponding files `benzenesulfonyl_chloride_sdf` and `ethylamine_sdf`. Make sure to check either the starting dataset numbers or the atoms in the file in order not to confuse the two files! 
 >
 {: .hands_on}
 
+
+> <hands-on-title>Run the reaction</hands-on-title>
+>
+> 1. {% tool [Reaction maker](toolshed.g2.bx.psu.edu/repos/bgruening/ctb_im_rxn_maker/ctb_im_rxn_maker/1.1.4+galaxy0) %} with the following parameters:
+>    - {% icon param-file %} *"Input file"*: `benzenesulfonyl_chloride_sdf`
+>    - *"Reagent options"*: Sulfonamide
+>    - {% icon param-file %} *"Reagent file"*: `ethylamine_sdf`
+>
+{: .hands_on}
+
+> <tip-title> {% icon tool %} **Reaction maker** works also with SMILES!</tip-title>
+>
+> 
+>
+{: .tip} 
+
+> <details-title>Which reations I can run using this tool?</details-title>
+>
+> 
+>
+{: .details}
+
+
+The output is the *.txt* logfile and the SDF file with the product molecule. If you have a look at that file, you'll see that there is just a list of atoms with their corresponding coordinates. To draw the resulting structure, we can use another tool.
+
+> <hands-on-title>Visualisation of compounds</hands-on-title>
+>
+> 1. {% tool [Visualisation](toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_svg_depiction/openbabel_svg_depiction/3.1.1+galaxy0) %} with the following parameters:
+>    - {% icon param-file %} *"Molecular input file"*: `SDF output for Reaction maker`
+>    - *"Property to display under the molecule"* - there are many properties that you can choose from! Please note that sometimes if not enough information is provided, then the property might not be displayed. Let's choose basic but useful property: `Molecular weight`
+>    - *"Format of the resulting picture"*: `SVG`
+>
+{: .hands_on}
+
+Since we spoke about the drug-likeness in the previous section, let's see how it works in practice, on the example of our "synthesised" molecule.
 
 > <hands-on-title>Estimate the drug-likeness</hands-on-title>
 >
 > 1. {% tool [Drug-likeness](toolshed.g2.bx.psu.edu/repos/bgruening/qed/ctb_silicos_qed/2021.03.4+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Molecule data in SDF or SMILES format"*: 
+>    - {% icon param-file %} *"Molecule data in SDF or SMILES format"*: `SDF output for Reaction maker`
+>    - *"Method"* - two possible methods to weight the features are available - one based on max. weight (QEDw,max), the other on mean weight (QEDw,mo). There is also an option to leave features unweighted (QEDw,u) and we'll choose this one: `unweighted (QEDw,u)`
+>    - *"Include the descriptor names as header"*: {% icon param-toggle %} `Yes`
 >
 {: .hands_on}
+
+> <details-title>What are the assessed properties?</details-title>
+>
+> The eight properties used are: molecular weight (MW), octanol–water partition coefficient (ALOGP), number of hydrogen bond donors (HBDs), number of hydrogen bond acceptors (HBAs), molecular polar surface area (PSA), number of rotatable bonds (ROTBs), number of aromatic rings (AROMs) and number of structural alerts (ALERTS).
+>
+{: .details}
+
 
 > <hands-on-title>Estimate the drug-likeness</hands-on-title>
 >
@@ -293,13 +353,6 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 >
 {: .hands_on}
 
-
-> <hands-on-title>Visualisation of compounds</hands-on-title>
->
-> 1. {% tool [Visualisation](toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_svg_depiction/openbabel_svg_depiction/3.1.1+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Molecule data in SDF or SMILES format"*: 
->
-{: .hands_on}
 
 
 # Looking into the future: data-driven medicinal chemistry
