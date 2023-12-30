@@ -276,9 +276,9 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 > 1. Copy SMILES of your molecule(s) of interest. In this example we use benzenesulfonyl chloride (SMILES: C1=CC=C(C=C1)S(=O)(=O)Cl) and ethylamine (SMILES: CCN).
 > 2. Click on **" {% icon galaxy-upload %} Upload data"** button in the tools panel on the left hand side.
 > 3. Click on **" {% icon galaxy-wf-edit %} Paste/Fetch data"** button twice. Two boxes will appear.
-> 4. In the first box, under **"Name"** section, enter `benzenesulfonyl_chloride` and under **"Type"**: `smi`
+> 4. In the first box, under **"Name"** section, enter `Benzenesulfonyl chloride` and under **"Type"**: `smi`
 > 5. Below paste the SMILES of benzenesulfonyl chloride: `C1=CC=C(C=C1)S(=O)(=O)Cl`
-> 6. In the second box, under **"Name"** section, enter `ethylamine` and under **"Type"**: `smi`
+> 6. In the second box, under **"Name"** section, enter `Ethylamine` and under **"Type"**: `smi`
 > 7. Below paste the SMILES of ethylamine: `CCN`
 > 8. Click **"Start"** button, then close the dialog box. Your files are being added to your history!
 >    
@@ -288,9 +288,9 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 > <hands-on-title>Convert the file format</hands-on-title>
 >
 > 1. {% tool [Compound conversion](toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0) %} with the following parameters:
->    - {% icon param-files %} *"Molecular input file"*: click on {% icon param-files %} *Multiple datasets* icon and choose both `benzenesulfonyl_chloride` and `ethylamine`
+>    - {% icon param-files %} *"Molecular input file"*: click on {% icon param-files %} *Multiple datasets* icon and choose both `Benzenesulfonyl chloride` and `Ethylamine`
 >    - *"Output format"* - you have many options to choose from! Not only the formats but also the associated parameters. Just scroll the list and pick the one that is relevant to your downstream analysis. Here we use `MDL MOL format (sdf, mol)`
-> 2. Rename {% icon galaxy-pencil %} the corresponding files `benzenesulfonyl_chloride_sdf` and `ethylamine_sdf`. Make sure to check either the starting dataset numbers or the atoms in the file in order not to confuse the two files! 
+> 2. Rename {% icon galaxy-pencil %} the corresponding files `Benzenesulfonyl chloride SDF` and `Ethylamine SDF`. Make sure to check either the starting dataset numbers or the atoms in the file in order not to confuse the two files! 
 >
 {: .hands_on}
 
@@ -298,9 +298,9 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 > <hands-on-title>Run the reaction</hands-on-title>
 >
 > 1. {% tool [Reaction maker](toolshed.g2.bx.psu.edu/repos/bgruening/ctb_im_rxn_maker/ctb_im_rxn_maker/1.1.4+galaxy0) %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: `benzenesulfonyl_chloride_sdf`
+>    - {% icon param-file %} *"Input file"*: `Benzenesulfonyl chloride SDF`
 >    - *"Reagent options"*: Sulfonamide
->    - {% icon param-file %} *"Reagent file"*: `ethylamine_sdf`
+>    - {% icon param-file %} *"Reagent file"*: `Ethylamine SDF`
 >
 {: .hands_on}
 
@@ -350,9 +350,10 @@ Since we spoke about the drug-likeness in the previous section, let's see how it
 >
 > 1. {% tool [Search ChEMBL database](toolshed.g2.bx.psu.edu/repos/bgruening/chembl/chembl/0.10.1+galaxy4) %} with the following parameters:
 >    - *"SMILES input type"*: `File`
->    - {% icon param-file %} *"Input file"*: `benzenesulfonyl_chloride`
+>    - {% icon param-file %} *"Input file"*: `Benzenesulfonyl chloride`
 >    - *"Search type"*: `Substructure`
->
+> 2. Rename {% icon galaxy-pencil %} the output file `Benzenesulfonyl chloride substructures`
+>    
 {: .hands_on}
 
 
@@ -381,9 +382,24 @@ Since we spoke about the drug-likeness in the previous section, let's see how it
 > 1. Click {% icon galaxy-refresh %} *repeat* button on the previous dataset.
 > 2. You will be redirected to {% tool [Search ChEMBL database](toolshed.g2.bx.psu.edu/repos/bgruening/chembl/chembl/0.10.1+galaxy4) %}. Leave all the parameters as before, except for one:
 >    - *"Filter for Lipinski's Rule of Five"*: {% icon param-toggle %} `Yes`
+> 2. Rename {% icon galaxy-pencil %} the output file `Benzenesulfonyl chloride Lipinski substructures`
 >
 {: .hands_on}
 
-Question 
+
+> <question-title></question-title>
+>
+> How many molecules have been filtered out?
+>
+> > <solution-title></solution-title>
+> >
+> > If you click on the dataset, you will see a short summary how many molecules have been found.
+> > When we didn't apply any filters, the tool found 45 molecules. After applying Lipinski's Rule of Five filter, 36 molecules satisfied the rules. 
+> > ![Image showing the preview of the output datasets from searching benzenesulfonyl chloride substructures in the ChEMBL database, with and without Lipinski's Rule of Five filter.](../../images/X.png "Preview showing the number of molecules found in the ChEMBL database, before and after applying Lipinski's Rule of Five filter")
+> >
+> {: .solution}
+>
+{: .question}
+
 
 # Data-driven medicinal chemistry - yesterday, today and tomorrow
