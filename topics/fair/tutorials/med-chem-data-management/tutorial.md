@@ -256,8 +256,9 @@ If you plan to work with molecular dynamics simulations, there are also some MD 
 
 In Galaxy Chemical Toolbox there are dozens of tools that can be used for various analyses. Below we will only show a few, mostly related to data import, format conversion and some functions linked to what was discussed previously. 
 
+Let's start with importing publicly available data. [Protein Data Bank](https://www.rcsb.org/) stores tons of three-dimensional structural data of proteins nucleic acids and other biological molecules.
 
-> <hands-on-title>Import PDB file from  Protein Data Bank</hands-on-title>
+> <hands-on-title>Import PDB file from Protein Data Bank</hands-on-title>
 >
 > 1. Open [Protein Data Bank](https://www.rcsb.org/)
 > 2. Type your search term in the box *"Enter search term(s), Entry ID(s), or sequence"*: `MAO B`
@@ -270,6 +271,9 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 >
 {: .hands_on}
 
+This is often the first step of docking studies that you can learn about in other tutorials, for example in [Protein-ligand docking tutorial]({% link topics/computational-chemistry/tutorials/cheminformatics/tutorial.md %}).
+
+You can import any molecule to Galaxy using SMILES notation. Below it's an example on benzenesulfonyl chloride and ethylamine. 
 
 > <hands-on-title>Import SMILES</hands-on-title>
 >
@@ -284,6 +288,7 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 >    
 {: .hands_on}
 
+As you learned from the previous section, there are many different formats used in computational chemistry. Of course, Galaxy allows you to interconvert betweeen them - just have a look below!
 
 > <hands-on-title>Convert the file format</hands-on-title>
 >
@@ -294,6 +299,7 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 >
 {: .hands_on}
 
+We intentionally chose to work on benzenesulfonyl chloride and ethylamine. Do you know why? Well, if you think about the synthesis of sulfonamides, that's exactly what you need - a sulfonyl chloride and an amine. So... let's do some computational synthesis! 
 
 > <hands-on-title>Run the reaction</hands-on-title>
 >
@@ -306,13 +312,27 @@ In Galaxy Chemical Toolbox there are dozens of tools that can be used for variou
 
 > <tip-title> {% icon tool %} **Reaction maker** works also with SMILES!</tip-title>
 >
-> 
+> Above we converted the *.smi* file into *.sdf* to show how {% icon tool %} **Compound conversion** tool works. However, it is worth pointing out that {% icon tool %} **Reaction maker** works also with SMILES files and the conversion happens automaticaly so that your *.smi* dataset is imported as *.sdf* input.
 >
 {: .tip} 
 
 > <details-title>Which reations I can run using this tool?</details-title>
 >
-> 
+> {% icon tool %} **Reaction maker** works with more reaction types, such as:
+> - Amides synthesis
+> - Nucleophilic aromatic substitution (SNAr mechanism)
+> - Urea
+> - Suzuki coupling
+> - Sulfonamide
+> - Reductive amination
+> - N-alkylation
+> - Ether coupling
+> - Ester coupling
+> - Benzimidazole
+> - Triazole
+> - Benzoxazole
+> - Sarah Cu
+> - Sarah Quat Am
 >
 {: .details}
 
@@ -345,6 +365,7 @@ Since we spoke about the drug-likeness in the previous section, let's see how it
 >
 {: .details}
 
+In medicinal chemistry we often base the new structures on scaffolds of existing drugs. Therefore, it is quite useful to be able to find similar structures - below is an example how to do it in Galaxy.
 
 > <hands-on-title>Search ChEMBL database for similar compounds</hands-on-title>
 >
@@ -376,6 +397,8 @@ Since we spoke about the drug-likeness in the previous section, let's see how it
 > 4) fulfil all of the Lipinski rule of five criteria
 >
 {: .details}
+
+Let's repeat this step, but with applying Lipinski's Rule of Five that you learned about in the previous section of this tutorial!
 
 > <hands-on-title>Search ChEMBL database for similar compounds using the Lipinski rule of five</hands-on-title>
 >
