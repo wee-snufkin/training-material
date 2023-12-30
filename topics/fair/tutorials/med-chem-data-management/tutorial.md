@@ -346,13 +346,44 @@ Since we spoke about the drug-likeness in the previous section, let's see how it
 {: .details}
 
 
-> <hands-on-title>Estimate the drug-likeness</hands-on-title>
+> <hands-on-title>Search ChEMBL database for similar compounds</hands-on-title>
 >
 > 1. {% tool [Search ChEMBL database](toolshed.g2.bx.psu.edu/repos/bgruening/chembl/chembl/0.10.1+galaxy4) %} with the following parameters:
->    - {% icon param-file %} *"Molecule data in SDF or SMILES format"*: 
+>    - *"SMILES input type"*: `File`
+>    - {% icon param-file %} *"Input file"*: `benzenesulfonyl_chloride`
+>    - *"Search type"*: `Substructure`
 >
 {: .hands_on}
 
 
+> <tip-title> {% icon tool %} **Search ChEMBL database** works also with SDF!</tip-title>
+>
+> Even though the input format of the above tool is SMILES, it can automatically interconvert between sdf and smi formats, so you don't have to use {% icon tool %} **Compound conversion** tool beforehand. 
+> 
+{: .tip} 
 
-# Looking into the future: data-driven medicinal chemistry
+> <details-title>Parameters of {% icon tool %} **Search ChEMBL database**</details-title>
+>
+>  {% icon tool %} **Search ChEMBL database** tool allows for searching the ChEMBL database for compounds which resemble a SMILES string. Two search options are possible:
+> - similarity (searches for compounds which are similar to the input within a specified Tanimoto cutoff)
+> - substructure (searches for compounds which contain the input substructure)
+>   
+> Results can be filtered for compounds which are
+> 1) approved drugs
+> 2) biotherapeutic
+> 3) natural products
+> 4) fulfil all of the Lipinski rule of five criteria
+>
+{: .details}
+
+> <hands-on-title>Search ChEMBL database for similar compounds using the Lipinski rule of five</hands-on-title>
+>
+> 1. Click {% icon galaxy-refresh %} *repeat* button on the previous dataset.
+> 2. You will be redirected to {% tool [Search ChEMBL database](toolshed.g2.bx.psu.edu/repos/bgruening/chembl/chembl/0.10.1+galaxy4) %}. Leave all the parameters as before, except for one:
+>    - *"Filter for Lipinski's Rule of Five"*: {% icon param-toggle %} `Yes`
+>
+{: .hands_on}
+
+Question 
+
+# Data-driven medicinal chemistry - yesterday, today and tomorrow
