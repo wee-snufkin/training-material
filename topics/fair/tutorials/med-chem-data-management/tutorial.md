@@ -2,7 +2,6 @@
 layout: tutorial_hands_on
 title: Data management in Medicinal Chemistry
 
-zenodo_link: ''
 
 questions:
 - Why does the medicinal chemistry research produce so much data?
@@ -67,16 +66,13 @@ There are many factors that medicinal chemists take into account while designing
 - Flexibility
 
 Additionally, there have been some rules developed to help estimate drug-likeness, amongst which:
-- Lipinski rule
-- Ghose rule
-- Veber rule
-- Egan rule
-- Muegge rule
-- Abbott bioavailability score
+- Lipinski rule ({% cite Lipinski2001 %})
+- Ghose rule ({% cite Ghose1999 %})
+- Veber rule ({% cite Veber2002 %})
+- Egan rule ({% cite Egan2000 %})
+- Muegge rule ({% cite Muegge2001 %})
+- Abbott bioavailability score ({% cite Martin2005 %})
 
-<!---
-refs?
--->
 
 As you see, the number of characteristics to consider before even synthesising the molecule is huge. One of the tools that helps to summarise all the most important information about intrinsic properties and drug-likeness of compounds is called [SwissADME](http://www.swissadme.ch/) and is a free web tool to evaluate pharmacokinetics, drug-likeness and medicinal chemistry friendliness of small molecules ({% cite Daina2017 %}). 
 
