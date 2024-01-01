@@ -2,7 +2,6 @@
 layout: tutorial_hands_on
 title: Data management in Medicinal Chemistry
 
-
 questions:
 - Why does the medicinal chemistry research produce so much data?
 - How can big data be useful for medicinal chemists?
@@ -24,14 +23,10 @@ tags:
 - data management
 - medicinal-chemistry
 - computational-chemistry
-  
-priority: 6
 
 contributions:
   authorship:
     - wee-snufkin
-
-subtopic: fair-data
 
 requirements:
   - type: "internal"
