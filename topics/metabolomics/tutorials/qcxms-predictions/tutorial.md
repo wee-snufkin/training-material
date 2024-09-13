@@ -66,7 +66,7 @@ But first things first, let’s get some toy data to play with and crack on!
 {: .question}
 
 > <details-title>What is QCxMS?</details-title>
-> QCxMS is a successor of QCEIMS, where the *EI* part is replaced by *x* to take into account other ionisation methods and improve the applicability of the program. In QCEIMS, *EI* stands for *electron ionisation*, while in QCxMS, *x* refers to *EI* or *CID (collision-induced dissociation)* [{% cite Koopman2021 %}]. 
+> QCxMS is a successor of QCEIMS, where the *EI* part is replaced by *x* to take into account other ionisation methods and improve the applicability of the program. In QCEIMS, *EI* stands for *electron ionisation*, while in QCxMS, *x* refers to *EI* or *CID (collision-induced dissociation)* [{% cite Koopman2021 %}]. Currently, only *EI* simulations are supported - using *CID* with the Galaxy tool wrappers is still under development.
 {: .details}
 
  
@@ -81,6 +81,8 @@ In both cases, we start from molecule’s SMILES, and then we convert it to SDF,
 > <details-title>What is SMILES?</details-title>
 >
 > SMILES (.smi) - the simplified molecular-input line-entry system (SMILES) is a specification in the form of a line notation for describing the structure of a chemical species using short ASCII strings. It is a linear text format which can describe the connectivity and chirality of a molecule [{% cite Weininger1988 %}]. Even though many different forms of SMILES exist, the differences are not relevant for us in this application.
+> ![Depiction of a molecular structure and the corresponding SMILES string. Starts of rings are denoted with a number after the corresponding element (i.e. C1). Non-organic elements need to be written in brackets and isotopic forms need to be denoted before the atom and in brackets as well. Atoms with charges need to be in brackets as well and the charge needs to be denoted behind the atom or the functional group. Hydrogens inside brackets need to be stated explicitly. Double bonds are denoted with a `=` and triple bonds with a `#`.](../../images/qcxms_smiles_explanation.png "A quick explanation of the SMILES system.")
+> Image credit: Helge Hecht, License: MIT
 >
 {: .details}
 
